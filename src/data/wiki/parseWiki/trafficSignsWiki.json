@@ -199,9 +199,9 @@
 		"sign": "DE:240",
 		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg%2C_StVO_1992.svg",
 		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg,_StVO_1992.svg",
-		"name": "",
+		"name": "Gemeinsamer Geh- und Radweg",
 		"osmTags": ["highway=path", "bicycle=designated", "foot=designated", "segregated=no"],
-		"comments": ""
+		"comments": "Detaillierte Hinweise zur Kartierung von Rad- und kombinierten Rad- und Fußwegen sind in Radverkehrsanlagen kartieren dokumentiert. Folgende Hinweise sind nur Beispiele. Mit highway=path wird die Benutzung für nicht motorisierten Verkehr erlaubt, auch für Reitende, siehe Default Access Restrictions. Nach StVO sind diese Wege für zu Fuß Gehende und Radfahrende vorgesehen, Reitende jedoch ausgenommen. Bei separat eingezeichneten Rad- und Fußwegen wird auf parallel verlaufenden Straßen mit dem Attribut bicycle=use_sidepath auf die durch das Verkehrsschild DE:240 angeordnete Benutzungspflicht des Radwegs durch Radfahrende hingewiesen. Bei als Teil der Straße verlaufenden Rad- Fußwegen und mit cycleway:right=* gekennzeichneten Straße wird mittels cycleway:right:bicycle=designated auf die durch das Verkehrsschild DE:240 angeordnete Benutzungspflicht des Rad- und Fußwegs durch Radfahrende hingewiesen. Neben dem bevorzugt anzuwendenden Attribut highway=path ist noch die traditionelle Schreibweise highway=cycleway (highway-Typ nach dem 'größten' Verkehrsmittel) anzutreffen."
 	},
 	{
 		"sign": "DE:241-30",

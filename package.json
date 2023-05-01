@@ -11,10 +11,10 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"data:wiki:downloadWiki": "vite-node ./src/data/wiki/downloadWiki/downloadWiki.js && prettier ./src/data/wiki/ --write",
-		"data:wiki:parseWiki": "vite-node ./src/data/wiki/parseWiki/parseWiki.ts && prettier ./src/data/wiki/ --write",
+		"data:wiki:downloadWiki": "vite-node ./src/data/wiki/downloadWiki/downloadWiki.js && prettier ./src/data/ --write",
+		"data:wiki:parseWiki": "vite-node ./src/data/wiki/parseWiki/parseWiki.ts && prettier ./src/data/ --write",
 		"data:wiki:downloadSvgs": "vite-node ./src/data/wiki/downloadSvgs/downloadSvgs.ts",
-		"data:wiki:applyParsedWiki": "vite-node ./src/data/wiki/parseWiki/applyParsedWiki.ts && prettier ./src/data/wiki/ --write",
+		"data:wiki:applyParsedWiki": "vite-node ./src/data/wiki/parseWiki/applyParsedWiki.ts && prettier ./src/data/ --write",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
