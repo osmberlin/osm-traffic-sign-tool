@@ -21,6 +21,7 @@
 		"data:wiki:parseWiki": "vite-node ./src/data/wiki/parseWiki/parseWiki.ts && prettier ./src/data/ --write",
 		"data:wiki:downloadSvgs": "vite-node ./src/data/wiki/downloadSvgs/downloadSvgs.ts",
 		"data:wiki:applyParsedWiki": "vite-node ./src/data/wiki/parseWiki/applyParsedWiki.ts && prettier ./src/data/ --write",
+		"deploy": "chmod +x ./deploy.sh && ./deploy.sh",
 		"prepare": "husky install"
 	},
 	"devDependencies": {
