@@ -2,7 +2,7 @@
 	import ExternalLink from '../links/ExternalLink.svelte'
 
 	export let osmKey: string
-	export let lang: 'DE' = 'DE'
+	export let lang: 'DE' | 'US' = 'DE'
 
 	const wikiLink = 'https://wiki.openstreetmap.org/wiki/'
 	const splitKeys: string[] = osmKey.split(':')

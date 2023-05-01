@@ -19,6 +19,7 @@
 		{@const [key, value] = part.content.split('=')}
 		<Tag {key} {value} />
 	{:else}
+		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 		{@html part.content}
 	{/if}
 {/each}

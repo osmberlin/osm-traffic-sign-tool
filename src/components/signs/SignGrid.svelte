@@ -2,11 +2,12 @@
 	import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
 	import Sign from './Sign.svelte'
 
-	export let defaultOpen: boolean = true
+	export let defaultOpen = true
 	export let attributes: string[] | null
 	export let toggleSelection: (signId: string) => undefined
 	export let headline: string
 	export let signs: TrafficSignWithWikiEntry[]
+	// eslint-disable-next-line no-self-assign
 	signs = signs
 	//
 </script>

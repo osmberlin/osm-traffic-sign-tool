@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { TrafficSignWithWiki } from '@/data/trafficSigns'
 	import clsx from 'clsx'
-	import { Icon, PlusCircle, CheckCircle } from 'svelte-hero-icons'
+	import { CheckCircle, Icon } from 'svelte-hero-icons'
 
 	export let active: boolean
 	export let toggleSelection: (signId: string) => undefined

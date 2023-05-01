@@ -8,9 +8,9 @@ const fileName = 'trafficSigns.json'
 const filePath = path.join(__dirname, fileName)
 
 fs.writeFile(filePath, trafficSignsJSON, (err) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-  console.log('File saved successfully!')
+	if (err) {
+		console.error(err)
+		return
+	}
+	console.log('File saved successfully!')
 })

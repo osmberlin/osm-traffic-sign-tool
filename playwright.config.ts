@@ -1,4 +1,4 @@
-import type { PlaywrightTestConfig } from '@playwright/test';
+import type { PlaywrightTestConfig } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
 	webServer: {
@@ -6,6 +6,6 @@ const config: PlaywrightTestConfig = {
 		port: 4173
 	},
 	testDir: 'tests'
-};
+}
 
-export default config;
+export default config

@@ -3,7 +3,7 @@
 
 	export let osmKey: string
 	export let osmValue: string | string[]
-	export let lang: 'DE' = 'DE'
+	export let lang: 'DE' | 'US' = 'DE'
 
 	const wikiLink = 'https://wiki.openstreetmap.org/wiki/'
 

@@ -25,7 +25,7 @@
 
 	export let text: string
 	let copiedText: string | null = null
-	export let secondary: boolean = false
+	export let secondary = false
 </script>
 
 <div class="inline-flex gap-3">

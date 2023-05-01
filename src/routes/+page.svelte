@@ -1,16 +1,11 @@
 <script lang="ts">
 	import CopyButton from '@/components/links/CopyButton.svelte'
 	import SelectedSign from '@/components/signs/SelectedSign.svelte'
-	import Sign from '@/components/signs/Sign.svelte'
 	import SignGrid from '@/components/signs/SignGrid.svelte'
 	import { aggregateTags, type AggregatedTags } from '@/components/signs/aggregateTags'
 	import Tag from '@/components/wiki/Tag.svelte'
 	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
-	import type {
-		TrafficSignWithWiki,
-		TrafficSignWithWikiEntry,
-		TrafficSignsWithWiki
-	} from '@/data/trafficSigns'
+	import type { TrafficSignWithWikiEntry, TrafficSignsWithWiki } from '@/data/trafficSigns'
 	import trafficSignsJson from '@/data/trafficSignsWithWiki.json'
 	import { queryParam } from 'sveltekit-search-params'
 
