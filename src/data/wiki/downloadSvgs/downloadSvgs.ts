@@ -7,7 +7,7 @@ const fileContent = fs.readFileSync(filePath).toString()
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const parsedObject = JSON.parse(fileContent) as any
 
-const svgFolder = path.join(__dirname, 'svgs')
+const svgFolder = path.join(__dirname, '../../../../static/trafficSignsSvgs')
 if (!fs.existsSync(svgFolder)) {
 	fs.mkdirSync(svgFolder)
 }

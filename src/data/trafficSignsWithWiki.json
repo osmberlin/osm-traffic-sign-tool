@@ -27,7 +27,7 @@
 			],
 			"comments": "highway=cycleway steht zunächst für alle Radwege, die Benutzungserlaubnis wird auf Radfahrende beschränkt, siehe Default Access Restrictions. Bei separat eingezeichneten Radwegen wird auf parallel verlaufenden Straßen mit dem Attribut bicycle=use_sidepath auf die durch das Verkehrsschild DE:237 angeordnete Benutzungspflicht des Radwegs durch Radfahrende hingewiesen. Bei als Teil der Straße verlaufenden Radspuren und mit cycleway=* gekennzeichneten Straße wird mittels cycleway:bicycle=designated auf die durch das Verkehrsschild DE:237 angeordnete Benutzungspflicht der Radspur durch Radfahrende hingewiesen. Die alleinige Verwendung der Attributkombination highway=path + bicycle=designated soll vermieden werden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg"
 	},
 	"DE:238": {
 		"name": "Zeichen 238",
@@ -45,7 +45,7 @@
 			"osmTags": ["highway=bridleway"],
 			"comments": "Mit highway=bridleway wird die Benutzungserlaubnis auf Reitende beschränkt, siehe Default Access Restrictions. Die alleinige Verwendung der Attributkombination highway=path + horse=designated soll vermieden werden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_238_-_Sonderweg_Reiter,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_238_-_Sonderweg_Reiter,_StVO_1992.svg"
 	},
 	"DE:239": {
 		"name": "Zeichen 239",
@@ -66,7 +66,7 @@
 			"osmTags": ["highway=footway"],
 			"comments": "Mit highway=footway wird die Benutzungserlaubnis auf zu Fuß Gehende beschränkt, siehe Default Access Restrictions. Ohne Zusatzzeichen sind diese Wege nicht für Radfahrende zugelassen. Bei vorhandenem Zusatzzeichen „Radfahrer frei“ () wird Attribut bicycle=yes hinzugefügt. Die alleinige Verwendung der Attributkombination highway=path + foot=designated soll vermieden werden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_239_-_Sonderweg_Fußgänger,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_239_-_Sonderweg_Fußgänger,_StVO_1992.svg"
 	},
 	"DE:240": {
 		"name": "Zeichen 240",
@@ -96,7 +96,7 @@
 			"osmTags": ["highway=path", "bicycle=designated", "foot=designated", "segregated=no"],
 			"comments": "Detaillierte Hinweise zur Kartierung von Rad- und kombinierten Rad- und Fußwegen sind in Radverkehrsanlagen kartieren dokumentiert. Folgende Hinweise sind nur Beispiele. Mit highway=path wird die Benutzung für nicht motorisierten Verkehr erlaubt, auch für Reitende, siehe Default Access Restrictions. Nach StVO sind diese Wege für zu Fuß Gehende und Radfahrende vorgesehen, Reitende jedoch ausgenommen. Bei separat eingezeichneten Rad- und Fußwegen wird auf parallel verlaufenden Straßen mit dem Attribut bicycle=use_sidepath auf die durch das Verkehrsschild DE:240 angeordnete Benutzungspflicht des Radwegs durch Radfahrende hingewiesen. Bei als Teil der Straße verlaufenden Rad- Fußwegen und mit cycleway:right=* gekennzeichneten Straße wird mittels cycleway:right:bicycle=designated auf die durch das Verkehrsschild DE:240 angeordnete Benutzungspflicht des Rad- und Fußwegs durch Radfahrende hingewiesen. Neben dem bevorzugt anzuwendenden Attribut highway=path ist noch die traditionelle Schreibweise highway=cycleway (highway-Typ nach dem 'größten' Verkehrsmittel) anzutreffen."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_240_-_Gemeinsamer_Fuß-_und_Radweg,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_240_-_Gemeinsamer_Fuß-_und_Radweg,_StVO_1992.svg"
 	},
 	"DE:241": {
 		"name": "Zeichen 241",
@@ -157,7 +157,7 @@
 			],
 			"comments": "OSM-Cycleway impliziert: bicycle=designated + motor_vehicle=no) Veraltete Zeichenkennung DE:244 highway=* - Für den Wert spielt es keine Rolle, ob es sich um eine Fahrradstraße handelt oder nicht. Er wird so gewählt, wie es dem Ausbauzustand und der Verkehrsbedeutung der Straße am ehesten gerecht wird. highway=residential für Fahrradstraßen, die sich kaum von den umgebenen Straßen im Wohngebiet abheben, d.h. mit breiter Fahrbahn und (meistens) Gehweg. Ein Zusatzschild „Anlieger frei\" oder „KFZ frei\" ist ein gutes Indiz dafür, dass highway=residential geeignet ist. highway=path für Straßen, die von der Breite und Anlage eher einem gemeinsamen Fahrrad- und Fußweg entsprechen. Außerdem kann dies verwendet werden, wenn die Straße nicht von Kraftfahrzeugen befahren werden darf. Außerdem können highway=service vorkommen, oder es kann bei exklusiv für Fahrräder beschränkten Straßen highway=cycleway in Frage kommen. Siehe auch DE:Key:bicycle_road"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_244.1_-_Beginn_einer_Fahrradstraße,_StVO_2013.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_244.1_-_Beginn_einer_Fahrradstraße,_StVO_2013.svg"
 	},
 	"DE:245": {
 		"name": "Zeichen 245",
@@ -177,7 +177,7 @@
 			"osmTags": ["highway=service", "vehicle=no", "bus=designated"],
 			"comments": "Nach StVO kennzeichnet DE:245 abgegrenzte Fahrstreifen, deren Benutzung nur für Omnibusse oder Oberleitungsbusse im Linienverkehr zulässig ist. Auch in OSM steht bus=* nur für Busse im Linienverkehr. Weil der passende Schlüssel vehicle erst später eingeführt wurde, ist dieses Zeichen vormals auch mit access=no + bus=yes bzw. access=no + bus=designated gekennzeichnet worden. Siehe auch: lanes:bus=* - Anzahl der Spuren für Busse im öffentlichen Verkehr bus:lanes=* - Beschreibung von Zufahrtsberechtigungen einzelner Fahrspuren einer Straße (Beispielwert yes/yes/designated)."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_245_-_Bussonderfahrstreifen,_StVO_2013.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_245_-_Bussonderfahrstreifen,_StVO_2013.svg"
 	},
 	"DE:325": {
 		"name": "Zeichen 325",
@@ -203,7 +203,7 @@
 			"osmTags": ["vehicle=no"],
 			"comments": "Gilt nicht für Handfahrzeuge, abweichend von § 28 Abs. 2 auch nicht für Tiere. Krafträder und Fahrräder dürfen geschoben werden. Weil der passende Schlüssel vehicle erst später eingeführt wurde, ist dieses Zeichen vormals auch mit access=no + foot=yes gekennzeichnet worden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_250_-_Verbot_für_Fahrzeuge_aller_Art,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_250_-_Verbot_für_Fahrzeuge_aller_Art,_StVO_1992.svg"
 	},
 	"DE:260": {
 		"name": "Zeichen 260",
@@ -220,7 +220,7 @@
 			"osmTags": ["motor_vehicle=no"],
 			"comments": "StVO sagt: Zeichen 260 - Verbot für Krafträder (auch mit Beiwagen), Kleinräder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge. Alternativ also auch mit motorcar=no + motorcycle=no gekennzeichnet."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_260_-_Verbot_für_Krafträder_und_Mofas_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_260_-_Verbot_für_Krafträder_und_Mofas_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg"
 	},
 	"DE:251": {
 		"name": "Zeichen 251",
@@ -236,7 +236,7 @@
 			"osmTags": ["motorcar=no"],
 			"comments": "StVO sagt: Zeichen 251 - Verbot für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_251_-_Verbot_für_Kraftwagen_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_251_-_Verbot_für_Kraftwagen_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg"
 	},
 	"DE:253": {
 		"name": "Zeichen 253",
@@ -253,7 +253,7 @@
 			"osmTags": ["hgv=no"],
 			"comments": "StVO sagt: Zeichen 253 - Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t, einschließlich ihrer Anhänger und Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse. \"hgv\" bedeutet \"Heavy Goods vehicle\", zu deutsch \"Lastkraftwagen\" (LKW). Information dazu und LKW-Karte unter: User:Win32netsky"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_253_-_Verbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_253_-_Verbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht,_StVO_1992.svg"
 	},
 	"DE:254": {
 		"name": "Zeichen 254",
@@ -270,7 +270,7 @@
 			"osmTags": ["bicycle=no"],
 			"comments": "keine"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_254_-_Verbot_für_Radfahrer,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_254_-_Verbot_für_Radfahrer,_StVO_1992.svg"
 	},
 	"DE:255": {
 		"name": "Zeichen 255",
@@ -286,7 +286,7 @@
 			"osmTags": ["mofa=no", "moped=no", "motorcycle=no"],
 			"comments": "StVO sagt: Zeichen 255 - Verbot für Krafträder (auch mit Beiwagen), Kleinkrafträder und Mofas"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_255_-_Verbot_für_Krafträder,_auch_mit_Beiwagen,_Kleinkrafträder_und_Mofas,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_255_-_Verbot_für_Krafträder,_auch_mit_Beiwagen,_Kleinkrafträder_und_Mofas,_StVO_1992.svg"
 	},
 	"257-50": {
 		"name": "Zeichen 257-50",
@@ -323,7 +323,7 @@
 			"osmTags": ["foot=no"],
 			"comments": "keine"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_259_-_Verbot_für_Fußgänger,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_259_-_Verbot_für_Fußgänger,_StVO_1992.svg"
 	},
 	"DE:261": {
 		"name": "Zeichen 261",
@@ -339,7 +339,7 @@
 			"osmTags": ["hazmat=no"],
 			"comments": "'hazmat' steht für 'hazardous materials' (gefährliche Materialien). Die Strecken des Gefahrgutgrundnetzes können mit hazmat=designated eingetragen werden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_261_-_Verbot_für_kennzeichnungspflichtige_Kraftfahrzeuge_mit_gefährlichen_Gütern,_StVO_1988.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_261_-_Verbot_für_kennzeichnungspflichtige_Kraftfahrzeuge_mit_gefährlichen_Gütern,_StVO_1988.svg"
 	},
 	"DE:262": {
 		"name": "Zeichen 262",
@@ -420,7 +420,7 @@
 			"osmTags": ["hazmat:water=no"],
 			"comments": "'hazmat:water' steht für wassergefährdende Stoffe. Die Strecken des Gefahrgutgrundnetztes können mit hazmat=designated eingetragen werden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_269_-_Verbot_für_Fahrzeuge_mit_wassergefährdender_Ladung,_StVO_1988.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_269_-_Verbot_für_Fahrzeuge_mit_wassergefährdender_Ladung,_StVO_1988.svg"
 	},
 	"DE:274": {
 		"name": "Zeichen 274",
@@ -463,7 +463,7 @@
 			"osmTags": ["overtaking=no"],
 			"comments": "Der Wert no gilt für beide Richtungen. Wenn nur für die entsprechende Richtung erlaubt, nicht aber für die Gegenrichtung, dann overtaking=forward setzen bzw. overtaking=backward im umgekehrten Fall."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_276_-_Überholverbot_für_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_276_-_Überholverbot_für_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
 	},
 	"DE:277": {
 		"name": "Zeichen 277",
@@ -482,7 +482,7 @@
 			"osmTags": ["overtaking:hgv=no"],
 			"comments": "Der Wert no gilt für beide Richtungen. Wenn nur für die entsprechende Richtung erlaubt, nicht aber für die Gegenrichtung, dann overtaking:hgv=forward setzen bzw. overtaking:hgv=backward im umgekehrten Fall."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_277_-_Überholverbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_2,8_t,_einschließlich_ihrer_Anhänger,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_277_-_Überholverbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_2,8_t,_einschließlich_ihrer_Anhänger,_StVO_1992.svg"
 	},
 	"DE:354": {
 		"name": "Zeichen 354",
@@ -500,7 +500,7 @@
 			"osmTags": ["traffic_sign=DE:354", "hazmat:water=permissive"],
 			"comments": "'hazmat:water' steht für wassergefährdende Stoffe. Bei diesem Schild sollten die Strecken gemieden werden, beziehungsweise mit extremer Vorsicht gefahren werden. Die Strecken des Gefahrgutgrundnetztes können mit hazmat=designated eingetragen werden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zeichen_354_-_Wasserschutzgebiet,_StVO_1988.svg"
+		"localFile": "/trafficSignsSvgs/Zeichen_354_-_Wasserschutzgebiet,_StVO_1988.svg"
 	},
 	"DE:1020-12": {
 		"name": "Zusatzzeichen 1020-12",
@@ -519,7 +519,7 @@
 			"osmTags": ["[Fahrzeugart]=destination", "bicycle=yes"],
 			"comments": "Siehe \"Anlieger frei\"."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1020-12_-_Radfahrer_und_Anlieger_frei_(450x600),_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1020-12_-_Radfahrer_und_Anlieger_frei_(450x600),_StVO_1992.svg"
 	},
 	"DE:1020-30": {
 		"name": "Zusatzzeichen 1020-30",
@@ -540,7 +540,7 @@
 			"osmTags": ["[Fahrzeugart]=destination"],
 			"comments": "Je nach verbotener Fahrzeugart, also dem Verbotszeichen. In Kombination mit Zeichen 260 : motor_vehicle=destination In Kombination mit Zeichen 250 : vehicle=destination"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1020-30_-_Anlieger_frei_(600x330),_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1020-30_-_Anlieger_frei_(600x330),_StVO_1992.svg"
 	},
 	"DE:1022-10": {
 		"name": "Zusatzzeichen 1022-10",
@@ -559,7 +559,7 @@
 			"osmTags": ["bicycle=yes"],
 			"comments": "Radfahrer frei Bei Einbahnstraßen (also freigegeben in entgegengesetzter Richtung) als: cycleway=opposite (ohne eigenen Radweg, als nur freigegegeben) cycleway=opposite_lane (eigene Spur in der zur Einbahnstraße entgegengesetzten Richtung) cycleway=opposite_track (eigener Weg, z.B. abgetrennt durch Bordstein) und immer zusammen mit: oneway:bicycle=no"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1022-10_-_Radfahrer_frei,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1022-10_-_Radfahrer_frei,_StVO_1992.svg"
 	},
 	"DE:1022-11": {
 		"name": "Zusatzzeichen 1022-11",
@@ -582,7 +582,7 @@
 			"osmTags": ["mofa=yes"],
 			"comments": "Mofas frei"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1022-11_-_Mofas_frei_(600x450),_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1022-11_-_Mofas_frei_(600x450),_StVO_1992.svg"
 	},
 	"DE:1022-12": {
 		"name": "Zusatzzeichen 1022-12",
@@ -602,7 +602,7 @@
 			"osmTags": ["mofa=yes", "moped=yes", "motorcycle=yes"],
 			"comments": "Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas frei Gilt für Krafträder (auch mit Beiwagen), Kleinkrafträder und Mofas, alle müssen einzeln gesetzt werden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1022-12_-_Krafträder_auch_mit_Beiwagen,_Kleinkrafträder_und_Mofas_frei_(600x450),_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1022-12_-_Krafträder_auch_mit_Beiwagen,_Kleinkrafträder_und_Mofas_frei_(600x450),_StVO_1992.svg"
 	},
 	"DE:1024-10": {
 		"name": "Zusatzzeichen 1024-10",
@@ -621,7 +621,7 @@
 			"osmTags": ["motorcar=yes"],
 			"comments": "Personenkraftwagen frei"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1024-10_-_Personenkraftwagen_frei,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1024-10_-_Personenkraftwagen_frei,_StVO_1992.svg"
 	},
 	"DE:1024-12": {
 		"name": "Zusatzzeichen 1024-12",
@@ -638,7 +638,7 @@
 			"osmTags": ["hgv=yes"],
 			"comments": "LKW frei Kraftfahrzeuge mit einer zulässigen Gesamtmasse über 3,5 t, einschließlich ihrer Anhänger, und Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse frei"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1024-12_-_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_3,5_t,_einschließlich_ihrer_Anhänger_und_Zugmaschinen,_ausgenommen_Personenkraftwagen_und_Kraftomnibusse_frei,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1024-12_-_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_3,5_t,_einschließlich_ihrer_Anhänger_und_Zugmaschinen,_ausgenommen_Personenkraftwagen_und_Kraftomnibusse_frei,_StVO_1992.svg"
 	},
 	"DE:1024-14": {
 		"name": "Zusatzzeichen 1024-14",
@@ -657,7 +657,7 @@
 			"osmTags": ["bus=yes", "tourist_bus=yes"],
 			"comments": "Kraftomnibus frei Da bus=* nur für Busse im Linienverkehr steht, muss tourist_bus=* ergänzt werden."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1024-14_-_Kraftomnibusse_frei,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1024-14_-_Kraftomnibusse_frei,_StVO_1992.svg"
 	},
 	"DE:1024-17": {
 		"name": "Zusatzzeichen 1024-17",
@@ -681,7 +681,7 @@
 			"osmTags": ["agricultural=yes"],
 			"comments": "Kraftfahrzeuge und Züge, die nicht schneller als 25 km/h fahren können oder dürfen, frei In Kombination mit Zeichen 260 : motor_vehicle=no, agricultural=yes In Kombination mit Zeichen 250 : vehicle=no, agricultural=yes Im Gegensatz zu \"Landwirtschaftlicher Verkehr frei\" handelt es sich hier um eine Fahrzeugart, nicht um eine Art des Verkehrs."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1024-17_-_Kraftfahrzeuge_und_Züge,_die_nicht_schneller_als_25_km-h_fahren_können_oder_dürfen,_frei,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1024-17_-_Kraftfahrzeuge_und_Züge,_die_nicht_schneller_als_25_km-h_fahren_können_oder_dürfen,_frei,_StVO_1992.svg"
 	},
 	"DE:1026-30": {
 		"name": "Zusatzzeichen 1026-30",
@@ -699,7 +699,7 @@
 			"osmTags": ["taxi=yes"],
 			"comments": "Taxi frei"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1026-30_-_Taxi_frei,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-30_-_Taxi_frei,_StVO_1992.svg"
 	},
 	"DE:1026-32": {
 		"name": "Zusatzzeichen 1026-32",
@@ -717,7 +717,7 @@
 			"osmTags": ["bus=yes"],
 			"comments": "Linienverkehr frei psv steht für \"Public Service Vehicle\", also übersetzt \"öffentliches Verkehrsmittel\". Dieser OSM-Key schließt jedoch nicht nur den Linienverkehr, wie er in der deutschen StVO gemeint ist, ein, sondern zusätzlich auch noch Taxis. Diese sind laut deutscher StVO aber kein Linienverkehr, außer es handelt sich um Anruf-Sammel- oder Anruf-Linien-Taxis. Daher sollte für \"Linienverkehr frei\" zunächst nur bus=yes gesetzt werden. Eventuell gibt es auch noch dem umstrittenen Tag share_taxi=yes, falls die für den Linienverkehr freigegebene Strecke von Anruf-Sammel- oder Anruf-Linien-Taxis befahren wird."
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1026-32_-_Linienverkehr_frei_(450x600),_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-32_-_Linienverkehr_frei_(450x600),_StVO_1992.svg"
 	},
 	"DE:1026-35": {
 		"name": "Zusatzzeichen 1026-35",
@@ -733,7 +733,7 @@
 			"osmTags": ["[Fahrzeugart]=delivery"],
 			"comments": "Lieferverkehr frei Je nach verbotener Fahrzeugart, also dem Verbotszeichen. In Kombination mit Zeichen 260 : motor_vehicle=delivery In Kombination mit Zeichen 250 : vehicle=delivery In Kombination mit Zeichen 253 : hgv=delivery"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1026-35_-_Lieferverkehr_frei,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-35_-_Lieferverkehr_frei,_StVO_1992.svg"
 	},
 	"DE:1026-36": {
 		"name": "Zusatzzeichen 1026-36",
@@ -755,7 +755,7 @@
 			"osmTags": ["[Fahrzeugart]=agricultural"],
 			"comments": "Landwirtschaftlicher Verkehr frei Je nach verbotener Fahrzeugart, also dem Verbotszeichen. In Kombination mit Zeichen 260 : motor_vehicle=agricultural In Kombination mit Zeichen 250 : vehicle=agricultural"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1026-36_-_Landwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-36_-_Landwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg"
 	},
 	"DE:1020-13": {
 		"name": "Zusatzzeichen 1020-13",
@@ -794,7 +794,7 @@
 			"osmTags": ["[Fahrzeugart]=forestry"],
 			"comments": "Forstwirtschaftlicher Verkehrr frei Je nach verbotener Fahrzeugart, also dem Verbotszeichen. In Kombination mit Zeichen 260 : motor_vehicle=forestry In Kombination mit Zeichen 250 : vehicle=forestry"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1026-37_-_Forstwirtschaftlicher_Verkehr_frei,_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-37_-_Forstwirtschaftlicher_Verkehr_frei,_StVO_1992.svg"
 	},
 	"DE:1026-38": {
 		"name": "Zusatzzeichen 1026-38",
@@ -815,7 +815,7 @@
 			"osmTags": ["[Fahrzeugart]=agricultural;forestry"],
 			"comments": "Land- und forstwirtschaftlicher Verkehr frei Je nach verbotener Fahrzeugart, also dem Verbotszeichen. In Kombination mit Zeichen 260 : motor_vehicle=agricultural;forestry In Kombination mit Zeichen 250 : vehicle=agricultural;forestry"
 		},
-		"localFile": "/src/data/wiki/downloadSvgs/svgs/Zusatzzeichen_1026-38_-_Land-_und_forstwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg"
+		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-38_-_Land-_und_forstwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg"
 	},
 	"DE:1040-30": {
 		"name": "Zusatzzeichen 1040-30",

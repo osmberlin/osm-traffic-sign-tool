@@ -3,7 +3,7 @@ import path from 'path'
 import { trafficSigns, type TrafficSignsWithWiki } from '../../trafficSigns'
 import wikiData from './trafficSignsWiki.json'
 
-const svgDirPath = path.join(__dirname, '../downloadSvgs/svgs')
+const svgDirPath = path.join(__dirname, '../../../../static/trafficSignsSvgs')
 const localTrafficSigns = structuredClone(trafficSigns) as TrafficSignsWithWiki
 const matchedWikiDataKeys: string[] = []
 
@@ -28,7 +28,7 @@ fs.readdir(svgDirPath, async (err, files) => {
 		)
 
 		if (sign) {
-			const file = path.join('/src/data/wiki/downloadSvgs/svgs/', svgFileName)
+			const file = path.join('/trafficSignsSvgs/', svgFileName)
 			localTrafficSigns[sign[0]].localFile = file
 		}
 	}
