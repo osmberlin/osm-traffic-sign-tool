@@ -2,6 +2,7 @@
 	import { version } from '$app/environment'
 	import { page } from '$app/stores'
 	import clsx from 'clsx'
+	import ExternalLink from '../links/ExternalLink.svelte'
 
 	const isHome = $page.url.pathname === '/'
 </script>
@@ -29,7 +30,13 @@
 				<p>
 					This tool helps to find the right <code>traffic_sign=*</code> tag as well as recommended
 					tags for the road that it applies to.
-					<strong>Please review all tags before updating OSM.</strong>
+					<strong>Please review all tags before updating OSM.</strong><br />
+					<strong class="text-amber-500"
+						>This project is in alpha stage. <ExternalLink
+							href="https://github.com/osmberlin/osm-traffic-sign-tool"
+							>Please report issues; please help if you can</ExternalLink
+						>.</strong
+					>
 				</p>
 			</details>
 		</div>
