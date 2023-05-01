@@ -1,11 +1,9 @@
-# OSM Traffic Sign Tool 2.0 – Alpha version
+# OSM Traffic Sign Tool 2.0 – Alpha version
 
 - A webapp to match traffic signs to OpenStreetMap tags
 - PLANNED: An npm package to display validations and images based on tags and traffic_sign tag
 
-## App
-
-https://osmberlin.github.io/osm-traffic-sign-tool/
+https://trafficsigns.osm-verkehrswende.org
 
 ## Aplpha version & Roadmap
 
