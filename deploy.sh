@@ -20,6 +20,10 @@ cd build
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
 
+# place CNAME file to set custom domain
+# Test at https://github.com/osmberlin/osm-traffic-sign-tool/settings/pages, needs to show "Custom domain"
+echo "trafficsigns.osm-verkehrswende.org" > CNAME
+
 # copy our app (index.html) as 404.html so our routing works with "open in new tab" (by serving and using the 404 page)
 cp index.html 404.html
 
