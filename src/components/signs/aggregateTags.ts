@@ -1,5 +1,6 @@
 import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
 import { createTrafficSignValue } from './utils/createTrafficSignValue'
+import { removeDuplicates } from './utils/removeDuplicates'
 
 export type AggregatedTags = [string, string | string[]][]
 export type AggregatedComments = string[]
@@ -46,16 +47,7 @@ export const aggregateTags = (
 	// Sort keys A-Z
 	aggregatedTags.sort((a, b) => a[0].localeCompare(b[0]))
 
-	// Remove duplicates
-	const seen: Record<string, true> = {}
-	const uniqueAggregatedTags = aggregatedTags.filter((item) => {
-		if (seen[item[0]]) {
-			return false
-		} else {
-			seen[item[0]] = true
-			return true
-		}
-	})
+	const uniqueAggregatedTags = removeDuplicates<AggregatedTags>(aggregatedTags)
 
 	return [uniqueAggregatedTags, aggregatedComments]
 }
