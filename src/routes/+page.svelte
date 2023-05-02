@@ -132,12 +132,14 @@
 		{:else}
 			<h2 class="uppercase font-light text-lg mb-4">Traffic sign tag</h2>
 			{#if trafficSignTag && copyTrafficSignTag}
-				<div class="flex justify-between items-center">
-					<Tag key={trafficSignTag[0]} value={trafficSignTag[1]} />
-					<CopyButton text={copyTrafficSignTag}>
-						<Icon src={DocumentDuplicate} class="w-4 h-4" />
-					</CopyButton>
-				</div>
+				{#key trafficSignTag}
+					<div class="flex justify-between items-center">
+						<Tag key={trafficSignTag[0]} value={trafficSignTag[1]} />
+						<CopyButton text={copyTrafficSignTag}>
+							<Icon src={DocumentDuplicate} class="w-4 h-4" />
+						</CopyButton>
+					</div>
+				{/key}
 			{/if}
 
 			<h2 class="uppercase font-light text-lg mt-10 mb-4">Derived recommended Tags</h2>
@@ -145,11 +147,13 @@
 			{#if aggregatedTags && copyAllTags}
 				<div class="flex justify-between items-end">
 					<ul>
-						{#each aggregatedTags as [key, value]}
-							<li>
-								<Tag {key} {value} />
-							</li>
-						{/each}
+						{#key aggregatedTags}
+							{#each aggregatedTags as [key, value]}
+								<li>
+									<Tag {key} {value} />
+								</li>
+							{/each}
+						{/key}
 					</ul>
 
 					<div>
