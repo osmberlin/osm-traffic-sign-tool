@@ -8,6 +8,7 @@
 	import type { TrafficSignWithWikiEntry, TrafficSignsWithWiki } from '@/data/trafficSigns'
 	import trafficSignsJson from '@/data/trafficSignsWithWiki.json'
 	import { queryParam } from 'sveltekit-search-params'
+	import { DocumentDuplicate, Icon } from 'svelte-hero-icons'
 
 	const selectedSignIds = queryParam('signs', {
 		// too URL
@@ -27,6 +28,7 @@
 		selectedSigns = visibleSigns()
 		;[aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
 		;[copyTrafficSignTag, copyAllTags] = copyTagsValues(aggregatedTags)
+		trafficSignTag = copyTrafficSignTag?.split('=')
 
 		return undefined
 	}
@@ -66,6 +68,7 @@
 	let copyTrafficSignTag: string | undefined = undefined
 	let copyAllTags: string | undefined = undefined
 	;[copyTrafficSignTag, copyAllTags] = copyTagsValues(aggregatedTags)
+	let trafficSignTag: string[] | undefined = copyTrafficSignTag?.split('=')
 
 	// Debug helper output:
 	const validKeys = Object.keys(trafficSigns)
@@ -123,31 +126,46 @@
 	</section>
 
 	<section class="rounded bg-stone-900 text-stone-100 px-6 py-4 flex-none w-96">
-		<h2 class="uppercase font-light text-lg mb-4">Recommended Tags</h2>
-
-		<ul>
-			{#each aggregatedTags as [key, value]}
-				<li>
-					<Tag {key} {value} />
-				</li>
-			{/each}
-		</ul>
-
-		<p class="mt-10 items-center flex gap-2">
-			<strong class="text-stone-50 uppercase font-thin text-lg">Copy tags</strong>
-			{#if copyTrafficSignTag}
-				<CopyButton text={copyTrafficSignTag}><code>traffic_sign</code></CopyButton>
+		{#if !$selectedSignIds}
+			<h2 class="uppercase font-light text-lg mb-4">Recommended Tags</h2>
+			<p class="font-light text-stone-400">Select a traffic sign to display recommended tags …</p>
+		{:else}
+			<h2 class="uppercase font-light text-lg mb-4">Traffic sign tag</h2>
+			{#if trafficSignTag && copyTrafficSignTag}
+				<div class="flex justify-between items-center">
+					<Tag key={trafficSignTag[0]} value={trafficSignTag[1]} />
+					<CopyButton text={copyTrafficSignTag}>
+						<Icon src={DocumentDuplicate} class="w-4 h-4" />
+					</CopyButton>
+				</div>
 			{/if}
-			{#if copyAllTags}
-				<CopyButton text={copyAllTags}>All tags</CopyButton>
-			{/if}
-		</p>
 
-		<div class="mt-10">
-			<h3 class="text-stone-50 uppercase font-thin text-lg">Notes</h3>
-			{#each aggregatedComments as comment}
-				<p><WikiLinkify text={comment} /></p>
-			{/each}
-		</div>
+			<h2 class="uppercase font-light text-lg mt-10 mb-4">Derived recommended Tags</h2>
+
+			{#if aggregatedTags && copyAllTags}
+				<div class="flex justify-between items-end">
+					<ul>
+						{#each aggregatedTags as [key, value]}
+							<li>
+								<Tag {key} {value} />
+							</li>
+						{/each}
+					</ul>
+
+					<div>
+						<CopyButton text={copyAllTags}>
+							<Icon src={DocumentDuplicate} class="w-4 h-4" />
+						</CopyButton>
+					</div>
+				</div>
+			{/if}
+
+			<div class="mt-10">
+				<h3 class="text-stone-50 uppercase font-thin text-lg">Notes</h3>
+				{#each aggregatedComments as comment}
+					<p><WikiLinkify text={comment} /></p>
+				{/each}
+			</div>
+		{/if}
 	</section>
 </main>
