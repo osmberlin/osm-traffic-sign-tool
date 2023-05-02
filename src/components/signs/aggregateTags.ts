@@ -40,10 +40,23 @@ export const aggregateTags = (
 		aggregatedTags.push([restrictionKey, restrictionValues.join(',') || 'no'])
 	)
 
-	// Comments
+	// Collect comments
 	const aggregatedComments = selectedSigns
 		.map(([_, sign]) => sign.tagsComment && sign.tagsComment)
 		.filter(Boolean)
 
 	return [aggregatedTags, aggregatedComments]
+
+	// Remove duplicates
+	const seen: Record<string, true> = {}
+	const uniqueAggregatedTags = aggregatedTags.filter((item) => {
+		if (seen[item[0]]) {
+			return false
+		} else {
+			seen[item[0]] = true
+			return true
+		}
+	})
+
+	return [uniqueAggregatedTags, aggregatedComments]
 }
