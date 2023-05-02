@@ -45,7 +45,8 @@ export const aggregateTags = (
 		.map(([_, sign]) => sign.tagsComment && sign.tagsComment)
 		.filter(Boolean)
 
-	return [aggregatedTags, aggregatedComments]
+	// Sort keys A-Z
+	aggregatedTags.sort((a, b) => a[0].localeCompare(b[0]))
 
 	// Remove duplicates
 	const seen: Record<string, true> = {}
