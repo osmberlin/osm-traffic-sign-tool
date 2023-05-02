@@ -1,6 +1,10 @@
 import fs from 'fs'
 import path from 'path'
-import { trafficSigns, type TrafficSignsWithWiki } from '../../trafficSigns'
+import {
+	trafficSigns,
+	type TrafficSignsWithWiki,
+	type TrafficSignWithWiki
+} from '../../trafficSigns'
 import wikiData from './trafficSignsWiki.json'
 
 const svgDirPath = path.join(__dirname, '../../../../static/trafficSignsSvgs')
@@ -8,9 +12,11 @@ const localTrafficSigns = structuredClone(trafficSigns) as TrafficSignsWithWiki
 const matchedWikiDataKeys: string[] = []
 
 // Add wiki data to trafficSigns
-Object.keys(localTrafficSigns).forEach((key) => {
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const wikiInfo = wikiData.find((item) => item.sign === key) as any
+Object.entries(localTrafficSigns).forEach(([key, values]) => {
+	const wikiInfo = wikiData.find(
+		(item) => item.sign === key || item.sign === values.wikiKey
+	) as TrafficSignWithWiki['wikiData']
+
 	if (wikiInfo) {
 		localTrafficSigns[key].wikiData = wikiInfo
 		matchedWikiDataKeys.push(key)

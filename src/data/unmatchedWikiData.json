@@ -165,22 +165,6 @@
 		"comments": "Taxistand"
 	},
 	{
-		"sign": "DE:241-30",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/86/Zeichen_241-30_-_getrennter_Rad-_und_Fu%C3%9Fweg%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_241-30_-_getrennter_Rad-_und_Fu%C3%9Fweg,_StVO_1992.svg",
-		"name": "Getrennter Rad- und Gehweg, Radweg links",
-		"osmTags": ["highway=path", "bicycle=designated", "foot=designated", "segregated=yes"],
-		"comments": "siehe Zeichen 240"
-	},
-	{
-		"sign": "DE:241-31",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/Zeichen_241-31_-_getrennter_Fu%C3%9F-_und_Radweg%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_241-31_-_getrennter_Fu%C3%9F-_und_Radweg,_StVO_1992.svg",
-		"name": "Getrennter Rad- und Gehweg, Radweg rechts",
-		"osmTags": ["highway=path", "bicycle=designated", "foot=designated", "segregated=yes"],
-		"comments": "siehe Zeichen 240"
-	},
-	{
 		"sign": "DE:242.1",
 		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Zeichen_242.1_-_Beginn_einer_Fu%C3%9Fg%C3%A4ngerzone%2C_StVO_2009.svg",
 		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_242.1_-_Beginn_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg",
@@ -215,36 +199,12 @@
 		"comments": "OSM-Cycleway impliziert: bicycle=designated + motor_vehicle=no) Veraltete Zeichenkennung DE:244a highway=* - Für den Wert spielt es keine Rolle, ob es sich um eine Fahrradstraße handelt oder nicht. Er wird so gewählt, wie es dem Ausbauzustand und der Verkehrsbedeutung der Straße am ehesten gerecht wird. highway=residential für Fahrradstraßen, die sich kaum von den umgebenen Straßen im Wohngebiet abheben, d.h. mit breiter Fahrbahn und (meistens) Gehweg. Ein Zusatzschild „Anlieger frei\" oder „KFZ frei\" ist ein gutes Indiz dafür, dass highway=residential geeignet ist. highway=path für Straßen, die von der Breite und Anlage eher einem gemeinsamen Fahrrad- und Fußweg entsprechen. Außerdem kann dies verwendet werden, wenn die Straße nicht von Kraftfahrzeugen befahren werden darf. Außerdem können highway=service vorkommen, oder es kann bei exklusiv für Fahrräder beschränkten Straßen highway=cycleway in Frage kommen. Siehe auch DE:Key:bicycle_road"
 	},
 	{
-		"sign": "DE:257-50",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Zeichen_256_-_Verbot_f%C3%BCr_Mofas%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_256_-_Verbot_f%C3%BCr_Mofas,_StVO_1992.svg",
-		"name": "Verbot für Mofas",
-		"osmTags": ["moped=no"],
-		"comments": "bisher Zeichen 256 (alte Zeichenkennung)"
-	},
-	{
-		"sign": "DE:257-51",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Zeichen_257-51_-_Verbot_f%C3%BCr_Reiter%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257-51_-_Verbot_f%C3%BCr_Reiter,_StVO_2017.svg",
-		"name": "Verbot für Reiter",
-		"osmTags": ["horse=no"],
-		"comments": "bisher Zeichen 258 (alte Zeichenkennung)"
-	},
-	{
 		"sign": "DE:257-52",
 		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Zeichen_257_-_Gespannfuhrwerke%2C_StVO_1970.svg",
 		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257_-_Gespannfuhrwerke,_StVO_1970.svg",
 		"name": "Verbot für Gespannfuhrwerke",
 		"osmTags": ["carriage=no"],
 		"comments": "ehemals Zeichen 257"
-	},
-	{
-		"sign": "DE:257-54",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Zeichen_257-54_-_Verbot_f%C3%BCr_Kraftomnibusse%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257-54_-_Verbot_f%C3%BCr_Kraftomnibusse,_StVO_2017.svg",
-		"name": "Verbot für Kraftomnibusse",
-		"osmTags": ["bus=no", "tourist_bus=no"],
-		"comments": "neues Zeichen bzw. neue Zeichen-Nummer. Da bus=* nur für Busse im Linienverkehr steht, muss tourist_bus=* zusätzlich gesetzt werden."
 	},
 	{
 		"sign": "DE:257-56",

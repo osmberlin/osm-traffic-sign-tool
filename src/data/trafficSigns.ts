@@ -10,6 +10,8 @@ export type TrafficSignWithWiki = TrafficSign & {
 }
 
 export type TrafficSign = {
+	/** @desc Alternative lookup key when wiki over specific keys but we need a simpler version as primary key. */
+	wikiKey?: string
 	name: string
 	descriptiveName: string | null
 	description: string | null
@@ -104,10 +106,27 @@ export const trafficSigns: TrafficSigns = {
 		mostUsed: true,
 		category: 'traffic_sign'
 	},
-	'DE:241': {
-		name: 'Zeichen 241',
-		descriptiveName: 'Getrennter Fuß- und Radweg',
-		description: null,
+	'DE:241-30': {
+		name: 'Zeichen 241-30',
+		descriptiveName: 'Getrennter Rad- und Gehweg',
+		description: 'Radweg links',
+		impliedKey: 'access', // TODO understand how this worked in the old app
+		osmTags: {
+			highway: ['path', 'cycleway'],
+			bicycle: 'designated',
+			foot: 'designated',
+			segregated: 'yes'
+		},
+		links: ['https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren'],
+		tagsComment:
+			'Manchmal wird auch [highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
+		mostUsed: true,
+		category: 'traffic_sign'
+	},
+	'DE:241-31': {
+		name: 'Zeichen 241-31',
+		descriptiveName: 'Getrennter Rad- und Gehweg',
+		description: 'Radweg rechts',
 		impliedKey: 'access', // TODO understand how this worked in the old app
 		osmTags: {
 			highway: ['path', 'cycleway'],
@@ -122,6 +141,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:242': {
+		wikiKey: 'DE:242.1',
 		name: 'Zeichen 242',
 		descriptiveName: 'Fußgägerbereich',
 		description: null,
@@ -215,21 +235,21 @@ export const trafficSigns: TrafficSigns = {
 		restrictionKeys: ['motorcycle', 'moped', 'mofa'],
 		category: 'traffic_sign'
 	},
-	'257-50': {
+	'DE:257-50': {
 		name: 'Zeichen 257-50',
 		descriptiveName: 'Verbot für Mofas',
 		description: null,
 		restrictionKeys: ['mofa'],
 		category: 'traffic_sign'
 	},
-	'257-51': {
+	'DE:257-51': {
 		name: 'Zeichen 257-51',
 		descriptiveName: 'Verbot für Reiter',
 		description: null,
 		restrictionKeys: ['horse'],
 		category: 'traffic_sign'
 	},
-	'257-54': {
+	'DE:257-54': {
 		name: 'Zeichen 257-54',
 		descriptiveName: 'Verbot für Kraftomnibusse',
 		description: null,
@@ -251,6 +271,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:262': {
+		wikiKey: 'DE:262[5.5]',
 		name: 'Zeichen 262',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
@@ -264,6 +285,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:263': {
+		wikiKey: 'DE:263[8]',
 		name: 'Zeichen 263',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über angegebene tatsächliche Achslast',
@@ -277,6 +299,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:264': {
+		wikiKey: 'DE:264[2]',
 		name: 'Zeichen 264',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung',
@@ -290,6 +313,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:265': {
+		wikiKey: 'DE:265[3.8]',
 		name: 'Zeichen 265',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über die angegebene Höhe einschließlich Ladung',
@@ -303,6 +327,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:266': {
+		wikiKey: 'DE:266[10]',
 		name: 'Zeichen 266',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge und Züge über angegebene Läge einschließlich Ladung',

@@ -17,6 +17,7 @@
 		"test:unit:run": "vitest run",
 		"test:unit:ui": "vitest --ui",
 		"test:unit:coverage": "vitest run --coverage",
+		"data:wiki": "npm run data:wiki:downloadWiki && npm run data:wiki:parseWiki && npm run data:wiki:downloadSvgs && npm run data:wiki:applyParsedWiki",
 		"data:wiki:downloadWiki": "vite-node ./src/data/wiki/downloadWiki/downloadWiki.js && prettier ./src/data/ --write",
 		"data:wiki:parseWiki": "vite-node ./src/data/wiki/parseWiki/parseWiki.ts && prettier ./src/data/ --write",
 		"data:wiki:downloadSvgs": "vite-node ./src/data/wiki/downloadSvgs/downloadSvgs.ts",
