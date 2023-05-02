@@ -20,26 +20,30 @@ describe('addRestrictionTags()', () => {
 		expect(collector).toMatchObject([['bicycle', 'no']])
 	})
 
-	// test('adds conditional restriction', () => {
-	// 	const collector: AggregatedTags = []
-	// 	const input = [
-	// 		['DE:252', { restrictionKeys: ['hgv'] }],
-	// 		['DE:1053-35', { value: 'wet', conditional: true }]
-	// 	] as TrafficSignWithWikiEntry[]
-	// 	addRestrictionTags(collector, input)
+	test('adds conditional restriction', () => {
+		const collector: AggregatedTags = []
+		const input = [
+			['DE:252', { restrictionKeys: ['hgv'] }],
+			['DE:1053-35', { value: 'wet', conditional: true }]
+		] as TrafficSignWithWikiEntry[]
+		addRestrictionTags(collector, input)
 
-	// 	expect(collector).toMatchObject([['hgv:conditional', 'no @ (wet)']])
-	// })
+		expect(collector).toMatchObject([['hgv:conditional', 'no @ (wet)']])
+	})
 
-	// test('adds multiple conditional restrictions', () => {
-	// 	const collector: AggregatedTags = []
-	// 	const input = [
-	// 		['DE:252', { restrictionKeys: ['hgv'] }],
-	// 		['DE:1053-35', { value: 'wet', conditional: true }],
-	// 		['DE:1042-51', { value: 'Sa,Su', conditional: true }]
-	// 	] as TrafficSignWithWikiEntry[]
-	// 	addRestrictionTags(collector, input)
+	test('adds multiple conditional restrictions', () => {
+		const collector: AggregatedTags = []
+		const input = [
+			['DE:252', { restrictionKeys: ['hgv'] }],
+			['DE:1053-35', { value: 'wet', conditional: true }],
+			['DE:1042-51', { value: 'Sa,Su', conditional: true }],
+			['DE:253', { restrictionKeys: ['foo'] }]
+		] as TrafficSignWithWikiEntry[]
+		addRestrictionTags(collector, input)
 
-	// 	expect(collector).toMatchObject([['hgv:conditional', 'no @ (wet AND Sa,Su)']])
-	// })
+		expect(collector).toMatchObject([
+			['hgv:conditional', 'no @ (wet AND Sa,Su)'],
+			['foo:conditional', 'no @ (wet AND Sa,Su)']
+		])
+	})
 })

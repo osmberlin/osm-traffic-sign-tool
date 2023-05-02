@@ -15,7 +15,17 @@ export const addRestrictionTags = (
 		.map(([_, sign]) => sign.restrictionValue)
 		.filter(Boolean)
 
-	restrictionKeys.forEach((restrictionKey) =>
-		aggregatedTags.push([restrictionKey, restrictionValues.join(',') || 'no'])
-	)
+	const conditialValues = selectedSigns
+		.map(([_, sign]) => sign.conditional && sign.value)
+		.filter(Boolean)
+
+	restrictionKeys.forEach((restrictionKey) => {
+		const value = restrictionValues.join(',') || 'no'
+		if (conditialValues.length) {
+			const conditionals = conditialValues.join(' AND ')
+			aggregatedTags.push([`${restrictionKey}:conditional`, `${value} @ (${conditionals})`])
+		} else {
+			aggregatedTags.push([restrictionKey, value])
+		}
+	})
 }
