@@ -1,10 +1,12 @@
 <script lang="ts">
-	import SignGrid from '@/components/signs/SignGrid.svelte'
+	import ExternalLink from '@/components/links/ExternalLink.svelte'
+	import { buttonStyle } from '@/components/links/buttonStyles'
 	import { aggregateTags } from '@/components/signs/aggregateTags'
 	import Tag from '@/components/wiki/Tag.svelte'
 	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
 	import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
 	import trafficSigns from '@/data/trafficSignsWithWiki.json'
+	import clsx from 'clsx'
 	import { queryParam } from 'sveltekit-search-params'
 
 	const selectedSignIds = queryParam('signs', {
@@ -28,55 +30,120 @@
 	}
 
 	function visibleSigns() {
-		return Object.entries(trafficSigns).filter(([key, _]) =>
-			$selectedSignIds?.includes(key)
-		) as TrafficSignWithWikiEntry[]
+		const signs =
+			$selectedSignIds === null
+				? Object.entries(trafficSigns)
+				: Object.entries(trafficSigns).filter(([key, _]) => $selectedSignIds?.includes(key))
+		return signs as TrafficSignWithWikiEntry[]
 	}
 
 	let selectedSigns = visibleSigns()
 	let [aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
-	let allSigns = Object.entries(trafficSigns) as TrafficSignWithWikiEntry[]
 
 	// Debug helper output:
 	const validKeys = Object.keys(trafficSigns)
 	const unrecognizedKeys = $selectedSignIds?.filter((key) => !validKeys.includes(key))
 </script>
 
-<h1>Selected Signs {selectedSigns.length}</h1>
-<!-- <pre class="text-[10px]">{JSON.stringify(aggregatedTags, undefined, 2)}</pre> -->
-<ul class="border border-violet-400 my-10 p-2 font-mono text-sm">
-	{#each aggregatedTags as [key, value]}
-		<li>
-			<Tag {key} {value} />
-		</li>
-	{/each}
-</ul>
-<div>
-	{#each aggregatedComments as comment}
-		<p><WikiLinkify text={comment} /></p>
-	{/each}
-</div>
-<SignGrid
-	headline="Selected Signs"
-	signs={selectedSigns}
-	{toggleSelection}
-	bind:attributes={$selectedSignIds}
-/>
+<main class="rounded bg-stone-300 px-6 py-4">
+	<h2 class="text-black uppercase font-light text-3xl my-4 flex items-center gap-3">
+		{#if !$selectedSignIds}
+			All signs {selectedSigns.length}
+		{:else}
+			Signs: {$selectedSignIds.join(', ')}
+			<button on:click={() => ($selectedSignIds = null)} class={buttonStyle}>Show all signs</button>
+		{/if}
+	</h2>
 
-<hr class="my-10 h-1 bg-black" />
+	<p>
+		This page is to understand, debug and improve the trafficSigns object that is the source of data
+		for this app. <ExternalLink
+			href="https://github.com/osmberlin/osm-traffic-sign-tool/issues/2"
+			blank>Learn more…</ExternalLink
+		>
+	</p>
 
-<SignGrid
-	headline="All signs"
-	signs={allSigns}
-	{toggleSelection}
-	bind:attributes={$selectedSignIds}
-/>
+	{#if $selectedSignIds}
+		<h3 class="text-stone-800 mt-10 mb-2 text-lg">
+			This combination of signs will return the following combined tags
+		</h3>
 
-<hr class="my-10 h-1 bg-black" />
+		<ul>
+			{#each aggregatedTags as [key, value]}
+				<li>
+					<Tag {key} {value} />
+				</li>
+			{/each}
+		</ul>
 
-{#if $selectedSignIds && unrecognizedKeys?.length}
-	<h2>Unrecognized keys:</h2>
-	{JSON.stringify(unrecognizedKeys, undefined, 2)}
-{:else}
-	(Alle Keys wurden erkannt.)
-{/if}
+		<h3 class="text-stone-800 mt-10 mb-2 text-lg">
+			This combination of signs will return the following comments
+		</h3>
+		{#each aggregatedComments as comment}
+			<p><WikiLinkify text={comment} /></p>
+		{/each}
+	{/if}
+
+	<table class="mt-10 min-w-full">
+		<thead class="border-b-2 border-violet-300">
+			<tr>
+				<th
+					scope="col"
+					class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-stone-900 sm:pl-6 md:pl-0"
+				>
+					Sign key
+				</th>
+				<th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold text-stone-900">
+					Sign object
+				</th>
+				<th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold text-stone-900">
+					Sign object <code>wikiData</code>
+				</th>
+			</tr>
+		</thead>
+		<tbody class="divide-y divide-violet-200">
+			{#each selectedSigns as [key, values]}
+				<tr class={clsx(values?.localFile ? '' : 'bg-amber-300')}>
+					<th class="py-4 pl-4 pr-3 text-sm text-stone-900 sm:pl-6 md:pl-0 text-center space-y-3">
+						<code>{key}</code><br />
+
+						{#if values?.localFile}
+							<img src={values?.localFile} alt={values.name} class="h-auto w-10 inline-block" />
+						{:else}<span class="text-amber-700 inline-block">Missing</span>{/if}<br />
+
+						<button
+							on:click={() => toggleSelection(key)}
+							class={clsx(buttonStyle, 'w-8 h-8 inline-flex items-center justify-center pb-0.5')}
+						>
+							{#if $selectedSignIds?.includes(key)}
+								&times;
+							{:else}
+								+
+							{/if}
+						</button>
+					</th>
+					<td class="py-4 px-3 text-xs text-stone-500">
+						<pre class="w-96 overflow-scroll">{JSON.stringify(
+								values,
+								(key, value) => {
+									if (key === 'wikiData') return undefined // Remove the key from the output
+									return value
+								},
+								2
+							)}</pre>
+					</td>
+					<td class="py-4 px-3 text-xs text-stone-500">
+						<pre class="w-96 overflow-scroll">{JSON.stringify(values.wikiData, undefined, 2)}</pre>
+					</td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
+
+	{#if $selectedSignIds && unrecognizedKeys?.length}
+		<h2>Unrecognized keys:</h2>
+		{JSON.stringify(unrecognizedKeys, undefined, 2)}
+	{:else if $selectedSignIds !== null}
+		(Alle Keys wurden erkannt.)
+	{/if}
+</main>
