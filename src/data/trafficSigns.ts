@@ -421,7 +421,7 @@ export const trafficSigns: TrafficSigns = {
 		tagsComment:
 			'Aufgrund von "Anlieger frei" eventuell als [highway=residential] oder <code>service</code> einzustufen.',
 		mostUsed: true,
-		category: 'traffic_sign'
+		category: 'modifier_sign'
 	},
 	'DE:1022-10': {
 		name: 'Zusatzzeichen 1022-10',
@@ -431,7 +431,7 @@ export const trafficSigns: TrafficSigns = {
 			bicycle: 'yes'
 		},
 		mostUsed: true,
-		category: 'traffic_sign'
+		category: 'modifier_sign'
 	},
 	'DE:1022-11': {
 		name: 'Zusatzzeichen 1022-11',
