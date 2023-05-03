@@ -31,4 +31,36 @@ describe('collectTags()', () => {
 			['lorem', ['a', 'b']]
 		])
 	})
+
+	test('handles key, value', () => {
+		const input = [
+			['DE:333', { ...baseInput, osmTags: { foo: 'bar' }, key: 'highway', value: 'bridleway' }]
+		] satisfies TrafficSignWithWikiEntry[]
+		const result = collectTags(input)
+
+		expect(result).toMatchObject([
+			['foo', 'bar'],
+			['highway', 'bridleway']
+		])
+	})
+
+	test('handles key, value', () => {
+		const input = [
+			[
+				'DE:333',
+				{
+					...baseInput,
+					key: 'maxweight',
+					valuePrompt: {
+						prompt: 'Gewicht in Tonnen ohne Einheit',
+						defaultValue: '5.5',
+						format: 'float'
+					}
+				}
+			]
+		] satisfies TrafficSignWithWikiEntry[]
+		const result = collectTags(input)
+
+		expect(result).toMatchObject([['maxweight', '5.5']])
+	})
 })
