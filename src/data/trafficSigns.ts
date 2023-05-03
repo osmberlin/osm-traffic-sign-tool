@@ -1,13 +1,17 @@
+import type { Prettify } from '@/components/typeUtils'
+
 export type TrafficSignWithWikiEntry = [string, TrafficSignWithWiki]
 
 export type TrafficSignsWithWiki = {
 	[key: string]: TrafficSignWithWiki
 }
 
-export type TrafficSignWithWiki = TrafficSign & {
-	wikiData?: Record<string, string>
-	localFile?: string
-}
+export type TrafficSignWithWiki = Prettify<
+	TrafficSign & {
+		wikiData?: Record<string, string>
+		localFile?: string
+	}
+>
 
 export type TrafficSign = {
 	/** @desc Alternative lookup key when wiki over specific keys but we need a simpler version as primary key. */
