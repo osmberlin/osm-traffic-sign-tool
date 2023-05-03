@@ -1,5 +1,5 @@
 import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
-import { createTrafficSignValue } from './utils/createTrafficSignValue'
+import { createTrafficSignTagValue } from './utils/createTrafficSignTagValue'
 import { removeDuplicates } from './utils/removeDuplicates'
 import { addRestrictionTags } from './utils/addRestrictionTags'
 import { collectTags } from './utils/collectTags'
@@ -18,7 +18,7 @@ export const aggregateTags = (
 	if (existingTrafficSignIndex) {
 		delete aggregatedTags[existingTrafficSignIndex]
 	}
-	const trafficSignValue = createTrafficSignValue(selectedSigns)
+	const trafficSignValue = createTrafficSignTagValue(selectedSigns)
 	aggregatedTags.push(['traffic_sign', trafficSignValue])
 
 	addRestrictionTags(aggregatedTags, selectedSigns)

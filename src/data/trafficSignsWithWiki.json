@@ -1,5 +1,6 @@
 {
 	"DE:237": {
+		"urlString": "DE:237",
 		"name": "Zeichen 237",
 		"descriptiveName": "Radweg",
 		"description": null,
@@ -30,6 +31,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg"
 	},
 	"DE:238": {
+		"urlString": "DE:238",
 		"name": "Zeichen 238",
 		"descriptiveName": "Reitweg",
 		"description": null,
@@ -48,6 +50,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_238_-_Sonderweg_Reiter,_StVO_1992.svg"
 	},
 	"DE:239": {
+		"urlString": "DE:239",
 		"name": "Zeichen 239",
 		"descriptiveName": "Fußgäger",
 		"description": null,
@@ -69,6 +72,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_239_-_Sonderweg_Fußgänger,_StVO_1992.svg"
 	},
 	"DE:240": {
+		"urlString": "DE:240",
 		"name": "Zeichen 240",
 		"image": {
 			"svg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg%2C_StVO_1992.svg",
@@ -99,6 +103,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_240_-_Gemeinsamer_Fuß-_und_Radweg,_StVO_1992.svg"
 	},
 	"DE:241-30": {
+		"urlString": "DE:241-30",
 		"name": "Zeichen 241-30",
 		"descriptiveName": "Getrennter Rad- und Gehweg",
 		"description": "Radweg links",
@@ -124,6 +129,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_241-30_-_getrennter_Rad-_und_Fußweg,_StVO_1992.svg"
 	},
 	"DE:241-31": {
+		"urlString": "DE:241-31",
 		"name": "Zeichen 241-31",
 		"descriptiveName": "Getrennter Rad- und Gehweg",
 		"description": "Radweg rechts",
@@ -149,7 +155,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_241-31_-_getrennter_Fuß-_und_Radweg,_StVO_1992.svg"
 	},
 	"DE:242": {
-		"wikiKey": "DE:242.1",
+		"urlString": "DE:242.1",
 		"name": "Zeichen 242",
 		"descriptiveName": "Fußgägerbereich",
 		"description": null,
@@ -170,6 +176,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_242.1_-_Beginn_einer_Fußgängerzone,_StVO_2009.svg"
 	},
 	"DE:244.1": {
+		"urlString": "DE:244.1",
 		"name": "Zeichen 244.1",
 		"descriptiveName": "Fahrradstraße",
 		"description": null,
@@ -204,6 +211,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_244.1_-_Beginn_einer_Fahrradstraße,_StVO_2013.svg"
 	},
 	"DE:245": {
+		"urlString": "DE:245",
 		"name": "Zeichen 245",
 		"descriptiveName": "Busfahrstreifen",
 		"description": null,
@@ -224,6 +232,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_245_-_Bussonderfahrstreifen,_StVO_2013.svg"
 	},
 	"DE:325": {
+		"urlString": "DE:325",
 		"name": "Zeichen 325",
 		"descriptiveName": "Verkehrsberuhigter Bereich",
 		"description": null,
@@ -233,6 +242,7 @@
 		"category": "traffic_sign"
 	},
 	"DE:250": {
+		"urlString": "DE:250",
 		"name": "Zeichen 250",
 		"descriptiveName": "Verbot für Fahrzeuge aller Art",
 		"description": null,
@@ -250,6 +260,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_250_-_Verbot_für_Fahrzeuge_aller_Art,_StVO_1992.svg"
 	},
 	"DE:260": {
+		"urlString": "DE:260",
 		"name": "Zeichen 260",
 		"descriptiveName": null,
 		"description": "Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge",
@@ -267,6 +278,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_260_-_Verbot_für_Krafträder_und_Mofas_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg"
 	},
 	"DE:251": {
+		"urlString": "DE:251",
 		"name": "Zeichen 251",
 		"descriptiveName": null,
 		"description": "Verbot für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge",
@@ -283,6 +295,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_251_-_Verbot_für_Kraftwagen_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg"
 	},
 	"DE:253": {
+		"urlString": "DE:253",
 		"name": "Zeichen 253",
 		"descriptiveName": null,
 		"description": "Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t, einschließlich ihrer Anhäger, und Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse",
@@ -300,6 +313,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_253_-_Verbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht,_StVO_1992.svg"
 	},
 	"DE:254": {
+		"urlString": "DE:254",
 		"name": "Zeichen 254",
 		"descriptiveName": "Verbot für Radfahrer",
 		"description": null,
@@ -317,6 +331,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_254_-_Verbot_für_Radfahrer,_StVO_1992.svg"
 	},
 	"DE:255": {
+		"urlString": "DE:255",
 		"name": "Zeichen 255",
 		"descriptiveName": null,
 		"description": "Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas",
@@ -333,6 +348,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_255_-_Verbot_für_Krafträder,_auch_mit_Beiwagen,_Kleinkrafträder_und_Mofas,_StVO_1992.svg"
 	},
 	"DE:257-50": {
+		"urlString": "DE:257-50",
 		"name": "Zeichen 257-50",
 		"descriptiveName": "Verbot für Mofas",
 		"description": null,
@@ -349,6 +365,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_256_-_Verbot_für_Mofas,_StVO_1992.svg"
 	},
 	"DE:257-51": {
+		"urlString": "DE:257-51",
 		"name": "Zeichen 257-51",
 		"descriptiveName": "Verbot für Reiter",
 		"description": null,
@@ -365,6 +382,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_257-51_-_Verbot_für_Reiter,_StVO_2017.svg"
 	},
 	"DE:257-54": {
+		"urlString": "DE:257-54",
 		"name": "Zeichen 257-54",
 		"descriptiveName": "Verbot für Kraftomnibusse",
 		"description": null,
@@ -381,6 +399,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_257-54_-_Verbot_für_Kraftomnibusse,_StVO_2017.svg"
 	},
 	"DE:259": {
+		"urlString": "DE:259",
 		"name": "Zeichen 259",
 		"descriptiveName": "Verbot für Fußgäger",
 		"description": null,
@@ -397,6 +416,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_259_-_Verbot_für_Fußgänger,_StVO_1992.svg"
 	},
 	"DE:261": {
+		"urlString": "DE:261",
 		"name": "Zeichen 261",
 		"descriptiveName": null,
 		"description": "Verbot für kennzeichnungspflichtige Kraftfahrzeuge mit gefährlichen Gütern",
@@ -412,8 +432,8 @@
 		},
 		"localFile": "/trafficSignsSvgs/Zeichen_261_-_Verbot_für_kennzeichnungspflichtige_Kraftfahrzeuge_mit_gefährlichen_Gütern,_StVO_1988.svg"
 	},
-	"DE:262": {
-		"wikiKey": "DE:262[5.5]",
+	"DE:262[5.5]": {
+		"urlString": "DE:262[5.5]",
 		"name": "Zeichen 262",
 		"descriptiveName": null,
 		"description": "Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht",
@@ -436,7 +456,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_262_-_Verbot_für_Fahrzeuge_deren_tatsächliches_Gewicht_eine_gewisse_Grenze_überschreitet_(600x600);_StVO_1992.svg"
 	},
 	"DE:263": {
-		"wikiKey": "DE:263[8]",
+		"urlString": "DE:263[8]",
 		"name": "Zeichen 263",
 		"descriptiveName": null,
 		"description": "Verbot für Fahrzeuge über angegebene tatsächliche Achslast",
@@ -459,7 +479,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_263_-_Verbot_für_Fahrzeuge_über_angegebene_tatsächliche_Achslast,_StVO_1992.svg"
 	},
 	"DE:264": {
-		"wikiKey": "DE:264[2]",
+		"urlString": "DE:264[2]",
 		"name": "Zeichen 264",
 		"descriptiveName": null,
 		"description": "Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung",
@@ -482,7 +502,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_264_-_Verbot_für_Fahrzeuge_über_angegebene_Breite_einschließlich_Ladung,_StVO_1992.svg"
 	},
 	"DE:265": {
-		"wikiKey": "DE:265[3.8]",
+		"urlString": "DE:265[3.8]",
 		"name": "Zeichen 265",
 		"descriptiveName": null,
 		"description": "Verbot für Fahrzeuge über die angegebene Höhe einschließlich Ladung",
@@ -505,7 +525,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_265_-_Verbot_für_Fahrzeuge,_deren_tatsächliche_Höhe_einschließlich_Ladung_eine_bestimmte_Grenze_überschreitet_(600x600);_StVO_1992.svg"
 	},
 	"DE:266": {
-		"wikiKey": "DE:266[10]",
+		"urlString": "DE:266[10]",
 		"name": "Zeichen 266",
 		"descriptiveName": null,
 		"description": "Verbot für Fahrzeuge und Züge über angegebene Läge einschließlich Ladung",
@@ -528,6 +548,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_266_-_Verbot_für_Fahrzeuge_und_Züge_über_angegebene_Länge_einschließlich_Ladung,_StVO_1992.svg"
 	},
 	"DE:269": {
+		"urlString": "DE:269",
 		"name": "Zeichen 269",
 		"descriptiveName": "Verbot für Fahrzeuge mit wassergefährdender Ladung",
 		"description": null,
@@ -544,6 +565,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_269_-_Verbot_für_Fahrzeuge_mit_wassergefährdender_Ladung,_StVO_1988.svg"
 	},
 	"DE:274": {
+		"urlString": "DE:274[60]",
 		"name": "Zeichen 274",
 		"descriptiveName": "Zulässige Höchstgeschwindigkeit",
 		"description": null,
@@ -556,6 +578,7 @@
 		"category": "traffic_sign"
 	},
 	"DE:275": {
+		"urlString": "DE:275[30]",
 		"name": "Zeichen 275",
 		"descriptiveName": "Vorgeschriebene Mindestgeschwindigkeit",
 		"description": null,
@@ -568,6 +591,7 @@
 		"category": "traffic_sign"
 	},
 	"DE:276": {
+		"urlString": "DE:276",
 		"name": "Zeichen 276",
 		"descriptiveName": "Überholverbot für Kraftfahrzeuge aller Art",
 		"description": null,
@@ -587,6 +611,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_276_-_Überholverbot_für_Kraftfahrzeuge_aller_Art,_StVO_1992.svg"
 	},
 	"DE:277": {
+		"urlString": "DE:277",
 		"name": "Zeichen 277",
 		"descriptiveName": "Überholverbot für Kraftfahrzeuge über 3,5 t",
 		"description": null,
@@ -606,6 +631,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_277_-_Überholverbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_2,8_t,_einschließlich_ihrer_Anhänger,_StVO_1992.svg"
 	},
 	"DE:354": {
+		"urlString": "DE:354",
 		"name": "Zeichen 354",
 		"descriptiveName": "Wasserschutzgebiet",
 		"description": null,
@@ -624,6 +650,7 @@
 		"localFile": "/trafficSignsSvgs/Zeichen_354_-_Wasserschutzgebiet,_StVO_1988.svg"
 	},
 	"DE:1020-12": {
+		"urlString": "DE:1020-12",
 		"name": "Zusatzzeichen 1020-12",
 		"descriptiveName": "Radfahrer und Anlieger frei",
 		"description": "Anlieger im Sinne von Bewohner",
@@ -643,6 +670,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1020-12_-_Radfahrer_und_Anlieger_frei_(450x600),_StVO_1992.svg"
 	},
 	"DE:1020-30": {
+		"urlString": "DE:1020-30",
 		"name": "Zusatzzeichen 1020-30",
 		"descriptiveName": "Anlieger frei (Anlieger im Sinne von Bewohner)",
 		"description": null,
@@ -664,6 +692,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1020-30_-_Anlieger_frei_(600x330),_StVO_1992.svg"
 	},
 	"DE:1022-10": {
+		"urlString": "DE:1022-10",
 		"name": "Zusatzzeichen 1022-10",
 		"descriptiveName": "Radfahrer frei",
 		"description": null,
@@ -683,6 +712,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1022-10_-_Radfahrer_frei,_StVO_1992.svg"
 	},
 	"DE:1022-11": {
+		"urlString": "DE:1022-11",
 		"name": "Zusatzzeichen 1022-11",
 		"descriptiveName": "Mofas frei",
 		"description": null,
@@ -706,6 +736,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1022-11_-_Mofas_frei_(600x450),_StVO_1992.svg"
 	},
 	"DE:1022-12": {
+		"urlString": "DE:1022-12",
 		"name": "Zusatzzeichen 1022-12",
 		"descriptiveName": "Krafträder auch mit Beiwagen, Krafträder und Mofas frei",
 		"description": null,
@@ -726,6 +757,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1022-12_-_Krafträder_auch_mit_Beiwagen,_Kleinkrafträder_und_Mofas_frei_(600x450),_StVO_1992.svg"
 	},
 	"DE:1024-10": {
+		"urlString": "DE:1024-10",
 		"name": "Zusatzzeichen 1024-10",
 		"descriptiveName": "Personenkraftwagen frei",
 		"description": null,
@@ -745,6 +777,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1024-10_-_Personenkraftwagen_frei,_StVO_1992.svg"
 	},
 	"DE:1024-12": {
+		"urlString": "DE:1024-12",
 		"name": "Zusatzzeichen 1024-12",
 		"descriptiveName": null,
 		"description": "Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t, einschließlich ihrer Anhäger und Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse frei (zulässiges Gewicht, nicht das tatsächliche Gewicht)",
@@ -762,6 +795,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1024-12_-_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_3,5_t,_einschließlich_ihrer_Anhänger_und_Zugmaschinen,_ausgenommen_Personenkraftwagen_und_Kraftomnibusse_frei,_StVO_1992.svg"
 	},
 	"DE:1024-14": {
+		"urlString": "DE:1024-14",
 		"name": "Zusatzzeichen 1024-14",
 		"descriptiveName": "Kraftomnibus frei",
 		"description": null,
@@ -781,6 +815,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1024-14_-_Kraftomnibusse_frei,_StVO_1992.svg"
 	},
 	"DE:1024-17": {
+		"urlString": "DE:1024-17",
 		"name": "Zusatzzeichen 1024-17",
 		"descriptiveName": null,
 		"description": "Kraftfahrzeuge und Züge, die nicht schneller als 25 km/h fahren können oder dürfen frei (im Gegensatz zu \"landwirtschaftlicher Verkehr\" handelt es sich hier um eine Fahrzeugklasse)",
@@ -805,6 +840,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1024-17_-_Kraftfahrzeuge_und_Züge,_die_nicht_schneller_als_25_km-h_fahren_können_oder_dürfen,_frei,_StVO_1992.svg"
 	},
 	"DE:1026-30": {
+		"urlString": "DE:1026-30",
 		"name": "Zusatzzeichen 1026-30",
 		"descriptiveName": "Taxi frei",
 		"description": null,
@@ -823,6 +859,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-30_-_Taxi_frei,_StVO_1992.svg"
 	},
 	"DE:1026-32": {
+		"urlString": "DE:1026-32",
 		"name": "Zusatzzeichen 1026-32",
 		"descriptiveName": "Linienverkehr frei",
 		"description": "'psv' steht für 'Public Service Vehicle', also 'öffentliches Verkehrsmittel'",
@@ -841,6 +878,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-32_-_Linienverkehr_frei_(450x600),_StVO_1992.svg"
 	},
 	"DE:1026-35": {
+		"urlString": "DE:1026-35",
 		"name": "Zusatzzeichen 1026-35",
 		"descriptiveName": "Lieferverkehr frei",
 		"description": null,
@@ -857,6 +895,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-35_-_Lieferverkehr_frei,_StVO_1992.svg"
 	},
 	"DE:1026-36": {
+		"urlString": "DE:1026-36",
 		"name": "Zusatzzeichen 1026-36",
 		"descriptiveName": "Landwirtschaftlicher Verkehr frei",
 		"description": null,
@@ -879,6 +918,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-36_-_Landwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg"
 	},
 	"DE:1020-13": {
+		"urlString": "DE:1020-13",
 		"name": "Zusatzzeichen 1020-13",
 		"descriptiveName": "Inline Skater frei",
 		"description": null,
@@ -888,6 +928,7 @@
 		"category": "modifier_sign"
 	},
 	"1026-33": {
+		"urlString": "1026-33",
 		"name": "Zusatzzeichen 1026-33",
 		"descriptiveName": "Einsatzfahrzeuge frei",
 		"description": null,
@@ -897,6 +938,7 @@
 		"category": "modifier_sign"
 	},
 	"DE:1026-37": {
+		"urlString": "DE:1026-37",
 		"name": "Zusatzzeichen 1026-37",
 		"descriptiveName": "Forstwirtschaftlicher Verkehr frei",
 		"description": null,
@@ -918,6 +960,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-37_-_Forstwirtschaftlicher_Verkehr_frei,_StVO_1992.svg"
 	},
 	"DE:1026-38": {
+		"urlString": "DE:1026-38",
 		"name": "Zusatzzeichen 1026-38",
 		"descriptiveName": "Land- und forstwirtschaftlicher Verkehr frei",
 		"description": null,
@@ -939,6 +982,7 @@
 		"localFile": "/trafficSignsSvgs/Zusatzzeichen_1026-38_-_Land-_und_forstwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg"
 	},
 	"DE:1040-30": {
+		"urlString": "DE:1040-30[16:00-18:00]",
 		"name": "Zusatzzeichen 1040-30",
 		"descriptiveName": "Zeitliche Beschräkung",
 		"description": null,
@@ -951,6 +995,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1040-31": {
+		"urlString": "DE:1040-31[08:00-11:00,16:00-18:00]",
 		"name": "Zusatzzeichen 1040-31",
 		"descriptiveName": "Zeitliche Beschräkung",
 		"description": null,
@@ -963,6 +1008,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1042-30": {
+		"urlString": "DE:1042-30",
 		"name": "Zusatzzeichen 1042-30",
 		"descriptiveName": "Zeitliche Beschräkung: werktags",
 		"description": null,
@@ -971,6 +1017,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1042-31": {
+		"urlString": "DE:1042-31[Mo-Sa 18:00-19:00]",
 		"name": "Zusatzzeichen 1042-31",
 		"descriptiveName": "Zeitliche Beschräkung: werktags, von-bis",
 		"description": null,
@@ -983,6 +1030,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1042-32": {
+		"urlString": "DE:1042-32[PH off;Mo-Sa 08:30-11:30,16:00-18:00]",
 		"name": "Zusatzzeichen 1042-32",
 		"descriptiveName": "Zeitliche Beschräkung: werktags, von-bis, von-bis",
 		"description": null,
@@ -995,6 +1043,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1042-33": {
+		"urlString": "DE:1042-33",
 		"name": "Zusatzzeichen 1042-33",
 		"descriptiveName": "Zeitliche Beschräkung: Mo-Fr, von-bis",
 		"description": null,
@@ -1007,6 +1056,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1042-34": {
+		"urlString": "DE:1042-34[Tu,Th,Fr 16:00-18:00]",
 		"name": "Zusatzzeichen 1042-34",
 		"descriptiveName": "Zeitliche Beschräkung: Di,Do,Fr, von-bis",
 		"description": null,
@@ -1019,6 +1069,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1042-35": {
+		"urlString": "DE:1042-35[Su,PH 06:00-22:00]",
 		"name": "Zusatzzeichen 1042-35",
 		"descriptiveName": "Zeitliche Beschräkung: So- und Feiertage, von-bis",
 		"description": null,
@@ -1031,6 +1082,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1042-38": {
+		"urlString": "DE:1042-38",
 		"name": "Zusatzzeichen 1042-38",
 		"descriptiveName": "Zeitliche Beschräkung: Werktags, außer Samstags",
 		"description": null,
@@ -1039,6 +1091,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1042-51": {
+		"urlString": "DE:1042-51",
 		"name": "Zusatzzeichen 1042-51",
 		"descriptiveName": "Zeitliche Beschräkung: Sa und So",
 		"description": null,
@@ -1047,6 +1100,7 @@
 		"category": "modifier_sign_restriction"
 	},
 	"DE:1053-35": {
+		"urlString": "DE:1053-35",
 		"name": "Zusatzzeichen 1053-35",
 		"descriptiveName": "Beschräkung: bei Nässe",
 		"description": null,

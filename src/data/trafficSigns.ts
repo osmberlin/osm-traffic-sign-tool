@@ -14,8 +14,12 @@ export type TrafficSignWithWiki = Prettify<
 >
 
 export type TrafficSign = {
-	/** @desc Alternative lookup key when wiki over specific keys but we need a simpler version as primary key. */
-	wikiKey?: string
+	/** @desc DE:123[5.5] — The value that we store in the URL, it includes the `valuePrompt`-value */
+	urlString: string
+	/** @desc DE:123 — The sign key without the value part  */
+	urlKey?: string
+	/** @desc 5.5 — For signs that have `valuePrompt`, this is the value given by the URL */
+	urlValue?: string
 	name: string
 	descriptiveName: string | null
 	description: string | null
@@ -52,6 +56,7 @@ export type TrafficSigns = {
 
 export const trafficSigns: TrafficSigns = {
 	'DE:237': {
+		urlString: 'DE:237',
 		name: 'Zeichen 237',
 		descriptiveName: 'Radweg',
 		description: null,
@@ -67,6 +72,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:238': {
+		urlString: 'DE:238',
 		name: 'Zeichen 238',
 		descriptiveName: 'Reitweg',
 		description: null,
@@ -76,6 +82,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:239': {
+		urlString: 'DE:239',
 		name: 'Zeichen 239',
 		descriptiveName: 'Fußgäger',
 		description: null,
@@ -88,6 +95,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:240': {
+		urlString: 'DE:240',
 		name: 'Zeichen 240',
 		image: {
 			svg: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg%2C_StVO_1992.svg',
@@ -111,6 +119,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:241-30': {
+		urlString: 'DE:241-30',
 		name: 'Zeichen 241-30',
 		descriptiveName: 'Getrennter Rad- und Gehweg',
 		description: 'Radweg links',
@@ -128,6 +137,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:241-31': {
+		urlString: 'DE:241-31',
 		name: 'Zeichen 241-31',
 		descriptiveName: 'Getrennter Rad- und Gehweg',
 		description: 'Radweg rechts',
@@ -145,7 +155,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:242': {
-		wikiKey: 'DE:242.1',
+		urlString: 'DE:242.1',
 		name: 'Zeichen 242',
 		descriptiveName: 'Fußgägerbereich',
 		description: null,
@@ -157,6 +167,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:244.1': {
+		urlString: 'DE:244.1',
 		name: 'Zeichen 244.1',
 		descriptiveName: 'Fahrradstraße',
 		description: null,
@@ -172,6 +183,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:245': {
+		urlString: 'DE:245',
 		name: 'Zeichen 245',
 		descriptiveName: 'Busfahrstreifen',
 		description: null,
@@ -183,6 +195,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:325': {
+		urlString: 'DE:325',
 		name: 'Zeichen 325',
 		descriptiveName: 'Verkehrsberuhigter Bereich',
 		description: null,
@@ -192,6 +205,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:250': {
+		urlString: 'DE:250',
 		name: 'Zeichen 250',
 		descriptiveName: 'Verbot für Fahrzeuge aller Art',
 		description: null,
@@ -200,6 +214,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:260': {
+		urlString: 'DE:260',
 		name: 'Zeichen 260',
 		descriptiveName: null,
 		description:
@@ -209,6 +224,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:251': {
+		urlString: 'DE:251',
 		name: 'Zeichen 251',
 		descriptiveName: null,
 		description: 'Verbot für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
@@ -216,6 +232,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:253': {
+		urlString: 'DE:253',
 		name: 'Zeichen 253',
 		descriptiveName: null,
 		description:
@@ -225,6 +242,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:254': {
+		urlString: 'DE:254',
 		name: 'Zeichen 254',
 		descriptiveName: 'Verbot für Radfahrer',
 		description: null,
@@ -233,6 +251,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:255': {
+		urlString: 'DE:255',
 		name: 'Zeichen 255',
 		descriptiveName: null,
 		description: 'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
@@ -240,6 +259,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:257-50': {
+		urlString: 'DE:257-50',
 		name: 'Zeichen 257-50',
 		descriptiveName: 'Verbot für Mofas',
 		description: null,
@@ -247,6 +267,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:257-51': {
+		urlString: 'DE:257-51',
 		name: 'Zeichen 257-51',
 		descriptiveName: 'Verbot für Reiter',
 		description: null,
@@ -254,6 +275,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:257-54': {
+		urlString: 'DE:257-54',
 		name: 'Zeichen 257-54',
 		descriptiveName: 'Verbot für Kraftomnibusse',
 		description: null,
@@ -261,6 +283,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:259': {
+		urlString: 'DE:259',
 		name: 'Zeichen 259',
 		descriptiveName: 'Verbot für Fußgäger',
 		description: null,
@@ -268,14 +291,15 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:261': {
+		urlString: 'DE:261',
 		name: 'Zeichen 261',
 		descriptiveName: null,
 		description: 'Verbot für kennzeichnungspflichtige Kraftfahrzeuge mit gefährlichen Gütern',
 		restrictionKeys: ['hazmat'],
 		category: 'traffic_sign'
 	},
-	'DE:262': {
-		wikiKey: 'DE:262[5.5]',
+	'DE:262[5.5]': {
+		urlString: 'DE:262[5.5]',
 		name: 'Zeichen 262',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
@@ -289,7 +313,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:263': {
-		wikiKey: 'DE:263[8]',
+		urlString: 'DE:263[8]',
 		name: 'Zeichen 263',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über angegebene tatsächliche Achslast',
@@ -303,7 +327,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:264': {
-		wikiKey: 'DE:264[2]',
+		urlString: 'DE:264[2]',
 		name: 'Zeichen 264',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung',
@@ -317,7 +341,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:265': {
-		wikiKey: 'DE:265[3.8]',
+		urlString: 'DE:265[3.8]',
 		name: 'Zeichen 265',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über die angegebene Höhe einschließlich Ladung',
@@ -331,7 +355,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:266': {
-		wikiKey: 'DE:266[10]',
+		urlString: 'DE:266[10]',
 		name: 'Zeichen 266',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge und Züge über angegebene Läge einschließlich Ladung',
@@ -345,6 +369,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:269': {
+		urlString: 'DE:269',
 		name: 'Zeichen 269',
 		descriptiveName: 'Verbot für Fahrzeuge mit wassergefährdender Ladung',
 		description: null,
@@ -352,6 +377,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:274': {
+		urlString: 'DE:274[60]',
 		name: 'Zeichen 274',
 		descriptiveName: 'Zulässige Höchstgeschwindigkeit',
 		description: null,
@@ -364,6 +390,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:275': {
+		urlString: 'DE:275[30]',
 		name: 'Zeichen 275',
 		descriptiveName: 'Vorgeschriebene Mindestgeschwindigkeit',
 		description: null,
@@ -376,6 +403,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:276': {
+		urlString: 'DE:276',
 		name: 'Zeichen 276',
 		descriptiveName: 'Überholverbot für Kraftfahrzeuge aller Art',
 		description: null,
@@ -387,6 +415,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:277': {
+		urlString: 'DE:277',
 		name: 'Zeichen 277',
 		descriptiveName: 'Überholverbot für Kraftfahrzeuge über 3,5 t',
 		description: null,
@@ -398,6 +427,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:354': {
+		urlString: 'DE:354',
 		name: 'Zeichen 354',
 		descriptiveName: 'Wasserschutzgebiet',
 		description: null,
@@ -407,6 +437,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:1020-12': {
+		urlString: 'DE:1020-12',
 		name: 'Zusatzzeichen 1020-12',
 		descriptiveName: 'Radfahrer und Anlieger frei',
 		description: 'Anlieger im Sinne von Bewohner',
@@ -417,6 +448,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1020-30': {
+		urlString: 'DE:1020-30',
 		name: 'Zusatzzeichen 1020-30',
 		descriptiveName: 'Anlieger frei (Anlieger im Sinne von Bewohner)',
 		description: null,
@@ -428,6 +460,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1022-10': {
+		urlString: 'DE:1022-10',
 		name: 'Zusatzzeichen 1022-10',
 		descriptiveName: 'Radfahrer frei',
 		description: null,
@@ -438,6 +471,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1022-11': {
+		urlString: 'DE:1022-11',
 		name: 'Zusatzzeichen 1022-11',
 		descriptiveName: 'Mofas frei',
 		description: null,
@@ -453,6 +487,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1022-12': {
+		urlString: 'DE:1022-12',
 		name: 'Zusatzzeichen 1022-12',
 		descriptiveName: 'Krafträder auch mit Beiwagen, Krafträder und Mofas frei',
 		description: null,
@@ -464,6 +499,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1024-10': {
+		urlString: 'DE:1024-10',
 		name: 'Zusatzzeichen 1024-10',
 		descriptiveName: 'Personenkraftwagen frei',
 		description: null,
@@ -475,6 +511,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1024-12': {
+		urlString: 'DE:1024-12',
 		name: 'Zusatzzeichen 1024-12',
 		descriptiveName: null,
 		description:
@@ -484,6 +521,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1024-14': {
+		urlString: 'DE:1024-14',
 		name: 'Zusatzzeichen 1024-14',
 		descriptiveName: 'Kraftomnibus frei',
 		description: null,
@@ -494,6 +532,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1024-17': {
+		urlString: 'DE:1024-17',
 		name: 'Zusatzzeichen 1024-17',
 		descriptiveName: null,
 		description:
@@ -507,6 +546,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:1026-30': {
+		urlString: 'DE:1026-30',
 		name: 'Zusatzzeichen 1026-30',
 		descriptiveName: 'Taxi frei',
 		description: null,
@@ -516,6 +556,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1026-32': {
+		urlString: 'DE:1026-32',
 		name: 'Zusatzzeichen 1026-32',
 		descriptiveName: 'Linienverkehr frei',
 		description: "'psv' steht für 'Public Service Vehicle', also 'öffentliches Verkehrsmittel'",
@@ -525,6 +566,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1026-35': {
+		urlString: 'DE:1026-35',
 		name: 'Zusatzzeichen 1026-35',
 		descriptiveName: 'Lieferverkehr frei',
 		description: null,
@@ -532,6 +574,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1026-36': {
+		urlString: 'DE:1026-36',
 		name: 'Zusatzzeichen 1026-36',
 		descriptiveName: 'Landwirtschaftlicher Verkehr frei',
 		description: null,
@@ -543,6 +586,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'traffic_sign'
 	},
 	'DE:1020-13': {
+		urlString: 'DE:1020-13',
 		name: 'Zusatzzeichen 1020-13',
 		descriptiveName: 'Inline Skater frei',
 		description: null,
@@ -553,6 +597,7 @@ export const trafficSigns: TrafficSigns = {
 	},
 
 	'1026-33': {
+		urlString: '1026-33',
 		name: 'Zusatzzeichen 1026-33',
 		descriptiveName: 'Einsatzfahrzeuge frei',
 		description: null,
@@ -562,6 +607,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1026-37': {
+		urlString: 'DE:1026-37',
 		name: 'Zusatzzeichen 1026-37',
 		descriptiveName: 'Forstwirtschaftlicher Verkehr frei',
 		description: null,
@@ -572,6 +618,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1026-38': {
+		urlString: 'DE:1026-38',
 		name: 'Zusatzzeichen 1026-38',
 		descriptiveName: 'Land- und forstwirtschaftlicher Verkehr frei',
 		description: null,
@@ -582,6 +629,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign'
 	},
 	'DE:1040-30': {
+		urlString: 'DE:1040-30[16:00-18:00]',
 		name: 'Zusatzzeichen 1040-30',
 		descriptiveName: 'Zeitliche Beschräkung',
 		description: null,
@@ -594,6 +642,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1040-31': {
+		urlString: 'DE:1040-31[08:00-11:00,16:00-18:00]',
 		name: 'Zusatzzeichen 1040-31',
 		descriptiveName: 'Zeitliche Beschräkung',
 		description: null,
@@ -606,6 +655,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1042-30': {
+		urlString: 'DE:1042-30',
 		name: 'Zusatzzeichen 1042-30',
 		descriptiveName: 'Zeitliche Beschräkung: werktags',
 		description: null,
@@ -614,6 +664,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1042-31': {
+		urlString: 'DE:1042-31[Mo-Sa 18:00-19:00]',
 		name: 'Zusatzzeichen 1042-31',
 		descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis',
 		description: null,
@@ -626,6 +677,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1042-32': {
+		urlString: 'DE:1042-32[PH off;Mo-Sa 08:30-11:30,16:00-18:00]',
 		name: 'Zusatzzeichen 1042-32',
 		descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis, von-bis',
 		description: null,
@@ -638,6 +690,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1042-33': {
+		urlString: 'DE:1042-33',
 		name: 'Zusatzzeichen 1042-33',
 		descriptiveName: 'Zeitliche Beschräkung: Mo-Fr, von-bis',
 		description: null,
@@ -650,6 +703,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1042-34': {
+		urlString: 'DE:1042-34[Tu,Th,Fr 16:00-18:00]',
 		name: 'Zusatzzeichen 1042-34',
 		descriptiveName: 'Zeitliche Beschräkung: Di,Do,Fr, von-bis',
 		description: null,
@@ -662,6 +716,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1042-35': {
+		urlString: 'DE:1042-35[Su,PH 06:00-22:00]',
 		name: 'Zusatzzeichen 1042-35',
 		descriptiveName: 'Zeitliche Beschräkung: So- und Feiertage, von-bis',
 		description: null,
@@ -674,6 +729,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1042-38': {
+		urlString: 'DE:1042-38',
 		name: 'Zusatzzeichen 1042-38',
 		descriptiveName: 'Zeitliche Beschräkung: Werktags, außer Samstags',
 		description: null,
@@ -682,6 +738,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1042-51': {
+		urlString: 'DE:1042-51',
 		name: 'Zusatzzeichen 1042-51',
 		descriptiveName: 'Zeitliche Beschräkung: Sa und So',
 		description: null,
@@ -690,6 +747,7 @@ export const trafficSigns: TrafficSigns = {
 		category: 'modifier_sign_restriction'
 	},
 	'DE:1053-35': {
+		urlString: 'DE:1053-35',
 		name: 'Zusatzzeichen 1053-35',
 		descriptiveName: 'Beschräkung: bei Nässe',
 		description: null,

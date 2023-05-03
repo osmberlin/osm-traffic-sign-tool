@@ -3,12 +3,13 @@
 	import SelectedSign from '@/components/signs/SelectedSign.svelte'
 	import SignGrid from '@/components/signs/SignGrid.svelte'
 	import { aggregateTags, type AggregatedTags } from '@/components/signs/aggregateTags'
+	import { signsFromUrl } from '@/components/signs/utils/signsFromUrl'
 	import Tag from '@/components/wiki/Tag.svelte'
 	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
-	import type { TrafficSignWithWikiEntry, TrafficSignsWithWiki } from '@/data/trafficSigns'
+	import type { TrafficSignsWithWiki } from '@/data/trafficSigns'
 	import trafficSignsJson from '@/data/trafficSignsWithWiki.json'
-	import { queryParam } from 'sveltekit-search-params'
 	import { DocumentDuplicate, Icon } from 'svelte-hero-icons'
+	import { queryParam } from 'sveltekit-search-params'
 
 	const selectedSignIds = queryParam('signs', {
 		// too URL
@@ -25,7 +26,7 @@
 			// add
 			$selectedSignIds = [...($selectedSignIds ?? []), signId]
 		}
-		selectedSigns = visibleSigns()
+		selectedSigns = signsFromUrl($selectedSignIds)
 		;[aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
 		;[copyTrafficSignTag, copyAllTags] = copyTagsValues(aggregatedTags)
 		trafficSignTag = copyTrafficSignTag?.split('=')
@@ -39,18 +40,11 @@
 		return [copyTrafficSignTag, copyAllTags]
 	}
 
-	function visibleSigns() {
-		return Object.entries(trafficSigns).filter(([key, _]) =>
-			$selectedSignIds?.includes(key)
-		) as TrafficSignWithWikiEntry[]
-	}
+	let selectedSigns = signsFromUrl($selectedSignIds)
+	let [aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
 
 	// TODO: Clean this up once we have a merged and clean trafficSign object
 	const trafficSigns = trafficSignsJson as unknown as TrafficSignsWithWiki
-
-	let selectedSigns = visibleSigns()
-	let [aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
-
 	const signsMostUsed = Object.entries(trafficSigns).filter(
 		([_, values]) => values.mostUsed === true
 	)
@@ -71,7 +65,7 @@
 	let trafficSignTag: string[] | undefined = copyTrafficSignTag?.split('=')
 
 	// Debug helper output:
-	const validKeys = Object.keys(trafficSigns)
+	const validKeys = Object.values(trafficSigns).map((value) => value.urlString)
 	const unrecognizedKeys = $selectedSignIds?.filter((key) => !validKeys.includes(key))
 </script>
 

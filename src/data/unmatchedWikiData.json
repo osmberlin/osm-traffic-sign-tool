@@ -223,14 +223,6 @@
 		"comments": "Einführung 2017; Passendes Tagging sollte diskutiert werden!"
 	},
 	{
-		"sign": "DE:262[5.5]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Zeichen_262_-_Verbot_f%C3%BCr_Fahrzeuge_deren_tats%C3%A4chliches_Gewicht_eine_gewisse_Grenze_%C3%BCberschreitet_%28600x600%29%3B_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_262_-_Verbot_f%C3%BCr_Fahrzeuge_deren_tats%C3%A4chliches_Gewicht_eine_gewisse_Grenze_%C3%BCberschreitet_(600x600);_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["maxweight=*"],
-		"comments": "Verbot für Fahrzeuge über angegebene tatsächliche Masse Angabe des Gewichts in Tonnen. Die Einheit wird weggelassen. Als Dezimaltrenner gilt der Punkt (z.B. maxweight=5.5 für 5,5 Tonnen)."
-	},
-	{
 		"sign": "DE:263[8]",
 		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Zeichen_263_-_Verbot_f%C3%BCr_Fahrzeuge_%C3%BCber_angegebene_tats%C3%A4chliche_Achslast%2C_StVO_1992.svg",
 		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_263_-_Verbot_f%C3%BCr_Fahrzeuge_%C3%BCber_angegebene_tats%C3%A4chliche_Achslast,_StVO_1992.svg",

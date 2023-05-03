@@ -14,7 +14,7 @@ const matchedWikiDataKeys: string[] = []
 // Add wiki data to trafficSigns
 Object.entries(localTrafficSigns).forEach(([key, values]) => {
 	const wikiInfo = wikiData.find(
-		(item) => item.sign === key || item.sign === values.wikiKey
+		(item) => item.sign === key || item.sign === values.urlString
 	) as TrafficSignWithWiki['wikiData']
 
 	if (wikiInfo) {

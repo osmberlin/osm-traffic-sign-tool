@@ -12,7 +12,7 @@
 
 <div class="w-20">
 	<button
-		on:click={toggleSelection(key)}
+		on:click={toggleSelection(values.urlString || key)}
 		class={clsx(
 			'relative border w-full h-20 rounded border-stone-200 hover:bg-stone-200 flex p-4 justify-center items-center group/item',
 			active ? 'shadow-inner bg-stone-200/50' : ''

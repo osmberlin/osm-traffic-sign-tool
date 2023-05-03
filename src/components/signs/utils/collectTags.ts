@@ -17,7 +17,7 @@ export const collectTags = (selectedSigns: TrafficSignWithWikiEntry[]) => {
 
 		// Handle `valuePrompt` Default
 		if (sign.key && sign.valuePrompt) {
-			tags.push([sign.key, sign.valuePrompt.defaultValue])
+			tags.push([sign.key, sign.urlValue ?? sign.valuePrompt.defaultValue])
 		}
 	})
 

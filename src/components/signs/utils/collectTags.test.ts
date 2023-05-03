@@ -4,6 +4,7 @@ import type { TrafficSignWithWiki, TrafficSignWithWikiEntry } from '@/data/traff
 
 describe('collectTags()', () => {
 	const baseInput = {
+		urlString: 'todo',
 		name: 'name',
 		descriptiveName: null,
 		description: null,
@@ -12,8 +13,8 @@ describe('collectTags()', () => {
 
 	test('does nothing when no input given', () => {
 		const input = [
-			['DE:333', baseInput],
-			['DE:444', baseInput]
+			['DE:333', { ...baseInput, urlString: 'DE:333' }],
+			['DE:444', { ...baseInput, urlString: 'DE:444' }]
 		] as TrafficSignWithWikiEntry[]
 		const result = collectTags(input)
 
@@ -22,7 +23,7 @@ describe('collectTags()', () => {
 
 	test('handles osmTags', () => {
 		const input = [
-			['DE:333', { ...baseInput, osmTags: { foo: 'bar', lorem: ['a', 'b'] } }]
+			['DE:333', { ...baseInput, urlString: 'DE:333', osmTags: { foo: 'bar', lorem: ['a', 'b'] } }]
 		] satisfies TrafficSignWithWikiEntry[]
 		const result = collectTags(input)
 
@@ -34,7 +35,16 @@ describe('collectTags()', () => {
 
 	test('handles key, value', () => {
 		const input = [
-			['DE:333', { ...baseInput, osmTags: { foo: 'bar' }, key: 'highway', value: 'bridleway' }]
+			[
+				'DE:333',
+				{
+					...baseInput,
+					urlString: 'DE:333',
+					osmTags: { foo: 'bar' },
+					key: 'highway',
+					value: 'bridleway'
+				}
+			]
 		] satisfies TrafficSignWithWikiEntry[]
 		const result = collectTags(input)
 
@@ -50,6 +60,7 @@ describe('collectTags()', () => {
 				'DE:333',
 				{
 					...baseInput,
+					urlString: 'DE:333',
 					key: 'maxweight',
 					valuePrompt: {
 						prompt: 'Gewicht in Tonnen ohne Einheit',
