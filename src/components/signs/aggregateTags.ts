@@ -2,6 +2,7 @@ import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
 import { createTrafficSignValue } from './utils/createTrafficSignValue'
 import { removeDuplicates } from './utils/removeDuplicates'
 import { addRestrictionTags } from './utils/addRestrictionTags'
+import { collectTags } from './utils/collectTags'
 
 export type AggregatedTags = [string, string | string[]][]
 export type AggregatedComments = string[]
@@ -9,13 +10,7 @@ export type AggregatedComments = string[]
 export const aggregateTags = (
 	selectedSigns: TrafficSignWithWikiEntry[]
 ): [AggregatedTags, AggregatedComments] => {
-	const aggregatedTags: AggregatedTags = []
-
-	// Create aggregated list of tag
-	selectedSigns.forEach(
-		([_, sign]) =>
-			sign.osmTags && Object.entries(sign.osmTags).forEach((tag) => aggregatedTags.push(tag))
-	)
+	const aggregatedTags = collectTags(selectedSigns)
 
 	// Create the aggregated traffic_sign tag
 	// First cleanup existing tags, than add a fresh one with all signs
