@@ -1,0 +1,1 @@
+{"version":3,"file":"_layout.95f8a586.js","sources":["../../../../../../src/routes/+layout.ts"],"sourcesContent":["export const ssr = false\nexport const prerender = true\n\n// https://github.com/total-typescript/ts-reset\nimport '@total-typescript/ts-reset'\n"],"names":["ssr","prerender"],"mappings":"AAAO,MAAMA,EAAM,GACNC,EAAY"}
