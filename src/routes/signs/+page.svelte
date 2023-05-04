@@ -1,13 +1,11 @@
 <script lang="ts">
 	import ExternalLink from '@/components/links/ExternalLink.svelte'
 	import { buttonStyle } from '@/components/links/buttonStyles'
-	import { aggregateTags } from '@/components/signs/aggregateTags'
 	import { signsFromUrl } from '@/components/signs/utils/signsFromUrl'
-	import Tag from '@/components/wiki/Tag.svelte'
-	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
+	import { trafficSigns } from '@/data/trafficSigns'
+	import trafficSignsWiki from '@/data/wiki/parseWiki/trafficSignsWiki.json'
 	import clsx from 'clsx'
 	import { queryParam } from 'sveltekit-search-params'
-	import trafficSignsWiki from '@/data/wiki/parseWiki/trafficSignsWiki.json'
 
 	const selectedSignIds = queryParam('signs', {
 		// too URL
@@ -24,13 +22,19 @@
 			// add
 			$selectedSignIds = [...($selectedSignIds ?? []), signId]
 		}
-		selectedSigns = signsFromUrl($selectedSignIds)
-		;[aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
+		selectedSigns = signData($selectedSignIds)
 		return undefined
 	}
 
-	let selectedSigns = signsFromUrl($selectedSignIds)
-	let [aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
+	function signData(selectedSignIds: string[] | null) {
+		if (selectedSignIds?.length) {
+			return signsFromUrl(selectedSignIds)
+		}
+
+		return Object.entries(trafficSigns)
+	}
+
+	let selectedSigns = signData($selectedSignIds)
 </script>
 
 <main class="rounded bg-stone-300 px-6 py-4">
@@ -51,27 +55,6 @@
 		>
 	</p>
 
-	{#if $selectedSignIds}
-		<h3 class="text-stone-800 mt-10 mb-2 text-lg">
-			This combination of signs will return the following combined tags
-		</h3>
-
-		<ul>
-			{#each aggregatedTags as [key, value]}
-				<li>
-					<Tag {key} {value} />
-				</li>
-			{/each}
-		</ul>
-
-		<h3 class="text-stone-800 mt-10 mb-2 text-lg">
-			This combination of signs will return the following comments
-		</h3>
-		{#each aggregatedComments as comment}
-			<p><WikiLinkify text={comment} /></p>
-		{/each}
-	{/if}
-
 	<table class="mt-10 min-w-full">
 		<thead class="border-b-2 border-violet-300">
 			<tr>
@@ -82,10 +65,10 @@
 					Sign key
 				</th>
 				<th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold text-stone-900">
-					Sign object
+					Sign data from this app
 				</th>
 				<th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold text-stone-900">
-					Sign object <code>wikiData</code>
+					Sign data parsed from the wiki
 				</th>
 			</tr>
 		</thead>
