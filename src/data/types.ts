@@ -1,8 +1,8 @@
-export type TrafficSignsMap = [string, TrafficSign]
-
 export type TrafficSigns = {
 	[key: string]: TrafficSign
 }
+
+export type TrafficSignMap = [string, TrafficSign]
 
 export type TrafficSign = {
 	/** @desc DE:123[5.5] — The value that we store in the URL, it includes the `valuePrompt`-value */

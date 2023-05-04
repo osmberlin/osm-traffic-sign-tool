@@ -1,8 +1,8 @@
-export type TrafficSignsWikiMap = [string, TrafficSignWiki]
-
 export type TrafficSignsWiki = {
 	[key: string]: TrafficSignWiki
 }
+
+export type TrafficSignWikiMap = [string, TrafficSignWiki]
 
 export type TrafficSignWiki = {
 	sign: string

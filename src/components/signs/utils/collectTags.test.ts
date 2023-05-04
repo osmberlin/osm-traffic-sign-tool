@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { collectTags } from './collectTags'
-import type { TrafficSignWithWiki, TrafficSignWithWikiEntry } from '@/data/trafficSigns'
+import type { TrafficSign, TrafficSignMap } from '@/data/types'
 
 describe('collectTags()', () => {
 	const baseInput = {
@@ -9,13 +9,13 @@ describe('collectTags()', () => {
 		descriptiveName: null,
 		description: null,
 		category: 'traffic_sign'
-	} satisfies TrafficSignWithWiki
+	} satisfies TrafficSign
 
 	test('does nothing when no input given', () => {
 		const input = [
 			['DE:333', { ...baseInput, urlString: 'DE:333' }],
 			['DE:444', { ...baseInput, urlString: 'DE:444' }]
-		] as TrafficSignWithWikiEntry[]
+		] as TrafficSignMap[]
 		const result = collectTags(input)
 
 		expect(result).toMatchObject([])
@@ -24,7 +24,7 @@ describe('collectTags()', () => {
 	test('handles osmTags', () => {
 		const input = [
 			['DE:333', { ...baseInput, urlString: 'DE:333', osmTags: { foo: 'bar', lorem: ['a', 'b'] } }]
-		] satisfies TrafficSignWithWikiEntry[]
+		] satisfies TrafficSignMap[]
 		const result = collectTags(input)
 
 		expect(result).toMatchObject([
@@ -45,7 +45,7 @@ describe('collectTags()', () => {
 					value: 'bridleway'
 				}
 			]
-		] satisfies TrafficSignWithWikiEntry[]
+		] satisfies TrafficSignMap[]
 		const result = collectTags(input)
 
 		expect(result).toMatchObject([
@@ -69,7 +69,7 @@ describe('collectTags()', () => {
 					}
 				}
 			]
-		] satisfies TrafficSignWithWikiEntry[]
+		] satisfies TrafficSignMap[]
 		const result = collectTags(input)
 
 		expect(result).toMatchObject([['maxweight', '5.5']])

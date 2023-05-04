@@ -2,12 +2,12 @@
 	import ExternalLink from '@/components/links/ExternalLink.svelte'
 	import { buttonStyle } from '@/components/links/buttonStyles'
 	import { aggregateTags } from '@/components/signs/aggregateTags'
+	import { signsFromUrl } from '@/components/signs/utils/signsFromUrl'
 	import Tag from '@/components/wiki/Tag.svelte'
 	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
-	import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
-	import trafficSigns from '@/data/trafficSignsWithWiki.json'
 	import clsx from 'clsx'
 	import { queryParam } from 'sveltekit-search-params'
+	import trafficSignsWiki from '@/data/wiki/parseWiki/trafficSignsWiki.json'
 
 	const selectedSignIds = queryParam('signs', {
 		// too URL
@@ -24,25 +24,13 @@
 			// add
 			$selectedSignIds = [...($selectedSignIds ?? []), signId]
 		}
-		selectedSigns = visibleSigns()
+		selectedSigns = signsFromUrl($selectedSignIds)
 		;[aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
 		return undefined
 	}
 
-	function visibleSigns() {
-		const signs =
-			$selectedSignIds === null
-				? Object.entries(trafficSigns)
-				: Object.entries(trafficSigns).filter(([key, _]) => $selectedSignIds?.includes(key))
-		return signs as TrafficSignWithWikiEntry[]
-	}
-
-	let selectedSigns = visibleSigns()
+	let selectedSigns = signsFromUrl($selectedSignIds)
 	let [aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
-
-	// Debug helper output:
-	const validKeys = Object.keys(trafficSigns)
-	const unrecognizedKeys = $selectedSignIds?.filter((key) => !validKeys.includes(key))
 </script>
 
 <main class="rounded bg-stone-300 px-6 py-4">
@@ -103,13 +91,17 @@
 		</thead>
 		<tbody class="divide-y divide-violet-200">
 			{#each selectedSigns as [key, values]}
-				<tr class={clsx(values?.localFile ? '' : 'bg-amber-300')}>
+				<tr class={clsx(values?.image?.svgPath ? '' : 'bg-amber-300')}>
 					<th class="py-4 pl-4 pr-3 text-sm text-stone-900 sm:pl-6 md:pl-0 text-center space-y-3">
-						<code>{key}</code><br />
+						<code>{key}</code>
+						<br />
 
-						{#if values?.localFile}
-							<img src={values?.localFile} alt={values.name} class="h-auto w-10 inline-block" />
-						{:else}<span class="text-amber-700 inline-block">Missing</span>{/if}<br />
+						{#if values?.image?.svgPath}
+							<img src={values.image.svgPath} alt={values.name} class="h-auto w-10 inline-block" />
+						{:else}
+							<span class="text-amber-700 inline-block">Missing</span>
+						{/if}
+						<br />
 
 						<button
 							on:click={() => toggleSelection(key)}
@@ -133,17 +125,14 @@
 							)}</pre>
 					</td>
 					<td class="py-4 px-3 text-xs text-stone-500">
-						<pre class="w-96 overflow-scroll">{JSON.stringify(values.wikiData, undefined, 2)}</pre>
+						<pre class="w-96 overflow-scroll">{JSON.stringify(
+								trafficSignsWiki.find((sign) => sign.sign === key),
+								undefined,
+								2
+							)}</pre>
 					</td>
 				</tr>
 			{/each}
 		</tbody>
 	</table>
-
-	{#if $selectedSignIds && unrecognizedKeys?.length}
-		<h2>Unrecognized keys:</h2>
-		{JSON.stringify(unrecognizedKeys, undefined, 2)}
-	{:else if $selectedSignIds !== null}
-		(Alle Keys wurden erkannt.)
-	{/if}
 </main>

@@ -1,9 +1,9 @@
-import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
+import type { TrafficSignMap } from '@/data/types'
 import type { AggregatedTags } from '../aggregateTags'
 
 export const addRestrictionTags = (
 	aggregatedTags: AggregatedTags,
-	selectedSigns: TrafficSignWithWikiEntry[]
+	selectedSigns: TrafficSignMap[]
 ) => {
 	// Handle restriction: Collect keys, add all given values to those key (or 'no')
 	const restrictionKeys: string[] = selectedSigns

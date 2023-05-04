@@ -1,7 +1,7 @@
-import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
+import type { TrafficSignMap } from '@/data/types'
 import type { AggregatedTags } from '../aggregateTags'
 
-export const collectTags = (selectedSigns: TrafficSignWithWikiEntry[]) => {
+export const collectTags = (selectedSigns: TrafficSignMap[]) => {
 	const tags: AggregatedTags = []
 
 	selectedSigns.forEach(([_, sign]) => {

@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { TrafficSignWithWiki } from '@/data/trafficSigns'
+	import type { TrafficSign } from '@/data/types'
 	import clsx from 'clsx'
 	import { Icon, PlusCircle, CheckCircle } from 'svelte-hero-icons'
 
 	export let active: boolean
 	export let toggleSelection: (signId: string) => undefined
 	export let key: string
-	export let values: TrafficSignWithWiki
+	export let values: TrafficSign
 	//
 </script>
 
@@ -37,11 +37,8 @@
 			{/if}
 		</span>
 
-		<!-- {#if values?.image?.svg}
-      <img src={values.image.svg} alt={values.name} class="h-10 w-10" />
-    {/if} -->
-		{#if values?.localFile}
-			<img src={values?.localFile} alt={values.name} class="h-auto w-full" />
+		{#if values?.image?.svgPath}
+			<img src={values.image.svgPath} alt={values.name} class="h-auto w-full" />
 		{:else}
 			<div>
 				<code class="tracking-tighter whitespace-nowrap">{key}</code><br />

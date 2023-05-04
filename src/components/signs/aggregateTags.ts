@@ -1,14 +1,14 @@
-import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
 import { createTrafficSignTagValue } from './utils/createTrafficSignTagValue'
 import { removeDuplicates } from './utils/removeDuplicates'
 import { addRestrictionTags } from './utils/addRestrictionTags'
 import { collectTags } from './utils/collectTags'
+import type { TrafficSignMap } from '@/data/types'
 
 export type AggregatedTags = [string, string | string[]][]
 export type AggregatedComments = string[]
 
 export const aggregateTags = (
-	selectedSigns: TrafficSignWithWikiEntry[]
+	selectedSigns: TrafficSignMap[]
 ): [AggregatedTags, AggregatedComments] => {
 	const aggregatedTags = collectTags(selectedSigns)
 

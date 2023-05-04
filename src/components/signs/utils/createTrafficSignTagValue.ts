@@ -1,9 +1,9 @@
-import type { TrafficSign, TrafficSignWithWikiEntry } from '@/data/trafficSigns'
-
 // https://wiki.openstreetmap.org/wiki/DE:Key:traffic_sign#Werte
 // > Mehrere Verkehrszeichen können mit unterschiedlichen Trennzeichen markiert werden. Verkehrszeichen, die nicht miteinander in Verbindung stehen (wie z. B. Zulässige Höchstgeschwindigkeit und eingeschränktes Haltverbot), werden durch ein Semikolon ; getrennt. In Verbindung stehende Verkehrszeichen (wie z. B. Verbot der Einfahrt plus Linienbusse frei) werden durch ein Komma , getrennt.
 
-export const createTrafficSignTagValue = (signs: TrafficSignWithWikiEntry[]) => {
+import type { TrafficSign, TrafficSignMap } from '@/data/types'
+
+export const createTrafficSignTagValue = (signs: TrafficSignMap[]) => {
 	type SignIdCat = [string, TrafficSign['category']][]
 	const signIdCats: SignIdCat = signs.map(([_, { urlString, category }]) => [
 		urlString.replace('DE:', ''),

@@ -6,8 +6,7 @@
 	import { signsFromUrl } from '@/components/signs/utils/signsFromUrl'
 	import Tag from '@/components/wiki/Tag.svelte'
 	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
-	import type { TrafficSignsWithWiki } from '@/data/trafficSigns'
-	import trafficSignsJson from '@/data/trafficSignsWithWiki.json'
+	import { trafficSigns } from '@/data/trafficSigns'
 	import { DocumentDuplicate, Icon } from 'svelte-hero-icons'
 	import { queryParam } from 'sveltekit-search-params'
 
@@ -43,8 +42,6 @@
 	let selectedSigns = signsFromUrl($selectedSignIds)
 	let [aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
 
-	// TODO: Clean this up once we have a merged and clean trafficSign object
-	const trafficSigns = trafficSignsJson as unknown as TrafficSignsWithWiki
 	const signsMostUsed = Object.entries(trafficSigns).filter(
 		([_, values]) => values.mostUsed === true
 	)

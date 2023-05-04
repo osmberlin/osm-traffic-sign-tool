@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { TrafficSignWithWikiEntry } from '@/data/trafficSigns'
+	import type { TrafficSignMap } from '@/data/types'
 	import Sign from './Sign.svelte'
 
 	export let defaultOpen = true
 	export let attributes: string[] | null
 	export let toggleSelection: (signId: string) => undefined
 	export let headline: string
-	export let signs: TrafficSignWithWikiEntry[]
+	export let signs: TrafficSignMap[]
 	// eslint-disable-next-line no-self-assign
 	signs = signs
 	//

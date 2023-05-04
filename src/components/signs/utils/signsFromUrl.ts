@@ -1,5 +1,5 @@
-import type { TrafficSignWithWikiEntry, TrafficSignsWithWiki } from '@/data/trafficSigns'
-import trafficSignsJson from '@/data/trafficSignsWithWiki.json'
+import { trafficSigns } from '@/data/trafficSigns'
+import type { TrafficSignMap } from '@/data/types'
 
 export const splitUrlString = (urlString: string) => {
 	// TODO: This code is dirty and should be an regex…
@@ -21,9 +21,8 @@ export const buildUrlString = ({
 
 export const signsFromUrl = (selectedSignIds: string[] | null) => {
 	// TODO: Clean this up once we have a merged and clean trafficSign object
-	const trafficSigns = trafficSignsJson as unknown as TrafficSignsWithWiki
 
-	const selectedSigns: TrafficSignWithWikiEntry[] = []
+	const selectedSigns: TrafficSignMap[] = []
 	const selectedSignsKeyValue = selectedSignIds?.map((s) => splitUrlString(s))
 
 	Object.entries(trafficSigns).forEach(([key, values]) => {
