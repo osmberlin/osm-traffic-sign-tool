@@ -23,7 +23,6 @@ type Both = {
 	osmTags?: {
 		[key: string]: string | string[]
 	}
-	links?: string[]
 	tagsComment?: string
 	// TODO: Remove `?` once all objects have an image
 	image?: {

@@ -11,7 +11,6 @@ export const trafficSigns: TrafficSigns = {
 			bicycle: 'designated'
 		},
 		impliedKey: 'access',
-		links: ['https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren'],
 		tagsComment:
 			'Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
 		mostUsed: true,
@@ -84,7 +83,6 @@ export const trafficSigns: TrafficSigns = {
 			foot: 'designated',
 			segregated: 'no'
 		},
-		links: ['https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren'],
 		tagsComment:
 			'Manchmal wird auch [highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
 		mostUsed: true,
@@ -102,7 +100,6 @@ export const trafficSigns: TrafficSigns = {
 			foot: 'designated',
 			segregated: 'yes'
 		},
-		links: ['https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren'],
 		tagsComment:
 			'Manchmal wird auch [highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
 		mostUsed: true,
@@ -128,7 +125,6 @@ export const trafficSigns: TrafficSigns = {
 			foot: 'designated',
 			segregated: 'yes'
 		},
-		links: ['https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren'],
 		tagsComment:
 			'Manchmal wird auch [highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
 		mostUsed: true,
@@ -175,7 +171,6 @@ export const trafficSigns: TrafficSigns = {
 		},
 		tagsComment:
 			'Je nach Art der Straße überlicherweise [highway=residential], <code>path</code> oder <code>service</code>.',
-		links: ['https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren'],
 		category: 'traffic_sign',
 		image: {
 			svgSourceUrl:
