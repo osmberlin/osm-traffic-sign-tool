@@ -165,14 +165,6 @@
 		"comments": "Taxistand"
 	},
 	{
-		"sign": "DE:242.1",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Zeichen_242.1_-_Beginn_einer_Fu%C3%9Fg%C3%A4ngerzone%2C_StVO_2009.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_242.1_-_Beginn_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg",
-		"name": "Beginn einer Fußgängerzone",
-		"osmTags": ["highway=pedestrian"],
-		"comments": "Mit highway=pedestrian wird die Benutzungerlaubnis auf Fußgänger beschränkt, siehe Default Access Restrictions. Wird für alle Straßen in der Zone eingetragen. Die alleinige Verwendung der Attributkombination highway=path + foot=designated soll vermieden werden. Veraltete Zeichenkennung DE:242"
-	},
-	{
 		"sign": "DE:242.2",
 		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Zeichen_242.2_-_Ende_einer_Fu%C3%9Fg%C3%A4ngerzone%2C_StVO_2009.svg",
 		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_242.2_-_Ende_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg",
@@ -221,38 +213,6 @@
 		"name": "Verbot für Kraftfahrzeuge und Züge, die nicht schneller als 25 km/h fahren\n\t\t\t\t\t\t\t\t\t\t\t\tkönnen oder dürfen",
 		"osmTags": ["agricultural=no"],
 		"comments": "Einführung 2017; Passendes Tagging sollte diskutiert werden!"
-	},
-	{
-		"sign": "DE:263[8]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Zeichen_263_-_Verbot_f%C3%BCr_Fahrzeuge_%C3%BCber_angegebene_tats%C3%A4chliche_Achslast%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_263_-_Verbot_f%C3%BCr_Fahrzeuge_%C3%BCber_angegebene_tats%C3%A4chliche_Achslast,_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["maxaxleload=*"],
-		"comments": "Angabe der maximalen Achslast in Tonnen, die Einheit wird weggelassen. Sollte ein Komma vorkommen, so wird es durch einen Punkt ersetzt (z.B. maxaxleload=3.5 für 3,5 Tonnen)."
-	},
-	{
-		"sign": "DE:264[2]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Zeichen_264_-_Verbot_f%C3%BCr_Fahrzeuge_%C3%BCber_angegebene_Breite_einschlie%C3%9Flich_Ladung%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_264_-_Verbot_f%C3%BCr_Fahrzeuge_%C3%BCber_angegebene_Breite_einschlie%C3%9Flich_Ladung,_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["maxwidth=*"],
-		"comments": "Angabe der Breite in Metern. Die Einheit wird weggelassen. Als Dezimaltrenner gilt der Punkt (z.B. maxwidth=4.5 für 4,5 Meter). Bei Verwendung unter Brücken sollte die betreffende Linie aufgetrennt werden, so dass nur der Teil direkt unter der Brücke so gekennzeichnet werden kann."
-	},
-	{
-		"sign": "DE:265[3.8]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Zeichen_265_-_Verbot_f%C3%BCr_Fahrzeuge%2C_deren_tats%C3%A4chliche_H%C3%B6he_einschlie%C3%9Flich_Ladung_eine_bestimmte_Grenze_%C3%BCberschreitet_%28600x600%29%3B_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_265_-_Verbot_f%C3%BCr_Fahrzeuge,_deren_tats%C3%A4chliche_H%C3%B6he_einschlie%C3%9Flich_Ladung_eine_bestimmte_Grenze_%C3%BCberschreitet_(600x600);_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["maxheight=*"],
-		"comments": "Angabe der Höhe in Metern, die Einheit wird weggelassen. Sollte ein Komma vorkommen, so wird es durch einen Punkt ersetzt (z.B. maxheight=3.8 für 3,8 Meter). Information dazu und LKW-Karte unter: User:Win32netsky Vorschau Verwendung Höhenschild Bei Verwendung unter Brücken sollte die betreffende Linie aufgetrennt werden, so dass nur der Teil direkt unter der Brücke so gekennzeichnet werden kann."
-	},
-	{
-		"sign": "DE:266[10]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Zeichen_266_-_Verbot_f%C3%BCr_Fahrzeuge_und_Z%C3%BCge_%C3%BCber_angegebene_L%C3%A4nge_einschlie%C3%9Flich_Ladung%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_266_-_Verbot_f%C3%BCr_Fahrzeuge_und_Z%C3%BCge_%C3%BCber_angegebene_L%C3%A4nge_einschlie%C3%9Flich_Ladung,_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["maxlength=*"],
-		"comments": "Angabe der Länge in Metern, die Einheit wird weggelassen. Als Dezimaltrenner gilt der Punkt (z.B. maxlength=10.5 für 10,5 Meter)."
 	},
 	{
 		"sign": "DE:267",
