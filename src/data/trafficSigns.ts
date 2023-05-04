@@ -1,58 +1,4 @@
-import type { Prettify } from '@/components/typeUtils'
-
-export type TrafficSignWithWikiEntry = [string, TrafficSignWithWiki]
-
-export type TrafficSignsWithWiki = {
-	[key: string]: TrafficSignWithWiki
-}
-
-export type TrafficSignWithWiki = Prettify<
-	TrafficSign & {
-		wikiData?: Record<string, string>
-		localFile?: string
-	}
->
-
-export type TrafficSign = {
-	/** @desc DE:123[5.5] — The value that we store in the URL, it includes the `valuePrompt`-value */
-	urlString: string
-	/** @desc DE:123 — The sign key without the value part  */
-	urlKey?: string
-	/** @desc 5.5 — For signs that have `valuePrompt`, this is the value given by the URL */
-	urlValue?: string
-	name: string
-	descriptiveName: string | null
-	description: string | null
-	osmTags?: {
-		[key: string]: string | string[]
-	}
-	impliedKey?: string // TODO understand how this worked in the old app
-	links?: string[]
-	tagsComment?: string
-	mostUsed?: boolean
-	key?: string
-	value?: string
-	image?: {
-		svg: string
-		source: string
-		licence: 'Public Domain'
-	}
-	valuePrompt?: {
-		prompt: string
-		defaultValue: string
-		format: 'integer' | 'float' | 'opening_hours'
-	}
-	restrictionKeys?: string[]
-	restrictionValue?: string
-	category: 'traffic_sign' | 'modifier_sign' | 'modifier_sign_restriction'
-	segregated?: string
-	conditional?: boolean
-	validations?: { requiredKey?: string; shouldBeHighwayValue?: string }
-}
-
-export type TrafficSigns = {
-	[key: string]: TrafficSign
-}
+import type { TrafficSigns } from './types'
 
 export const trafficSigns: TrafficSigns = {
 	'DE:237': {
@@ -98,8 +44,9 @@ export const trafficSigns: TrafficSigns = {
 		urlString: 'DE:240',
 		name: 'Zeichen 240',
 		image: {
-			svg: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg%2C_StVO_1992.svg',
-			source:
+			svgSourceUrl:
+				'https://upload.wikimedia.org/wikipedia/commons/0/08/Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg%2C_StVO_1992.svg',
+			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg,_StVO_1992.svg',
 			licence: 'Public Domain'
 		},
@@ -476,8 +423,9 @@ export const trafficSigns: TrafficSigns = {
 		descriptiveName: 'Mofas frei',
 		description: null,
 		image: {
-			svg: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Zusatzzeichen_1022-11_-_Mofas_frei_%28600x450%29%2C_StVO_1992.svg',
-			source:
+			svgSourceUrl:
+				'https://upload.wikimedia.org/wikipedia/commons/5/55/Zusatzzeichen_1022-11_-_Mofas_frei_%28600x450%29%2C_StVO_1992.svg',
+			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1022-11_-_Mofas_frei_(600x450),_StVO_1992.svg',
 			licence: 'Public Domain'
 		},
