@@ -7,16 +7,16 @@ export const addRestrictionTags = (
 ) => {
 	// Handle restriction: Collect keys, add all given values to those key (or 'no')
 	const restrictionKeys: string[] = selectedSigns
-		.map(([_, sign]) => sign.restrictionKeys)
+		.map(([_, sign]) => 'restrictionKeys' in sign && sign.restrictionKeys)
 		.flat()
 		.filter(Boolean)
 
 	const restrictionValues: string[] = selectedSigns
-		.map(([_, sign]) => sign.restrictionValue)
+		.map(([_, sign]) => 'restrictionValue' in sign && sign.restrictionValue)
 		.filter(Boolean)
 
 	const conditialValues = selectedSigns
-		.map(([_, sign]) => sign.conditional && sign.value)
+		.map(([_, sign]) => sign.conditional && 'value' in sign && sign.value)
 		.filter(Boolean)
 
 	restrictionKeys.forEach((restrictionKey) => {

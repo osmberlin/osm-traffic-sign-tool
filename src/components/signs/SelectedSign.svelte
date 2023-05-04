@@ -48,7 +48,7 @@
 			>
 		</p>
 	</button>
-	{#if values.valuePrompt}
+	{#if 'valuePrompt' in values}
 		<div class="leading-tight">
 			<label for={key} class="font-bold">{values.valuePrompt.prompt}:</label>
 			<!-- TODO remove readonly; changes to input update the object and url -->

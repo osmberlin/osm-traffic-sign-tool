@@ -33,7 +33,6 @@ describe('signsFromUrl()', () => {
 		const result = signsFromUrl(input)
 
 		const [oneValues, twoValues, threeValues, fourValues] = result.map(([_, values]) => values)
-		console.log({ oneValues, twoValues, threeValues, fourValues })
 		expect(oneValues.urlString).toBe('DE:237[Sa,So]')
 		expect(oneValues.urlKey).toBe('DE:237')
 		expect(oneValues.urlValue).toBe('Sa,So')

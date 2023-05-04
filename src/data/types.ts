@@ -1,10 +1,16 @@
+import type { Prettify } from '@/components/typeUtils'
+
 export type TrafficSigns = {
 	[key: string]: TrafficSign
 }
 
 export type TrafficSignMap = [string, TrafficSign]
 
-export type TrafficSign = {
+export type TrafficSign = Prettify<
+	(TrafficSignCategoryTrafficSign | TrafficSignCategoryModifier) & TrafficSignKeyValue & Both
+>
+
+type Both = {
 	/** @desc DE:123[5.5] — The value that we store in the URL, it includes the `valuePrompt`-value */
 	urlString: string
 	/** @desc DE:123 — The sign key without the value part  */
@@ -17,27 +23,69 @@ export type TrafficSign = {
 	osmTags?: {
 		[key: string]: string | string[]
 	}
-	impliedKey?: string // TODO understand how this worked in the old app
 	links?: string[]
 	tagsComment?: string
-	mostUsed?: boolean
-	key?: string
-	value?: string
+	// TODO: Remove `?` once all objects have an image
 	image?: {
 		svgPath: string
 		svgSourceUrl: string
 		sourceUrl: string
 		licence: 'Public Domain'
 	}
-	valuePrompt?: {
-		prompt: string
-		defaultValue: string
-		format: 'integer' | 'float' | 'opening_hours'
-	}
-	restrictionKeys?: string[]
-	restrictionValue?: string
-	category: 'traffic_sign' | 'modifier_sign' | 'modifier_sign_restriction'
-	segregated?: string
-	conditional?: boolean
 	validations?: { requiredKey?: string; shouldBeHighwayValue?: string }
+	mostUsed?: boolean
 }
+
+type TrafficSignCategoryTrafficSign =
+	| {
+			category: 'traffic_sign'
+			impliedKey?: 'access' | 'conditional'
+	  }
+	| {
+			category: 'traffic_sign'
+			restrictionKeys?: string[]
+	  }
+
+type TrafficSignCategoryModifier = {
+	category: 'modifier_sign' | 'modifier_sign_restriction'
+	impliedKey?: never
+	restrictionValue?: string
+}
+
+type ValuePrompt<T> = {
+	prompt: string
+	defaultValue: string
+	format: T
+}
+
+type TrafficSignKeyValue =
+	| {
+			// Nothing at all
+			conditional?: never
+			key?: never
+			value?: never
+	  }
+	| {
+			// key + value
+			conditional?: never
+			key: string
+			value: string
+	  }
+	| {
+			// key + valuePrompt
+			conditional?: never
+			key: string
+			valuePrompt: ValuePrompt<'integer' | 'float'>
+	  }
+	| {
+			// valuePrompt opening ours
+			conditional: true
+			key?: never
+			valuePrompt: ValuePrompt<'opening_hours'>
+	  }
+	| {
+			// fixed days, `wet`
+			conditional: true
+			key?: never
+			value: string
+	  }

@@ -11,12 +11,12 @@ export const collectTags = (selectedSigns: TrafficSignMap[]) => {
 		}
 
 		// Handle `key`, `value`
-		if (sign.key && sign.value) {
+		if (sign.key && 'value' in sign) {
 			tags.push([sign.key, sign.value])
 		}
 
 		// Handle `valuePrompt` Default
-		if (sign.key && sign.valuePrompt) {
+		if (sign.key && 'valuePrompt' in sign) {
 			tags.push([sign.key, sign.urlValue ?? sign.valuePrompt.defaultValue])
 		}
 	})
