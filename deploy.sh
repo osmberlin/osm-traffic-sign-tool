@@ -6,6 +6,9 @@
 # abort on errors
 set -e
 
+# First run check
+npm run check
+
 # Increase version
 # Which will commit the change version number; which is then available at build time
 # Docs https://docs.npmjs.com/cli/v8/commands/npm-version
