@@ -133,7 +133,7 @@
 				{/key}
 			{/if}
 
-			<h2 class="uppercase font-light text-lg mt-10 mb-4">Derived recommended Tags</h2>
+			<h2 class="uppercase font-light text-lg mt-10 mb-4">Recommended <code>highway</code> tags</h2>
 
 			{#if aggregatedTags && copyAllTags}
 				<div class="flex justify-between items-end">
@@ -157,6 +157,7 @@
 
 			<div class="mt-10 space-y-2">
 				<h3 class="text-stone-50 uppercase font-thin text-lg">Notes</h3>
+				{#if !aggregatedComments.length}–{/if}
 				{#each aggregatedComments as [signKey, signTitle, comment]}
 					<p>
 						<code
