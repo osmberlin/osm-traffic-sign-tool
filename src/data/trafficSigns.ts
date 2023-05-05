@@ -404,6 +404,7 @@ export const trafficSigns: TrafficSigns = {
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
 		key: 'maxweight',
+		osmTags: { 'source:maxweight': 'sign' },
 		valuePrompt: {
 			prompt: 'Gewicht in Tonnen ohne Einheit',
 			defaultValue: '5.5',
@@ -427,6 +428,7 @@ export const trafficSigns: TrafficSigns = {
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über angegebene tatsächliche Achslast',
 		key: 'maxaxleload',
+		osmTags: { 'source:maxaxleload': 'sign' },
 		valuePrompt: {
 			prompt: 'Achslast in Tonnen ohne Einheit',
 			defaultValue: '8',
@@ -450,6 +452,7 @@ export const trafficSigns: TrafficSigns = {
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung',
 		key: 'maxwidth',
+		osmTags: { 'source:maxwidth': 'sign' },
 		valuePrompt: {
 			prompt: 'Breite in Metern ohne Einheit',
 			defaultValue: '2',
@@ -473,6 +476,7 @@ export const trafficSigns: TrafficSigns = {
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über die angegebene Höhe einschließlich Ladung',
 		key: 'maxheight',
+		osmTags: { 'source:maxheight': 'sign' },
 		valuePrompt: {
 			prompt: 'Höhe in Metern ohne Einheit',
 			defaultValue: '3.8',
@@ -496,6 +500,7 @@ export const trafficSigns: TrafficSigns = {
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge und Züge über angegebene Läge einschließlich Ladung',
 		key: 'maxlength',
+		osmTags: { 'source:maxlength': 'sign' },
 		valuePrompt: {
 			prompt: 'Läge in Metern ohne Einheit',
 			defaultValue: '10',
@@ -536,6 +541,7 @@ export const trafficSigns: TrafficSigns = {
 		descriptiveName: 'Zulässige Höchstgeschwindigkeit',
 		description: null,
 		key: 'maxspeed',
+		osmTags: { 'source:maxspeed': 'sign' },
 		valuePrompt: {
 			prompt: 'Geschwindigkeit in km/h ohne Einheit',
 			defaultValue: '60',
@@ -549,6 +555,7 @@ export const trafficSigns: TrafficSigns = {
 		descriptiveName: 'Vorgeschriebene Mindestgeschwindigkeit',
 		description: null,
 		key: 'minspeed',
+		osmTags: { 'source:minspeed': 'sign' },
 		valuePrompt: {
 			prompt: 'Geschwindigkeit in km/h ohne Einheit',
 			defaultValue: '30',
