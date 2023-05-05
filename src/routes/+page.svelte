@@ -155,10 +155,18 @@
 				</div>
 			{/if}
 
-			<div class="mt-10">
+			<div class="mt-10 space-y-2">
 				<h3 class="text-stone-50 uppercase font-thin text-lg">Notes</h3>
-				{#each aggregatedComments as comment}
-					<p><WikiLinkify text={comment} /></p>
+				{#each aggregatedComments as [signKey, signTitle, comment]}
+					<p>
+						<code
+							title={signTitle}
+							class="text-xs bg-gray-50/10 rounded px-1.5 pt-1 py-0.5 inline-flex items-center mr-1"
+						>
+							{signKey}
+						</code>
+						<WikiLinkify text={comment} />
+					</p>
 				{/each}
 			</div>
 		{/if}

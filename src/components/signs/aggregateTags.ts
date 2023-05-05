@@ -5,7 +5,7 @@ import { collectTags } from './utils/collectTags'
 import type { TrafficSignMap } from '@/data/types'
 
 export type AggregatedTags = [string, string | string[]][]
-export type AggregatedComments = string[]
+export type AggregatedComments = [string, string, string][]
 
 export const aggregateTags = (
 	selectedSigns: TrafficSignMap[]
@@ -27,7 +27,11 @@ export const aggregateTags = (
 
 	// Collect comments
 	const aggregatedComments = selectedSigns
-		.map(([_, sign]) => sign.tagsComment && sign.tagsComment)
+		.map(([_, sign]) => {
+			const title = [sign.name, sign.description].join(' – ')
+			const keyComment = sign.tagsComment ? [sign.urlKey, title, sign.tagsComment] : undefined
+			return keyComment as [string, string, string] | undefined
+		})
 		.filter(Boolean)
 
 	// Sort keys A-Z
