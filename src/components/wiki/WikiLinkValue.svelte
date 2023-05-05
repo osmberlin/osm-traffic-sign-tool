@@ -9,6 +9,9 @@
 
 	function prepareLinks(values: string[]) {
 		return values.map((valuePart) => {
+			if (osmKey === 'traffic_sign' && !valuePart.startsWith('DE:')) {
+				valuePart = `DE:${valuePart}`
+			}
 			const link = `${wikiLink}${lang}:Tag:${osmKey}=${valuePart}`
 			return {
 				link,
