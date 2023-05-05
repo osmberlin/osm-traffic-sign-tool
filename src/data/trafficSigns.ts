@@ -166,7 +166,7 @@ export const trafficSigns: TrafficSigns = {
 		restrictionKeys: ['vehicle'],
 		osmTags: {
 			bicycle_road: 'yes',
-			maxspeed: '30',
+			maxspeed: '30', // TODO Tagging: I remember to not tag `maxspeed` as a value but as a category
 			'source:maxspeed': 'DE:bicycle_road'
 		},
 		tagsComment:
