@@ -1,12 +1,12 @@
 import { describe, expect, test } from 'vitest'
 import { addRestrictionTags } from './addRestrictionTags'
-import type { AggregatedTags } from '../aggregateTags'
-import type { TrafficSignMap } from '@/data/types'
+import type { AggregatedTags } from './aggregateTags'
+import type { TrafficSign } from '@/data/types'
 
 describe('addRestrictionTags()', () => {
 	test('does nothing when no conditional tags given', () => {
 		const collector: AggregatedTags = []
-		const input = [['DE:333', {}]] as TrafficSignMap[]
+		const input = [] as TrafficSign[]
 		addRestrictionTags(collector, input)
 
 		expect(collector).toMatchObject([])
@@ -14,7 +14,7 @@ describe('addRestrictionTags()', () => {
 
 	test('adds restrictionKey with default "no"', () => {
 		const collector: AggregatedTags = []
-		const input = [['DE:333', { restrictionKeys: ['bicycle'] }]] as TrafficSignMap[]
+		const input = [{ restrictionKeys: ['bicycle'] }] as TrafficSign[]
 		addRestrictionTags(collector, input)
 
 		expect(collector).toMatchObject([['bicycle', 'no']])
@@ -23,9 +23,9 @@ describe('addRestrictionTags()', () => {
 	test('adds conditional restriction', () => {
 		const collector: AggregatedTags = []
 		const input = [
-			['DE:252', { restrictionKeys: ['hgv'] }],
-			['DE:1053-35', { value: 'wet', conditional: true }]
-		] as TrafficSignMap[]
+			{ restrictionKeys: ['hgv'] },
+			{ value: 'wet', conditional: true }
+		] as TrafficSign[]
 		addRestrictionTags(collector, input)
 
 		expect(collector).toMatchObject([['hgv:conditional', 'no @ (wet)']])
@@ -34,11 +34,11 @@ describe('addRestrictionTags()', () => {
 	test('adds multiple conditional restrictions', () => {
 		const collector: AggregatedTags = []
 		const input = [
-			['DE:252', { restrictionKeys: ['hgv'] }],
-			['DE:1053-35', { value: 'wet', conditional: true }],
-			['DE:1042-51', { value: 'Sa,Su', conditional: true }],
-			['DE:253', { restrictionKeys: ['foo'] }]
-		] as TrafficSignMap[]
+			{ restrictionKeys: ['hgv'] },
+			{ value: 'wet', conditional: true },
+			{ value: 'Sa,Su', conditional: true },
+			{ restrictionKeys: ['foo'] }
+		] as TrafficSign[]
 		addRestrictionTags(collector, input)
 
 		expect(collector).toMatchObject([

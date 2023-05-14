@@ -22,7 +22,8 @@ const config = {
 		// https://kit.svelte.dev/docs/configuration#alias
 		alias: {
 			'@/data': './src/data',
-			'@/components': './src/components'
+			'@/components': './src/components',
+			'@/stores': './src/stores'
 		},
 		version: {
 			name: pkg.version

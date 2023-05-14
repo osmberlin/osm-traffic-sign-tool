@@ -2,63 +2,70 @@
 	import type { TrafficSign } from '@/data/types'
 	import clsx from 'clsx'
 	import { CheckCircle, Icon } from 'svelte-hero-icons'
+	import { buildUrlKey } from './utils/urlKey/buildUrlKey'
+	import { splitUrlKey } from './utils/urlKey/splitUrlKey'
 
 	export let active: boolean
-	export let toggleSelection: (signId: string) => undefined
-	export let key: string
-	export let values: TrafficSign
-	//
+	export let toggleUrlSignKey: (urlKey: string) => undefined
+	export let updateUrlSignKey: (urlKey: string) => undefined
+	export let sign: TrafficSign
+
+	// We update the URL store which in turn updates the signStore in our page component
+	function updateValue(key: string, event: any) {
+		const { signKey } = splitUrlKey(key)
+		signKey && updateUrlSignKey(buildUrlKey(signKey, event.target.value))
+	}
 </script>
 
 <div class="w-full self-center text-center leading-tight">
 	<button
-		on:click={toggleSelection(values.urlString || key)}
+		on:click={toggleUrlSignKey(sign.urlKey)}
 		class={clsx(
-			'relative border w-full h-auto rounded border-transparent hover:border-stone-200 hover:bg-stone-200 flex gap-2 p-2 justify-center items-center group/item flex-col leading-tight'
+			'group/item relative flex h-auto w-full flex-col items-center justify-center gap-2 rounded border border-transparent p-2 leading-tight hover:border-stone-200 hover:bg-stone-200'
 		)}
 	>
 		<span
-			class="absolute -top-1 -right-1 rounded-full text-stone-300/0 group-hover/item:text-stone-700"
+			class="absolute -right-1 -top-1 rounded-full text-stone-300/0 group-hover/item:text-stone-700"
 		>
 			{#if active}
-				<Icon src={CheckCircle} class="w-6 h-6" />
+				<Icon src={CheckCircle} class="h-6 w-6" />
 			{/if}
 		</span>
 
-		{#if values?.image?.svgPath}
-			<img src={values.image.svgPath} alt={values.name} class="h-auto w-full" />
+		{#if sign?.image?.svgPath}
+			<img src={sign.image.svgPath} alt={sign.name} class="h-auto w-full" />
 		{:else}
 			<div
-				class="w-20 h-20 rounded-full border border-dotted border-stone-600 flex items-center pt-1 justify-center"
+				class="flex h-20 w-20 items-center justify-center rounded border border-stone-800 bg-stone-600 pt-1 text-stone-50"
 			>
-				<code class="tracking-tighter whitespace-nowrap">{key}</code><br />
+				<code class="whitespace-nowrap tracking-tighter">{sign.signKey.replaceAll('DE:', '')}</code
+				><br />
 			</div>
 		{/if}
 
-		<h3 class="font-light text-md w-full">
-			{values.name}
+		<h3 class="text-md w-full font-light">
+			{sign.name}
 		</h3>
 		<p>
 			<strong
-				>{#if values.descriptiveName}
-					{values.descriptiveName}
+				>{#if sign.descriptiveName}
+					{sign.descriptiveName}
 				{:else}
 					–
 				{/if}</strong
 			>
 		</p>
 	</button>
-	{#if 'valuePrompt' in values}
+	{#if 'valuePrompt' in sign}
 		<div class="leading-tight">
-			<label for={key} class="font-bold">{values.valuePrompt.prompt}:</label>
-			<!-- TODO remove readonly; changes to input update the object and url -->
+			<label for={sign.urlKey} class="font-bold">{sign.valuePrompt.prompt}:</label>
 			<input
-				readonly
-				name={key}
-				type={values.valuePrompt.format === 'opening_hours' ? 'text' : 'number'}
-				step={values.valuePrompt.format === 'float' ? '0.1' : undefined}
-				value={values.urlValue ?? values.valuePrompt.defaultValue}
-				class="block text-center w-full rounded-md border-0 py-1.5 px-1 text-gray-900 shadow-sm ring-1
+				on:input={(event) => updateValue(sign.urlKey, event)}
+				name={sign.urlKey}
+				type={sign.valuePrompt.format === 'opening_hours' ? 'text' : 'number'}
+				step={sign.valuePrompt.format === 'float' ? '0.1' : undefined}
+				value={sign.signValue ?? sign.valuePrompt.defaultValue}
+				class="block w-full rounded-md border-0 px-1 py-1.5 text-center text-gray-900 shadow-sm ring-1
 			ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600
 			sm:text-sm sm:leading-6"
 			/>

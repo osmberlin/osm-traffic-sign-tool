@@ -4,19 +4,23 @@ export type TrafficSigns = {
 	[key: string]: TrafficSign
 }
 
-export type TrafficSignMap = [string, TrafficSign]
-
 export type TrafficSign = Prettify<
-	(TrafficSignCategoryTrafficSign | TrafficSignCategoryModifier) & TrafficSignKeyValue & Both
+	UrlFromApp &
+		(TrafficSignCategoryTrafficSign | TrafficSignCategoryModifier) &
+		TrafficSignKeyValue &
+		Both
 >
 
-type Both = {
+type UrlFromApp = {
 	/** @desc DE:123[5.5] — The value that we store in the URL, it includes the `valuePrompt`-value */
-	urlString: string
+	urlKey: string
 	/** @desc DE:123 — The sign key without the value part  */
-	urlKey?: string
+	signKey: string
 	/** @desc 5.5 — For signs that have `valuePrompt`, this is the value given by the URL */
-	urlValue?: string
+	signValue: string | undefined
+}
+
+type Both = {
 	name: string
 	descriptiveName: string | null
 	description: string | null
@@ -46,7 +50,7 @@ type TrafficSignCategoryTrafficSign =
 	  }
 
 type TrafficSignCategoryModifier = {
-	category: 'modifier_sign' | 'modifier_sign_restriction'
+	category: 'modifier_sign' | 'modifier_sign_restriction' | 'traffic_sign' // used only once for "Landwirtschaftlicher Verkehr frei"
 	impliedKey?: never
 	restrictionValue?: string
 }

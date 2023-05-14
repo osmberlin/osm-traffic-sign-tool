@@ -1,142 +1,187 @@
 <script lang="ts">
+	import StateHelper from '@/components/layout/StateHelper.svelte'
 	import CopyButton from '@/components/links/CopyButton.svelte'
 	import SelectedSign from '@/components/signs/SelectedSign.svelte'
 	import SignGrid from '@/components/signs/SignGrid.svelte'
-	import { aggregateTags, type AggregatedTags } from '@/components/signs/aggregateTags'
-	import { signsFromUrl } from '@/components/signs/utils/signsFromUrl'
+	import {
+		aggregateComments,
+		type AggregatedComments
+	} from '@/components/signs/utils/aggregateComments'
+	import { aggregateTags, type AggregatedTags } from '@/components/signs/utils/aggregateTags'
+	import { buildUrlKey } from '@/components/signs/utils/urlKey/buildUrlKey'
+	import { splitUrlKey } from '@/components/signs/utils/urlKey/splitUrlKey'
 	import Tag from '@/components/wiki/Tag.svelte'
 	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
 	import { trafficSigns } from '@/data/trafficSigns'
+	import type { TrafficSign } from '@/data/types'
+	import { signStore } from '@/stores/signStore'
+	import { onMount } from 'svelte'
 	import { DocumentDuplicate, Icon } from 'svelte-hero-icons'
 	import { queryParam } from 'sveltekit-search-params'
 
-	const selectedSignIds = queryParam('signs', {
+	const urlSignKeys = queryParam('signs', {
 		// too URL
 		encode: (value: string | string[]) => (typeof value === 'string' ? value : value.join('|')),
 		// from URL to app
 		decode: (value: string | null) => (value ? value.split('|') : null)
 	})
 
-	function toggleSelection(signId: string) {
-		if ($selectedSignIds?.includes(signId)) {
-			// remove
-			$selectedSignIds = $selectedSignIds.filter((id) => id !== signId)
-		} else {
-			// add
-			$selectedSignIds = [...($selectedSignIds ?? []), signId]
-		}
-		selectedSigns = signsFromUrl($selectedSignIds)
-		;[aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
-		;[copyTrafficSignTag, copyAllTags] = copyTagsValues(aggregatedTags)
+	function updateSignStoreByUrlSignKey() {
+		signStore.update((signs) => {
+			$urlSignKeys?.forEach((urlSignKey) => {
+				const { signKey, signValue } = splitUrlKey(urlSignKey)
+				const sign = signs.find((s) => s.signKey === signKey)
+				if (!sign) return signs
+
+				sign.urlKey = urlSignKey
+				sign.signValue = signValue
+			})
+			return signs
+		})
+	}
+
+	// Sign store: Update on first render
+	onMount(() => {
+		updateSignStoreByUrlSignKey()
+	})
+
+	// Rendering signs
+	let selectedSigns: TrafficSign[] = []
+	let aggregatedTags: AggregatedTags = []
+	let aggregatedComments: AggregatedComments = []
+	// Copy signs
+	let copyTrafficSignTag: string | undefined = undefined
+	let copyAllTags: string | undefined = undefined
+	let trafficSignTag: string[] | undefined = undefined
+
+	urlSignKeys.subscribe(() => {
+		// Sign store: Update whenever URL changes
+		updateSignStoreByUrlSignKey()
+
+		// Rendering signs: Update
+		selectedSigns = $signStore.filter((sign) => $urlSignKeys?.includes(sign.urlKey))
+		aggregatedTags = aggregateTags(selectedSigns)
+		aggregatedComments = aggregateComments(selectedSigns)
+		// Copy signs: Update
+		copyTrafficSignTag = aggregatedTags.find(([key]) => key === 'traffic_sign')?.join('=')
+		copyAllTags = aggregatedTags.map(([key, value]) => `${key}=${value}`).join('\n')
 		trafficSignTag = copyTrafficSignTag?.split('=')
+	})
+
+	function updateUrlSignKey(urlKey: string) {
+		const { signKey: updateSignKey, signValue: updateSignValue } = splitUrlKey(urlKey)
+
+		urlSignKeys.update((signKeys) => {
+			// The store is something like ['DE:262[5.5]', 'DE:1020-30']
+			// We find the signKey index and update the value (using the fresh signValue)
+			signKeys?.forEach((urlKey, index) => {
+				const { signKey: currentSignKey } = splitUrlKey(urlKey)
+				if (currentSignKey && currentSignKey === updateSignKey) {
+					signKeys[index] = buildUrlKey(currentSignKey, updateSignValue)
+				}
+			})
+			return signKeys
+		})
 
 		return undefined
 	}
 
-	function copyTagsValues(aggregatedTags: AggregatedTags) {
-		copyTrafficSignTag = aggregatedTags.find(([key, _]) => key === 'traffic_sign')?.join('=')
-		copyAllTags = aggregatedTags.map(([key, value]) => `${key}=${value}`).join('\n')
-		return [copyTrafficSignTag, copyAllTags]
+	function toggleUrlSignKey(urlKey: string) {
+		if ($urlSignKeys?.includes(urlKey)) {
+			// remove
+			$urlSignKeys = $urlSignKeys.filter((id) => id !== urlKey)
+		} else {
+			// add
+			$urlSignKeys = [...($urlSignKeys ?? []), urlKey]
+		}
+		return undefined
 	}
 
-	let selectedSigns = signsFromUrl($selectedSignIds)
-	let [aggregatedTags, aggregatedComments] = aggregateTags(selectedSigns)
-
-	const signsMostUsed = Object.entries(trafficSigns).filter(
-		([_, values]) => values.mostUsed === true
+	const signsMostUsed = $signStore.filter((sign) => sign.mostUsed === true)
+	const signsCatSigns = $signStore.filter(
+		(sign) => sign.category === 'traffic_sign' && !sign.mostUsed
 	)
-	const signsCatSigns = Object.entries(trafficSigns).filter(
-		([_, values]) => values.category === 'traffic_sign' && !values.mostUsed
+	const signsCatModifiers = $signStore.filter((sign) => sign.category === 'modifier_sign')
+	const signsCatModifierRestrictions = $signStore.filter(
+		(sign) => sign.category === 'modifier_sign_restriction'
 	)
-	const signsCatModifiers = Object.entries(trafficSigns).filter(
-		([_, values]) => values.category === 'modifier_sign'
-	)
-	const signsCatModifierRestrictions = Object.entries(trafficSigns).filter(
-		([_, values]) => values.category === 'modifier_sign_restriction'
-	)
-
-	// Copy
-	let copyTrafficSignTag: string | undefined = undefined
-	let copyAllTags: string | undefined = undefined
-	;[copyTrafficSignTag, copyAllTags] = copyTagsValues(aggregatedTags)
-	let trafficSignTag: string[] | undefined = copyTrafficSignTag?.split('=')
 
 	// Debug helper output:
-	const validKeys = Object.values(trafficSigns).map((value) => value.urlString)
-	const unrecognizedKeys = $selectedSignIds?.filter((key) => !validKeys.includes(key))
+	const validKeys = Object.values(trafficSigns).map((value) => value.urlKey)
+	const unrecognizedKeys = $urlSignKeys?.filter((key) => !validKeys.includes(key))
 </script>
 
-{#if $selectedSignIds && unrecognizedKeys?.length}
-	<section class="text-white bg-amber-700 rounded mb-4 p-4">
-		<h2 class="uppercase font-thin text-lg">Unrecognized keys ({unrecognizedKeys.length})</h2>
+{#if $urlSignKeys && unrecognizedKeys?.length}
+	<section class="mb-4 rounded bg-amber-700 p-4 text-white">
+		<h2 class="text-lg font-thin uppercase">Unrecognized keys ({unrecognizedKeys.length})</h2>
 		<p>{unrecognizedKeys.join(', ')}</p>
 	</section>
 {/if}
 
 <main class="flex gap-4">
 	<section class="rounded bg-stone-300 px-6 py-4">
-		<h2 class="text-black uppercase font-light text-lg mb-4">Choose Signs</h2>
+		<h2 class="mb-4 text-lg font-light uppercase text-black">Choose Signs</h2>
 
 		<SignGrid
 			headline="Häufig verwendet"
 			signs={signsMostUsed}
-			{toggleSelection}
-			bind:attributes={$selectedSignIds}
+			toggleSelection={toggleUrlSignKey}
+			bind:attributes={$urlSignKeys}
 		/>
 
 		<SignGrid
 			headline="Kategorie Verkehrszeichen"
 			signs={signsCatSigns}
-			{toggleSelection}
-			bind:attributes={$selectedSignIds}
+			toggleSelection={toggleUrlSignKey}
+			bind:attributes={$urlSignKeys}
 		/>
 
 		<SignGrid
 			headline="Zusatzzeichen"
 			signs={signsCatModifiers}
-			{toggleSelection}
-			bind:attributes={$selectedSignIds}
+			toggleSelection={toggleUrlSignKey}
+			bind:attributes={$urlSignKeys}
 		/>
 
 		<SignGrid
 			headline="Zusatzzeichen Einschränkungen"
 			signs={signsCatModifierRestrictions}
-			{toggleSelection}
-			bind:attributes={$selectedSignIds}
+			toggleSelection={toggleUrlSignKey}
+			bind:attributes={$urlSignKeys}
 		/>
 	</section>
 
-	<section class="rounded bg-stone-300 px-4 py-4 flex-none w-48">
-		<h2 class="uppercase font-light text-lg mb-4 text-center">Selected Signs</h2>
+	<section class="w-48 flex-none rounded bg-stone-300 px-4 py-4">
+		<h2 class="mb-4 text-center text-lg font-light uppercase">Selected Signs</h2>
 
-		<div class="flex flex-col -mt-1">
-			{#each selectedSigns as [key, values]}
-				<SelectedSign {key} {values} {toggleSelection} active={true} />
+		<div class="-mt-1 flex flex-col">
+			{#each selectedSigns as sign}
+				<SelectedSign {sign} {toggleUrlSignKey} {updateUrlSignKey} active={true} />
 			{/each}
 		</div>
 	</section>
 
-	<section class="rounded bg-stone-900 text-stone-100 px-6 py-4 flex-none w-96">
-		{#if !$selectedSignIds}
-			<h2 class="uppercase font-light text-lg mb-4">Recommended Tags</h2>
+	<section class="w-96 flex-none rounded bg-stone-900 px-6 py-4 text-stone-100">
+		{#if !$urlSignKeys}
+			<h2 class="mb-4 text-lg font-light uppercase">Recommended Tags</h2>
 			<p class="font-light text-stone-400">Select a traffic sign to display recommended tags …</p>
 		{:else}
-			<h2 class="uppercase font-light text-lg mb-4">Traffic sign tag</h2>
+			<h2 class="mb-4 text-lg font-light uppercase">Traffic sign tag</h2>
 			{#if trafficSignTag && copyTrafficSignTag}
 				{#key trafficSignTag}
-					<div class="flex justify-between items-center">
+					<div class="flex items-center justify-between">
 						<Tag key={trafficSignTag[0]} value={trafficSignTag[1]} />
 						<CopyButton text={copyTrafficSignTag}>
-							<Icon src={DocumentDuplicate} class="w-4 h-4" />
+							<Icon src={DocumentDuplicate} class="h-4 w-4" />
 						</CopyButton>
 					</div>
 				{/key}
 			{/if}
 
-			<h2 class="uppercase font-light text-lg mt-10 mb-4">Recommended <code>highway</code> tags</h2>
+			<h2 class="mb-4 mt-10 text-lg font-light uppercase">Recommended <code>highway</code> tags</h2>
 
 			{#if aggregatedTags && copyAllTags}
-				<div class="flex justify-between items-end">
+				<div class="flex items-end justify-between">
 					<ul>
 						{#key aggregatedTags}
 							{#each aggregatedTags as [key, value]}
@@ -149,20 +194,20 @@
 
 					<div>
 						<CopyButton text={copyAllTags}>
-							<Icon src={DocumentDuplicate} class="w-4 h-4" />
+							<Icon src={DocumentDuplicate} class="h-4 w-4" />
 						</CopyButton>
 					</div>
 				</div>
 			{/if}
 
 			<div class="mt-10 space-y-2">
-				<h3 class="text-stone-50 uppercase font-thin text-lg">Notes</h3>
+				<h3 class="text-lg font-thin uppercase text-stone-50">Notes</h3>
 				{#if !aggregatedComments.length}–{/if}
 				{#each aggregatedComments as [signKey, signTitle, comment]}
 					<p>
 						<code
 							title={signTitle}
-							class="text-xs bg-gray-50/10 rounded px-1.5 pt-1 py-0.5 inline-flex items-center mr-1"
+							class="mr-1 inline-flex items-center rounded bg-gray-50/10 px-1.5 py-0.5 pt-1 text-xs"
 						>
 							{signKey}
 						</code>
@@ -173,3 +218,5 @@
 		{/if}
 	</section>
 </main>
+
+<StateHelper state={selectedSigns} />

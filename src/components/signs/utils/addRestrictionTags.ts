@@ -1,22 +1,22 @@
-import type { TrafficSignMap } from '@/data/types'
-import type { AggregatedTags } from '../aggregateTags'
+import type { TrafficSign } from '@/data/types'
+import type { AggregatedTags } from './aggregateTags'
 
 export const addRestrictionTags = (
 	aggregatedTags: AggregatedTags,
-	selectedSigns: TrafficSignMap[]
+	selectedSigns: TrafficSign[]
 ) => {
 	// Handle restriction: Collect keys, add all given values to those key (or 'no')
 	const restrictionKeys: string[] = selectedSigns
-		.map(([_, sign]) => 'restrictionKeys' in sign && sign.restrictionKeys)
+		.map((sign) => 'restrictionKeys' in sign && sign.restrictionKeys)
 		.flat()
 		.filter(Boolean)
 
 	const restrictionValues: string[] = selectedSigns
-		.map(([_, sign]) => 'restrictionValue' in sign && sign.restrictionValue)
+		.map((sign) => 'restrictionValue' in sign && sign.restrictionValue)
 		.filter(Boolean)
 
 	const conditialValues = selectedSigns
-		.map(([_, sign]) => sign.conditional && 'value' in sign && sign.value)
+		.map((sign) => sign.conditional && 'value' in sign && sign.value)
 		.filter(Boolean)
 
 	restrictionKeys.forEach((restrictionKey) => {

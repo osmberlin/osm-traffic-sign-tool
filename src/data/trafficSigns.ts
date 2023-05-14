@@ -1,8 +1,10 @@
-import type { TrafficSigns } from './types'
+import type { TrafficSign } from './types'
 
-export const trafficSigns: TrafficSigns = {
-	'DE:237': {
-		urlString: 'DE:237',
+export const trafficSigns: TrafficSign[] = [
+	{
+		urlKey: 'DE:237',
+		signKey: 'DE:237',
+		signValue: undefined,
 		name: 'Zeichen 237',
 		descriptiveName: 'Radweg',
 		description: null,
@@ -24,8 +26,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:238': {
-		urlString: 'DE:238',
+	{
+		urlKey: 'DE:238',
+		signKey: 'DE:238',
+		signValue: undefined,
 		name: 'Zeichen 238',
 		descriptiveName: 'Reitweg',
 		description: null,
@@ -42,8 +46,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:239': {
-		urlString: 'DE:239',
+	{
+		urlKey: 'DE:239',
+		signKey: 'DE:239',
+		signValue: undefined,
 		name: 'Zeichen 239',
 		descriptiveName: 'Fußgäger',
 		description: null,
@@ -63,8 +69,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:240': {
-		urlString: 'DE:240',
+	{
+		urlKey: 'DE:240',
+		signKey: 'DE:240',
+		signValue: undefined,
 		name: 'Zeichen 240',
 		image: {
 			svgSourceUrl:
@@ -88,8 +96,10 @@ export const trafficSigns: TrafficSigns = {
 		mostUsed: true,
 		category: 'traffic_sign'
 	},
-	'DE:241-30': {
-		urlString: 'DE:241-30',
+	{
+		urlKey: 'DE:241-30',
+		signKey: 'DE:241-30',
+		signValue: undefined,
 		name: 'Zeichen 241-30',
 		descriptiveName: 'Getrennter Rad- und Gehweg',
 		description: 'Radweg links',
@@ -113,8 +123,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:241-31': {
-		urlString: 'DE:241-31',
+	{
+		urlKey: 'DE:241-31',
+		signKey: 'DE:241-31',
+		signValue: undefined,
 		name: 'Zeichen 241-31',
 		descriptiveName: 'Getrennter Rad- und Gehweg',
 		description: 'Radweg rechts',
@@ -138,8 +150,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:242': {
-		urlString: 'DE:242.1',
+	{
+		urlKey: 'DE:242.1',
+		signKey: 'DE:242.1',
+		signValue: undefined,
 		name: 'Zeichen 242',
 		descriptiveName: 'Fußgägerbereich',
 		description: null,
@@ -158,8 +172,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:244.1': {
-		urlString: 'DE:244.1',
+	{
+		urlKey: 'DE:244.1',
+		signKey: 'DE:244.1',
+		signValue: undefined,
 		name: 'Zeichen 244.1',
 		descriptiveName: 'Fahrradstraße',
 		description: null,
@@ -181,8 +197,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:245': {
-		urlString: 'DE:245',
+	{
+		urlKey: 'DE:245',
+		signKey: 'DE:245',
+		signValue: undefined,
 		name: 'Zeichen 245',
 		descriptiveName: 'Busfahrstreifen',
 		description: null,
@@ -201,8 +219,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:325': {
-		urlString: 'DE:325',
+	{
+		urlKey: 'DE:325',
+		signKey: 'DE:325',
+		signValue: undefined,
 		name: 'Zeichen 325',
 		descriptiveName: 'Verkehrsberuhigter Bereich',
 		description: null,
@@ -211,8 +231,10 @@ export const trafficSigns: TrafficSigns = {
 		},
 		category: 'traffic_sign'
 	},
-	'DE:250': {
-		urlString: 'DE:250',
+	{
+		urlKey: 'DE:250',
+		signKey: 'DE:250',
+		signValue: undefined,
 		name: 'Zeichen 250',
 		descriptiveName: 'Verbot für Fahrzeuge aller Art',
 		description: null,
@@ -228,8 +250,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:260': {
-		urlString: 'DE:260',
+	{
+		urlKey: 'DE:260',
+		signKey: 'DE:260',
+		signValue: undefined,
 		name: 'Zeichen 260',
 		descriptiveName: null,
 		description:
@@ -247,8 +271,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:251': {
-		urlString: 'DE:251',
+	{
+		urlKey: 'DE:251',
+		signKey: 'DE:251',
+		signValue: undefined,
 		name: 'Zeichen 251',
 		descriptiveName: null,
 		description: 'Verbot für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
@@ -264,8 +290,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:253': {
-		urlString: 'DE:253',
+	{
+		urlKey: 'DE:253',
+		signKey: 'DE:253',
+		signValue: undefined,
 		name: 'Zeichen 253',
 		descriptiveName: null,
 		description:
@@ -283,8 +311,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:254': {
-		urlString: 'DE:254',
+	{
+		urlKey: 'DE:254',
+		signKey: 'DE:254',
+		signValue: undefined,
 		name: 'Zeichen 254',
 		descriptiveName: 'Verbot für Radfahrer',
 		description: null,
@@ -300,8 +330,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:255': {
-		urlString: 'DE:255',
+	{
+		urlKey: 'DE:255',
+		signKey: 'DE:255',
+		signValue: undefined,
 		name: 'Zeichen 255',
 		descriptiveName: null,
 		description: 'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
@@ -317,8 +349,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:257-50': {
-		urlString: 'DE:257-50',
+	{
+		urlKey: 'DE:257-50',
+		signKey: 'DE:257-50',
+		signValue: undefined,
 		name: 'Zeichen 257-50',
 		descriptiveName: 'Verbot für Mofas',
 		description: null,
@@ -333,8 +367,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:257-51': {
-		urlString: 'DE:257-51',
+	{
+		urlKey: 'DE:257-51',
+		signKey: 'DE:257-51',
+		signValue: undefined,
 		name: 'Zeichen 257-51',
 		descriptiveName: 'Verbot für Reiter',
 		description: null,
@@ -349,8 +385,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:257-54': {
-		urlString: 'DE:257-54',
+	{
+		urlKey: 'DE:257-54',
+		signKey: 'DE:257-54',
+		signValue: undefined,
 		name: 'Zeichen 257-54',
 		descriptiveName: 'Verbot für Kraftomnibusse',
 		description: null,
@@ -365,8 +403,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:259': {
-		urlString: 'DE:259',
+	{
+		urlKey: 'DE:259',
+		signKey: 'DE:259',
+		signValue: undefined,
 		name: 'Zeichen 259',
 		descriptiveName: 'Verbot für Fußgäger',
 		description: null,
@@ -381,8 +421,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:261': {
-		urlString: 'DE:261',
+	{
+		urlKey: 'DE:261',
+		signKey: 'DE:261',
+		signValue: undefined,
 		name: 'Zeichen 261',
 		descriptiveName: null,
 		description: 'Verbot für kennzeichnungspflichtige Kraftfahrzeuge mit gefährlichen Gütern',
@@ -398,8 +440,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:262[5.5]': {
-		urlString: 'DE:262[5.5]',
+	{
+		urlKey: 'DE:262[5.5]',
+		signKey: 'DE:262',
+		signValue: '5.5',
 		name: 'Zeichen 262',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
@@ -422,8 +466,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:263': {
-		urlString: 'DE:263[8]',
+	{
+		urlKey: 'DE:263[8]',
+		signKey: 'DE:263',
+		signValue: '8',
 		name: 'Zeichen 263',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über angegebene tatsächliche Achslast',
@@ -446,8 +492,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:264': {
-		urlString: 'DE:264[2]',
+	{
+		urlKey: 'DE:264[2]',
+		signKey: 'DE:264',
+		signValue: '2',
 		name: 'Zeichen 264',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung',
@@ -470,8 +518,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:265': {
-		urlString: 'DE:265[3.8]',
+	{
+		urlKey: 'DE:265[3.8]',
+		signKey: 'DE:265',
+		signValue: '3.8',
 		name: 'Zeichen 265',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge über die angegebene Höhe einschließlich Ladung',
@@ -494,8 +544,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:266': {
-		urlString: 'DE:266[10]',
+	{
+		urlKey: 'DE:266[10]',
+		signKey: 'DE:266',
+		signValue: '10',
 		name: 'Zeichen 266',
 		descriptiveName: null,
 		description: 'Verbot für Fahrzeuge und Züge über angegebene Läge einschließlich Ladung',
@@ -518,8 +570,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:269': {
-		urlString: 'DE:269',
+	{
+		urlKey: 'DE:269',
+		signKey: 'DE:269',
+		signValue: undefined,
 		name: 'Zeichen 269',
 		descriptiveName: 'Verbot für Fahrzeuge mit wassergefährdender Ladung',
 		description: null,
@@ -535,8 +589,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:274': {
-		urlString: 'DE:274[60]',
+	{
+		urlKey: 'DE:274[60]',
+		signKey: 'DE:274',
+		signValue: '60',
 		name: 'Zeichen 274',
 		descriptiveName: 'Zulässige Höchstgeschwindigkeit',
 		description: null,
@@ -549,8 +605,10 @@ export const trafficSigns: TrafficSigns = {
 		},
 		category: 'traffic_sign'
 	},
-	'DE:275': {
-		urlString: 'DE:275[30]',
+	{
+		urlKey: 'DE:275[30]',
+		signKey: 'DE:275',
+		signValue: '30',
 		name: 'Zeichen 275',
 		descriptiveName: 'Vorgeschriebene Mindestgeschwindigkeit',
 		description: null,
@@ -563,8 +621,10 @@ export const trafficSigns: TrafficSigns = {
 		},
 		category: 'traffic_sign'
 	},
-	'DE:276': {
-		urlString: 'DE:276',
+	{
+		urlKey: 'DE:276',
+		signKey: 'DE:276',
+		signValue: undefined,
 		name: 'Zeichen 276',
 		descriptiveName: 'Überholverbot für Kraftfahrzeuge aller Art',
 		description: null,
@@ -584,8 +644,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:277': {
-		urlString: 'DE:277',
+	{
+		urlKey: 'DE:277',
+		signKey: 'DE:277',
+		signValue: undefined,
 		name: 'Zeichen 277',
 		descriptiveName: 'Überholverbot für Kraftfahrzeuge über 3,5 t',
 		description: null,
@@ -605,8 +667,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:354': {
-		urlString: 'DE:354',
+	{
+		urlKey: 'DE:354',
+		signKey: 'DE:354',
+		signValue: undefined,
 		name: 'Zeichen 354',
 		descriptiveName: 'Wasserschutzgebiet',
 		description: null,
@@ -623,8 +687,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1020-12': {
-		urlString: 'DE:1020-12',
+	{
+		urlKey: 'DE:1020-12',
+		signKey: 'DE:1020-12',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1020-12',
 		descriptiveName: 'Radfahrer und Anlieger frei',
 		description: 'Anlieger im Sinne von Bewohner',
@@ -643,8 +709,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1020-30': {
-		urlString: 'DE:1020-30',
+	{
+		urlKey: 'DE:1020-30',
+		signKey: 'DE:1020-30',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1020-30',
 		descriptiveName: 'Anlieger frei (Anlieger im Sinne von Bewohner)',
 		description: null,
@@ -665,8 +733,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1022-10': {
-		urlString: 'DE:1022-10',
+	{
+		urlKey: 'DE:1022-10',
+		signKey: 'DE:1022-10',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1022-10',
 		descriptiveName: 'Radfahrer frei',
 		description: null,
@@ -684,8 +754,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1022-11': {
-		urlString: 'DE:1022-11',
+	{
+		urlKey: 'DE:1022-11',
+		signKey: 'DE:1022-11',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1022-11',
 		descriptiveName: 'Mofas frei',
 		description: null,
@@ -702,8 +774,10 @@ export const trafficSigns: TrafficSigns = {
 		},
 		category: 'modifier_sign'
 	},
-	'DE:1022-12': {
-		urlString: 'DE:1022-12',
+	{
+		urlKey: 'DE:1022-12',
+		signKey: 'DE:1022-12',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1022-12',
 		descriptiveName: 'Krafträder auch mit Beiwagen, Krafträder und Mofas frei',
 		description: null,
@@ -723,8 +797,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1024-10': {
-		urlString: 'DE:1024-10',
+	{
+		urlKey: 'DE:1024-10',
+		signKey: 'DE:1024-10',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1024-10',
 		descriptiveName: 'Personenkraftwagen frei',
 		description: null,
@@ -743,8 +819,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1024-12': {
-		urlString: 'DE:1024-12',
+	{
+		urlKey: 'DE:1024-12',
+		signKey: 'DE:1024-12',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1024-12',
 		descriptiveName: null,
 		description:
@@ -762,8 +840,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1024-14': {
-		urlString: 'DE:1024-14',
+	{
+		urlKey: 'DE:1024-14',
+		signKey: 'DE:1024-14',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1024-14',
 		descriptiveName: 'Kraftomnibus frei',
 		description: null,
@@ -781,8 +861,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1024-17': {
-		urlString: 'DE:1024-17',
+	{
+		urlKey: 'DE:1024-17',
+		signKey: 'DE:1024-17',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1024-17',
 		descriptiveName: null,
 		description:
@@ -807,8 +889,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1026-30': {
-		urlString: 'DE:1026-30',
+	{
+		urlKey: 'DE:1026-30',
+		signKey: 'DE:1026-30',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1026-30',
 		descriptiveName: 'Taxi frei',
 		description: null,
@@ -825,8 +909,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1026-32': {
-		urlString: 'DE:1026-32',
+	{
+		urlKey: 'DE:1026-32',
+		signKey: 'DE:1026-32',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1026-32',
 		descriptiveName: 'Linienverkehr frei',
 		description: "'psv' steht für 'Public Service Vehicle', also 'öffentliches Verkehrsmittel'",
@@ -844,8 +930,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1026-35': {
-		urlString: 'DE:1026-35',
+	{
+		urlKey: 'DE:1026-35',
+		signKey: 'DE:1026-35',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1026-35',
 		descriptiveName: 'Lieferverkehr frei',
 		description: null,
@@ -860,8 +948,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1026-36': {
-		urlString: 'DE:1026-36',
+	{
+		urlKey: 'DE:1026-36',
+		signKey: 'DE:1026-36',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1026-36',
 		descriptiveName: 'Landwirtschaftlicher Verkehr frei',
 		description: null,
@@ -884,8 +974,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1020-13': {
-		urlString: 'DE:1020-13',
+	{
+		urlKey: 'DE:1020-13',
+		signKey: 'DE:1020-13',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1020-13',
 		descriptiveName: 'Inline Skater frei',
 		description: null,
@@ -894,8 +986,10 @@ export const trafficSigns: TrafficSigns = {
 		},
 		category: 'modifier_sign'
 	},
-	'1026-33': {
-		urlString: '1026-33',
+	{
+		urlKey: '1026-33',
+		signKey: '1026-33',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1026-33',
 		descriptiveName: 'Einsatzfahrzeuge frei',
 		description: null,
@@ -904,8 +998,10 @@ export const trafficSigns: TrafficSigns = {
 		},
 		category: 'modifier_sign'
 	},
-	'DE:1026-37': {
-		urlString: 'DE:1026-37',
+	{
+		urlKey: 'DE:1026-37',
+		signKey: 'DE:1026-37',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1026-37',
 		descriptiveName: 'Forstwirtschaftlicher Verkehr frei',
 		description: null,
@@ -927,8 +1023,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1026-38': {
-		urlString: 'DE:1026-38',
+	{
+		urlKey: 'DE:1026-38',
+		signKey: 'DE:1026-38',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1026-38',
 		descriptiveName: 'Land- und forstwirtschaftlicher Verkehr frei',
 		description: null,
@@ -950,8 +1048,10 @@ export const trafficSigns: TrafficSigns = {
 			licence: 'Public Domain'
 		}
 	},
-	'DE:1040-30': {
-		urlString: 'DE:1040-30[16:00-18:00]',
+	{
+		urlKey: 'DE:1040-30[16:00-18:00]',
+		signKey: 'DE:1040-30',
+		signValue: '16:00-18:00',
 		name: 'Zusatzzeichen 1040-30',
 		descriptiveName: 'Zeitliche Beschräkung',
 		description: null,
@@ -963,8 +1063,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1040-31': {
-		urlString: 'DE:1040-31[08:00-11:00,16:00-18:00]',
+	{
+		urlKey: 'DE:1040-31[08:00-11:00,16:00-18:00]',
+		signKey: 'DE:1040-31',
+		signValue: '08:00-11:00,16:00-18:00',
 		name: 'Zusatzzeichen 1040-31',
 		descriptiveName: 'Zeitliche Beschräkung',
 		description: null,
@@ -976,8 +1078,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1042-30': {
-		urlString: 'DE:1042-30',
+	{
+		urlKey: 'DE:1042-30',
+		signKey: 'DE:1042-30',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1042-30',
 		descriptiveName: 'Zeitliche Beschräkung: werktags',
 		description: null,
@@ -985,8 +1089,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1042-31': {
-		urlString: 'DE:1042-31[Mo-Sa 18:00-19:00]',
+	{
+		urlKey: 'DE:1042-31[Mo-Sa 18:00-19:00]',
+		signKey: 'DE:1042-31',
+		signValue: 'Mo-Sa 18:00-19:00',
 		name: 'Zusatzzeichen 1042-31',
 		descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis',
 		description: null,
@@ -998,8 +1104,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1042-32': {
-		urlString: 'DE:1042-32[PH off;Mo-Sa 08:30-11:30,16:00-18:00]',
+	{
+		urlKey: 'DE:1042-32[PH off;Mo-Sa 08:30-11:30,16:00-18:00]',
+		signKey: 'DE:1042-32',
+		signValue: 'PH off;Mo-Sa 08:30-11:30,16:00-18:00',
 		name: 'Zusatzzeichen 1042-32',
 		descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis, von-bis',
 		description: null,
@@ -1011,8 +1119,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1042-33': {
-		urlString: 'DE:1042-33',
+	{
+		urlKey: 'DE:1042-33',
+		signKey: 'DE:1042-33',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1042-33',
 		descriptiveName: 'Zeitliche Beschräkung: Mo-Fr, von-bis',
 		description: null,
@@ -1024,8 +1134,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1042-34': {
-		urlString: 'DE:1042-34[Tu,Th,Fr 16:00-18:00]',
+	{
+		urlKey: 'DE:1042-34[Tu,Th,Fr 16:00-18:00]',
+		signKey: 'DE:1042-34',
+		signValue: 'Tu,Th,Fr 16:00-18:00',
 		name: 'Zusatzzeichen 1042-34',
 		descriptiveName: 'Zeitliche Beschräkung: Di,Do,Fr, von-bis',
 		description: null,
@@ -1037,8 +1149,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1042-35': {
-		urlString: 'DE:1042-35[Su,PH 06:00-22:00]',
+	{
+		urlKey: 'DE:1042-35[Su,PH 06:00-22:00]',
+		signKey: 'DE:1042-35',
+		signValue: 'Su,PH 06:00-22:00',
 		name: 'Zusatzzeichen 1042-35',
 		descriptiveName: 'Zeitliche Beschräkung: So- und Feiertage, von-bis',
 		description: null,
@@ -1050,8 +1164,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1042-38': {
-		urlString: 'DE:1042-38',
+	{
+		urlKey: 'DE:1042-38',
+		signKey: 'DE:1042-38',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1042-38',
 		descriptiveName: 'Zeitliche Beschräkung: Werktags, außer Samstags',
 		description: null,
@@ -1059,8 +1175,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1042-51': {
-		urlString: 'DE:1042-51',
+	{
+		urlKey: 'DE:1042-51',
+		signKey: 'DE:1042-51',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1042-51',
 		descriptiveName: 'Zeitliche Beschräkung: Sa und So',
 		description: null,
@@ -1068,8 +1186,10 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	},
-	'DE:1053-35': {
-		urlString: 'DE:1053-35',
+	{
+		urlKey: 'DE:1053-35',
+		signKey: 'DE:1053-35',
+		signValue: undefined,
 		name: 'Zusatzzeichen 1053-35',
 		descriptiveName: 'Beschräkung: bei Nässe',
 		description: null,
@@ -1077,4 +1197,4 @@ export const trafficSigns: TrafficSigns = {
 		conditional: true,
 		category: 'modifier_sign_restriction'
 	}
-}
+]

@@ -1,50 +1,13 @@
 <script lang="ts">
 	import ExternalLink from '@/components/links/ExternalLink.svelte'
-	import { buttonStyle } from '@/components/links/buttonStyles'
-	import { signsFromUrl } from '@/components/signs/utils/signsFromUrl'
-	import { trafficSigns } from '@/data/trafficSigns'
 	import trafficSignsWiki from '@/data/wiki/parseWiki/trafficSignsWiki.json'
+	import { signStore } from '@/stores/signStore'
 	import clsx from 'clsx'
-	import { queryParam } from 'sveltekit-search-params'
-
-	const selectedSignIds = queryParam('signs', {
-		// too URL
-		encode: (value: string | string[]) => (typeof value === 'string' ? value : value.join('|')),
-		// from URL to app
-		decode: (value: string | null) => (value ? value.split('|') : null)
-	})
-
-	function toggleSelection(signId: string) {
-		if ($selectedSignIds?.includes(signId)) {
-			// remove
-			$selectedSignIds = $selectedSignIds.filter((id) => id !== signId)
-		} else {
-			// add
-			$selectedSignIds = [...($selectedSignIds ?? []), signId]
-		}
-		selectedSigns = signData($selectedSignIds)
-		return undefined
-	}
-
-	function signData(selectedSignIds: string[] | null) {
-		if (selectedSignIds?.length) {
-			return signsFromUrl(selectedSignIds)
-		}
-
-		return Object.entries(trafficSigns)
-	}
-
-	let selectedSigns = signData($selectedSignIds)
 </script>
 
 <main class="rounded bg-stone-300 px-6 py-4">
-	<h2 class="text-black uppercase font-light text-3xl my-4 flex items-center gap-3">
-		{#if !$selectedSignIds}
-			All signs {selectedSigns.length}
-		{:else}
-			Signs: {$selectedSignIds.join(', ')}
-			<button on:click={() => ($selectedSignIds = null)} class={buttonStyle}>Show all signs</button>
-		{/if}
+	<h2 class="my-4 flex items-center gap-3 text-3xl font-light uppercase text-black">
+		All signs {$signStore.length}
 	</h2>
 
 	<p>
@@ -64,42 +27,30 @@
 				>
 					Sign key
 				</th>
-				<th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold text-stone-900">
+				<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-stone-900">
 					Sign data from this app
 				</th>
-				<th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold text-stone-900">
+				<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-stone-900">
 					Sign data parsed from the wiki
 				</th>
 			</tr>
 		</thead>
 		<tbody class="divide-y divide-violet-200">
-			{#each selectedSigns as [key, values]}
-				<tr class={clsx(values?.image?.svgPath ? '' : 'bg-amber-300')}>
-					<th class="py-4 pl-4 pr-3 text-sm text-stone-900 sm:pl-6 md:pl-0 text-center space-y-3">
-						<code>{key}</code>
+			{#each $signStore as sign}
+				<tr class={clsx(sign?.image?.svgPath ? '' : 'bg-amber-300')}>
+					<th class="space-y-3 py-4 pl-4 pr-3 text-center text-sm text-stone-900 sm:pl-6 md:pl-0">
+						<code>{sign.urlKey}</code>
 						<br />
 
-						{#if values?.image?.svgPath}
-							<img src={values.image.svgPath} alt={values.name} class="h-auto w-10 inline-block" />
+						{#if sign?.image?.svgPath}
+							<img src={sign.image.svgPath} alt={sign.name} class="inline-block h-auto w-10" />
 						{:else}
-							<span class="text-amber-700 inline-block">Missing</span>
+							<span class="inline-block text-amber-700">Missing</span>
 						{/if}
-						<br />
-
-						<button
-							on:click={() => toggleSelection(key)}
-							class={clsx(buttonStyle, 'w-8 h-8 inline-flex items-center justify-center pb-0.5')}
-						>
-							{#if $selectedSignIds?.includes(key)}
-								&times;
-							{:else}
-								+
-							{/if}
-						</button>
 					</th>
-					<td class="py-4 px-3 text-xs text-stone-500">
+					<td class="px-3 py-4 text-xs text-stone-500">
 						<pre class="w-96 overflow-scroll">{JSON.stringify(
-								values,
+								sign,
 								(key, value) => {
 									if (key === 'wikiData') return undefined // Remove the key from the output
 									return value
@@ -107,9 +58,9 @@
 								2
 							)}</pre>
 					</td>
-					<td class="py-4 px-3 text-xs text-stone-500">
+					<td class="px-3 py-4 text-xs text-stone-500">
 						<pre class="w-96 overflow-scroll">{JSON.stringify(
-								trafficSignsWiki.find((sign) => sign.sign === key),
+								trafficSignsWiki.find((wikiSign) => wikiSign.sign === sign.urlKey),
 								undefined,
 								2
 							)}</pre>
