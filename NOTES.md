@@ -10,6 +10,10 @@ https://bun.sh/guides/ecosystem/sveltekit
 
 Redesign to have fixed panels
 
+# clsx
+
+Replace clsx with twJoin
+
 # UI Library
 
 - https://svelte-headlessui.goss.io/docs/listbox
