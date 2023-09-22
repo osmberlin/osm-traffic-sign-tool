@@ -1,3 +1,15 @@
+# Validate opening hours
+
+https://github.com/opening-hours/opening_hours.js
+
+# Test out bun
+
+https://bun.sh/guides/ecosystem/sveltekit
+
+# UI
+
+Redesign to have fixed panels
+
 # UI Library
 
 - https://svelte-headlessui.goss.io/docs/listbox
