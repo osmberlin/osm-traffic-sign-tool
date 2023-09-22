@@ -11,7 +11,7 @@
 </script>
 
 <Header />
-<div class="max-w-6xl xl:mx-0 mx-4 self-center">
+<div class="mx-4 max-w-6xl self-center xl:mx-0">
 	<slot />
 </div>
 <Footer />

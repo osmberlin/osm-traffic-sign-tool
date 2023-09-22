@@ -8,11 +8,11 @@
 </script>
 
 <section>
-	<div class="mx-auto max-w-6xl overflow-hidden px-4 pt-10 pb-6 sm:px-6 lg:px-8">
+	<div class="mx-auto max-w-6xl overflow-hidden px-4 pb-6 pt-10 sm:px-6 lg:px-8">
 		<div class="-mx-5 -my-2 flex flex-col flex-wrap">
 			<a
 				class={clsx('mb-3 self-center decoration-violet-700 underline-offset-4 hover:underline', {
-					'hover:no-underline cursor-auto': isHome
+					'cursor-auto hover:no-underline': isHome
 				})}
 				href="/"
 			>
@@ -23,8 +23,8 @@
 					<small class="text-xs">{version}</small>
 				</h1>
 			</a>
-			<details open class="text-stone-300 my-5 max-w-prose self-center leading-tight">
-				<summary class="cursor-pointer text-center hover:underline underline-offset-2">
+			<details open class="my-5 max-w-prose self-center leading-tight text-stone-300">
+				<summary class="cursor-pointer text-center underline-offset-2 hover:underline">
 					About this tool…
 				</summary>
 				<p>

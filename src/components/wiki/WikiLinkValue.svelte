@@ -29,7 +29,8 @@
 		href={link}
 		className="underline underline-offset-4 hover:decoration-1 decoration-transparent hover:decoration-stone-400"
 		blank>{valuePart}</ExternalLink
-	>{#if index < orLinks.length - 1}{' '}<em>or</em> {/if}
+	>{#if index < orLinks.length - 1}{' '}<em>or</em>
+	{/if}
 {/each}{#each semiLinks as { link, valuePart }, index}
 	<ExternalLink
 		href={link}
