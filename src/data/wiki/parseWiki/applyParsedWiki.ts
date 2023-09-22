@@ -1,11 +1,11 @@
-import type { TrafficSigns } from '@/data/types'
 import fs from 'fs'
 import path from 'path'
 import { trafficSigns } from '../../trafficSigns'
 import trafficSignsWiki from './trafficSignsWiki.json'
+import type { TrafficSign } from '@/data/types'
 
 const svgDirPath = path.join(__dirname, '../../../../static/trafficSignsSvgs')
-const localTrafficSigns = structuredClone(trafficSigns) as TrafficSigns
+const localTrafficSigns = structuredClone(trafficSigns) as TrafficSign[]
 const matchedWikiDataKeys: string[] = []
 
 // Add local file path to trafficSigns
@@ -18,10 +18,10 @@ fs.readdir(svgDirPath, async (err, files) => {
 		)
 		const signKey = Object.entries(localTrafficSigns)
 			.find(([key, values]) => {
-				return wikiSign && (wikiSign.sign === key || wikiSign.sign === values.urlString)
+				return wikiSign && (wikiSign.sign === key || wikiSign.sign === values.signKey)
 			})
 			?.at(0)
-		const sign = signKey && localTrafficSigns[signKey as string]
+		const sign = signKey && localTrafficSigns.find((sign) => sign.signKey === signKey)
 
 		if (wikiSign && sign) {
 			const file = path.join('/trafficSignsSvgs/', svgFileName)
