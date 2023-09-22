@@ -11,6 +11,7 @@
 	export let sign: TrafficSign
 
 	// We update the URL store which in turn updates the signStore in our page component
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	function updateValue(key: string, event: any) {
 		const { signKey } = splitUrlKey(key)
 		signKey && updateUrlSignKey(buildUrlKey(signKey, event.target.value))
