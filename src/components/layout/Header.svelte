@@ -32,7 +32,7 @@
 					tags for the road that it applies to.
 					<strong>Please review all tags before updating OSM.</strong><br />
 					<strong class="text-amber-500"
-						>This project is in alpha stage. <ExternalLink
+						>This project is in beta stage. <ExternalLink
 							href="https://github.com/osmberlin/osm-traffic-sign-tool"
 							>Please report issues; please help with research</ExternalLink
 						>.</strong
