@@ -1196,5 +1196,69 @@ export const trafficSigns: TrafficSign[] = [
 		value: 'wet',
 		conditional: true,
 		category: 'modifier_sign_restriction'
+	},
+	{
+		urlKey: 'DE:1012-31',
+		signKey: 'DE:1012-31',
+		signValue: undefined,
+		name: 'Zusatzzeichen 1012-31',
+		descriptiveName: 'Ende',
+		description: null,
+		value: undefined,
+		category: 'modifier_sign',
+		image: {
+			svgSourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1012-31_-_Ende_(600x330),_StVO_1992.svg',
+			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1012-31_-_Ende_(600x330),_StVO_1992.svg',
+			sourceUrl:
+				'https://upload.wikimedia.org/wikipedia/commons/2/25/Zusatzzeichen_1012-31_-_Ende_%28600x330%29%2C_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
+	},
+	{
+		urlKey: 'DE:1000-30',
+		signKey: 'DE:1000-30',
+		signValue: undefined,
+		name: 'Zusatzzeichen 1000-30',
+		descriptiveName: 'Ende',
+		description: null,
+		value: undefined,
+		category: 'modifier_sign',
+		osmTags: {
+			highway: ['path', 'cycleway'],
+			oneway: 'no'
+		},
+		image: {
+			svgSourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
+			sourceUrl:
+				'https://upload.wikimedia.org/wikipedia/commons/c/c9/Zusatzzeichen_1000-30_-_beide_Richtungen%2C_zwei_gegengerichtete_waagerechte_Pfeile%2C_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
+	},
+	{
+		urlKey: 'DE:1000-31',
+		signKey: 'DE:1000-31',
+		signValue: undefined,
+		name: 'Zusatzzeichen 1000-31',
+		descriptiveName: 'beide Richtungen',
+		description: 'zwei gegengerichtete senkrechte Pfeile',
+		value: undefined,
+		category: 'modifier_sign',
+		osmTags: {
+			highway: ['path', 'cycleway'],
+			oneway: 'no'
+		},
+		image: {
+			svgSourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1000-31_-_beide_Richtungen,_zwei_gegengerichtete_senkrechte_Pfeile,_StVO_1992.svg',
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1000-31_-_beide_Richtungen,_zwei_gegengerichtete_senkrechte_Pfeile,_StVO_1992.svg',
+			sourceUrl:
+				'https://upload.wikimedia.org/wikipedia/commons/5/5e/Zusatzzeichen_1000-31_-_beide_Richtungen%2C_zwei_gegengerichtete_senkrechte_Pfeile%2C_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	}
 ]
