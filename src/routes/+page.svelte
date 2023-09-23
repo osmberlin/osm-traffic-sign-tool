@@ -149,17 +149,24 @@
 	<section class="rounded bg-stone-300 px-6 py-4">
 		<div class="flex items-start justify-between">
 			<h2 class="mb-4 text-lg font-light uppercase text-black">Choose Signs</h2>
-			<!-- svelte-ignore a11y-autofocus -->
-			<input
-				on:input={updateSearch}
-				name="search"
-				type="text"
-				autofocus={true}
-				class="block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-sm ring-1
-        ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600
-        sm:text-sm"
-				placeholder="Search…"
-			/>
+			<div class="relative -mt-1.5">
+				<!-- svelte-ignore a11y-autofocus -->
+				<input
+					on:input={updateSearch}
+					name="search"
+					type="text"
+					autofocus={true}
+					class="block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-sm ring-1
+                ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600
+                sm:text-sm"
+					placeholder="Search…"
+				/>
+				{#if $urlSearch && searchSigns.length === 0}<div
+						class="absolute -bottom-4 right-0.5 text-xs text-indigo-700"
+					>
+						No results
+					</div>{/if}
+			</div>
 		</div>
 
 		{#if $urlSearch && searchSigns.length}
