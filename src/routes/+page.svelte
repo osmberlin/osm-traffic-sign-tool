@@ -26,6 +26,12 @@
 		decode: (value: string | null) => (value ? value.split('|') : null)
 	})
 
+	const urlSearch = queryParam('q')
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	function updateSearch(event: any) {
+		$urlSearch = event?.target?.value
+	}
+
 	async function transformAlternativeKeyFormatInUrl() {
 		$urlSignKeys?.forEach((urlSignKey, index) => {
 			const transformationKey = alternativeKeyFormats.get(urlSignKey)
@@ -56,6 +62,7 @@
 	})
 
 	// Rendering signs
+	let searchSigns: TrafficSign[] = []
 	let selectedSigns: TrafficSign[] = []
 	let aggregatedTags: AggregatedTags = []
 	let aggregatedComments: AggregatedComments = []
@@ -72,6 +79,12 @@
 		updateSignStoreByUrlSignKey()
 
 		// Rendering signs: Update
+		searchSigns = $signStore.filter(
+			(sign) =>
+				sign.signKey.toLocaleLowerCase().includes($urlSearch ?? '') ||
+				sign.descriptiveName?.toLocaleLowerCase()?.includes($urlSearch ?? '') ||
+				sign.description?.toLocaleLowerCase()?.includes($urlSearch ?? '')
+		)
 		selectedSigns = $signStore.filter((sign) => $urlSignKeys?.includes(sign.urlKey))
 		aggregatedTags = aggregateTags(selectedSigns)
 		aggregatedComments = aggregateComments(selectedSigns)
@@ -132,7 +145,29 @@
 
 <main class="flex gap-4">
 	<section class="rounded bg-stone-300 px-6 py-4">
-		<h2 class="mb-4 text-lg font-light uppercase text-black">Choose Signs</h2>
+		<div class="flex items-start justify-between">
+			<h2 class="mb-4 text-lg font-light uppercase text-black">Choose Signs</h2>
+			<!-- svelte-ignore a11y-autofocus -->
+			<input
+				on:input={updateSearch}
+				name="search"
+				type="text"
+				autofocus={true}
+				class="block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-sm ring-1
+        ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600
+        sm:text-sm"
+				placeholder="Search…"
+			/>
+		</div>
+
+		{#if $urlSearch && searchSigns.length}
+			<SignGrid
+				headline="Suchergebnisse"
+				signs={searchSigns}
+				toggleSelection={toggleUrlSignKey}
+				bind:attributes={$urlSignKeys}
+			/>
+		{/if}
 
 		<SignGrid
 			headline="Häufig verwendet"
