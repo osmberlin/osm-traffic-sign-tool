@@ -10,7 +10,8 @@ describe('collectTags()', () => {
 		name: 'name',
 		descriptiveName: null,
 		description: null,
-		category: 'traffic_sign'
+		category: 'traffic_sign',
+		image: { svgPath: undefined, sourceUrl: undefined, licence: undefined }
 	} satisfies TrafficSign
 
 	test('does nothing when no input given', () => {

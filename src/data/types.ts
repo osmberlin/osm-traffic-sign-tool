@@ -5,10 +5,12 @@ export type TrafficSigns = {
 }
 
 export type TrafficSign = Prettify<
-	UrlFromApp &
+	Base &
+		UrlFromApp &
 		(TrafficSignCategoryTrafficSign | TrafficSignCategoryModifier) &
 		TrafficSignKeyValue &
-		Both
+		TagsAndValidations &
+		Image
 >
 
 type UrlFromApp = {
@@ -20,23 +22,36 @@ type UrlFromApp = {
 	signValue: string | undefined
 }
 
-type Both = {
+type Base = {
 	name: string
 	descriptiveName: string | null
 	description: string | null
+	mostUsed?: boolean
+}
+
+type TagsAndValidations = {
 	osmTags?: {
 		[key: string]: string | string[]
 	}
 	tagsComment?: string
-	// TODO: Remove `?` once all objects have an image
-	image?: {
-		svgPath: string
-		svgSourceUrl: string
-		sourceUrl: string
-		licence: 'Public Domain'
+	validations?: {
+		requiredKey?: string
+		shouldBeHighwayValue?: string
 	}
-	validations?: { requiredKey?: string; shouldBeHighwayValue?: string }
-	mostUsed?: boolean
+}
+
+type Image = {
+	image:
+		| {
+				svgPath: string
+				sourceUrl: string
+				licence: 'Public Domain'
+		  }
+		| {
+				svgPath: undefined
+				sourceUrl: undefined
+				licence: undefined
+		  }
 }
 
 type TrafficSignCategoryTrafficSign =
