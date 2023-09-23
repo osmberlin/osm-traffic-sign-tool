@@ -12,6 +12,7 @@
 	import { splitUrlKey } from '@/components/signs/utils/urlKey/splitUrlKey'
 	import Tag from '@/components/wiki/Tag.svelte'
 	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
+	import { alternativeKeyFormats } from '@/data/alternativeKeyFormats'
 	import { trafficSigns } from '@/data/trafficSigns'
 	import type { TrafficSign } from '@/data/types'
 	import { signStore } from '@/stores/signStore'
@@ -25,6 +26,15 @@
 		// from URL to app
 		decode: (value: string | null) => (value ? value.split('|') : null)
 	})
+
+	async function transformAlternativeKeyFormatInUrl() {
+		$urlSignKeys?.forEach((urlSignKey, index) => {
+			const transformationKey = alternativeKeyFormats.get(urlSignKey)
+			if (transformationKey && $urlSignKeys) {
+				$urlSignKeys[index] = transformationKey
+			}
+		})
+	}
 
 	function updateSignStoreByUrlSignKey() {
 		signStore.update((signs) => {
@@ -41,7 +51,8 @@
 	}
 
 	// Sign store: Update on first render
-	onMount(() => {
+	onMount(async () => {
+		await transformAlternativeKeyFormatInUrl()
 		updateSignStoreByUrlSignKey()
 	})
 
