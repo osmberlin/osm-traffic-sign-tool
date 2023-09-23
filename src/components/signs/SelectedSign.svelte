@@ -4,7 +4,6 @@
 	import { buildUrlKey } from './utils/urlKey/buildUrlKey'
 	import { splitUrlKey } from './utils/urlKey/splitUrlKey'
 
-	export let active: boolean
 	export let toggleUrlSignKey: (urlKey: string) => undefined
 	export let updateUrlSignKey: (urlKey: string) => undefined
 	export let sign: TrafficSign

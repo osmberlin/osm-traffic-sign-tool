@@ -168,7 +168,7 @@
 
 		<div class="-mt-1 flex flex-col">
 			{#each selectedSigns as sign}
-				<SelectedSign {sign} {toggleUrlSignKey} {updateUrlSignKey} active={true} />
+				<SelectedSign {sign} {toggleUrlSignKey} {updateUrlSignKey} />
 			{/each}
 		</div>
 	</section>
