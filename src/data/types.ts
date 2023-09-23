@@ -102,6 +102,12 @@ type TrafficSignKeyValue =
 			valuePrompt: ValuePrompt<'opening_hours'>
 	  }
 	| {
+			// valuePrompt time restrions from-to or Array<from-to>
+			conditional: true
+			key?: never
+			valuePrompt: ValuePrompt<'time_restriction'>
+	  }
+	| {
 			// fixed days, `wet`
 			conditional: true
 			key?: never

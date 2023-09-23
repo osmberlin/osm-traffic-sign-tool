@@ -12,6 +12,7 @@
 		integer: { type: 'number', steps: undefined },
 		float: { type: 'number', steps: '0.1' },
 		opening_hours: { type: 'text', steps: undefined },
+		time_restriction: { type: 'text', steps: undefined }
 	}
 
 	// We update the URL store which in turn updates the signStore in our page component

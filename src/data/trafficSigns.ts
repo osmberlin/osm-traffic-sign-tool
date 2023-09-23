@@ -964,16 +964,16 @@ export const trafficSigns: TrafficSign[] = [
 		}
 	},
 	{
-		urlKey: 'DE:1040-30[16:00-18:00]',
+		urlKey: 'DE:1040-30[16-18]',
 		signKey: 'DE:1040-30',
-		signValue: '16:00-18:00',
+		signValue: '16-18',
 		name: 'Zusatzzeichen 1040-30',
 		descriptiveName: 'Zeitliche Beschräkung',
 		description: null,
 		valuePrompt: {
 			prompt: 'Uhrzeit von-bis',
-			defaultValue: '16:00-18:00',
-			format: 'opening_hours'
+			defaultValue: '16-18',
+			format: 'time_restriction'
 		},
 		conditional: true,
 		category: 'modifier_sign_restriction'
