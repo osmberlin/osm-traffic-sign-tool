@@ -53,6 +53,14 @@
 				</p>
 			</div>
 		{/if}
+
+		<div
+			class="absolute -bottom-5 z-10 hidden rounded bg-stone-800 px-1 pb-0.5 pt-1 text-xs/4 text-stone-50 group-hover/item:block"
+		>
+			<strong>{sign.urlKey}</strong>
+			<br />
+			{sign.descriptiveName ?? ''}
+		</div>
 	</button>
 
 	<dialog open={debugOpen} class="absolute z-10 max-w-md overflow-auto rounded p-5">
