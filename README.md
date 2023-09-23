@@ -24,10 +24,11 @@ npm run dev -- --open
 - Svelte Kit handles routing; we use Typesript with `<script lang="ts">`
 - [Vitest](https://vitest.dev),
   and [Playwright](https://playwright.dev) are ready to be used for tests
-- Tailwind CSS and Heroicon for styling
+- Tailwind CSS for styling
+- [tabler icons](https://github.com/tabler/tabler-icons#svelte) as icon library — [Icon Preview](https://tabler-icons.io/)
 - Prettier, ESLint, Editorconfig for code formatting based on Svelte standards
 - Husky runs our checks on push. Use `git push --no-verify` to force-skip them.
-- Deployment using Github pages
+- Deployment using Github pages with `npm run deploy`
 - Run `npm run` to see a list of available helper scripts
 
 Test your work: Use `check` and `build`
