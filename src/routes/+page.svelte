@@ -163,17 +163,17 @@
 		/>
 	</section>
 
-	<section class="w-48 flex-none rounded bg-stone-300 px-4 py-4">
+	<section class="w-56 flex-none rounded bg-stone-300 py-4">
 		<h2 class="mb-4 text-center text-lg font-light uppercase">Selected Signs</h2>
 
-		<div class="-mt-1 flex flex-col">
+		<div class="-mt-2 space-y-6">
 			{#each selectedSigns as sign}
 				<SelectedSign {sign} {toggleUrlSignKey} {updateUrlSignKey} />
 			{/each}
 		</div>
 	</section>
 
-	<section class="w-96 flex-none rounded bg-stone-900 px-6 py-4 text-stone-100">
+	<section class="w-96 flex-none rounded bg-stone-900 px-4 py-4 text-stone-100">
 		{#if !$urlSignKeys}
 			<h2 class="mb-4 text-lg font-light uppercase">Recommended Tags</h2>
 			<p class="font-light text-stone-400">Select a traffic sign to display recommended tags …</p>

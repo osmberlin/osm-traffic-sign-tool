@@ -23,10 +23,10 @@
 	}
 </script>
 
-<div class="w-full self-center text-center leading-tight">
+<div class="text-center leading-tight">
 	<button
 		on:click={toggleUrlSignKey(sign.urlKey)}
-		class="group/item relative flex h-auto w-full flex-col items-center justify-center gap-2 rounded border border-transparent p-2 leading-tight hover:border-stone-200 hover:bg-stone-200"
+		class="group/item relative mx-2 space-y-2 rounded border border-transparent px-3 leading-tight hover:border-stone-200 hover:bg-stone-200"
 	>
 		<div
 			class="absolute -right-1 -top-1 rounded-full text-stone-300/0 group-hover/item:text-stone-700"
@@ -36,10 +36,15 @@
 
 		<div class="relative">
 			{#if sign?.image?.svgPath}
-				<img src={sign.image.svgPath} alt={sign.name} class="h-auto w-full" />
+				<img src={sign.image.svgPath} alt={sign.name} class="h-auto max-h-28 w-full" />
+
 				{#if 'valuePrompt' in sign && sign.signValue !== sign.valuePrompt.defaultValue}
 					<div class="absolute inset-0 flex items-center justify-center">
-						<div class="-rotate-12 bg-white/80 px-3 pt-1 uppercase text-stone-600">Example</div>
+						<div
+							class="-rotate-12 rounded bg-amber-100/95 px-3 pt-1 text-xl font-medium text-amber-900 shadow-sm"
+						>
+							{sign.signValue}
+						</div>
 					</div>
 				{/if}
 			{:else}
@@ -56,19 +61,17 @@
 		<h3 class="text-md w-full font-light">
 			{sign.name}
 		</h3>
-		<p>
-			<strong
-				>{#if sign.descriptiveName}
-					{sign.descriptiveName}
-				{:else}
-					–
-				{/if}</strong
-			>
-		</p>
+
+		{#if sign.descriptiveName}
+			<p><strong class="hyphens-auto break-all">{sign.descriptiveName}</strong></p>
+		{/if}
 	</button>
+
 	{#if 'valuePrompt' in sign}
-		<div class="leading-tight">
-			<label for={sign.urlKey} class="font-bold">{sign.valuePrompt.prompt}:</label>
+		<div class="mx-2 mt-1 rounded border border-stone-400/50 p-1 leading-tight">
+			<label for={sign.urlKey} class="text-sm/2 break-word hyphens-auto"
+				>{sign.valuePrompt.prompt}:</label
+			>
 			<input
 				on:input={(event) => updateValue(sign.urlKey, event)}
 				name={sign.urlKey}
