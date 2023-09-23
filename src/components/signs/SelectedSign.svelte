@@ -8,6 +8,12 @@
 	export let updateUrlSignKey: (urlKey: string) => undefined
 	export let sign: TrafficSign
 
+	const inputFormats = {
+		integer: { type: 'number', steps: undefined },
+		float: { type: 'number', steps: '0.1' },
+		opening_hours: { type: 'text', steps: undefined },
+	}
+
 	// We update the URL store which in turn updates the signStore in our page component
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	function updateValue(key: string, event: any) {
@@ -65,8 +71,8 @@
 			<input
 				on:input={(event) => updateValue(sign.urlKey, event)}
 				name={sign.urlKey}
-				type={sign.valuePrompt.format === 'opening_hours' ? 'text' : 'number'}
-				step={sign.valuePrompt.format === 'float' ? '0.1' : undefined}
+				type={inputFormats[sign.valuePrompt.format]['type'] ?? 'text'}
+				step={inputFormats[sign.valuePrompt.format]['steps'] ?? undefined}
 				value={sign.signValue ?? sign.valuePrompt.defaultValue}
 				class="block w-full rounded-md border-0 px-1 py-1.5 text-center text-gray-900 shadow-sm ring-1
 			ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600
