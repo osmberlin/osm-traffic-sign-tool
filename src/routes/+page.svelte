@@ -215,7 +215,7 @@
 			<div class="mt-10 space-y-2">
 				<h3 class="text-lg font-thin uppercase text-stone-50">Notes</h3>
 				{#if !aggregatedComments.length}–{/if}
-				{#each aggregatedComments as [signKey, signTitle, comment]}
+				{#each aggregatedComments as [signKey, signTitle, comment] (signKey)}
 					<p>
 						<code
 							title={signTitle}
