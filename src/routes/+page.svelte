@@ -216,7 +216,9 @@
 				<h3 class="text-lg font-thin uppercase text-stone-50">Notes</h3>
 				{#if !aggregatedComments.length}–{/if}
 				{#each aggregatedComments as [signKey, signTitle, comment] (signKey)}
-					<p>
+					<p
+						class="prose-white prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 hover:prose-a:decoration-stone-400 hover:prose-a:decoration-1"
+					>
 						<code
 							title={signTitle}
 							class="mr-1 inline-flex items-center rounded bg-gray-50/10 px-1.5 py-0.5 pt-1 text-xs"
