@@ -79,12 +79,14 @@
 		updateSignStoreByUrlSignKey()
 
 		// Rendering signs: Update
-		searchSigns = $signStore.filter(
-			(sign) =>
-				sign.signKey.toLocaleLowerCase().includes($urlSearch ?? '') ||
-				sign.descriptiveName?.toLocaleLowerCase()?.includes($urlSearch ?? '') ||
-				sign.description?.toLocaleLowerCase()?.includes($urlSearch ?? '')
-		)
+		searchSigns = $signStore.filter((sign) => {
+			const lookup = $urlSearch?.toLocaleLowerCase() ?? ''
+			return (
+				sign.signKey.toLocaleLowerCase().includes(lookup) ||
+				sign.descriptiveName?.toLocaleLowerCase()?.includes(lookup) ||
+				sign.description?.toLocaleLowerCase()?.includes(lookup)
+			)
+		})
 		selectedSigns = $signStore.filter((sign) => $urlSignKeys?.includes(sign.urlKey))
 		aggregatedTags = aggregateTags(selectedSigns)
 		aggregatedComments = aggregateComments(selectedSigns)
