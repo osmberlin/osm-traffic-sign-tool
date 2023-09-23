@@ -1325,5 +1325,44 @@ export const trafficSigns: TrafficSign[] = [
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-33_-_Radverkehr_im_Gegenverkehr,_StVO_1997.svg',
 			licence: 'Public Domain'
 		}
+	},
+	{
+		urlKey: 'DE:298',
+		signKey: 'DE:298',
+		signValue: undefined,
+		name: 'Zeichen 298',
+		descriptiveName: 'Sperrflächen',
+		description: null,
+		value: undefined,
+		category: 'traffic_sign',
+		osmTags: {
+			'area:highway': 'prohibited'
+		},
+		image: {
+			svgPath: '/trafficSignsSvgs/Zeichen_298_-_Sperrflaechen,_StVO_1970.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zeichen_298_-_Sperrfl%C3%A4chen,_StVO_1970.svg',
+			licence: 'Public Domain'
+		}
+	},
+	{
+		urlKey: 'DE:299',
+		signKey: 'DE:299',
+		signValue: undefined,
+		name: 'Zeichen 299',
+		descriptiveName: 'Sperrflächen',
+		description: null,
+		value: undefined,
+		category: 'traffic_sign',
+		osmTags: {
+			'area:highway': 'prohibited'
+		},
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zeichen_299_-_Grenzmarkierung_fuer_Halt-_und_Parkverbote,_StVO_1992.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zeichen_299_-_Grenzmarkierung_f%C3%BCr_Halt-_und_Parkverbote,_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	}
 ]
