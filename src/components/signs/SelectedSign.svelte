@@ -22,24 +22,30 @@
 		on:click={toggleUrlSignKey(sign.urlKey)}
 		class="group/item relative flex h-auto w-full flex-col items-center justify-center gap-2 rounded border border-transparent p-2 leading-tight hover:border-stone-200 hover:bg-stone-200"
 	>
-		<span
+		<div
 			class="absolute -right-1 -top-1 rounded-full text-stone-300/0 group-hover/item:text-stone-700"
 		>
-			{#if active}
-				<IconCircleCheck class="h-6 w-6" />
-			{/if}
-		</span>
+			<IconCircleCheck class="h-6 w-6" />
+		</div>
 
-		{#if sign?.image?.svgPath}
-			<img src={sign.image.svgPath} alt={sign.name} class="h-auto w-full" />
-		{:else}
-			<div
-				class="flex h-20 w-20 items-center justify-center rounded border border-stone-800 bg-stone-600 pt-1 text-stone-50"
-			>
-				<code class="whitespace-nowrap tracking-tighter">{sign.signKey.replaceAll('DE:', '')}</code
-				><br />
-			</div>
-		{/if}
+		<div class="relative">
+			{#if sign?.image?.svgPath}
+				<img src={sign.image.svgPath} alt={sign.name} class="h-auto w-full" />
+				{#if 'valuePrompt' in sign && sign.signValue !== sign.valuePrompt.defaultValue}
+					<div class="absolute inset-0 flex items-center justify-center">
+						<div class="-rotate-12 bg-white/80 px-3 pt-1 uppercase text-stone-600">Example</div>
+					</div>
+				{/if}
+			{:else}
+				<div
+					class="flex h-20 w-20 items-center justify-center rounded border border-stone-800 bg-stone-600 pt-1 text-stone-50"
+				>
+					<code class="whitespace-nowrap tracking-tighter"
+						>{sign.signKey.replaceAll('DE:', '')}</code
+					><br />
+				</div>
+			{/if}
+		</div>
 
 		<h3 class="text-md w-full font-light">
 			{sign.name}
