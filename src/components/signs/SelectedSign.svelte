@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { TrafficSign } from '@/data/types'
-	import clsx from 'clsx'
+	import { twJoin } from 'tailwind-merge'
 	import { CheckCircle, Icon } from 'svelte-hero-icons'
 	import { buildUrlKey } from './utils/urlKey/buildUrlKey'
 	import { splitUrlKey } from './utils/urlKey/splitUrlKey'
@@ -21,9 +21,7 @@
 <div class="w-full self-center text-center leading-tight">
 	<button
 		on:click={toggleUrlSignKey(sign.urlKey)}
-		class={clsx(
-			'group/item relative flex h-auto w-full flex-col items-center justify-center gap-2 rounded border border-transparent p-2 leading-tight hover:border-stone-200 hover:bg-stone-200'
-		)}
+		class="group/item relative flex h-auto w-full flex-col items-center justify-center gap-2 rounded border border-transparent p-2 leading-tight hover:border-stone-200 hover:bg-stone-200"
 	>
 		<span
 			class="absolute -right-1 -top-1 rounded-full text-stone-300/0 group-hover/item:text-stone-700"

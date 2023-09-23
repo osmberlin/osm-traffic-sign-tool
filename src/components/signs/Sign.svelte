@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { TrafficSign } from '@/data/types'
-	import clsx from 'clsx'
+	import { twJoin } from 'tailwind-merge'
 	import { Icon, PlusCircle, CheckCircle } from 'svelte-hero-icons'
 
 	export let active: boolean
@@ -11,7 +11,7 @@
 <div class="w-20">
 	<button
 		on:click={toggleSelection(sign.urlKey)}
-		class={clsx(
+		class={twJoin(
 			'group/item relative flex h-20 w-full items-center justify-center rounded border border-stone-200 p-2 hover:bg-stone-200',
 			active ? 'bg-stone-200/50 shadow-inner' : ''
 		)}
@@ -21,7 +21,7 @@
 			{sign.name} – {sign.descriptiveName}
 		</h3>
 		<span
-			class={clsx(
+			class={twJoin(
 				'absolute -right-1 -top-1 rounded-full',
 				active
 					? 'group-hover/item:text-stone-700'

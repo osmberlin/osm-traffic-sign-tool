@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { version } from '$app/environment'
 	import { page } from '$app/stores'
-	import clsx from 'clsx'
+	import { twJoin } from 'tailwind-merge'
 	import ExternalLink from '../links/ExternalLink.svelte'
 
 	const isHome = $page.url.pathname === '/'
@@ -11,9 +11,10 @@
 	<div class="mx-auto max-w-6xl overflow-hidden px-4 pb-6 pt-10 sm:px-6 lg:px-8">
 		<div class="-mx-5 -my-2 flex flex-col flex-wrap">
 			<a
-				class={clsx('mb-3 self-center decoration-violet-700 underline-offset-4 hover:underline', {
-					'cursor-auto hover:no-underline': isHome
-				})}
+				class={twJoin(
+					'mb-3 self-center decoration-violet-700 underline-offset-4 hover:underline',
+					isHome ? 'cursor-auto hover:no-underline' : ''
+				)}
 				href="/"
 			>
 				<h1 class="text-3xl font-thin text-stone-400">

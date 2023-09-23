@@ -2,7 +2,7 @@
 	import ExternalLink from '@/components/links/ExternalLink.svelte'
 	import trafficSignsWiki from '@/data/wiki/parseWiki/trafficSignsWiki.json'
 	import { signStore } from '@/stores/signStore'
-	import clsx from 'clsx'
+	import { twJoin } from 'tailwind-merge'
 </script>
 
 <main class="rounded bg-stone-300 px-6 py-4">
@@ -37,7 +37,7 @@
 		</thead>
 		<tbody class="divide-y divide-violet-200">
 			{#each $signStore as sign}
-				<tr class={clsx(sign?.image?.svgPath ? '' : 'bg-amber-300')}>
+				<tr class={twJoin(sign?.image?.svgPath ? '' : 'bg-amber-300')}>
 					<th class="space-y-3 py-4 pl-4 pr-3 text-center text-sm text-stone-900 sm:pl-6 md:pl-0">
 						<code>{sign.urlKey}</code>
 						<br />
