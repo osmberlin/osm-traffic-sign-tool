@@ -1061,15 +1061,15 @@ export const trafficSigns: TrafficSign[] = [
 		}
 	},
 	{
-		urlKey: 'DE:1042-31[Mo-Sa 18:00-19:00]',
+		urlKey: 'DE:1042-31[Mo-Sa 18-19]',
 		signKey: 'DE:1042-31',
-		signValue: 'Mo-Sa 18:00-19:00',
+		signValue: 'Mo-Sa 18-19',
 		name: 'Zusatzzeichen 1042-31',
 		descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis',
 		description: null,
 		valuePrompt: {
 			prompt: 'Werktags, Uhrzeit von-bis',
-			defaultValue: 'Mo-Sa 18:00-19:00',
+			defaultValue: 'Mo-Sa 18-19',
 			format: 'opening_hours'
 		},
 		conditional: true,
@@ -1127,15 +1127,15 @@ export const trafficSigns: TrafficSign[] = [
 		}
 	},
 	{
-		urlKey: 'DE:1042-34[Tu,Th,Fr 16:00-18:00]',
+		urlKey: 'DE:1042-34[Tu,Th,Fr 16-18]',
 		signKey: 'DE:1042-34',
-		signValue: 'Tu,Th,Fr 16:00-18:00',
+		signValue: 'Tu,Th,Fr 16-18',
 		name: 'Zusatzzeichen 1042-34',
 		descriptiveName: 'Zeitliche Beschräkung: Di,Do,Fr, von-bis',
 		description: null,
 		valuePrompt: {
 			prompt: 'Tu,Th,Fr, Uhrzeit von-bis',
-			defaultValue: 'Tu,Th,Fr 16:00-18:00',
+			defaultValue: 'Tu,Th,Fr 16-18',
 			format: 'opening_hours'
 		},
 		conditional: true,
@@ -1149,15 +1149,15 @@ export const trafficSigns: TrafficSign[] = [
 		}
 	},
 	{
-		urlKey: 'DE:1042-35[Su,PH 06:00-22:00]',
+		urlKey: 'DE:1042-35[Su,PH 6-22]',
 		signKey: 'DE:1042-35',
-		signValue: 'Su,PH 06:00-22:00',
+		signValue: 'Su,PH 6-22',
 		name: 'Zusatzzeichen 1042-35',
 		descriptiveName: 'Zeitliche Beschräkung: So- und Feiertage, von-bis',
 		description: null,
 		valuePrompt: {
 			prompt: 'So- und Feiertage, Uhrzeit von-bis',
-			defaultValue: 'Su,PH 06:00-22:00',
+			defaultValue: 'Su,PH 6-22',
 			format: 'opening_hours'
 		},
 		conditional: true,
