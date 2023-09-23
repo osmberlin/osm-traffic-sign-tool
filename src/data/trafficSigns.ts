@@ -202,16 +202,25 @@ export const trafficSigns: TrafficSign[] = [
 		}
 	},
 	{
-		urlKey: 'DE:325',
-		signKey: 'DE:325',
+		urlKey: 'DE:325.1',
+		signKey: 'DE:325.1',
 		signValue: undefined,
-		name: 'Zeichen 325',
-		descriptiveName: 'Verkehrsberuhigter Bereich',
+		name: 'Zeichen 325.1',
+		descriptiveName: 'Verkehrsberuhigter Bereich (Anfang)',
 		description: null,
 		osmTags: {
 			highway: 'living_street'
 		},
-		category: 'traffic_sign'
+		tagsComment:
+			'Impliziert [Tag:foot=yes], [Tag:bicycle=yes]. Kein [Key:maxspeed] setzen, siehe [Tag:highway=living_street]. Auch maxspeed-Source-Angaben sind nicht wichtig, da der highway-Tag bereits ausreicht.',
+		category: 'traffic_sign',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:250',
@@ -551,7 +560,14 @@ export const trafficSigns: TrafficSign[] = [
 			defaultValue: '60',
 			format: 'integer'
 		},
-		category: 'traffic_sign'
+		mostUsed: true,
+		category: 'traffic_sign',
+		image: {
+			svgPath: '/trafficSignsSvgs/Zeichen_274-60_-_Zulässige_Höchstgeschwindigkeit,_StVO_2017.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-60_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:275[30]',
@@ -569,7 +585,14 @@ export const trafficSigns: TrafficSign[] = [
 			defaultValue: '30',
 			format: 'integer'
 		},
-		category: 'traffic_sign'
+		category: 'traffic_sign',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:276',
@@ -606,10 +629,9 @@ export const trafficSigns: TrafficSign[] = [
 			'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking:hgv=forward/backward] entsprechend der Wegrichtung.',
 		category: 'traffic_sign',
 		image: {
-			svgPath:
-				'/trafficSignsSvgs/Zeichen_277_-_Überholverbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_2,8_t,_einschließlich_ihrer_Anhänger,_StVO_1992.svg',
+			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1060-33_-_Massenangabe_-_2,8_t,_StVO_2017.svg',
 			sourceUrl:
-				'https://wiki.openstreetmap.org/wiki/File:Zeichen_277_-_%C3%9Cberholverbot_f%C3%BCr_Kraftfahrzeuge_mit_einem_zul%C3%A4ssigen_Gesamtgewicht_%C3%BCber_2,8_t,_einschlie%C3%9Flich_ihrer_Anh%C3%A4nger,_StVO_1992.svg',
+				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1060-33_-_Massenangabe_-_2,8_t,_StVO_2017.svg',
 			licence: 'Public Domain'
 		}
 	},
@@ -903,7 +925,14 @@ export const trafficSigns: TrafficSign[] = [
 		osmTags: {
 			inline_skates: 'yes'
 		},
-		category: 'modifier_sign'
+		category: 'modifier_sign',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1020-13_-_Inline-Skaten_und_Rollschuhfahren_frei,_StVO_2009.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1020-13_-_Inline-Skaten_und_Rollschuhfahren_frei,_StVO_2009.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: '1026-33',
@@ -915,7 +944,14 @@ export const trafficSigns: TrafficSign[] = [
 		osmTags: {
 			emergency: 'yes'
 		},
-		category: 'modifier_sign'
+		category: 'modifier_sign',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1026-33_-_Einsatzfahrzeuge_frei_(450x600),_StVO_1992.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-33_-_Einsatzfahrzeuge_frei_(450x600),_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1026-37',
@@ -976,22 +1012,36 @@ export const trafficSigns: TrafficSign[] = [
 			format: 'time_restriction'
 		},
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1040-30_-_Zeitliche_Beschraenkung_(16_-_18_h),_330x600,_StVO_1992.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1040-30_-_Zeitliche_Beschr%C3%A4nkung_(16_-_18_h),_330x600,_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
-		urlKey: 'DE:1040-31[08:00-11:00,16:00-18:00]',
+		urlKey: 'DE:1040-31[08-11,16-18]',
 		signKey: 'DE:1040-31',
-		signValue: '08:00-11:00,16:00-18:00',
+		signValue: '08-11,16-18',
 		name: 'Zusatzzeichen 1040-31',
 		descriptiveName: 'Zeitliche Beschräkung',
 		description: null,
 		valuePrompt: {
 			prompt: 'Uhrzeit von-bis, von-bis',
-			defaultValue: '08:00-11:00,16:00-18:00',
+			defaultValue: '08-11,16-18',
 			format: 'opening_hours'
 		},
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1040-31_-_Zeitliche_Beschraenkung_(8_-_11_h,_16_-_18_h),_330x600,_StVO_1992.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1040-31_-_Zeitliche_Beschr%C3%A4nkung_(8_-_11_h,_16_-_18_h),_330x600,_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1042-30',
@@ -1002,7 +1052,13 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		value: 'Mo-Sa;PH off',
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1042-30_-_werktags_(600x330),_StVO_1992.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-30_-_werktags_(600x330),_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1042-31[Mo-Sa 18:00-19:00]',
@@ -1017,37 +1073,58 @@ export const trafficSigns: TrafficSign[] = [
 			format: 'opening_hours'
 		},
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1042-31_-_werktags_18_-_19_h_(600x330),_StVO_1992.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-31_-_werktags_18_-_19_h_(600x330),_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
-		urlKey: 'DE:1042-32[PH off;Mo-Sa 08:30-11:30,16:00-18:00]',
+		urlKey: 'DE:1042-32[PH off;Mo-Sa 8:30-11:30,16-18]',
 		signKey: 'DE:1042-32',
-		signValue: 'PH off;Mo-Sa 08:30-11:30,16:00-18:00',
+		signValue: 'PH off;Mo-Sa 8:30-11:30,16-18',
 		name: 'Zusatzzeichen 1042-32',
 		descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis, von-bis',
 		description: null,
 		valuePrompt: {
 			prompt: 'Werktags, Uhrzeit von-bis, von-bis',
-			defaultValue: 'PH off;Mo-Sa 08:30-11:30,16:00-18:00',
+			defaultValue: 'PH off;Mo-Sa 8:30-11:30,16-18',
 			format: 'opening_hours'
 		},
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1042-32_-_werktags_8.30_-_11.30,_16_-_18_h_(600x450),_StVO_1992.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-32_-_werktags_8.30_-_11.30,_16_-_18_h_(600x450),_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
-		urlKey: 'DE:1042-33',
+		urlKey: 'DE:1042-33[Mo-Fr 16-18]',
 		signKey: 'DE:1042-33',
-		signValue: undefined,
+		signValue: 'Mo-Fr 16-18',
 		name: 'Zusatzzeichen 1042-33',
 		descriptiveName: 'Zeitliche Beschräkung: Mo-Fr, von-bis',
 		description: null,
 		valuePrompt: {
 			prompt: 'Mo-Fr, Uhrzeit von-bis',
-			defaultValue: 'Mo-Fr 16:00-18:00',
+			defaultValue: 'Mo-Fr 16-18',
 			format: 'opening_hours'
 		},
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1042-33_-_Mo_-_Fr,_16_-_18_h_(600x330),_StVO_1992.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-33_-_Mo_-_Fr,_16_-_18_h_(600x330),_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1042-34[Tu,Th,Fr 16:00-18:00]',
@@ -1062,7 +1139,14 @@ export const trafficSigns: TrafficSign[] = [
 			format: 'opening_hours'
 		},
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1042-34_-_Di,_Do,_Fr,_16_-_18_h_(600x330),_StVO_1992.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-34_-_Di,_Do,_Fr,_16_-_18_h_(600x330),_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1042-35[Su,PH 06:00-22:00]',
@@ -1077,7 +1161,14 @@ export const trafficSigns: TrafficSign[] = [
 			format: 'opening_hours'
 		},
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1042-35_-_6_-_22_h_an_Sonn-und_Feiertagen_(450x600),_StVO_1992.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-35_-_6_-_22_h_an_Sonn-und_Feiertagen_(450x600),_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1042-38',
@@ -1088,7 +1179,14 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		value: 'Mo-Fr;PH off',
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1042-38_-_werktags_außer_samstags_(600x330),_StVO_2017.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-38_-_werktags_au%C3%9Fer_samstags_(600x330),_StVO_2017.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1042-51',
@@ -1099,7 +1197,13 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		value: 'Sa,Su',
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1042-51_-_Sa_und_So_(600x330),_StVO_2017.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-51_-_Sa_und_So_(600x330),_StVO_2017.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1053-35',
@@ -1110,7 +1214,13 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		value: 'wet',
 		conditional: true,
-		category: 'modifier_sign_restriction'
+		category: 'modifier_sign_restriction',
+		image: {
+			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1053-35_-_Bei_Naesse_(600x600),_StVO_2017.svg',
+			sourceUrl:
+				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1053-35_-_Bei_N%C3%A4sse_(600x600),_StVO_2017.svg',
+			licence: 'Public Domain'
+		}
 	},
 	{
 		urlKey: 'DE:1012-31',
@@ -1133,8 +1243,8 @@ export const trafficSigns: TrafficSign[] = [
 		signKey: 'DE:1000-30',
 		signValue: undefined,
 		name: 'Zusatzzeichen 1000-30',
-		descriptiveName: 'Ende',
-		description: null,
+		descriptiveName: 'Beide Richtungen',
+		description: 'zwei gegengerichtete waagerechte Pfeile',
 		value: undefined,
 		category: 'modifier_sign',
 		osmTags: {
@@ -1145,7 +1255,7 @@ export const trafficSigns: TrafficSign[] = [
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
 			sourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/c/c9/Zusatzzeichen_1000-30_-_beide_Richtungen%2C_zwei_gegengerichtete_waagerechte_Pfeile%2C_StVO_1992.svg',
+				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
 			licence: 'Public Domain'
 		}
 	},
@@ -1154,7 +1264,7 @@ export const trafficSigns: TrafficSign[] = [
 		signKey: 'DE:1000-31',
 		signValue: undefined,
 		name: 'Zusatzzeichen 1000-31',
-		descriptiveName: 'beide Richtungen',
+		descriptiveName: 'Beide Richtungen',
 		description: 'zwei gegengerichtete senkrechte Pfeile',
 		value: undefined,
 		category: 'modifier_sign',
@@ -1166,7 +1276,53 @@ export const trafficSigns: TrafficSign[] = [
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1000-31_-_beide_Richtungen,_zwei_gegengerichtete_senkrechte_Pfeile,_StVO_1992.svg',
 			sourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/5/5e/Zusatzzeichen_1000-31_-_beide_Richtungen%2C_zwei_gegengerichtete_senkrechte_Pfeile%2C_StVO_1992.svg',
+				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
+			licence: 'Public Domain'
+		}
+	},
+	{
+		urlKey: 'DE:1000-32',
+		signKey: 'DE:1000-32',
+		signValue: undefined,
+		name: 'Zusatzzeichen 1000-32',
+		descriptiveName: 'Radverkehr kreuzt von links und rechts',
+		description: null,
+		value: undefined,
+		category: 'modifier_sign',
+		// TODO: Varianten von osmTags bauen
+		osmTags: {
+			highway: ['path', 'cycleway'],
+			oneway: 'no'
+		},
+		tagsComment:
+			'Bitte <a href="https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33">Wiki beachten</a>, das Tool ist hier nicht vollständig.',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1000-32_-_Radfahrer_kreuzen_von_rechts_und_links,_StVO_1997.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-32_-_Radfahrer_kreuzen_von_rechts_und_links,_StVO_1997.svg',
+			licence: 'Public Domain'
+		}
+	},
+	{
+		urlKey: 'DE:1000-33',
+		signKey: 'DE:1000-33',
+		signValue: undefined,
+		name: 'Zusatzzeichen 1000-33',
+		descriptiveName: 'Radverkehr im Gegenverkehr',
+		description: null,
+		value: undefined,
+		category: 'modifier_sign',
+		osmTags: {
+			cycleway: ['opposite', 'opposite_lane', 'opposite_track ']
+		},
+		tagsComment:
+			'Bitte <a href="https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33">Wiki beachten</a>, das Tool ist hier nicht vollständig.',
+		image: {
+			svgPath:
+				'/trafficSignsSvgs/Zusatzzeichen_1000-33_-_Radverkehr_im_Gegenverkehr,_StVO_1997.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-33_-_Radverkehr_im_Gegenverkehr,_StVO_1997.svg',
 			licence: 'Public Domain'
 		}
 	}
