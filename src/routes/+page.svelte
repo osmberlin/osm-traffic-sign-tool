@@ -15,8 +15,8 @@
 	import { trafficSigns } from '@/data/trafficSigns'
 	import type { TrafficSign } from '@/data/types'
 	import { signStore } from '@/stores/signStore'
+	import { IconCopy } from '@tabler/icons-svelte'
 	import { onMount } from 'svelte'
-	import { DocumentDuplicate, Icon } from 'svelte-hero-icons'
 	import { queryParam } from 'sveltekit-search-params'
 
 	const urlSignKeys = queryParam('signs', {
@@ -172,7 +172,7 @@
 					<div class="flex items-center justify-between">
 						<Tag key={trafficSignTag[0]} value={trafficSignTag[1]} />
 						<CopyButton text={copyTrafficSignTag}>
-							<Icon src={DocumentDuplicate} class="h-4 w-4" />
+							<IconCopy class="h-4 w-4" />
 						</CopyButton>
 					</div>
 				{/key}
@@ -194,7 +194,7 @@
 
 					<div>
 						<CopyButton text={copyAllTags}>
-							<Icon src={DocumentDuplicate} class="h-4 w-4" />
+							<IconCopy class="h-4 w-4" />
 						</CopyButton>
 					</div>
 				</div>

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { TrafficSign } from '@/data/types'
-	import { twJoin } from 'tailwind-merge'
-	import { CheckCircle, Icon } from 'svelte-hero-icons'
+	import { IconCircleCheck } from '@tabler/icons-svelte'
 	import { buildUrlKey } from './utils/urlKey/buildUrlKey'
 	import { splitUrlKey } from './utils/urlKey/splitUrlKey'
 
@@ -27,7 +26,7 @@
 			class="absolute -right-1 -top-1 rounded-full text-stone-300/0 group-hover/item:text-stone-700"
 		>
 			{#if active}
-				<Icon src={CheckCircle} class="h-6 w-6" />
+				<IconCircleCheck class="h-6 w-6" />
 			{/if}
 		</span>
 
