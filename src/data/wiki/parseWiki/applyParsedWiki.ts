@@ -26,7 +26,6 @@ fs.readdir(svgDirPath, async (err, files) => {
 		if (wikiSign && sign) {
 			const file = path.join('/trafficSignsSvgs/', svgFileName)
 			sign.image = {
-				svgSourceUrl: wikiSign.imageSvg,
 				svgPath: file,
 				sourceUrl: wikiSign.imageUrl,
 				licence: 'Public Domain'

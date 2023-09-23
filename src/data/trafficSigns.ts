@@ -18,8 +18,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/9/91/Zeichen_237_-_Sonderweg_Radfahrer%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg',
@@ -38,8 +36,6 @@ export const trafficSigns: TrafficSign[] = [
 		impliedKey: 'access',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/a/a6/Zeichen_238_-_Sonderweg_Reiter%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_238_-_Sonderweg_Reiter,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_238_-_Sonderweg_Reiter,_StVO_1992.svg',
@@ -61,8 +57,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/5/5a/Zeichen_239_-_Sonderweg_Fu%C3%9Fg%C3%A4nger%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_239_-_Sonderweg_Fußgänger,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_239_-_Sonderweg_Fu%C3%9Fg%C3%A4nger,_StVO_1992.svg',
@@ -75,8 +69,6 @@ export const trafficSigns: TrafficSign[] = [
 		signValue: undefined,
 		name: 'Zeichen 240',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/0/08/Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_240_-_Gemeinsamer_Fuß-_und_Radweg,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg,_StVO_1992.svg',
@@ -115,8 +107,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/8/86/Zeichen_241-30_-_getrennter_Rad-_und_Fu%C3%9Fweg%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_241-30_-_getrennter_Rad-_und_Fußweg,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_241-30_-_getrennter_Rad-_und_Fu%C3%9Fweg,_StVO_1992.svg',
@@ -142,8 +132,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/6/68/Zeichen_241-31_-_getrennter_Fu%C3%9F-_und_Radweg%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_241-31_-_getrennter_Fuß-_und_Radweg,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_241-31_-_getrennter_Fu%C3%9F-_und_Radweg,_StVO_1992.svg',
@@ -164,8 +152,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/8/8b/Zeichen_242.1_-_Beginn_einer_Fu%C3%9Fg%C3%A4ngerzone%2C_StVO_2009.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_242.1_-_Beginn_einer_Fußgängerzone,_StVO_2009.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_242.1_-_Beginn_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg',
@@ -189,8 +175,6 @@ export const trafficSigns: TrafficSign[] = [
 			'Je nach Art der Straße überlicherweise [Tag:highway=residential] oder [Tag:highway=cycleway].',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/3/3c/Zeichen_244.1_-_Beginn_einer_Fahrradstra%C3%9Fe%2C_StVO_2013.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_244.1_-_Beginn_einer_Fahrradstraße,_StVO_2013.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_244.1_-_Beginn_einer_Fahrradstra%C3%9Fe,_StVO_2013.svg',
@@ -211,8 +195,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/0/05/Zeichen_245_-_Bussonderfahrstreifen%2C_StVO_2013.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_245_-_Bussonderfahrstreifen,_StVO_2013.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_245_-_Bussonderfahrstreifen,_StVO_2013.svg',
@@ -242,8 +224,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/d/d2/Zeichen_250_-_Verbot_f%C3%BCr_Fahrzeuge_aller_Art%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_250_-_Verbot_für_Fahrzeuge_aller_Art,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_250_-_Verbot_f%C3%BCr_Fahrzeuge_aller_Art,_StVO_1992.svg',
@@ -262,8 +242,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/b/bf/Zeichen_260_-_Verbot_f%C3%BCr_Kraftr%C3%A4der_und_Mofas_und_sonstige_mehrspurige_Kraftfahrzeuge%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_260_-_Verbot_für_Krafträder_und_Mofas_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg',
 			sourceUrl:
@@ -281,8 +259,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionKeys: ['motorcar'],
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/6/6c/Zeichen_251_-_Verbot_f%C3%BCr_Kraftwagen_und_sonstige_mehrspurige_Kraftfahrzeuge%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_251_-_Verbot_für_Kraftwagen_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg',
 			sourceUrl:
@@ -302,8 +278,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/9/9a/Zeichen_253_-_Verbot_f%C3%BCr_Kraftfahrzeuge_mit_einem_zul%C3%A4ssigen_Gesamtgewicht%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_253_-_Verbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht,_StVO_1992.svg',
 			sourceUrl:
@@ -322,8 +296,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/b/b0/Zeichen_254_-_Verbot_f%C3%BCr_Radfahrer%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_254_-_Verbot_für_Radfahrer,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_254_-_Verbot_f%C3%BCr_Radfahrer,_StVO_1992.svg',
@@ -340,8 +312,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionKeys: ['motorcycle', 'moped', 'mofa'],
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/a/ae/Zeichen_255_-_Verbot_f%C3%BCr_Kraftr%C3%A4der%2C_auch_mit_Beiwagen%2C_Kleinkraftr%C3%A4der_und_Mofas%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_255_-_Verbot_für_Krafträder,_auch_mit_Beiwagen,_Kleinkrafträder_und_Mofas,_StVO_1992.svg',
 			sourceUrl:
@@ -359,8 +329,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionKeys: ['mofa'],
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/3/3f/Zeichen_256_-_Verbot_f%C3%BCr_Mofas%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_256_-_Verbot_für_Mofas,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_256_-_Verbot_f%C3%BCr_Mofas,_StVO_1992.svg',
@@ -377,8 +345,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionKeys: ['horse'],
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/e/ea/Zeichen_257-51_-_Verbot_f%C3%BCr_Reiter%2C_StVO_2017.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_257-51_-_Verbot_für_Reiter,_StVO_2017.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_257-51_-_Verbot_f%C3%BCr_Reiter,_StVO_2017.svg',
@@ -395,8 +361,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionKeys: ['bus', 'tourist_bus'],
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/f/fe/Zeichen_257-54_-_Verbot_f%C3%BCr_Kraftomnibusse%2C_StVO_2017.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_257-54_-_Verbot_für_Kraftomnibusse,_StVO_2017.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_257-54_-_Verbot_f%C3%BCr_Kraftomnibusse,_StVO_2017.svg',
@@ -413,8 +377,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionKeys: ['foot'],
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/f/f6/Zeichen_259_-_Verbot_f%C3%BCr_Fu%C3%9Fg%C3%A4nger%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_259_-_Verbot_für_Fußgänger,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_259_-_Verbot_f%C3%BCr_Fu%C3%9Fg%C3%A4nger,_StVO_1992.svg',
@@ -431,8 +393,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionKeys: ['hazmat'],
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/5/5d/Zeichen_261_-_Verbot_f%C3%BCr_kennzeichnungspflichtige_Kraftfahrzeuge_mit_gef%C3%A4hrlichen_G%C3%BCtern%2C_StVO_1988.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_261_-_Verbot_für_kennzeichnungspflichtige_Kraftfahrzeuge_mit_gefährlichen_Gütern,_StVO_1988.svg',
 			sourceUrl:
@@ -457,8 +417,6 @@ export const trafficSigns: TrafficSign[] = [
 		impliedKey: 'conditional',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/8/8e/Zeichen_262_-_Verbot_f%C3%BCr_Fahrzeuge_deren_tats%C3%A4chliches_Gewicht_eine_gewisse_Grenze_%C3%BCberschreitet_%28600x600%29%3B_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_262_-_Verbot_für_Fahrzeuge_deren_tatsächliches_Gewicht_eine_gewisse_Grenze_überschreitet_(600x600);_StVO_1992.svg',
 			sourceUrl:
@@ -483,8 +441,6 @@ export const trafficSigns: TrafficSign[] = [
 		impliedKey: 'conditional',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/a/ad/Zeichen_263_-_Verbot_f%C3%BCr_Fahrzeuge_%C3%BCber_angegebene_tats%C3%A4chliche_Achslast%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_263_-_Verbot_für_Fahrzeuge_über_angegebene_tatsächliche_Achslast,_StVO_1992.svg',
 			sourceUrl:
@@ -509,8 +465,6 @@ export const trafficSigns: TrafficSign[] = [
 		impliedKey: 'conditional',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/b/b3/Zeichen_264_-_Verbot_f%C3%BCr_Fahrzeuge_%C3%BCber_angegebene_Breite_einschlie%C3%9Flich_Ladung%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_264_-_Verbot_für_Fahrzeuge_über_angegebene_Breite_einschließlich_Ladung,_StVO_1992.svg',
 			sourceUrl:
@@ -535,8 +489,6 @@ export const trafficSigns: TrafficSign[] = [
 		impliedKey: 'conditional',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/a/a7/Zeichen_265_-_Verbot_f%C3%BCr_Fahrzeuge%2C_deren_tats%C3%A4chliche_H%C3%B6he_einschlie%C3%9Flich_Ladung_eine_bestimmte_Grenze_%C3%BCberschreitet_%28600x600%29%3B_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_265_-_Verbot_für_Fahrzeuge,_deren_tatsächliche_Höhe_einschließlich_Ladung_eine_bestimmte_Grenze_überschreitet_(600x600);_StVO_1992.svg',
 			sourceUrl:
@@ -561,8 +513,6 @@ export const trafficSigns: TrafficSign[] = [
 		impliedKey: 'conditional',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/0/08/Zeichen_266_-_Verbot_f%C3%BCr_Fahrzeuge_und_Z%C3%BCge_%C3%BCber_angegebene_L%C3%A4nge_einschlie%C3%9Flich_Ladung%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_266_-_Verbot_für_Fahrzeuge_und_Züge_über_angegebene_Länge_einschließlich_Ladung,_StVO_1992.svg',
 			sourceUrl:
@@ -580,8 +530,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionKeys: ['hazmat:water'],
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/c/cc/Zeichen_269_-_Verbot_f%C3%BCr_Fahrzeuge_mit_wassergef%C3%A4hrdender_Ladung%2C_StVO_1988.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_269_-_Verbot_für_Fahrzeuge_mit_wassergefährdender_Ladung,_StVO_1988.svg',
 			sourceUrl:
@@ -637,8 +585,6 @@ export const trafficSigns: TrafficSign[] = [
 			'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking=forward/backward] entsprechend der Wegrichtung.',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/5/5e/Zeichen_276_-_%C3%9Cberholverbot_f%C3%BCr_Kraftfahrzeuge_aller_Art%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_276_-_Überholverbot_für_Kraftfahrzeuge_aller_Art,_StVO_1992.svg',
 			sourceUrl:
@@ -660,8 +606,6 @@ export const trafficSigns: TrafficSign[] = [
 			'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking:hgv=forward/backward] entsprechend der Wegrichtung.',
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/a/ad/Zeichen_277_-_%C3%9Cberholverbot_f%C3%BCr_Kraftfahrzeuge_mit_einem_zul%C3%A4ssigen_Gesamtgewicht_%C3%BCber_2%2C8_t%2C_einschlie%C3%9Flich_ihrer_Anh%C3%A4nger%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zeichen_277_-_Überholverbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_2,8_t,_einschließlich_ihrer_Anhänger,_StVO_1992.svg',
 			sourceUrl:
@@ -681,8 +625,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/e/e3/Zeichen_354_-_Wasserschutzgebiet%2C_StVO_1988.svg',
 			svgPath: '/trafficSignsSvgs/Zeichen_354_-_Wasserschutzgebiet,_StVO_1988.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zeichen_354_-_Wasserschutzgebiet,_StVO_1988.svg',
@@ -702,8 +644,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/8/83/Zusatzzeichen_1020-12_-_Radfahrer_und_Anlieger_frei_%28450x600%29%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1020-12_-_Radfahrer_und_Anlieger_frei_(450x600),_StVO_1992.svg',
 			sourceUrl:
@@ -727,8 +667,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/c/c1/Zusatzzeichen_1020-30_-_Anlieger_frei_%28600x330%29%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1020-30_-_Anlieger_frei_(600x330),_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1020-30_-_Anlieger_frei_(600x330),_StVO_1992.svg',
@@ -748,8 +686,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/0/04/Zusatzzeichen_1022-10_-_Radfahrer_frei%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1022-10_-_Radfahrer_frei,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1022-10_-_Radfahrer_frei,_StVO_1992.svg',
@@ -764,8 +700,6 @@ export const trafficSigns: TrafficSign[] = [
 		descriptiveName: 'Mofas frei',
 		description: null,
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/5/55/Zusatzzeichen_1022-11_-_Mofas_frei_%28600x450%29%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1022-11_-_Mofas_frei_(600x450),_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1022-11_-_Mofas_frei_(600x450),_StVO_1992.svg',
@@ -790,8 +724,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/e/ec/Zusatzzeichen_1022-12_-_Kraftr%C3%A4der_auch_mit_Beiwagen%2C_Kleinkraftr%C3%A4der_und_Mofas_frei_%28600x450%29%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1022-12_-_Krafträder_auch_mit_Beiwagen,_Kleinkrafträder_und_Mofas_frei_(600x450),_StVO_1992.svg',
 			sourceUrl:
@@ -813,8 +745,6 @@ export const trafficSigns: TrafficSign[] = [
 			'Zeichen 1024-10 (PKW frei) stimmt eigentlich nicht mit [Tag:motorcar=yes] überein, was sonst für "Kraftwagen und sonstige mehrspurige Kraftfahrzeuge" (inkl. LKW, Bus) genutzt wird. Zur Zeit gibt es aber noch keine bessere Alternative.',
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/a/ae/Zusatzzeichen_1024-10_-_Personenkraftwagen_frei%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1024-10_-_Personenkraftwagen_frei,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1024-10_-_Personenkraftwagen_frei,_StVO_1992.svg',
@@ -833,8 +763,6 @@ export const trafficSigns: TrafficSign[] = [
 		value: 'yes',
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/0/03/Zusatzzeichen_1024-12_-_Kraftfahrzeuge_mit_einem_zul%C3%A4ssigen_Gesamtgewicht_%C3%BCber_3%2C5_t%2C_einschlie%C3%9Flich_ihrer_Anh%C3%A4nger_und_Zugmaschinen%2C_ausgenommen_Personenkraftwagen_und_Kraftomnibusse_frei%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1024-12_-_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_3,5_t,_einschließlich_ihrer_Anhänger_und_Zugmaschinen,_ausgenommen_Personenkraftwagen_und_Kraftomnibusse_frei,_StVO_1992.svg',
 			sourceUrl:
@@ -855,8 +783,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/9/96/Zusatzzeichen_1024-14_-_Kraftomnibusse_frei%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1024-14_-_Kraftomnibusse_frei,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1024-14_-_Kraftomnibusse_frei,_StVO_1992.svg',
@@ -883,8 +809,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/1/12/Zusatzzeichen_1024-17_-_Kraftfahrzeuge_und_Z%C3%BCge%2C_die_nicht_schneller_als_25_km-h_fahren_k%C3%B6nnen_oder_d%C3%BCrfen%2C_frei%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1024-17_-_Kraftfahrzeuge_und_Züge,_die_nicht_schneller_als_25_km-h_fahren_können_oder_dürfen,_frei,_StVO_1992.svg',
 			sourceUrl:
@@ -904,8 +828,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/4/43/Zusatzzeichen_1026-30_-_Taxi_frei%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1026-30_-_Taxi_frei,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-30_-_Taxi_frei,_StVO_1992.svg',
@@ -924,8 +846,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/1/14/Zusatzzeichen_1026-32_-_Linienverkehr_frei_%28450x600%29%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1026-32_-_Linienverkehr_frei_(450x600),_StVO_1992.svg',
 			sourceUrl:
@@ -943,8 +863,6 @@ export const trafficSigns: TrafficSign[] = [
 		restrictionValue: 'delivery',
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/e/e6/Zusatzzeichen_1026-35_-_Lieferverkehr_frei%2C_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1026-35_-_Lieferverkehr_frei,_StVO_1992.svg',
 			sourceUrl:
 				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-35_-_Lieferverkehr_frei,_StVO_1992.svg',
@@ -968,8 +886,6 @@ export const trafficSigns: TrafficSign[] = [
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/4/41/Zusatzzeichen_1026-36_-_Landwirtschaftlicher_Verkehr_frei_%28450x600%29%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1026-36_-_Landwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg',
 			sourceUrl:
@@ -1017,8 +933,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/d/d6/Zusatzzeichen_1026-37_-_Forstwirtschaftlicher_Verkehr_frei%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1026-37_-_Forstwirtschaftlicher_Verkehr_frei,_StVO_1992.svg',
 			sourceUrl:
@@ -1042,8 +956,6 @@ export const trafficSigns: TrafficSign[] = [
 		},
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://upload.wikimedia.org/wikipedia/commons/6/6b/Zusatzzeichen_1026-38_-_Land-_und_forstwirtschaftlicher_Verkehr_frei_%28450x600%29%2C_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1026-38_-_Land-_und_forstwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg',
 			sourceUrl:
@@ -1210,8 +1122,6 @@ export const trafficSigns: TrafficSign[] = [
 		value: undefined,
 		category: 'modifier_sign',
 		image: {
-			svgSourceUrl:
-				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1012-31_-_Ende_(600x330),_StVO_1992.svg',
 			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1012-31_-_Ende_(600x330),_StVO_1992.svg',
 			sourceUrl:
 				'https://upload.wikimedia.org/wikipedia/commons/2/25/Zusatzzeichen_1012-31_-_Ende_%28600x330%29%2C_StVO_1992.svg',
@@ -1232,8 +1142,6 @@ export const trafficSigns: TrafficSign[] = [
 			oneway: 'no'
 		},
 		image: {
-			svgSourceUrl:
-				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
 			sourceUrl:
@@ -1255,8 +1163,6 @@ export const trafficSigns: TrafficSign[] = [
 			oneway: 'no'
 		},
 		image: {
-			svgSourceUrl:
-				'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1000-31_-_beide_Richtungen,_zwei_gegengerichtete_senkrechte_Pfeile,_StVO_1992.svg',
 			svgPath:
 				'/trafficSignsSvgs/Zusatzzeichen_1000-31_-_beide_Richtungen,_zwei_gegengerichtete_senkrechte_Pfeile,_StVO_1992.svg',
 			sourceUrl:
