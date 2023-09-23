@@ -92,7 +92,7 @@ export const trafficSigns: TrafficSign[] = [
 			segregated: 'no'
 		},
 		tagsComment:
-			'Manchmal wird auch [highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
+			'Manchmal wird auch [Tag:highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
 		mostUsed: true,
 		category: 'traffic_sign'
 	},
@@ -111,7 +111,7 @@ export const trafficSigns: TrafficSign[] = [
 			segregated: 'yes'
 		},
 		tagsComment:
-			'Manchmal wird auch [highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
+			'Manchmal wird auch [Tag:highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
@@ -138,7 +138,7 @@ export const trafficSigns: TrafficSign[] = [
 			segregated: 'yes'
 		},
 		tagsComment:
-			'Manchmal wird auch [highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
+			'Manchmal wird auch [Tag:highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
 		mostUsed: true,
 		category: 'traffic_sign',
 		image: {
@@ -186,7 +186,7 @@ export const trafficSigns: TrafficSign[] = [
 			'source:maxspeed': 'DE:bicycle_road'
 		},
 		tagsComment:
-			'Je nach Art der Straße überlicherweise [highway=residential], <code>path</code> oder <code>service</code>.',
+			'Je nach Art der Straße überlicherweise [Tag:highway=residential] oder [Tag:highway=cycleway].',
 		category: 'traffic_sign',
 		image: {
 			svgSourceUrl:
@@ -614,6 +614,8 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		key: 'minspeed',
 		osmTags: { 'source:minspeed': 'sign' },
+		tagsComment:
+			'Dieses Verkehrszeichen wird nur außerhalb geschlossener Ortschaften fahrstreifenbezogen, niemals aber auf dem rechten von mehreren Fahrstreifen, angeordnet. Die Geschwindigkeit pro Fahrstreifen wird bspw. mit `minspeed:lanes=80|50|` (siehe [Key:minspeed]) angegeben.',
 		valuePrompt: {
 			prompt: 'Geschwindigkeit in km/h ohne Einheit',
 			defaultValue: '30',
@@ -632,7 +634,7 @@ export const trafficSigns: TrafficSign[] = [
 			overtaking: 'no'
 		},
 		tagsComment:
-			'Wenn Überholen in eine Richtung erlaubt: [overtaking=forward/backward] entsprechend der Wegrichtung.',
+			'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking=forward/backward] entsprechend der Wegrichtung.',
 		category: 'traffic_sign',
 		image: {
 			svgSourceUrl:
@@ -655,7 +657,7 @@ export const trafficSigns: TrafficSign[] = [
 			'overtaking:hgv': 'no'
 		},
 		tagsComment:
-			'Wenn Überholen in eine Richtung erlaubt: [overtaking:hgv=forward/backward] entsprechend der Wegrichtung.',
+			'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking:hgv=forward/backward] entsprechend der Wegrichtung.',
 		category: 'traffic_sign',
 		image: {
 			svgSourceUrl:
@@ -721,7 +723,7 @@ export const trafficSigns: TrafficSign[] = [
 			requiredKey: 'highway'
 		},
 		tagsComment:
-			'Aufgrund von "Anlieger frei" eventuell als [highway=residential] oder <code>service</code> einzustufen.',
+			'Aufgrund von "Anlieger frei" eventuell als [Tag:highway=residential] oder <code>service</code> einzustufen.',
 		mostUsed: true,
 		category: 'modifier_sign',
 		image: {
@@ -808,7 +810,7 @@ export const trafficSigns: TrafficSign[] = [
 			motorcar: 'yes'
 		},
 		tagsComment:
-			'Zeichen 1024-10 (PKW frei) stimmt eigentlich nicht mit [motorcar=yes] überein, was sonst für "Kraftwagen und sonstige mehrspurige Kraftfahrzeuge" (inkl. LKW, Bus) genutzt wird. Zur Zeit gibt es aber noch keine bessere Alternative.',
+			'Zeichen 1024-10 (PKW frei) stimmt eigentlich nicht mit [Tag:motorcar=yes] überein, was sonst für "Kraftwagen und sonstige mehrspurige Kraftfahrzeuge" (inkl. LKW, Bus) genutzt wird. Zur Zeit gibt es aber noch keine bessere Alternative.',
 		category: 'modifier_sign',
 		image: {
 			svgSourceUrl:
@@ -872,7 +874,8 @@ export const trafficSigns: TrafficSign[] = [
 		osmTags: {
 			agricultural: 'yes'
 		},
-		tagsComment: 'Aufgrund von Zusatzzeichen 1024-17 eventuell als [highway=track] einzustufen.',
+		tagsComment:
+			'Aufgrund von Zusatzzeichen 1024-17 eventuell als [Tag:highway=track] einzustufen.',
 		validations: {
 			requiredKey: 'highway',
 			shouldBeHighwayValue: 'track'
@@ -957,7 +960,7 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		restrictionValue: 'agricultural',
 		tagsComment:
-			'Aufgrund von "Landwirtschaftlicher Verkehr frei" eventuell als [highway=track] einzustufen.',
+			'Aufgrund von "Landwirtschaftlicher Verkehr frei" eventuell als [Tag:highway=track] einzustufen.',
 		validations: {
 			requiredKey: 'highway',
 			shouldBeHighwayValue: 'track'
@@ -1007,7 +1010,7 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		restrictionValue: 'forestry',
 		tagsComment:
-			'Aufgrund von "Forstwirtschaftlicher Verkehr frei" eventuell als [highway=track] einzustufen.',
+			'Aufgrund von "Forstwirtschaftlicher Verkehr frei" eventuell als [Tag:highway=track] einzustufen.',
 		validations: {
 			requiredKey: 'highway',
 			shouldBeHighwayValue: 'track'
@@ -1032,7 +1035,7 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		restrictionValue: 'agricultural;forestry',
 		tagsComment:
-			'Aufgrund von "Land- und forstwirtschaftlicher Verkehr frei" eventuell als [highway=track] einzustufen.',
+			'Aufgrund von "Land- und forstwirtschaftlicher Verkehr frei" eventuell als [Tag:highway=track] einzustufen.',
 		validations: {
 			requiredKey: 'highway',
 			shouldBeHighwayValue: 'track'
