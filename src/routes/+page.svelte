@@ -13,7 +13,6 @@
 	import Tag from '@/components/wiki/Tag.svelte'
 	import WikiLinkify from '@/components/wiki/WikiLinkify.svelte'
 	import { alternativeKeyFormats } from '@/data/alternativeKeyFormats'
-	import { trafficSigns } from '@/data/trafficSigns'
 	import type { TrafficSign } from '@/data/types'
 	import { signStore } from '@/stores/signStore'
 	import { IconCopy } from '@tabler/icons-svelte'
@@ -64,6 +63,9 @@
 	let copyTrafficSignTag: string | undefined = undefined
 	let copyAllTags: string | undefined = undefined
 	let trafficSignTag: string[] | undefined = undefined
+	// Debug helper:
+	let validKeys: string[] | undefined = undefined
+	let unrecognizedKeys: string[] | undefined = undefined
 
 	urlSignKeys.subscribe(() => {
 		// Sign store: Update whenever URL changes
@@ -77,6 +79,9 @@
 		copyTrafficSignTag = aggregatedTags.find(([key]) => key === 'traffic_sign')?.join('=')
 		copyAllTags = aggregatedTags.map(([key, value]) => `${key}=${value}`).join('\n')
 		trafficSignTag = copyTrafficSignTag?.split('=')
+		// Debug helper: Update
+		validKeys = $signStore.map((value) => value.urlKey)
+		unrecognizedKeys = $urlSignKeys?.filter((key) => !validKeys?.includes(key))
 	})
 
 	function updateUrlSignKey(urlKey: string) {
@@ -116,10 +121,6 @@
 	const signsCatModifierRestrictions = $signStore.filter(
 		(sign) => sign.category === 'modifier_sign_restriction'
 	)
-
-	// Debug helper output:
-	const validKeys = Object.values(trafficSigns).map((value) => value.urlKey)
-	const unrecognizedKeys = $urlSignKeys?.filter((key) => !validKeys.includes(key))
 </script>
 
 {#if $urlSignKeys && unrecognizedKeys?.length}
