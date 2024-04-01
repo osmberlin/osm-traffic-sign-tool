@@ -1364,5 +1364,43 @@ export const trafficSigns: TrafficSign[] = [
 				'https://de.wikipedia.org/wiki/Datei:Zeichen_299_-_Grenzmarkierung_f%C3%BCr_Halt-_und_Parkverbote,_StVO_1992.svg',
 			licence: 'Public Domain'
 		}
+	},
+	{
+		urlKey: 'DE:220-10',
+		signKey: 'DE:220-10',
+		signValue: undefined,
+		name: 'Zeichen DE:220-10',
+		descriptiveName: 'Einbahnstraße – linksweisend',
+		description: null,
+		value: undefined,
+		category: 'traffic_sign',
+		osmTags: {
+			oneway: 'yes'
+		},
+		image: {
+			svgPath: '/trafficSignsSvgs/Zeichen_220-10_-_Einbahnstraße,_linksweisend,_StVO_2017.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zeichen_220-10_-_Einbahnstra%C3%9Fe,_linksweisend,_StVO_2017.svg',
+			licence: 'Public Domain'
+		}
+	},
+	{
+		urlKey: 'DE:220-20',
+		signKey: 'DE:220-20',
+		signValue: undefined,
+		name: 'Zeichen DE:220-20',
+		descriptiveName: 'Einbahnstraße – rechtsweisend',
+		description: null,
+		value: undefined,
+		category: 'traffic_sign',
+		osmTags: {
+			oneway: 'yes'
+		},
+		image: {
+			svgPath: '/trafficSignsSvgs/Zeichen_220-20_-_Einbahnstraße,_rechtsweisend,_StVO_2017.svg',
+			sourceUrl:
+				'https://wiki.openstreetmap.org/wiki/File:Zeichen_220-20_-_Einbahnstra%C3%9Fe,_rechtsweisend,_StVO_2017.svg',
+			licence: 'Public Domain'
+		}
 	}
 ]
