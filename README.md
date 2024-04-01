@@ -5,11 +5,9 @@
 
 https://trafficsigns.osm-verkehrswende.org
 
-## Beta version & Roadmap
-
-Have a look at the github projects board and github issues for a roadmap.
-
-This project is in beta stage. The main goal is to provide modern version of https://osmtools.de/traffic_signs/. The first focus will be on German traffic signs. Follow up milestones might include an NPM package so other apps can rely on the data and a refactoring to support other countries. But first, there are quite a few features for the original app that are still missing.
+> [!IMPORTANT]
+> **I consider this project "as is" and dormant for now**.
+> Please read the **["Status of this project" issue](https://github.com/osmberlin/osm-traffic-sign-tool/issues/40)** to learn more …
 
 ## Development
 
