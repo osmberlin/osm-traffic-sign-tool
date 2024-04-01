@@ -47,7 +47,7 @@ export const trafficSigns: TrafficSign[] = [
 		signKey: 'DE:239',
 		signValue: undefined,
 		name: 'Zeichen 239',
-		descriptiveName: 'Fußgäger',
+		descriptiveName: 'Fußgänger',
 		description: null,
 		osmTags: {
 			highway: 'footway',
@@ -143,7 +143,7 @@ export const trafficSigns: TrafficSign[] = [
 		signKey: 'DE:242.1',
 		signValue: undefined,
 		name: 'Zeichen 242',
-		descriptiveName: 'Fußgägerbereich',
+		descriptiveName: 'Fußgängerbereich',
 		description: null,
 		impliedKey: 'access',
 		osmTags: {
@@ -382,7 +382,7 @@ export const trafficSigns: TrafficSign[] = [
 		signKey: 'DE:259',
 		signValue: undefined,
 		name: 'Zeichen 259',
-		descriptiveName: 'Verbot für Fußgäger',
+		descriptiveName: 'Verbot für Fußgänger',
 		description: null,
 		restrictionKeys: ['foot'],
 		category: 'traffic_sign',

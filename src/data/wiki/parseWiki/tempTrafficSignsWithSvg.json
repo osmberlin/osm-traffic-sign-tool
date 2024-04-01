@@ -39,7 +39,7 @@
 	"DE:239": {
 		"urlString": "DE:239",
 		"name": "Zeichen 239",
-		"descriptiveName": "Fußgäger",
+		"descriptiveName": "Fußgänger",
 		"description": null,
 		"osmTags": {
 			"highway": "footway",
@@ -127,7 +127,7 @@
 	"DE:242": {
 		"urlString": "DE:242.1",
 		"name": "Zeichen 242",
-		"descriptiveName": "Fußgägerbereich",
+		"descriptiveName": "Fußgängerbereich",
 		"description": null,
 		"impliedKey": "access",
 		"osmTags": {
@@ -324,7 +324,7 @@
 	"DE:259": {
 		"urlString": "DE:259",
 		"name": "Zeichen 259",
-		"descriptiveName": "Verbot für Fußgäger",
+		"descriptiveName": "Verbot für Fußgänger",
 		"description": null,
 		"restrictionKeys": ["foot"],
 		"category": "traffic_sign",
