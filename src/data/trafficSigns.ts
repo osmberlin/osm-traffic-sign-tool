@@ -170,7 +170,8 @@ export const trafficSigns: TrafficSign[] = [
 			highway: ['residential', 'cycleway'],
 			bicycle_road: 'yes',
 			maxspeed: '30', // TODO Tagging: I remember to not tag `maxspeed` as a value but as a category
-			'source:maxspeed': 'DE:bicycle_road'
+			'source:maxspeed': 'DE:bicycle_road',
+			bicycle: 'designated'
 		},
 		tagsComment:
 			'Je nach Art der Straße überlicherweise [Tag:highway=residential] oder [Tag:highway=cycleway].',
