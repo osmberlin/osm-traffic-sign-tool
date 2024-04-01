@@ -167,6 +167,7 @@ export const trafficSigns: TrafficSign[] = [
 		description: null,
 		restrictionKeys: ['vehicle'],
 		osmTags: {
+			highway: ['residential', 'cycleway'],
 			bicycle_road: 'yes',
 			maxspeed: '30', // TODO Tagging: I remember to not tag `maxspeed` as a value but as a category
 			'source:maxspeed': 'DE:bicycle_road'
@@ -1248,7 +1249,6 @@ export const trafficSigns: TrafficSign[] = [
 		value: undefined,
 		category: 'modifier_sign',
 		osmTags: {
-			highway: ['path', 'cycleway'],
 			oneway: 'no'
 		},
 		image: {
