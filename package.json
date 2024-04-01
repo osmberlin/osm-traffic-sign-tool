@@ -23,6 +23,8 @@
 		"data:wiki:downloadSvgs": "vite-node ./src/data/wiki/downloadSvgs/downloadSvgs.ts",
 		"data:wiki:applyParsedWiki": "vite-node ./src/data/wiki/parseWiki/applyParsedWiki.ts && prettier ./src/data/ --write",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh",
+		"updatePackages": "npx taze major --write",
+		"updatePackages:minor": "npx taze minor --write",
 		"prepare": "husky install"
 	},
 	"devDependencies": {
