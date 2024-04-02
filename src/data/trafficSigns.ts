@@ -631,9 +631,9 @@ export const trafficSigns: TrafficSign[] = [
 			'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking:hgv=forward/backward] entsprechend der Wegrichtung.',
 		category: 'traffic_sign',
 		image: {
-			svgPath: '/trafficSignsSvgs/Zusatzzeichen_1060-33_-_Massenangabe_-_2,8_t,_StVO_2017.svg',
+			svgPath: '/trafficSignsSvgs/File:Zeichen_277_-_Überholverbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_2,8_t,_einschließlich_ihrer_Anhänger,_StVO_1992.svg',
 			sourceUrl:
-				'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1060-33_-_Massenangabe_-_2,8_t,_StVO_2017.svg',
+				'https://wiki.openstreetmap.org/wiki/File:Zeichen_277_-_Überholverbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_2,8_t,_einschließlich_ihrer_Anhänger,_StVO_1992.svg',
 			licence: 'Public Domain'
 		}
 	},
