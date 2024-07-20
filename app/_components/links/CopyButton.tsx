@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+'use client'
+import { useState } from 'react'
 import { buttonStyle, buttonStyleSecondary } from './buttonStyles'
 
 // Inspired by https://usehooks-ts.com/react-hook/use-copy-to-clipboard
