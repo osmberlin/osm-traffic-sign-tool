@@ -1,4 +1,4 @@
-import { Prettify } from '@/components/typeUtils'
+import { Prettify } from '@/app/_components/types/types'
 
 export type TrafficSigns = {
   [key: string]: TrafficSign

@@ -1,14 +1,17 @@
+import { TrafficSign } from '@/data/types'
+import { CheckCircleIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
+import Image from 'next/image'
 import { useState } from 'react'
 
-type TrafficSign = {
-  urlKey: string
-  name: string
-  descriptiveName: string
-  image?: {
-    svgPath: string
-  }
-}
+// type TrafficSign = {
+//   urlKey: string
+//   name: string
+//   descriptiveName: string
+//   image?: {
+//     svgPath: string
+//   }
+// }
 
 type Props = {
   active: boolean
@@ -40,15 +43,11 @@ export const Sign = ({ active, toggleSelection, sign }: Props) => {
               : 'text-white/0 transition-colors group-hover/item:text-stone-900',
           )}
         >
-          {active ? (
-            <IconCircleCheck className="h-6 w-6" />
-          ) : (
-            <IconCirclePlus className="h-6 w-6" />
-          )}
+          {active ? <CheckCircleIcon className="size-6" /> : <PlusCircleIcon className="size-6" />}
         </span>
 
         {sign?.image?.svgPath && (
-          <img src={sign.image.svgPath} alt={sign.name} className="h-auto max-h-28 w-full" />
+          <Image src={sign.image.svgPath} alt={sign.name} className="h-auto max-h-28 w-full" />
         )}
       </button>
     </div>
