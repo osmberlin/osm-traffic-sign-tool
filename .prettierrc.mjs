@@ -7,6 +7,7 @@ const prettierConfig = {
   printWidth: 100,
   plugins: ['prettier-plugin-organize-imports', 'prettier-plugin-tailwindcss'],
   tailwindFunctions: ['clsx'],
+  tailwindAttributes: ['className', 'class'],
 }
 
 export default prettierConfig
