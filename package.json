@@ -11,6 +11,9 @@
     "lint": "next lint",
     "format": "prettier . --write",
     "check": "npm run type-check && npm run format && npm run lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "updatePackages:major": "npx taze major --write && npm install",
     "updatePackages:minor": "npx taze minor --write && npm install",
     "prepare": "husky"
@@ -29,19 +32,23 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.0.0",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.14.11",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-compiler": "^0.0.0-experimental-51a85ea-20240601",
     "husky": "^9.1.1",
+    "jsdom": "^24.1.0",
     "postcss": "^8.4.39",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.6",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.3"
   }
 }
