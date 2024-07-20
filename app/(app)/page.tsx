@@ -1,3 +1,4 @@
+import { TrafficSign } from '@/data/types'
 import { ClipboardDocumentCheckIcon } from '@heroicons/react/20/solid'
 import { StateHelper } from '../_components/layout/StateHelper'
 import { CopyButton } from '../_components/links/CopyButton'
@@ -8,15 +9,15 @@ type Props = {
   aggregatedTags: [string, string][]
   copyAllTags: string
   aggregatedComments: [string, string, string][]
-  selectedSigns: any
+  selectedSigns: TrafficSign[]
 }
 
-export default function App({
-  aggregatedTags,
-  copyAllTags,
-  aggregatedComments,
-  selectedSigns,
-}: Props) {
+export default function App() {
+  const aggregatedTags: [string, string][] = []
+  const copyAllTags = ''
+  const aggregatedComments: [string, string, string][] = []
+  const selectedSigns = {}
+
   return (
     <main>
       <section>

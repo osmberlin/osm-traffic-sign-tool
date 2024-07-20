@@ -1,3 +1,4 @@
+import { TrafficSign } from '@/data/types'
 import { useState } from 'react'
 import { Sign } from './Sign'
 

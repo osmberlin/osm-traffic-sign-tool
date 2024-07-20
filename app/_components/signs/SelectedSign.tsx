@@ -1,3 +1,6 @@
+import { CheckCircleIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
+import { buildUrlKey } from './utils/urlKey/buildUrlKey'
 import { splitUrlKey } from './utils/urlKey/splitUrlKey'
 
 type TrafficSign = {
@@ -41,12 +44,12 @@ export const SelectedSign = ({ toggleUrlSignKey, updateUrlSignKey, sign }: Props
         className="group/item relative mx-2 space-y-2 rounded border border-transparent px-3 leading-tight hover:border-stone-200 hover:bg-stone-200"
       >
         <div className="absolute -right-1 -top-1 rounded-full text-stone-300/0 group-hover/item:text-stone-700">
-          <IconCircleCheck className="h-6 w-6" />
+          <CheckCircleIcon className="size-6" />
         </div>
 
         <div className="relative">
           {sign?.image?.svgPath && (
-            <img src={sign.image.svgPath} alt={sign.name} className="h-auto max-h-28 w-full" />
+            <Image src={sign.image.svgPath} alt={sign.name} className="h-auto max-h-28 w-full" />
           )}
 
           {'valuePrompt' in sign && sign.signValue !== sign.valuePrompt?.defaultValue && (
