@@ -1,17 +1,18 @@
+'use client'
+import { useParamSigns } from '@/app/_store/useParamSigns.nuqs'
 import { TrafficSign } from '@/data/types'
 import { useState } from 'react'
 import { Sign } from './Sign'
 
 type Props = {
   defaultOpen?: boolean
-  attributes: string[] | null
-  toggleSelection: (signId: string) => void
   headline: string
   signs: TrafficSign[]
 }
 
-const SignGrid = ({ defaultOpen = true, attributes, toggleSelection, headline, signs }: Props) => {
+export const SignGrid = ({ defaultOpen = true, headline, signs }: Props) => {
   const [isOpen, setIsOpen] = useState(defaultOpen)
+  const { paramSigns } = useParamSigns()
 
   return (
     <details open={isOpen} className="group/details mb-8">
@@ -25,16 +26,9 @@ const SignGrid = ({ defaultOpen = true, attributes, toggleSelection, headline, s
       </summary>
       <div className="flex flex-wrap gap-4">
         {signs.map((sign) => (
-          <Sign
-            key={sign.urlKey}
-            sign={sign}
-            toggleSelection={toggleSelection}
-            active={attributes?.includes(sign.urlKey) ?? false}
-          />
+          <Sign key={sign.urlKey} sign={sign} />
         ))}
       </div>
     </details>
   )
 }
-
-export default SignGrid
