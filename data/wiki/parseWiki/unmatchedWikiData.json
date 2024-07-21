@@ -1,1064 +1,1064 @@
 [
-	{
-		"sign": "DE:103-20",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Zeichen_103-20_-_Kurve_%28rechts%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_103-20_-_Kurve_(rechts),_StVO_1992.svg",
-		"name": "Kurve rechts",
-		"osmTags": ["hazard=curve"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:108[-10]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Zeichen_108-56_Gef%C3%A4lle%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_108-56_Gef%C3%A4lle,_StVO_1992.svg",
-		"name": "Gefälle 10 %",
-		"osmTags": ["incline=-10%"],
-		"comments": "analog bei Steigungen der Weg ist mit Key:incline zu versehen (Richtungspfeil zeigt Steigung an) nicht zu verwechseln mit dem Zeichen 108-10, dessen Unternummer dem angegebenen Zahlwert entspricht"
-	},
-	{
-		"sign": "DE:124",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Zeichen_124_-_Stau%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_124_-_Stau,_StVO_1992.svg",
-		"name": "Staugefahr",
-		"osmTags": ["hazard=queues_likely"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:123",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Zeichen_123_-_Baustelle%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_123_-_Baustelle,_StVO_1992.svg",
-		"name": "Arbeitsstelle",
-		"osmTags": ["highway=construction", "construction=value des ways", "z.B. primary"],
-		"comments": "Key:construction wird als (noch) nicht für den Verkehr nutzbar betrachtet und gestrichelt gerendert. Eine Baustelle, die den Verkehr nicht völlig blockiert, ist damit nicht gemeint."
-	},
-	{
-		"sign": "DE:131",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/45/Zeichen_131_-_Lichtzeichenanlage%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_131_-_Lichtzeichenanlage,_StVO_1970.svg",
-		"name": "Lichtzeichenanlage",
-		"osmTags": ["hazard=traffic_signals"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:133-10",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Zeichen_133-10_-_Fu%C3%9Fg%C3%A4nger_%28Aufstellung_rechts%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_133-10_-_Fu%C3%9Fg%C3%A4nger_(Aufstellung_rechts),_StVO_1992.svg",
-		"name": "Vorsicht, Fußgänger! – Aufstellung rechts",
-		"osmTags": ["hazard=pedestrians"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:136-10",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/Zeichen_136-10_-_Kinder%2C_Aufstellung_rechts%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_136-10_-_Kinder,_Aufstellung_rechts,_StVO_1992.svg",
-		"name": "Vorsicht, Kinder! – Aufstellung rechts",
-		"osmTags": ["hazard=children"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:138-10",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Zeichen_138-10_-_Radverkehr%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_138-10_-_Radverkehr,_StVO_2013.svg",
-		"name": "Radverkehr – Aufstellung rechts",
-		"osmTags": ["hazard=cyclists"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:142-10",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/Zeichen_142-10_-_Wildwechsel%2C_Aufstellung_rechts%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_142-10_-_Wildwechsel,_Aufstellung_rechts,_StVO_1992.svg",
-		"name": "Wildwechsel – Aufstellung rechts",
-		"osmTags": ["hazard=animal_crossing"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:201",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Zeichen_201_%E2%80%93_Andreaskreuz_%E2%80%93_Dem_Schienenverkehr_Vorrang_gew%C3%A4hren%21_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_201_%E2%80%93_Andreaskreuz_%E2%80%93_Dem_Schienenverkehr_Vorrang_gew%C3%A4hren!_StVO_1970.svg",
-		"name": "",
-		"osmTags": [
-			"railway=level_crossing",
-			"(bei Kreuzungen mit Straßen)",
-			"railway=crossing",
-			"(bei Übergängen für Fußgänger)"
-		],
-		"comments": "Key:crossing"
-	},
-	{
-		"sign": "DE:205",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Zeichen_205_-_Vorfahrt_gew%C3%A4hren%21_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg",
-		"name": "Vorfahrt gewähren",
-		"osmTags": ["highway=give_way"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:206",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Zeichen_206.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_206.svg",
-		"name": "Halt! Vorfahrt gewähren",
-		"osmTags": ["highway=stop"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:208",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/89/Zeichen_208_-_Dem_Gegenverkehr_Vorrang_gew%C3%A4hren%21_600x600%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_208_-_Dem_Gegenverkehr_Vorrang_gew%C3%A4hren!_600x600,_StVO_1992.svg",
-		"name": "Vorrang des Gegenverkehrs",
-		"osmTags": ["priority=backward", "(oder", "priority=forward)"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:209",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zeichen_209-20_-_Vorgeschriebene_Fahrtrichtung%2C_rechts%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_209-20_-_Vorgeschriebene_Fahrtrichtung,_rechts,_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["type=restriction", "restriction=no_turn…", "bzw.", "restriction=only_turn…"],
-		"comments": "nach diesem Schema analog für Gebote/Verbote für andere Richtungen"
-	},
-	{
-		"sign": "DE:215",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Zeichen_215_-_Kreisverkehr%2C_StVO_2000.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_215_-_Kreisverkehr,_StVO_2000.svg",
-		"name": "",
-		"osmTags": ["junction=roundabout", "highway=mini_roundabout"],
-		"comments": "oneway im Kreisverkehr wird automatisch angenommen mini_roundabouts (Kreisverkehre ohne bauliche Begrenzung in der Mitte) haben in Deutschland meist keine Beschilderung."
-	},
-	{
-		"sign": "DE:220-10",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/Zeichen_220-10_-_Einbahnstra%C3%9Fe%2C_linksweisend%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_220-10_-_Einbahnstra%C3%9Fe,_linksweisend,_StVO_2017.svg",
-		"name": "Einbahnstraße – linksweisend",
-		"osmTags": ["oneway=yes"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:220-20",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/94/Zeichen_220-20_-_Einbahnstra%C3%9Fe%2C_rechtsweisend%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_220-20_-_Einbahnstra%C3%9Fe,_rechtsweisend,_StVO_2017.svg",
-		"name": "Einbahnstraße – rechtsweisend",
-		"osmTags": ["oneway=yes"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:224",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Zeichen_224.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_224.svg",
-		"name": "Haltestelle",
-		"osmTags": [
-			"public_transport=stop_position",
-			"auf der Straße und",
-			"public_transport=platform",
-			"neben der Straße",
-			"amenity=bus_station",
-			"(Busbahnhof)",
-			"name=Name der Haltestelle"
-		],
-		"comments": "Buslinien sollten als Relation:route gekennzeichnet werden."
-	},
-	{
-		"sign": "DE:229",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/22/Zeichen_229_-_Taxenstand%2C_StVO_1994.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_229_-_Taxenstand,_StVO_1994.svg",
-		"name": "Taxenstand",
-		"osmTags": ["amenity=taxi"],
-		"comments": "Taxistand"
-	},
-	{
-		"sign": "DE:242.2",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Zeichen_242.2_-_Ende_einer_Fu%C3%9Fg%C3%A4ngerzone%2C_StVO_2009.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_242.2_-_Ende_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg",
-		"name": "Ende einer Fußgängerzone",
-		"osmTags": ["highway=pedestrian"],
-		"comments": "Wird für alle Straßen in der Zone eingetragen. Veraltete Zeichenkennung DE:243"
-	},
-	{
-		"sign": "DE:244.2",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Zeichen_244.2_-_Ende_einer_Fahrradstra%C3%9Fe%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_244.2_-_Ende_einer_Fahrradstra%C3%9Fe,_StVO_2013.svg",
-		"name": "Ende einer Fahrradstraße",
-		"osmTags": [
-			"highway=*",
-			"bicycle_road=yes",
-			"bicycle=designated",
-			"footway=sidewalk",
-			"maxspeed=30",
-			"(seit StVO-Novelle vom 1.9.2009)",
-			"motor_vehicle=destination",
-			"(Zusatzzeichen 1020-30)",
-			"motor_vehicle=yes"
-		],
-		"comments": "OSM-Cycleway impliziert: bicycle=designated + motor_vehicle=no) Veraltete Zeichenkennung DE:244a highway=* - Für den Wert spielt es keine Rolle, ob es sich um eine Fahrradstraße handelt oder nicht. Er wird so gewählt, wie es dem Ausbauzustand und der Verkehrsbedeutung der Straße am ehesten gerecht wird. highway=residential für Fahrradstraßen, die sich kaum von den umgebenen Straßen im Wohngebiet abheben, d.h. mit breiter Fahrbahn und (meistens) Gehweg. Ein Zusatzschild „Anlieger frei\" oder „KFZ frei\" ist ein gutes Indiz dafür, dass highway=residential geeignet ist. highway=path für Straßen, die von der Breite und Anlage eher einem gemeinsamen Fahrrad- und Fußweg entsprechen. Außerdem kann dies verwendet werden, wenn die Straße nicht von Kraftfahrzeugen befahren werden darf. Außerdem können highway=service vorkommen, oder es kann bei exklusiv für Fahrräder beschränkten Straßen highway=cycleway in Frage kommen. Siehe auch DE:Key:bicycle_road"
-	},
-	{
-		"sign": "DE:257-52",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Zeichen_257_-_Gespannfuhrwerke%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257_-_Gespannfuhrwerke,_StVO_1970.svg",
-		"name": "Verbot für Gespannfuhrwerke",
-		"osmTags": ["carriage=no"],
-		"comments": "ehemals Zeichen 257"
-	},
-	{
-		"sign": "DE:257-56",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Zeichen_257-56_-_Verbot_f%C3%BCr_Personenkraftwagen_mit_Anh%C3%A4nger%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257-56_-_Verbot_f%C3%BCr_Personenkraftwagen_mit_Anh%C3%A4nger,_StVO_2017.svg",
-		"name": "Verbot für Personenkraftwagen mit Anhänger",
-		"osmTags": ["trailer=no"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:257-58",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Zeichen_257-58_-_Verbot_f%C3%BCr_Kraftfahrzeuge_und_Z%C3%BCge%2C_die_nicht_schneller_als_25_km-h_fahren_k%C3%B6nnen_oder_d%C3%BCrfen%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257-58_-_Verbot_f%C3%BCr_Kraftfahrzeuge_und_Z%C3%BCge,_die_nicht_schneller_als_25_km-h_fahren_k%C3%B6nnen_oder_d%C3%BCrfen,_StVO_2017.svg",
-		"name": "Verbot für Kraftfahrzeuge und Züge, die nicht schneller als 25 km/h fahren\n\t\t\t\t\t\t\t\t\t\t\t\tkönnen oder dürfen",
-		"osmTags": ["agricultural=no"],
-		"comments": "Einführung 2017; Passendes Tagging sollte diskutiert werden!"
-	},
-	{
-		"sign": "DE:267",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zeichen_267_-_Verbot_der_Einfahrt%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg",
-		"name": "Verbot der Einfahrt",
-		"osmTags": ["oneway=yes"],
-		"comments": "Achtung bei sog. unechten Einbahnstraßen: In den Fällen, in denen dieses Zeichen die Einfahrt in eine Straße verbietet, die nicht Einbahnstraße ist – eine so genannte unechte Einbahnstraße – gibt es zwei Möglichkeiten: Bevorzugte Variante: Idealerweise sollte eine Restriction-Relation verwendet werden. Der Tag innerhalb der Relation ist dann in der Regel restriction=no_entry. Zu beachten ist gegebenenfalls auch der tag except=* an der Relation, um Ausnahmen (z.B. für Fahrradfahrer oder Linienverkehr) zu mappen. Oder es sollte ein kleines Wegstück mit \"oneway=yes\" eingezeichnet werden, die restliche Straße trägt dann kein \"oneway\"-Attribut."
-	},
-	{
-		"sign": "DE:270.1",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zeichen_270.1_-_Beginn_eines_Verkehrsverbots_zur_Verminderung_sch%C3%A4dlicher_Luftverunreinigungen_in_einer_Zone._I%2C_StVO_2007.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_270.1_-_Beginn_eines_Verkehrsverbots_zur_Verminderung_sch%C3%A4dlicher_Luftverunreinigungen_in_einer_Zone._I,_StVO_2007.svg",
-		"name": "",
-		"osmTags": ["type=LEZ"],
-		"comments": "Weitere Infos dazu bitte unter Umweltzone nachlesen. Wird nur in Kombination mit Zusatzzeichen 270.1 verwendet."
-	},
-	{
-		"sign": "DE:272",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Zeichen_272%2C_Verbot_des_Wendens%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_272,_Verbot_des_Wendens,_StVO_1992.svg",
-		"name": "Verbot des Wendens",
-		"osmTags": ["DE:Relation:restriction"],
-		"comments": ""
-	},
-	{
-		"sign": "DE:274-60traffic_sign",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/63/Zeichen_274-60_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274-60_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg",
-		"name": "Zulässige Höchst­geschwindigkeit",
-		"osmTags": ["maxspeed=*", "maxspeed:type=sign", "source:maxspeed=*"],
-		"comments": "Angabe der Höchstgeschwindigkeit in km/h. Falls für verschiedene Fahrtrichtungen unterschiedliche Höchstgeschwindigkeiten gelten, dann maxspeed:forward=* und maxspeed:backward=* nutzen. Siehe auch: Proposed features/maxspeed none, Proposed features/ref speed.  Seit 2017 entspricht die Unternummer dem angegebenen Zahlwert. Die Notwendigkeit eckiger Klammern als Schlüsselwerte zu benutzen entfällt, wird jedoch weiterhin alternativ angewendet. Zeichen DE:274-5 Zulässige Höchstgeschwindigkeit 5 km/h Zeichen DE:274-10 Zulässige Höchstgeschwindigkeit 10 km/h Zeichen DE:274-20 Zulässige Höchstgeschwindigkeit 20 km/h Zeichen DE:274-30 Zulässige Höchstgeschwindigkeit 30 km/h Zeichen DE:274-40 Zulässige Höchstgeschwindigkeit 40 km/h Zeichen DE:274-50 Zulässige Höchstgeschwindigkeit 50 km/h Zeichen DE:274-60 Zulässige Höchstgeschwindigkeit 60 km/h Zeichen DE:274-70 Zulässige Höchstgeschwindigkeit 70 km/h Zeichen DE:274-80 Zulässige Höchstgeschwindigkeit 80 km/h Zeichen DE:274-90 Zulässige Höchstgeschwindigkeit 90 km/h Zeichen DE:274-100 Zulässige Höchstgeschwindigkeit 100 km/h Zeichen DE:274-110 Zulässige Höchstgeschwindigkeit 110 km/h Zeichen DE:274-120 Zulässige Höchstgeschwindigkeit 120 km/h Zeichen DE:274-130 Zulässige Höchstgeschwindigkeit 130 km/h Hinweis: Anstelle der aktuellen Zeichen 274-5, 274-90 und 274-110 werden aufgrund fehlender Bildvorlagen in obiger Tabelle historische Verkehrszeichen dargestellt. Zulässige Höchstgeschwindigkeit 5 km/hZulässige Höchstgeschwindigkeit 10 km/hZulässige Höchstgeschwindigkeit 20 km/hZulässige Höchstgeschwindigkeit 30 km/hZulässige Höchstgeschwindigkeit 40 km/hZulässige Höchstgeschwindigkeit 50 km/hZulässige Höchstgeschwindigkeit 60 km/hZulässige Höchstgeschwindigkeit 70 km/hZulässige Höchstgeschwindigkeit 80 km/hZulässige Höchstgeschwindigkeit 90 km/hZulässige Höchstgeschwindigkeit 100 km/hZulässige Höchstgeschwindigkeit 110 km/hZulässige Höchstgeschwindigkeit 120 km/hZulässige Höchstgeschwindigkeit 130 km/h"
-	},
-	{
-		"sign": "DE:274.1",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg",
-		"name": "Beginn einer Tempo 30-Zone",
-		"osmTags": [
-			"maxspeed=30",
-			"und",
-			"source:maxspeed=DE:zone30",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:30",
-			"alternativ",
-			"zone:maxspeed=DE:30",
-			"source:maxspeed=DE:zone30",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:30",
-			"alternativ",
-			"zone:maxspeed=DE:30"
-		],
-		"comments": "Die Attribute sollten für jede Straße in der 30er-Zone gesetzt werden. Zur Angabe des Grundes der Höchstgeschwindigkeit sind verschiedene Tags möglich."
-	},
-	{
-		"sign": "DE:274.1-20",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_%28einseitig%29%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg",
-		"name": "Beginn einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen -\n\t\t\t\t\t\t\t\t\t\t\t\teinseitig",
-		"osmTags": [
-			"maxspeed=20",
-			"und",
-			"source:maxspeed=DE:zone20",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:20",
-			"alternativ",
-			"zone:maxspeed=DE:20",
-			"source:maxspeed=DE:zone20",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:20",
-			"alternativ",
-			"zone:maxspeed=DE:20"
-		],
-		"comments": "Die Attribute sollten für jede Straße in der 20er-Zone gesetzt werden. Zur Angabe des Grundes der Höchstgeschwindigkeit sind verschiedene Tags möglich."
-	},
-	{
-		"sign": "DE:274.1traffic_sign",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg",
-		"name": "Beginn einer Tempo 30-Zone - doppelseitig (Rückseite Z 274.2)",
-		"osmTags": [
-			"maxspeed=30",
-			"und",
-			"source:maxspeed=DE:zone30",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:30",
-			"alternativ",
-			"zone:maxspeed=DE:30",
-			"source:maxspeed=DE:zone30",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:30",
-			"alternativ",
-			"zone:maxspeed=DE:30"
-		],
-		"comments": "Das Verkehrszeichen 274.1-40 ist eine Zusammenfassung der Zeichen 274.1 und 274.2. Das Verkehrszeichen 274-40 sollte getrennt in dessen Einzelzeichen 274.1 und 274.2 erfasst werden, um die Blickrichtungen eindeutig festlegen zu können."
-	},
-	{
-		"sign": "DE:274.1-20traffic_sign",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_%28einseitig%29%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg",
-		"name": "Beginn einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen -\n\t\t\t\t\t\t\t\t\t\t\t\tdoppelseitig (Rückseite Z 274.2-20)",
-		"osmTags": [
-			"maxspeed=20",
-			"und",
-			"source:maxspeed=DE:zone20",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:20",
-			"alternativ",
-			"zone:maxspeed=DE:20",
-			"source:maxspeed=DE:zone20",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:20",
-			"alternativ",
-			"zone:maxspeed=DE:20"
-		],
-		"comments": "Das Verkehrszeichen 274.1-41 ist eine Zusammenfassung der Zeichen 274.1-20 und 274.2-20. Das Verkehrszeichen 274-41 sollte getrennt in dessen Einzelzeichen 274.1-20 und 274.2-20 erfasst werden, um die Blickrichtungen eindeutig festlegen zu können."
-	},
-	{
-		"sign": "DE:274.2",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/14/Zeichen_274.2_-_Ende_einer_Tempo_30-Zone_%28einseitig%29%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.2_-_Ende_einer_Tempo_30-Zone_(einseitig),_StVO_2013.svg",
-		"name": "Ende einer Tempo 30-Zone",
-		"osmTags": [
-			"maxspeed=30",
-			"und",
-			"source:maxspeed=DE:zone30",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:30",
-			"alternativ",
-			"zone:maxspeed=DE:30",
-			"source:maxspeed=DE:zone30",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:30",
-			"alternativ",
-			"zone:maxspeed=DE:30"
-		],
-		"comments": "Die Attribute sollten für jede Straße in der 30er-Zone gesetzt werden. Zur Angabe des Grundes der Höchstgeschwindigkeit sind verschiedene Tags möglich."
-	},
-	{
-		"sign": "DE:274.2-20",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Zeichen_274.2-20_-_Ende_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_%28einseitig%29%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.2-20_-_Ende_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg",
-		"name": "Ende einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen",
-		"osmTags": [
-			"maxspeed=20",
-			"und",
-			"source:maxspeed=DE:zone20",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:20",
-			"alternativ",
-			"zone:maxspeed=DE:20",
-			"source:maxspeed=DE:zone20",
-			"oder",
-			"source:maxspeed=DE:zone",
-			"oder",
-			"source:maxspeed=DE:zone:20",
-			"alternativ",
-			"zone:maxspeed=DE:20"
-		],
-		"comments": "Die Attribute sollten für jede Straße in der 20er-Zone gesetzt werden. Zur Angabe des Grundes der Höchstgeschwindigkeit sind verschiedene Tags möglich."
-	},
-	{
-		"sign": "DE:275-30traffic_sign",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg",
-		"name": "Vorgeschriebene Mindestgeschwindigkeit",
-		"osmTags": ["minspeed:lanes=*"],
-		"comments": "Dieses Verkehrszeichen wird nur außerhalb geschlossener Ortschaften fahrstreifenbezogen, niemals aber auf dem rechten von mehreren Fahrstreifen, angeordnet. DE:275 wird daher immer als Bestandteil von DE:525 oder DE:526 anzutreffen sein. Die Unternummer bestimmt die vorgeschriebene Mindestgeschwindigkeit, zum Beispiel traffic_sign=DE:275-80 für eine Mindestgeschwindigkeit von 80 km/h."
-	},
-	{
-		"sign": "DE:277.1",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Zeichen_277.1_-_Verbot_des_%C3%9Cberholens_von_einspurigen_Fahrzeugen_f%C3%BCr_mehrspurige_Kraftfahrzeuge_und_Kraftr%C3%A4dern_mit_Beiwagen%3B_StVO_2020.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_277.1_-_Verbot_des_%C3%9Cberholens_von_einspurigen_Fahrzeugen_f%C3%BCr_mehrspurige_Kraftfahrzeuge_und_Kraftr%C3%A4dern_mit_Beiwagen;_StVO_2020.svg",
-		"name": "Verbot des Überholens von einspurigen Fahrzeugen für mehrspurige\n\t\t\t\t\t\t\t\t\t\t\t\tKraftfahrzeuge und Krafträder mit Beiwagen",
-		"osmTags": [],
-		"comments": "Für dieses relativ neue Schild hat sich noch kein Tagging-Schema etabliert. overtaking:motorcar=no kommt der intention wahrscheinlich relativ nahe, siehe [1] und DE talk:Key:overtaking."
-	},
-	{
-		"sign": "DE:278-70",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/50/Zeichen_278-57.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_278-57.svg",
-		"name": "Ende der zulässigen Höchst­geschwindigkeit",
-		"osmTags": ["traffic_sign=DE:278-70", "maxspeed=implicit"],
-		"comments": "Falls für verschiedene Fahrtrichtungen unterschiedliche Höchstgeschwindigkeiten gelten, dann maxspeed:forward=* und maxspeed:backward=* nutzen. Siehe auch: Proposed features/maxspeed none, Proposed features/ref speed.  Seit 2017 entspricht die Unternummer der Verkehrszeichenkennnummer dem angegebenen Zahlwert. DE:278-5 Ende der zulässigen Höchstgeschwindigkeit 5 km/h DE:278-10 Ende der zulässigen Höchstgeschwindigkeit 10 km/h DE:278-20 Ende der zulässigen Höchstgeschwindigkeit 20 km/h DE:278-30 Ende der zulässigen Höchstgeschwindigkeit 30 km/h DE:278-40 Ende der zulässigen Höchstgeschwindigkeit 40 km/h DE:278-50 Ende der zulässigen Höchstgeschwindigkeit 50 km/h DE:278-60 Ende der zulässigen Höchstgeschwindigkeit 60 km/h DE:278-70 Ende der zulässigen Höchstgeschwindigkeit 70 km/h DE:278-80 Ende der zulässigen Höchstgeschwindigkeit 80 km/h DE:278-90 Ende der zulässigen Höchstgeschwindigkeit 90 km/h DE:278-100 Ende der zulässigen Höchstgeschwindigkeit 100 km/h DE:278-110 Ende der zulässigen Höchstgeschwindigkeit 110 km/h DE:278-120 Ende der zulässigen Höchstgeschwindigkeit 120 km/h DE:278-130 Ende der zulässigen Höchstgeschwindigkeit 130 km/h Hinweis: Anstelle der aktuellen Zeichen 278-5 bis 278-40 und 278-80 bis 278-130 werden aufgrund fehlender Bildvorlagen in obiger Tabelle historische Verkehrszeichen dargestellt. Ende der zulässigen Höchstgeschwindigkeit 5 km/hEnde der zulässigen Höchstgeschwindigkeit 10 km/hEnde der zulässigen Höchstgeschwindigkeit 20 km/hEnde der zulässigen Höchstgeschwindigkeit 30 km/hEnde der zulässigen Höchstgeschwindigkeit 40 km/hEnde der zulässigen Höchstgeschwindigkeit 50 km/hEnde der zulässigen Höchstgeschwindigkeit 60 km/hEnde der zulässigen Höchstgeschwindigkeit 70 km/hEnde der zulässigen Höchstgeschwindigkeit 80 km/hEnde der zulässigen Höchstgeschwindigkeit 90 km/hEnde der zulässigen Höchstgeschwindigkeit 100 km/hEnde der zulässigen Höchstgeschwindigkeit 110 km/hEnde der zulässigen Höchstgeschwindigkeit 120 km/hEnde der zulässigen Höchstgeschwindigkeit 130 km/h"
-	},
-	{
-		"sign": "DE:282",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Zeichen_282_-_Ende_s%C3%A4mtlicher_Streckenverbote%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_282_-_Ende_s%C3%A4mtlicher_Streckenverbote,_StVO_1970.svg",
-		"name": "Ende sämtlicher streckenbezogen­er Geschwindigkeits­beschränkungen und\n\t\t\t\t\t\t\t\t\t\t\t\tÜberholverbote",
-		"osmTags": ["traffic_sign=DE:282", "maxspeed=implicit", "overtaking=yes"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:293",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/65/Zeichen_293_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_293_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg,_StVO_1970.svg",
-		"name": "Fußgängerüberweg",
-		"osmTags": ["highway=crossing"],
-		"comments": "Die feinere Klassifizierung befindet sich unter DE:Key:crossing."
-	},
-	{
-		"sign": "DE:295",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung,_StVO_1970.svg",
-		"name": "Fahrstreifenbegrenzung und Fahrbahnbegrenzung",
-		"osmTags": ["change:lanes=no|no"],
-		"comments": "Regeln, wie die Werte für lanes zu bestimmen sind, wird in DE:Fahrspuren beschrieben. Anwendbare Werte sind yes, no, not_right, not_left, only_right, only_left"
-	},
-	{
-		"sign": "DE:296",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Zeichen_296_-_Einseitige_Fahrstreifenbegrenzung%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_296_-_Einseitige_Fahrstreifenbegrenzung,_StVO_1970.svg",
-		"name": "Einseitige Fahrstreifenbegrenzung",
-		"osmTags": ["change:lanes=yes|no"],
-		"comments": "Regeln, wie die Werte für lanes zu bestimmen sind, wird in DE:Fahrspuren beschrieben. Anwendbare Werte sind yes, no, not_right, not_left, only_right, only_left"
-	},
-	{
-		"sign": "DE:297",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Zeichen_297_-_Richtungspfeile%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_297_-_Richtungspfeile,_StVO_1970.svg",
-		"name": "Pfeilmarkierungen / Richtungspfeile",
-		"osmTags": ["turn=*", "turn:lanes=*", "turn:lanes:forward=*", "turn:lanes:backward=*"],
-		"comments": "Eine ausführliche Anleitung zur Pfeilmarkierung auf Straßenoberflächen findet sich in DE:Key:turn und DE:Key:turn:lanes In der Regel sollen Pfeilmarkierungen nur in dem Straßenabschnitt eingetragen werden, für den sie gelten. Zur Verdeutlichung einer Navigationsanzeige kann auf Verbindungswegen (Highway Links), die unmittelbar einem Fahrstreifen mit Pfeilmarkierung folgt, eine Richtungsangabe erfolgen. So kann auf einem Fahrstreifen mit turn:lanes=through;slight_right ein Verbindungsweg mit turn=right folgen. Eine Prüfung der Attribute kann mit dem grafischen Werkzeug OSM Lane Visualizer durchgeführt werden."
-	},
-	{
-		"sign": "DE:297.1-21",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/Zeichen_297.1-21_-_Vorank%C3%BCndigungspfeil_zur_Anzeige_eines_Fahrstreifenendes%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_297.1-21_-_Vorank%C3%BCndigungspfeil_zur_Anzeige_eines_Fahrstreifenendes,_StVO_2017.svg",
-		"name": "Vorankündigungspfeil - zur Anzeige eines Fahrstreifenendes",
-		"osmTags": ["turn:lanes=merge_to_right|none"],
-		"comments": "Die Attribute turn:lanes=merge_to_right|none und turn:lanes=none|none|merge_to_left sind zur Ankündigung von Fahrstreifenenden üblich, auch ohne vorhandene Fahrbahnmarkierungen, zum Beispiel bei Beschleunigungsspuren an Autobahnen."
-	},
-	{
-		"sign": "DE:306",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Zeichen_306_-_Vorfahrtstra%C3%9Fe%2C_StVO_1970.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_306_-_Vorfahrtstra%C3%9Fe,_StVO_1970.svg",
-		"name": "Vorfahrtstraße",
-		"osmTags": ["priority_road=designated"],
-		"comments": "bzw. am Ende bei Zeichen 307 : priority_road=end"
-	},
-	{
-		"sign": "DE:308",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Zeichen_308_-_Vorrang_vor_dem_Gegenverkehr%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_308_-_Vorrang_vor_dem_Gegenverkehr,_StVO_1992.svg",
-		"name": "Vorrang vor dem Gegenverkehr",
-		"osmTags": ["priority=forward", "(oder", "priority=backward)"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:310",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/Zeichen_310-50_-_Ortstafel_%28Vorderseite%29_mit_Kreis%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_310-50_-_Ortstafel_(Vorderseite)_mit_Kreis,_StVO_1992.svg",
-		"name": "Ortstafel Vorderseite",
-		"osmTags": ["traffic_sign=city_limit", "name=*", "siehe Anmerkungen", "alt_name=*"],
-		"comments": "Straßennamen enden oft nicht am Ortsausgang, sondern an der Gemeinde- oder Ortsteilgrenze. Das Ortsschild ist immer ein node (Punkt). Den alt_name=* zu verwenden, wenn Ortslagen zweier Gemeinden aneinander grenzen, ist fragwürdig, weil dieses Tag normalerweise nicht ermöglicht, die Namen zweier Objekte einzutragen, sondern mehr als einen Namen für ein und dasselbe Objekt. Wenn alleinstehend bei einer in den Ort hineinführenden Einbahnstraße (oneway=yes) sind neben traffic_sign=city_limit zusätzlich city_limit=begin in Verwendung."
-	},
-	{
-		"sign": "DE:311",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Zeichen_311-50_-_Ortstafel_einseitig%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_311-50_-_Ortstafel_einseitig,_StVO_1992.svg",
-		"name": "Ortstafel Rückseite",
-		"osmTags": ["traffic_sign=city_limit", "name=*", "siehe Anmerkungen", "alt_name=*"],
-		"comments": "Straßennamen enden oft nicht am Ortsausgang, sondern an der Gemeinde- oder Ortsteilgrenze. Das Ortsschild ist immer ein node (Punkt). Den alt_name=* zu verwenden, wenn Ortslagen zweier Gemeinden aneinander grenzen, ist fragwürdig, weil dieses Tag normalerweise nicht ermöglicht, die Namen zweier Objekte einzutragen, sondern mehr als einen Namen für ein und dasselbe Objekt. Wenn alleinstehend bei einer aus dem Ort herausführenden Einbahnstraße (oneway=yes) sind neben traffic_sign=city_limit zusätzlich city_limit=end in Verwendung."
-	},
-	{
-		"sign": "DE:314",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/80/Zeichen_314-50_-_Parkplatz%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_314-50_-_Parkplatz,_StVO_2013.svg",
-		"name": "Parken",
-		"osmTags": [
-			"amenity=parking",
-			"name=*",
-			"ref=*",
-			"operator=*",
-			"parking=multi-storey/underground/surface",
-			"fee=yes/no",
-			"disabled_spaces=yes/no/Anzahl"
-		],
-		"comments": "Zum Verkehrszeichen mit Kennung 314 gibt es weitere Varianten: traffic_sign=DE:314-10 Parken - Anfang (Aufstellung rechts) oder Ende (Aufstellung links) traffic_sign=DE:314-20 Parken - Ende (Aufstellung rechts) oder Anfang (Aufstellung links) traffic_sign=DE:314-30 Parken - Mitte (Aufstellung rechts oder links) traffic_sign=DE:314-50 Parkhaus, Parkgarage Parken - Anfang (Aufstellung rechts) oder Ende (Aufstellung links) Parken - Ende (Aufstellung rechts) oder Anfang (Aufstellung links) Parken - Mitte (Aufstellung rechts oder links)Parkhaus, Parkgarage"
-	},
-	{
-		"sign": "DE:316",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Zeichen_316_-_Parken_und_Reisen%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_316_-_Parken_und_Reisen,_StVO_1992.svg",
-		"name": "Parken und Reisen",
-		"osmTags": [
-			"amenity=parking",
-			"name=*",
-			"ref=*",
-			"operator=*",
-			"park_ride=yes/bus/metro/…",
-			"fee=yes/no",
-			"disabled_spaces=yes/no/Anzahl"
-		],
-		"comments": "Es gibt auch noch einen anderen Vorschlag Proposed features/Park and Ride Zum Verkehrszeichen mit Kennung 316 gibt es eine weitere Variante: traffic_sign=DE:316-50 Parken und Mitfahren (Siehe auch amenity=car_pooling oder carpool=* (fr)) Parken und Mitfahren (Siehe auch amenity=car_pooling oder carpool=* (fr))"
-	},
-	{
-		"sign": "DE:325.1",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs%2C_StVO_2009.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg",
-		"name": "Beginn eines verkehrsberuhigten Bereichs",
-		"osmTags": ["highway=living_street", "name=*"],
-		"comments": "maxspeed=* wird automatisch angenommen, muss nicht gesetzt werden. Siehe auch: OSM_tags_for_routing/Maxspeed#Germany"
-	},
-	{
-		"sign": "DE:325.2",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Zeichen_325.2_-_Ende_eines_verkehrsberuhigten_Bereichs%2C_StVO_2009.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_325.2_-_Ende_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg",
-		"name": "Ende eines verkehrsberuhigten Bereichs",
-		"osmTags": ["highway=living_street", "name=*"],
-		"comments": "maxspeed=* wird automatisch angenommen, muss nicht gesetzt werden. Siehe auch: OSM_tags_for_routing/Maxspeed#Germany"
-	},
-	{
-		"sign": "DE:327",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zeichen_327_-_Tunnel%2C_StVO_2006.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_327_-_Tunnel,_StVO_2006.svg",
-		"name": "Tunnel",
-		"osmTags": ["tunnel=yes", "layer=-1"],
-		"comments": "bei Bedarft auch layer=-2..."
-	},
-	{
-		"sign": "DE:328",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/63/Zeichen_328_-_Nothalte-_und_Pannenbucht%2C_StVO_2006.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_328_-_Nothalte-_und_Pannenbucht,_StVO_2006.svg",
-		"name": "Nothalte- und Pannenbucht",
-		"osmTags": ["highway=emergency_bay"],
-		"comments": "Zurzeit ist die Haltebucht oder Nothaltebucht nur vorgeschlagen, Proposed features/emergency bay."
-	},
-	{
-		"sign": "DE:330.1",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/07/Zeichen_330.1_-_Autobahn%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_330.1_-_Autobahn,_StVO_2013.svg",
-		"name": "Autobahn",
-		"osmTags": ["highway=motorway", "highway=motorway_link"],
-		"comments": "Die Linien eines Weges, insbesondere bei Autobahnanschlussrampen (Motorway Link), sollen, aufgrund sich ändernder Verkehrsregeln, erst ab diesem Verkehrszeichen als highway=motorway bzw. highway=motorway_link gekennzeichnet werden. Die davor liegenden Linien erhalten die Kategorie der zuführenden Straße bzw. Verbindungswegs."
-	},
-	{
-		"sign": "DE:330.2",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Zeichen_330.2_-_Ende_der_Autobahn%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg",
-		"name": "Ende der Autobahn",
-		"osmTags": [],
-		"comments": "Die Linien eines Weges, insbesondere bei Autobahnanschlussrampen (Motorway Link), sollen, aufgrund sich ändernder Verkehrsregeln, nur bis zu diesem Verkehrszeichen als highway=motorway bzw. highway=motorway_link gekennzeichnet werden. Nachfolgendene Straßenabschnitte entweder entsprechend der angezeigten Widmung oder entsprechend der Verkehrsbedeutung klassifiziert, siehe highway=*, z.B. highway=primary, highway=secondary, highway=tertiary usw."
-	},
-	{
-		"sign": "DE:331.1",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zeichen_331.1_-_Kraftfahrstra%C3%9Fe%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_331.1_-_Kraftfahrstra%C3%9Fe,_StVO_2013.svg",
-		"name": "Kraftfahrstraße",
-		"osmTags": ["motorroad=yes"],
-		"comments": "Oft auch highway=trunk, aber es gibt viele Ausnahmen."
-	},
-	{
-		"sign": "DE:331.2",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Zeichen_331.2_-_Ende_der_Kraftfahrstra%C3%9Fe%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_331.2_-_Ende_der_Kraftfahrstra%C3%9Fe,_StVO_2013.svg",
-		"name": "Ende der Kraftfahrstraße",
-		"osmTags": ["ohne", "motorroad=*", "oder", "motorroad=no"],
-		"comments": "Entweder ohne Merkmal motorroad=* oder motorroad=no"
-	},
-	{
-		"sign": "DE:333",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Zeichen_333_-_Pfeilschild_-_Ausfahrt_von_der_Autobahn%2C_StVO_1980.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_333_-_Pfeilschild_-_Ausfahrt_von_der_Autobahn,_StVO_1980.svg",
-		"name": "",
-		"osmTags": ["highway=motorway_link", "ref=ref der Autobahn"],
-		"comments": "analog bei \"gelben Autobahnen\" mit highway=trunk_link ref, bzw. name der Ausfahrt wird am Abzweigungspunkt angebracht, siehe Zeichen 406"
-	},
-	{
-		"sign": "DE:350-10",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/60/Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_%28rechts%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg",
-		"name": "Fußgängerüberweg - Aufstellung rechts",
-		"osmTags": ["highway=crossing", "crossing=uncontrolled", "crossing_ref=zebra"],
-		"comments": "Weitere Klassifizierungen findet sich unter DE:Key:crossing. Weitere Hinweise zum Verkehrszeichen sind unter DE:Key:traffic_sign=DE:350 zu finden. Zum Verkehrszeichen DE:350-10 gibt es weitere Varianten: traffic_sign=DE:350-20 Fußgängerüberweg - Aufstellung links / traffic_sign=DE:350-40 Fußgängerüberweg - doppelseitig (-10/ -20) Der eigenständige Knoten zum Verkehrszeichen DE:350-40 soll zur eindeutigen Kennzeichnung der Blickrichtung als traffic_sign=DE:350-10;350-20 mit den Blickrichtungen direction=35;215 (als Beispiel) erfasst werden. Fußgängerüberweg - Aufstellung linksFußgängerüberweg - doppelseitig (-10/ -20)"
-	},
-	{
-		"sign": "DE:353",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/44/Zeichen_353_-_Einbahnstra%C3%9Fe_%28600x600%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_353_-_Einbahnstra%C3%9Fe_(600x600),_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["oneway=yes"],
-		"comments": "Abgeschafft mit StVO-Novelle 2013, für bereits aufgestellte Schilder gilt eine Übergangsfrist bis 31. Okt. 2022. Weiter gültig bleibt Zeichen 220."
-	},
-	{
-		"sign": "DE:355",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/df/Zeichen_355-10_-_Fu%C3%9Fg%C3%A4ngerunterf%C3%BChrung_einseitig%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_355-10_-_Fu%C3%9Fg%C3%A4ngerunterf%C3%BChrung_einseitig,_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["highway=steps"],
-		"comments": "bei Über-/Unterführung entsprechend bridge=yes bzw. tunnel=yes und entsprechende Ebene"
-	},
-	{
-		"sign": "DE:357",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/88/Zeichen_357_-_Sackgasse%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_357_-_Sackgasse,_StVO_1992.svg",
-		"name": "Sackgasse",
-		"osmTags": ["traffic_sign=DE:357"],
-		"comments": "Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet werden. Um den letzten Punkt eines Weges, der auch nicht für Fußgänger oder andere Fortbewegungsmittel weitergeht, zu kennzeichnen, siehe How_to_map_a#Sackgasse. Sackgasse eintragen mit JOSM"
-	},
-	{
-		"sign": "DE:358",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/44/Zeichen_358_-_Erste_Hilfe%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_358_-_Erste_Hilfe,_StVO_1992.svg",
-		"name": "",
-		"osmTags": [],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:365-52",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/16/Zeichen_365-52_-_Tankstelle%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_365-52_-_Tankstelle,_StVO_2013.svg",
-		"name": "Tankstelle",
-		"osmTags": ["amenity=fuel", "name=*", "operator=*", "(Betreiber)"],
-		"comments": "Mit amenity=fuel wird die Tankstelle selbst erfasst. Das Schild bleibt in der Regel unberücksichtigt. Bis 1. April 2014 besaß dieses Zeichen mit ID 365-52 die veraltete Verkehrszeichenkennung 361-50. Zum Richtzeichen für Tankstellen gibt es weitere Varianten: traffic_sign=DE:365-53 Tankstelle mit Autogas fuel:lpg=yes traffic_sign=DE:365-54 Tankstelle mit Erdgas fuel:cng=yes traffic_sign=DE:365-65 Ladestation für Elektrofahrzeuge amenity=charging_station traffic_sign=DE:365-66 Wasserstofftankstelle fuel:LH2=yes Tankstelle mit AutogasTankstelle mit Erdgas Ladestation für Elektrofahrzeuge Wasserstofftankstelle"
-	},
-	{
-		"sign": "DE:380-52traffic_sign",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Zeichen_380-52_-_Richtgeschwindigkeit_80_km-h%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_380-52_-_Richtgeschwindigkeit_80_km-h,_StVO_1992.svg",
-		"name": "Richtgeschwindigkeit",
-		"osmTags": ["recommended_speed=*"],
-		"comments": "Anmerkungen siehe Proposed_features/ref_speed Am 1. April 2014 wurden wesentliche Teile der Straßenverkehrs-Ordnung (StVO) geändert und überflüssige Verkehrszeichen entfernt. Das Zeichen „Richtgeschwindigkeit“ wurde dabei ohne Ersatz gestrichen. Vorhandene Schilder bleiben bis zum 31. Oktober 2022 gültig, die Aufstellung neuer Schilder wird nicht mehr angeordnet. Zum Verkehrszeichen mit Kennung 380 gibt es eine weitere Variante: traffic_sign=DE:380-54 Richtgeschwindigkeit 100 km/h Richtgeschwindigkeit 100 km/h"
-	},
-	{
-		"sign": "DE:385",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Zeichen_385_-_Ortshinweistafel%2C_StVO_1988.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_385_-_Ortshinweistafel,_StVO_1988.svg",
-		"name": "Ortshinweistafel",
-		"osmTags": ["traffic_sign=DE:385", "name=*", "siehe Anmerkungen"],
-		"comments": "Straßennamen enden oft nicht am Ortsausgang, sondern an der Gemeinde- oder Ortsteilgrenze. Die Ortshinweistafel ist immer ein node (Punkt)."
-	},
-	{
-		"sign": "DE:386.3",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/30/Zeichen_386.3_-_Touristische_Unterrichtungstafel_%282400x3600%29%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_386.3_-_Touristische_Unterrichtungstafel_(2400x3600),_StVO_2013.svg",
-		"name": "Touristische Unterrichtungstafel",
-		"osmTags": ["tourism=information", "information=board", "traffic_sign=DE:386.3", "name=*"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:401[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/42/Bundesstra%C3%9Fe_35_number.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Bundesstra%C3%9Fe_35_number.svg",
-		"name": "Bundesstraßen",
-		"osmTags": ["type=route", "route=road", "ref=B *"],
-		"comments": "siehe WikiProject Germany/Bundesstraßen Zwischen dem Buchstaben B und der Zahl ein Leerzeichen Die Relationen ergänzen die Erfassung mit ref=B * an der Linie."
-	},
-	{
-		"sign": "DE:405[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Bundesautobahn_999_number.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Bundesautobahn_999_number.svg",
-		"name": "Autobahnen",
-		"osmTags": ["type=route", "route=road", "ref=A *"],
-		"comments": "siehe WikiProject Germany/Autobahn zwischen dem Buchstaben A und der Zahl ein Leerzeichen Die Relationen ergänzen die Erfassung mit ref=A * an der Linie."
-	},
-	{
-		"sign": "DE:406[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Zeichen_406-50_-_Knotenpunkte_der_Autobahnen_%28ein-_oder_zweistellige_Nummer%29%2C_650x650%3B_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_406-50_-_Knotenpunkte_der_Autobahnen_(ein-_oder_zweistellige_Nummer),_650x650;_StVO_2013.svg",
-		"name": "Ausfahrt",
-		"osmTags": ["highway=motorway_junction", "name=Name der Ausfahrt", "ref=Nummer der Ausfahrt"],
-		"comments": "am Punkt, wo die highway=motorway_link abzweigt Kann auch für nicht-Autobahnen verwendet werden."
-	},
-	{
-		"sign": "DE:410[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Zeichen_410_-_Nummernschild_f%C3%BCr_Europastra%C3%9Fen%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_410_-_Nummernschild_f%C3%BCr_Europastra%C3%9Fen,_StVO_1992.svg",
-		"name": "Europastraße",
-		"osmTags": ["type=route", "route=road", "network=e-road", "ref=E *"],
-		"comments": "siehe WikiProject Europe/E-road network zwischen dem Buchstaben E und der Zahl ein Leerzeichen Die Relationen ergänzen die Erfassung mit int_ref=E * an der Linie."
-	},
-	{
-		"sign": "DE:437[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Zeichen_437.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_437.svg",
-		"name": "Straßennamenschild",
-		"osmTags": ["highway=*", "name=*"],
-		"comments": "Straßennamen enden meist am Ortsausgang Weitere Hinweise unter DE:Tag:traffic_sign=DE:437"
-	},
-	{
-		"sign": "DE:438",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Zeichen_438_-_Vorwegweiser%3B_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_438_-_Vorwegweiser;_StVO_1992.svg",
-		"name": "Vorwegweiser außerhalb von Autobahnen",
-		"osmTags": ["traffic_sign=DE:438"],
-		"comments": "Die Tafeln enthalten nutzbare Information, die als turn:lanes=* und als destination=* an den dafür passenden Stellen (siehe Skizzen bei DE:Key:destination#Schlüssel) erfasst werden."
-	},
-	{
-		"sign": "DE:439",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/50/Zeichen_439_-_Vorwegweiser%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_439_-_Vorwegweiser,_StVO_1992.svg",
-		"name": "Gegliederter Vorweg­weiser außerhalb von Autobahnen",
-		"osmTags": ["traffic_sign=DE:439"],
-		"comments": "Die Tafeln enthalten nutzbare Information, die als turn:lanes=* und als destination=* an den dafür passenden Stellen (siehe Skizzen bei DE:Key:destination#Schlüssel) erfasst werden."
-	},
-	{
-		"sign": "DE:448",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Zeichen_448_-_Ank%C3%BCndigungstafel_auf_Autobahnen%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_448_-_Ank%C3%BCndigungstafel_auf_Autobahnen,_StVO_1992.svg",
-		"name": "Ankündigungstafel",
-		"osmTags": ["traffic_sign=DE:448"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:449",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/71/Zeichen_449_-_Vorwegweiser_auf_Autobahnen_%28nach_RWBA%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_449_-_Vorwegweiser_auf_Autobahnen_(nach_RWBA),_StVO_1992.svg",
-		"name": "Vorwegweiser auf Autobahnen",
-		"osmTags": ["traffic_sign=DE:449"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:453",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Zeichen_453_-_Entfernungstafel_auf_Autobahnen%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_453_-_Entfernungstafel_auf_Autobahnen,_StVO_1992.svg",
-		"name": "Entfernungstafel",
-		"osmTags": ["traffic_sign=DE:453"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:455[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/Zeichen_455.1-30_-_Ank%C3%BCndigung_oder_Fortsetzung_der_Umleitung%2C_Vorank%C3%BCndigung_geradeaus%2C_StVO_2013.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_455.1-30_-_Ank%C3%BCndigung_oder_Fortsetzung_der_Umleitung,_Vorank%C3%BCndigung_geradeaus,_StVO_2013.svg",
-		"name": "Umleitung",
-		"osmTags": ["type=route", "route=detour", "ref=*"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:460[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/71/Zeichen_460-50_-_Bedarfsumleitung%2C_ohne_Pfeilsysmbol_%28900x600%29%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_460-50_-_Bedarfsumleitung,_ohne_Pfeilsysmbol_(900x600),_StVO_2017.svg",
-		"name": "Bedarfsumleitung",
-		"osmTags": ["type=route", "route=detour", "detour=A *", "name=U * (A *)", "ref=U *"],
-		"comments": "Anleitung zur Beschreibung von Bedarfsumleitungen in Germany/Bedarfsumleitung Bei detour=* wird die Referenznummer der Autobahn angegeben, zu der diese Bedarfsumleitung hinführt (detour=A 3) Bei name=* Wird die Referenznummer der Bedarfsumleitung und die Referenznummer der Autobahn, zu der diese Bedarfsumleitung hinführt, angegeben (name=U 17 (A 3)) Existieren mehrere Bedarfsumleitungen zu derselben Autobahnanschlussstelle, wird dem Namen der Anfangsbuchstaben eine der Himmelsrichtungen n, o, s oder w der Hauptverkehrsrichtung der abgehenden Autobahnanschlussstelle angegeben. So wird die Bedarfsumleitung Beginnend auf der A 7 Fahrtrichtung Norden zur A 6 Richtung Osten wie folgt benannt: name=U 1 (A 6) n Zum Verkehrszeichen mit Kennung 460 gibt es mehrere Varianten: traffic_sign=DE:460-10[22] Bedarfsumleitung, Vorankündigung links traffic_sign=DE:460-11[22] Bedarfsumleitung, hier links traffic_sign=DE:460-12[22] Bedarfsumleitung, links einordnen traffic_sign=DE:460-20[22] Bedarfsumleitung, Vorankündigung rechts traffic_sign=DE:460-21[22] Bedarfsumleitung, hier rechts traffic_sign=DE:460-22[22] Bedarfsumleitung, rechts einordnen traffic_sign=DE:460-30[22] Bedarfsumleitung, Vorankündigung geradeaus traffic_sign=DE:460-50[22] Bedarfsumleitung, ohne Pfeilsysmbol Bedarfsumleitung, Vorankündigung linksBedarfsumleitung, hier linksBedarfsumleitung, links einordnenBedarfsumleitung, Vorankündigung rechtsBedarfsumleitung, hier rechtsBedarfsumleitung, rechts einordnenBedarfsumleitung, Vorankündigung geradeausBedarfsumleitung, ohne Pfeilsysmbol"
-	},
-	{
-		"sign": "DE:525-31",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Zeichen_525-31_-_Fahrstreifentafel_-_ohne_Gegenverkehr_mit_integriertem_Zeichen_275_-_dreistreifig_in_Fahrtrichtung_%281600x1250%29%3B_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_525-31_-_Fahrstreifentafel_-_ohne_Gegenverkehr_mit_integriertem_Zeichen_275_-_dreistreifig_in_Fahrtrichtung_(1600x1250);_StVO_2017.svg",
-		"name": "Fahrstreifentafel - ohne Gegenverkehr mit integrierten Zeichen 275",
-		"osmTags": ["minspeed:lanes=*"],
-		"comments": "Zum Eintragen der Linien-Eigenschaften sind in Bezug auf DE:525 lediglich die angeordneten Mindestgeschwindigkeiten der Zeichen DE:275 zu beachten. Bei dem hier gezeigten Verkehrschild DE:525-31 dreistreifig in Fahrtrichtung minspeed:lanes=80|50|none"
-	},
-	{
-		"sign": "DE:1000-10",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/04/Zusatzzeichen_1000-10_-_Richtungsangaben_durch_Pfeile%2C_linksweisend%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-10_-_Richtungsangaben_durch_Pfeile,_linksweisend,_StVO_1992.svg",
-		"name": "Richtung, linksweisend",
-		"osmTags": [
-			"entsprechend dem Hauptverkehrszeichen auf der folgenden Strecke in",
-			"angegebener Richtung"
-		],
-		"comments": "Zu diesen richtungsweisenden Zusatzzeichen gibt es mehrere Varianten: DE:1000-11 Richtung der Gefahrstelle, linksweisend DE:1000-20 Richtung, rechtsweisend DE:1000-21 Richtung der Gefahrstelle, rechtsweisend DE:1000-30 Beide Richtungen, zwei gegengerichtete waagerechte Pfeile DE:1000-31 Beide Richtungen, zwei gegengerichtete senkrechte Pfeile Richtung der Gefahrstelle, linksweisendRichtung, rechtsweisendRichtung der Gefahrstelle, rechtsweisendBeide Richtungen, zwei gegengerichtete waagerechte PfeileBeide Richtungen, zwei gegengerichtete senkrechte Pfeile"
-	},
-	{
-		"sign": "DE:1000-12",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Zusatzzeichen_1000-12_-_Fu%C3%9Fg%C3%A4nger_Gehweg_gegen%C3%BCber_benutzen%2C_linksweisend%3B_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-12_-_Fu%C3%9Fg%C3%A4nger_Gehweg_gegen%C3%BCber_benutzen,_linksweisend;_StVO_1992.svg",
-		"name": "Fußgänger Gehweg gegenüber benutzen, linksweisend",
-		"osmTags": ["ist der Fußweg ein- oder anderseitig der Straße weiterzuführen"],
-		"comments": "Dieses Zusatzzeichen sollte nur erfasst werden, wenn es dauerhaft oder absehbar für lange Zeit aufgestellt ist. Bei der Linieneigenschaft sidewalk=both ist je nach Linienrichtung zu sidewalk=left bzw. sidewalk=right wechseln. Eine Markierung eines Überwegs mittels highway=crossing kann angebracht sein. Sind beidseits der Straße eigene Linien für Fußgänger vorhanden, ist das Ende der einen Linie mit der anderen zu verbinden. Der Überweg sollte entsprechend der Situation mit highway=crossing markiert werden Dieses Zusatzzeichen wird oftmals auch ohne Hauptzeichen als Umleitungshinweis für Fußgänger verwendet. Weitere Variante: DE:1000-22 Fußgänger Gehweg gegenüber benutzen, rechtsweisend Fußgänger Gehweg gegenüber benutzen, rechtsweisend"
-	},
-	{
-		"sign": "DE:1000-13",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Zusatzzeichen_1000-13_-_Richtungsangaben_durch_Pfeile%2C_Umleitungsbeschilderung_Dreiviertelkreis%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-13_-_Richtungsangaben_durch_Pfeile,_Umleitungsbeschilderung_Dreiviertelkreis,_StVO_2017.svg",
-		"name": "Umleitungsbeschilderung Dreiviertelkreis",
-		"osmTags": ["ist die Relation entsprechend des Zeichens zu führen"],
-		"comments": "Dieses Zusatzzeichen wird in Kombination mit folgenden Verkehrszeichen zur Kennzeichnung von besonderen Strecken verwendet:DE:460-50, DE:455.1-50, DE:442-50, DE:442-51, DE:460-52, DE:442-53 Bei der Relation kann der Kreisverkehr als Vollkreis oder als Kreisabschnitt ausgeführt werden, siehe Bus routes and roundabouts. Weitere Varianten: DE:1000-23 Umleitungsbeschilderung Viertelkreis DE:1000-34 Umleitungsbeschilderung Halbkreis Umleitungsbeschilderung ViertelkreisUmleitungsbeschilderung Halbkreis"
-	},
-	{
-		"sign": "DE:1000-32",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Zusatzzeichen_1000-32_-_Radfahrer_kreuzen_von_rechts_und_links%2C_StVO_1997.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-32_-_Radfahrer_kreuzen_von_rechts_und_links,_StVO_1997.svg",
-		"name": "Radverkehr kreuzt von links und rechts",
-		"osmTags": [
-			"+",
-			"highway=*",
-			"+",
-			"cycleway=track",
-			"+",
-			"oneway:bicycle=no",
-			"(Fahrbahnzusatztag)",
-			"+",
-			"highway=cycleway",
-			"+",
-			"oneway=no",
-			"+",
-			"highway=residential",
-			"+",
-			"cycleway=opposite",
-			"+",
-			"oneway:bicycle=no"
-		],
-		"comments": "Zunächst nur vorgesehen, um In Verbindung mit Zeichen 205 oder 206 den Verkehr aus seitlichen Einmündungen vor einem Zweirichtungsradweg zu warnen. Seit 2013 korrekte Beschilderung bei freigegebenen Einbahnstraßen (statt vorher Zeichen 1000-33) unter dem Zeichen 220 .[2] Einzelne Verkehrsbehörden haben es schon vorher so gemacht."
-	},
-	{
-		"sign": "DE:1000-33",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/Zusatzzeichen_1000-33_-_Radverkehr_im_Gegenverkehr%2C_StVO_1997.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-33_-_Radverkehr_im_Gegenverkehr,_StVO_1997.svg",
-		"name": "Radverkehr im Gegenverkehr",
-		"osmTags": [
-			"cycleway=opposite",
-			"(ohne eigenen Radweg)",
-			"cycleway=opposite_lane",
-			"(eigene Spur)",
-			"cycleway=opposite_track",
-			"(eigener Weg, z.B. abgetrennt durch Bordstein)"
-		],
-		"comments": "Seit 1. April 2017 ist dieses Verkehrszeichen DE:1000-33 zur Kennzeichnung von Einbahnstraßen, in denen der Radverkehr in Gegenrichtung zugelassen ist, ungültig. Statt dessen ist DE:1000-32 zu verwenden. Bei freigegebenen Einbahnstraßen in Verbindung mit (seit 2013 veraltet) und mit (alternativ zu ) Manchmal alternativ zu Zeichen 1000-31 unter dem , oder bei Zweirichtungsradwegen verwendet, um den rechtsseitigen vor dem entgegenkommenden Verkehr zu warnen. Seit 2013 ohne Hauptzeichen für die neu ermöglichten Zweirichtungsradwege ohne Benutzungspflicht."
-	},
-	{
-		"sign": "DE:1001-30",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Zusatzzeichen_1001-30_-_auf_..._m%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1001-30_-_auf_..._m,_StVO_1992.svg",
-		"name": "Auf ...m",
-		"osmTags": ["entsprechend dem Hauptverkehrszeichen auf der folgenden Strecke von … Metern"],
-		"comments": "Das Verkehrszeichen, auf welches sich dieses Zusatzzeichen bezieht, gilt nur für die folgende Strecke auf … Metern. Die durch das Verkehrszeichen eingesetzte Verhaltensvorschriften erlischt nach Zurücklegen dieser Strecke automatisch, ohne dass es einer besonderen Beschilderung bedarf. Findet Anwendung zum Beispiel bei Geschwindigkeitsbegrenzungen , Überholverboten , Gefahrzeichen Bei der Erfassung als Knoten ist die Entfernungsangabe im Wertefeld, wie auf dem Zeichen zu lesen, jedoch ohne die Einheit [m] anzugeben. Zum Beispiel als steckenbegrenztes Überholverbot mit traffic_sign=DE:276,1001-30[800]"
-	},
-	{
-		"sign": "DE:1001-31",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/52/Zusatzzeichen_1001-31_-_auf_..._km_%28600x330%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1001-31_-_auf_..._km_(600x330),_StVO_1992.svg",
-		"name": "Auf ...km",
-		"osmTags": [
-			"entsprechend dem Hauptverkehrszeichen auf der folgenden Strecke von …",
-			"Kilometern"
-		],
-		"comments": "Das Verkehrszeichen, auf welches sich dieses Zusatzzeichen bezieht, gilt nur für die folgende Strecke auf … Kilometern. Die durch das Verkehrszeichen eingesetzte Verhaltensvorschriften erlischt nach Zurücklegen dieser Strecke automatisch, ohne dass es einer besonderen Beschilderung bedarf. Findet Anwendung zum Beispiel bei Geschwindigkeitsbegrenzungen , Überholverboten , Gefahrzeichen Bei der Erfassung als Knoten ist die Entfernungsangabe im Wertefeld, wie auf dem Zeichen zu lesen, jedoch ohne die Einheit [km] anzugeben. Zum Beispiel bei Gefahrenhinweis auf querendes Wild traffic_sign=DE:142-10,1001-31[3]"
-	},
-	{
-		"sign": "DE:1004-30",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Zusatzzeichen_1004-30_-_nach_100_m%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1004-30_-_nach_100_m,_StVO_1992.svg",
-		"name": "Entfernungsangabe in m",
-		"osmTags": ["entsprechend dem Hauptverkehrszeichen erst … ab Metern Entfernung"],
-		"comments": "Das Verkehrszeichen, auf welches sich dieses Zusatzzeichen bezieht, gilt erst in einer Entfernung von … Metern. Die durch das Verkehrszeichen eingesetzte Verhaltensvorschriften tritt erst nach Zurücklegen dieser Strecke in Kraft. Findet als Ankündigungshinweis Anwendung zum Beispiel bei dem Verkehrszeichen Vorfahrt gewähren , Einengung von Fahrstreifen , Gefahrzeichen Bei der Erfassung als Knoten ist die Entfernungsangabe im Wertefeld, wie auf dem Zeichen zu lesen, jedoch ohne die Einheit [m] anzugeben. Zum Beispiel bei der Einengungstafel mit traffic_sign=DE:531,1004-30[100]"
-	},
-	{
-		"sign": "DE:1004-31",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Zusatzzeichen_1004-31_-_in_..._km%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1004-31_-_in_..._km,_StVO_2017.svg",
-		"name": "Entfernungsangabe in km",
-		"osmTags": ["entsprechend dem Hauptverkehrszeichen erst … ab Kilometer Entfernung"],
-		"comments": "Das Verkehrszeichen, auf welches sich dieses Zusatzzeichen bezieht, gilt erst in einer Entfernung von … Kilometern. Die durch das Verkehrszeichen eingesetzte Verhaltensvorschriften tritt erst nach Zurücklegen dieser Strecke in Kraft. Findet als Ankündigungshinweis Anwendung zum Beispiel bei dem Verkehrszeichen für die maximal zulässige, tatsächliche Masse oder der maximal zulässigen, tatsächlichen Höhe . Bei der Erfassung als Knoten ist die Entfernungsangabe im Wertefeld, wie auf dem Zeichen zu lesen, jedoch ohne die Einheit [km] anzugeben. Zum Beispiel bei der maximal zulässigen, tatsächlichen Höhe mit traffic_sign=DE:265[3.8],1004-31[2]"
-	},
-	{
-		"sign": "DE:1010-10",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/37/Zusatzzeichen_1010-10_-_erlaubt_Kindern%2C_auch_auf_der_Fahrbahn_und_dem_Seitenstreifen_zu_spielen%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1010-10_-_erlaubt_Kindern,_auch_auf_der_Fahrbahn_und_dem_Seitenstreifen_zu_spielen,_StVO_1992.svg",
-		"name": "Spielende Kinder",
-		"osmTags": ["foot=designated"],
-		"comments": "Wird sehr selten eingesetzt. Ergibt mit eine Spielstraße. vehicle=no"
-	},
-	{
-		"sign": "DE:1012-32",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/Zusatzzeichen_1012-32_-_Radfahrer_absteigen_%28420x231%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1012-32_-_Radfahrer_absteigen_(420x231),_StVO_1992.svg",
-		"name": "Radfahrer absteigen",
-		"osmTags": ["bicycle=dismount"],
-		"comments": "Auf einer ausgeschilderten Radroute, oder zwischen zwei Radwegen, müssen Radfahrer sich ein kurzes Stück als Fußgänger fortbewegen - das heißt schieben. Wird meistens durch Zeichen 239 angezeigt. Das Zusatzzeichen 1012-32 „Radfahrer absteigen“ hat allein keine rechtliche Bindung."
-	},
-	{
-		"sign": "DE:1012-33",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Zusatzzeichen_1012-33_-_keine_Mofas_%28330x600%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1012-33_-_keine_Mofas_(330x600),_StVO_1992.svg",
-		"name": "keine Mofas",
-		"osmTags": ["mofa=no"],
-		"comments": "keine"
-	},
-	{
-		"sign": "DE:1014-50",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/57/Zusatzzeichen_1014-50_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_%28B%29%2C_StVO_2007.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-50_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(B),_StVO_2007.svg",
-		"name": "Tunnelkategorie gemäß ADR-Übereinkommen - B",
-		"osmTags": ["hazmat:B=no"],
-		"comments": "Kein Transport von Gefahrgütern, die zu einer sehr großen Explosion führen können. In Kombination mit zu Verwenden: Als Knoten traffic_sign=DE:261,1014-50, als Linie hazmat:B=no"
-	},
-	{
-		"sign": "DE:1014-51",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Zusatzzeichen_1014-51_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_%28C%29%2C_StVO_2007.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-51_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(C),_StVO_2007.svg",
-		"name": "Tunnelkategorie gemäß ADR-Übereinkommen - C",
-		"osmTags": ["hazmat:C=no"],
-		"comments": "Kein Transport von Gefahrgütern, die zu einer großen oder sehr großen Explosion führen, oder bei denen umfangreich giftige Substanzen freigesetzt werden können. In Kombination mit zu Verwenden: Als Knoten traffic_sign=DE:261,1014-51, als Linie hazmat:C=no"
-	},
-	{
-		"sign": "DE:1014-52",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zusatzzeichen_1014-52_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_%28D%29%2C_StVO_2007.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-52_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(D),_StVO_2007.svg",
-		"name": "Tunnelkategorie gemäß ADR-Übereinkommen - D",
-		"osmTags": ["hazmat:D=no"],
-		"comments": "Kein Transport von Gefahrgütern, die zu einer großen oder sehr großen Explosion, zu großen Bränden führen, oder bei denen umfangreich giftige Substanzen freigesetzt werden können. In Kombination mit zu Verwenden: Als Knoten traffic_sign=DE:261,1014-52, als Linie hazmat:D=no"
-	},
-	{
-		"sign": "DE:1014-53",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Zusatzzeichen_1014-53_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_%28E%29%2C_StVO_2007.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-53_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(E),_StVO_2007.svg",
-		"name": "Tunnelkategorie gemäß ADR-Übereinkommen - E",
-		"osmTags": ["hazmat:E=no"],
-		"comments": "Durchfahrtsverbot für alle gefährlichen Güter, unter Ausnahme von UN2919, UN3291 und UN3373 (bestimmte radioaktive Stoffe, klinische Abfälle und Materialien). In Kombination mit zu Verwenden: Als Knoten traffic_sign=DE:261,1014-53, als Linie hazmat:E=no"
-	},
-	{
-		"sign": "DE:1020-31",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Zusatzzeichen_1020-31_-_Anlieger_oder_Parken_frei_%28600x450%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1020-31_-_Anlieger_oder_Parken_frei_(600x450),_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["[Fahrzeugart]=destination"],
-		"comments": "Bisher keine Umsetzung für \"Parken frei\". Weiteres siehe \"Anlieger frei\"."
-	},
-	{
-		"sign": "KFZ frei",
-		"imageSvg": "/w/images/c/ce/Zusatzzeichen_KFZ_frei.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_KFZ_frei.svg",
-		"name": "",
-		"osmTags": ["motor_vehicle=yes"],
-		"comments": "PKW und Motorräder frei Das Zeichen steht nicht im amtlichen Katalog, wird aber von mehreren Verkehrsbehörden (u. a. HB und MS) regelmäßig verwendet."
-	},
-	{
-		"sign": "DE:1024-16",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Zusatzzeichen_1024-16_-_Stra%C3%9Fenbahn_frei%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1024-16_-_Stra%C3%9Fenbahn_frei,_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["railway=tram"],
-		"comments": "Strassenbahn frei"
-	},
-	{
-		"sign": "DE:1026-33",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/40/Zusatzzeichen_1026-33_-_Einsatzfahrzeuge_frei_%28450x600%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-33_-_Einsatzfahrzeuge_frei_(450x600),_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["emergency=yes"],
-		"comments": "Einsatzfahrzeuge frei"
-	},
-	{
-		"sign": "DE:1026-34",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/85/Zusatzzeichen_1026-34_-_Krankenfahrzeuge_frei%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-34_-_Krankenfahrzeuge_frei,_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["emergency=yes"],
-		"comments": "Krankenfahrzeuge frei"
-	},
-	{
-		"sign": "DE:1026-39",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Zusatzzeichen_1026-39_-_Betriebs-_und_Versorgungsdienst_frei_%28330x600%29%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-39_-_Betriebs-_und_Versorgungsdienst_frei_(330x600),_StVO_1992.svg",
-		"name": "",
-		"osmTags": ["[Fahrzeugart]=private;delivery"],
-		"comments": "Betriebs- und Versorgungsdienst frei Je nach verbotener Fahrzeugart, also dem Verbotszeichen. In Kombination mit Zeichen 260 : motor_vehicle=private;delivery In Kombination mit Zeichen 250 : vehicle=private;delivery"
-	},
-	{
-		"sign": "DE:1031-50",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/66/Zusatzzeichen_1031%2C_StVO_2007.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1031,_StVO_2007.svg",
-		"name": "Freistellung vom Verkehrsverbot nach § 40 Absatz 1 BImSchG - rote, gelbe\n\t\t\t\t\t\t\t\t\t\t\t\tund grüne Plakette",
-		"osmTags": [],
-		"comments": "In Verbindung mit Zeichen 270.1 . Attributierung wird noch diskutiert. Siehe Umweltzone."
-	},
-	{
-		"sign": "DE:1031-51",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Zusatzzeichen_1031-50%2C_StVO_2007.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1031-50,_StVO_2007.svg",
-		"name": "Freistellung vom Verkehrsverbot nach § 40 Absatz 1 BImSchG - gelbe und\n\t\t\t\t\t\t\t\t\t\t\t\tgrüne Plakette",
-		"osmTags": [],
-		"comments": "In Verbindung mit Zeichen 270.1 . Attributierung wird noch diskutiert. Siehe Umweltzone."
-	},
-	{
-		"sign": "DE:1031-52",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Zusatzzeichen_1031-51%2C_StVO_2007.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1031-51,_StVO_2007.svg",
-		"name": "Freistellung vom Verkehrsverbot nach § 40 Absatz 1 BImSchG - grüne\n\t\t\t\t\t\t\t\t\t\t\t\tPlakette",
-		"osmTags": [],
-		"comments": "In Verbindung mit Zeichen 270.1 . Attributierung wird noch diskutiert. Siehe Umweltzone."
-	},
-	{
-		"sign": "DE:1040-10[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/50/Zusatzzeichen_1040-10_-_Wintersport_erlaubt%2C_zeitlich_beschr%C3%A4nkt_10_-_16_h%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1040-10_-_Wintersport_erlaubt,_zeitlich_beschr%C3%A4nkt_10_-_16_h,_StVO_1992.svg",
-		"name": "Wintersport erlaubt, zeitlich beschränkt (10 - 16 h)",
-		"osmTags": [
-			"traffic_sign=DE:1040-10[…]",
-			"access:conditional=winter_sports @ (10:00-16:00)",
-			"oder",
-			"hazard:conditional=winter_sports @ (10:00-16:00)"
-		],
-		"comments": "In Kombination mit Zeichen 250 als Einschränkung für Wintersportler In Kombination mit Zeichen 101 als allgemeiner Warnhinweis Bei der Erfassung als Knoten ist die Zeitangabe im Wertefeld, wie auf dem Zeichen zu lesen, ohne führende Null, jedoch ohne die Einheit [h] anzugeben (traffic_sign=DE:101,1040-10[9-18])."
-	},
-	{
-		"sign": "DE:1040-30[…]",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/Zusatzzeichen_1040-30_-_Zeitliche_Beschr%C3%A4nkung_%2816_-_18_h%29%2C_330x600%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1040-30_-_Zeitliche_Beschr%C3%A4nkung_(16_-_18_h),_330x600,_StVO_1992.svg",
-		"name": "Zeitliche Beschränkung (16 - 18 h)",
-		"osmTags": ["traffic_sign=DE:1040-30[…]", "[…]:conditional"],
-		"comments": "Bei der Erfassung als Knoten ist die Zeitangabe im Wertefeld, wie auf dem Zeichen zu lesen, ohne führende Null, jedoch ohne die Einheit [h] anzugeben. Zeitbeschränktes Überholverbot: traffic_sign=DE:276,1040-10[6-21]. In Kombination mit Zeichen 276 Überholverbot in der Zeit von 6-21 Uhr: overtaking:conditional=no @ (06:00-21:00) In Kombination mit Zeichen 274-80 zulässige Höchstgeschwindigkeit in der Zeit von 22-6 Uhr: maxspeed:conditional=80 @ (22:00-06:00) In Kombination mit Zeichen 314 und Zeichen 1040-32 Parkplatz, Parkscheibe 2 Stunden in der Zeit von 16-18 Uhr: maxstay=2 hours maxstay:conditional=no @ (18:00-16:00) oder maxstay:conditional=2 hours @ (16:00-18:00)"
-	},
-	{
-		"sign": "DE:1040-32",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Zusatzzeichen_1040-32_-_Parkscheibe_2_Stunden%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1040-32_-_Parkscheibe_2_Stunden,_StVO_1992.svg",
-		"name": "Parkscheibe 2 Stunden",
-		"osmTags": ["traffic_sign=DE:1040-32", "maxstay=2 hours"],
-		"comments": "In Kombination mit Zeichen 314 Parkplatz: amenity=parking + maxstay=2 hours"
-	},
-	{
-		"sign": "DE:1048-14",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Zusatzzeichen_1048-14_-_nur_Sattelkraftfahrzeuge%2C_StVO_1992.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1048-14_-_nur_Sattelkraftfahrzeuge,_StVO_1992.svg",
-		"name": "nur Sattelkraftfahrzeuge",
-		"osmTags": [
-			"traffic_sign=DE:1048-14",
-			"access:hgv_articulated=*",
-			"oder",
-			"maxspeed:hgv_articulated=*"
-		],
-		"comments": "In Kombination mit Zeichen 253 als Verbot für Sattelkraftfahrzeuge über 3,5 t.Als Knoten traffic_sign=DE:253,1048-14, als Linie access:hgv_articulated=no In Kombination mit Zeichen 274 als zulässige Höchstgeschwindigkeit nur für Sattelkraftfahrzeuge.Als Knoten traffic_sign=DE:274-60,1048-14, als Linie maxspeed:hgv_articulated=60"
-	},
-	{
-		"sign": "DE:1060-33",
-		"imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Zusatzzeichen_1060-33_-_Massenangabe_-_2%2C8_t%2C_StVO_2017.svg",
-		"imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1060-33_-_Massenangabe_-_2,8_t,_StVO_2017.svg",
-		"name": "Massenangabe - 2,8 t",
-		"osmTags": [],
-		"comments": "Nur für Erweiterung des Überholverbots für Kfz ab 3,5t zGM auf Kfz ab 2,8t zGM verwendet. Nur in Kombination mit overtaking:hgv:conditional=no @ (maxweight>2.8)"
-	}
+  {
+    "sign": "DE:103-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Zeichen_103-20_-_Kurve_%28rechts%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_103-20_-_Kurve_(rechts),_StVO_1992.svg",
+    "name": "Kurve rechts",
+    "osmTags": ["hazard=curve"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:108[-10]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Zeichen_108-56_Gef%C3%A4lle%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_108-56_Gef%C3%A4lle,_StVO_1992.svg",
+    "name": "Gefälle 10 %",
+    "osmTags": ["incline=-10%"],
+    "comments": "analog bei Steigungen der Weg ist mit Key:incline zu versehen (Richtungspfeil zeigt Steigung an) nicht zu verwechseln mit dem Zeichen 108-10, dessen Unternummer dem angegebenen Zahlwert entspricht"
+  },
+  {
+    "sign": "DE:124",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Zeichen_124_-_Stau%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_124_-_Stau,_StVO_1992.svg",
+    "name": "Staugefahr",
+    "osmTags": ["hazard=queues_likely"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:123",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Zeichen_123_-_Baustelle%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_123_-_Baustelle,_StVO_1992.svg",
+    "name": "Arbeitsstelle",
+    "osmTags": ["highway=construction", "construction=value des ways", "z.B. primary"],
+    "comments": "Key:construction wird als (noch) nicht für den Verkehr nutzbar betrachtet und gestrichelt gerendert. Eine Baustelle, die den Verkehr nicht völlig blockiert, ist damit nicht gemeint."
+  },
+  {
+    "sign": "DE:131",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/45/Zeichen_131_-_Lichtzeichenanlage%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_131_-_Lichtzeichenanlage,_StVO_1970.svg",
+    "name": "Lichtzeichenanlage",
+    "osmTags": ["hazard=traffic_signals"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:133-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Zeichen_133-10_-_Fu%C3%9Fg%C3%A4nger_%28Aufstellung_rechts%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_133-10_-_Fu%C3%9Fg%C3%A4nger_(Aufstellung_rechts),_StVO_1992.svg",
+    "name": "Vorsicht, Fußgänger! – Aufstellung rechts",
+    "osmTags": ["hazard=pedestrians"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:136-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/Zeichen_136-10_-_Kinder%2C_Aufstellung_rechts%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_136-10_-_Kinder,_Aufstellung_rechts,_StVO_1992.svg",
+    "name": "Vorsicht, Kinder! – Aufstellung rechts",
+    "osmTags": ["hazard=children"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:138-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Zeichen_138-10_-_Radverkehr%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_138-10_-_Radverkehr,_StVO_2013.svg",
+    "name": "Radverkehr – Aufstellung rechts",
+    "osmTags": ["hazard=cyclists"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:142-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/Zeichen_142-10_-_Wildwechsel%2C_Aufstellung_rechts%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_142-10_-_Wildwechsel,_Aufstellung_rechts,_StVO_1992.svg",
+    "name": "Wildwechsel – Aufstellung rechts",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:201",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Zeichen_201_%E2%80%93_Andreaskreuz_%E2%80%93_Dem_Schienenverkehr_Vorrang_gew%C3%A4hren%21_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_201_%E2%80%93_Andreaskreuz_%E2%80%93_Dem_Schienenverkehr_Vorrang_gew%C3%A4hren!_StVO_1970.svg",
+    "name": "",
+    "osmTags": [
+      "railway=level_crossing",
+      "(bei Kreuzungen mit Straßen)",
+      "railway=crossing",
+      "(bei Übergängen für Fußgänger)"
+    ],
+    "comments": "Key:crossing"
+  },
+  {
+    "sign": "DE:205",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Zeichen_205_-_Vorfahrt_gew%C3%A4hren%21_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg",
+    "name": "Vorfahrt gewähren",
+    "osmTags": ["highway=give_way"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:206",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Zeichen_206.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_206.svg",
+    "name": "Halt! Vorfahrt gewähren",
+    "osmTags": ["highway=stop"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:208",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/89/Zeichen_208_-_Dem_Gegenverkehr_Vorrang_gew%C3%A4hren%21_600x600%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_208_-_Dem_Gegenverkehr_Vorrang_gew%C3%A4hren!_600x600,_StVO_1992.svg",
+    "name": "Vorrang des Gegenverkehrs",
+    "osmTags": ["priority=backward", "(oder", "priority=forward)"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:209",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zeichen_209-20_-_Vorgeschriebene_Fahrtrichtung%2C_rechts%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_209-20_-_Vorgeschriebene_Fahrtrichtung,_rechts,_StVO_1992.svg",
+    "name": "",
+    "osmTags": ["type=restriction", "restriction=no_turn…", "bzw.", "restriction=only_turn…"],
+    "comments": "nach diesem Schema analog für Gebote/Verbote für andere Richtungen"
+  },
+  {
+    "sign": "DE:215",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Zeichen_215_-_Kreisverkehr%2C_StVO_2000.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_215_-_Kreisverkehr,_StVO_2000.svg",
+    "name": "",
+    "osmTags": ["junction=roundabout", "highway=mini_roundabout"],
+    "comments": "oneway im Kreisverkehr wird automatisch angenommen mini_roundabouts (Kreisverkehre ohne bauliche Begrenzung in der Mitte) haben in Deutschland meist keine Beschilderung."
+  },
+  {
+    "sign": "DE:220-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/Zeichen_220-10_-_Einbahnstra%C3%9Fe%2C_linksweisend%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_220-10_-_Einbahnstra%C3%9Fe,_linksweisend,_StVO_2017.svg",
+    "name": "Einbahnstraße – linksweisend",
+    "osmTags": ["oneway=yes"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:220-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/94/Zeichen_220-20_-_Einbahnstra%C3%9Fe%2C_rechtsweisend%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_220-20_-_Einbahnstra%C3%9Fe,_rechtsweisend,_StVO_2017.svg",
+    "name": "Einbahnstraße – rechtsweisend",
+    "osmTags": ["oneway=yes"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:224",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Zeichen_224.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_224.svg",
+    "name": "Haltestelle",
+    "osmTags": [
+      "public_transport=stop_position",
+      "auf der Straße und",
+      "public_transport=platform",
+      "neben der Straße",
+      "amenity=bus_station",
+      "(Busbahnhof)",
+      "name=Name der Haltestelle"
+    ],
+    "comments": "Buslinien sollten als Relation:route gekennzeichnet werden."
+  },
+  {
+    "sign": "DE:229",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/22/Zeichen_229_-_Taxenstand%2C_StVO_1994.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_229_-_Taxenstand,_StVO_1994.svg",
+    "name": "Taxenstand",
+    "osmTags": ["amenity=taxi"],
+    "comments": "Taxistand"
+  },
+  {
+    "sign": "DE:242.2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Zeichen_242.2_-_Ende_einer_Fu%C3%9Fg%C3%A4ngerzone%2C_StVO_2009.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_242.2_-_Ende_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg",
+    "name": "Ende einer Fußgängerzone",
+    "osmTags": ["highway=pedestrian"],
+    "comments": "Wird für alle Straßen in der Zone eingetragen. Veraltete Zeichenkennung DE:243"
+  },
+  {
+    "sign": "DE:244.2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Zeichen_244.2_-_Ende_einer_Fahrradstra%C3%9Fe%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_244.2_-_Ende_einer_Fahrradstra%C3%9Fe,_StVO_2013.svg",
+    "name": "Ende einer Fahrradstraße",
+    "osmTags": [
+      "highway=*",
+      "bicycle_road=yes",
+      "bicycle=designated",
+      "footway=sidewalk",
+      "maxspeed=30",
+      "(seit StVO-Novelle vom 1.9.2009)",
+      "motor_vehicle=destination",
+      "(Zusatzzeichen 1020-30)",
+      "motor_vehicle=yes"
+    ],
+    "comments": "OSM-Cycleway impliziert: bicycle=designated + motor_vehicle=no) Veraltete Zeichenkennung DE:244a highway=* - Für den Wert spielt es keine Rolle, ob es sich um eine Fahrradstraße handelt oder nicht. Er wird so gewählt, wie es dem Ausbauzustand und der Verkehrsbedeutung der Straße am ehesten gerecht wird. highway=residential für Fahrradstraßen, die sich kaum von den umgebenen Straßen im Wohngebiet abheben, d.h. mit breiter Fahrbahn und (meistens) Gehweg. Ein Zusatzschild „Anlieger frei\" oder „KFZ frei\" ist ein gutes Indiz dafür, dass highway=residential geeignet ist. highway=path für Straßen, die von der Breite und Anlage eher einem gemeinsamen Fahrrad- und Fußweg entsprechen. Außerdem kann dies verwendet werden, wenn die Straße nicht von Kraftfahrzeugen befahren werden darf. Außerdem können highway=service vorkommen, oder es kann bei exklusiv für Fahrräder beschränkten Straßen highway=cycleway in Frage kommen. Siehe auch DE:Key:bicycle_road"
+  },
+  {
+    "sign": "DE:257-52",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Zeichen_257_-_Gespannfuhrwerke%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257_-_Gespannfuhrwerke,_StVO_1970.svg",
+    "name": "Verbot für Gespannfuhrwerke",
+    "osmTags": ["carriage=no"],
+    "comments": "ehemals Zeichen 257"
+  },
+  {
+    "sign": "DE:257-56",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Zeichen_257-56_-_Verbot_f%C3%BCr_Personenkraftwagen_mit_Anh%C3%A4nger%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257-56_-_Verbot_f%C3%BCr_Personenkraftwagen_mit_Anh%C3%A4nger,_StVO_2017.svg",
+    "name": "Verbot für Personenkraftwagen mit Anhänger",
+    "osmTags": ["trailer=no"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:257-58",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Zeichen_257-58_-_Verbot_f%C3%BCr_Kraftfahrzeuge_und_Z%C3%BCge%2C_die_nicht_schneller_als_25_km-h_fahren_k%C3%B6nnen_oder_d%C3%BCrfen%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_257-58_-_Verbot_f%C3%BCr_Kraftfahrzeuge_und_Z%C3%BCge,_die_nicht_schneller_als_25_km-h_fahren_k%C3%B6nnen_oder_d%C3%BCrfen,_StVO_2017.svg",
+    "name": "Verbot für Kraftfahrzeuge und Züge, die nicht schneller als 25 km/h fahren\n\t\t\t\t\t\t\t\t\t\t\t\tkönnen oder dürfen",
+    "osmTags": ["agricultural=no"],
+    "comments": "Einführung 2017; Passendes Tagging sollte diskutiert werden!"
+  },
+  {
+    "sign": "DE:267",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zeichen_267_-_Verbot_der_Einfahrt%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg",
+    "name": "Verbot der Einfahrt",
+    "osmTags": ["oneway=yes"],
+    "comments": "Achtung bei sog. unechten Einbahnstraßen: In den Fällen, in denen dieses Zeichen die Einfahrt in eine Straße verbietet, die nicht Einbahnstraße ist – eine so genannte unechte Einbahnstraße – gibt es zwei Möglichkeiten: Bevorzugte Variante: Idealerweise sollte eine Restriction-Relation verwendet werden. Der Tag innerhalb der Relation ist dann in der Regel restriction=no_entry. Zu beachten ist gegebenenfalls auch der tag except=* an der Relation, um Ausnahmen (z.B. für Fahrradfahrer oder Linienverkehr) zu mappen. Oder es sollte ein kleines Wegstück mit \"oneway=yes\" eingezeichnet werden, die restliche Straße trägt dann kein \"oneway\"-Attribut."
+  },
+  {
+    "sign": "DE:270.1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zeichen_270.1_-_Beginn_eines_Verkehrsverbots_zur_Verminderung_sch%C3%A4dlicher_Luftverunreinigungen_in_einer_Zone._I%2C_StVO_2007.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_270.1_-_Beginn_eines_Verkehrsverbots_zur_Verminderung_sch%C3%A4dlicher_Luftverunreinigungen_in_einer_Zone._I,_StVO_2007.svg",
+    "name": "",
+    "osmTags": ["type=LEZ"],
+    "comments": "Weitere Infos dazu bitte unter Umweltzone nachlesen. Wird nur in Kombination mit Zusatzzeichen 270.1 verwendet."
+  },
+  {
+    "sign": "DE:272",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Zeichen_272%2C_Verbot_des_Wendens%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_272,_Verbot_des_Wendens,_StVO_1992.svg",
+    "name": "Verbot des Wendens",
+    "osmTags": ["DE:Relation:restriction"],
+    "comments": ""
+  },
+  {
+    "sign": "DE:274-60traffic_sign",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/63/Zeichen_274-60_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274-60_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg",
+    "name": "Zulässige Höchst­geschwindigkeit",
+    "osmTags": ["maxspeed=*", "maxspeed:type=sign", "source:maxspeed=*"],
+    "comments": "Angabe der Höchstgeschwindigkeit in km/h. Falls für verschiedene Fahrtrichtungen unterschiedliche Höchstgeschwindigkeiten gelten, dann maxspeed:forward=* und maxspeed:backward=* nutzen. Siehe auch: Proposed features/maxspeed none, Proposed features/ref speed.  Seit 2017 entspricht die Unternummer dem angegebenen Zahlwert. Die Notwendigkeit eckiger Klammern als Schlüsselwerte zu benutzen entfällt, wird jedoch weiterhin alternativ angewendet. Zeichen DE:274-5 Zulässige Höchstgeschwindigkeit 5 km/h Zeichen DE:274-10 Zulässige Höchstgeschwindigkeit 10 km/h Zeichen DE:274-20 Zulässige Höchstgeschwindigkeit 20 km/h Zeichen DE:274-30 Zulässige Höchstgeschwindigkeit 30 km/h Zeichen DE:274-40 Zulässige Höchstgeschwindigkeit 40 km/h Zeichen DE:274-50 Zulässige Höchstgeschwindigkeit 50 km/h Zeichen DE:274-60 Zulässige Höchstgeschwindigkeit 60 km/h Zeichen DE:274-70 Zulässige Höchstgeschwindigkeit 70 km/h Zeichen DE:274-80 Zulässige Höchstgeschwindigkeit 80 km/h Zeichen DE:274-90 Zulässige Höchstgeschwindigkeit 90 km/h Zeichen DE:274-100 Zulässige Höchstgeschwindigkeit 100 km/h Zeichen DE:274-110 Zulässige Höchstgeschwindigkeit 110 km/h Zeichen DE:274-120 Zulässige Höchstgeschwindigkeit 120 km/h Zeichen DE:274-130 Zulässige Höchstgeschwindigkeit 130 km/h Hinweis: Anstelle der aktuellen Zeichen 274-5, 274-90 und 274-110 werden aufgrund fehlender Bildvorlagen in obiger Tabelle historische Verkehrszeichen dargestellt. Zulässige Höchstgeschwindigkeit 5 km/hZulässige Höchstgeschwindigkeit 10 km/hZulässige Höchstgeschwindigkeit 20 km/hZulässige Höchstgeschwindigkeit 30 km/hZulässige Höchstgeschwindigkeit 40 km/hZulässige Höchstgeschwindigkeit 50 km/hZulässige Höchstgeschwindigkeit 60 km/hZulässige Höchstgeschwindigkeit 70 km/hZulässige Höchstgeschwindigkeit 80 km/hZulässige Höchstgeschwindigkeit 90 km/hZulässige Höchstgeschwindigkeit 100 km/hZulässige Höchstgeschwindigkeit 110 km/hZulässige Höchstgeschwindigkeit 120 km/hZulässige Höchstgeschwindigkeit 130 km/h"
+  },
+  {
+    "sign": "DE:274.1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg",
+    "name": "Beginn einer Tempo 30-Zone",
+    "osmTags": [
+      "maxspeed=30",
+      "und",
+      "source:maxspeed=DE:zone30",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:30",
+      "alternativ",
+      "zone:maxspeed=DE:30",
+      "source:maxspeed=DE:zone30",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:30",
+      "alternativ",
+      "zone:maxspeed=DE:30"
+    ],
+    "comments": "Die Attribute sollten für jede Straße in der 30er-Zone gesetzt werden. Zur Angabe des Grundes der Höchstgeschwindigkeit sind verschiedene Tags möglich."
+  },
+  {
+    "sign": "DE:274.1-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_%28einseitig%29%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg",
+    "name": "Beginn einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen -\n\t\t\t\t\t\t\t\t\t\t\t\teinseitig",
+    "osmTags": [
+      "maxspeed=20",
+      "und",
+      "source:maxspeed=DE:zone20",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:20",
+      "alternativ",
+      "zone:maxspeed=DE:20",
+      "source:maxspeed=DE:zone20",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:20",
+      "alternativ",
+      "zone:maxspeed=DE:20"
+    ],
+    "comments": "Die Attribute sollten für jede Straße in der 20er-Zone gesetzt werden. Zur Angabe des Grundes der Höchstgeschwindigkeit sind verschiedene Tags möglich."
+  },
+  {
+    "sign": "DE:274.1traffic_sign",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg",
+    "name": "Beginn einer Tempo 30-Zone - doppelseitig (Rückseite Z 274.2)",
+    "osmTags": [
+      "maxspeed=30",
+      "und",
+      "source:maxspeed=DE:zone30",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:30",
+      "alternativ",
+      "zone:maxspeed=DE:30",
+      "source:maxspeed=DE:zone30",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:30",
+      "alternativ",
+      "zone:maxspeed=DE:30"
+    ],
+    "comments": "Das Verkehrszeichen 274.1-40 ist eine Zusammenfassung der Zeichen 274.1 und 274.2. Das Verkehrszeichen 274-40 sollte getrennt in dessen Einzelzeichen 274.1 und 274.2 erfasst werden, um die Blickrichtungen eindeutig festlegen zu können."
+  },
+  {
+    "sign": "DE:274.1-20traffic_sign",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_%28einseitig%29%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg",
+    "name": "Beginn einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen -\n\t\t\t\t\t\t\t\t\t\t\t\tdoppelseitig (Rückseite Z 274.2-20)",
+    "osmTags": [
+      "maxspeed=20",
+      "und",
+      "source:maxspeed=DE:zone20",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:20",
+      "alternativ",
+      "zone:maxspeed=DE:20",
+      "source:maxspeed=DE:zone20",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:20",
+      "alternativ",
+      "zone:maxspeed=DE:20"
+    ],
+    "comments": "Das Verkehrszeichen 274.1-41 ist eine Zusammenfassung der Zeichen 274.1-20 und 274.2-20. Das Verkehrszeichen 274-41 sollte getrennt in dessen Einzelzeichen 274.1-20 und 274.2-20 erfasst werden, um die Blickrichtungen eindeutig festlegen zu können."
+  },
+  {
+    "sign": "DE:274.2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/14/Zeichen_274.2_-_Ende_einer_Tempo_30-Zone_%28einseitig%29%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.2_-_Ende_einer_Tempo_30-Zone_(einseitig),_StVO_2013.svg",
+    "name": "Ende einer Tempo 30-Zone",
+    "osmTags": [
+      "maxspeed=30",
+      "und",
+      "source:maxspeed=DE:zone30",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:30",
+      "alternativ",
+      "zone:maxspeed=DE:30",
+      "source:maxspeed=DE:zone30",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:30",
+      "alternativ",
+      "zone:maxspeed=DE:30"
+    ],
+    "comments": "Die Attribute sollten für jede Straße in der 30er-Zone gesetzt werden. Zur Angabe des Grundes der Höchstgeschwindigkeit sind verschiedene Tags möglich."
+  },
+  {
+    "sign": "DE:274.2-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Zeichen_274.2-20_-_Ende_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_%28einseitig%29%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.2-20_-_Ende_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg",
+    "name": "Ende einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen",
+    "osmTags": [
+      "maxspeed=20",
+      "und",
+      "source:maxspeed=DE:zone20",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:20",
+      "alternativ",
+      "zone:maxspeed=DE:20",
+      "source:maxspeed=DE:zone20",
+      "oder",
+      "source:maxspeed=DE:zone",
+      "oder",
+      "source:maxspeed=DE:zone:20",
+      "alternativ",
+      "zone:maxspeed=DE:20"
+    ],
+    "comments": "Die Attribute sollten für jede Straße in der 20er-Zone gesetzt werden. Zur Angabe des Grundes der Höchstgeschwindigkeit sind verschiedene Tags möglich."
+  },
+  {
+    "sign": "DE:275-30traffic_sign",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg",
+    "name": "Vorgeschriebene Mindestgeschwindigkeit",
+    "osmTags": ["minspeed:lanes=*"],
+    "comments": "Dieses Verkehrszeichen wird nur außerhalb geschlossener Ortschaften fahrstreifenbezogen, niemals aber auf dem rechten von mehreren Fahrstreifen, angeordnet. DE:275 wird daher immer als Bestandteil von DE:525 oder DE:526 anzutreffen sein. Die Unternummer bestimmt die vorgeschriebene Mindestgeschwindigkeit, zum Beispiel traffic_sign=DE:275-80 für eine Mindestgeschwindigkeit von 80 km/h."
+  },
+  {
+    "sign": "DE:277.1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Zeichen_277.1_-_Verbot_des_%C3%9Cberholens_von_einspurigen_Fahrzeugen_f%C3%BCr_mehrspurige_Kraftfahrzeuge_und_Kraftr%C3%A4dern_mit_Beiwagen%3B_StVO_2020.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_277.1_-_Verbot_des_%C3%9Cberholens_von_einspurigen_Fahrzeugen_f%C3%BCr_mehrspurige_Kraftfahrzeuge_und_Kraftr%C3%A4dern_mit_Beiwagen;_StVO_2020.svg",
+    "name": "Verbot des Überholens von einspurigen Fahrzeugen für mehrspurige\n\t\t\t\t\t\t\t\t\t\t\t\tKraftfahrzeuge und Krafträder mit Beiwagen",
+    "osmTags": [],
+    "comments": "Für dieses relativ neue Schild hat sich noch kein Tagging-Schema etabliert. overtaking:motorcar=no kommt der intention wahrscheinlich relativ nahe, siehe [1] und DE talk:Key:overtaking."
+  },
+  {
+    "sign": "DE:278-70",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/50/Zeichen_278-57.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_278-57.svg",
+    "name": "Ende der zulässigen Höchst­geschwindigkeit",
+    "osmTags": ["traffic_sign=DE:278-70", "maxspeed=implicit"],
+    "comments": "Falls für verschiedene Fahrtrichtungen unterschiedliche Höchstgeschwindigkeiten gelten, dann maxspeed:forward=* und maxspeed:backward=* nutzen. Siehe auch: Proposed features/maxspeed none, Proposed features/ref speed.  Seit 2017 entspricht die Unternummer der Verkehrszeichenkennnummer dem angegebenen Zahlwert. DE:278-5 Ende der zulässigen Höchstgeschwindigkeit 5 km/h DE:278-10 Ende der zulässigen Höchstgeschwindigkeit 10 km/h DE:278-20 Ende der zulässigen Höchstgeschwindigkeit 20 km/h DE:278-30 Ende der zulässigen Höchstgeschwindigkeit 30 km/h DE:278-40 Ende der zulässigen Höchstgeschwindigkeit 40 km/h DE:278-50 Ende der zulässigen Höchstgeschwindigkeit 50 km/h DE:278-60 Ende der zulässigen Höchstgeschwindigkeit 60 km/h DE:278-70 Ende der zulässigen Höchstgeschwindigkeit 70 km/h DE:278-80 Ende der zulässigen Höchstgeschwindigkeit 80 km/h DE:278-90 Ende der zulässigen Höchstgeschwindigkeit 90 km/h DE:278-100 Ende der zulässigen Höchstgeschwindigkeit 100 km/h DE:278-110 Ende der zulässigen Höchstgeschwindigkeit 110 km/h DE:278-120 Ende der zulässigen Höchstgeschwindigkeit 120 km/h DE:278-130 Ende der zulässigen Höchstgeschwindigkeit 130 km/h Hinweis: Anstelle der aktuellen Zeichen 278-5 bis 278-40 und 278-80 bis 278-130 werden aufgrund fehlender Bildvorlagen in obiger Tabelle historische Verkehrszeichen dargestellt. Ende der zulässigen Höchstgeschwindigkeit 5 km/hEnde der zulässigen Höchstgeschwindigkeit 10 km/hEnde der zulässigen Höchstgeschwindigkeit 20 km/hEnde der zulässigen Höchstgeschwindigkeit 30 km/hEnde der zulässigen Höchstgeschwindigkeit 40 km/hEnde der zulässigen Höchstgeschwindigkeit 50 km/hEnde der zulässigen Höchstgeschwindigkeit 60 km/hEnde der zulässigen Höchstgeschwindigkeit 70 km/hEnde der zulässigen Höchstgeschwindigkeit 80 km/hEnde der zulässigen Höchstgeschwindigkeit 90 km/hEnde der zulässigen Höchstgeschwindigkeit 100 km/hEnde der zulässigen Höchstgeschwindigkeit 110 km/hEnde der zulässigen Höchstgeschwindigkeit 120 km/hEnde der zulässigen Höchstgeschwindigkeit 130 km/h"
+  },
+  {
+    "sign": "DE:282",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Zeichen_282_-_Ende_s%C3%A4mtlicher_Streckenverbote%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_282_-_Ende_s%C3%A4mtlicher_Streckenverbote,_StVO_1970.svg",
+    "name": "Ende sämtlicher streckenbezogen­er Geschwindigkeits­beschränkungen und\n\t\t\t\t\t\t\t\t\t\t\t\tÜberholverbote",
+    "osmTags": ["traffic_sign=DE:282", "maxspeed=implicit", "overtaking=yes"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:293",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/65/Zeichen_293_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_293_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg,_StVO_1970.svg",
+    "name": "Fußgängerüberweg",
+    "osmTags": ["highway=crossing"],
+    "comments": "Die feinere Klassifizierung befindet sich unter DE:Key:crossing."
+  },
+  {
+    "sign": "DE:295",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung,_StVO_1970.svg",
+    "name": "Fahrstreifenbegrenzung und Fahrbahnbegrenzung",
+    "osmTags": ["change:lanes=no|no"],
+    "comments": "Regeln, wie die Werte für lanes zu bestimmen sind, wird in DE:Fahrspuren beschrieben. Anwendbare Werte sind yes, no, not_right, not_left, only_right, only_left"
+  },
+  {
+    "sign": "DE:296",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Zeichen_296_-_Einseitige_Fahrstreifenbegrenzung%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_296_-_Einseitige_Fahrstreifenbegrenzung,_StVO_1970.svg",
+    "name": "Einseitige Fahrstreifenbegrenzung",
+    "osmTags": ["change:lanes=yes|no"],
+    "comments": "Regeln, wie die Werte für lanes zu bestimmen sind, wird in DE:Fahrspuren beschrieben. Anwendbare Werte sind yes, no, not_right, not_left, only_right, only_left"
+  },
+  {
+    "sign": "DE:297",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Zeichen_297_-_Richtungspfeile%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_297_-_Richtungspfeile,_StVO_1970.svg",
+    "name": "Pfeilmarkierungen / Richtungspfeile",
+    "osmTags": ["turn=*", "turn:lanes=*", "turn:lanes:forward=*", "turn:lanes:backward=*"],
+    "comments": "Eine ausführliche Anleitung zur Pfeilmarkierung auf Straßenoberflächen findet sich in DE:Key:turn und DE:Key:turn:lanes In der Regel sollen Pfeilmarkierungen nur in dem Straßenabschnitt eingetragen werden, für den sie gelten. Zur Verdeutlichung einer Navigationsanzeige kann auf Verbindungswegen (Highway Links), die unmittelbar einem Fahrstreifen mit Pfeilmarkierung folgt, eine Richtungsangabe erfolgen. So kann auf einem Fahrstreifen mit turn:lanes=through;slight_right ein Verbindungsweg mit turn=right folgen. Eine Prüfung der Attribute kann mit dem grafischen Werkzeug OSM Lane Visualizer durchgeführt werden."
+  },
+  {
+    "sign": "DE:297.1-21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/Zeichen_297.1-21_-_Vorank%C3%BCndigungspfeil_zur_Anzeige_eines_Fahrstreifenendes%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_297.1-21_-_Vorank%C3%BCndigungspfeil_zur_Anzeige_eines_Fahrstreifenendes,_StVO_2017.svg",
+    "name": "Vorankündigungspfeil - zur Anzeige eines Fahrstreifenendes",
+    "osmTags": ["turn:lanes=merge_to_right|none"],
+    "comments": "Die Attribute turn:lanes=merge_to_right|none und turn:lanes=none|none|merge_to_left sind zur Ankündigung von Fahrstreifenenden üblich, auch ohne vorhandene Fahrbahnmarkierungen, zum Beispiel bei Beschleunigungsspuren an Autobahnen."
+  },
+  {
+    "sign": "DE:306",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Zeichen_306_-_Vorfahrtstra%C3%9Fe%2C_StVO_1970.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_306_-_Vorfahrtstra%C3%9Fe,_StVO_1970.svg",
+    "name": "Vorfahrtstraße",
+    "osmTags": ["priority_road=designated"],
+    "comments": "bzw. am Ende bei Zeichen 307 : priority_road=end"
+  },
+  {
+    "sign": "DE:308",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Zeichen_308_-_Vorrang_vor_dem_Gegenverkehr%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_308_-_Vorrang_vor_dem_Gegenverkehr,_StVO_1992.svg",
+    "name": "Vorrang vor dem Gegenverkehr",
+    "osmTags": ["priority=forward", "(oder", "priority=backward)"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:310",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/Zeichen_310-50_-_Ortstafel_%28Vorderseite%29_mit_Kreis%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_310-50_-_Ortstafel_(Vorderseite)_mit_Kreis,_StVO_1992.svg",
+    "name": "Ortstafel Vorderseite",
+    "osmTags": ["traffic_sign=city_limit", "name=*", "siehe Anmerkungen", "alt_name=*"],
+    "comments": "Straßennamen enden oft nicht am Ortsausgang, sondern an der Gemeinde- oder Ortsteilgrenze. Das Ortsschild ist immer ein node (Punkt). Den alt_name=* zu verwenden, wenn Ortslagen zweier Gemeinden aneinander grenzen, ist fragwürdig, weil dieses Tag normalerweise nicht ermöglicht, die Namen zweier Objekte einzutragen, sondern mehr als einen Namen für ein und dasselbe Objekt. Wenn alleinstehend bei einer in den Ort hineinführenden Einbahnstraße (oneway=yes) sind neben traffic_sign=city_limit zusätzlich city_limit=begin in Verwendung."
+  },
+  {
+    "sign": "DE:311",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Zeichen_311-50_-_Ortstafel_einseitig%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_311-50_-_Ortstafel_einseitig,_StVO_1992.svg",
+    "name": "Ortstafel Rückseite",
+    "osmTags": ["traffic_sign=city_limit", "name=*", "siehe Anmerkungen", "alt_name=*"],
+    "comments": "Straßennamen enden oft nicht am Ortsausgang, sondern an der Gemeinde- oder Ortsteilgrenze. Das Ortsschild ist immer ein node (Punkt). Den alt_name=* zu verwenden, wenn Ortslagen zweier Gemeinden aneinander grenzen, ist fragwürdig, weil dieses Tag normalerweise nicht ermöglicht, die Namen zweier Objekte einzutragen, sondern mehr als einen Namen für ein und dasselbe Objekt. Wenn alleinstehend bei einer aus dem Ort herausführenden Einbahnstraße (oneway=yes) sind neben traffic_sign=city_limit zusätzlich city_limit=end in Verwendung."
+  },
+  {
+    "sign": "DE:314",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/80/Zeichen_314-50_-_Parkplatz%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_314-50_-_Parkplatz,_StVO_2013.svg",
+    "name": "Parken",
+    "osmTags": [
+      "amenity=parking",
+      "name=*",
+      "ref=*",
+      "operator=*",
+      "parking=multi-storey/underground/surface",
+      "fee=yes/no",
+      "disabled_spaces=yes/no/Anzahl"
+    ],
+    "comments": "Zum Verkehrszeichen mit Kennung 314 gibt es weitere Varianten: traffic_sign=DE:314-10 Parken - Anfang (Aufstellung rechts) oder Ende (Aufstellung links) traffic_sign=DE:314-20 Parken - Ende (Aufstellung rechts) oder Anfang (Aufstellung links) traffic_sign=DE:314-30 Parken - Mitte (Aufstellung rechts oder links) traffic_sign=DE:314-50 Parkhaus, Parkgarage Parken - Anfang (Aufstellung rechts) oder Ende (Aufstellung links) Parken - Ende (Aufstellung rechts) oder Anfang (Aufstellung links) Parken - Mitte (Aufstellung rechts oder links)Parkhaus, Parkgarage"
+  },
+  {
+    "sign": "DE:316",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Zeichen_316_-_Parken_und_Reisen%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_316_-_Parken_und_Reisen,_StVO_1992.svg",
+    "name": "Parken und Reisen",
+    "osmTags": [
+      "amenity=parking",
+      "name=*",
+      "ref=*",
+      "operator=*",
+      "park_ride=yes/bus/metro/…",
+      "fee=yes/no",
+      "disabled_spaces=yes/no/Anzahl"
+    ],
+    "comments": "Es gibt auch noch einen anderen Vorschlag Proposed features/Park and Ride Zum Verkehrszeichen mit Kennung 316 gibt es eine weitere Variante: traffic_sign=DE:316-50 Parken und Mitfahren (Siehe auch amenity=car_pooling oder carpool=* (fr)) Parken und Mitfahren (Siehe auch amenity=car_pooling oder carpool=* (fr))"
+  },
+  {
+    "sign": "DE:325.1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs%2C_StVO_2009.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg",
+    "name": "Beginn eines verkehrsberuhigten Bereichs",
+    "osmTags": ["highway=living_street", "name=*"],
+    "comments": "maxspeed=* wird automatisch angenommen, muss nicht gesetzt werden. Siehe auch: OSM_tags_for_routing/Maxspeed#Germany"
+  },
+  {
+    "sign": "DE:325.2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Zeichen_325.2_-_Ende_eines_verkehrsberuhigten_Bereichs%2C_StVO_2009.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_325.2_-_Ende_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg",
+    "name": "Ende eines verkehrsberuhigten Bereichs",
+    "osmTags": ["highway=living_street", "name=*"],
+    "comments": "maxspeed=* wird automatisch angenommen, muss nicht gesetzt werden. Siehe auch: OSM_tags_for_routing/Maxspeed#Germany"
+  },
+  {
+    "sign": "DE:327",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Zeichen_327_-_Tunnel%2C_StVO_2006.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_327_-_Tunnel,_StVO_2006.svg",
+    "name": "Tunnel",
+    "osmTags": ["tunnel=yes", "layer=-1"],
+    "comments": "bei Bedarft auch layer=-2..."
+  },
+  {
+    "sign": "DE:328",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/63/Zeichen_328_-_Nothalte-_und_Pannenbucht%2C_StVO_2006.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_328_-_Nothalte-_und_Pannenbucht,_StVO_2006.svg",
+    "name": "Nothalte- und Pannenbucht",
+    "osmTags": ["highway=emergency_bay"],
+    "comments": "Zurzeit ist die Haltebucht oder Nothaltebucht nur vorgeschlagen, Proposed features/emergency bay."
+  },
+  {
+    "sign": "DE:330.1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/07/Zeichen_330.1_-_Autobahn%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_330.1_-_Autobahn,_StVO_2013.svg",
+    "name": "Autobahn",
+    "osmTags": ["highway=motorway", "highway=motorway_link"],
+    "comments": "Die Linien eines Weges, insbesondere bei Autobahnanschlussrampen (Motorway Link), sollen, aufgrund sich ändernder Verkehrsregeln, erst ab diesem Verkehrszeichen als highway=motorway bzw. highway=motorway_link gekennzeichnet werden. Die davor liegenden Linien erhalten die Kategorie der zuführenden Straße bzw. Verbindungswegs."
+  },
+  {
+    "sign": "DE:330.2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Zeichen_330.2_-_Ende_der_Autobahn%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg",
+    "name": "Ende der Autobahn",
+    "osmTags": [],
+    "comments": "Die Linien eines Weges, insbesondere bei Autobahnanschlussrampen (Motorway Link), sollen, aufgrund sich ändernder Verkehrsregeln, nur bis zu diesem Verkehrszeichen als highway=motorway bzw. highway=motorway_link gekennzeichnet werden. Nachfolgendene Straßenabschnitte entweder entsprechend der angezeigten Widmung oder entsprechend der Verkehrsbedeutung klassifiziert, siehe highway=*, z.B. highway=primary, highway=secondary, highway=tertiary usw."
+  },
+  {
+    "sign": "DE:331.1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zeichen_331.1_-_Kraftfahrstra%C3%9Fe%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_331.1_-_Kraftfahrstra%C3%9Fe,_StVO_2013.svg",
+    "name": "Kraftfahrstraße",
+    "osmTags": ["motorroad=yes"],
+    "comments": "Oft auch highway=trunk, aber es gibt viele Ausnahmen."
+  },
+  {
+    "sign": "DE:331.2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Zeichen_331.2_-_Ende_der_Kraftfahrstra%C3%9Fe%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_331.2_-_Ende_der_Kraftfahrstra%C3%9Fe,_StVO_2013.svg",
+    "name": "Ende der Kraftfahrstraße",
+    "osmTags": ["ohne", "motorroad=*", "oder", "motorroad=no"],
+    "comments": "Entweder ohne Merkmal motorroad=* oder motorroad=no"
+  },
+  {
+    "sign": "DE:333",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Zeichen_333_-_Pfeilschild_-_Ausfahrt_von_der_Autobahn%2C_StVO_1980.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_333_-_Pfeilschild_-_Ausfahrt_von_der_Autobahn,_StVO_1980.svg",
+    "name": "",
+    "osmTags": ["highway=motorway_link", "ref=ref der Autobahn"],
+    "comments": "analog bei \"gelben Autobahnen\" mit highway=trunk_link ref, bzw. name der Ausfahrt wird am Abzweigungspunkt angebracht, siehe Zeichen 406"
+  },
+  {
+    "sign": "DE:350-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/60/Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_%28rechts%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_350-10_-_Fu%C3%9Fg%C3%A4nger%C3%BCberweg_(rechts),_StVO_1992.svg",
+    "name": "Fußgängerüberweg - Aufstellung rechts",
+    "osmTags": ["highway=crossing", "crossing=uncontrolled", "crossing_ref=zebra"],
+    "comments": "Weitere Klassifizierungen findet sich unter DE:Key:crossing. Weitere Hinweise zum Verkehrszeichen sind unter DE:Key:traffic_sign=DE:350 zu finden. Zum Verkehrszeichen DE:350-10 gibt es weitere Varianten: traffic_sign=DE:350-20 Fußgängerüberweg - Aufstellung links / traffic_sign=DE:350-40 Fußgängerüberweg - doppelseitig (-10/ -20) Der eigenständige Knoten zum Verkehrszeichen DE:350-40 soll zur eindeutigen Kennzeichnung der Blickrichtung als traffic_sign=DE:350-10;350-20 mit den Blickrichtungen direction=35;215 (als Beispiel) erfasst werden. Fußgängerüberweg - Aufstellung linksFußgängerüberweg - doppelseitig (-10/ -20)"
+  },
+  {
+    "sign": "DE:353",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/44/Zeichen_353_-_Einbahnstra%C3%9Fe_%28600x600%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_353_-_Einbahnstra%C3%9Fe_(600x600),_StVO_1992.svg",
+    "name": "",
+    "osmTags": ["oneway=yes"],
+    "comments": "Abgeschafft mit StVO-Novelle 2013, für bereits aufgestellte Schilder gilt eine Übergangsfrist bis 31. Okt. 2022. Weiter gültig bleibt Zeichen 220."
+  },
+  {
+    "sign": "DE:355",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/df/Zeichen_355-10_-_Fu%C3%9Fg%C3%A4ngerunterf%C3%BChrung_einseitig%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_355-10_-_Fu%C3%9Fg%C3%A4ngerunterf%C3%BChrung_einseitig,_StVO_1992.svg",
+    "name": "",
+    "osmTags": ["highway=steps"],
+    "comments": "bei Über-/Unterführung entsprechend bridge=yes bzw. tunnel=yes und entsprechende Ebene"
+  },
+  {
+    "sign": "DE:357",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/88/Zeichen_357_-_Sackgasse%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_357_-_Sackgasse,_StVO_1992.svg",
+    "name": "Sackgasse",
+    "osmTags": ["traffic_sign=DE:357"],
+    "comments": "Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet werden. Um den letzten Punkt eines Weges, der auch nicht für Fußgänger oder andere Fortbewegungsmittel weitergeht, zu kennzeichnen, siehe How_to_map_a#Sackgasse. Sackgasse eintragen mit JOSM"
+  },
+  {
+    "sign": "DE:358",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/44/Zeichen_358_-_Erste_Hilfe%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_358_-_Erste_Hilfe,_StVO_1992.svg",
+    "name": "",
+    "osmTags": [],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:365-52",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/16/Zeichen_365-52_-_Tankstelle%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_365-52_-_Tankstelle,_StVO_2013.svg",
+    "name": "Tankstelle",
+    "osmTags": ["amenity=fuel", "name=*", "operator=*", "(Betreiber)"],
+    "comments": "Mit amenity=fuel wird die Tankstelle selbst erfasst. Das Schild bleibt in der Regel unberücksichtigt. Bis 1. April 2014 besaß dieses Zeichen mit ID 365-52 die veraltete Verkehrszeichenkennung 361-50. Zum Richtzeichen für Tankstellen gibt es weitere Varianten: traffic_sign=DE:365-53 Tankstelle mit Autogas fuel:lpg=yes traffic_sign=DE:365-54 Tankstelle mit Erdgas fuel:cng=yes traffic_sign=DE:365-65 Ladestation für Elektrofahrzeuge amenity=charging_station traffic_sign=DE:365-66 Wasserstofftankstelle fuel:LH2=yes Tankstelle mit AutogasTankstelle mit Erdgas Ladestation für Elektrofahrzeuge Wasserstofftankstelle"
+  },
+  {
+    "sign": "DE:380-52traffic_sign",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Zeichen_380-52_-_Richtgeschwindigkeit_80_km-h%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_380-52_-_Richtgeschwindigkeit_80_km-h,_StVO_1992.svg",
+    "name": "Richtgeschwindigkeit",
+    "osmTags": ["recommended_speed=*"],
+    "comments": "Anmerkungen siehe Proposed_features/ref_speed Am 1. April 2014 wurden wesentliche Teile der Straßenverkehrs-Ordnung (StVO) geändert und überflüssige Verkehrszeichen entfernt. Das Zeichen „Richtgeschwindigkeit“ wurde dabei ohne Ersatz gestrichen. Vorhandene Schilder bleiben bis zum 31. Oktober 2022 gültig, die Aufstellung neuer Schilder wird nicht mehr angeordnet. Zum Verkehrszeichen mit Kennung 380 gibt es eine weitere Variante: traffic_sign=DE:380-54 Richtgeschwindigkeit 100 km/h Richtgeschwindigkeit 100 km/h"
+  },
+  {
+    "sign": "DE:385",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Zeichen_385_-_Ortshinweistafel%2C_StVO_1988.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_385_-_Ortshinweistafel,_StVO_1988.svg",
+    "name": "Ortshinweistafel",
+    "osmTags": ["traffic_sign=DE:385", "name=*", "siehe Anmerkungen"],
+    "comments": "Straßennamen enden oft nicht am Ortsausgang, sondern an der Gemeinde- oder Ortsteilgrenze. Die Ortshinweistafel ist immer ein node (Punkt)."
+  },
+  {
+    "sign": "DE:386.3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/30/Zeichen_386.3_-_Touristische_Unterrichtungstafel_%282400x3600%29%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_386.3_-_Touristische_Unterrichtungstafel_(2400x3600),_StVO_2013.svg",
+    "name": "Touristische Unterrichtungstafel",
+    "osmTags": ["tourism=information", "information=board", "traffic_sign=DE:386.3", "name=*"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:401[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/42/Bundesstra%C3%9Fe_35_number.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Bundesstra%C3%9Fe_35_number.svg",
+    "name": "Bundesstraßen",
+    "osmTags": ["type=route", "route=road", "ref=B *"],
+    "comments": "siehe WikiProject Germany/Bundesstraßen Zwischen dem Buchstaben B und der Zahl ein Leerzeichen Die Relationen ergänzen die Erfassung mit ref=B * an der Linie."
+  },
+  {
+    "sign": "DE:405[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Bundesautobahn_999_number.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Bundesautobahn_999_number.svg",
+    "name": "Autobahnen",
+    "osmTags": ["type=route", "route=road", "ref=A *"],
+    "comments": "siehe WikiProject Germany/Autobahn zwischen dem Buchstaben A und der Zahl ein Leerzeichen Die Relationen ergänzen die Erfassung mit ref=A * an der Linie."
+  },
+  {
+    "sign": "DE:406[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Zeichen_406-50_-_Knotenpunkte_der_Autobahnen_%28ein-_oder_zweistellige_Nummer%29%2C_650x650%3B_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_406-50_-_Knotenpunkte_der_Autobahnen_(ein-_oder_zweistellige_Nummer),_650x650;_StVO_2013.svg",
+    "name": "Ausfahrt",
+    "osmTags": ["highway=motorway_junction", "name=Name der Ausfahrt", "ref=Nummer der Ausfahrt"],
+    "comments": "am Punkt, wo die highway=motorway_link abzweigt Kann auch für nicht-Autobahnen verwendet werden."
+  },
+  {
+    "sign": "DE:410[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Zeichen_410_-_Nummernschild_f%C3%BCr_Europastra%C3%9Fen%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_410_-_Nummernschild_f%C3%BCr_Europastra%C3%9Fen,_StVO_1992.svg",
+    "name": "Europastraße",
+    "osmTags": ["type=route", "route=road", "network=e-road", "ref=E *"],
+    "comments": "siehe WikiProject Europe/E-road network zwischen dem Buchstaben E und der Zahl ein Leerzeichen Die Relationen ergänzen die Erfassung mit int_ref=E * an der Linie."
+  },
+  {
+    "sign": "DE:437[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Zeichen_437.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_437.svg",
+    "name": "Straßennamenschild",
+    "osmTags": ["highway=*", "name=*"],
+    "comments": "Straßennamen enden meist am Ortsausgang Weitere Hinweise unter DE:Tag:traffic_sign=DE:437"
+  },
+  {
+    "sign": "DE:438",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Zeichen_438_-_Vorwegweiser%3B_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_438_-_Vorwegweiser;_StVO_1992.svg",
+    "name": "Vorwegweiser außerhalb von Autobahnen",
+    "osmTags": ["traffic_sign=DE:438"],
+    "comments": "Die Tafeln enthalten nutzbare Information, die als turn:lanes=* und als destination=* an den dafür passenden Stellen (siehe Skizzen bei DE:Key:destination#Schlüssel) erfasst werden."
+  },
+  {
+    "sign": "DE:439",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/50/Zeichen_439_-_Vorwegweiser%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_439_-_Vorwegweiser,_StVO_1992.svg",
+    "name": "Gegliederter Vorweg­weiser außerhalb von Autobahnen",
+    "osmTags": ["traffic_sign=DE:439"],
+    "comments": "Die Tafeln enthalten nutzbare Information, die als turn:lanes=* und als destination=* an den dafür passenden Stellen (siehe Skizzen bei DE:Key:destination#Schlüssel) erfasst werden."
+  },
+  {
+    "sign": "DE:448",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Zeichen_448_-_Ank%C3%BCndigungstafel_auf_Autobahnen%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_448_-_Ank%C3%BCndigungstafel_auf_Autobahnen,_StVO_1992.svg",
+    "name": "Ankündigungstafel",
+    "osmTags": ["traffic_sign=DE:448"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:449",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/71/Zeichen_449_-_Vorwegweiser_auf_Autobahnen_%28nach_RWBA%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_449_-_Vorwegweiser_auf_Autobahnen_(nach_RWBA),_StVO_1992.svg",
+    "name": "Vorwegweiser auf Autobahnen",
+    "osmTags": ["traffic_sign=DE:449"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:453",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Zeichen_453_-_Entfernungstafel_auf_Autobahnen%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_453_-_Entfernungstafel_auf_Autobahnen,_StVO_1992.svg",
+    "name": "Entfernungstafel",
+    "osmTags": ["traffic_sign=DE:453"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:455[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/Zeichen_455.1-30_-_Ank%C3%BCndigung_oder_Fortsetzung_der_Umleitung%2C_Vorank%C3%BCndigung_geradeaus%2C_StVO_2013.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_455.1-30_-_Ank%C3%BCndigung_oder_Fortsetzung_der_Umleitung,_Vorank%C3%BCndigung_geradeaus,_StVO_2013.svg",
+    "name": "Umleitung",
+    "osmTags": ["type=route", "route=detour", "ref=*"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:460[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/71/Zeichen_460-50_-_Bedarfsumleitung%2C_ohne_Pfeilsysmbol_%28900x600%29%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_460-50_-_Bedarfsumleitung,_ohne_Pfeilsysmbol_(900x600),_StVO_2017.svg",
+    "name": "Bedarfsumleitung",
+    "osmTags": ["type=route", "route=detour", "detour=A *", "name=U * (A *)", "ref=U *"],
+    "comments": "Anleitung zur Beschreibung von Bedarfsumleitungen in Germany/Bedarfsumleitung Bei detour=* wird die Referenznummer der Autobahn angegeben, zu der diese Bedarfsumleitung hinführt (detour=A 3) Bei name=* Wird die Referenznummer der Bedarfsumleitung und die Referenznummer der Autobahn, zu der diese Bedarfsumleitung hinführt, angegeben (name=U 17 (A 3)) Existieren mehrere Bedarfsumleitungen zu derselben Autobahnanschlussstelle, wird dem Namen der Anfangsbuchstaben eine der Himmelsrichtungen n, o, s oder w der Hauptverkehrsrichtung der abgehenden Autobahnanschlussstelle angegeben. So wird die Bedarfsumleitung Beginnend auf der A 7 Fahrtrichtung Norden zur A 6 Richtung Osten wie folgt benannt: name=U 1 (A 6) n Zum Verkehrszeichen mit Kennung 460 gibt es mehrere Varianten: traffic_sign=DE:460-10[22] Bedarfsumleitung, Vorankündigung links traffic_sign=DE:460-11[22] Bedarfsumleitung, hier links traffic_sign=DE:460-12[22] Bedarfsumleitung, links einordnen traffic_sign=DE:460-20[22] Bedarfsumleitung, Vorankündigung rechts traffic_sign=DE:460-21[22] Bedarfsumleitung, hier rechts traffic_sign=DE:460-22[22] Bedarfsumleitung, rechts einordnen traffic_sign=DE:460-30[22] Bedarfsumleitung, Vorankündigung geradeaus traffic_sign=DE:460-50[22] Bedarfsumleitung, ohne Pfeilsysmbol Bedarfsumleitung, Vorankündigung linksBedarfsumleitung, hier linksBedarfsumleitung, links einordnenBedarfsumleitung, Vorankündigung rechtsBedarfsumleitung, hier rechtsBedarfsumleitung, rechts einordnenBedarfsumleitung, Vorankündigung geradeausBedarfsumleitung, ohne Pfeilsysmbol"
+  },
+  {
+    "sign": "DE:525-31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Zeichen_525-31_-_Fahrstreifentafel_-_ohne_Gegenverkehr_mit_integriertem_Zeichen_275_-_dreistreifig_in_Fahrtrichtung_%281600x1250%29%3B_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_525-31_-_Fahrstreifentafel_-_ohne_Gegenverkehr_mit_integriertem_Zeichen_275_-_dreistreifig_in_Fahrtrichtung_(1600x1250);_StVO_2017.svg",
+    "name": "Fahrstreifentafel - ohne Gegenverkehr mit integrierten Zeichen 275",
+    "osmTags": ["minspeed:lanes=*"],
+    "comments": "Zum Eintragen der Linien-Eigenschaften sind in Bezug auf DE:525 lediglich die angeordneten Mindestgeschwindigkeiten der Zeichen DE:275 zu beachten. Bei dem hier gezeigten Verkehrschild DE:525-31 dreistreifig in Fahrtrichtung minspeed:lanes=80|50|none"
+  },
+  {
+    "sign": "DE:1000-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/04/Zusatzzeichen_1000-10_-_Richtungsangaben_durch_Pfeile%2C_linksweisend%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-10_-_Richtungsangaben_durch_Pfeile,_linksweisend,_StVO_1992.svg",
+    "name": "Richtung, linksweisend",
+    "osmTags": [
+      "entsprechend dem Hauptverkehrszeichen auf der folgenden Strecke in",
+      "angegebener Richtung"
+    ],
+    "comments": "Zu diesen richtungsweisenden Zusatzzeichen gibt es mehrere Varianten: DE:1000-11 Richtung der Gefahrstelle, linksweisend DE:1000-20 Richtung, rechtsweisend DE:1000-21 Richtung der Gefahrstelle, rechtsweisend DE:1000-30 Beide Richtungen, zwei gegengerichtete waagerechte Pfeile DE:1000-31 Beide Richtungen, zwei gegengerichtete senkrechte Pfeile Richtung der Gefahrstelle, linksweisendRichtung, rechtsweisendRichtung der Gefahrstelle, rechtsweisendBeide Richtungen, zwei gegengerichtete waagerechte PfeileBeide Richtungen, zwei gegengerichtete senkrechte Pfeile"
+  },
+  {
+    "sign": "DE:1000-12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Zusatzzeichen_1000-12_-_Fu%C3%9Fg%C3%A4nger_Gehweg_gegen%C3%BCber_benutzen%2C_linksweisend%3B_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-12_-_Fu%C3%9Fg%C3%A4nger_Gehweg_gegen%C3%BCber_benutzen,_linksweisend;_StVO_1992.svg",
+    "name": "Fußgänger Gehweg gegenüber benutzen, linksweisend",
+    "osmTags": ["ist der Fußweg ein- oder anderseitig der Straße weiterzuführen"],
+    "comments": "Dieses Zusatzzeichen sollte nur erfasst werden, wenn es dauerhaft oder absehbar für lange Zeit aufgestellt ist. Bei der Linieneigenschaft sidewalk=both ist je nach Linienrichtung zu sidewalk=left bzw. sidewalk=right wechseln. Eine Markierung eines Überwegs mittels highway=crossing kann angebracht sein. Sind beidseits der Straße eigene Linien für Fußgänger vorhanden, ist das Ende der einen Linie mit der anderen zu verbinden. Der Überweg sollte entsprechend der Situation mit highway=crossing markiert werden Dieses Zusatzzeichen wird oftmals auch ohne Hauptzeichen als Umleitungshinweis für Fußgänger verwendet. Weitere Variante: DE:1000-22 Fußgänger Gehweg gegenüber benutzen, rechtsweisend Fußgänger Gehweg gegenüber benutzen, rechtsweisend"
+  },
+  {
+    "sign": "DE:1000-13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Zusatzzeichen_1000-13_-_Richtungsangaben_durch_Pfeile%2C_Umleitungsbeschilderung_Dreiviertelkreis%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-13_-_Richtungsangaben_durch_Pfeile,_Umleitungsbeschilderung_Dreiviertelkreis,_StVO_2017.svg",
+    "name": "Umleitungsbeschilderung Dreiviertelkreis",
+    "osmTags": ["ist die Relation entsprechend des Zeichens zu führen"],
+    "comments": "Dieses Zusatzzeichen wird in Kombination mit folgenden Verkehrszeichen zur Kennzeichnung von besonderen Strecken verwendet:DE:460-50, DE:455.1-50, DE:442-50, DE:442-51, DE:460-52, DE:442-53 Bei der Relation kann der Kreisverkehr als Vollkreis oder als Kreisabschnitt ausgeführt werden, siehe Bus routes and roundabouts. Weitere Varianten: DE:1000-23 Umleitungsbeschilderung Viertelkreis DE:1000-34 Umleitungsbeschilderung Halbkreis Umleitungsbeschilderung ViertelkreisUmleitungsbeschilderung Halbkreis"
+  },
+  {
+    "sign": "DE:1000-32",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Zusatzzeichen_1000-32_-_Radfahrer_kreuzen_von_rechts_und_links%2C_StVO_1997.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-32_-_Radfahrer_kreuzen_von_rechts_und_links,_StVO_1997.svg",
+    "name": "Radverkehr kreuzt von links und rechts",
+    "osmTags": [
+      "+",
+      "highway=*",
+      "+",
+      "cycleway=track",
+      "+",
+      "oneway:bicycle=no",
+      "(Fahrbahnzusatztag)",
+      "+",
+      "highway=cycleway",
+      "+",
+      "oneway=no",
+      "+",
+      "highway=residential",
+      "+",
+      "cycleway=opposite",
+      "+",
+      "oneway:bicycle=no"
+    ],
+    "comments": "Zunächst nur vorgesehen, um In Verbindung mit Zeichen 205 oder 206 den Verkehr aus seitlichen Einmündungen vor einem Zweirichtungsradweg zu warnen. Seit 2013 korrekte Beschilderung bei freigegebenen Einbahnstraßen (statt vorher Zeichen 1000-33) unter dem Zeichen 220 .[2] Einzelne Verkehrsbehörden haben es schon vorher so gemacht."
+  },
+  {
+    "sign": "DE:1000-33",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/Zusatzzeichen_1000-33_-_Radverkehr_im_Gegenverkehr%2C_StVO_1997.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-33_-_Radverkehr_im_Gegenverkehr,_StVO_1997.svg",
+    "name": "Radverkehr im Gegenverkehr",
+    "osmTags": [
+      "cycleway=opposite",
+      "(ohne eigenen Radweg)",
+      "cycleway=opposite_lane",
+      "(eigene Spur)",
+      "cycleway=opposite_track",
+      "(eigener Weg, z.B. abgetrennt durch Bordstein)"
+    ],
+    "comments": "Seit 1. April 2017 ist dieses Verkehrszeichen DE:1000-33 zur Kennzeichnung von Einbahnstraßen, in denen der Radverkehr in Gegenrichtung zugelassen ist, ungültig. Statt dessen ist DE:1000-32 zu verwenden. Bei freigegebenen Einbahnstraßen in Verbindung mit (seit 2013 veraltet) und mit (alternativ zu ) Manchmal alternativ zu Zeichen 1000-31 unter dem , oder bei Zweirichtungsradwegen verwendet, um den rechtsseitigen vor dem entgegenkommenden Verkehr zu warnen. Seit 2013 ohne Hauptzeichen für die neu ermöglichten Zweirichtungsradwege ohne Benutzungspflicht."
+  },
+  {
+    "sign": "DE:1001-30",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Zusatzzeichen_1001-30_-_auf_..._m%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1001-30_-_auf_..._m,_StVO_1992.svg",
+    "name": "Auf ...m",
+    "osmTags": ["entsprechend dem Hauptverkehrszeichen auf der folgenden Strecke von … Metern"],
+    "comments": "Das Verkehrszeichen, auf welches sich dieses Zusatzzeichen bezieht, gilt nur für die folgende Strecke auf … Metern. Die durch das Verkehrszeichen eingesetzte Verhaltensvorschriften erlischt nach Zurücklegen dieser Strecke automatisch, ohne dass es einer besonderen Beschilderung bedarf. Findet Anwendung zum Beispiel bei Geschwindigkeitsbegrenzungen , Überholverboten , Gefahrzeichen Bei der Erfassung als Knoten ist die Entfernungsangabe im Wertefeld, wie auf dem Zeichen zu lesen, jedoch ohne die Einheit [m] anzugeben. Zum Beispiel als steckenbegrenztes Überholverbot mit traffic_sign=DE:276,1001-30[800]"
+  },
+  {
+    "sign": "DE:1001-31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/52/Zusatzzeichen_1001-31_-_auf_..._km_%28600x330%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1001-31_-_auf_..._km_(600x330),_StVO_1992.svg",
+    "name": "Auf ...km",
+    "osmTags": [
+      "entsprechend dem Hauptverkehrszeichen auf der folgenden Strecke von …",
+      "Kilometern"
+    ],
+    "comments": "Das Verkehrszeichen, auf welches sich dieses Zusatzzeichen bezieht, gilt nur für die folgende Strecke auf … Kilometern. Die durch das Verkehrszeichen eingesetzte Verhaltensvorschriften erlischt nach Zurücklegen dieser Strecke automatisch, ohne dass es einer besonderen Beschilderung bedarf. Findet Anwendung zum Beispiel bei Geschwindigkeitsbegrenzungen , Überholverboten , Gefahrzeichen Bei der Erfassung als Knoten ist die Entfernungsangabe im Wertefeld, wie auf dem Zeichen zu lesen, jedoch ohne die Einheit [km] anzugeben. Zum Beispiel bei Gefahrenhinweis auf querendes Wild traffic_sign=DE:142-10,1001-31[3]"
+  },
+  {
+    "sign": "DE:1004-30",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Zusatzzeichen_1004-30_-_nach_100_m%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1004-30_-_nach_100_m,_StVO_1992.svg",
+    "name": "Entfernungsangabe in m",
+    "osmTags": ["entsprechend dem Hauptverkehrszeichen erst … ab Metern Entfernung"],
+    "comments": "Das Verkehrszeichen, auf welches sich dieses Zusatzzeichen bezieht, gilt erst in einer Entfernung von … Metern. Die durch das Verkehrszeichen eingesetzte Verhaltensvorschriften tritt erst nach Zurücklegen dieser Strecke in Kraft. Findet als Ankündigungshinweis Anwendung zum Beispiel bei dem Verkehrszeichen Vorfahrt gewähren , Einengung von Fahrstreifen , Gefahrzeichen Bei der Erfassung als Knoten ist die Entfernungsangabe im Wertefeld, wie auf dem Zeichen zu lesen, jedoch ohne die Einheit [m] anzugeben. Zum Beispiel bei der Einengungstafel mit traffic_sign=DE:531,1004-30[100]"
+  },
+  {
+    "sign": "DE:1004-31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Zusatzzeichen_1004-31_-_in_..._km%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1004-31_-_in_..._km,_StVO_2017.svg",
+    "name": "Entfernungsangabe in km",
+    "osmTags": ["entsprechend dem Hauptverkehrszeichen erst … ab Kilometer Entfernung"],
+    "comments": "Das Verkehrszeichen, auf welches sich dieses Zusatzzeichen bezieht, gilt erst in einer Entfernung von … Kilometern. Die durch das Verkehrszeichen eingesetzte Verhaltensvorschriften tritt erst nach Zurücklegen dieser Strecke in Kraft. Findet als Ankündigungshinweis Anwendung zum Beispiel bei dem Verkehrszeichen für die maximal zulässige, tatsächliche Masse oder der maximal zulässigen, tatsächlichen Höhe . Bei der Erfassung als Knoten ist die Entfernungsangabe im Wertefeld, wie auf dem Zeichen zu lesen, jedoch ohne die Einheit [km] anzugeben. Zum Beispiel bei der maximal zulässigen, tatsächlichen Höhe mit traffic_sign=DE:265[3.8],1004-31[2]"
+  },
+  {
+    "sign": "DE:1010-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/37/Zusatzzeichen_1010-10_-_erlaubt_Kindern%2C_auch_auf_der_Fahrbahn_und_dem_Seitenstreifen_zu_spielen%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1010-10_-_erlaubt_Kindern,_auch_auf_der_Fahrbahn_und_dem_Seitenstreifen_zu_spielen,_StVO_1992.svg",
+    "name": "Spielende Kinder",
+    "osmTags": ["foot=designated"],
+    "comments": "Wird sehr selten eingesetzt. Ergibt mit eine Spielstraße. vehicle=no"
+  },
+  {
+    "sign": "DE:1012-32",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/Zusatzzeichen_1012-32_-_Radfahrer_absteigen_%28420x231%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1012-32_-_Radfahrer_absteigen_(420x231),_StVO_1992.svg",
+    "name": "Radfahrer absteigen",
+    "osmTags": ["bicycle=dismount"],
+    "comments": "Auf einer ausgeschilderten Radroute, oder zwischen zwei Radwegen, müssen Radfahrer sich ein kurzes Stück als Fußgänger fortbewegen - das heißt schieben. Wird meistens durch Zeichen 239 angezeigt. Das Zusatzzeichen 1012-32 „Radfahrer absteigen“ hat allein keine rechtliche Bindung."
+  },
+  {
+    "sign": "DE:1012-33",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Zusatzzeichen_1012-33_-_keine_Mofas_%28330x600%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1012-33_-_keine_Mofas_(330x600),_StVO_1992.svg",
+    "name": "keine Mofas",
+    "osmTags": ["mofa=no"],
+    "comments": "keine"
+  },
+  {
+    "sign": "DE:1014-50",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/57/Zusatzzeichen_1014-50_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_%28B%29%2C_StVO_2007.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-50_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(B),_StVO_2007.svg",
+    "name": "Tunnelkategorie gemäß ADR-Übereinkommen - B",
+    "osmTags": ["hazmat:B=no"],
+    "comments": "Kein Transport von Gefahrgütern, die zu einer sehr großen Explosion führen können. In Kombination mit zu Verwenden: Als Knoten traffic_sign=DE:261,1014-50, als Linie hazmat:B=no"
+  },
+  {
+    "sign": "DE:1014-51",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Zusatzzeichen_1014-51_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_%28C%29%2C_StVO_2007.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-51_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(C),_StVO_2007.svg",
+    "name": "Tunnelkategorie gemäß ADR-Übereinkommen - C",
+    "osmTags": ["hazmat:C=no"],
+    "comments": "Kein Transport von Gefahrgütern, die zu einer großen oder sehr großen Explosion führen, oder bei denen umfangreich giftige Substanzen freigesetzt werden können. In Kombination mit zu Verwenden: Als Knoten traffic_sign=DE:261,1014-51, als Linie hazmat:C=no"
+  },
+  {
+    "sign": "DE:1014-52",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zusatzzeichen_1014-52_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_%28D%29%2C_StVO_2007.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-52_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(D),_StVO_2007.svg",
+    "name": "Tunnelkategorie gemäß ADR-Übereinkommen - D",
+    "osmTags": ["hazmat:D=no"],
+    "comments": "Kein Transport von Gefahrgütern, die zu einer großen oder sehr großen Explosion, zu großen Bränden führen, oder bei denen umfangreich giftige Substanzen freigesetzt werden können. In Kombination mit zu Verwenden: Als Knoten traffic_sign=DE:261,1014-52, als Linie hazmat:D=no"
+  },
+  {
+    "sign": "DE:1014-53",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Zusatzzeichen_1014-53_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_%28E%29%2C_StVO_2007.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-53_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(E),_StVO_2007.svg",
+    "name": "Tunnelkategorie gemäß ADR-Übereinkommen - E",
+    "osmTags": ["hazmat:E=no"],
+    "comments": "Durchfahrtsverbot für alle gefährlichen Güter, unter Ausnahme von UN2919, UN3291 und UN3373 (bestimmte radioaktive Stoffe, klinische Abfälle und Materialien). In Kombination mit zu Verwenden: Als Knoten traffic_sign=DE:261,1014-53, als Linie hazmat:E=no"
+  },
+  {
+    "sign": "DE:1020-31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Zusatzzeichen_1020-31_-_Anlieger_oder_Parken_frei_%28600x450%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1020-31_-_Anlieger_oder_Parken_frei_(600x450),_StVO_1992.svg",
+    "name": "",
+    "osmTags": ["[Fahrzeugart]=destination"],
+    "comments": "Bisher keine Umsetzung für \"Parken frei\". Weiteres siehe \"Anlieger frei\"."
+  },
+  {
+    "sign": "KFZ frei",
+    "imageSvg": "/w/images/c/ce/Zusatzzeichen_KFZ_frei.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_KFZ_frei.svg",
+    "name": "",
+    "osmTags": ["motor_vehicle=yes"],
+    "comments": "PKW und Motorräder frei Das Zeichen steht nicht im amtlichen Katalog, wird aber von mehreren Verkehrsbehörden (u. a. HB und MS) regelmäßig verwendet."
+  },
+  {
+    "sign": "DE:1024-16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Zusatzzeichen_1024-16_-_Stra%C3%9Fenbahn_frei%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1024-16_-_Stra%C3%9Fenbahn_frei,_StVO_1992.svg",
+    "name": "",
+    "osmTags": ["railway=tram"],
+    "comments": "Strassenbahn frei"
+  },
+  {
+    "sign": "DE:1026-33",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/40/Zusatzzeichen_1026-33_-_Einsatzfahrzeuge_frei_%28450x600%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-33_-_Einsatzfahrzeuge_frei_(450x600),_StVO_1992.svg",
+    "name": "",
+    "osmTags": ["emergency=yes"],
+    "comments": "Einsatzfahrzeuge frei"
+  },
+  {
+    "sign": "DE:1026-34",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/85/Zusatzzeichen_1026-34_-_Krankenfahrzeuge_frei%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-34_-_Krankenfahrzeuge_frei,_StVO_1992.svg",
+    "name": "",
+    "osmTags": ["emergency=yes"],
+    "comments": "Krankenfahrzeuge frei"
+  },
+  {
+    "sign": "DE:1026-39",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Zusatzzeichen_1026-39_-_Betriebs-_und_Versorgungsdienst_frei_%28330x600%29%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-39_-_Betriebs-_und_Versorgungsdienst_frei_(330x600),_StVO_1992.svg",
+    "name": "",
+    "osmTags": ["[Fahrzeugart]=private;delivery"],
+    "comments": "Betriebs- und Versorgungsdienst frei Je nach verbotener Fahrzeugart, also dem Verbotszeichen. In Kombination mit Zeichen 260 : motor_vehicle=private;delivery In Kombination mit Zeichen 250 : vehicle=private;delivery"
+  },
+  {
+    "sign": "DE:1031-50",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/66/Zusatzzeichen_1031%2C_StVO_2007.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1031,_StVO_2007.svg",
+    "name": "Freistellung vom Verkehrsverbot nach § 40 Absatz 1 BImSchG - rote, gelbe\n\t\t\t\t\t\t\t\t\t\t\t\tund grüne Plakette",
+    "osmTags": [],
+    "comments": "In Verbindung mit Zeichen 270.1 . Attributierung wird noch diskutiert. Siehe Umweltzone."
+  },
+  {
+    "sign": "DE:1031-51",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Zusatzzeichen_1031-50%2C_StVO_2007.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1031-50,_StVO_2007.svg",
+    "name": "Freistellung vom Verkehrsverbot nach § 40 Absatz 1 BImSchG - gelbe und\n\t\t\t\t\t\t\t\t\t\t\t\tgrüne Plakette",
+    "osmTags": [],
+    "comments": "In Verbindung mit Zeichen 270.1 . Attributierung wird noch diskutiert. Siehe Umweltzone."
+  },
+  {
+    "sign": "DE:1031-52",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Zusatzzeichen_1031-51%2C_StVO_2007.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1031-51,_StVO_2007.svg",
+    "name": "Freistellung vom Verkehrsverbot nach § 40 Absatz 1 BImSchG - grüne\n\t\t\t\t\t\t\t\t\t\t\t\tPlakette",
+    "osmTags": [],
+    "comments": "In Verbindung mit Zeichen 270.1 . Attributierung wird noch diskutiert. Siehe Umweltzone."
+  },
+  {
+    "sign": "DE:1040-10[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/50/Zusatzzeichen_1040-10_-_Wintersport_erlaubt%2C_zeitlich_beschr%C3%A4nkt_10_-_16_h%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1040-10_-_Wintersport_erlaubt,_zeitlich_beschr%C3%A4nkt_10_-_16_h,_StVO_1992.svg",
+    "name": "Wintersport erlaubt, zeitlich beschränkt (10 - 16 h)",
+    "osmTags": [
+      "traffic_sign=DE:1040-10[…]",
+      "access:conditional=winter_sports @ (10:00-16:00)",
+      "oder",
+      "hazard:conditional=winter_sports @ (10:00-16:00)"
+    ],
+    "comments": "In Kombination mit Zeichen 250 als Einschränkung für Wintersportler In Kombination mit Zeichen 101 als allgemeiner Warnhinweis Bei der Erfassung als Knoten ist die Zeitangabe im Wertefeld, wie auf dem Zeichen zu lesen, ohne führende Null, jedoch ohne die Einheit [h] anzugeben (traffic_sign=DE:101,1040-10[9-18])."
+  },
+  {
+    "sign": "DE:1040-30[…]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/Zusatzzeichen_1040-30_-_Zeitliche_Beschr%C3%A4nkung_%2816_-_18_h%29%2C_330x600%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1040-30_-_Zeitliche_Beschr%C3%A4nkung_(16_-_18_h),_330x600,_StVO_1992.svg",
+    "name": "Zeitliche Beschränkung (16 - 18 h)",
+    "osmTags": ["traffic_sign=DE:1040-30[…]", "[…]:conditional"],
+    "comments": "Bei der Erfassung als Knoten ist die Zeitangabe im Wertefeld, wie auf dem Zeichen zu lesen, ohne führende Null, jedoch ohne die Einheit [h] anzugeben. Zeitbeschränktes Überholverbot: traffic_sign=DE:276,1040-10[6-21]. In Kombination mit Zeichen 276 Überholverbot in der Zeit von 6-21 Uhr: overtaking:conditional=no @ (06:00-21:00) In Kombination mit Zeichen 274-80 zulässige Höchstgeschwindigkeit in der Zeit von 22-6 Uhr: maxspeed:conditional=80 @ (22:00-06:00) In Kombination mit Zeichen 314 und Zeichen 1040-32 Parkplatz, Parkscheibe 2 Stunden in der Zeit von 16-18 Uhr: maxstay=2 hours maxstay:conditional=no @ (18:00-16:00) oder maxstay:conditional=2 hours @ (16:00-18:00)"
+  },
+  {
+    "sign": "DE:1040-32",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Zusatzzeichen_1040-32_-_Parkscheibe_2_Stunden%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1040-32_-_Parkscheibe_2_Stunden,_StVO_1992.svg",
+    "name": "Parkscheibe 2 Stunden",
+    "osmTags": ["traffic_sign=DE:1040-32", "maxstay=2 hours"],
+    "comments": "In Kombination mit Zeichen 314 Parkplatz: amenity=parking + maxstay=2 hours"
+  },
+  {
+    "sign": "DE:1048-14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Zusatzzeichen_1048-14_-_nur_Sattelkraftfahrzeuge%2C_StVO_1992.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1048-14_-_nur_Sattelkraftfahrzeuge,_StVO_1992.svg",
+    "name": "nur Sattelkraftfahrzeuge",
+    "osmTags": [
+      "traffic_sign=DE:1048-14",
+      "access:hgv_articulated=*",
+      "oder",
+      "maxspeed:hgv_articulated=*"
+    ],
+    "comments": "In Kombination mit Zeichen 253 als Verbot für Sattelkraftfahrzeuge über 3,5 t.Als Knoten traffic_sign=DE:253,1048-14, als Linie access:hgv_articulated=no In Kombination mit Zeichen 274 als zulässige Höchstgeschwindigkeit nur für Sattelkraftfahrzeuge.Als Knoten traffic_sign=DE:274-60,1048-14, als Linie maxspeed:hgv_articulated=60"
+  },
+  {
+    "sign": "DE:1060-33",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Zusatzzeichen_1060-33_-_Massenangabe_-_2%2C8_t%2C_StVO_2017.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1060-33_-_Massenangabe_-_2,8_t,_StVO_2017.svg",
+    "name": "Massenangabe - 2,8 t",
+    "osmTags": [],
+    "comments": "Nur für Erweiterung des Überholverbots für Kfz ab 3,5t zGM auf Kfz ab 2,8t zGM verwendet. Nur in Kombination mit overtaking:hgv:conditional=no @ (maxweight>2.8)"
+  }
 ]

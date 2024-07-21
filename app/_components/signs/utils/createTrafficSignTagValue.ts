@@ -4,24 +4,24 @@
 import type { TrafficSign } from '@/data/types'
 
 export const createTrafficSignTagValue = (signs: TrafficSign[]) => {
-	type SignIdCat = [string, TrafficSign['category']][]
-	const signIdCats: SignIdCat = signs.map(({ urlKey, category }) => [
-		urlKey.replace('DE:', ''),
-		category
-	])
+  type SignIdCat = [string, TrafficSign['category']][]
+  const signIdCats: SignIdCat = signs.map(({ urlKey, category }) => [
+    urlKey.replace('DE:', ''),
+    category,
+  ])
 
-	const string: string[] = []
-	signIdCats.forEach(([cleanUrlString, category], index) => {
-		if (index === 0) {
-			string.push(cleanUrlString)
-			return
-		}
+  const string: string[] = []
+  signIdCats.forEach(([cleanUrlString, category], index) => {
+    if (index === 0) {
+      string.push(cleanUrlString)
+      return
+    }
 
-		const separator = category === 'traffic_sign' ? ';' : ','
+    const separator = category === 'traffic_sign' ? ';' : ','
 
-		string.push(`${separator}${cleanUrlString}`)
-		return
-	})
+    string.push(`${separator}${cleanUrlString}`)
+    return
+  })
 
-	return `DE:${string.join('')}`
+  return `DE:${string.join('')}`
 }
