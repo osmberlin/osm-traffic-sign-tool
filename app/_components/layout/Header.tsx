@@ -1,8 +1,8 @@
 'use client'
 import { clsx } from 'clsx'
-import { ExternalLink } from '../links/ExternalLink'
 import { usePathname } from 'next/navigation'
 import packageJson from '../../../package.json'
+import { ExternalLink } from '../links/ExternalLink'
 
 export const Header = () => {
   const isHome = usePathname() === '/'
@@ -17,13 +17,15 @@ export const Header = () => {
               'mb-3 self-center decoration-violet-700 underline-offset-4 hover:underline',
               isHome ? 'cursor-auto hover:no-underline' : '',
             )}
+            aria-disabled={isHome}
+            onClick={(e) => isHome && e.preventDefault()}
             href="/"
           >
             <h1 className="text-3xl font-thin text-stone-400">
               OSM Traffic Sign Tool 2.0{' '}
               <span className="rounded bg-stone-300 px-2 pt-1 text-2xl uppercase text-stone-800">
                 Beta
-              </span>
+              </span>{' '}
               <small className="text-xs">{version}</small>
             </h1>
           </a>
@@ -38,7 +40,7 @@ export const Header = () => {
               <br />
               <strong className="text-amber-500">
                 This project is in beta stage.{' '}
-                <ExternalLink href="https://github.com/osmberlin/osm-traffic-sign-tool">
+                <ExternalLink blank href="https://github.com/osmberlin/osm-traffic-sign-tool">
                   Please report issues; please help with research
                 </ExternalLink>
                 .

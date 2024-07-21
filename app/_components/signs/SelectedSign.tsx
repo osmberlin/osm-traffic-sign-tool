@@ -54,19 +54,21 @@ export const SelectedSign = ({ sign }: Props) => {
         </div>
 
         <div className="relative">
-          {sign?.image?.svgPath && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={sign.image.svgPath} alt={sign.name} className="h-auto max-h-28 w-full" />
-          )}
+          {sign?.image?.svgPath ? (
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={sign.image.svgPath} alt={sign.name} className="h-auto max-h-28 w-full" />
 
-          {'valuePrompt' in sign && sign.signValue !== sign.valuePrompt.defaultValue ? (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="-rotate-12 rounded bg-amber-100/95 px-3 pt-1 text-xl font-medium text-amber-900 shadow-sm">
-                {sign.signValue}
-              </div>
-            </div>
+              {'valuePrompt' in sign && sign.signValue !== sign.valuePrompt.defaultValue && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="-rotate-12 rounded bg-amber-100/95 px-3 pt-1 text-xl font-medium text-amber-900 shadow-sm">
+                    {sign.signValue}
+                  </div>
+                </div>
+              )}
+            </>
           ) : (
-            <div className="flex h-20 w-20 items-center justify-center rounded border border-stone-800 bg-stone-600 pt-1 text-stone-50">
+            <div className="flex size-20 items-center justify-center rounded border border-stone-800 bg-stone-600 pt-1 text-stone-50">
               <code className="whitespace-nowrap tracking-tighter">
                 {sign.signKey.replaceAll('DE:', '')}
               </code>
