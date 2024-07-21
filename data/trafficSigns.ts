@@ -1,6 +1,6 @@
 import type { TrafficSign } from './types'
 
-export const trafficSigns: TrafficSign[] = [
+export const trafficSigns = [
   {
     urlKey: 'DE:237',
     signKey: 'DE:237',
@@ -1404,4 +1404,4 @@ export const trafficSigns: TrafficSign[] = [
       licence: 'Public Domain',
     },
   },
-]
+] as const satisfies readonly TrafficSign[]

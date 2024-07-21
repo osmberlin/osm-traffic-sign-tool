@@ -26,7 +26,7 @@ type Base = {
   name: string
   descriptiveName: string | null
   description: string | null
-  mostUsed?: boolean
+  mostUsed?: true
 }
 
 type TagsAndValidations = {

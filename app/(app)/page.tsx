@@ -16,7 +16,7 @@ export default function App() {
   const [paramQ, setParamQ] = useQueryState('q', parseAsString)
   const { paramSigns } = useParamSigns()
 
-  // Rendering signs: Update
+  // Rendering signs
   const searchSigns = signStore.filter((sign) => {
     if (!paramQ) return true
     return (
@@ -29,17 +29,17 @@ export default function App() {
   const hasSelectedSigns = selectedSigns.length > 0
   const aggregatedTags = aggregateTags(selectedSigns)
   const aggregatedComments = aggregateComments(selectedSigns)
-  // Copy signs: Update
+  // Copy signs
   const copyTrafficSignTag = aggregatedTags.find(([key]) => key === 'traffic_sign')?.join('=')
   const copyAllTags = aggregatedTags.map(([key, value]) => `${key}=${value}`).join('\n')
   const trafficSignTag = copyTrafficSignTag?.split('=')
-  // Debug helper: Update
+  // Debug helper
   const validKeys = signStore.map((value) => value.urlKey)
   const unrecognizedKeys = paramSigns?.filter((key) => !validKeys?.includes(key))
 
-  const signsMostUsed = signStore.filter((sign) => sign.mostUsed === true)
+  const signsMostUsed = signStore.filter((sign) => 'mostUsed' in sign && sign.mostUsed === true)
   const signsCatSigns = signStore.filter(
-    (sign) => sign.category === 'traffic_sign' && !sign.mostUsed,
+    (sign) => sign.category === 'traffic_sign' && !('mostUsed' in sign),
   )
   const signsCatModifiers = signStore.filter((sign) => sign.category === 'modifier_sign')
   const signsCatModifierRestrictions = signStore.filter(
@@ -97,7 +97,7 @@ export default function App() {
 
           <div className="-mt-2 space-y-6">
             {selectedSigns.map((sign) => {
-              return <SelectedSign key={sign.key} sign={sign} />
+              return <SelectedSign key={sign.signKey} sign={sign} />
             })}
           </div>
         </section>
