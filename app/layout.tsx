@@ -22,8 +22,8 @@ type Props = Readonly<{ children: React.ReactNode }>
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en" className={clsx(overpass.variable, overpassMono.variable)}>
-      <body className="bg-stone-800">
+    <html lang="en" className={clsx(overpass.variable, overpassMono.variable, 'h-full')}>
+      <body className="flex min-h-full w-full flex-none flex-col bg-stone-800 text-slate-800">
         <Header />
         <div className="mx-4 max-w-6xl self-center xl:mx-0">{children}</div>
         <Footer />
