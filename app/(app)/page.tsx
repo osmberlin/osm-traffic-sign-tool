@@ -26,6 +26,7 @@ export default function App() {
     )
   })
   const selectedSigns = signStore.filter((sign) => paramSigns?.includes(sign.urlKey))
+  const hasSelectedSigns = selectedSigns.length > 0
   const aggregatedTags = aggregateTags(selectedSigns)
   const aggregatedComments = aggregateComments(selectedSigns)
   // Copy signs: Update
@@ -102,7 +103,7 @@ export default function App() {
         </section>
 
         <section className="w-96 flex-none rounded bg-stone-900 px-4 py-4 text-stone-100">
-          {!paramSigns && (
+          {!hasSelectedSigns && (
             <>
               <h2 className="mb-4 text-lg font-light uppercase">Recommended Tags</h2>
               <p className="font-light text-stone-400">
@@ -111,7 +112,7 @@ export default function App() {
             </>
           )}
 
-          {paramSigns && (
+          {hasSelectedSigns && (
             <>
               <h2 className="mb-4 text-lg font-light uppercase">Traffic sign tag</h2>
               {trafficSignTag && copyTrafficSignTag && (
