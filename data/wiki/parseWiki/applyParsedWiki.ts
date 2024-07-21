@@ -5,7 +5,7 @@ import { trafficSigns } from '../../trafficSigns'
 import trafficSignsWiki from './trafficSignsWiki.json'
 
 const svgDirPath = path.join(__dirname, '../../../../static/trafficSignsSvgs')
-const localTrafficSigns = structuredClone(trafficSigns) as TrafficSign[]
+const localTrafficSigns = structuredClone(trafficSigns) as unknown as TrafficSign[]
 
 const matchedWikiDataKeys: string[] = []
 
