@@ -1,8 +1,8 @@
 'use client'
-import { trafficSigns as signStore } from '@/data/trafficSigns'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import { parseAsString, useQueryState } from 'nuqs'
 import { StateHelper } from '../_components/layout/StateHelper'
+import { buttonStyle } from '../_components/links/buttonStyles'
 import { CopyButton } from '../_components/links/CopyButton'
 import { SelectedSign } from '../_components/signs/SelectedSign'
 import { SignGrid } from '../_components/signs/SignGrid'
@@ -10,11 +10,17 @@ import { aggregateComments } from '../_components/signs/utils/aggregateComments'
 import { aggregateTags } from '../_components/signs/utils/aggregateTags'
 import { Tag } from '../_components/wiki/Tag'
 import { WikiLinkify } from '../_components/wiki/WikiLinkify'
+import { useInitialize } from '../_store/useInitialize'
 import { useParamSigns } from '../_store/useParamSigns.nuqs'
+import { useSignStoreSigns } from '../_store/useSignStore.zustand'
 
 export default function App() {
   const [paramQ, setParamQ] = useQueryState('q', parseAsString)
-  const { paramSigns } = useParamSigns()
+  const { paramSigns, toggleSignkey } = useParamSigns()
+  const signStore = useSignStoreSigns()
+
+  // Initialize store and URL
+  useInitialize()
 
   // Rendering signs
   const searchSigns = signStore.filter((sign) => {
@@ -53,7 +59,23 @@ export default function App() {
           <h2 className="text-lg font-thin uppercase">
             Unrecognized keys ({unrecognizedKeys.length})
           </h2>
-          <p>{unrecognizedKeys.join(', ')}</p>
+          <ul>
+            {unrecognizedKeys.map((key) => {
+              return (
+                <li key={key}>
+                  {key}{' '}
+                  <button
+                    onClick={() => {
+                      toggleSignkey(key)
+                    }}
+                    className={buttonStyle}
+                  >
+                    &times;
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
         </section>
       )}
       <main className="flex gap-4">
@@ -173,7 +195,7 @@ export default function App() {
         </section>
       </main>
 
-      <StateHelper state={selectedSigns} />
+      <StateHelper state={{ paramQ, paramSigns, selectedSigns, signStore }} />
     </>
   )
 }

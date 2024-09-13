@@ -1,4 +1,6 @@
+'use client'
 import { useParamSigns } from '@/app/_store/useParamSigns.nuqs'
+import { useSignStoreActions } from '@/app/_store/useSignStore.zustand'
 import { TrafficSign } from '@/data/types'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import { buildUrlKey } from './utils/urlKey/buildUrlKey'
@@ -18,29 +20,25 @@ export const SelectedSign = ({ sign }: Props) => {
     time_restriction: { type: 'text', steps: undefined },
   }
 
-  // We update the URL store which in turn updates the signStore in our page component
-  const handleUpdateSignValue = (key: string, event: React.ChangeEvent<HTMLInputElement>) => {
-    const { signKey } = splitUrlKey(key)
-    if (signKey) {
-      handleParamSignUpdate(buildUrlKey(signKey, event.target.value))
-    }
-  }
-
-  const handleParamSignUpdate = (urlKey: string) => {
-    const { signKey: updateSignKey, signValue: updateSignValue } = splitUrlKey(urlKey)
-
-    // The store is something like ['DE:262[5.5]', 'DE:1020-30']
-    // We find the signKey index and update the value (using the fresh signValue)
+  const updateValueInUrl = (signKey: string, signValue: string) => {
+    // We take the existing paramSigns and replace the one we just updated with the new Key while preserving the general array order
     const newParamSigns = paramSigns
       .map((urlKey) => {
-        const { signKey: currentSignKey } = splitUrlKey(urlKey)
-        if (currentSignKey && currentSignKey === updateSignKey) {
-          return buildUrlKey(currentSignKey, updateSignValue)
+        const { signKey: urlSignKey } = splitUrlKey(urlKey)
+        if (signKey === urlSignKey) {
+          return buildUrlKey(signKey, signValue)
         }
+        return urlKey
       })
       .filter(Boolean)
 
     setParamSigns(newParamSigns)
+  }
+  const { updateSignValues: updateValuesInStore } = useSignStoreActions()
+
+  const handleUpdateSignValue = (signKey: string, signValue: string) => {
+    updateValueInUrl(signKey, signValue)
+    updateValuesInStore(signKey, signValue)
   }
 
   return (
@@ -92,7 +90,7 @@ export const SelectedSign = ({ sign }: Props) => {
             {sign.valuePrompt.prompt}:
           </label>
           <input
-            onChange={(event) => handleUpdateSignValue(sign.urlKey, event)}
+            onChange={(event) => handleUpdateSignValue(sign.signKey, event.target.value)}
             name={sign.urlKey}
             type={inputFormats[sign.valuePrompt.format].type ?? 'text'}
             step={inputFormats[sign.valuePrompt.format].steps ?? undefined}
