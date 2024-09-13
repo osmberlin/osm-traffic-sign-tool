@@ -1,11 +1,12 @@
 'use client'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
-import { parseAsString, useQueryState } from 'nuqs'
 import { StateHelper } from '../_components/layout/StateHelper'
 import { buttonStyle } from '../_components/links/buttonStyles'
 import { CopyButton } from '../_components/links/CopyButton'
+import { SearchSignInput } from '../_components/signs/SearchSignInput'
 import { SelectedSign } from '../_components/signs/SelectedSign'
 import { SignGrid } from '../_components/signs/SignGrid'
+import { SignGridSearchQuery } from '../_components/signs/SignGridSearchQuery'
 import { aggregateComments } from '../_components/signs/utils/aggregateComments'
 import { aggregateTags } from '../_components/signs/utils/aggregateTags'
 import { Tag } from '../_components/wiki/Tag'
@@ -15,7 +16,6 @@ import { useParamSigns } from '../_store/useParamSigns.nuqs'
 import { useSignStoreSigns } from '../_store/useSignStore.zustand'
 
 export default function App() {
-  const [paramQ, setParamQ] = useQueryState('q', parseAsString)
   const { paramSigns, toggleSignkey } = useParamSigns()
   const signStore = useSignStoreSigns()
 
@@ -23,14 +23,6 @@ export default function App() {
   useInitialize()
 
   // Rendering signs
-  const searchSigns = signStore.filter((sign) => {
-    if (!paramQ) return true
-    return (
-      sign.signKey.toLocaleLowerCase().includes(paramQ) ||
-      sign.descriptiveName?.toLocaleLowerCase()?.includes(paramQ) ||
-      sign.description?.toLocaleLowerCase()?.includes(paramQ)
-    )
-  })
   const selectedSigns = signStore.filter((sign) => paramSigns?.includes(sign.urlKey))
   const hasSelectedSigns = selectedSigns.length > 0
   const aggregatedTags = aggregateTags(selectedSigns)
@@ -82,28 +74,10 @@ export default function App() {
         <section className="rounded bg-stone-300 px-6 py-4">
           <div className="flex items-start justify-between">
             <h2 className="mb-4 text-lg font-light uppercase text-black">Choose Signs</h2>
-            <div className="relative -mt-1.5">
-              <input
-                onChange={(event) => {
-                  setParamQ(event.target.value)
-                }}
-                name="search"
-                type="text"
-                autoFocus={true}
-                className="block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                placeholder="Search…"
-              />
-              {paramQ && !searchSigns.length && (
-                <div className="absolute -bottom-4 right-0.5 text-xs text-indigo-700">
-                  No results
-                </div>
-              )}
-            </div>
+            <SearchSignInput />
           </div>
 
-          {paramQ && searchSigns.length && (
-            <SignGrid headline="Suchergebnisse" signs={searchSigns} />
-          )}
+          <SignGridSearchQuery signStore={signStore} />
 
           <SignGrid headline="Häufig verwendet" signs={signsMostUsed} />
 
@@ -195,7 +169,7 @@ export default function App() {
         </section>
       </main>
 
-      <StateHelper state={{ paramQ, paramSigns, selectedSigns, signStore }} />
+      <StateHelper state={{ paramSigns, selectedSigns, signStore }} />
     </>
   )
 }
