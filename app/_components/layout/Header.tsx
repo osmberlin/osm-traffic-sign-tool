@@ -35,7 +35,7 @@ export const Header = () => {
             </summary>
             <p>
               This tool helps to find the right <code>traffic_sign=*</code> tag as well as
-              recommended tags for the road that it applies to.
+              recommended tags for the road that it applies to.{' '}
               <strong>Please review all tags before updating OSM.</strong>
               <br />
               <strong className="text-amber-500">

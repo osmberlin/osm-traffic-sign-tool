@@ -1,11 +1,11 @@
-import { TrafficSign } from '@/data/types'
+import { WriteableTrafficSign } from '@/data/types'
 import fs from 'fs'
 import path from 'path'
 import { trafficSigns } from '../../trafficSigns'
 import trafficSignsWiki from './trafficSignsWiki.json'
 
 const svgDirPath = path.join(__dirname, '../../../../static/trafficSignsSvgs')
-const localTrafficSigns = structuredClone(trafficSigns) as unknown as TrafficSign[]
+const localTrafficSigns = structuredClone(trafficSigns) as unknown as WriteableTrafficSign[]
 
 const matchedWikiDataKeys: string[] = []
 
