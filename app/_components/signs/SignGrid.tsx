@@ -1,5 +1,4 @@
 'use client'
-import { useParamSigns } from '@/app/_store/useParamSigns.nuqs'
 import { TrafficSign } from '@/data/types'
 import { useState } from 'react'
 import { Sign } from './Sign'
@@ -12,7 +11,6 @@ type Props = {
 
 export const SignGrid = ({ defaultOpen = true, headline, signs }: Props) => {
   const [isOpen, setIsOpen] = useState(defaultOpen)
-  const { paramSigns } = useParamSigns()
 
   return (
     <details open={isOpen} className="group/details mb-8">
