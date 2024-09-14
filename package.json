@@ -1,11 +1,12 @@
 {
   "name": "osm-traffic-sign-tool",
-  "version": "0.1.0",
+  "version": "2.0.13",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "deploy": "chmod +x ./deploy.sh && ./deploy.sh",
     "bleach": "rm -rf node_modules/ && rm -rf .next/ && npm install",
     "type-check": "tsc --skipLibCheck --noEmit",
     "lint": "next lint",

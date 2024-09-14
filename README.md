@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OSM Traffic Sign Tool 2 – Beta
 
-## Getting Started
+- A webapp to match traffic signs to OpenStreetMap tags
+- PLANNED: An npm package to display validations and images based on tags and traffic_sign tag
 
-First, run the development server:
+https://trafficsigns.osm-verkehrswende.org
+
+### Project status
+
+- See https://github.com/osmberlin/osm-traffic-sign-tool/issues/40
+
+## Development
 
 ```bash
+nvm use
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Framework: [NexJS](https://nextjs.org/)
+- Internal States: [Zustand](https://github.com/pmndrs/zustand)
+- External States (URL): [NUQS](https://nuqs.47ng.com/)
+- Testing: [Vitest](https://vitest.dev)
+- CSS: [Tailwind CSS](https://tailwindcss.com/)
+- Components: [Tailwind UI](https://tailwindui.com/), [Tailwind UI Catalyst](https://tailwindui.com/templates/catalyst), [Headless UI](https://headlessui.com/)
+- Icons: [Heroicons](https://heroicons.com/)
+- Prettier, ESLint, Editorconfig for code formatting based on Svelte standards
+- [Husky](https://github.com/typicode/husky) runs our checks on push. Use `git push --no-verify` to force-skip them.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Test your work: Use `check` and `build`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run check
+npm run build # and npm run preview
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Our custom script will automatically increase the `prepatch` version.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Remember to update the [CHANGELOG](./CHANGELOG.md).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm run deploy
+```
 
-## Deploy on Vercel
+## Licence & Thanks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Huge thank you to https://osmtools.de/traffic_signs/ for his great tool. The initial data structure, logic and design is heavily inspired by it.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Application code: [MIT License](./LICENSE)
+- SVG Traffic Signs: See [data/trafficSigns](./src/data/trafficSigns.ts)
