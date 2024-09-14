@@ -4,7 +4,7 @@ import { collectTags } from './collectTags'
 import { createTrafficSignTagValue } from './createTrafficSignTagValue'
 import { removeDuplicates } from './removeDuplicates'
 
-export type AggregatedTags = [string, string | string[]][]
+export type AggregatedTags = [string, Readonly<string | string[]>][]
 export const aggregateTags = (selectedSigns: TrafficSign[]) => {
   const aggregatedTags = collectTags(selectedSigns)
 

@@ -1,15 +1,16 @@
 import { ExternalLink } from '../links/ExternalLink'
+import { AggregatedTags } from '../signs/utils/aggregateTags'
 
 type Props = {
   osmKey: string
-  osmValue: string | string[]
+  osmValue: AggregatedTags[number][1]
   lang?: 'DE' | 'US'
 }
 
 export const WikiLinkValue = ({ osmKey, osmValue, lang = 'DE' }: Props) => {
   const wikiLink = 'https://wiki.openstreetmap.org/wiki/'
 
-  function prepareLinks(values: string[]) {
+  function prepareLinks(values: readonly string[]) {
     return values.map((valuePart) => {
       if (osmKey === 'traffic_sign' && !valuePart.startsWith('DE:')) {
         valuePart = `DE:${valuePart}`
@@ -22,7 +23,7 @@ export const WikiLinkValue = ({ osmKey, osmValue, lang = 'DE' }: Props) => {
     })
   }
 
-  const orLinks = Array.isArray(osmValue) ? prepareLinks(osmValue) : []
+  const orLinks = typeof osmValue === 'string' ? [] : prepareLinks(osmValue)
   const semiLinks = typeof osmValue === 'string' ? prepareLinks(osmValue.split(';')) : []
 
   return (
