@@ -7,14 +7,14 @@ describe('createTrafficSignTagValue()', () => {
     const input = [{ urlKey: 'DE:333', category: 'traffic_sign' }] as TrafficSign[]
     const result = createTrafficSignTagValue(input)
 
-    expect(result).toMatchObject(`DE:333`)
+    expect(result).toMatch('DE:333')
   })
 
   test('one key, secondary category', () => {
     const input = [{ urlKey: 'DE:10-10', category: 'modifier_sign' }] as TrafficSign[]
     const result = createTrafficSignTagValue(input)
 
-    expect(result).toMatchObject(`DE:10-10`)
+    expect(result).toMatch('DE:10-10')
   })
 
   test('two keys, both primary category', () => {
@@ -24,7 +24,7 @@ describe('createTrafficSignTagValue()', () => {
     ] as TrafficSign[]
     const result = createTrafficSignTagValue(input)
 
-    expect(result).toMatchObject(`DE:333;444`)
+    expect(result).toMatch('DE:333;444')
   })
 
   test('two keys, both secondary category', () => {
@@ -34,7 +34,7 @@ describe('createTrafficSignTagValue()', () => {
     ] as TrafficSign[]
     const result = createTrafficSignTagValue(input)
 
-    expect(result).toMatchObject(`DE:10-10,12-12`)
+    expect(result).toMatch('DE:10-10,12-12')
   })
 
   test('mixed case', () => {
@@ -48,6 +48,6 @@ describe('createTrafficSignTagValue()', () => {
     ] as TrafficSign[]
     const result = createTrafficSignTagValue(input)
 
-    expect(result).toMatchObject(`DE:333,10-10,12-12;444;555,13-13`)
+    expect(result).toMatch('DE:333,10-10,12-12;444;555,13-13')
   })
 })
