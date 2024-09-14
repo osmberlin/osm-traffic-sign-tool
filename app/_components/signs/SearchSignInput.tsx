@@ -1,7 +1,8 @@
+'use client'
 import { useParamQ } from '@/app/_store/useParamQ.nuqs'
 import { useParamQCountNumber } from '@/app/_store/useParamQCount.zustand'
 import { XMarkIcon } from '@heroicons/react/16/solid'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export const SearchSignInput = () => {
   const { paramQ, setParamQ } = useParamQ()
@@ -27,6 +28,11 @@ export const SearchSignInput = () => {
     }
   }, [])
 
+  const [isMac, setIsMac] = useState(false)
+  useEffect(() => {
+    setIsMac(/Mac|iPod|iPhone|iPad/.test(window.navigator?.userAgent))
+  }, [])
+
   return (
     <div className="relative -mt-1.5">
       <div className="relative flex items-center">
@@ -43,8 +49,8 @@ export const SearchSignInput = () => {
           placeholder="Search…"
         />
         <div className="absolute inset-y-0 right-0 flex items-center gap-1 py-1.5 pr-1.5">
-          <kbd className="inline-flex select-none items-center rounded border border-gray-200 px-1 font-sans text-xs text-gray-400">
-            ⌘K
+          <kbd className="inline-flex min-h-5 select-none items-center rounded border border-gray-200 px-1 font-sans text-xs text-gray-400">
+            {isMac ? '⌘K' : 'Ctrl+K'}
           </kbd>
           {paramQ && (
             <button
@@ -54,7 +60,7 @@ export const SearchSignInput = () => {
                   searchInputRef.current.value = ''
                 }
               }}
-              className="rounded border border-gray-200 px-0.5 text-gray-400 hover:border-gray-200 hover:bg-gray-100 hover:text-gray-800"
+              className="min-h-5 rounded border border-gray-200 px-0.5 text-gray-400 hover:border-gray-200 hover:bg-gray-100 hover:text-gray-800"
             >
               <XMarkIcon className="size-4" />
             </button>
