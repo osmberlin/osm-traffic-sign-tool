@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import trafficSignsWiki from '../parseWiki/trafficSignsWiki.json'
 
-const svgFolder = path.join(__dirname, '../../../public/trafficSignsSvgs')
+const svgFolder = path.join(__dirname, '../../../apps/traffic-sign-tool/public/trafficSignsSvgs')
 if (!fs.existsSync(svgFolder)) {
   fs.mkdirSync(svgFolder)
 }
