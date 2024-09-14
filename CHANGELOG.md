@@ -13,8 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Migrate to NextJS
 - Update all dependencies
-- Add cmd+k shortcut to jump into search
-- Add x icon to delete search input
+- Add `cmd+k` shortcut to jump into search
+- Add `x` icon to delete search input
+- Change project font, [see Notes](./app/_components/layout/fonts/README.md)
 
 ## [0.0.12] - 2024-04-01
 

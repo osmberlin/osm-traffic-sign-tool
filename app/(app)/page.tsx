@@ -48,7 +48,7 @@ export default function App() {
     <>
       {paramSigns && unrecognizedKeys.length > 0 && (
         <section className="mb-4 rounded bg-amber-700 p-4 text-white">
-          <h2 className="text-lg font-thin uppercase">
+          <h2 className="text-lg font-light uppercase">
             Unrecognized keys ({unrecognizedKeys.length})
           </h2>
           <ul>
@@ -145,13 +145,13 @@ export default function App() {
               )}
 
               <div className="mt-10 space-y-2">
-                <h3 className="text-lg font-thin uppercase text-stone-50">Notes</h3>
+                <h3 className="text-lg font-light uppercase text-stone-50">Notes</h3>
                 {!aggregatedComments.length && '–'}
                 {aggregatedComments.map(([signKey, signTitle, comment]) => {
                   return (
                     <p
                       key={signKey}
-                      className="prose-white prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 hover:prose-a:decoration-stone-400 hover:prose-a:decoration-1"
+                      className="prose-white font-serif font-normal prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 hover:prose-a:decoration-stone-400 hover:prose-a:decoration-1"
                     >
                       <code
                         title={signTitle}
