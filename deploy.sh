@@ -12,13 +12,13 @@ npm run check
 # Increase version
 # Which will commit the change version number; which is then available at build time
 # Docs https://docs.npmjs.com/cli/v8/commands/npm-version
-npm version patch
+npm version prepatch
 
 # build
 npm run build
 
 # navigate into the build output directory
-cd build
+cd dist
 
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll

@@ -7,7 +7,7 @@ import { TailwindResponsiveHelper } from './_components/layout/TailwindResponsiv
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'OSM Traffic Sign Tool 2.1',
+  title: 'OSM Traffic Sign Tool 2',
   description: 'Generate OpenStreetMap tagging recommendations based from traffic signs.',
 }
 
