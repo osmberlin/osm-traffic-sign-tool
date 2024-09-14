@@ -1,9 +1,10 @@
+import { AggregatedTags } from '../signs/utils/aggregateTags'
 import { WikiLinkKey } from './WikiLinkKey'
 import { WikiLinkValue } from './WikiLinkValue'
 
 type Props = {
   tagKey: string
-  tagValue: string | string[]
+  tagValue: AggregatedTags[number][1]
 }
 
 export const Tag = ({ tagKey, tagValue }: Props) => {
