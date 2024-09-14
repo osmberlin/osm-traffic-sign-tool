@@ -17,7 +17,7 @@ npm install
 npm run dev
 ```
 
-- Framework: [NexJS](https://nextjs.org/)
+- Framework: [NextJS](https://nextjs.org/)
 - Internal States: [Zustand](https://github.com/pmndrs/zustand)
 - External States (URL): [NUQS](https://nuqs.47ng.com/)
 - Testing: [Vitest](https://vitest.dev)
