@@ -1,5 +1,5 @@
 # See https://github.com/gregrickaby/nextjs-github-pages
-name: Deploy Next.js site to Pages
+name: Deploy App Traffic Sign Tool to Github Pages
 on:
   push:
     branches:
@@ -46,15 +46,15 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
       - name: Install dependencies
-        run: npm install
+        run: cd apps/traffic-sign-tool && npm install
 
       - name: Build with Next.js
-        run: npm run build
+        run: cd apps/traffic-sign-tool && npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./apps/traffic-sign-tool/out
 
   deploy:
     environment:

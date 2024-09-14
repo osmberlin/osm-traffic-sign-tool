@@ -1,7 +1,7 @@
 'use client'
+import packageJson from '@/package.json'
 import { clsx } from 'clsx'
 import { usePathname } from 'next/navigation'
-import packageJson from '../../../package.json'
 import { ExternalLink } from '../links/ExternalLink'
 
 export const Header = () => {

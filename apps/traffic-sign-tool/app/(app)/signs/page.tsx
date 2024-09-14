@@ -1,9 +1,9 @@
 'use client'
 import { ExternalLink } from '@/app/_components/links/ExternalLink'
 import { useSignStoreSigns } from '@/app/_store/useSignStore.zustand'
+import trafficSignsWiki from '@/data/wiki/parseWiki/trafficSignsWiki.json'
 import { clsx } from 'clsx'
 import Image from 'next/image'
-import trafficSignsWiki from '../../../data/wiki/parseWiki/trafficSignsWiki.json'
 
 export default function SignsPage() {
   const signStore = useSignStoreSigns()

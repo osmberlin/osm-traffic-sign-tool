@@ -1,1 +1,1 @@
-npm run check
+cd ./apps/traffic-sign-tool && npm run check
