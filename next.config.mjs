@@ -5,18 +5,6 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
   },
-  images: {
-    // Allowlist of external image sources for next/image <Image />
-    // Docs https://nextjs.org/docs/messages/next-image-unconfigured-host
-    remotePatterns: [
-      // {
-      //   protocol: 'https',
-      //   hostname: 'www.openstreetmap.org',
-      //   port: '',
-      //   pathname: '/**',
-      // },
-    ],
-  },
   // Docs: https://nextjs.org/docs/app/building-your-application/routing/redirecting#redirects-in-nextconfigjs
   // Docs: https://nextjs.org/docs/app/api-reference/next-config-js/redirects
   redirects: async () => [
@@ -29,6 +17,10 @@ const nextConfig = {
     //     permanent: true,
     //   },
   ],
+  // Deploy to Github Pages
+  // Docs: https://github.com/gregrickaby/nextjs-github-pages?tab=readme-ov-file#nextjs-config
+  output: 'export',
+  images: { unoptimized: true },
 }
 
 export default nextConfig

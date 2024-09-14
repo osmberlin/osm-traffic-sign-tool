@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "chmod +x ./deploy.sh && ./deploy.sh",
     "bleach": "rm -rf node_modules/ && rm -rf .next/ && npm install",
     "type-check": "tsc --skipLibCheck --noEmit",
     "lint": "next lint",
