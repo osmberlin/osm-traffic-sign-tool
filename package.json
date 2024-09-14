@@ -15,9 +15,11 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "data:wiki": "npm run data:wiki:downloadWiki && npm run data:wiki:parseWiki && npm run data:wiki:downloadSvgs && npm run data:wiki:applyParsedWiki",
     "data:wiki:downloadWiki": "bun ./data/wiki/downloadWiki/downloadWiki.ts && prettier ./data/ --write",
     "data:wiki:parseWiki": "bun ./data/wiki/parseWiki/parseWiki.ts && prettier ./data/ --write",
     "data:wiki:downloadSvgs": "bun ./data/wiki/downloadSvgs/downloadSvgs.ts",
+    "data:wiki:applyParsedWiki": "bun ./data/wiki/parseWiki/applyParsedWiki.ts && prettier ./data/ --write",
     "updatePackages:major": "npx taze major --includeLocked --write --exclude eslint && npm run updatePackages:minor && npm install",
     "updatePackages:minor": "npx taze minor --includeLocked --write && npm install",
     "prepare": "husky"

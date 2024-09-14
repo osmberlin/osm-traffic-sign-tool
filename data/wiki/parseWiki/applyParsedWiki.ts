@@ -1,10 +1,10 @@
 import { WriteableTrafficSign } from '@/data/types'
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 import { trafficSigns } from '../../trafficSigns'
 import trafficSignsWiki from './trafficSignsWiki.json'
 
-const svgDirPath = path.join(__dirname, '../../../../static/trafficSignsSvgs')
+const svgDirPath = path.join(__dirname, '../../../public/trafficSignsSvgs')
 const localTrafficSigns = structuredClone(trafficSigns) as unknown as WriteableTrafficSign[]
 
 const matchedWikiDataKeys: string[] = []
@@ -36,7 +36,7 @@ fs.readdir(svgDirPath, async (err, files) => {
     }
   }
 
-  await fs.promises.writeFile(
+  Bun.write(
     path.join(__dirname, 'tempTrafficSignsWithSvg.json'),
     JSON.stringify(localTrafficSigns, null, 2),
   )
@@ -45,7 +45,7 @@ fs.readdir(svgDirPath, async (err, files) => {
   const unmatchedWikiData = trafficSignsWiki.filter(
     (entry) => !matchedWikiDataKeys.includes(entry.sign),
   )
-  await fs.promises.writeFile(
+  Bun.write(
     path.join(__dirname, 'unmatchedWikiData.json'),
     JSON.stringify(unmatchedWikiData, null, 2),
   )
