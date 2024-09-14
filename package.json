@@ -16,6 +16,7 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "data:wiki:downloadWiki": "bun ./data/wiki/downloadWiki/downloadWiki.ts && prettier ./data/ --write",
+    "data:wiki:parseWiki": "bun ./data/wiki/parseWiki/parseWiki.ts && prettier ./data/ --write",
     "updatePackages:major": "npx taze major --includeLocked --write --exclude eslint && npm run updatePackages:minor && npm install",
     "updatePackages:minor": "npx taze minor --includeLocked --write && npm install",
     "prepare": "husky"
@@ -44,6 +45,7 @@
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "cheerio": "^1.0.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.11",
     "eslint-config-prettier": "^9.1.0",
