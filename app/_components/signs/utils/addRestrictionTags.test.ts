@@ -14,7 +14,7 @@ describe('addRestrictionTags()', () => {
 
   test('adds restrictionKey with default "no"', () => {
     const collector: AggregatedTags = []
-    const input = [{ restrictionKeys: ['bicycle'] }] as TrafficSign[]
+    const input = [{ restrictionKeys: ['bicycle'] } as unknown as TrafficSign]
     addRestrictionTags(collector, input)
 
     expect(collector).toMatchObject([['bicycle', 'no']])
