@@ -59,7 +59,7 @@ export const SelectedSign = ({ sign }: Props) => {
 
               {'valuePrompt' in sign && sign.signValue !== sign.valuePrompt.defaultValue && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="-rotate-12 rounded bg-amber-100/95 px-3 pt-1 text-xl font-medium text-amber-900 shadow-sm">
+                  <div className="-rotate-12 rounded bg-amber-100/95 px-3 pt-1 font-condensed text-xl font-normal text-amber-900 shadow-sm">
                     {sign.signValue}
                   </div>
                 </div>

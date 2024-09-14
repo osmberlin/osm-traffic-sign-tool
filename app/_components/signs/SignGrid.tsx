@@ -18,7 +18,7 @@ export const SignGrid = ({ defaultOpen = true, headline, signs }: Props) => {
         className="mb-0 cursor-pointer group-open/details:mb-4"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h3 className="inline-block text-lg font-thin uppercase text-black">
+        <h3 className="inline-block text-lg font-light uppercase text-black">
           {headline} ({signs.length})
         </h3>
       </summary>

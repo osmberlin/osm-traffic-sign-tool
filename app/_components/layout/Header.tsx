@@ -21,7 +21,7 @@ export const Header = () => {
             onClick={(e) => isHome && e.preventDefault()}
             href="/"
           >
-            <h1 className="text-3xl font-thin text-stone-400">
+            <h1 className="text-3xl font-light text-stone-400">
               OSM Traffic Sign Tool 2.0{' '}
               <span className="rounded bg-stone-300 px-2 pt-1 text-2xl uppercase text-stone-800">
                 Beta
