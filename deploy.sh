@@ -1,8 +1,5 @@
 #!/usr/bin/env sh
 
-# Setup:
-#   chmod +x deploy.sh
-
 # abort on errors
 set -e
 
@@ -12,7 +9,14 @@ npm run check
 # Increase version
 # Which will commit the change version number; which is then available at build time
 # Docs https://docs.npmjs.com/cli/v8/commands/npm-version
-npm version prepatch
+read -p "Do you want to increase the prepatch version? (Press any key to continue or N to skip): " -n 1 -r
+echo    # (optional) move to a new line
+if [[ ! $REPLY =~ ^[Nn]$ ]]
+then
+    npm version prepatch
+else
+    echo "Skipping version increase."
+fi
 
 # build
 npm run build
@@ -26,12 +30,6 @@ echo > .nojekyll
 # place CNAME file to set custom domain
 # Test at https://github.com/osmberlin/osm-traffic-sign-tool/settings/pages, needs to show "Custom domain"
 echo "trafficsigns.osm-verkehrswende.org" > CNAME
-
-# copy our app (index.html) as 404.html so our routing works with "open in new tab" (by serving and using the 404 page)
-cp index.html 404.html
-
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
 
 git init
 git checkout -B main
