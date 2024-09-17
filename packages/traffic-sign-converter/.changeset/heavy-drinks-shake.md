@@ -2,4 +2,4 @@
 '@osm-traffic-signs/converter': patch
 ---
 
-npx changeset
+Initial release
