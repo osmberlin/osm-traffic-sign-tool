@@ -1,0 +1,10 @@
+# System
+.DS_Store
+
+# Env
+.env
+.env*.local
+
+# Package
+node_modules
+dist

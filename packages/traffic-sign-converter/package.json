@@ -1,0 +1,34 @@
+{
+  "name": "@osm-traffic-signs/converter",
+  "version": "0.0.1",
+  "description": "Convert traffic sign IDs to OSM tags; suggest a traffic_sign-tag based on OSM tags.",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "build": "tsc",
+    "ci": "npm run build && npm run check-format",
+    "format": "prettier --write .",
+    "check-format": "prettier --check ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "typescript": "^5.6.2"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://www.osm-verkehrswende.org/traffic-signs/",
+  "bugs": {
+    "url": "https://github.com/osmberlin/osm-traffic-sign-tool/issues"
+  },
+  "author": "Tobias Jordans <t@tobiasjordans.de> (https://www.osm-verkehrswende.org/traffic-signs/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git"
+  },
+  "keywords": [
+    "openstreetmap"
+  ]
+}
