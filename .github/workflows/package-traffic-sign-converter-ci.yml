@@ -27,6 +27,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: packages/traffic-sign-converter
 
       - name: Run CI
         run: npm run ci
+        working-directory: packages/traffic-sign-converter
