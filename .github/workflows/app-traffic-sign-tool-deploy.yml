@@ -57,8 +57,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          working-directory: apps/traffic-sign-tool
-          path: ./out
+          path: ./apps/traffic-sign-tool/out
 
   deploy:
     environment:
