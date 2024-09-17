@@ -1,5 +1,5 @@
 # See https://github.com/gregrickaby/nextjs-github-pages
-name: Deploy App Traffic Sign Tool to Github Pages
+name: App 'Traffic Sign Tool' — Deploy to Github Pages
 on:
   push:
     branches:
