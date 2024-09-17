@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vitest",
     "build": "tsc",
-    "ci": "npm run build && npm run check-format && npm run check-exports && npm run check-lint && npm run test",
+    "check": "npm run build && npm run check-format && npm run check-exports && npm run check-lint && npm run test",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",

@@ -29,6 +29,6 @@ jobs:
         run: npm install
         working-directory: packages/traffic-sign-converter
 
-      - name: Run CI
-        run: npm run ci
+      - name: Run Check
+        run: npm run check
         working-directory: packages/traffic-sign-converter
