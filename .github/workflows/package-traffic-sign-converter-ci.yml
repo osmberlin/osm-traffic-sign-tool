@@ -1,3 +1,4 @@
+# See https://www.totaltypescript.com/how-to-create-an-npm-package#8-set-up-our-ci-with-github-actions
 name: Package 'Traffic Sign Converter' — CI
 
 on:
@@ -5,6 +6,8 @@ on:
   push:
     branches:
       - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
