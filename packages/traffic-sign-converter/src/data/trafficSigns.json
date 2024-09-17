@@ -1,0 +1,24 @@
+[
+  {
+    "key": "DE:239",
+    "name": "Zeichen 239",
+    "descriptiveName": "Fußgänger",
+    "description": null,
+    "osmTags": {
+      "highway": "footway",
+      "foot": "designated"
+    },
+    "impliedKey": "access",
+    "identifyingTags": {
+      "highway": "footway",
+      "foot": "designated"
+    },
+    "category": "traffic_sign",
+    "tags": ["pedestrian", "bicycle"],
+    "image": {
+      "svgPath": "TODO/trafficSignsSvgs/Zeichen_239_-_Sonderweg_Fußgänger,_StVO_1992.svg",
+      "sourceUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_239_-_Sonderweg_Fu%C3%9Fg%C3%A4nger,_StVO_1992.svg",
+      "licence": "Public Domain"
+    }
+  }
+]

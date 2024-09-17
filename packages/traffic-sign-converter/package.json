@@ -12,12 +12,17 @@
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "check-lint": "tsc --noEmit",
     "test": "vitest run",
+    "test:watch": "vitest",
     "local-release": "changeset version && changeset publish",
     "prepublishOnly": "npm run ci"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.4",
     "@changesets/cli": "^2.27.8",
+    "@total-typescript/ts-reset": "^0.6.1",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.0.0",
     "typescript": "^5.6.2",

@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest'
-import { osmToTrafficSign } from './osmToTrafficSign.js'
+import { trafficSignToOsm } from './trafficSignToOsm.js'
 
-test('osmToTrafficSign', () => {
-  expect(osmToTrafficSign(['DE:123,DEMO'])).toBe('DEMO')
+test('trafficSignToOsm', () => {
+  const output = trafficSignToOsm('DE:239')
+  expect(output?.key).toBe('DE:239')
 })

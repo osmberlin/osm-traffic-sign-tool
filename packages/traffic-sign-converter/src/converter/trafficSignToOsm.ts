@@ -1,3 +1,9 @@
+import { trafficSignsMap } from '../data/trafficSignsParsed.js'
+
 export const trafficSignToOsm = (trafficSignIds: string) => {
-  return [{ key: 'DEMO', value: 'DEMO' }]
+  const signs = trafficSignsMap()
+
+  const sign = signs.get(trafficSignIds)
+
+  return sign
 }
