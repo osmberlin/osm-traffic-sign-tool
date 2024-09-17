@@ -7,15 +7,17 @@
     "build": "tsc",
     "ci": "npm run build && npm run check-format",
     "format": "prettier --write .",
-    "check-format": "prettier --check ."
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.4",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.0.0",
     "typescript": "^5.6.2"
   },
   "type": "module",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
