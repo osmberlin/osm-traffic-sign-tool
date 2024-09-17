@@ -2,6 +2,7 @@
   "name": "osm-traffic-sign-tool",
   "version": "2.0.13",
   "private": true,
+  "license": "AGPL-3.0-or-later",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
