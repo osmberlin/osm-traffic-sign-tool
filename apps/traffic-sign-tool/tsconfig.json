@@ -13,15 +13,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "noErrorTruncation": true, // https://stackoverflow.com/a/53131824
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@/monorepo*": ["../../*"],
-      "@/data*": ["../../data/*"]
+      "@app/*": ["./*"],
+      "@monorepo/*": ["../../*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

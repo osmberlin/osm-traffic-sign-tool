@@ -1,31 +1,38 @@
-import { useParamSigns } from '@/app/_store/useParamSigns.nuqs'
-import { TrafficSign } from '@/data/types'
+import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { BugAntIcon, CheckCircleIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
+import { TrafficSignDataType } from '@monorepo/packages/traffic-sign-converter/dist/data/types'
+import { TrafficSignState } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import { useState } from 'react'
 import { buttonStyleSecondary } from '../links/buttonStyles'
 
 type Props = {
-  sign: TrafficSign
+  sign: TrafficSignState | TrafficSignDataType
 }
 
 export const Sign = ({ sign }: Props) => {
   const [debugOpen, setDebugOpen] = useState(false)
-  const { paramSigns, toggleSignkey } = useParamSigns()
+  const { paramSigns, toggleOsmValuePart } = useParamSigns()
 
-  const active = paramSigns.includes(sign.urlKey)
+  const active = paramSigns.map((s) => s.osmValuePart).includes(sign.osmValuePart)
+
+  if ('recodgnizedSign' in sign && sign.recodgnizedSign === false) return null
+
+  const toggleSignPart = (osmValuePart: string) => {
+    toggleOsmValuePart(osmValuePart)
+  }
 
   return (
-    <div className="relative w-20">
+    <div className="relative">
       <button
-        onClick={() => toggleSignkey(sign.urlKey)}
+        onClick={() => toggleSignPart(sign.osmValuePart)}
         className={clsx(
           'group/item relative flex h-20 w-full items-center justify-center rounded border border-stone-200 p-2 hover:bg-stone-200',
           active ? 'bg-stone-100 shadow' : '',
         )}
       >
         <h3 className="sr-only">
-          {sign.urlKey}
+          {sign.osmValuePart}
           {sign.name} – {sign.descriptiveName}
         </h3>
         <span
@@ -41,11 +48,11 @@ export const Sign = ({ sign }: Props) => {
 
         {sign?.image?.svgPath ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={sign.image.svgPath} alt={sign.name} className="h-auto w-full" />
+          <img src={sign.image.svgPath} alt={sign.name} className="h-auto max-h-full w-full" />
         ) : (
           <div>
             <code className="whitespace-nowrap tracking-tighter">
-              {sign.signKey.replaceAll('DE:', '')}
+              {sign.osmValuePart.replaceAll('DE:', '')}
             </code>
             <br />
             <p className="text-[0.6rem] leading-tight">{sign.descriptiveName ?? '–'}</p>
@@ -53,7 +60,7 @@ export const Sign = ({ sign }: Props) => {
         )}
 
         <div className="absolute -bottom-5 z-10 hidden rounded bg-stone-800 px-1 pb-0.5 pt-1 text-xs/4 text-stone-50 group-hover/item:block">
-          <strong>{sign.urlKey}</strong>
+          <strong>{sign.osmValuePart}</strong>
           <br />
           {sign.descriptiveName ?? ''}
         </div>
@@ -65,7 +72,7 @@ export const Sign = ({ sign }: Props) => {
         </form>
         <div className="bg-gray-100 py-1 text-center">
           <p>
-            <strong>{sign.urlKey}</strong>
+            <strong>{sign.osmValuePart}</strong>
           </p>
           <p>{sign.descriptiveName}</p>
         </div>

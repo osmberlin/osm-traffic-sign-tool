@@ -1,8 +1,10 @@
 'use client'
-import packageJson from '@/package.json'
 import { clsx } from 'clsx'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import packageJson from '../../../package.json'
 import { ExternalLink } from '../links/ExternalLink'
+import svgLogo from './assets/logo.svg'
 
 export const Header = () => {
   const isHome = usePathname() === '/'
@@ -21,12 +23,15 @@ export const Header = () => {
             onClick={(e) => isHome && e.preventDefault()}
             href="/"
           >
-            <h1 className="text-3xl font-light text-stone-400">
-              OSM Traffic Sign Tool 2{' '}
-              <span className="rounded bg-stone-300 px-2 pt-1 text-2xl uppercase text-stone-800">
-                Beta
-              </span>{' '}
-              <small className="text-xs">{version}</small>
+            <h1 className="flex items-center gap-3 text-3xl font-light text-stone-400">
+              <Image src={svgLogo} alt="" width={48} height={48} />{' '}
+              <span>
+                OSM Traffic Sign Tool 2{' '}
+                <span className="rounded bg-stone-300 px-2 pt-1 text-2xl uppercase text-stone-800">
+                  Beta
+                </span>{' '}
+                <small className="text-xs">{version}</small>
+              </span>
             </h1>
           </a>
           <details open className="my-5 max-w-prose self-center leading-tight text-stone-300">

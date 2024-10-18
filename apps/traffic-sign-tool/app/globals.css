@@ -3,21 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* https://github.com/tailwindlabs/play.tailwindcss.com/blob/master/src/pages/_document.js#L11 and LaouytMap.tsx */
-  html {
-    @apply h-full;
-  }
-
-  /* https://github.com/tailwindlabs/play.tailwindcss.com/blob/master/src/pages/_document.js#L32 and LaouytMap.tsx */
-  body {
-    @apply flex min-h-full w-full;
-    @apply text-slate-800;
-  }
-
-  /* https://github.com/tailwindlabs/play.tailwindcss.com/blob/master/src/css/main.css#L14-L19 */
-  #root {
-    @apply flex w-full flex-none flex-col;
-  }
 }
 
 @layer components {

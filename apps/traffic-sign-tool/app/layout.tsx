@@ -17,7 +17,7 @@ type Props = Readonly<{ children: React.ReactNode }>
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={clsx(fontClasses, 'h-full')}>
-      <body className="flex min-h-full w-full flex-none flex-col bg-stone-800 text-slate-800">
+      <body className="flex min-h-full w-full flex-none flex-col bg-stone-800 text-base text-slate-800">
         <Header />
         <Suspense>
           <div className="mx-4 max-w-6xl self-center xl:mx-0">{children}</div>

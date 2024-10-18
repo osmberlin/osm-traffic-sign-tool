@@ -8,6 +8,7 @@ type Props = {
 }
 
 export const Tag = ({ tagKey, tagValue }: Props) => {
+  console.log('xx', { tagKey, tagValue })
   return (
     <code>
       <WikiLinkKey osmKey={tagKey} />

@@ -10,7 +10,8 @@ type Props = {
 export const WikiLinkValue = ({ osmKey, osmValue, lang = 'DE' }: Props) => {
   const wikiLink = 'https://wiki.openstreetmap.org/wiki/'
 
-  function prepareLinks(values: readonly string[]) {
+  function prepareLinks(values: readonly string[] | undefined) {
+    if (!values) return []
     return values.map((valuePart) => {
       if (osmKey === 'traffic_sign' && !valuePart.startsWith('DE:')) {
         valuePart = `DE:${valuePart}`

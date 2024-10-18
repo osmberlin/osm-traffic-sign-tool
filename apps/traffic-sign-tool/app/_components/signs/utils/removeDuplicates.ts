@@ -8,5 +8,5 @@ export const removeDuplicates = <T extends any[]>(nestedArray: T) => {
       return true
     }
   })
-  return unique
+  return unique as T
 }

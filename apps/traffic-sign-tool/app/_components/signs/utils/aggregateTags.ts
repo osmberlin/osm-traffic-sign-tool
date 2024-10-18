@@ -1,11 +1,17 @@
-import type { TrafficSign } from '@/data/types'
+import {
+  CountryPrefixesType,
+  signToTrafficSignTagValue,
+  TrafficSignState,
+} from '@osm-traffic-signs/converter'
 import { addRestrictionTags } from './addRestrictionTags'
 import { collectTags } from './collectTags'
-import { createTrafficSignTagValue } from './createTrafficSignTagValue'
 import { removeDuplicates } from './removeDuplicates'
 
 export type AggregatedTags = [string, Readonly<string | string[]>][]
-export const aggregateTags = (selectedSigns: TrafficSign[]) => {
+export const aggregateTags = (
+  selectedSigns: TrafficSignState[],
+  countryPrefix: CountryPrefixesType | undefined,
+) => {
   const aggregatedTags = collectTags(selectedSigns)
 
   // Create the aggregated traffic_sign tag
@@ -14,7 +20,7 @@ export const aggregateTags = (selectedSigns: TrafficSign[]) => {
   if (existingTrafficSignIndex) {
     delete aggregatedTags[existingTrafficSignIndex]
   }
-  const trafficSignValue = createTrafficSignTagValue(selectedSigns)
+  const trafficSignValue = signToTrafficSignTagValue(selectedSigns, countryPrefix)
   aggregatedTags.push(['traffic_sign', trafficSignValue])
 
   addRestrictionTags(aggregatedTags, selectedSigns)
@@ -25,7 +31,7 @@ export const aggregateTags = (selectedSigns: TrafficSign[]) => {
   // Sort keys A-Z
   aggregatedTags.sort((a, b) => a[0].localeCompare(b[0]))
 
-  const uniqueAggregatedTags: AggregatedTags = removeDuplicates<AggregatedTags>(aggregatedTags)
+  const uniqueAggregatedTags = removeDuplicates<AggregatedTags>(aggregatedTags)
 
   return uniqueAggregatedTags
 }

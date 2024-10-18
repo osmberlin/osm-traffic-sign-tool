@@ -23,12 +23,14 @@
   "dependencies": {
     "@headlessui/react": "^2.1.9",
     "@heroicons/react": "^2.1.5",
+    "@osm-traffic-signs/converter": "../../packages/traffic-sign-converter",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.0",
     "next": "14.2.14",
     "nuqs": "^1.19.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-stately": "^3.33.0",
     "zod": "^3.23.8",
     "zustand": "^4.5.5"
   },

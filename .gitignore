@@ -4,3 +4,6 @@
 # Env
 .env
 .env*.local
+
+# Monorepo
+/node_modules

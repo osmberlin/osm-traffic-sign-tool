@@ -1,22 +1,29 @@
-import type { TrafficSign } from '@/data/types'
+import { TrafficSignState } from '@osm-traffic-signs/converter'
 import type { AggregatedTags } from './aggregateTags'
 
 export const addRestrictionTags = (
   aggregatedTags: AggregatedTags,
-  selectedSigns: TrafficSign[],
+  selectedSigns: TrafficSignState[],
 ) => {
   // Handle restriction: Collect keys, add all given values to those key (or 'no')
   const restrictionKeys: string[] = selectedSigns
-    .map((sign) => 'restrictionKeys' in sign && sign.restrictionKeys)
+    .map((sign) => {
+      return 'restrictionKeys' in sign && sign.restrictionKeys
+    })
     .flat()
     .filter(Boolean)
 
   const restrictionValues: string[] = selectedSigns
-    .map((sign) => 'restrictionValue' in sign && sign.restrictionValue)
+    .map((sign) => {
+      return 'restrictionValue' in sign && sign.restrictionValue
+    })
     .filter(Boolean)
 
   const conditialValues = selectedSigns
-    .map((sign) => sign.conditional && 'value' in sign && sign.value)
+    .map((sign) => {
+      if (sign.recodgnizedSign === false) return
+      return sign.conditional && 'value' in sign && sign.value
+    })
     .filter(Boolean)
 
   restrictionKeys.forEach((restrictionKey) => {

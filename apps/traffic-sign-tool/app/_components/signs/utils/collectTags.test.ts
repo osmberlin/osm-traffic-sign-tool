@@ -1,24 +1,24 @@
-import type { TrafficSign } from '@/data/types'
+import { TrafficSignState } from '@osm-traffic-signs/converter'
 import { describe, expect, test } from 'vitest'
 import { collectTags } from './collectTags'
 
 describe('collectTags()', () => {
   const baseInput = {
-    urlKey: 'todo',
-    signKey: 'todo',
-    signValue: undefined,
+    osmValuePart: 'todo',
+    signId: 'todo',
+    signValue: null,
     name: 'name',
     descriptiveName: null,
     description: null,
     category: 'traffic_sign',
     image: { svgPath: undefined, sourceUrl: undefined, licence: undefined },
-  } satisfies TrafficSign
+  } satisfies TrafficSignState
 
   test('does nothing when no input given', () => {
     const input = [
-      { ...baseInput, urlKey: 'DE:333' },
-      { ...baseInput, urlKey: 'DE:444' },
-    ] satisfies TrafficSign[]
+      { ...baseInput, osmValuePart: 'DE:333' },
+      { ...baseInput, osmValuePart: 'DE:444' },
+    ] satisfies TrafficSignState[]
     const result = collectTags(input)
 
     expect(result).toMatchObject([])
@@ -26,8 +26,8 @@ describe('collectTags()', () => {
 
   test('handles osmTags', () => {
     const input = [
-      { ...baseInput, urlKey: 'DE:333', osmTags: { foo: 'bar', lorem: ['a', 'b'] } },
-    ] satisfies TrafficSign[]
+      { ...baseInput, osmValuePart: 'DE:333', osmTags: { foo: 'bar', lorem: ['a', 'b'] } },
+    ] satisfies TrafficSignState[]
     const result = collectTags(input)
 
     expect(result).toMatchObject([
@@ -40,12 +40,12 @@ describe('collectTags()', () => {
     const input = [
       {
         ...baseInput,
-        urlKey: 'DE:333',
+        osmValuePart: 'DE:333',
         osmTags: { foo: 'bar' },
         key: 'highway',
         value: 'bridleway',
       },
-    ] satisfies TrafficSign[]
+    ] satisfies TrafficSignState[]
     const result = collectTags(input)
 
     expect(result).toMatchObject([
@@ -58,7 +58,7 @@ describe('collectTags()', () => {
     const input = [
       {
         ...baseInput,
-        urlKey: 'DE:333',
+        osmValuePart: 'DE:333',
         key: 'maxweight',
         valuePrompt: {
           prompt: 'Gewicht in Tonnen ohne Einheit',
@@ -66,7 +66,7 @@ describe('collectTags()', () => {
           format: 'float',
         },
       },
-    ] satisfies TrafficSign[]
+    ] satisfies TrafficSignState[]
     const result = collectTags(input)
 
     expect(result).toMatchObject([['maxweight', '5.5']])
