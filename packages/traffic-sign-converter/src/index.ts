@@ -6,13 +6,16 @@ export { trafficSignTagToSigns } from './trafficSignTagToSigns/trafficSignTagToS
 export { signToTrafficSignTagValue } from './signToTrafficSignTag/signToTrafficSignTagValue.js'
 
 // To Tags
-export { signToTags } from './signToTags--todo/signToTags.js'
+export { signToTags } from './signToTags/signToTags.js'
 
 // Data
 export { CountryPrefixSchema, countryPrefixes } from './data/countryPrefixes.js'
 export type { CountryPrefixesType } from './data/countryPrefixes.js'
-export { trafficSignData } from './data/trafficSignData.js'
-export type { TrafficSignDataType, TrafficSignState } from './data/types.js'
+export type {
+  LegacyTrafficSignDataType as TrafficSignDataType,
+  LegacyTrafficSignState as TrafficSignState,
+} from './data/legacy/typesLegacy.js'
+export { legacyTrafficSignData as trafficSignData } from './data/trafficSignDataLegacy.js'
 
 // Utils
 export { combineSignIdSignValue } from './signIdSignValueUtils/combineSignIdSignValue.js'

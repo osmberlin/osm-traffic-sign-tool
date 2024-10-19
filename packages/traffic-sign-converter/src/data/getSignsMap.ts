@@ -1,13 +1,13 @@
 import { trafficSignData } from './trafficSignData.js'
-import type { TrafficSignState } from './types.js'
+import type { SignStateType } from './TrafficSignDataTypes.js'
+import { transformToSignState } from './utils/transformToSignState.js'
 
 export const getSignsMap = () => {
-  const signsMap = new Map<string, TrafficSignState>()
+  const signsMap = new Map<string, SignStateType>()
 
-  trafficSignData.forEach((sign) => {
-    // TODO: Improve TS and remove `as`. Maybe add the required default values and rename function to getSignStateMap?
-    signsMap.set(sign.osmValuePart, sign as TrafficSignState)
-  })
+  for (const sign of trafficSignData) {
+    signsMap.set(sign.osmValuePart, transformToSignState(sign))
+  }
 
   return signsMap
 }

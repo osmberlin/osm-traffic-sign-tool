@@ -9,10 +9,10 @@
 // - traffic_sign=DE:244.1,"Kfz-Verkehr frei" … wo ein Freitext verwendet wird https://github.com/osmberlin/osm-traffic-sign-tool/issues/51#issuecomment-2389663867 (TODO: dieses Beispiel hinkt, da der Freitext hier ein Zusatzzeichen ist; ich muss prüfen, ob es auch Freitext-Verkehrszeichen gibt)
 
 import type { CountryPrefixesType } from '../data/countryPrefixes.js'
-import type { TrafficSignState } from '../data/types.js'
+import type { LegacyTrafficSignState } from '../data/legacy/typesLegacy.js'
 
 export const signToTrafficSignTagValue = (
-  signs: TrafficSignState[],
+  signs: LegacyTrafficSignState[],
   countryPrefixes: CountryPrefixesType | undefined,
 ) => {
   if (!countryPrefixes) return ''

@@ -1,20 +1,19 @@
-// https://twitter.com/mattpocockuk/status/1653403198885904387
-export type Prettify<T> = { [K in keyof T]: T[K] } & {}
+import type { Prettify } from '../utils/types.js'
 
-export type TrafficSignState = Prettify<
+export type LegacyTrafficSignState = Prettify<
   (
-    | (TrafficSignDataType & {
+    | (LegacyTrafficSignDataType & {
         recodgnizedSign: true
         matchdByAlternativeKey?: string
       })
-    | (UnkownTrafficSignType & {
+    | (LegacyUnkownTrafficSignType & {
         recodgnizedSign: false
         matchdByAlternativeKey?: string
       })
   ) & { key: string }
 >
 
-export type TrafficSignDataType = Prettify<
+export type LegacyTrafficSignDataType = Prettify<
   Base &
     (TrafficSignCategoryTrafficSign | TrafficSignCategoryModifier) &
     TrafficSignKeyValue &
@@ -23,7 +22,7 @@ export type TrafficSignDataType = Prettify<
     TrafficSignToOsm
 >
 
-export type UnkownTrafficSignType = {
+export type LegacyUnkownTrafficSignType = {
   osmValuePart: string
   signId: null
   signValue: string

@@ -2,7 +2,7 @@ import { alternativeKeyFormats } from '../data/alternativeKeyFormats.js'
 import type { CountryPrefixesType } from '../data/countryPrefixes.js'
 import { getSignBySignId } from '../data/getSignBySignId.js'
 import { getSignsMap } from '../data/getSignsMap.js'
-import type { TrafficSignState } from '../data/types.js'
+import type { LegacyTrafficSignState } from '../data/legacy/typesLegacy.js'
 import { combineSignIdSignValue } from '../signIdSignValueUtils/combineSignIdSignValue.js'
 import { removeCountryPrefix } from './utils/removeCountryPrefix.js'
 import { removeKeys } from './utils/removeKeys.js'
@@ -58,7 +58,7 @@ export const trafficSignTagToSigns = (
   // PART 4: Return the signs
   // - Preserve order of signs from URL
   // - Replace unrecognized signs
-  const signs: TrafficSignState[] = workingValueParts.map((osmValuePart) => {
+  const signs: LegacyTrafficSignState[] = workingValueParts.map((osmValuePart) => {
     // The lookup has to happen just based on `signId` so custom values don't prevent the match
     const { signId } = splitSignIdSignValue(osmValuePart)
     const sign = getSignBySignId(signsMap, signId)
@@ -66,7 +66,7 @@ export const trafficSignTagToSigns = (
       return { ...sign, recodgnizedSign: true }
     }
 
-    const unkown: TrafficSignState = {
+    const unkown: LegacyTrafficSignState = {
       recodgnizedSign: false,
       osmValuePart: osmValuePart,
       key: osmValuePart,
