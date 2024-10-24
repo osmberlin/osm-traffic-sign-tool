@@ -174,7 +174,7 @@ export const trafficSigns: TrafficSign[] = [
       bicycle: 'designated',
     },
     tagsComment:
-      'Je nach Art der Straße überlicherweise [Tag:highway=residential] oder [Tag:highway=cycleway].',
+      'Je nach Art der Straße üblicherweise [Tag:highway=residential] oder [Tag:highway=cycleway].',
     category: 'traffic_sign',
     image: {
       svgPath: '/trafficSignsSvgs/Zeichen_244.1_-_Beginn_einer_Fahrradstraße,_StVO_2013.svg',
