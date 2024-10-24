@@ -83,7 +83,7 @@
       "maxspeed": "30",
       "source:maxspeed": "DE:bicycle_road"
     },
-    "tagsComment": "Je nach Art der Straße überlicherweise [highway=residential], [path] oder [service].",
+    "tagsComment": "Je nach Art der Straße üblicherweise [highway=residential], [path] oder [service].",
     "links": ["DE:Bicycle/Radverkehrsanlagen_kartieren"],
     "category": "traffic_sign"
   },
