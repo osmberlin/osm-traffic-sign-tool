@@ -1,9 +1,11 @@
-import type { SignType } from '../../data/TrafficSignDataTypes.js'
+import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
 
-export const collectConditionalTag = (signs: SignType[]) => {
+export const collectConditionalTag = (signs: SignStateType[]) => {
   let conditionalTag: { key: string; value: string } | undefined = undefined
 
   for (const sign of signs) {
+    if (sign.recodgnizedSign === false) return
+
     if (sign.kind === 'traffic_sign' && sign.tagRecommendations.conditionalTag) {
       conditionalTag = sign.tagRecommendations.conditionalTag
     }

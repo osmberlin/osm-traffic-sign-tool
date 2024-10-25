@@ -1,11 +1,14 @@
-import type { SignType } from '../../data/TrafficSignDataTypes.js'
+import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
 import { uniqueArray } from './uniqueArray.js'
 
-export const collectHighwayValues = (signs: SignType[] | undefined) => {
+export const collectHighwayValues = (signs: SignStateType[] | undefined) => {
   if (!Array.isArray(signs)) return []
 
   const all = signs
-    .map((sign) => sign.tagRecommendations)
+    .filter((sign) => sign.recodgnizedSign === true)
+    .map((sign) => {
+      return sign.tagRecommendations
+    })
     .map((tags) => {
       return tags.highwayValues
     })

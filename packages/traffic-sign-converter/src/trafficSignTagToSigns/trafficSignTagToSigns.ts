@@ -1,5 +1,5 @@
 import { alternativeKeyFormats } from '../data/alternativeKeyFormats.js'
-import type { CountryPrefixesType } from '../data/countryPrefixes.js'
+import type { CountryPrefixType } from '../data/countryPrefixes.js'
 import { getSignBySignId } from '../data/getSignBySignId.js'
 import { getSignsMap } from '../data/getSignsMap.js'
 import type { SignStateType } from '../data/TrafficSignDataTypes.js'
@@ -11,7 +11,7 @@ import { splitSignIdSignValue } from './utils/splitSignIdSignValue.js'
 
 export const trafficSignTagToSigns = (
   input: string,
-  countryPrefix: CountryPrefixesType | undefined,
+  countryPrefix: CountryPrefixType | undefined,
 ) => {
   if (!countryPrefix) return []
 
@@ -66,19 +66,17 @@ export const trafficSignTagToSigns = (
       return { ...sign, recodgnizedSign: true }
     }
 
-    const unkown: SignStateType = {
+    const unkownSign: SignStateType = {
       recodgnizedSign: false,
       osmValuePart: osmValuePart,
-      key: osmValuePart,
       signValue: osmValuePart,
       signId: null,
+      descriptiveName: osmValuePart,
       // When the initial string (`cleaned`) includes our unkown values when split by the `traffic_sign` separator (`;`) then it is this, all else is a `modifier_sign`; which would include `traffic_sign=foobar` as modifier.
-      category: cleaned.split(';').includes(osmValuePart) ? 'traffic_sign' : 'modifier_sign',
+      kind: cleaned.split(';').includes(osmValuePart) ? 'traffic_sign' : 'modifier_sign',
     }
-    return unkown
+    return unkownSign
   })
 
-  return signs.map((sign) => {
-    return { ...sign, key: sign.osmValuePart }
-  })
+  return signs satisfies SignStateType[]
 }

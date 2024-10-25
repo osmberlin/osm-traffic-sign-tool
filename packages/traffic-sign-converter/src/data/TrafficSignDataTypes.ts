@@ -1,20 +1,18 @@
 import type { Prettify } from './utils/types.js'
 
 export type SignStateType = Prettify<
-  (
-    | (TrafficSignType & {
-        recodgnizedSign: true
-        matchdByAlternativeKey?: string
-      })
-    | (ModifierSignType & {
-        recodgnizedSign: true
-        matchdByAlternativeKey?: string
-      })
-    | (UnkownSignType & {
-        recodgnizedSign: false
-        matchdByAlternativeKey?: string
-      })
-  ) & { key: string }
+  | (TrafficSignType & {
+      recodgnizedSign: true
+      matchdByAlternativeKey?: string
+    })
+  | (ModifierSignType & {
+      recodgnizedSign: true
+      matchdByAlternativeKey?: string
+    })
+  | (UnkownSignType & {
+      recodgnizedSign: false
+      matchdByAlternativeKey?: string
+    })
 >
 
 export type SignType = TrafficSignType | ModifierSignType
@@ -23,7 +21,8 @@ export type UnkownSignType = {
   osmValuePart: string
   signId: null
   signValue: string
-  category: 'traffic_sign' | 'modifier_sign'
+  kind: 'traffic_sign' | 'modifier_sign'
+  descriptiveName: string
 }
 
 export type TrafficSignType = SharedId &
@@ -86,11 +85,14 @@ type ValuePrompt<T> = {
   defaultValue: string
   format: T
 }
+
+export type SignComentType = {
+  tagReference?: string | null
+  comment: string
+}
+
 type SharedComments = {
-  comments?: {
-    tagReference?: string | null
-    comment: string
-  }[]
+  comments?: SignComentType[]
 }
 type SharedQuestions = {
   questions?: {

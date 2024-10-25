@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import type { CountryPrefixesType } from '../data/countryPrefixes.js'
+import type { CountryPrefixType } from '../data/countryPrefixes.js'
 import { trafficSignTagToSigns } from './trafficSignTagToSigns.js'
 
 const joinOsmValueParts = (signs: ReturnType<typeof trafficSignTagToSigns>) => {
@@ -7,7 +7,7 @@ const joinOsmValueParts = (signs: ReturnType<typeof trafficSignTagToSigns>) => {
 }
 
 describe('trafficSignTagToSigns()', () => {
-  const countryPrefix: CountryPrefixesType = 'DE'
+  const countryPrefix: CountryPrefixType = 'DE'
 
   describe('handle tag key `*traffic_sign*`, handle country prefix', () => {
     test('handle full tag', () => {

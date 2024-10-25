@@ -67,7 +67,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {
       highwayValues: ['footway'],
-      accessTags: [{ key: 'foot', value: 'designated' }],
+      uniqueTags: [{ key: 'foot', value: 'designated' }],
     },
     comments: [
       {
@@ -966,7 +966,7 @@ export const trafficSignData: SignType[] = [
     description: null,
     kind: 'modifier_sign',
     tagRecommendations: {
-      highwayValues: ['footway', 'path'],
+      highwayValues: ['footway'],
       uniqueTags: [{ key: 'bicycle', value: 'yes' }],
     },
     comments: [],

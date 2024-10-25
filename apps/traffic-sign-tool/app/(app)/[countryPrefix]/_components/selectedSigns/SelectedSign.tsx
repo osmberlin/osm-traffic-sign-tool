@@ -2,13 +2,13 @@
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { TrashIcon } from '@heroicons/react/16/solid'
 import { Bars4Icon } from '@heroicons/react/20/solid'
-import { TrafficSignState } from '@osm-traffic-signs/converter'
+import { SignStateType } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import { animate, MotionValue, Reorder, useDragControls, useMotionValue } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 type Props = {
-  sign: TrafficSignState
+  sign: SignStateType
 }
 
 const inputFormats = {
@@ -115,8 +115,8 @@ export const SelectedSign = ({ sign }: Props) => {
                   className="pointer-events-none inline h-auto max-h-24 w-full max-w-24"
                 />
 
-                {'valuePrompt' in sign &&
-                  sign.signValue &&
+                {sign.signValue &&
+                  sign.valuePrompt &&
                   sign.signValue !== sign.valuePrompt.defaultValue && (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-full -rotate-12 rounded bg-amber-100/95 px-3 pt-1 font-condensed text-2xl font-normal text-amber-900 shadow-sm">
@@ -141,7 +141,7 @@ export const SelectedSign = ({ sign }: Props) => {
             )}
           </div>
 
-          {'valuePrompt' in sign && (
+          {'valuePrompt' in sign && sign.valuePrompt && (
             <div className="mx-2 mt-2 rounded border border-stone-400/50 p-1 text-sm leading-tight">
               <label htmlFor={sign.osmValuePart} className="break-word hyphens-auto">
                 {sign.valuePrompt.prompt}:

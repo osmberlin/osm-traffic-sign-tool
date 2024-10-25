@@ -1,26 +1,37 @@
 'use client'
+import { WikiLinkValue } from '@app/app/_components/wiki/WikiLinkValue'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
+import {
+  signToTags,
+  signToTrafficSignTagValue,
+  splitIntoSignValueParts,
+  toTag,
+} from '@osm-traffic-signs/converter'
 import { CopyButton } from '../../../_components/links/CopyButton'
 import { Tag } from '../../../_components/wiki/Tag'
-import { WikiLinkify } from '../../../_components/wiki/WikiLinkify'
-import { aggregateComments } from './selectedSigns/utils/aggregateComments'
-import { aggregateTags } from './selectedSigns/utils/aggregateTags'
+import { ResultNotes } from './results/ResultNotes'
 
 export const ResultColumn = () => {
-  const { paramSigns } = useParamSigns()
   const countryPrefix = useCountryPrefix()
-  const aggregatedComments = aggregateComments(paramSigns)
 
   // Rendering signs
+  const { paramSigns } = useParamSigns()
   const hasSelectedSigns = paramSigns.length > 0
-  const aggregatedTags = aggregateTags(paramSigns, countryPrefix)
+  const aggregatedTagsMap = signToTags(paramSigns, countryPrefix)
 
   // Copy signs
-  const copyTrafficSignTag = aggregatedTags.find(([key]) => key === 'traffic_sign')?.join('=')
-  const copyAllTags = aggregatedTags.map(([key, value]) => `${key}=${value}`).join('\n')
+  const copyTrafficSignTag = toTag({
+    key: 'traffic_sign',
+    value: signToTrafficSignTagValue(paramSigns, countryPrefix),
+  })
+  const copyAllTags = Array.from(aggregatedTagsMap)
+    .map(([key, value]) => toTag({ key, value: Array.isArray(value) ? value.join(';') : value }))
+    .join('\n')
   const trafficSignTag = copyTrafficSignTag?.split('=')
+
+  if (!countryPrefix) return null
 
   return (
     <>
@@ -37,58 +48,56 @@ export const ResultColumn = () => {
         <>
           <h2 className="mb-4 text-lg font-light uppercase">Traffic sign tag</h2>
           {trafficSignTag && copyTrafficSignTag && (
-            <div className="flex items-center justify-between">
-              <Tag tagKey={trafficSignTag[0]} tagValue={trafficSignTag[1]} />
-              <CopyButton text={copyTrafficSignTag}>
-                <ClipboardDocumentIcon className="size-4" />
-              </CopyButton>
-            </div>
+            <>
+              <div className="flex items-center justify-between break-all">
+                <Tag tagKey={trafficSignTag[0]} tagValue={trafficSignTag[1]} />
+                <CopyButton text={copyTrafficSignTag}>
+                  <ClipboardDocumentIcon className="size-4" />
+                </CopyButton>
+              </div>
+              <p className="space-x-2 text-xs">
+                <strong>Wiki:</strong>
+                {splitIntoSignValueParts(trafficSignTag[1]).map((part) => {
+                  return (
+                    <span key={part}>
+                      <WikiLinkValue
+                        osmKey={trafficSignTag[0]}
+                        osmValue={
+                          part.startsWith(countryPrefix) ? part : `${countryPrefix}:${part}`
+                        }
+                      />
+                    </span>
+                  )
+                })}
+              </p>
+            </>
           )}
 
           <h2 className="mb-4 mt-10 text-lg font-light uppercase">
             Recommended <code>highway</code> tags
           </h2>
 
-          {aggregatedTags && copyAllTags && (
-            <div className="flex items-end justify-between">
-              <ul>
-                {aggregatedTags.map(([key, value]) => {
-                  return (
-                    <li key={key}>
-                      <Tag tagKey={key} tagValue={value} />
-                    </li>
-                  )
-                })}
-              </ul>
+          <div className="-mx-2 flex items-end justify-between">
+            <ul>
+              {Array.from(aggregatedTagsMap).map(([key, value]) => {
+                return (
+                  <li key={key} className="rounded px-2 py-0.5 leading-tight hover:bg-white/5">
+                    <Tag tagKey={key} tagValue={value} />
+                  </li>
+                )
+              })}
+            </ul>
 
+            {copyAllTags && (
               <div>
                 <CopyButton text={copyAllTags}>
                   <ClipboardDocumentIcon className="size-4" />
                 </CopyButton>
               </div>
-            </div>
-          )}
-
-          <div className="mt-10 space-y-2">
-            <h3 className="text-lg font-light uppercase text-stone-50">Notes</h3>
-            {!aggregatedComments.length && '–'}
-            {aggregatedComments.map(([signKey, signTitle, comment]) => {
-              return (
-                <p
-                  key={signKey}
-                  className="prose-white font-serif font-normal prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 hover:prose-a:decoration-stone-400 hover:prose-a:decoration-1"
-                >
-                  <code
-                    title={signTitle}
-                    className="mr-1 inline-flex items-center rounded bg-gray-50/10 px-1.5 py-0.5 pt-1 text-xs"
-                  >
-                    {signKey}
-                  </code>
-                  <WikiLinkify text={comment} />
-                </p>
-              )
-            })}
+            )}
           </div>
+
+          <ResultNotes />
         </>
       )}
     </>

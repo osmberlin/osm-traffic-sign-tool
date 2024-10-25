@@ -6,15 +6,15 @@ import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
 
 export const SignSelectionColumn = () => {
   // Data
-  const signsMostUsed = trafficSignData.filter(
-    (sign) => 'mostUsed' in sign && sign.mostUsed === true,
-  )
+  const signsMostUsed = trafficSignData.filter((sign) => sign.catalogue.mostUsed === true)
   const signsCatSigns = trafficSignData.filter(
-    (sign) => sign.category === 'traffic_sign' && !('mostUsed' in sign),
+    (sign) => sign.catalogue.signCategory === 'traffic_sign' && !('mostUsed' in sign),
   )
-  const signsCatModifiers = trafficSignData.filter((sign) => sign.category === 'modifier_sign')
+  const signsCatModifiers = trafficSignData.filter(
+    (sign) => sign.catalogue.signCategory === 'modifier_sign',
+  )
   const signsCatModifierRestrictions = trafficSignData.filter(
-    (sign) => sign.category === 'modifier_sign_restriction',
+    (sign) => sign.catalogue.signCategory === 'modifier_sign_restriction',
   )
 
   return (

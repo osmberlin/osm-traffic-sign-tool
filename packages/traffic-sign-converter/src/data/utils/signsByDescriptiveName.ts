@@ -1,4 +1,5 @@
 import { trafficSignData } from '../trafficSignData.js'
+import { transformToSignState } from './transformToSignState.js'
 
 /** @description Looks at the start of the `descriptiveName` property */
 export const signsByDescriptiveName = (names: string[]) => {
@@ -19,4 +20,9 @@ export const signsByDescriptiveName = (names: string[]) => {
   }
 
   return signs
+}
+
+export const signsStateByDescriptiveName = (names: string[]) => {
+  const signs = signsByDescriptiveName(names)
+  return signs.map((sign) => transformToSignState(sign))
 }

@@ -44,7 +44,10 @@ export default function SignsPage() {
         <tbody className="divide-y divide-violet-200">
           {trafficSignData.map((sign) => {
             return (
-              <tr key={sign.key} className={clsx(sign?.image?.svgPath ? '' : 'bg-amber-300')}>
+              <tr
+                key={sign.osmValuePart}
+                className={clsx(sign?.image?.svgPath ? '' : 'bg-amber-300')}
+              >
                 <th className="space-y-3 py-4 pl-4 pr-3 text-center text-sm text-stone-900 sm:pl-6 md:pl-0">
                   <code>{sign.osmValuePart}</code>
                   <br />

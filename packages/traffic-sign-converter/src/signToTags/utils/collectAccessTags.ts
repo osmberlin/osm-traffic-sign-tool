@@ -1,10 +1,11 @@
-import type { SignType } from '../../data/TrafficSignDataTypes.js'
+import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
 
-export const collectAccessTags = (signs: SignType[]) => {
+export const collectAccessTags = (signs: SignStateType[]) => {
   const mergedAccessTags: Map<string, { key: string; value: string }> = new Map()
 
   // Handle `traffic_sign`
   signs
+    .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind === 'traffic_sign')
     .map((sign) => sign.tagRecommendations)
     .forEach((tags) => {
@@ -15,6 +16,7 @@ export const collectAccessTags = (signs: SignType[]) => {
 
   // Handle `modifier_sign`
   signs
+    .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind === 'modifier_sign')
     .map((sign) => sign.tagRecommendations)
     .forEach((tags) => {

@@ -1,27 +1,27 @@
 import { describe, expect, test } from 'vitest'
-import type { CountryPrefixesType } from '../data/countryPrefixes.js'
-import type { LegacyTrafficSignState } from '../data/legacy/typesLegacy.js'
+import type { CountryPrefixType } from '../data/countryPrefixes.js'
+import type { SignStateType } from '../data/TrafficSignDataTypes.js'
 import { signToTrafficSignTagValue } from './signToTrafficSignTagValue.js'
 
 describe('signToTrafficSignTag()', () => {
-  const countryPrefixes = 'DE' satisfies CountryPrefixesType
+  const countryPrefixes = 'DE' satisfies CountryPrefixType
 
   test('no countryPrefixes => empty string', () => {
-    const input = [{ osmValuePart: '333', category: 'traffic_sign' }] as LegacyTrafficSignState[]
+    const input = [{ osmValuePart: '333', kind: 'traffic_sign' }] as SignStateType[]
     const result = signToTrafficSignTagValue(input, undefined)
 
     expect(result).toMatch('')
   })
 
   test('one key, primary category', () => {
-    const input = [{ osmValuePart: '333', category: 'traffic_sign' }] as LegacyTrafficSignState[]
+    const input = [{ osmValuePart: '333', kind: 'traffic_sign' }] as SignStateType[]
     const result = signToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:333')
   })
 
   test('one key, secondary category', () => {
-    const input = [{ osmValuePart: '10-10', category: 'modifier_sign' }] as LegacyTrafficSignState[]
+    const input = [{ osmValuePart: '10-10', kind: 'modifier_sign' }] as SignStateType[]
     const result = signToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:10-10')
@@ -29,9 +29,9 @@ describe('signToTrafficSignTag()', () => {
 
   test('two keys, both primary category', () => {
     const input = [
-      { osmValuePart: '333', category: 'traffic_sign' },
-      { osmValuePart: '444', category: 'traffic_sign' },
-    ] as LegacyTrafficSignState[]
+      { osmValuePart: '333', kind: 'traffic_sign' },
+      { osmValuePart: '444', kind: 'traffic_sign' },
+    ] as SignStateType[]
     const result = signToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:333;444')
@@ -39,9 +39,9 @@ describe('signToTrafficSignTag()', () => {
 
   test('two keys, both secondary category', () => {
     const input = [
-      { osmValuePart: '10-10', category: 'modifier_sign' },
-      { osmValuePart: '12-12', category: 'modifier_sign_restriction' },
-    ] as LegacyTrafficSignState[]
+      { osmValuePart: '10-10', kind: 'modifier_sign' },
+      { osmValuePart: '12-12', kind: 'modifier_sign_restriction' },
+    ] as SignStateType[]
     const result = signToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:10-10,12-12')
@@ -49,13 +49,13 @@ describe('signToTrafficSignTag()', () => {
 
   test('mixed case', () => {
     const input = [
-      { osmValuePart: '333', category: 'traffic_sign' },
-      { osmValuePart: '10-10', category: 'modifier_sign' },
-      { osmValuePart: '12-12', category: 'modifier_sign_restriction' },
-      { osmValuePart: '444', category: 'traffic_sign' },
-      { osmValuePart: '555', category: 'traffic_sign' },
-      { osmValuePart: '13-13', category: 'modifier_sign_restriction' },
-    ] as LegacyTrafficSignState[]
+      { osmValuePart: '333', kind: 'traffic_sign' },
+      { osmValuePart: '10-10', kind: 'modifier_sign' },
+      { osmValuePart: '12-12', kind: 'modifier_sign_restriction' },
+      { osmValuePart: '444', kind: 'traffic_sign' },
+      { osmValuePart: '555', kind: 'traffic_sign' },
+      { osmValuePart: '13-13', kind: 'modifier_sign_restriction' },
+    ] as SignStateType[]
     const result = signToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:333,10-10,12-12;444;555,13-13')

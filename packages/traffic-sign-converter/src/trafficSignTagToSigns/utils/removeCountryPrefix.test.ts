@@ -1,9 +1,9 @@
 import { describe, expect, test } from 'vitest'
-import type { CountryPrefixesType } from '../../data/countryPrefixes.js'
+import type { CountryPrefixType } from '../../data/countryPrefixes.js'
 import { removeCountryPrefix, removeCountryPrefixes } from './removeCountryPrefix.js'
 
 describe('removeCountryPrefix()', () => {
-  const countryPrefix = 'DE' satisfies CountryPrefixesType
+  const countryPrefix = 'DE' satisfies CountryPrefixType
 
   test('Primary sign "DE:123"', () => {
     const result = removeCountryPrefix('DE:123', countryPrefix)
@@ -42,7 +42,7 @@ describe('removeCountryPrefix()', () => {
 })
 
 describe('removeCountryPrefixes()', () => {
-  const countryPrefix = 'DE' satisfies CountryPrefixesType
+  const countryPrefix = 'DE' satisfies CountryPrefixType
 
   test('Primary sign "DE:123"', () => {
     const result = removeCountryPrefixes(['DE:123'], countryPrefix)

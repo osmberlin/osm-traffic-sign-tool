@@ -1,13 +1,13 @@
 'use client'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
-import { TrafficSignDataType, TrafficSignState } from '@osm-traffic-signs/converter'
+import { SignStateType, SignType } from '@osm-traffic-signs/converter'
 import { Sign } from './Sign'
 
 type Props = {
   defaultOpen?: boolean
   headline: string
-  signs: (TrafficSignDataType | TrafficSignState)[]
+  signs: (SignStateType | SignType)[]
 }
 
 export const SignGrid = ({ defaultOpen = true, headline, signs }: Props) => {

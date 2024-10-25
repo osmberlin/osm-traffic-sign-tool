@@ -1,22 +1,21 @@
+import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
 import { ExternalLink } from '../links/ExternalLink'
-import { AggregatedTags } from '../signs/utils/aggregateTags'
 
 type Props = {
   osmKey: string
-  osmValue: AggregatedTags[number][1]
-  lang?: 'DE' | 'US'
+  osmValue: string | string[]
 }
 
-export const WikiLinkValue = ({ osmKey, osmValue, lang = 'DE' }: Props) => {
-  const wikiLink = 'https://wiki.openstreetmap.org/wiki/'
+const wikiLink = 'https://wiki.openstreetmap.org/wiki'
 
-  function prepareLinks(values: readonly string[] | undefined) {
+export const WikiLinkValue = ({ osmKey, osmValue }: Props) => {
+  const countryPrefix = useCountryPrefix()
+
+  function prepareLinks(values: string[] | undefined) {
     if (!values) return []
     return values.map((valuePart) => {
-      if (osmKey === 'traffic_sign' && !valuePart.startsWith('DE:')) {
-        valuePart = `DE:${valuePart}`
-      }
-      const link = `${wikiLink}${lang}:Tag:${osmKey}=${valuePart}`
+      const link = `${wikiLink}/${countryPrefix}:Tag:${osmKey}=${valuePart}`
+
       return {
         link,
         valuePart,
@@ -41,7 +40,7 @@ export const WikiLinkValue = ({ osmKey, osmValue, lang = 'DE' }: Props) => {
           {index < orLinks.length - 1 && (
             <>
               {' '}
-              <em>or</em>
+              <em>or</em>{' '}
             </>
           )}
         </span>

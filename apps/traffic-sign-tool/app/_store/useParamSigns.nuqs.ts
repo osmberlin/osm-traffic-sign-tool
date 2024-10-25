@@ -2,9 +2,9 @@
 import {
   combineSignIdSignValue,
   CountryPrefixesType,
+  SignStateType,
   signToTrafficSignTagValue,
   splitSignIdSignValue,
-  TrafficSignState,
   trafficSignTagToSigns,
 } from '@osm-traffic-signs/converter'
 import { createParser, useQueryState } from 'nuqs'
@@ -12,12 +12,12 @@ import { useCountryPrefix } from './utils/useCountryPrefix'
 
 // From String to Data
 const parse = (input: string, countryPrefix: CountryPrefixesType | undefined) => {
-  return trafficSignTagToSigns(input, countryPrefix) satisfies TrafficSignState[]
+  return trafficSignTagToSigns(input, countryPrefix) satisfies SignStateType[]
 }
 
 // From Data to String
 const serialize = (
-  trafficSigns: TrafficSignState[],
+  trafficSigns: SignStateType[],
   countryPrefix: CountryPrefixesType | undefined,
 ) => {
   return signToTrafficSignTagValue(trafficSigns, countryPrefix)
@@ -54,18 +54,21 @@ export const useParamSigns = () => {
 
   const updateSignValue = (currentOsmValuePart: string, newValue: string) => {
     const newSigns = paramSigns.map((paramSign) => {
-      if (paramSign.osmValuePart === currentOsmValuePart && 'valuePrompt' in paramSign) {
+      if (paramSign.osmValuePart === currentOsmValuePart) {
         const { signId } = splitSignIdSignValue(currentOsmValuePart)
+        const defaultValue =
+          'valuePrompt' in paramSign && paramSign?.valuePrompt
+            ? paramSign.valuePrompt.defaultValue
+            : undefined
+        const newOrFallbackValue = Boolean(newValue) ? newValue : defaultValue
+
         return {
           ...paramSign,
           signValue: newValue,
-          osmValuePart: combineSignIdSignValue(
-            signId,
-            newValue || paramSign.valuePrompt.defaultValue,
-          ),
-        }
+          osmValuePart: combineSignIdSignValue(signId, newOrFallbackValue),
+        } as SignStateType // TS: `as` needed due to some edge cases with `signValue`
       }
-      return paramSign
+      return paramSign satisfies SignStateType
     })
     setParamSigns(newSigns)
   }
