@@ -1,3 +1,6 @@
+'use client'
+import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
+
 const navigation = [
   {
     name: 'Imprint & Contact & Privacy Statement (German)',
@@ -10,6 +13,8 @@ const navigation = [
 ]
 
 export const Footer = () => {
+  const countryPrefix = useCountryPrefix()
+
   return (
     <>
       <footer>
@@ -40,14 +45,22 @@ export const Footer = () => {
               )
             })}
 
-            <div className="px-5 py-2">
-              <a
-                href="/signs"
-                className="text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-400"
-              >
-                List of all traffic signs
-              </a>
-            </div>
+            {countryPrefix && (
+              <div className="flex gap-10 px-5 py-2">
+                <a
+                  href={`${countryPrefix}/taginfo`}
+                  className="text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-400"
+                >
+                  Common values from taginfo
+                </a>
+                <a
+                  href={`${countryPrefix}/signs`}
+                  className="text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-400"
+                >
+                  List of all traffic signs
+                </a>
+              </div>
+            )}
           </nav>
         </div>
       </footer>
