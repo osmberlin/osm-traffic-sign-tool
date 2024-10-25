@@ -1,4 +1,5 @@
 'use client'
+import { StateHelper } from '@app/app/_components/layout/StateHelper'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { Reorder } from 'framer-motion'
 import { SelectedSign } from './selectedSigns/SelectedSign'
@@ -31,6 +32,8 @@ export const SelectedSignsColumn = () => {
         <AnimatePresence></AnimatePresence>
          */}
       </Reorder.Group>
+
+      <StateHelper state={{ paramSigns }} />
     </>
   )
 }
