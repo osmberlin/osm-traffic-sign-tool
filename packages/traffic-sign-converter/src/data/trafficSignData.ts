@@ -29,6 +29,7 @@ export const trafficSignData: SignType[] = [
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg',
       licence: 'Public Domain',
     },
+    identifyingTags: [{ key: 'highway', value: 'cycleway' }],
   },
   {
     osmValuePart: '238',
@@ -99,6 +100,10 @@ export const trafficSignData: SignType[] = [
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_239_-_Sonderweg_Fu%C3%9Fg%C3%A4nger,_StVO_1992.svg',
       licence: 'Public Domain',
     },
+    identifyingTags: [
+      { key: 'highway', value: 'footway' },
+      { key: 'foot', value: 'designated' },
+    ],
   },
   {
     osmValuePart: '240',

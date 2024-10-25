@@ -63,8 +63,9 @@ export type ModifierSignType = SharedId &
   } & SharedComments &
   SharedQuestions &
   SharedCatalogue<'modifier_sign' | 'modifier_sign_restriction'> &
-  SharedImage &
+  SharedIdentifiyingTags &
   SharedImage
+
 type SharedId = {
   osmValuePart: string
   signId: string
@@ -101,6 +102,7 @@ type SharedQuestions = {
   }[]
 }
 type SharedIdentifiyingTags = { identifyingTags?: { key: string; value: string }[] }
+
 type SharedImage = {
   image:
     | {

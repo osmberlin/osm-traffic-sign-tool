@@ -1,27 +1,17 @@
-import { getSignsMap } from '../data/getSignsMap.js'
+import { trafficSignData } from '../data/trafficSignData.js'
+import type { SignType } from '../data/TrafficSignDataTypes.js'
 
-// TODO See TODO
 export const tagsToSigns = (osmTags: string[]) => {
-  const signMap = getSignsMap()
-  const inputTags = new Map(
-    osmTags.map((t) => {
-      const [key, value] = t.split('=')
-      return [key, value]
-    }),
-  )
+  const signCandidates: SignType[] = []
 
-  const candidates: string[] = []
-  for (const [key, sign] of signMap.entries()) {
-    if (sign.recodgnizedSign === false) continue
-    if (!sign.identifyingTags) continue
+  for (const sign of trafficSignData) {
+    const identifyingTags: string[] =
+      sign.identifyingTags?.map((tag) => `${tag.key}=${tag.value}`) || []
 
-    const signMatches = Object.entries(sign.identifyingTags).every(
-      ([key, value]) => inputTags.get(key) === value,
-    )
-    if (signMatches) {
-      candidates.push(key)
+    if (osmTags.every((tag) => identifyingTags.includes(tag))) {
+      signCandidates.push(sign)
     }
   }
 
-  return candidates
+  return signCandidates
 }

@@ -2,5 +2,6 @@ import { expect, test } from 'vitest'
 import { tagsToSigns } from './tagsToSigns.js'
 
 test('osmToTrafficSign', () => {
-  expect(tagsToSigns(['highway=footway', 'foot=designated'])).toMatchObject(['239'])
+  const result = tagsToSigns(['highway=footway', 'foot=designated'])
+  expect(result[0]?.osmValuePart).toBe('239')
 })

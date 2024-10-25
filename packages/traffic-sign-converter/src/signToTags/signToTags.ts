@@ -39,13 +39,7 @@ export const signToTags = (signs: SignType[]) => {
     if (conditionalTag) {
       tagMap.set(conditionalTag.key, conditionalTag.value)
     }
-
-    // https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland => E:1040-30
-    // TODO
   }
-
-  // Deduplicate Tags
-  // TODO
 
   return tagMap
 }
