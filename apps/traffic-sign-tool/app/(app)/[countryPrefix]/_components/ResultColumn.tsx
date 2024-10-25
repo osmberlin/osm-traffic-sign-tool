@@ -5,7 +5,6 @@ import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import {
-  signToTags,
   signToTrafficSignTagValue,
   splitIntoSignValueParts,
   toTag,
@@ -13,6 +12,7 @@ import {
 import { CopyButton } from '../../../_components/links/CopyButton'
 import { Tag } from '../../../_components/wiki/Tag'
 import { ResultNotes } from './results/ResultNotes'
+import { ResultTagRecommendations } from './results/ResultTagRecommendations'
 
 export const ResultColumn = () => {
   const countryPrefix = useCountryPrefix()
@@ -20,16 +20,12 @@ export const ResultColumn = () => {
   // Rendering signs
   const { paramSigns } = useParamSigns()
   const hasSelectedSigns = paramSigns.length > 0
-  const aggregatedTagsMap = signToTags(paramSigns, countryPrefix)
 
   // Copy signs
   const copyTrafficSignTag = toTag({
     key: 'traffic_sign',
     value: signToTrafficSignTagValue(paramSigns, countryPrefix),
   })
-  const copyAllTags = Array.from(aggregatedTagsMap)
-    .map(([key, value]) => toTag({ key, value: Array.isArray(value) ? value.join(';') : value }))
-    .join('\n')
   const trafficSignTag = copyTrafficSignTag?.split('=')
 
   const splitTrafficSignValues = splitIntoSignValueParts(trafficSignTag[1])
@@ -87,29 +83,7 @@ export const ResultColumn = () => {
             </>
           )}
 
-          <h2 className="mb-4 mt-10 text-lg font-light uppercase">
-            Recommended <code>highway</code> tags
-          </h2>
-
-          <div className="-mx-2 flex items-end justify-between">
-            <ul>
-              {Array.from(aggregatedTagsMap).map(([key, value]) => {
-                return (
-                  <li key={key} className="rounded px-2 py-0.5 leading-tight hover:bg-white/5">
-                    <Tag tagKey={key} tagValue={value} />
-                  </li>
-                )
-              })}
-            </ul>
-
-            {copyAllTags && (
-              <div>
-                <CopyButton text={copyAllTags}>
-                  <ClipboardDocumentIcon className="size-4" />
-                </CopyButton>
-              </div>
-            )}
-          </div>
+          <ResultTagRecommendations />
 
           <ResultNotes />
         </>
