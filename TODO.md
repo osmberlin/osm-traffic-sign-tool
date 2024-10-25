@@ -11,3 +11,7 @@ And make sure we cleanup URLs like
 http://localhost:3001/DE?signs=DE:241-30;
 
 We probably want to show some warnings in those cases
+
+# relates modifier_signs
+
+When a traffic_sign is selected, show releated modifier_signs in a group or highlight them in the list
