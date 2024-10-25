@@ -1,5 +1,6 @@
 'use client'
-import { WikiLinkValue } from '@app/app/_components/wiki/WikiLinkValue'
+import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import { wikiLinkClasses, WikiLinkValue } from '@app/app/_components/wiki/WikiLinkValue'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
@@ -31,6 +32,13 @@ export const ResultColumn = () => {
     .join('\n')
   const trafficSignTag = copyTrafficSignTag?.split('=')
 
+  const splitTrafficSignValues = splitIntoSignValueParts(trafficSignTag[1])
+
+  const deOsmToolsLink = () => {
+    // Param cannot be excaped or its ignored…
+    return `http://osmtools.de/traffic_signs/?signs=${splitTrafficSignValues.map((v) => v.replace(`DE:`, '')).join(',')}`
+  }
+
   if (!countryPrefix) return null
 
   return (
@@ -57,7 +65,7 @@ export const ResultColumn = () => {
               </div>
               <p className="space-x-2 text-xs">
                 <strong>Wiki:</strong>
-                {splitIntoSignValueParts(trafficSignTag[1]).map((part) => {
+                {splitTrafficSignValues.map((part) => {
                   return (
                     <span key={part}>
                       <WikiLinkValue
@@ -69,6 +77,12 @@ export const ResultColumn = () => {
                     </span>
                   )
                 })}
+
+                {countryPrefix === 'DE' && (
+                  <ExternalLink href={deOsmToolsLink()} blank className={wikiLinkClasses}>
+                    osmtools.de
+                  </ExternalLink>
+                )}
               </p>
             </>
           )}

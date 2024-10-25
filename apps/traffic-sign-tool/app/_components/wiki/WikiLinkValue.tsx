@@ -8,6 +8,9 @@ type Props = {
 
 const wikiLink = 'https://wiki.openstreetmap.org/wiki'
 
+export const wikiLinkClasses =
+  'underline decoration-transparent underline-offset-4 hover:decoration-stone-400 hover:decoration-1'
+
 export const WikiLinkValue = ({ osmKey, osmValue }: Props) => {
   const countryPrefix = useCountryPrefix()
 
@@ -30,11 +33,7 @@ export const WikiLinkValue = ({ osmKey, osmValue }: Props) => {
     <>
       {orLinks.map(({ link, valuePart }, index) => (
         <span key={index}>
-          <ExternalLink
-            href={link}
-            className="underline decoration-transparent underline-offset-4 hover:decoration-stone-400 hover:decoration-1"
-            blank
-          >
+          <ExternalLink href={link} className={wikiLinkClasses} blank>
             {valuePart}
           </ExternalLink>
           {index < orLinks.length - 1 && (
@@ -47,11 +46,7 @@ export const WikiLinkValue = ({ osmKey, osmValue }: Props) => {
       ))}
       {semiLinks.map(({ link, valuePart }, index) => (
         <span key={index}>
-          <ExternalLink
-            href={link}
-            className="underline decoration-transparent underline-offset-4 hover:decoration-stone-400 hover:decoration-1"
-            blank
-          >
+          <ExternalLink href={link} className={wikiLinkClasses} blank>
             {valuePart}
           </ExternalLink>
           {index < semiLinks.length - 1 && ';'}
