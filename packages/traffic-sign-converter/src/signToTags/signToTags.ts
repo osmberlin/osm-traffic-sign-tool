@@ -50,7 +50,13 @@ export const signToTags = (
     }
   }
 
+  // Add `traffic_sign=*`
   tagMap.set('traffic_sign', signToTrafficSignTagValue(signs, countryPrefix))
+
+  // Cleanup `highway=[]`
+  if (tagMap.get('highway')?.length === 0) {
+    tagMap.delete('highway')
+  }
 
   return tagMap
 }

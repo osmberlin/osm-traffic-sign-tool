@@ -7,9 +7,14 @@ describe('signToTags()', () => {
   describe('highway tag', () => {
     test('Collects unique values', () => {
       const signs = signsStateByDescriptiveName(['Gehweg', 'Radfahrer frei'])
-      // const result = new Map([['highway', ['footway', 'path']]])
       const result = signToTags(signs, 'DE')
       expect(result.get('highway')).toMatchObject(['footway', 'path'])
+    })
+
+    test('No empty list', () => {
+      const signs = signsStateByDescriptiveName(['Zulässige Höchstgeschwindigkeit'])
+      const result = signToTags(signs, 'DE')
+      expect(result.has('highway')).toBeFalsy()
     })
   })
 
