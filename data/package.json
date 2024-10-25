@@ -7,13 +7,16 @@
     "wiki:downloadWiki": "bun ./wiki/downloadWiki/downloadWiki.ts && prettier ./ --write",
     "wiki:parseWiki": "bun ./wiki/parseWiki/parseWiki.ts && prettier ./ --write",
     "wiki:downloadSvgs": "bun ./wiki/downloadSvgs/downloadSvgs.ts",
-    "wiki:applyParsedWiki": "bun ./wiki/parseWiki/applyParsedWiki.ts && prettier ./ --write"
+    "wiki:applyParsedWiki": "bun ./wiki/parseWiki/applyParsedWiki.ts && prettier ./ --write",
+    "taginfo": "npm run taginfo:fetch",
+    "taginfo:fetch": "bun ./taginfo/fetch.ts && prettier ./ --write"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "cheerio": "^1.0.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-organize-imports": "^4.0.0"
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "zod": "^3.23.8"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
