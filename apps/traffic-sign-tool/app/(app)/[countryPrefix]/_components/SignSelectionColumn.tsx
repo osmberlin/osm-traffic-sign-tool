@@ -1,8 +1,8 @@
 'use client'
-import { SignGrid } from '@app/app/_components/signs/SignGrid'
 import { trafficSignData } from '@monorepo/packages/traffic-sign-converter/dist'
-import { SearchSignInput } from '../../../_components/signs/SearchSignInput'
-import { SignGridSearchQuery } from '../../../_components/signs/SignGridSearchQuery'
+import { SearchSignInput } from './signGroups/SearchSignInput'
+import { SignGrid } from './signGroups/SignGrid'
+import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
 
 export const SignSelectionColumn = () => {
   // Data

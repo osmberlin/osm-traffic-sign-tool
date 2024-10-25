@@ -1,6 +1,6 @@
 'use client'
-import { SelectedSigns } from '@app/app/_components/signs/SelectedSigns'
 import { ResultColumn } from './ResultColumn'
+import { SelectedSignsColumn } from './SelectedSignsColumn'
 import { SignSelectionColumn } from './SignSelectionColumn'
 
 export const AppUseClient = () => {
@@ -13,7 +13,7 @@ export const AppUseClient = () => {
       <section className="w-56 flex-none rounded bg-stone-300 py-4">
         <h2 className="mb-4 text-center text-lg font-light uppercase">Selected Signs</h2>
 
-        <SelectedSigns />
+        <SelectedSignsColumn />
       </section>
 
       <section className="w-96 flex-none rounded bg-stone-900 px-4 py-4 text-stone-100">

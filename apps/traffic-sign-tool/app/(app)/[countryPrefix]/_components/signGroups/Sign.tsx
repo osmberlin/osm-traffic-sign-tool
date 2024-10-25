@@ -1,10 +1,10 @@
+import { buttonStyleSecondary } from '@app/app/_components/links/buttonStyles'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { BugAntIcon, CheckCircleIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
 import { TrafficSignDataType } from '@monorepo/packages/traffic-sign-converter/dist/data/types'
 import { TrafficSignState } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import { useState } from 'react'
-import { buttonStyleSecondary } from '../links/buttonStyles'
 
 type Props = {
   sign: TrafficSignState | TrafficSignDataType

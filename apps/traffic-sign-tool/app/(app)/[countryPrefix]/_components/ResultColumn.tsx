@@ -1,12 +1,12 @@
 'use client'
-import { aggregateComments } from '@app/app/_components/signs/utils/aggregateComments'
-import { aggregateTags } from '@app/app/_components/signs/utils/aggregateTags'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import { CopyButton } from '../../../_components/links/CopyButton'
 import { Tag } from '../../../_components/wiki/Tag'
 import { WikiLinkify } from '../../../_components/wiki/WikiLinkify'
+import { aggregateComments } from './selectedSigns/utils/aggregateComments'
+import { aggregateTags } from './selectedSigns/utils/aggregateTags'
 
 export const ResultColumn = () => {
   const { paramSigns } = useParamSigns()

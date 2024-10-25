@@ -1,10 +1,9 @@
 'use client'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { Reorder } from 'framer-motion'
-import { StateHelper } from '../layout/StateHelper'
-import { SelectedSign } from './SelectedSign'
+import { SelectedSign } from './selectedSigns/SelectedSign'
 
-export const SelectedSigns = () => {
+export const SelectedSignsColumn = () => {
   const { paramSigns, setParamSigns } = useParamSigns()
 
   const paramSignValueList = paramSigns.map((sign) => sign.osmValuePart)
@@ -32,8 +31,6 @@ export const SelectedSigns = () => {
         <AnimatePresence></AnimatePresence>
          */}
       </Reorder.Group>
-
-      <StateHelper state={{ list: paramSigns }} />
     </>
   )
 }

@@ -27,5 +27,6 @@ export const SignGridSearchQuery = () => {
   }, [searchSigns, setParamQCount])
 
   if (!paramQ || !searchSigns.length) return null
+
   return <SignGrid headline="Suchergebnisse" signs={searchSigns} />
 }
