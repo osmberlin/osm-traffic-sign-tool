@@ -1,5 +1,5 @@
 // Output is "DE:123", "DE:123[4.4]", "123-45"
-export const combineSignIdSignValue = (signId: string, signValue: string | undefined) => {
+export const combineSignIdSignValue = (signId: string, signValue: string | number | undefined) => {
   if (signValue) {
     return `${signId}[${signValue}]`
   }

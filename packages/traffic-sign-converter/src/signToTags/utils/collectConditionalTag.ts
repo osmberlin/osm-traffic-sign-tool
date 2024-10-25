@@ -7,7 +7,13 @@ export const collectConditionalTag = (signs: SignStateType[]) => {
     if (sign.recodgnizedSign === false) return
 
     if (sign.kind === 'traffic_sign' && sign.tagRecommendations.conditionalTag) {
-      conditionalTag = sign.tagRecommendations.conditionalTag
+      conditionalTag = {
+        key: sign.tagRecommendations.conditionalTag.key,
+        value:
+          sign.signValue === undefined
+            ? sign.tagRecommendations.conditionalTag.value
+            : String(sign.signValue),
+      }
     }
     if (sign.kind === 'modifier_sign') {
       if (conditionalTag === undefined) {
