@@ -883,6 +883,40 @@ export const trafficSignData: SignType[] = [
     },
   },
   {
+    osmValuePart: '277.1',
+    signId: '277.1',
+    name: 'Zeichen 277.1',
+    descriptiveName:
+      'Verbot des Überholens von einspurigen Fahrzeugen für mehrspurige Kraftfahrzeuge und Krafträder mit Beiwagen',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [],
+    },
+    comments: [
+      {
+        tagReference: null,
+        comment: 'Es gibt noch kein etabliertes Tagging Schema für dieses Verkehrszeichen.',
+      },
+      {
+        tagReference: null,
+        comment:
+          'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking:hgv=forward/backward] entsprechend der Wegrichtung.',
+      },
+    ],
+    catalogue: {
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_277.1_-_Verbot_des_Ueberholens_von_einspurigen_Fahrzeugen_fuer_mehrspurige_Kraftfahrzeuge_und_Kraftraedern_mit_Beiwagen;_StVO_2020.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_277.1_-_Verbot_des_%C3%9Cberholens_von_einspurigen_Fahrzeugen_f%C3%BCr_mehrspurige_Kraftfahrzeuge_und_Kraftr%C3%A4dern_mit_Beiwagen;_StVO_2020.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '354',
     signId: '354',
     name: 'Zeichen 354',
