@@ -3,6 +3,7 @@ import taginfoTrafficSignData from '@monorepo/data/taginfo/taginfoTrafficSignDat
 import { countryPrefixes } from '@osm-traffic-signs/converter'
 import { z } from 'zod'
 import { TagRecommendations } from './_components/TagRecommendations'
+import { TagSignImages } from './_components/TagSignImages'
 
 export async function generateStaticParams() {
   return countryPrefixes.map((prefx) => ({
@@ -35,40 +36,44 @@ export default function TaginfoPage() {
       </p>
 
       <table className="mt-10 min-w-full">
-        <thead className="border-b-2 border-violet-300">
+        <thead className="border-white-300 border-b-2 bg-white/20">
           <tr>
             <th
               scope="col"
-              className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-stone-900 sm:pl-6 md:pl-0"
+              className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-stone-900 sm:pl-6"
             >
               Sign key
+            </th>
+            <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-stone-900">
+              Images
             </th>
             <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-stone-900">
               Usage number from taginfo
             </th>
             <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-stone-900">
-              Link to this tool
-            </th>
-            <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-stone-900">
-              Link to osmtools
+              Links
             </th>
             <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-stone-900">
               Tag recommendations
             </th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-violet-200">
+        <tbody className="divide-white-200 divide-y-4">
           {data.map(([value, usageCount]) => {
             return (
               <tr key={value}>
-                <th className="py-4 pl-4 pr-3 text-left text-sm text-stone-900 sm:pl-6 md:pl-0">
+                <th className="py-4 pl-4 pr-3 text-left text-sm text-stone-900 sm:pl-6">
                   <code>{value}</code>
                 </th>
-                <td className="px-3 py-4 text-stone-900">{usageCount.toLocaleString()}</td>
-                <td className="px-3 py-4 text-sm text-stone-500">
-                  <ExternalLink href={`/DE?signs=${value}`}>This tool</ExternalLink>
+                <td className="whitespace-nowrap px-3 py-4 text-right text-stone-900">
+                  {usageCount.toLocaleString()} &times;
+                </td>
+                <td className="px-3 py-4 text-sm text-stone-900">
+                  <TagSignImages value={value} />
                 </td>
                 <td className="px-3 py-4 text-sm text-stone-500">
+                  <ExternalLink href={`/DE?signs=${value}`}>This tool</ExternalLink>
+                  <br />
                   <ExternalLink
                     href={`https://osmtools.de/traffic_signs/?sign=?signs=${value.replace('DE:', '')}`}
                   >
