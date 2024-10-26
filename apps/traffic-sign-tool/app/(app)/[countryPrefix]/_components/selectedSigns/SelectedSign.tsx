@@ -4,8 +4,9 @@ import { TrashIcon } from '@heroicons/react/16/solid'
 import { Bars4Icon } from '@heroicons/react/20/solid'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
-import { animate, MotionValue, Reorder, useDragControls, useMotionValue } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { Reorder, useDragControls, useMotionValue } from 'framer-motion'
+import { useState } from 'react'
+import { useRaisedShadow } from './utils/useRaisedShadow'
 
 type Props = {
   sign: SignStateType
@@ -16,37 +17,6 @@ const inputFormats = {
   float: { type: 'number', steps: '0.1' },
   opening_hours: { type: 'text', steps: undefined },
   time_restriction: { type: 'text', steps: undefined },
-}
-
-const inactiveShadow = '0px 0px 0px rgba(0,0,0,0.8)'
-
-export function useRaisedShadow(value: MotionValue<number>) {
-  const boxShadow = useMotionValue(inactiveShadow)
-
-  useEffect(() => {
-    let isActive = false
-    const onChange = (latest: number) => {
-      const wasActive = isActive
-      if (latest === 0) {
-        isActive = false
-        if (isActive !== wasActive) {
-          animate(boxShadow, inactiveShadow)
-        }
-      } else {
-        isActive = true
-        if (isActive !== wasActive) {
-          animate(boxShadow, '5px 5px 10px rgba(0,0,0,0.3)')
-        }
-      }
-    }
-    const unsubscribeOnChange = value.on('change', onChange)
-
-    return () => {
-      unsubscribeOnChange()
-    }
-  }, [value, boxShadow])
-
-  return boxShadow
 }
 
 // Docs for Frame Motion Reorder https://www.framer.com/motion/reorder/
