@@ -1811,7 +1811,7 @@ export const trafficSignData: SignType[] = [
   {
     osmValuePart: '220-10',
     signId: '220-10',
-    name: 'Zeichen DE:220-10',
+    name: 'Zeichen 220-10',
     descriptiveName: 'Einbahnstraße – linksweisend',
     description: null,
     kind: 'traffic_sign',
@@ -1833,7 +1833,7 @@ export const trafficSignData: SignType[] = [
   {
     osmValuePart: '220-20',
     signId: '220-20',
-    name: 'Zeichen DE:220-20',
+    name: 'Zeichen 220-20',
     descriptiveName: 'Einbahnstraße – rechtsweisend',
     description: null,
     kind: 'traffic_sign',
