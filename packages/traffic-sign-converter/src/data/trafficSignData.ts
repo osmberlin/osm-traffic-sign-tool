@@ -282,7 +282,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: ['service', 'busway'],
       uniqueTags: [{ key: 'bus', value: 'designated' }],
-      conditionalTag: { key: 'vehicle', value: 'no' },
+      conditionalTags: [{ key: 'vehicle', value: 'no' }],
     },
     comments: [
       // TODO: Hier ist die Aufteilung Centerline / Separate Linie essentiell, da in DE meist über das lane-Schema zu taggen.
@@ -601,7 +601,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'source:maxweight', value: 'sign' }],
-      conditionalTag: { key: 'maxweight', value: '5.5' },
+      conditionalTags: [{ key: 'maxweight', value: '5.5' }],
     },
     comments: [],
     catalogue: {
@@ -631,7 +631,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'source:maxaxleload', value: 'sign' }],
-      conditionalTag: { key: 'maxaxleload', value: '8' },
+      conditionalTags: [{ key: 'maxaxleload', value: '8' }],
     },
     comments: [],
     catalogue: {
@@ -661,7 +661,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'source:maxwidth', value: 'sign' }],
-      conditionalTag: { key: 'maxwidth', value: '2' },
+      conditionalTags: [{ key: 'maxwidth', value: '2' }],
     },
     comments: [],
     catalogue: {
@@ -691,7 +691,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'source:maxheight', value: 'sign' }],
-      conditionalTag: { key: 'maxheight', value: '3.8' },
+      conditionalTags: [{ key: 'maxheight', value: '3.8' }],
     },
     comments: [],
     catalogue: {
@@ -721,7 +721,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'source:maxlength', value: 'sign' }],
-      conditionalTag: { key: 'maxlength', value: '10' },
+      conditionalTags: [{ key: 'maxlength', value: '10' }],
     },
     comments: [],
     catalogue: {
@@ -745,7 +745,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalTag: { key: 'hazmat:water', value: 'no' },
+      conditionalTags: [{ key: 'hazmat:water', value: 'no' }],
     },
     comments: [],
     catalogue: {
@@ -778,7 +778,7 @@ export const trafficSignData: SignType[] = [
         { key: 'source:maxspeed', value: 'DE:zone' },
         { key: 'zone:maxspeed', value: 'DE:30' },
       ],
-      conditionalTag: { key: 'maxspeed', value: '30' },
+      conditionalTags: [{ key: 'maxspeed', value: '30' }],
     },
     comments: [],
     catalogue: {
@@ -807,7 +807,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTag: { key: 'maxspeed', value: '60' },
+      conditionalTags: [{ key: 'maxspeed', value: '60' }],
     },
     comments: [],
     catalogue: {
@@ -837,7 +837,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'source:minspeed', value: 'sign' }],
-      conditionalTag: { key: 'minspeed', value: '30' },
+      conditionalTags: [{ key: 'minspeed', value: '30' }],
     },
     comments: [
       {
@@ -865,7 +865,7 @@ export const trafficSignData: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {
-      conditionalTag: { key: 'overtaking', value: 'no' },
+      conditionalTags: [{ key: 'overtaking', value: 'no' }],
     },
     comments: [
       {
@@ -1422,7 +1422,9 @@ export const trafficSignData: SignType[] = [
       defaultValue: '16-18',
       format: 'time_restriction',
     },
-    tagRecommendations: {},
+    tagRecommendations: {
+      conditionalValueFromValuePrompt: true,
+    },
     catalogue: {
       signCategory: 'modifier_sign_restriction',
     },

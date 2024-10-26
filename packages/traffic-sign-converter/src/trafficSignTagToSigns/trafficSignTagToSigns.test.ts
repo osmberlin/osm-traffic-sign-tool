@@ -83,7 +83,7 @@ describe('trafficSignTagToSigns()', () => {
     test('signs: no motor vehicle expect tractor but only 4t', () => {
       const input = 'traffic_sign=FOO;DE:260,BAR,1026-36;BAZ;262[4];FOO2'
       const result = trafficSignTagToSigns(input, countryPrefix)
-      expect(joinOsmValueParts(result)).toMatch('UNKOWN|260|UNKOWN|1026-36|UNKOWN|262[4]|UNKOWN')
+      expect(joinOsmValueParts(result)).toMatch('FOO|260|BAR|1026-36|BAZ|262[4]|FOO2')
       expect(result.map((s) => s.signValue).join('|')).toMatch('FOO||BAR||BAZ|4|FOO2')
       // TODO: Understand why this is green as well…
       // expect(result.map((s) => s.signValue).join('|')).toMatch('4')

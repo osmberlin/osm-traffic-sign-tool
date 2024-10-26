@@ -6,9 +6,13 @@ import { signToTags } from './signToTags.js'
 describe('signToTags()', () => {
   describe('highway tag', () => {
     test('Collects unique values', () => {
-      const signs = signsStateByDescriptiveName(['Gehweg', 'Radfahrer frei'])
+      const signs = signsStateByDescriptiveName([
+        'Gehweg',
+        'Gemeinsamer Fuß- und Radweg',
+        'Getrennter Rad- und Gehweg',
+      ])
       const result = signToTags(signs, 'DE')
-      expect(result.get('highway')).toMatchObject(['footway', 'path'])
+      expect(result.get('highway')).toMatchObject(['footway', 'path', 'cycleway'])
     })
 
     test('No empty list', () => {
@@ -37,10 +41,12 @@ describe('signToTags()', () => {
     test('Tag 2 overwrites Tag 1', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { uniqueTags: [{ key: 'foo', value: 'bar' }] },
         },
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { uniqueTags: [{ key: 'foo', value: 'bar2' }] },
         },
@@ -52,13 +58,18 @@ describe('signToTags()', () => {
     test('highway tags on unique tags get ignored', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: {
             highwayValues: ['winner1'],
             uniqueTags: [{ key: 'highway', value: 'gets-ignored' }],
           },
         },
-        { kind: 'traffic_sign', tagRecommendations: { highwayValues: ['winner2'] } },
+        {
+          recodgnizedSign: true,
+          kind: 'traffic_sign',
+          tagRecommendations: { highwayValues: ['winner2'] },
+        },
       ] as SignStateType[]
       const result = signToTags(signs, 'DE')
       expect(result.get('highway')).toStrictEqual(['winner1', 'winner2'])
@@ -67,6 +78,7 @@ describe('signToTags()', () => {
     test('acces tag overwrite unique tags', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: {
             accessTags: [{ key: 'vehicle', value: 'winner' }],
@@ -74,6 +86,7 @@ describe('signToTags()', () => {
           },
         },
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: {
             accessTags: [{ key: 'vehicle', value: 'winner2' }],

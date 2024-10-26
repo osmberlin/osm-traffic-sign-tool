@@ -35,7 +35,7 @@ export type TrafficSignType = SharedId &
       highwayValues?: string[]
       accessTags?: { key: string; value: string }[]
       uniqueTags?: { key: string; value: string }[]
-      conditionalTag?: { key: string; value: string }
+      conditionalTags?: { key: string; value: string }[]
     }
   } & SharedComments &
   SharedQuestions &
