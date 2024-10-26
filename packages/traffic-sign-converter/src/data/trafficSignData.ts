@@ -1850,4 +1850,22 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '205',
+    signId: '205',
+    name: 'Zeichen 205',
+    descriptiveName: 'Vorfahrt gewähren',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    catalogue: {
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_205_-_Vorfahrt_gewaehren!_StVO_1970.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
