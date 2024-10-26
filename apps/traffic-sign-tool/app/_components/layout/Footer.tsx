@@ -1,5 +1,6 @@
 'use client'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
+import Link from 'next/link'
 
 const navigation = [
   {
@@ -47,18 +48,18 @@ export const Footer = () => {
 
             {countryPrefix && (
               <div className="flex gap-10 px-5 py-2">
-                <a
-                  href={`${countryPrefix}/taginfo`}
+                <Link
+                  href={`/${countryPrefix}/taginfo`}
                   className="text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-400"
                 >
-                  Common values from taginfo
-                </a>
-                <a
-                  href={`${countryPrefix}/signs`}
+                  Review common values (taginfo)
+                </Link>
+                <Link
+                  href={`/${countryPrefix}/signs`}
                   className="text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-400"
                 >
-                  List of all traffic signs
-                </a>
+                  Review full catalogue
+                </Link>
               </div>
             )}
           </nav>
