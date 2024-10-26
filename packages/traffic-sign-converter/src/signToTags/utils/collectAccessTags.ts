@@ -9,9 +9,11 @@ export const collectAccessTags = (signs: SignStateType[]) => {
     .filter((sign) => sign.kind === 'traffic_sign')
     .map((sign) => sign.tagRecommendations)
     .forEach((tags) => {
-      tags.accessTags?.forEach((tag) => {
-        mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
-      })
+      if (tags.accessTags) {
+        for (const tag of tags.accessTags) {
+          mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
+        }
+      }
     })
 
   // Handle `modifier_sign`
@@ -20,24 +22,22 @@ export const collectAccessTags = (signs: SignStateType[]) => {
     .filter((sign) => sign.kind === 'modifier_sign')
     .map((sign) => sign.tagRecommendations)
     .forEach((tags) => {
-      // `modifier_sign`s can change the values of all existing access tags
+      // Signs can have a `accessValue` or `accessTags`
+      // `accessValue` updates the value of all existing access tags
+      // `accessTags` are just added to the pile (and maybe updated by the next sign
+
       if (tags.accessValue) {
-        mergedAccessTags.forEach((tag) => {
-          // @ts-expect-error `accessValue` is guarded above
+        for (const [_, tag] of mergedAccessTags) {
           mergedAccessTags.set(tag.key, { key: tag.key, value: tags.accessValue })
-        })
+        }
       }
 
-      tags.accessTags?.forEach((tag) => {
-        if (mergedAccessTags.get(tag.key)) {
-          // `modifier_sign`s can change the value of an existing tag
+      if (tags.accessTags) {
+        for (const tag of tags.accessTags) {
           mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
-          return
         }
-        // `modifier_sign`s can add new access tags
-        mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
-      })
+      }
     })
 
-  return Array.from(mergedAccessTags.values()).flat()
+  return Array.from(mergedAccessTags.values())
 }

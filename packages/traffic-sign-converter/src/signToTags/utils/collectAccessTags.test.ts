@@ -72,6 +72,7 @@ describe('collectAccessTags()', () => {
     test('One Sign, full Tag', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
         },
@@ -82,6 +83,7 @@ describe('collectAccessTags()', () => {
     test('One Sign, two Tags', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: {
             accessTags: [
@@ -100,10 +102,12 @@ describe('collectAccessTags()', () => {
     test('Two Signs, same key, second wins', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
         },
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar2' }] },
         },
@@ -114,10 +118,12 @@ describe('collectAccessTags()', () => {
     test('Two Signs, different keys', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
         },
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { accessTags: [{ key: 'foo2', value: 'bar2' }] },
         },
@@ -131,10 +137,15 @@ describe('collectAccessTags()', () => {
     test('One sign, one modifer', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
         },
-        { kind: 'modifier_sign', tagRecommendations: { accessValue: 'aaa' } },
+        {
+          recodgnizedSign: true,
+          kind: 'modifier_sign',
+          tagRecommendations: { accessValue: 'aaa' },
+        },
       ] as SignStateType[]
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'aaa' }])
     })
@@ -142,11 +153,20 @@ describe('collectAccessTags()', () => {
     test('One sign, two modifer', () => {
       const signs = [
         {
+          recodgnizedSign: true,
           kind: 'traffic_sign',
           tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
         },
-        { kind: 'modifier_sign', tagRecommendations: { accessValue: 'aaa' } },
-        { kind: 'modifier_sign', tagRecommendations: { accessValue: 'bbb' } },
+        {
+          recodgnizedSign: true,
+          kind: 'modifier_sign',
+          tagRecommendations: { accessValue: 'aaa' },
+        },
+        {
+          recodgnizedSign: true,
+          kind: 'modifier_sign',
+          tagRecommendations: { accessValue: 'bbb' },
+        },
       ] as SignStateType[]
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'bbb' }])
     })
