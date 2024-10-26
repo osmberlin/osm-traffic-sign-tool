@@ -897,6 +897,7 @@ export const trafficSignData: SignType[] = [
     comments: [
       {
         tagReference: null,
+        important: true,
         comment: 'Es gibt noch kein etabliertes Tagging Schema für dieses Verkehrszeichen.',
       },
       {

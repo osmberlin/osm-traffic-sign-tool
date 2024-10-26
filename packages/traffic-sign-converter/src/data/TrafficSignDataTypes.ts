@@ -88,6 +88,7 @@ type ValuePrompt<T> = {
 
 export type SignComentType = {
   tagReference?: string | null
+  important?: true | undefined
   comment: string
 }
 

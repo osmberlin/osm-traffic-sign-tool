@@ -26,9 +26,9 @@ export const ResultComments = () => {
                 </span>
               </code>
               <ul className="space-y-2">
-                {signComments.map(({ tagReference, comment }) => {
+                {signComments.map(({ tagReference, important, comment }) => {
                   return (
-                    <li key={comment}>
+                    <li key={comment} className={important ? 'text-amber-500' : ''}>
                       {tagReference && (
                         <p>
                           <code>{tagReference}</code>
