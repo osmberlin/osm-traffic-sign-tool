@@ -3,7 +3,7 @@ import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { signToComments } from '@osm-traffic-signs/converter'
 import { WikiLinkify } from '../../../../_components/wiki/WikiLinkify'
 
-export const ResultNotes = () => {
+export const ResultComments = () => {
   const { paramSigns } = useParamSigns()
   const signsCommentsMap = signToComments(paramSigns)
   return (

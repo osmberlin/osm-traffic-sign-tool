@@ -1,6 +1,6 @@
 'use client'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
-import { ResultNotes } from './results/ResultNotes'
+import { ResultComments } from './results/ResultComments'
 import { ResultTagRecommendations } from './results/ResultTagRecommendations'
 import { ResultTrafficSignTag } from './results/ResultTrafficSignTag'
 
@@ -22,7 +22,7 @@ export const ResultColumn = () => {
     <>
       <ResultTrafficSignTag />
       <ResultTagRecommendations />
-      <ResultNotes />
+      <ResultComments />
     </>
   )
 }
