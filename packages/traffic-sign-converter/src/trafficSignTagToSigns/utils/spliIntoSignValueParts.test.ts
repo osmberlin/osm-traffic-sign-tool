@@ -14,4 +14,8 @@ describe('splitIntoSignValueParts()', () => {
     const result = splitIntoSignValueParts('a;b,c[x,y];d,e,f[y,x]')
     expect(result).toMatchObject(['a', 'b', 'c[x,y]', 'd', 'e', 'f[y,x]'])
   })
+  test('cleanup whitespace', () => {
+    const result = splitIntoSignValueParts(' a ; b , c[x.y] ; d , e , f[y,x]')
+    expect(result).toMatchObject(['a', 'b', 'c[x.y]', 'd', 'e', 'f[y,x]'])
+  })
 })
