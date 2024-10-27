@@ -56,4 +56,32 @@ describe('collectConditionalTags()', () => {
       },
     ])
   })
+
+  test('Handle valueTemplate (One Sign)', () => {
+    const signs = signsStateByDescriptiveName(['Tempo 30-Zone'])
+    expect(collectConditionalTags(signs)).toMatchObject([
+      {
+        key: 'maxspeed',
+        value: '30',
+      },
+      {
+        key: 'zone:maxspeed',
+        value: 'DE:30',
+      },
+    ])
+  })
+
+  test('Handle valueTemplate (with modifier sign)', () => {
+    const signs = signsStateByDescriptiveName(['Tempo 30-Zone', 'Zeitliche Beschräkung'])
+    expect(collectConditionalTags(signs)).toMatchObject([
+      {
+        key: 'maxspeed:conditional',
+        value: '30 @ 16-18',
+      },
+      {
+        key: 'zone:maxspeed:conditional',
+        value: 'DE:30 @ 16-18',
+      },
+    ])
+  })
 })

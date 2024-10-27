@@ -774,11 +774,11 @@ export const trafficSignData: SignType[] = [
     },
     tagRecommendations: {
       highwayValues: [],
-      uniqueTags: [
-        { key: 'source:maxspeed', value: 'DE:zone' },
-        { key: 'zone:maxspeed', value: 'DE:30' },
+      uniqueTags: [{ key: 'source:maxspeed', value: 'DE:zone' }],
+      conditionalTags: [
+        { key: 'maxspeed', value: '30' },
+        { key: 'zone:maxspeed', value: 'DE:30', valueTemplate: 'DE:$' },
       ],
-      conditionalTags: [{ key: 'maxspeed', value: '30' }],
     },
     comments: [],
     catalogue: {
