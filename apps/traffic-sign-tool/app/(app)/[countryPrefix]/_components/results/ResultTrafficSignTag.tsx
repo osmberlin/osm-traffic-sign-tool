@@ -1,7 +1,7 @@
 'use client'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
-import { WikiLinkListTrafficSignValues } from '@app/app/_components/links/WikiLinkListTrafficSignValues'
+import { WikiLinkListTrafficSignValues } from '@app/app/_components/wiki/WikiLinkListTrafficSignValues'
 import { wikiLinkClasses } from '@app/app/_components/wiki/WikiLinkValue'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
