@@ -3,6 +3,7 @@ import type { CountryPrefixType } from './countryPrefixes.js'
 // Manual test case: http://127.0.0.1:3000/DE?signs=DE:274-30 will "redirect" to http://127.0.0.1:3000/DE?signs=DE:274[30]
 export const alternativeKeyFormats: Record<CountryPrefixType, Map<string, string>> = {
   DE: new Map([
+    // OLD => NEW
     // maxspeed
     ['274-5', '274[5]'],
     ['274-10', '274[10]'],
@@ -24,5 +25,7 @@ export const alternativeKeyFormats: Record<CountryPrefixType, Map<string, string
     // Always use "Beginn…" version
     ['244', '244.1'],
     ['325', '325.1'],
+    // Msic
+    ['no', 'none'], // 1k vs. 12k usage
   ]),
 }
