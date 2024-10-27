@@ -1998,4 +1998,25 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '206',
+    signId: '206',
+    name: 'Zeichen 206',
+    descriptiveName: 'Halt! Vorfahrt gewähren',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'highway', value: 'stop' }],
+    },
+    comments: [{ comment: 'Wird als Punkt auf der Straße erfasst.' }],
+    catalogue: {
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_206_-_Halt!_Vorfahrt_gewähren!_StVO_2017.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_206_-_Halt!_Vorfahrt_gew%C3%A4hren!_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
