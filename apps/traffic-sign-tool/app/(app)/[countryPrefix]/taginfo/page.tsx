@@ -1,5 +1,6 @@
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { linkStyle } from '@app/app/_components/links/linkStyles'
+import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
 import taginfoTrafficSignData from '@monorepo/data/taginfo/taginfoTrafficSignData.json'
 import { countryPrefixes } from '@osm-traffic-signs/converter'
 import Link from 'next/link'
@@ -85,10 +86,7 @@ export default function TaginfoPage() {
                     This tool
                   </Link>
                   <br />
-                  <ExternalLink
-                    href={`https://osmtools.de/traffic_signs/?signs=${value.replace('DE:', '')}`}
-                    blank
-                  >
+                  <ExternalLink href={osmtoolsUrl(value)} blank>
                     osmtools.de
                   </ExternalLink>
                 </td>
