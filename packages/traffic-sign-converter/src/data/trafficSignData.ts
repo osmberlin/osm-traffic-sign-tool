@@ -20,7 +20,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -91,7 +91,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -128,7 +128,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -165,7 +165,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -202,7 +202,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -339,7 +339,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -363,7 +363,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -434,7 +434,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -811,7 +811,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -841,7 +841,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'traffic_sign',
     },
     image: {
@@ -1045,7 +1045,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'modifier_sign',
     },
     image: {
@@ -1069,7 +1069,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'modifier_sign',
     },
     image: {
@@ -1224,7 +1224,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'modifier_sign',
     },
     image: {
@@ -1323,7 +1323,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      mostUsed: true,
+      visibility: 'highlight',
       signCategory: 'modifier_sign',
     },
     image: {
@@ -1876,7 +1876,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'traffic_sign',
+      signCategory: 'surface_sign',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zeichen_298_-_Sperrflaechen,_StVO_1970.svg',
@@ -1898,7 +1898,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'traffic_sign',
+      signCategory: 'surface_sign',
     },
     image: {
       svgPath:
@@ -1989,7 +1989,8 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      signCategory: 'traffic_sign',
+      visibility: 'search_only',
+      signCategory: 'object_sign',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zeichen_394_-_Schild_fuer_Laternen,_StVO_1970.svg',
@@ -2010,6 +2011,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [{ comment: 'Wird als Punkt auf der Straße erfasst.' }],
     catalogue: {
+      visibility: 'search_only',
       signCategory: 'traffic_sign',
     },
     image: {

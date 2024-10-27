@@ -5,12 +5,12 @@ import { SignStateType, SignType } from '@osm-traffic-signs/converter'
 import { Sign } from './Sign'
 
 type Props = {
-  defaultOpen?: boolean
   headline: string
+  defaultOpen?: boolean
   signs: (SignStateType | SignType)[]
 }
 
-export const SignGrid = ({ defaultOpen = true, headline, signs }: Props) => {
+export const SignGrid = ({ headline, defaultOpen = true, signs }: Props) => {
   return (
     <Disclosure as="section" className="group mb-8" defaultOpen={defaultOpen}>
       <DisclosureButton className="mb-0 flex w-full cursor-pointer items-center justify-start gap-1 group-data-[open]:mb-4">
