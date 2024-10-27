@@ -7,7 +7,7 @@ export const SelectedSignImage = ({ sign }: Props) => {
   return (
     <div className="mx-2 px-3">
       {'image' in sign && sign.image?.svgPath ? (
-        <div className="relative">
+        <div className="relative mx-auto max-w-24">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={sign.image.svgPath}
@@ -19,14 +19,14 @@ export const SelectedSignImage = ({ sign }: Props) => {
             sign.valuePrompt &&
             sign.signValue !== sign.valuePrompt.defaultValue && (
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full -rotate-12 rounded bg-amber-100/95 px-3 pt-1 font-condensed text-2xl font-normal text-amber-900 shadow-sm">
+                <div className="w-full -rotate-12 rounded bg-amber-100/95 px-3 pt-1 text-center font-condensed text-4xl font-normal text-amber-900 shadow-sm">
                   {sign.signValue}
                 </div>
               </div>
             )}
         </div>
       ) : (
-        <div className="flex size-20 items-center justify-center rounded border border-stone-800 bg-stone-600 pt-1 text-stone-50">
+        <div className="mx-auto flex size-20 items-center justify-center rounded border border-stone-800 bg-stone-600 pt-1 text-stone-50">
           <code className="whitespace-nowrap tracking-tighter">{sign.signId}</code>
           <br />
         </div>
