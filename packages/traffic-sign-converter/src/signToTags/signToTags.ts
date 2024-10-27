@@ -4,6 +4,7 @@ import { signToTrafficSignTagValue } from '../signToTrafficSignTag/signToTraffic
 import { collectAccessTags } from './utils/collectAccessTags.js'
 import { collectConditionalTags } from './utils/collectConditionalTags.js'
 import { collectHighwayValues } from './utils/collectHighwayValues.js'
+import { collectUniqueTags } from './utils/collectUniqueTags.js'
 import { splitIntoSignGroups } from './utils/splitIntoSignGroups.js'
 import { uniqueArray } from './utils/uniqueArray.js'
 
@@ -19,12 +20,9 @@ export const signToTags = (
 
   for (const signGroup of signGroups) {
     // Handle Unique Tags
-    signGroup.forEach((sign) => {
-      if (sign.recodgnizedSign === false) return
-
-      sign.tagRecommendations.uniqueTags?.forEach((tag) => {
-        tagMap.set(tag.key, tag.value)
-      })
+    const uniqueTags = collectUniqueTags(signGroup)
+    uniqueTags.forEach((tag) => {
+      tagMap.set(tag.key, tag.value)
     })
 
     // Handle Highway Tag

@@ -20,6 +20,12 @@ describe('signToTags()', () => {
       const result = signToTags(signs, 'DE')
       expect(result.has('highway')).toBeFalsy()
     })
+
+    test('Handle valueTemplate', () => {
+      const signs = signsStateByDescriptiveName(['Tempo 30-Zone'])
+      const result = signToTags(signs, 'DE')
+      expect(result.get('zone:maxspeed')).toBe('DE:30')
+    })
   })
 
   describe('access tag', () => {

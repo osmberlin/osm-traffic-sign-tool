@@ -14,15 +14,9 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
 
       if (conditionalTags) {
         for (const conditionalTag of conditionalTags) {
-          // Some conditional tag values need a specific format
-          // We can specify a ``
-          const template = conditionalTag.valueTemplate || '$'
-          const formattedValue = template.replace('$', String(sign.signValue))
-          const value = sign.signValue === undefined ? conditionalTag.value : formattedValue
-
           mergedConditionalTags.set(conditionalTag.key, {
             key: conditionalTag.key,
-            value,
+            value: sign.signValue === undefined ? conditionalTag.value : String(sign.signValue),
           })
         }
       }

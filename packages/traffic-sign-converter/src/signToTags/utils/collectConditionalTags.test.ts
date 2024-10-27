@@ -3,6 +3,7 @@ import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
 import { signsStateByDescriptiveName } from '../../data/utils/signsByDescriptiveName.js'
 import { combineSignIdSignValue } from '../../signIdSignValueUtils/combineSignIdSignValue.js'
 import { collectConditionalTags } from './collectConditionalTags.js'
+import { collectUniqueTags } from './collectUniqueTags.js'
 
 describe('collectConditionalTags()', () => {
   // https://osmtools.de/traffic_signs/?signs=276
@@ -64,6 +65,12 @@ describe('collectConditionalTags()', () => {
         key: 'maxspeed',
         value: '30',
       },
+    ])
+    expect(collectUniqueTags(signs)).toMatchObject([
+      {
+        key: 'source:maxspeed',
+        value: 'DE:zone',
+      },
       {
         key: 'zone:maxspeed',
         value: 'DE:30',
@@ -78,9 +85,15 @@ describe('collectConditionalTags()', () => {
         key: 'maxspeed:conditional',
         value: '30 @ 16-18',
       },
+    ])
+    expect(collectUniqueTags(signs)).toMatchObject([
       {
-        key: 'zone:maxspeed:conditional',
-        value: 'DE:30 @ 16-18',
+        key: 'source:maxspeed',
+        value: 'DE:zone',
+      },
+      {
+        key: 'zone:maxspeed',
+        value: 'DE:30',
       },
     ])
   })
