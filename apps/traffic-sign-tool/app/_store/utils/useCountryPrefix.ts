@@ -1,3 +1,4 @@
+'use client'
 import { CountryPrefixSchema } from '@osm-traffic-signs/converter'
 import { useParams } from 'next/navigation'
 
