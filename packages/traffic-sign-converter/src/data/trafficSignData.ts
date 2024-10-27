@@ -1937,4 +1937,34 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '394-50',
+    signId: '394-50',
+    name: 'Zeichen 394-50',
+    descriptiveName: 'Laternenring – Schild',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'highway', value: 'street_lamp' }],
+    },
+    comments: [
+      {
+        comment:
+          'Kennzeichnung von Laternen, welche nachts abgeschaltet werden. Wird bei Laternen verwendet, die sich in geschlossenen Ortschaften befinden. Siehe auch [Tag:highway=street_lamp], [Key:lit]',
+      },
+      {
+        comment:
+          'Aktuell vor allem [in Göttingen in Verwendung](https://overpass-turbo.eu/s/1Tfd).',
+      },
+    ],
+    catalogue: {
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_394_-_Schild_fuer_Laternen,_StVO_1970.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_394_-_Schild_f%C3%BCr_Laternen,_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
