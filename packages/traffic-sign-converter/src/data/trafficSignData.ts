@@ -822,6 +822,37 @@ export const trafficSignData: SignType[] = [
     },
   },
   {
+    osmValuePart: '274[70]',
+    signId: '274',
+    name: 'Zeichen 274',
+    descriptiveName: 'Zulässige Höchstgeschwindigkeit',
+    description: null,
+    kind: 'traffic_sign',
+    signValue: 70,
+    valuePrompt: {
+      prompt: 'Geschwindigkeit in km/h ohne Einheit',
+      defaultValue: '70',
+      format: 'integer',
+    },
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+      conditionalTags: [{ key: 'maxspeed', value: '70' }],
+    },
+    comments: [],
+    catalogue: {
+      mostUsed: true,
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_274-70_-_Zulaessige_Hoechstgeschwindigkeit,_StVO_2017.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-70_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '275[30]',
     signId: '275',
     name: 'Zeichen 275',
