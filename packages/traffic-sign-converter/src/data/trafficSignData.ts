@@ -2059,4 +2059,28 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '357',
+    signId: '357',
+    name: 'Zeichen 357',
+    descriptiveName: 'Sackgasse',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [
+      {
+        comment:
+          'Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet werden. Um den letzten Punkt eines Weges, der auch nicht für Fußgänger oder andere Fortbewegungsmittel weitergeht, zu kennzeichnen, siehe [How_to_map_a#Sackgasse](https://wiki.openstreetmap.org/wiki/DE:How_to_map_a/S#Sackgasse).',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_357_-_Sackgasse,_StVO_1992.svg',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zeichen_357_-_Sackgasse,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
