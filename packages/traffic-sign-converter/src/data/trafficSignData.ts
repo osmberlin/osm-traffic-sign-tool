@@ -2021,4 +2021,42 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '620-40',
+    signId: '620-40',
+    name: 'Zeichen 620-40',
+    descriptiveName: 'Leitpfosten (rechts)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'object_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_620-40_-_Leitpfosten_(rechts),_StVO_1992.svg',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_620-40_-_Leitpfosten_(rechts),_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '620-41',
+    signId: '620-41',
+    name: 'Zeichen 620-41',
+    descriptiveName: 'Leitpfosten (links)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'object_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_620-41_-_Leitpfosten_(links),_StVO_1992.svg',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_620-41_-_Leitpfosten_(links),_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
