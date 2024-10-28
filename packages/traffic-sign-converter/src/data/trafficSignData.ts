@@ -2133,4 +2133,64 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '306',
+    signId: '306',
+    name: 'Zeichen 306',
+    descriptiveName: 'Vorfahrtstraße',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [
+        {
+          key: 'priority_road',
+          value: 'designated',
+        },
+      ],
+    },
+    comments: [
+      {
+        comment:
+          '[Die Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Key:priority_road) geht auf weitere Werte `yes_unposted` und `end` ein.',
+      },
+    ],
+    // TODO: foward/backward case https://wiki.openstreetmap.org/wiki/DE:Key:priority_road
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_306_-_Vorfahrtstraße,_StVO_1970.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_306_-_Vorfahrtstra%C3%9Fe,_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '307',
+    signId: '307',
+    name: 'Zeichen 307',
+    descriptiveName: 'Ende der Vorfahrtstraße',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [
+        {
+          key: 'priority_road',
+          value: 'end',
+        },
+      ],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_306_-_Vorfahrtstraße,_StVO_1970.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_307_-_Ende_der_Vorfahrtstra%C3%9Fe,_StVO_1981.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
