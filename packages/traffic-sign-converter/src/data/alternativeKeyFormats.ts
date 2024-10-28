@@ -19,6 +19,7 @@ export const alternativeKeyFormats: Record<CountryPrefixType, Map<string, string
     ['274-110', '274[110]'],
     ['274-120', '274[120]'],
     ['274-130', '274[130]'],
+    ['274.1:30', '274.1[30]'],
     // minspeed
     ['275-30', '275[30]'],
     ['275-80', '275[80]'],
