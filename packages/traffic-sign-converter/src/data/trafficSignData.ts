@@ -2107,4 +2107,30 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '267',
+    signId: '267',
+    name: 'Zeichen 267',
+    descriptiveName: 'Verbot der Einfahrt',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [
+      {
+        important: true,
+        comment:
+          'Bitte [die Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign=DE:267) konsultieren zum Tagging.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
