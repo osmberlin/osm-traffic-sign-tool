@@ -2407,4 +2407,23 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '301',
+    signId: '301',
+    name: 'Zeichen 301',
+    descriptiveName: 'Vorfahrt',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_301_-_Vorfahrt,_StVO_1970.svg',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zeichen_301_-_Vorfahrt,_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
