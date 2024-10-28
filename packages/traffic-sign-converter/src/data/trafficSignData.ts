@@ -2276,4 +2276,87 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '331.1',
+    signId: '331.1',
+    name: 'Zeichen 331.1',
+    descriptiveName: 'Kraftfahrstraße',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'motorroad', value: 'yes' }],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_331.1_-_Kraftfahrstraße,_StVO_2013.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_331.1_-_Kraftfahrstra%C3%9Fe,_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '331.2',
+    signId: '331.2',
+    name: 'Zeichen 331.2',
+    descriptiveName: 'Ende der Kraftfahrstraße',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_331.2_-_Ende_der_Kraftfahrstraße,_StVO_2013.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_331.2_-_Ende_der_Kraftfahrstra%C3%9Fe,_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '330.1',
+    signId: '330.1',
+    name: 'Zeichen 330.1',
+    descriptiveName: 'Autobahn',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: ['motorway'],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_330.1_-_Autobahn,_StVO_2013.svg',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zeichen_330.1_-_Autobahn,_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '330.2',
+    signId: '330.2',
+    name: 'Zeichen 330.2',
+    descriptiveName: 'Ende der Autobahn',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
