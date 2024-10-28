@@ -2234,4 +2234,25 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '626-20',
+    signId: '626-20',
+    name: 'Zeichen 626-20',
+    descriptiveName: 'Leitplatte, Aufstellung links',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'object_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_626-20_-_Leitplatte,_Aufstellung_links_(750x500),_StVO_2013.svg',
+      sourceUrl:
+        'https://de.m.wikipedia.org/wiki/Datei:Zeichen_626-20_-_Leitplatte,_Aufstellung_links_(750x500),_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
