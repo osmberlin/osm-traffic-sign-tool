@@ -2235,6 +2235,32 @@ export const trafficSignData: SignType[] = [
     },
   },
   {
+    osmValuePart: '385',
+    signId: '385',
+    name: 'Zeichen 385',
+    descriptiveName: 'Ortshinweistafel',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [
+        {
+          key: 'name',
+          value: '*',
+        },
+      ],
+    },
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_385_-_Ortshinweistafel,_StVO_1988.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_385_-_Ortshinweistafel,_StVO_1988.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '626-20',
     signId: '626-20',
     name: 'Zeichen 626-20',
