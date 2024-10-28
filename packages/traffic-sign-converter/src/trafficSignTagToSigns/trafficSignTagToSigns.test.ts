@@ -42,12 +42,19 @@ describe('trafficSignTagToSigns()', () => {
       expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274-60')
       expect(result.map((s) => s.signValue).join('|')).toMatch('60')
     })
-    test.todo('speed value 100km/h', () => {
+    test('speed value 100km/h', () => {
       const input = 'traffic_sign=DE:274-100'
       const result = trafficSignTagToSigns(input, countryPrefix)
       expect(joinOsmValueParts(result)).toMatch('274[100]')
       expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274-100')
       expect(result.map((s) => s.signValue).join('|')).toMatch('100')
+    })
+    test('speed value 50km/h', () => {
+      const input = 'traffic_sign=DE:274-50'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toMatch('274[50]')
+      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274-50')
+      expect(result.map((s) => s.signValue).join('|')).toMatch('50')
     })
   })
 

@@ -31,7 +31,13 @@ export const trafficSignTagToSigns = (
     .map((osmValuePart) => {
       const alternativeValuePart = alternativeKeyFormats[countryPrefix].get(osmValuePart)
       if (alternativeValuePart) {
-        const data = signsMap.get(alternativeValuePart)
+        // Plan A: Direct lookup
+        let data = signsMap.get(alternativeValuePart)
+        if (!data) {
+          // Plan B: Lookup by key
+          const { signId } = splitSignIdSignValue(alternativeValuePart)
+          data = getSignBySignId(signsMap, signId)
+        }
         if (data) {
           data.matchdByAlternativeKey = osmValuePart
           signsMap.set(alternativeValuePart, data)
