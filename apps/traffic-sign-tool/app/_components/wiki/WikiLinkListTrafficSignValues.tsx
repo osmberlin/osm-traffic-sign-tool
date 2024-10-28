@@ -18,9 +18,9 @@ const knownNamedSignValues = [
   'variable_message',
 ]
 
-type Props = { value: string; className?: string }
+type Props = { value: string; inline?: boolean }
 
-export const WikiLinkListTrafficSignValues = ({ value, className }: Props) => {
+export const WikiLinkListTrafficSignValues = ({ value, inline }: Props) => {
   const countryPrefix = useCountryPrefix()
   const splitTrafficSignValue = splitIntoSignValueParts(value)
   const signValues = splitTrafficSignValue.map((part) => splitSignIdSignValue(part).signId)
@@ -28,12 +28,12 @@ export const WikiLinkListTrafficSignValues = ({ value, className }: Props) => {
   if (!countryPrefix) return null
 
   return (
-    <ul className={className}>
+    <ul className={inline ? 'inline' : ''}>
       {signValues.map((part) => {
         const prefix = knownNamedSignValues.includes(part) ? '' : `${countryPrefix}:`
 
         return (
-          <li key={part}>
+          <li key={part} className={inline ? 'inline' : ''}>
             <WikiLinkValue
               osmKey="traffic_sign"
               osmValue={part.startsWith(countryPrefix) ? part : `${prefix}${part}`}

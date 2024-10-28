@@ -90,7 +90,7 @@ export default function TaginfoPage() {
                   <ExternalLink href={osmtoolsUrl(value)} blank>
                     osmtools.de
                   </ExternalLink>
-                  <WikiLinkListTrafficSignValues value={value} />
+                  <WikiLinkListTrafficSignValues value={value} inline={false} />
                 </td>
                 <td className="px-3 py-4 text-sm text-stone-900">
                   <TagRecommendations value={value} />

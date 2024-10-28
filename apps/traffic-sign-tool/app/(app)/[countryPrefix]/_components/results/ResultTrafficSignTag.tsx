@@ -36,7 +36,7 @@ export const ResultTrafficSignTag = () => {
           </div>
           <div className="space-x-2 text-xs">
             <strong>Wiki:</strong>
-            <WikiLinkListTrafficSignValues value={trafficSignTag[1]} className="inline" />
+            <WikiLinkListTrafficSignValues value={trafficSignTag[1]} inline />
 
             {countryPrefix === 'DE' && (
               <ExternalLink href={osmtoolsUrl(trafficSignTag[1])} blank className={wikiLinkClasses}>
