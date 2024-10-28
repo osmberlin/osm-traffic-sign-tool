@@ -2083,4 +2083,28 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '224',
+    signId: '224',
+    name: 'Zeichen 224',
+    descriptiveName: 'Haltestelle',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [
+      {
+        comment:
+          'Aus [der Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign=DE:224) geht nicth hervor, an welchem `public_transport=*` Object das `traffic_sign` hinterlegt werden sollte.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_224.svg',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zeichen_224.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
