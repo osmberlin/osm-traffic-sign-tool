@@ -2193,4 +2193,45 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '386.3',
+    signId: '386.3',
+    name: 'Zeichen 386.3',
+    descriptiveName: 'Touristische Unterrichtungstafel',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [
+        {
+          key: 'tourism',
+          value: 'information',
+        },
+        {
+          key: 'information',
+          value: 'board',
+        },
+        {
+          key: 'board_type',
+          value: 'sight',
+        },
+      ],
+    },
+    comments: [
+      {
+        comment:
+          '[Die Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign=DE:386.3) listet weitere übliche Tags auf um den Inhalt der Tafel zu erfassen.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_386.3_-_Touristische_Unterrichtungstafel_(2400x3600),_StVO_2013.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_386.3_-_Touristische_Unterrichtungstafel_(2400x3600),_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
