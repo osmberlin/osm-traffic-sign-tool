@@ -2359,4 +2359,26 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '136-10',
+    signId: '136-10',
+    name: 'Zeichen 136-10',
+    descriptiveName: 'Vorsicht, Kinder! – Aufstellung rechts',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'children' }],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_136-10_-_Kinder,_Aufstellung_rechts,_StVO_1992.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
