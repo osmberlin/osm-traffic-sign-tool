@@ -6,6 +6,7 @@ import taginfoTrafficSignData from '@monorepo/data/taginfo/taginfoTrafficSignDat
 import { countryPrefixes } from '@osm-traffic-signs/converter'
 import Link from 'next/link'
 import { z } from 'zod'
+import { TagComments } from './_components/TagComments'
 import { TagRecommendations } from './_components/TagRecommendations'
 import { TagSignImages } from './_components/TagSignImages'
 
@@ -94,6 +95,8 @@ export default function TaginfoPage() {
                 </td>
                 <td className="px-3 py-4 text-sm text-stone-900">
                   <TagRecommendations value={value} />
+                  <hr className="my-5" />
+                  <TagComments value={value} />
                 </td>
               </tr>
             )

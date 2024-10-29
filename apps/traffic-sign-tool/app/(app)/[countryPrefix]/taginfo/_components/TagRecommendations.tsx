@@ -5,6 +5,7 @@ import { signToTags, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 
 type Props = { value: string }
 
+// Weitgehend ein Duplikat von apps/traffic-sign-tool/app/(app)/[countryPrefix]/_components/results/ResultTagRecommendations.tsx
 export const TagRecommendations = ({ value }: Props) => {
   const countryPrefix = useCountryPrefix()
   const signs = trafficSignTagToSigns(value, countryPrefix)
