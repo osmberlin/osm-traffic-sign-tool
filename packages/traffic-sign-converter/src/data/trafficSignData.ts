@@ -2455,4 +2455,70 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '138-10',
+    signId: '138-10',
+    name: 'Zeichen 138-10',
+    descriptiveName: 'Radverkehr – Aufstellung rechts',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'cyclists' }],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_138-10_-_Radverkehr,_StVO_2013.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_138-10_-_Radverkehr,_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '103-20',
+    signId: '103-20',
+    name: 'Zeichen 103-20',
+    descriptiveName: 'Kurve (rechts)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'curve' }],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_103-20_-_Kurve_(rechts),_StVO_1992.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_103-20_-_Kurve_(rechts),_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '103-10',
+    signId: '103-10',
+    name: 'Zeichen 103-10',
+    descriptiveName: 'Kurve (links)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'curve' }],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_103-10_-_Kurve_(links),_StVO_1992.svg',
+      sourceUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/b/be/Zeichen_103-10_-_Kurve_%28links%29%2C_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
