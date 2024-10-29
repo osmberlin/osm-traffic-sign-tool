@@ -2426,4 +2426,33 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '215',
+    signId: '215',
+    name: 'Zeichen 215',
+    descriptiveName: 'Kreisverkehr',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'junction', value: 'roundabout' }],
+    },
+    comments: [
+      { comment: '`oneway=true` im Kreisverkehr wird automatisch angenommen.' },
+      {
+        tagReference: 'highway=mini_roundabout',
+        comment:
+          'Alternativ wird `highway=mini_roundabout` wird als Punkt auf der `highway` Linie erfasst für Kreisverkehre ohne bauliche Begrenzung in der Mitte. Diese haben in Deutschland aber selten eine Beschilderung. ',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_215_-_Kreisverkehr,_StVO_2000.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_215_-_Kreisverkehr,_StVO_2000.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
