@@ -16,10 +16,7 @@ const parse = (input: string, countryPrefix: CountryPrefixType | undefined) => {
 }
 
 // From Data to String
-const serialize = (
-  trafficSigns: SignStateType[],
-  countryPrefix: CountryPrefixType | undefined,
-) => {
+const serialize = (trafficSigns: SignStateType[], countryPrefix: CountryPrefixType | undefined) => {
   return signToTrafficSignTagValue(trafficSigns, countryPrefix)
 }
 
