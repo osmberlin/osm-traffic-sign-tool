@@ -49,7 +49,7 @@ export type TrafficSignType = SharedId &
     }
   } & SharedComments &
   SharedQuestions &
-  SharedCatalogue<'traffic_sign' | 'object_sign' | 'surface_sign' | 'hazard_sign'> &
+  SharedCatalogue<'traffic_sign' | 'object_sign' | 'surface_sign' | 'hazard_sign' | 'train_sign'> &
   SharedIdentifiyingTags &
   SharedImage
 

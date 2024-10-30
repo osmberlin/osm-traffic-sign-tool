@@ -2521,4 +2521,56 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '201-50',
+    signId: '201-50',
+    name: 'Zeichen 201-50',
+    descriptiveName: 'Andreaskreuz — stehend',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [
+        { key: 'railway', value: 'level_crossing' },
+        { key: 'crossing:saltire', value: 'yes' },
+      ],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'train_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_201_–_Andreaskreuz_–_Dem_Schienenverkehr_Vorrang_gewähren!_StVO_1970.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_201-50_%E2%80%93_Andreaskreuz_-_Dem_Schienenverkehr_Vorrang_gew%C3%A4hren!_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '201-51',
+    signId: '201-51',
+    name: 'Zeichen 201-51',
+    descriptiveName: 'Andreaskreuz — stehend',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [
+        { key: 'railway', value: 'level_crossing' },
+        { key: 'crossing:saltire', value: 'yes' },
+      ],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'train_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_201-51_-_Andreaskreuz_(stehend)_mit_Blitzpfeil,_StVO_1992.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_201-51_-_Andreaskreuz_(stehend)_mit_Blitzpfeil,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
