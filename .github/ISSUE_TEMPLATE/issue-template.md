@@ -1,6 +1,6 @@
 ---
-name: Issue template
-about: Standard issue template
+name: Issue
+about: For bug reports, comments or requests
 title: ''
 labels: ''
 assignees: ''
