@@ -9,6 +9,10 @@ const navigation = [
     href: 'https://www.osm-verkehrswende.org/contact',
   },
   {
+    name: 'Changelog',
+    href: 'https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/apps/traffic-sign-tool/CHANGELOG.md',
+  },
+  {
     name: 'Code on Github',
     href: 'https://github.com/osmberlin/osm-traffic-sign-tool',
   },
