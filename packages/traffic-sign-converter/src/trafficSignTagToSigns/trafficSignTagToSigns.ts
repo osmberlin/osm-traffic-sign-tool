@@ -2,6 +2,7 @@ import { alternativeKeyFormats } from '../data/alternativeKeyFormats.js'
 import type { CountryPrefixType } from '../data/countryPrefixes.js'
 import { getSignBySignId } from '../data/getSignBySignId.js'
 import { getSignsMap } from '../data/getSignsMap.js'
+import { namedTrafficSignValues } from '../data/namedTrafficSignValues.js'
 import type { SignStateType } from '../data/TrafficSignDataTypes.js'
 import { combineSignIdSignValue } from '../signIdSignValueUtils/combineSignIdSignValue.js'
 import { removeCountryPrefix } from './utils/removeCountryPrefix.js'
@@ -30,17 +31,27 @@ export const trafficSignTagToSigns = (
   workingValueParts = workingValueParts
     .map((osmValuePart) => {
       const alternativeValuePart = alternativeKeyFormats[countryPrefix].get(osmValuePart)
+
       if (alternativeValuePart) {
-        // Plan A: Direct lookup
+        // Lookup the sign (two ways)
+        // Plan A: Direct lookup (most precise)
         let data = signsMap.get(alternativeValuePart)
+        // Plan B: Lookup by signId
         if (!data) {
-          // Plan B: Lookup by key
           const { signId } = splitSignIdSignValue(alternativeValuePart)
           data = getSignBySignId(signsMap, signId)
         }
+
+        // Update the sign values
         if (data) {
           data.matchdByAlternativeKey = osmValuePart
           signsMap.set(alternativeValuePart, data)
+          return alternativeValuePart
+        }
+
+        // Special case:
+        // If `alternativeValuePart` is a `namedTrafficSignValues`, then overwrite
+        if (namedTrafficSignValues.includes(alternativeValuePart)) {
           return alternativeValuePart
         }
       }

@@ -100,6 +100,13 @@ describe('trafficSignTagToSigns()', () => {
       // expect(joinSignValueParts(result)).toMatch('4')
     })
   })
+
+  describe('special cases…', () => {
+    test('traffic_sign=no', () => {
+      const input = 'traffic_sign=no'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toMatch('none')
+      expect(joinSignValueParts(result)).toMatch('none')
     })
   })
 })
