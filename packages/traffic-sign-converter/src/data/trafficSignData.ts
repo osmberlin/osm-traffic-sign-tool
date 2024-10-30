@@ -792,6 +792,37 @@ export const trafficSignData: SignType[] = [
     },
   },
   {
+    osmValuePart: '274.2[30]',
+    signId: '274.2',
+    name: 'Zeichen 274.2',
+    descriptiveName: 'Ende einer Tempo 30-Zone',
+    description: '(Ende)',
+    kind: 'traffic_sign',
+    signValue: 30,
+    valuePrompt: {
+      prompt: 'Geschwindigkeit in km/h ohne Einheit',
+      defaultValue: '30',
+      format: 'integer',
+    },
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [],
+      conditionalTags: [],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_274.2_-_Ende_einer_Tempo_30-Zone_(einseitig),_StVO_2013.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_274.2_-_Ende_einer_Tempo_30-Zone_(einseitig),_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '274[60]',
     signId: '274',
     name: 'Zeichen 274',
