@@ -12,7 +12,10 @@ import { useCountryPrefix } from './utils/useCountryPrefix'
 
 // From String to Data
 const parse = (input: string, countryPrefix: CountryPrefixType | undefined) => {
-  return trafficSignTagToSigns(input, countryPrefix) satisfies SignStateType[]
+  // An earlier version of the tool used pipes to separate signs
+  // We migrate those here in nuqs instead of the package because it is tool secific logic
+  const migratedInput = input.replaceAll('|', ';')
+  return trafficSignTagToSigns(migratedInput, countryPrefix) satisfies SignStateType[]
 }
 
 // From Data to String
