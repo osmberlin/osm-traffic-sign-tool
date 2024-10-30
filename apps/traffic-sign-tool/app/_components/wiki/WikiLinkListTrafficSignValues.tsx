@@ -1,22 +1,11 @@
 'use client'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
-import { splitIntoSignValueParts, splitSignIdSignValue } from '@osm-traffic-signs/converter'
+import {
+  namedTrafficSignValues,
+  splitIntoSignValueParts,
+  splitSignIdSignValue,
+} from '@osm-traffic-signs/converter'
 import { WikiLinkValue } from '../wiki/WikiLinkValue'
-
-const knownNamedSignValues = [
-  'city_limit',
-  'maxspeed',
-  'none',
-  'destination',
-  'yes',
-  'no',
-  'variable',
-  'hazard',
-  'signals',
-  'give_way',
-  'stop',
-  'variable_message',
-]
 
 type Props = { value: string; inline?: boolean }
 
@@ -30,7 +19,7 @@ export const WikiLinkListTrafficSignValues = ({ value, inline }: Props) => {
   return (
     <ul className={inline ? 'inline' : ''}>
       {signValues.map((part) => {
-        const prefix = knownNamedSignValues.includes(part) ? '' : `${countryPrefix}:`
+        const prefix = namedTrafficSignValues.includes(part) ? '' : `${countryPrefix}:`
 
         return (
           <li key={part} className={inline ? 'inline' : ''}>

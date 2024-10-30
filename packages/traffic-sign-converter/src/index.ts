@@ -12,6 +12,7 @@ export { signToTags } from './signToTags/signToTags.js'
 // Data
 export { CountryPrefixSchema, countryPrefixes } from './data/countryPrefixes.js'
 export type { CountryPrefixType } from './data/countryPrefixes.js'
+export * from './data/namedTrafficSignValues.js'
 export * from './data/trafficSignData.js'
 export type * from './data/TrafficSignDataTypes.js'
 

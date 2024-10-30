@@ -60,4 +60,46 @@ describe('signToTrafficSignTag()', () => {
 
     expect(result).toMatch('DE:333,10-10,12-12;444;555,13-13')
   })
+
+  describe('handle named values', () => {
+    test('named value + sign', () => {
+      const input = [
+        { osmValuePart: 'city_limit', kind: 'traffic_sign' },
+        { osmValuePart: '333', kind: 'traffic_sign' },
+      ] as SignStateType[]
+      const result = signToTrafficSignTagValue(input, countryPrefixes)
+
+      expect(result).toMatch('city_limit;DE:333')
+    })
+
+    test('sign + named value', () => {
+      const input = [
+        { osmValuePart: '333', kind: 'traffic_sign' },
+        { osmValuePart: 'city_limit', kind: 'traffic_sign' },
+      ] as SignStateType[]
+      const result = signToTrafficSignTagValue(input, countryPrefixes)
+
+      expect(result).toMatch('DE:333;city_limit')
+    })
+
+    test('modifier sign + named value', () => {
+      const input = [
+        { osmValuePart: '1010-10', kind: 'modifier_sign' },
+        { osmValuePart: 'city_limit', kind: 'traffic_sign' },
+      ] as SignStateType[]
+      const result = signToTrafficSignTagValue(input, countryPrefixes)
+
+      expect(result).toMatch('DE:1010-10;city_limit')
+    })
+
+    test('named value + modifier sign', () => {
+      const input = [
+        { osmValuePart: 'city_limit', kind: 'traffic_sign' },
+        { osmValuePart: '1010-10', kind: 'modifier_sign' },
+      ] as SignStateType[]
+      const result = signToTrafficSignTagValue(input, countryPrefixes)
+
+      expect(result).toMatch('city_limit;DE:1010-10')
+    })
+  })
 })

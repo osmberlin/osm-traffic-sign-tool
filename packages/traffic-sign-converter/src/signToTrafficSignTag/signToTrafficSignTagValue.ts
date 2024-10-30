@@ -9,6 +9,7 @@
 // - traffic_sign=DE:244.1,"Kfz-Verkehr frei" … wo ein Freitext verwendet wird https://github.com/osmberlin/osm-traffic-sign-tool/issues/51#issuecomment-2389663867 (TODO: dieses Beispiel hinkt, da der Freitext hier ein Zusatzzeichen ist; ich muss prüfen, ob es auch Freitext-Verkehrszeichen gibt)
 
 import type { CountryPrefixType } from '../data/countryPrefixes.js'
+import { namedTrafficSignValues } from '../data/namedTrafficSignValues.js'
 import type { SignStateType } from '../data/TrafficSignDataTypes.js'
 
 export const signToTrafficSignTagValue = (
@@ -16,13 +17,30 @@ export const signToTrafficSignTagValue = (
   countryPrefix: CountryPrefixType | undefined,
 ) => {
   if (!countryPrefix) return ''
+  let countryPrefixSet: boolean = false
 
-  const signsString = signs
-    .map((sign, index) => {
-      const prefix = index === 0 ? '' : sign.kind === 'traffic_sign' ? `;` : ','
-      return `${prefix}${sign.osmValuePart}`
-    })
-    .join('')
+  const signStrings = signs.map((sign, index) => {
+    // Handle Contry Prefix with special treatment for named signs
+    const isNamedValue = namedTrafficSignValues.includes(sign.osmValuePart)
+    let countryPrefixString = ''
+    if (countryPrefixSet === false && !isNamedValue) {
+      countryPrefixString = `${countryPrefix}:`
+      countryPrefixSet = true
+    }
 
-  return `${countryPrefix}:${signsString}`
+    // Handle Sign Separation with special treatment for named signs
+    const isFirstSignInList = index === 0
+    const isPrevSignNamedValue = isFirstSignInList
+      ? false
+      : namedTrafficSignValues.includes(signs[index - 1]?.osmValuePart || '')
+    const separatorPrefix = isFirstSignInList
+      ? ''
+      : sign.kind === 'traffic_sign' || isPrevSignNamedValue
+        ? `;`
+        : ','
+
+    return `${separatorPrefix}${countryPrefixString}${sign.osmValuePart}`
+  })
+
+  return signStrings.join('')
 }
