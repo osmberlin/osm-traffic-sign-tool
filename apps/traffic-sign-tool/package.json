@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@latest out",
     "bleach": "rm -rf node_modules/ && rm -rf .next/ && npm install",
     "type-check": "tsc --skipLibCheck --noEmit",
     "lint": "next lint",
