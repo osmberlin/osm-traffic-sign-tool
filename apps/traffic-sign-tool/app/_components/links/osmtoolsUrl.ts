@@ -1,4 +1,4 @@
-import { splitIntoSignValueParts } from '@monorepo/packages/traffic-sign-converter/dist'
+import { splitIntoSignValueParts } from '@osm-traffic-signs/converter'
 
 export const osmtoolsUrl = (value: string) => {
   const splitTrafficSignValues = splitIntoSignValueParts(value)

@@ -1,5 +1,5 @@
 'use client'
-import { trafficSignData } from '@monorepo/packages/traffic-sign-converter/dist'
+import { trafficSignData } from '@osm-traffic-signs/converter'
 import { SearchSignInput } from './signGroups/SearchSignInput'
 import { SignGrid } from './signGroups/SignGrid'
 import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
