@@ -1,7 +1,7 @@
 'use client'
 import {
   combineSignIdSignValue,
-  CountryPrefixesType,
+  CountryPrefixType,
   SignStateType,
   signToTrafficSignTagValue,
   splitSignIdSignValue,
@@ -11,14 +11,14 @@ import { createParser, useQueryState } from 'nuqs'
 import { useCountryPrefix } from './utils/useCountryPrefix'
 
 // From String to Data
-const parse = (input: string, countryPrefix: CountryPrefixesType | undefined) => {
+const parse = (input: string, countryPrefix: CountryPrefixType | undefined) => {
   return trafficSignTagToSigns(input, countryPrefix) satisfies SignStateType[]
 }
 
 // From Data to String
 const serialize = (
   trafficSigns: SignStateType[],
-  countryPrefix: CountryPrefixesType | undefined,
+  countryPrefix: CountryPrefixType | undefined,
 ) => {
   return signToTrafficSignTagValue(trafficSigns, countryPrefix)
 }
