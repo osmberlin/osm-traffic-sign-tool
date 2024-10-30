@@ -2604,4 +2604,65 @@ export const trafficSignData: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '449',
+    signId: '449',
+    name: 'Zeichen 449',
+    descriptiveName: 'Vorwegweiser auf Autobahnen',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'signpost',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_449_-_Vorwegweiser_auf_Autobahnen_(nach_RWBA),_StVO_1992.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_449_-_Vorwegweiser_auf_Autobahnen_(nach_RWBA),_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '438',
+    signId: '438',
+    name: 'Zeichen 438',
+    descriptiveName: 'Vorwegweiser außerhalb von Autobahnen',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'signpost',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_438_-_Vorwegweiser;_StVO_1992.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_438_-_Vorwegweiser;_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '439',
+    signId: '439',
+    name: 'Zeichen 439',
+    descriptiveName: 'Gegliederter Vorwegweiser außerhalb von Autobahnen',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'signpost',
+    },
+    image: {
+      svgPath: '/trafficSignsSvgs/Zeichen_439_-_Vorwegweiser,_StVO_1992.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_439_-_Vorwegweiser,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
