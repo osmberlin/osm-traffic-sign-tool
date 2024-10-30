@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Logic: Improved logic to apply access and conditional restrictions
 - New page /taginfo to see results for the most used traffic sign values
 - Disclaimer: This migration to split the app and package is still WIP
+- Fix layout for mobile – however, the UI is not optimized for Mobile in any ways, it is just not broken
 
 ## [2.0.13] - 2024-09-14
 
