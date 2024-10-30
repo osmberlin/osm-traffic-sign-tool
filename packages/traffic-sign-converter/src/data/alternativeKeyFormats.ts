@@ -25,6 +25,7 @@ export const alternativeKeyFormats: Record<CountryPrefixType, Map<string, string
     ['275-80', '275[80]'],
     // Always use "Beginn…" version
     ['244', '244.1'],
+    ['242', '242.1'],
     ['325', '325.1'],
     // Make more specific
     ['241', '241-30'], // https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign=DE:241
