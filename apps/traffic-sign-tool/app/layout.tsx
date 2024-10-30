@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
-import { Suspense } from 'react'
 import { fontClasses } from './_components/layout/fonts/fonts'
 import { Footer } from './_components/layout/Footer'
 import { Header } from './_components/layout/Header'
@@ -17,11 +16,9 @@ type Props = Readonly<{ children: React.ReactNode }>
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={clsx(fontClasses, 'h-full')}>
-      <body className="flex min-h-full w-full flex-none flex-col bg-stone-800 text-base text-slate-800">
+      <body className="flex min-h-full w-full flex-none flex-col items-center bg-stone-800 text-base text-slate-800">
         <Header />
-        <Suspense>
-          <div className="mx-4 max-w-6xl self-center xl:mx-0">{children}</div>
-        </Suspense>
+        <main className="w-full max-w-6xl px-2 md:mx-0 xl:mx-0">{children}</main>
         <Footer />
 
         <TailwindResponsiveHelper />

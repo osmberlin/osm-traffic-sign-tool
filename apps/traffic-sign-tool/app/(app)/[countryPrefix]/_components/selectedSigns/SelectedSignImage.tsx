@@ -35,9 +35,9 @@ export const SelectedSignImage = ({ sign }: Props) => {
       {'name' in sign && sign.name && <h3 className="mt-1 w-full font-light">{sign.name}</h3>}
 
       {'descriptiveName' in sign && sign.descriptiveName && (
-        <p>
-          <strong className="hyphens-auto break-all">{sign.descriptiveName}</strong>
-        </p>
+        <div>
+          <>{sign.descriptiveName}</>
+        </div>
       )}
     </div>
   )

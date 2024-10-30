@@ -13,10 +13,7 @@ export const TagSignImages = ({ value }: Props) => {
     <ul>
       {signs.map((sign) => {
         return (
-          <li
-            key={sign.osmValuePart}
-            className="rounded px-2 py-0.5 leading-tight hover:bg-white/5"
-          >
+          <li key={sign.osmValuePart} className="py-1 leading-tight">
             <SelectedSignImage sign={sign} />
           </li>
         )

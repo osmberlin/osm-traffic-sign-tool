@@ -80,7 +80,7 @@ export const SelectedSign = ({ sign }: Props) => {
 
           {'valuePrompt' in sign && sign.valuePrompt && (
             <div className="mx-2 mt-2 rounded border border-stone-400/50 p-1 text-sm leading-tight">
-              <label htmlFor={sign.osmValuePart} className="break-word hyphens-auto">
+              <label htmlFor={sign.osmValuePart} className="break-word">
                 {sign.valuePrompt.prompt}:
               </label>
               <input

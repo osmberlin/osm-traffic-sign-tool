@@ -15,7 +15,7 @@ export const ResultComments = () => {
           return (
             <div
               key={signKey}
-              className="prose-white flex gap-2 font-serif font-normal prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 hover:prose-a:decoration-stone-400 hover:prose-a:decoration-1"
+              className="prose-white flex gap-2 break-all font-serif font-normal prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 hover:prose-a:decoration-stone-400 hover:prose-a:decoration-1"
             >
               <code className="mr-1 inline-flex items-center rounded bg-gray-50/10 px-1.5 py-0.5 pt-1 text-xs">
                 <span
