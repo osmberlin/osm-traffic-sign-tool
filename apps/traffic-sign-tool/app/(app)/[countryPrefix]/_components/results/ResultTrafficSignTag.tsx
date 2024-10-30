@@ -25,14 +25,17 @@ export const ResultTrafficSignTag = () => {
 
   return (
     <>
-      <h2 className="mb-4 text-lg font-light uppercase">Traffic sign tag</h2>
+      <div className="mb-4 flex items-center justify-between">
+        <h2 className="text-lg font-light uppercase">Traffic sign tag</h2>
+        <CopyButton text={copyTrafficSignTag}>
+          <ClipboardDocumentIcon className="size-4" />
+        </CopyButton>
+      </div>
+
       {trafficSignTag && copyTrafficSignTag && (
         <>
-          <div className="flex items-center justify-between break-all">
+          <div className="break-all">
             <Tag tagKey={trafficSignTag[0]} tagValue={trafficSignTag[1]} />
-            <CopyButton text={copyTrafficSignTag}>
-              <ClipboardDocumentIcon className="size-4" />
-            </CopyButton>
           </div>
           <div className="space-x-2 text-xs">
             <strong>Wiki:</strong>

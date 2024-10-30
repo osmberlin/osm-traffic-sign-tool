@@ -16,7 +16,7 @@ export default function App() {
         <SignSelectionColumn />
       </section>
 
-      <section className="relative flex-none rounded bg-stone-300 py-4 md:w-56">
+      <section className="relative flex-none rounded bg-stone-300 py-4 md:w-60">
         <h2 className="mb-4 text-center text-lg font-light uppercase">Selected Signs</h2>
 
         <SelectedSignsColumn />
