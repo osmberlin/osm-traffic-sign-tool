@@ -920,6 +920,36 @@ export const trafficSignData: SignType[] = [
     },
   },
   {
+    osmValuePart: '278[10]',
+    signId: '278',
+    name: 'Zeichen 278',
+    descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
+    description: null,
+    kind: 'traffic_sign',
+    signValue: 10,
+    valuePrompt: {
+      prompt: 'Geschwindigkeit in km/h ohne Einheit',
+      defaultValue: '10',
+      format: 'integer',
+    },
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [],
+      conditionalTags: [],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_278-10_-_Ende_der_zulässigen_Höchstgeschwindigkeit,_StVO_2017.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-10_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '276',
     signId: '276',
     name: 'Zeichen 276',

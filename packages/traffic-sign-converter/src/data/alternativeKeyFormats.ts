@@ -4,7 +4,7 @@ import type { CountryPrefixType } from './countryPrefixes.js'
 export const alternativeKeyFormats: Record<CountryPrefixType, Map<string, string>> = {
   DE: new Map([
     // OLD => NEW
-    // maxspeed
+    // maxspeed start
     ['274-5', '274[5]'],
     ['274-10', '274[10]'],
     ['274-20', '274[20]'],
@@ -19,7 +19,23 @@ export const alternativeKeyFormats: Record<CountryPrefixType, Map<string, string
     ['274-110', '274[110]'],
     ['274-120', '274[120]'],
     ['274-130', '274[130]'],
+    // maxspeed zone start
     ['274.1:30', '274.1[30]'],
+    // maxspeed end
+    ['278-5', '278[5]'],
+    ['278-10', '278[10]'],
+    ['278-20', '278[20]'],
+    ['278-30', '278[30]'],
+    ['278-40', '278[40]'],
+    ['278-50', '278[50]'],
+    ['278-60', '278[60]'],
+    ['278-70', '278[70]'],
+    ['278-80', '278[80]'],
+    ['278-90', '278[90]'],
+    ['278-100', '278[100]'],
+    ['278-110', '278[110]'],
+    ['278-120', '278[120]'],
+    ['278-130', '278[130]'],
     // minspeed
     ['275-30', '275[30]'],
     ['275-80', '275[80]'],
