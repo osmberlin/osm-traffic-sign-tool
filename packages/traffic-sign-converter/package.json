@@ -15,7 +15,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "local-release": "changeset version && changeset publish",
-    "prepublishOnly": "npm run ci",
+    "prepublishOnly": "npm run check",
     "prepare": "husky"
   },
   "dependencies": {
