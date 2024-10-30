@@ -2115,6 +2115,84 @@ export const trafficSignData: SignType[] = [
     },
   },
   {
+    osmValuePart: '357-50',
+    signId: '357-50',
+    name: 'Zeichen 357-50',
+    descriptiveName: 'Für Radverkehr und Fußgänger durchlässige Sackgasse',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [
+      {
+        comment:
+          'Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet werden.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_357-50_-_Durchlässige_Sackgasse_für_Fußgänger_und_Radverkehr,_StVO_2009.svg',
+      sourceUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/2/2d/Zeichen_357-50_-_Durchl%C3%A4ssige_Sackgasse_f%C3%BCr_Fu%C3%9Fg%C3%A4nger_und_Radverkehr%2C_StVO_2009.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '357-51',
+    signId: '357-51',
+    name: 'Zeichen 357-51',
+    descriptiveName: 'Für Fußgänger durchlässige Sackgasse',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [
+      {
+        comment:
+          'Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet werden.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_357-51_-_Sackgasse;_für_Fußgänger_durchlässige_Sackgasse,_StVO_2009.svg',
+      sourceUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/7/76/Zeichen_357-51_-_Sackgasse%3B_f%C3%BCr_Fu%C3%9Fg%C3%A4nger_durchl%C3%A4ssige_Sackgasse%2C_StVO_2009.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '357-52',
+    signId: '357-52',
+    name: 'Zeichen 357-52',
+    descriptiveName: 'Für Radverkehr durchlässige Sackgasse',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [
+      {
+        comment:
+          'Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet werden.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      svgPath:
+        '/trafficSignsSvgs/Zeichen_357-51_-_Sackgasse;_für_Fußgänger_durchlässige_Sackgasse,_StVO_2009.svg',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_357-52_-_Sackgasse;_f%C3%BCr_Radverkehr_durchl%C3%A4ssige_Sackgasse,_StVO_2009.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '224',
     signId: '224',
     name: 'Zeichen 224',
