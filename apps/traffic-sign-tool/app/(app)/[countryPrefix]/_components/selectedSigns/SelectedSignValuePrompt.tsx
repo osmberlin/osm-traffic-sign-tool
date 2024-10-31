@@ -13,6 +13,15 @@ const inputFormats = {
   time_restriction: { type: 'text', steps: undefined },
 }
 
+// This became way too complex for my liking…
+// Issue: The focus was lost whenever one typed more than one character.
+// This is something that nuqs does handle.
+// However, we have a more complex setup where we handle our whole sign state in nuqs…
+// … which I assume is the issue for the lost focus.
+// Workaround:
+// We use an internal value to store the current value of the form.
+// We then update nuqs only onBlur or after a timeout.
+// The timeout requires another internal state `typingTimeout`.
 export const SelectedSignValuePrompt = ({ sign }: Props) => {
   const { updateSignValue } = useParamSigns()
   const [internalValue, setInternalValue] = useState<null | number | string>(null)
