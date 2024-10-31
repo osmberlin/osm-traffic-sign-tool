@@ -17,7 +17,7 @@ export const WikiLinkListTrafficSignValues = ({ value, inline }: Props) => {
   if (!countryPrefix) return null
 
   return (
-    <ul className={inline ? 'inline' : ''}>
+    <ul className={inline ? 'inline space-x-2' : ''}>
       {signValues.map((part) => {
         const prefix = namedTrafficSignValues.includes(part) ? '' : `${countryPrefix}:`
 
