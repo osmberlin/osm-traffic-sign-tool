@@ -37,6 +37,13 @@ export const collectAccessTags = (signs: SignStateType[]) => {
           mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
         }
       }
+
+      // Now we have do handle the case, when our `traffic_sign` did not give any
+      // value to merge access restriction on. In this case, we set a general access
+      // tag with tags.accessValue
+      if (mergedAccessTags.size === 0 && tags.accessValue) {
+        mergedAccessTags.set('access', { key: 'access', value: tags.accessValue })
+      }
     })
 
   return Array.from(mergedAccessTags.values())

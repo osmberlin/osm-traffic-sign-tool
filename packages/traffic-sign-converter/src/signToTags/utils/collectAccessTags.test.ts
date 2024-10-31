@@ -171,4 +171,19 @@ describe('collectAccessTags()', () => {
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'bbb' }])
     })
   })
+
+  describe('One sign without access "slots", modifier sign adds general access=*', () => {
+    test('agricultural', () => {
+      const signs = signsStateByDescriptiveName([
+        'Gemeinsamer Fuß- und Radweg',
+        'Landwirtschaftlicher Verkehr frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'agricultural' }])
+    })
+
+    test('agricultural', () => {
+      const signs = signsStateByDescriptiveName(['Fußgängerbereich', 'Anlieger frei'])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
+    })
+  })
 })
