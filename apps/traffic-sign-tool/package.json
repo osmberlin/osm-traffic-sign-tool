@@ -17,11 +17,14 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "local-release": "changeset version && changeset publish && git push",
+    "prepublishOnly": "npm run check",
     "updatePackages:major": "npx taze major --includeLocked --write --exclude eslint && npm run updatePackages:minor && npm install",
     "updatePackages:minor": "npx taze minor --includeLocked --write && npm install",
     "prepare": "husky"
   },
   "dependencies": {
+    "@changesets/cli": "^2.27.9",
     "@headlessui/react": "^2.1.9",
     "@heroicons/react": "^2.1.5",
     "@osm-traffic-signs/converter": "^0.1.0",
