@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.1
+
+### Patch Changes
+
+- 7abf5d1: Custom sign value: Fix form not working for more than one character
+- 0ebee87: Modifier signs now add `access=*` when traffic sign does not provide access tags to modify.
+
 ## [2.1.0] - 2024-10-30
 
 - Full rewrite of the internal logic
