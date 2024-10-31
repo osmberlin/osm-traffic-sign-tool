@@ -5,8 +5,9 @@
   "description": "Get OpenStreetMap tagging recommendations based on traffic sign combinations.",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "dev": "next dev",
-    "build": "npm install @osm-traffic-signs/converter@latest && next build",
+    "dev": "npm run dev:linkPackage && next dev",
+    "dev:linkPackage": "npm link ../../packages/traffic-sign-converter",
+    "build": "next build",
     "start": "npx serve@latest out",
     "bleach": "rm -rf node_modules/ && rm -rf .next/ && npm install",
     "type-check": "tsc --skipLibCheck --noEmit",
