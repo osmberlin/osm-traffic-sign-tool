@@ -1,5 +1,11 @@
 # @osm-traffic-signs/converter
 
+## 0.1.1
+
+### Patch Changes
+
+- 9018cf1: Modifier signs now add `access=*` when traffic sign does not provide access tags to modify.
+
 ## 0.1.0
 
 ### Minor Changes
