@@ -61,11 +61,6 @@ describe('collectAccessTags()', () => {
         { key: 'tourist_bus', value: 'yes' },
       ])
     })
-
-    test('Only Anlieger frei => No Tag', () => {
-      const signs = signsStateByDescriptiveName(['Anlieger frei'])
-      expect(collectAccessTags(signs)).toMatchObject([])
-    })
   })
 
   describe('Artificial signs', () => {
@@ -183,6 +178,11 @@ describe('collectAccessTags()', () => {
 
     test('agricultural', () => {
       const signs = signsStateByDescriptiveName(['Fußgängerbereich', 'Anlieger frei'])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
+    })
+
+    test('Only Anlieger frei => Custom A', () => {
+      const signs = signsStateByDescriptiveName(['Anlieger frei'])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
     })
   })
