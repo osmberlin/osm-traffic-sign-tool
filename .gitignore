@@ -1,9 +1,13 @@
-# System
 .DS_Store
-
-# Env
+node_modules
+.turbo
+*.log
+.next
+dist
+dist-ssr
+*.local
 .env
-.env*.local
-
-# Monorepo
-/node_modules
+.cache
+server/dist
+public/dist
+.turbo

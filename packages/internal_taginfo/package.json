@@ -1,0 +1,22 @@
+{
+  "name": "@internal/taginfo",
+  "type": "module",
+  "private": true,
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "taginfo": "npm run taginfo:fetch",
+    "taginfo:fetch": "bun run ./src/fetch.ts && prettier ./data --write"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

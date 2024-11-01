@@ -1,10 +1,29 @@
 {
+  "name": "osm-traffic-sign-tools-monorepo",
+  "private": true,
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "bleach": "turbo clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build && changeset publish",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "vitest": "^2.1.2"
+    "@types/bun": "latest",
+    "@changesets/cli": "^2.27.1",
+    "eslint": "^8.57.0",
+    "husky": "^9.1.6",
+    "turbo": "^2.2.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-tailwindcss": "^0.6.8"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=22.9.0"
   }
 }

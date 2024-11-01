@@ -7,8 +7,8 @@ import {
   TableRow,
 } from '@app/app/_components/catalyst/table'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
-import trafficSignsWiki from '@monorepo/data/wiki/parseWiki/trafficSignsWiki.json'
-import { countryPrefixes, trafficSignData } from '@osm-traffic-signs/converter'
+import { trafficSignsWiki } from '@internal/wiki'
+import { countryPrefixes, SignType, trafficSignData } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import Image from 'next/image'
 
@@ -18,9 +18,71 @@ export async function generateStaticParams() {
   }))
 }
 
+type WikiSign = (typeof trafficSignsWiki)[number]
+
+const Tablelize = ({ data }: { data: SignType | WikiSign }) => {
+  return (
+    <Table className="mt-5">
+      <TableHead>
+        <TableRow>
+          <TableHeader>key</TableHeader>
+          <TableHeader>value</TableHeader>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {Object.entries(data).map(([key, value]) => {
+          if (!key) return null
+          return (
+            <TableRow key={key}>
+              <TableCell className="w-40">
+                <strong>{key}</strong>
+              </TableCell>
+              <TableCell>
+                {Array.isArray(value) ? (
+                  JSON.stringify(value, undefined, 2)
+                ) : key.toLocaleLowerCase().includes('url') ? (
+                  <ExternalLink href={value} blank>
+                    {value}
+                  </ExternalLink>
+                ) : key.toLocaleLowerCase().includes('svg') ? (
+                  <Image src={value} height={50} width={50} alt={key} />
+                ) : (
+                  value
+                )}
+              </TableCell>
+            </TableRow>
+          )
+        })}
+      </TableBody>
+    </Table>
+  )
+}
+
 export default function SignsPage() {
+  const toolSigns: (SignType & { wiki?: WikiSign })[] = structuredClone(trafficSignData)
+
+  for (const sign of toolSigns) {
+    const wiki = trafficSignsWiki.find((wikiSign) => wikiSign.sign.includes(sign.osmValuePart))
+    sign.wiki = wiki
+  }
+  const missingInTool = trafficSignsWiki.filter(
+    (sign) => !toolSigns.some((s) => s.wiki?.sign === sign.sign),
+  )
+
   return (
     <article className="rounded bg-stone-300 px-6 py-4">
+      <h2 className="my-4 text-3xl font-light uppercase text-black">
+        Wiki Signs Missing in Tool Signs {missingInTool.length}
+      </h2>
+      <details>
+        <summary>Anzeigen</summary>
+        {missingInTool.map((sign) => (
+          <Tablelize key={sign.sign} data={sign} />
+        ))}
+      </details>
+
+      <hr className="my-10" />
+
       <h2 className="my-4 text-3xl font-light uppercase text-black">
         All signs {trafficSignData.length}
       </h2>
@@ -41,7 +103,7 @@ export default function SignsPage() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {trafficSignData.map((sign) => {
+          {toolSigns.map((sign) => {
             return (
               <TableRow
                 key={sign.osmValuePart}
@@ -62,26 +124,20 @@ export default function SignsPage() {
                     <span className="inline-block text-amber-700">Missing</span>
                   )}
                 </TableHeader>
-                <TableCell>
+                <TableCell className="align-top">
                   <pre className="w-96 overflow-y-scroll py-1 text-sm leading-4">
-                    {JSON.stringify(
-                      sign,
-                      (key, value) => {
-                        if (key === 'wikiData') return undefined // Remove the key from the output
-                        return value
-                      },
-                      2,
-                    )}
+                    {JSON.stringify(sign, undefined, 2)}
                   </pre>
                 </TableCell>
-                <TableCell>
-                  <pre className="w-96 overflow-scroll">
-                    {JSON.stringify(
-                      trafficSignsWiki.find((wikiSign) => wikiSign.sign === sign.osmValuePart),
-                      undefined,
-                      2,
+                <TableCell className="align-top">
+                  <div className="w-96 overflow-x-scroll">
+                    {/* {JSON.stringify(sign.wiki, undefined, 2)} */}
+                    {sign.wiki ? (
+                      <Tablelize key={sign.wiki?.sign} data={sign.wiki} />
+                    ) : (
+                      <small className="text-amber-700">MISSING</small>
                     )}
-                  </pre>
+                  </div>
                 </TableCell>
               </TableRow>
             )

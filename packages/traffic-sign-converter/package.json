@@ -4,18 +4,18 @@
   "description": "Convert traffic sign IDs to OSM tags; suggest a traffic_sign-tag based on OSM tags.",
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "dev": "vitest",
+    "dev": "tsc --watch",
     "build": "tsc",
     "build:watch": "node --watch-path=./src build.mjs",
-    "check": "npm run build && npm run format && npm run check-exports && npm run check-lint && npm run test",
+    "check": "npm run build && npm run format && npm run check-exports && npm run lint && npm run test",
     "format": "prettier --write .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
-    "check-lint": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test": "vitest run",
     "test:watch": "vitest",
     "local-release": "changeset version && changeset publish",
-    "prepublishOnly": "npm run check",
-    "prepare": "husky"
+    "prepublishOnly": "npm run check"
   },
   "dependencies": {
     "zod": "^3.23.8"
@@ -24,9 +24,6 @@
     "@arethetypeswrong/cli": "^0.16.4",
     "@changesets/cli": "^2.27.8",
     "@total-typescript/ts-reset": "^0.6.1",
-    "husky": "^9.1.6",
-    "prettier": "^3.3.3",
-    "prettier-plugin-organize-imports": "^4.0.0",
     "typescript": "^5.6.2",
     "vitest": "^2.1.1"
   },

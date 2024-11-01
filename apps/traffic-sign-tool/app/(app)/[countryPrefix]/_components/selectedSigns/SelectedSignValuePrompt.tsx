@@ -25,7 +25,7 @@ const inputFormats = {
 export const SelectedSignValuePrompt = ({ sign }: Props) => {
   const { updateSignValue } = useParamSigns()
   const [internalValue, setInternalValue] = useState<null | number | string>(null)
-  const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(null)
+  const [typingTimeout, setTypingTimeout] = useState<Timer | null>(null)
 
   const value =
     internalValue === null
