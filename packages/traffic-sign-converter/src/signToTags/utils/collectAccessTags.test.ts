@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest'
 import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
 import { signsStateByDescriptiveName } from '../../data/utils/signsByDescriptiveName.js'
 import { collectAccessTags } from './collectAccessTags.js'
+import { collectConditionalTags } from './collectConditionalTags.js'
 
 describe('collectAccessTags()', () => {
   describe('Real signs', () => {
@@ -209,16 +210,35 @@ describe('collectAccessTags()', () => {
         'Landwirtschaftlicher Verkehr frei',
       ])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'agricultural' }])
+      expect(collectConditionalTags(signs)).toMatchObject([])
     })
 
     test('agricultural', () => {
       const signs = signsStateByDescriptiveName(['Fußgängerbereich', 'Anlieger frei'])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
+      expect(collectConditionalTags(signs)).toMatchObject([])
     })
 
     test('Only Anlieger frei => Custom A', () => {
       const signs = signsStateByDescriptiveName(['Anlieger frei'])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
+      expect(collectConditionalTags(signs)).toMatchObject([])
+    })
+  })
+
+  describe('Check that access and conditional tags do not mix', () => {
+    test('no access when conditionalValues given', () => {
+      const signs = signsStateByDescriptiveName([
+        'Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung',
+        'Anlieger frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([])
+      expect(collectConditionalTags(signs)).toMatchObject([
+        {
+          key: 'maxwidth:conditional',
+          value: '2 @ destination',
+        },
+      ])
     })
   })
 })

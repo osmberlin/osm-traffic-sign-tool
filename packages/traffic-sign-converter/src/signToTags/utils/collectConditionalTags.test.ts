@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest'
 import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
 import { signsStateByDescriptiveName } from '../../data/utils/signsByDescriptiveName.js'
 import { combineSignIdSignValue } from '../../signIdSignValueUtils/combineSignIdSignValue.js'
+import { collectAccessTags } from './collectAccessTags.js'
 import { collectConditionalTags } from './collectConditionalTags.js'
 import { collectUniqueTags } from './collectUniqueTags.js'
 
@@ -96,5 +97,21 @@ describe('collectConditionalTags()', () => {
         value: 'DE:30',
       },
     ])
+  })
+
+  describe('Check that access and conditional tags do not mix', () => {
+    test('set access when no conditionalValues given', () => {
+      const signs = signsStateByDescriptiveName([
+        'Verbot für Fahrzeuge aller Art',
+        'Radfahrer und Anlieger frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([
+        {
+          key: 'vehicle',
+          value: 'destination',
+        },
+      ])
+      expect(collectConditionalTags(signs)).toMatchObject([])
+    })
   })
 })
