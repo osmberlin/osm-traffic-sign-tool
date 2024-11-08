@@ -59,13 +59,19 @@ export const Footer = () => {
               href={`/${countryPrefix}/taginfo`}
               className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
             >
-              Review common values (taginfo)
+              Compare with taginfo
+            </Link>
+            <Link
+              href={`/${countryPrefix}/wiki`}
+              className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
+            >
+              Compare with wiki
             </Link>
             <Link
               href={`/${countryPrefix}/signs`}
               className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
             >
-              Review full catalogue
+              Full sign list
             </Link>
           </div>
         )}
