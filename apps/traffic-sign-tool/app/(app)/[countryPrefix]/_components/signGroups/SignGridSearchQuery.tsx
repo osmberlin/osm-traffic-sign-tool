@@ -12,11 +12,11 @@ export const SignGridSearchQuery = () => {
   const searchSigns = useMemo(() => {
     const result = trafficSignData.filter((sign) => {
       if (!paramQ) return true
-      return (
-        sign.osmValuePart.toLocaleLowerCase().includes(paramQ) ||
-        sign.descriptiveName?.toLocaleLowerCase()?.includes(paramQ) ||
-        sign.description?.toLocaleLowerCase()?.includes(paramQ)
-      )
+      const term = paramQ.toLocaleLowerCase()
+
+      // Let's keep it simple for now and search on a partial object
+      const { image: _, catalogue: __, ...searchObject } = sign
+      return JSON.stringify(searchObject, undefined, 0).toLocaleLowerCase().includes(term)
     })
     return result
   }, [paramQ])
@@ -25,7 +25,7 @@ export const SignGridSearchQuery = () => {
     setParamQCount(searchSigns.length)
   }, [searchSigns, setParamQCount])
 
-  if (!paramQ || !searchSigns.length) return null
+  if (!paramQ) return null
 
   return <SignGrid headline="Suchergebnisse" signs={searchSigns} />
 }
