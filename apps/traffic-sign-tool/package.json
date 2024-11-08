@@ -1,6 +1,6 @@
 {
   "name": "osm-traffic-sign-tool",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "private": true,
   "description": "Get OpenStreetMap tagging recommendations based on traffic sign combinations.",
   "license": "AGPL-3.0-or-later",
@@ -15,8 +15,6 @@
     "check": "npm run type-check && npm run format && npm run lint",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
-    "local-release": "changeset version && changeset publish && git push",
-    "prepublishOnly": "npm run check",
     "updatePackages:major": "npx taze major --includeLocked --write --exclude eslint && npm run updatePackages:minor && npm install",
     "updatePackages:minor": "npx taze minor --includeLocked --write",
     "preinstall": "npx only-allow pnpm"

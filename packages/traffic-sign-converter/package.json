@@ -14,7 +14,7 @@
     "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
-    "local-release": "changeset version && changeset publish",
+    "local-release": "turbo build && changeset version && changeset publish && git push",
     "prepublishOnly": "npm run check",
     "preinstall": "npx only-allow pnpm"
   },

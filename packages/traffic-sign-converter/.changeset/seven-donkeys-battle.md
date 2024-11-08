@@ -1,5 +1,4 @@
 ---
-'osm-traffic-sign-tool': patch
 '@osm-traffic-signs/converter': patch
 ---
 

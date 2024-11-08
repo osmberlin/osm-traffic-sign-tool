@@ -9,9 +9,7 @@
     "lint": "turbo lint",
     "bleach": "turbo clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "changeset": "changeset",
-    "version-packages": "changeset version --ignore @internal/wiki",
-    "release": "turbo build && changeset publish",
+    "changeset": "cd ./apps/traffic-sign-tool && changeset",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky"
   },

@@ -1,11 +1,25 @@
 # Changelog
 
+## About
+
+All notable changes to this project will be [manually](packages/traffic-sign-converter/.changeset/README.md) documented in this file.
+
+> [INFO]
+> The logic behind this page is part of the `@osm-traffic-signs/converter` package
+> [which has it's own changelog](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/packages/traffic-sign-converter/CHANGELOG.md).
+
+## 2.1.2
+
+- Fix and improve search
+- Fix and improve `/signs` page with a list of all signs that the tool uses
+- Add `/wiki` page to compare parsed wiki data with what the tool has
+- Add `/taginfo` page to compare the tool against taginfo traffic sign values
+- Update `@osm-traffic-signs/converter`
+
 ## 2.1.1
 
-### Patch Changes
-
-- 7abf5d1: Custom sign value: Fix form not working for more than one character
-- 0ebee87: Modifier signs now add `access=*` when traffic sign does not provide access tags to modify.
+- Custom sign value: Fix form not working for more than one character
+- Modifier signs now add `access=*` when traffic sign does not provide access tags to modify.
 
 ## [2.1.0] - 2024-10-30
 
@@ -38,13 +52,3 @@ Initial verions written in Svelte.
 
 Start of the proof of concept.
 We call it version `2.0.0` in the spirit that https://osmtools.de/traffic_signs/ was the `1.0`.
-
----
-
-## About
-
-All notable changes to this project will be documented in this file.
-
-> [INFO]
-> The logic behind this page is part of the `@osm-traffic-signs/converter` package
-> [which has it's own changelog](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/packages/traffic-sign-converter/CHANGELOG.md).
