@@ -18,7 +18,8 @@
     "local-release": "changeset version && changeset publish && git push",
     "prepublishOnly": "npm run check",
     "updatePackages:major": "npx taze major --includeLocked --write --exclude eslint && npm run updatePackages:minor && npm install",
-    "updatePackages:minor": "npx taze minor --includeLocked --write"
+    "updatePackages:minor": "npx taze minor --includeLocked --write",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@changesets/cli": "^2.27.9",

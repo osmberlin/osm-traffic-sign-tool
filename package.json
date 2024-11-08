@@ -12,6 +12,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version --ignore @internal/wiki",
     "release": "turbo build && changeset publish",
+    "preinstall": "npx only-allow pnpm",
     "prepare": "husky"
   },
   "devDependencies": {

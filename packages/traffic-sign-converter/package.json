@@ -15,7 +15,8 @@
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
     "local-release": "changeset version && changeset publish",
-    "prepublishOnly": "npm run check"
+    "prepublishOnly": "npm run check",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.4",
