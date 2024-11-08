@@ -15,7 +15,7 @@
     "wiki": "npm run wiki:downloadWiki && npm run wiki:parseWiki && npm run wiki:downloadSvgs",
     "wiki:downloadWiki": "bun ./src/downloadWiki/downloadWiki.ts && prettier ./ --write",
     "wiki:parseWiki": "bun ./src/parseWiki/parseWiki.ts && prettier ./ --write",
-    "wiki:downloadSvgs": "bun ./src/downloadSvgs/downloadSvgs.ts && prettier ./src/data/svgs/ --write"
+    "wiki:downloadSvgs": "bun ./src/downloadSvgs/downloadSvgs.ts && prettier ./src/data/ --write"
   },
   "devDependencies": {
     "@osm-traffic-signs/converter": "workspace:*",

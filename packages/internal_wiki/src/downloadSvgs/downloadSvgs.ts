@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import trafficSignsWiki from '../data/trafficSignsWiki.json'
+import { cleanFilename } from '../utils/cleanFilename.js'
 
 const svgFolder = path.join(__dirname, '../data/svgs')
 if (!fs.existsSync(svgFolder)) {
@@ -8,17 +9,6 @@ if (!fs.existsSync(svgFolder)) {
 }
 
 const downloadErrors: string[] = []
-
-function cleanFilename(input: string) {
-  const name = input
-    .trim()
-    .toUpperCase()
-    .replaceAll('DE:', 'DE')
-    .replaceAll('[…]', '')
-    .replaceAll('TRAFFIC_SIGN', '')
-    .replace(/[^A-Z0-9]/g, '_')
-  return `${name}`
-}
 
 async function downloadSvg(svgId: string, svgUrl: string) {
   // const fileName = decodeURIComponent(svgUrl.split('/').pop() ?? svgUrl) // Extract the filename from the URL
@@ -35,6 +25,7 @@ async function downloadSvg(svgId: string, svgUrl: string) {
 }
 
 async function downloadAllSvgs() {
+  // DOWNLOAD FILES
   const downloadPromises = trafficSignsWiki.map(({ sign, imageSvg }) => {
     return downloadSvg(sign, imageSvg)
   })
@@ -47,18 +38,18 @@ async function downloadAllSvgs() {
     )
   }
 
+  // WRITE TYPES FILE – one export line per file
   const fileNames = Array.from(
     new Set(files.filter((file) => !!file).map(({ svgId }) => cleanFilename(svgId))),
   )
-
-  const text = fileNames
+  const svgExportContent = fileNames
     .sort((a, b) => a.localeCompare(b))
     .map((name) => {
       const relativePath = path.join('./svgs/', name)
       return `export { default as ${name} } from './${relativePath}.svg'`
     })
     .join('\n')
-  Bun.write(path.join(__dirname, '../data/svgExports.ts'), text)
+  Bun.write(path.join(__dirname, '../data/svgExports.ts'), svgExportContent)
 
   console.log('All SVGs downloaded successfully!')
 }

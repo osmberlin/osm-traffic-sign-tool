@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio'
 import path from 'node:path'
+import { cleanFilename } from '../utils/cleanFilename.js'
 
 const html = await Bun.file(path.join(__dirname, '../downloadWiki/tmp/wikipage.html')).text()
 const $ = cheerio.load(html)
@@ -10,6 +11,7 @@ const parsedObjects: {
   sign: string | undefined
   imageSvg: string
   imageUrl: string
+  packageImageImportName: string
   name: string
   osmTags: string[]
   comments: string
@@ -23,7 +25,14 @@ tableRows.each((index, row) => {
 
   const $row = $(row)
 
-  const sign = $row.find('td:nth-child(1) tt').text().split('=').at(1)?.trim()
+  const sign = $row
+    .find('td:nth-child(1) tt')
+    .text()
+    .split('=')
+    .at(1)!
+    .trim()
+    .replace('traffic_sign', '')
+  const packageImageImportName = cleanFilename(sign)
   const imageSvg = `${$row.find('td:nth-child(1) a img').attr('src')?.split('.svg')[0]?.replace('thumb/', '')}.svg`
   const imagePath = $row.find('td:nth-child(1) a').attr('href')
   const imageUrl = `https://wiki.openstreetmap.org${imagePath}`
@@ -48,6 +57,7 @@ tableRows.each((index, row) => {
     sign,
     imageSvg,
     imageUrl,
+    packageImageImportName,
     name,
     osmTags,
     comments,
