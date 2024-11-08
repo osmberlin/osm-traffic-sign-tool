@@ -1,8 +1,11 @@
 # @osm-traffic-signs/converter
 
-## 0.1.1
+## 0.1.2
 
-### Patch Changes
+- Improve handling of access restrictions with modifier_sign|s. They are considered additive whenever the existing value is somethign else than "no" (in which case they replace the no).
+- Tooling: Switch to pnpm and Turborepo to build the package and app at the same time.
+
+## 0.1.1
 
 - 9018cf1: Modifier signs now add `access=*` when traffic sign does not provide access tags to modify.
 

@@ -14,7 +14,6 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
     "@types/bun": "latest",
     "eslint": "^8.57.0",
     "husky": "^9.1.6",

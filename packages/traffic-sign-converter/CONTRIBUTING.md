@@ -6,5 +6,5 @@ This section is TODO. Please let me know what you where looking for.
 
 ## Release
 
-- `npm run local-release` uses the `changeset` package to release local version
-- Use `npx changeset` to create a new changeset manually
+1. Manually update the changelog
+2. `pnpm run release:minor`
