@@ -13,7 +13,7 @@ export const Sign = ({ sign }: Props) => {
   const [debugOpen, setDebugOpen] = useState(false)
   const { paramSigns, toggleOsmValuePart } = useParamSigns()
 
-  const active = paramSigns.map((s) => s.osmValuePart).includes(sign.osmValuePart)
+  const active = paramSigns.map((s) => s.signId).includes(sign.signId)
 
   if ('recodgnizedSign' in sign && sign.recodgnizedSign === false) return null
 
