@@ -8,11 +8,11 @@
   ],
   "scripts": {
     "dev": "tsc --watch",
-    "build": "npm run build:clean && npm run build:ts && npm run build:copy-svgs",
+    "build": "pnpm run build:clean && pnpm run build:ts && pnpm run build:copy-svgs",
     "build:clean": "rimraf dist",
     "build:ts": "tsc",
     "build:copy-svgs": "copyfiles --flat './src/data/svgs/*' './dist/data/svgs'",
-    "wiki": "npm run wiki:downloadWiki && npm run wiki:parseWiki && npm run wiki:downloadSvgs",
+    "wiki": "pnpm run wiki:downloadWiki && pnpm run wiki:parseWiki && pnpm run wiki:downloadSvgs",
     "wiki:downloadWiki": "bun ./src/downloadWiki/downloadWiki.ts && prettier ./ --write",
     "wiki:parseWiki": "bun ./src/parseWiki/parseWiki.ts && prettier ./ --write",
     "wiki:downloadSvgs": "bun ./src/downloadSvgs/downloadSvgs.ts && prettier ./src/data/ --write",

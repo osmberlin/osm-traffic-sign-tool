@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
-    "taginfo": "npm run taginfo:fetch",
+    "taginfo": "pnpm run taginfo:fetch",
     "taginfo:fetch": "bun run ./src/fetch.ts && prettier ./data --write",
     "preinstall": "npx only-allow pnpm"
   },

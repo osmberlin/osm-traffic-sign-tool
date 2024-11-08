@@ -12,10 +12,10 @@
     "type-check": "tsc --skipLibCheck --noEmit",
     "lint": "next lint",
     "format": "prettier . --write",
-    "check": "npm run type-check && npm run format && npm run lint",
+    "check": "pnpm run type-check && pnpm run format && pnpm run lint",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
-    "updatePackages:major": "npx taze major --includeLocked --write --exclude eslint && npm run updatePackages:minor && npm install",
+    "updatePackages:major": "npx taze major --includeLocked --write --exclude eslint && pnpm run updatePackages:minor && pnpm install",
     "updatePackages:minor": "npx taze minor --includeLocked --write",
     "preinstall": "npx only-allow pnpm"
   },

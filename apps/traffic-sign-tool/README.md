@@ -13,10 +13,11 @@ https://trafficsigns.osm-verkehrswende.org
 
 ```bash
 nvm use
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
+- pnpm and Turborepo
 - Framework: [NextJS](https://nextjs.org/)
 - Internal States: [Zustand](https://github.com/pmndrs/zustand)
 - External States (URL): [NUQS](https://nuqs.47ng.com/)
@@ -30,8 +31,8 @@ npm run dev
 Test your work: Use `check` and `build`
 
 ```bash
-npm run check
-npm run build # and npm run preview
+pnpm run check
+pnpm run build # and pnpm run preview
 ```
 
 ## Deployment
@@ -41,7 +42,7 @@ Our custom script will automatically increase the `prepatch` version.
 Remember to update the [CHANGELOG](./CHANGELOG.md).
 
 ```bash
-npm run deploy
+pnpm run deploy
 ```
 
 ## Licence & Thanks
