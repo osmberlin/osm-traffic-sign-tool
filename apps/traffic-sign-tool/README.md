@@ -1,9 +1,10 @@
 # OSM Traffic Sign Tool 2 – Beta
 
 - A webapp to match traffic signs to OpenStreetMap tags
-- PLANNED: An npm package to display validations and images based on tags and traffic_sign tag
+  [trafficsigns.osm-verkehrswende.org](https://trafficsigns.osm-verkehrswende.org)
 
-https://trafficsigns.osm-verkehrswende.org
+- A npm package transform OSM traffic sign values to traffic sign object (and more)
+  [npmjs.com/package/@osm-traffic-signs/converter](https://www.npmjs.com/package/@osm-traffic-signs/converter)
 
 ### Project status
 
