@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "dev": "tsc --watch",
-    "build": "npm run build:ts && npm run build:copy-svgs",
+    "build": "npm run build:clean && npm run build:ts && npm run build:copy-svgs",
+    "build:clean": "rimraf dist",
     "build:ts": "tsc",
     "build:copy-svgs": "copyfiles --flat './src/data/svgs/*' './dist/data/svgs'",
     "wiki": "npm run wiki:downloadWiki && npm run wiki:parseWiki && npm run wiki:downloadSvgs",
@@ -20,6 +21,7 @@
     "@osm-traffic-signs/converter": "workspace:*",
     "cheerio": "^1.0.0",
     "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
     "typescript": "^5.0.0",
     "zod": "^3.23.8"
   }
