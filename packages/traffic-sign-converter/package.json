@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "rimraf dist && tsc",
-    "build:watch": "node --watch-path=./src build.mjs",
+    "build:watch": "tsc --watch",
     "check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run test",
     "format": "prettier --write .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
