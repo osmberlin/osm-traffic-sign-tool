@@ -14,7 +14,7 @@
     "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
-    "release:patch": "turbo build && pnpm run check && npm version patch && npm publish && git push --follow-tags",
+    "release:patch": "npm version patch && turbo build --force && pnpm run check && npm publish",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
