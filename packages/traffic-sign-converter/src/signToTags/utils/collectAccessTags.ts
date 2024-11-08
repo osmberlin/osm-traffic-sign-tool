@@ -23,12 +23,19 @@ export const collectAccessTags = (signs: SignStateType[]) => {
     .map((sign) => sign.tagRecommendations)
     .forEach((tags) => {
       // Signs can have a `accessValue` or `accessTags`
-      // `accessValue` updates the value of all existing access tags
+      // `accessValue` updates or add to the value of all existing access tags
       // `accessTags` are just added to the pile (and maybe updated by the next sign
 
       if (tags.accessValue) {
         for (const [_, tag] of mergedAccessTags) {
-          mergedAccessTags.set(tag.key, { key: tag.key, value: tags.accessValue })
+          if (tag.value === 'no') {
+            mergedAccessTags.set(tag.key, { key: tag.key, value: tags.accessValue })
+          } else {
+            mergedAccessTags.set(tag.key, {
+              key: tag.key,
+              value: [tag.value, tags.accessValue].join(';'),
+            })
+          }
         }
       }
 

@@ -65,6 +65,17 @@ describe('collectAccessTags()', () => {
     test('Verbot für Fahrzeuge aller Art + Radfahrer, Anlieger frei', () => {
       const signs = signsStateByDescriptiveName([
         'Verbot für Fahrzeuge aller Art',
+        'Anlieger frei',
+        'Land- und forstwirtschaftlicher Verkehr frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([
+        { key: 'vehicle', value: 'destination;agricultural;forestry' },
+      ])
+    })
+
+    test('https://trafficsigns.osm-verkehrswende.org/DE?signs=DE:250,1020-30,1026-38', () => {
+      const signs = signsStateByDescriptiveName([
+        'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
@@ -137,20 +148,36 @@ describe('collectAccessTags()', () => {
       ])
     })
 
-    test('One sign, one modifer', () => {
+    test('One sign (non "no"), one modifer', () => {
       const signs = [
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
+          tagRecommendations: { accessTags: [{ key: 'foo', value: 'non-no' }] },
         },
         {
           recodgnizedSign: true,
           kind: 'modifier_sign',
-          tagRecommendations: { accessValue: 'aaa' },
+          tagRecommendations: { accessValue: 'added' },
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'aaa' }])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'non-no;added' }])
+    })
+
+    test('One sign ("no"), one modifer', () => {
+      const signs = [
+        {
+          recodgnizedSign: true,
+          kind: 'traffic_sign',
+          tagRecommendations: { accessTags: [{ key: 'foo', value: 'no' }] },
+        },
+        {
+          recodgnizedSign: true,
+          kind: 'modifier_sign',
+          tagRecommendations: { accessValue: 'replaced' },
+        },
+      ] as SignStateType[]
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'replaced' }])
     })
 
     test('One sign, two modifer', () => {
@@ -171,7 +198,7 @@ describe('collectAccessTags()', () => {
           tagRecommendations: { accessValue: 'bbb' },
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'bbb' }])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'bar;aaa;bbb' }])
     })
   })
 
