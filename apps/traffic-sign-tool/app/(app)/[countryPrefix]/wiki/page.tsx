@@ -7,6 +7,7 @@ import {
   TableRow,
 } from '@app/app/_components/catalyst/table'
 import { trafficSignsWiki } from '@internal/wiki'
+import * as svgs from '@internal/wiki/src/data/svgExports'
 import { countryPrefixes, SignStateType, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import Image from 'next/image'
@@ -16,6 +17,30 @@ export async function generateStaticParams() {
   return countryPrefixes.map((prefx) => ({
     countryPrefix: prefx,
   }))
+}
+
+const ImageSvgFromPackage = ({ name }: { name: string }) => {
+  // Force a type until we know how to type this properly
+  // Type comes from `JSON.stringify(DE103_20, undefined, 2)`
+  //    with `import { DE103_20 } from '@internal/wiki'`
+  // @ts-expect-error
+  const file = svgs[name] as {
+    src: string
+    height: number
+    width: number
+    blurWidth: number
+    blurHeight: number
+  }
+  return (
+    <Image
+      src={file}
+      height={100}
+      width={100}
+      alt=""
+      className="inline-block h-auto w-20"
+      title="Image from package"
+    />
+  )
 }
 
 export type WikiSign = (typeof trafficSignsWiki)[number]
@@ -56,11 +81,13 @@ export default async function WikiPage({
         </TableHead>
         <TableBody>
           {innerTrafficSignsWiki.map((sign) => {
-            const { toolSign, ...restsign } = sign
+            const { toolSign, imageSvg: _, ...restsign } = sign
             return (
               <TableRow key={sign.sign} className={clsx(sign?.toolSign ? '' : 'bg-amber-300')}>
                 <TableHeader className="space-y-3 text-center align-top">
                   <code>{sign.sign}</code>
+                  <br />
+                  <ImageSvgFromPackage name={sign.packageImageImportName} />
                   <br />
                   {sign?.imageSvg ? (
                     <Image
@@ -69,6 +96,7 @@ export default async function WikiPage({
                       src={sign?.imageSvg}
                       alt={sign.name}
                       className="inline-block h-auto w-20"
+                      title="Image from source URL"
                     />
                   ) : (
                     <span className="inline-block text-amber-700">Missing</span>

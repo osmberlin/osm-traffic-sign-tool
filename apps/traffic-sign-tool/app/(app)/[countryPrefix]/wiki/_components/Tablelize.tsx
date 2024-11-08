@@ -11,9 +11,9 @@ import { SignStateType } from '@osm-traffic-signs/converter'
 import Image from 'next/image'
 import { WikiSign } from '../page'
 
-export const Tablelize = ({ data }: { data: SignStateType | WikiSign }) => {
+export const Tablelize = ({ data }: { data: Partial<SignStateType> | Partial<WikiSign> }) => {
   return (
-    <Table className="mt-5">
+    <Table className="mt-5" dense>
       <TableHead>
         <TableRow>
           <TableHeader>key</TableHeader>
