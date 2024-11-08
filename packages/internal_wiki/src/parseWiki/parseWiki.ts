@@ -54,9 +54,25 @@ tableRows.each((index, row) => {
   })
 })
 
-console.log(parsedObjects)
+const signMap = new Map<string, (typeof parsedObjects)[number]>()
+const duplicates: (typeof parsedObjects)[number][] = []
+
+parsedObjects
+  .filter((s) => !!s.sign)
+  .forEach((obj) => {
+    if (signMap.has(obj.sign!)) {
+      duplicates.push(obj)
+    } else {
+      signMap.set(obj.sign!, obj)
+    }
+  })
+
+const deduplicated = Array.from(signMap.values())
+
+console.log('Deduplicated objects:', deduplicated)
+console.log('Removed duplicates:', duplicates)
 
 const outputPath = path.resolve(__dirname, '../data/trafficSignsWiki.json')
-Bun.write(outputPath, JSON.stringify(parsedObjects, null, 2))
+Bun.write(outputPath, JSON.stringify(Array.from(deduplicated), null, 2))
 
 console.log('Parsed object saved to', outputPath)
