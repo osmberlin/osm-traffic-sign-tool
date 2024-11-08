@@ -58,7 +58,7 @@ export const Sign = ({ sign }: Props) => {
           </div>
         )}
 
-        <div className="absolute -bottom-5 z-10 hidden rounded bg-stone-800 px-1 pb-0.5 pt-1 text-xs/4 text-stone-50 group-hover/item:block">
+        <div className="absolute top-14 z-10 hidden min-w-32 rounded bg-stone-800 px-2 py-1 text-xs/4 text-stone-50 group-hover/item:block">
           <strong>{sign.osmValuePart}</strong>
           <br />
           {sign.descriptiveName ?? ''}
