@@ -54,15 +54,13 @@ jobs:
       #     restore-keys: |
       #       ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
-      - name: Install dependencies
+      - name: Install dependencies (Monorepo)
         run: pnpm install
-        working-directory: apps/traffic-sign-tool
 
-      - name: Build with Next.js
+      - name: Build with Monorepo (Package, Next.js)
         run: pnpm run build
-        working-directory: apps/traffic-sign-tool
 
-      - name: Upload artifact
+      - name: Upload artifact (Next.js)
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./apps/traffic-sign-tool/out
