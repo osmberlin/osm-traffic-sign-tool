@@ -32,6 +32,9 @@ importers:
       turbo:
         specifier: ^2.2.3
         version: 2.2.3
+      vitest:
+        specifier: ^2.1.4
+        version: 2.1.4(@types/node@20.17.5)(jsdom@25.0.1)
 
   apps/traffic-sign-tool:
     dependencies:

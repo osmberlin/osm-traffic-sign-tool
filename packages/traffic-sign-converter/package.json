@@ -12,8 +12,8 @@
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "lint": "tsc --noEmit",
     "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest --watch --passWithNoTests",
     "local-release": "changeset version && changeset publish",
     "prepublishOnly": "npm run check"
   },

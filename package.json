@@ -4,6 +4,8 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "lint": "turbo lint",
     "bleach": "turbo clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -13,14 +15,15 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "@changesets/cli": "^2.27.1",
+    "@types/bun": "latest",
     "eslint": "^8.57.0",
     "husky": "^9.1.6",
-    "turbo": "^2.2.3",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-tailwindcss": "^0.6.8"
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "turbo": "^2.2.3",
+    "vitest": "^2.1.4"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {
