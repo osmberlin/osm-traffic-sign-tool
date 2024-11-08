@@ -33,12 +33,12 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
     .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind === 'modifier_sign')
     .forEach((sign) => {
-      const { conditionalValue, conditionalValueFromValuePrompt } = sign.tagRecommendations
+      const { modifierValue, modifierValueFromValuePrompt } = sign.tagRecommendations
 
-      if (conditionalValue || conditionalValueFromValuePrompt) {
+      if (modifierValue || modifierValueFromValuePrompt) {
         for (const [_, mergedTag] of mergedConditionalTags) {
           const key = `${mergedTag.key}:conditional`
-          const value = `${mergedTag.value} @ ${sign.signValue || sign.tagRecommendations.conditionalValue}`
+          const value = `${mergedTag.value} @ ${sign.signValue || sign.tagRecommendations.modifierValue}`
 
           // We overwrite the existing key
           mergedConditionalTags.set(mergedTag.key, { key, value })

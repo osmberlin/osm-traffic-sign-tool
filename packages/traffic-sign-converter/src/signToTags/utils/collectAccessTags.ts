@@ -22,18 +22,18 @@ export const collectAccessTags = (signs: SignStateType[]) => {
     .filter((sign) => sign.kind === 'modifier_sign')
     .map((sign) => sign.tagRecommendations)
     .forEach((tags) => {
-      // Signs can have a `accessValue` or `accessTags`
-      // `accessValue` updates or add to the value of all existing access tags
+      // Signs can have a `modifierValue` or `accessTags`
+      // `modifierValue` updates or add to the value of all existing access tags
       // `accessTags` are just added to the pile (and maybe updated by the next sign
 
-      if (tags.accessValue) {
+      if (tags.modifierValue) {
         for (const [_, tag] of mergedAccessTags) {
           if (tag.value === 'no') {
-            mergedAccessTags.set(tag.key, { key: tag.key, value: tags.accessValue })
+            mergedAccessTags.set(tag.key, { key: tag.key, value: tags.modifierValue })
           } else {
             mergedAccessTags.set(tag.key, {
               key: tag.key,
-              value: [tag.value, tags.accessValue].join(';'),
+              value: [tag.value, tags.modifierValue].join(';'),
             })
           }
         }
@@ -47,9 +47,9 @@ export const collectAccessTags = (signs: SignStateType[]) => {
 
       // Now we have do handle the case, when our `traffic_sign` did not give any
       // value to merge access restriction on. In this case, we set a general access
-      // tag with tags.accessValue
-      if (mergedAccessTags.size === 0 && tags.accessValue) {
-        mergedAccessTags.set('access', { key: 'access', value: tags.accessValue })
+      // tag with tags.modifierValue
+      if (mergedAccessTags.size === 0 && tags.modifierValue) {
+        mergedAccessTags.set('access', { key: 'access', value: tags.modifierValue })
       }
     })
 

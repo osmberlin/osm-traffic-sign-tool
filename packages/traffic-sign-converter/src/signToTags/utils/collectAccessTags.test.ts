@@ -158,7 +158,7 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'modifier_sign',
-          tagRecommendations: { accessValue: 'added' },
+          tagRecommendations: { modifierValue: 'added' },
         },
       ] as SignStateType[]
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'non-no;added' }])
@@ -174,7 +174,7 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'modifier_sign',
-          tagRecommendations: { accessValue: 'replaced' },
+          tagRecommendations: { modifierValue: 'replaced' },
         },
       ] as SignStateType[]
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'replaced' }])
@@ -190,12 +190,12 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'modifier_sign',
-          tagRecommendations: { accessValue: 'aaa' },
+          tagRecommendations: { modifierValue: 'aaa' },
         },
         {
           recodgnizedSign: true,
           kind: 'modifier_sign',
-          tagRecommendations: { accessValue: 'bbb' },
+          tagRecommendations: { modifierValue: 'bbb' },
         },
       ] as SignStateType[]
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'bar;aaa;bbb' }])

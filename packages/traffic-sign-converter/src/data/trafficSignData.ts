@@ -1073,8 +1073,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'bicycle', value: 'yes' }],
-      conditionalValue: 'destination',
-      accessValue: 'destination',
+      modifierValue: 'destination',
     },
     comments: [],
     catalogue: {
@@ -1097,8 +1096,7 @@ export const trafficSignData: SignType[] = [
     kind: 'modifier_sign',
     tagRecommendations: {
       highwayValues: ['residential', 'service'],
-      conditionalValue: 'destination',
-      accessValue: 'destination',
+      modifierValue: 'destination',
     },
     comments: [
       {
@@ -1352,7 +1350,7 @@ export const trafficSignData: SignType[] = [
     kind: 'modifier_sign',
     tagRecommendations: {
       highwayValues: [],
-      accessValue: 'delivery',
+      modifierValue: 'delivery',
       uniqueTags: [],
     },
     comments: [],
@@ -1375,7 +1373,7 @@ export const trafficSignData: SignType[] = [
     kind: 'modifier_sign',
     tagRecommendations: {
       highwayValues: ['track'],
-      accessValue: 'agricultural',
+      modifierValue: 'agricultural',
       uniqueTags: [],
     },
     comments: [
@@ -1452,7 +1450,7 @@ export const trafficSignData: SignType[] = [
     kind: 'modifier_sign',
     tagRecommendations: {
       highwayValues: ['track'],
-      accessValue: 'forestry',
+      modifierValue: 'forestry',
       uniqueTags: [],
     },
     comments: [
@@ -1482,7 +1480,7 @@ export const trafficSignData: SignType[] = [
     kind: 'modifier_sign',
     tagRecommendations: {
       highwayValues: ['track'],
-      accessValue: 'agricultural;forestry',
+      modifierValue: 'agricultural;forestry',
       uniqueTags: [],
     },
     comments: [
@@ -1517,7 +1515,7 @@ export const trafficSignData: SignType[] = [
       format: 'time_restriction',
     },
     tagRecommendations: {
-      conditionalValueFromValuePrompt: true,
+      modifierValueFromValuePrompt: true,
     },
     catalogue: {
       signCategory: 'modifier_sign_restriction',
@@ -1546,7 +1544,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValueFromValuePrompt: true,
+      modifierValueFromValuePrompt: true,
     },
     comments: [],
     catalogue: {
@@ -1568,7 +1566,7 @@ export const trafficSignData: SignType[] = [
     description: null,
     kind: 'modifier_sign',
     tagRecommendations: {
-      conditionalValue: 'Mo-Sa;PH off',
+      modifierValue: 'Mo-Sa;PH off',
     },
     catalogue: {
       signCategory: 'modifier_sign_restriction',
@@ -1596,7 +1594,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValueFromValuePrompt: true,
+      modifierValueFromValuePrompt: true,
     },
     comments: [],
     catalogue: {
@@ -1626,7 +1624,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValueFromValuePrompt: true,
+      modifierValueFromValuePrompt: true,
     },
     comments: [],
     catalogue: {
@@ -1656,7 +1654,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValueFromValuePrompt: true,
+      modifierValueFromValuePrompt: true,
     },
     comments: [],
     catalogue: {
@@ -1686,7 +1684,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValueFromValuePrompt: true,
+      modifierValueFromValuePrompt: true,
     },
     comments: [],
     catalogue: {
@@ -1716,7 +1714,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValueFromValuePrompt: true,
+      modifierValueFromValuePrompt: true,
     },
     comments: [],
     catalogue: {
@@ -1740,7 +1738,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValue: 'Mo-Fr;PH off',
+      modifierValue: 'Mo-Fr;PH off',
     },
     comments: [],
     catalogue: {
@@ -1764,7 +1762,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValue: 'Sa,Su',
+      modifierValue: 'Sa,Su',
     },
     comments: [],
     catalogue: {
@@ -1787,7 +1785,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
-      conditionalValue: 'wet',
+      modifierValue: 'wet',
     },
     comments: [],
     catalogue: {

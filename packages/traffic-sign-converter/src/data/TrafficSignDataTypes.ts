@@ -66,10 +66,9 @@ export type ModifierSignType = SharedId &
     tagRecommendations: {
       highwayValues?: string[]
       accessTags?: { key: string; value: string }[]
-      accessValue?: string
+      modifierValue?: string
       uniqueTags?: { key: string; value: string }[]
-      conditionalValue?: string
-      conditionalValueFromValuePrompt?: boolean
+      modifierValueFromValuePrompt?: boolean
     }
   } & SharedComments &
   SharedQuestions &
