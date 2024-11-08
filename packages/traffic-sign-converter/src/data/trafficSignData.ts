@@ -1074,6 +1074,7 @@ export const trafficSignData: SignType[] = [
       highwayValues: [],
       uniqueTags: [{ key: 'bicycle', value: 'yes' }],
       conditionalValue: 'destination',
+      accessValue: 'destination',
     },
     comments: [],
     catalogue: {
@@ -1096,6 +1097,7 @@ export const trafficSignData: SignType[] = [
     kind: 'modifier_sign',
     tagRecommendations: {
       highwayValues: ['residential', 'service'],
+      conditionalValue: 'destination',
       accessValue: 'destination',
     },
     comments: [

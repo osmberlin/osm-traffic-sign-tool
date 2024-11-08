@@ -61,6 +61,14 @@ describe('collectAccessTags()', () => {
         { key: 'tourist_bus', value: 'yes' },
       ])
     })
+
+    test('Verbot für Fahrzeuge aller Art + Radfahrer, Anlieger frei', () => {
+      const signs = signsStateByDescriptiveName([
+        'Verbot für Fahrzeuge aller Art',
+        'Radfahrer und Anlieger frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
+    })
   })
 
   describe('Artificial signs', () => {
