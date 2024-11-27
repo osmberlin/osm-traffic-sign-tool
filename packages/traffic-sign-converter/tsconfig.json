@@ -26,7 +26,10 @@
     /* AND if you're building for a library: */
     "declaration": true,
     /* AND if you're building for a library in a monorepo: */
-    "declarationMap": true
+    "declarationMap": true,
+
+    // Usefull
+    "noErrorTruncation": true // https://stackoverflow.com/a/53131824
   },
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
