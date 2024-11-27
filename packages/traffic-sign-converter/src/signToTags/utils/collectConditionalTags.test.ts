@@ -114,4 +114,32 @@ describe('collectConditionalTags()', () => {
       expect(collectConditionalTags(signs)).toMatchObject([])
     })
   })
+
+  describe('Handle different modifer signs', () => {
+    test('handle `exception_modifier`', () => {
+      const signs = signsStateByDescriptiveName([
+        'Verbot für Fahrzeuge aller Art',
+        'Radfahrer und Anlieger frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([
+        {
+          key: 'vehicle',
+          value: 'destination',
+        },
+      ])
+      expect(collectConditionalTags(signs)).toMatchObject([])
+    })
+
+    test('handle `condition_modifier`', () => {
+      const signs = signsStateByDescriptiveName([
+        'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
+        'Anlieger frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([])
+      expect(collectConditionalTags(signs)).toMatchObject([
+        { key: 'maxweight', value: '5.5' },
+        { key: 'maxweight:conditional', value: 'none @ (destination)' },
+      ])
+    })
+  })
 })

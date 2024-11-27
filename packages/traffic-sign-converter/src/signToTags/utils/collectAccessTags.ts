@@ -16,16 +16,16 @@ export const collectAccessTags = (signs: SignStateType[]) => {
       }
     })
 
-  // Handle `modifier_sign`
+  // Handle modifier signs (`exception_modifier` and `condition_modifier`)
   signs
     .filter((sign) => sign.recodgnizedSign === true)
-    .filter((sign) => sign.kind === 'modifier_sign')
+    .filter((sign) => sign.kind !== 'traffic_sign')
     .map((sign) => sign.tagRecommendations)
     .forEach((tags) => {
       // Signs can have a `modifierValue` or `accessTags`
       // `modifierValue` updates or add to the value of all existing access tags
       //   BUT we have to make sure we only apply them, when the `traffic_sign` actually had an `accessTags`
-      // `accessTags` are just added to the pile (and maybe updated by the next sign
+      // `accessTags` are just added to the pile (and maybe updated by the next sign)
 
       const hasAccessTagProp = signs
         .filter((sign) => sign.recodgnizedSign === true)

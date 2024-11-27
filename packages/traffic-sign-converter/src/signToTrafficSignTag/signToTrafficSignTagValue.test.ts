@@ -21,7 +21,7 @@ describe('signToTrafficSignTag()', () => {
   })
 
   test('one key, secondary category', () => {
-    const input = [{ osmValuePart: '10-10', kind: 'modifier_sign' }] as SignStateType[]
+    const input = [{ osmValuePart: '10-10', kind: 'condition_modifier' }] as SignStateType[]
     const result = signToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:10-10')
@@ -39,8 +39,8 @@ describe('signToTrafficSignTag()', () => {
 
   test('two keys, both secondary category', () => {
     const input = [
-      { osmValuePart: '10-10', kind: 'modifier_sign' },
-      { osmValuePart: '12-12', kind: 'modifier_sign_restriction' },
+      { osmValuePart: '10-10', kind: 'condition_modifier' },
+      { osmValuePart: '12-12', kind: 'exception_modifier' },
     ] as SignStateType[]
     const result = signToTrafficSignTagValue(input, countryPrefixes)
 
@@ -50,11 +50,11 @@ describe('signToTrafficSignTag()', () => {
   test('mixed case', () => {
     const input = [
       { osmValuePart: '333', kind: 'traffic_sign' },
-      { osmValuePart: '10-10', kind: 'modifier_sign' },
-      { osmValuePart: '12-12', kind: 'modifier_sign_restriction' },
+      { osmValuePart: '10-10', kind: 'condition_modifier' },
+      { osmValuePart: '12-12', kind: 'exception_modifier' },
       { osmValuePart: '444', kind: 'traffic_sign' },
       { osmValuePart: '555', kind: 'traffic_sign' },
-      { osmValuePart: '13-13', kind: 'modifier_sign_restriction' },
+      { osmValuePart: '13-13', kind: 'exception_modifier' },
     ] as SignStateType[]
     const result = signToTrafficSignTagValue(input, countryPrefixes)
 
@@ -84,7 +84,7 @@ describe('signToTrafficSignTag()', () => {
 
     test('modifier sign + named value', () => {
       const input = [
-        { osmValuePart: '1010-10', kind: 'modifier_sign' },
+        { osmValuePart: '1010-10', kind: 'exception_modifier' },
         { osmValuePart: 'city_limit', kind: 'traffic_sign' },
       ] as SignStateType[]
       const result = signToTrafficSignTagValue(input, countryPrefixes)
@@ -95,7 +95,7 @@ describe('signToTrafficSignTag()', () => {
     test('named value + modifier sign', () => {
       const input = [
         { osmValuePart: 'city_limit', kind: 'traffic_sign' },
-        { osmValuePart: '1010-10', kind: 'modifier_sign' },
+        { osmValuePart: '1010-10', kind: 'exception_modifier' },
       ] as SignStateType[]
       const result = signToTrafficSignTagValue(input, countryPrefixes)
 

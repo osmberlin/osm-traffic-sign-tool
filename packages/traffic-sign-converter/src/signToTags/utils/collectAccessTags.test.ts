@@ -234,10 +234,8 @@ describe('collectAccessTags()', () => {
       ])
       expect(collectAccessTags(signs)).toMatchObject([])
       expect(collectConditionalTags(signs)).toMatchObject([
-        {
-          key: 'maxwidth:conditional',
-          value: '2 @ destination',
-        },
+        { key: 'maxwidth', value: '2' },
+        { key: 'maxwidth:conditional', value: 'none @ (destination)' },
       ])
     })
   })

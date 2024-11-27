@@ -1069,7 +1069,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1020-12',
     descriptiveName: 'Radfahrer und Anlieger frei',
     description: 'Anlieger im Sinne von Bewohner',
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'bicycle', value: 'yes' }],
@@ -1077,7 +1077,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1093,7 +1093,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1020-30',
     descriptiveName: 'Anlieger frei',
     description: 'Anlieger im Sinne von Bewohner und Lieferverkehr',
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['residential', 'service'],
       modifierValue: 'destination',
@@ -1107,7 +1107,7 @@ export const trafficSignData: SignType[] = [
     ],
     catalogue: {
       visibility: 'highlight',
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1020-30_-_Anlieger_frei_(600x330),_StVO_1992.svg',
@@ -1123,7 +1123,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1022-10',
     descriptiveName: 'Radfahrer frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['footway'],
       uniqueTags: [{ key: 'bicycle', value: 'yes' }],
@@ -1131,7 +1131,7 @@ export const trafficSignData: SignType[] = [
     comments: [],
     catalogue: {
       visibility: 'highlight',
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1022-10_-_Radfahrer_frei,_StVO_1992.svg',
@@ -1146,14 +1146,14 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1022-11',
     descriptiveName: 'Mofas frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       accessTags: [{ key: 'mofa', value: 'yes' }],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1022-11_-_Mofas_frei_(600x450),_StVO_1992.svg',
@@ -1168,7 +1168,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1022-12',
     descriptiveName: 'Krafträder auch mit Beiwagen, Krafträder und Mofas frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       accessTags: [
@@ -1179,7 +1179,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1195,7 +1195,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1024-10',
     descriptiveName: 'Personenkraftwagen frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'motorcar', value: 'yes' }],
@@ -1208,7 +1208,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1024-10_-_Personenkraftwagen_frei,_StVO_1992.svg',
@@ -1224,14 +1224,14 @@ export const trafficSignData: SignType[] = [
     descriptiveName: 'Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
     description:
       'Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t, einschließlich ihrer Anhäger und Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse frei (zulässiges Gewicht, nicht das tatsächliche Gewicht)',
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       accessTags: [{ key: 'hgv', value: 'yes' }],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1247,7 +1247,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1024-14',
     descriptiveName: 'Kraftomnibus frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       accessTags: [
@@ -1257,7 +1257,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1024-14_-_Kraftomnibusse_frei,_StVO_1992.svg',
@@ -1273,7 +1273,7 @@ export const trafficSignData: SignType[] = [
     descriptiveName: 'Kraftfahrzeuge und Züge … frei',
     description:
       'Kraftfahrzeuge und Züge, die nicht schneller als 25 km/h fahren können oder dürfen frei (im Gegensatz zu "landwirtschaftlicher Verkehr" handelt es sich hier um eine Fahrzeugklasse)',
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['track'],
       uniqueTags: [{ key: 'agricultural', value: 'yes' }],
@@ -1286,7 +1286,7 @@ export const trafficSignData: SignType[] = [
     ],
     catalogue: {
       visibility: 'highlight',
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1302,14 +1302,14 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1026-30',
     descriptiveName: 'Taxi frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       accessTags: [{ key: 'taxi', value: 'yes' }],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1026-30_-_Taxi_frei,_StVO_1992.svg',
@@ -1324,14 +1324,14 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1026-32',
     descriptiveName: 'Linienverkehr frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'bus', value: 'yes' }],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1347,7 +1347,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1026-35',
     descriptiveName: 'Lieferverkehr frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       modifierValue: 'delivery',
@@ -1355,7 +1355,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1026-35_-_Lieferverkehr_frei,_StVO_1992.svg',
@@ -1370,7 +1370,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1026-36',
     descriptiveName: 'Landwirtschaftlicher Verkehr frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['track'],
       modifierValue: 'agricultural',
@@ -1385,7 +1385,7 @@ export const trafficSignData: SignType[] = [
     ],
     catalogue: {
       visibility: 'highlight',
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1401,14 +1401,14 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1020-13',
     descriptiveName: 'Inline Skater frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'inline_skates', value: 'yes' }],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1424,14 +1424,14 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1026-33',
     descriptiveName: 'Einsatzfahrzeuge frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'emergency', value: 'yes' }],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1447,7 +1447,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1026-37',
     descriptiveName: 'Forstwirtschaftlicher Verkehr frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['track'],
       modifierValue: 'forestry',
@@ -1461,7 +1461,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1477,7 +1477,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1026-38',
     descriptiveName: 'Land- und forstwirtschaftlicher Verkehr frei',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['track'],
       modifierValue: 'agricultural;forestry',
@@ -1491,7 +1491,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1507,7 +1507,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1040-30',
     descriptiveName: 'Zeitliche Beschräkung',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     signValue: '16-18',
     valuePrompt: {
       prompt: 'Uhrzeit von-bis',
@@ -1518,7 +1518,7 @@ export const trafficSignData: SignType[] = [
       modifierValueFromValuePrompt: true,
     },
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath:
@@ -1534,7 +1534,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1040-31',
     descriptiveName: 'Zeitliche Beschräkung',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     signValue: '08-11,16-18',
     valuePrompt: {
       prompt: 'Uhrzeit von-bis, von-bis',
@@ -1548,7 +1548,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath:
@@ -1564,12 +1564,12 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1042-30',
     descriptiveName: 'Zeitliche Beschräkung: werktags',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     tagRecommendations: {
       modifierValue: 'Mo-Sa;PH off',
     },
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1042-30_-_werktags_(600x330),_StVO_1992.svg',
@@ -1584,7 +1584,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1042-31',
     descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     signValue: 'Mo-Sa 18-19',
     valuePrompt: {
       prompt: 'Werktags, Uhrzeit von-bis',
@@ -1598,7 +1598,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath:
@@ -1614,7 +1614,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1042-32',
     descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis, von-bis',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     signValue: 'PH off;Mo-Sa 8:30-11:30,16-18',
     valuePrompt: {
       prompt: 'Werktags, Uhrzeit von-bis, von-bis',
@@ -1628,7 +1628,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath:
@@ -1644,7 +1644,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1042-33',
     descriptiveName: 'Zeitliche Beschräkung: Mo-Fr, von-bis',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     signValue: 'Mo-Fr 16-18',
     valuePrompt: {
       prompt: 'Mo-Fr, Uhrzeit von-bis',
@@ -1658,7 +1658,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath:
@@ -1674,7 +1674,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1042-34',
     descriptiveName: 'Zeitliche Beschräkung: Di,Do,Fr, von-bis',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     signValue: 'Tu,Th,Fr 16-18',
     valuePrompt: {
       prompt: 'Tu,Th,Fr, Uhrzeit von-bis',
@@ -1688,7 +1688,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath:
@@ -1704,7 +1704,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1042-35',
     descriptiveName: 'Zeitliche Beschräkung: So- und Feiertage, von-bis',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     signValue: 'Su,PH 6-22',
     valuePrompt: {
       prompt: 'So- und Feiertage, Uhrzeit von-bis',
@@ -1718,7 +1718,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath:
@@ -1734,7 +1734,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1042-38',
     descriptiveName: 'Zeitliche Beschräkung: Werktags, außer Samstags',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
@@ -1742,7 +1742,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath:
@@ -1758,7 +1758,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1042-51',
     descriptiveName: 'Zeitliche Beschräkung: Sa und So',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
@@ -1766,7 +1766,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1042-51_-_Sa_und_So_(600x330),_StVO_2017.svg',
@@ -1781,7 +1781,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1053-35',
     descriptiveName: 'Beschräkung: bei Nässe',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'condition_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
@@ -1789,7 +1789,7 @@ export const trafficSignData: SignType[] = [
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign_restriction',
+      signCategory: 'condition_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1053-35_-_Bei_Naesse_(600x600),_StVO_2017.svg',
@@ -1804,14 +1804,14 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1012-31',
     descriptiveName: 'Ende',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zusatzzeichen_1012-31_-_Ende_(600x330),_StVO_1992.svg',
@@ -1826,14 +1826,14 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1000-30',
     descriptiveName: 'Beide Richtungen',
     description: 'zwei gegengerichtete waagerechte Pfeile',
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'oneway', value: 'no' }],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1849,14 +1849,14 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1000-31',
     descriptiveName: 'Beide Richtungen',
     description: 'zwei gegengerichtete senkrechte Pfeile',
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['path', 'cycleway'],
       uniqueTags: [{ key: 'oneway', value: 'no' }],
     },
     comments: [],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1872,7 +1872,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1000-32',
     descriptiveName: 'Radverkehr kreuzt von links und rechts',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['path', 'cycleway'],
       uniqueTags: [{ key: 'oneway', value: 'no' }],
@@ -1885,7 +1885,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -1901,7 +1901,7 @@ export const trafficSignData: SignType[] = [
     name: 'Zusatzzeichen 1000-33',
     descriptiveName: 'Radverkehr im Gegenverkehr',
     description: null,
-    kind: 'modifier_sign',
+    kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
       uniqueTags: [{ key: 'oneway:cycleway', value: 'no' }],
@@ -1914,7 +1914,7 @@ export const trafficSignData: SignType[] = [
       },
     ],
     catalogue: {
-      signCategory: 'modifier_sign',
+      signCategory: 'exception_modifier',
     },
     image: {
       svgPath:
@@ -2537,7 +2537,7 @@ export const trafficSignData: SignType[] = [
     comments: [],
     catalogue: {
       visibility: 'search_only',
-      signCategory: 'traffic_sign',
+      signCategory: 'hazard_sign',
     },
     image: {
       svgPath: '/trafficSignsSvgs/Zeichen_136-10_-_Kinder,_Aufstellung_rechts,_StVO_1992.svg',

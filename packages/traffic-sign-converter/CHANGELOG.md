@@ -1,5 +1,11 @@
 # @osm-traffic-signs/converter
 
+## 0.1.3
+
+- Fix handling of modifier signs by splitting them in two categories:
+  For `condition_modifier`, the primary condition is removed and only the `*:conditional` tag stays. Eg. `maxspeed:conditional=30 @ (22-06)`
+  For `exception_modifier`, the primary condition stays but is resolved conditionally. Eg. `maxweight=5.5 + maxweight:conditional=none @ (destination)`
+
 ## 0.1.2
 
 - Improve handling of access restrictions with modifier_sign|s. They are considered additive whenever the existing value is somethign else than "no" (in which case they replace the no).

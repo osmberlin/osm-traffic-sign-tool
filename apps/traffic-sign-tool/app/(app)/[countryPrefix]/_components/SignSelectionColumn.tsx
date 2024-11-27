@@ -13,19 +13,24 @@ export const SignSelectionColumn = () => {
       sign.catalogue.visibility !== 'highlight' &&
       sign.catalogue.visibility !== 'search_only',
   )
-  const signsCatModifiers = trafficSignData.filter(
+  const signsCatExceptionModifiers = trafficSignData.filter(
     (sign) =>
-      sign.catalogue.signCategory === 'modifier_sign' &&
+      sign.catalogue.signCategory === 'exception_modifier' &&
       sign.catalogue.visibility !== 'search_only',
   )
-  const signsCatModifierRestrictions = trafficSignData.filter(
+  const signsCatConditionModifiers = trafficSignData.filter(
     (sign) =>
-      sign.catalogue.signCategory === 'modifier_sign_restriction' &&
+      sign.catalogue.signCategory === 'condition_modifier' &&
       sign.catalogue.visibility !== 'search_only',
   )
   const rest = trafficSignData.filter(
     (sign) =>
-      ![...signsMostUsed, ...signsCatSigns, ...signsCatModifiers, ...signsCatModifierRestrictions]
+      ![
+        ...signsMostUsed,
+        ...signsCatSigns,
+        ...signsCatExceptionModifiers,
+        ...signsCatConditionModifiers,
+      ]
         .map((s) => s.osmValuePart)
         .includes(sign.osmValuePart),
   )
@@ -43,9 +48,9 @@ export const SignSelectionColumn = () => {
 
       <SignGrid headline="Kategorie Verkehrszeichen" signs={signsCatSigns} />
 
-      <SignGrid headline="Zusatzzeichen" signs={signsCatModifiers} />
+      <SignGrid headline="Zusatzzeichen" signs={signsCatExceptionModifiers} />
 
-      <SignGrid headline="Zusatzzeichen Einschränkungen" signs={signsCatModifierRestrictions} />
+      <SignGrid headline="Zusatzzeichen Einschränkungen" signs={signsCatConditionModifiers} />
 
       <SignGrid headline="Weitere" defaultOpen={false} signs={rest} />
     </>

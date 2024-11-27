@@ -21,7 +21,7 @@ export type UnkownSignType = {
   osmValuePart: string
   signId: null
   signValue: string
-  kind: 'traffic_sign' | 'modifier_sign'
+  kind: 'traffic_sign' | 'exception_modifier' | 'condition_modifier'
   descriptiveName: string
 }
 
@@ -55,26 +55,28 @@ export type TrafficSignType = SharedId &
   SharedIdentifiyingTags &
   SharedImage
 
-export type ModifierSignType = SharedId &
-  SharedContent & {
-    kind: 'modifier_sign'
-    signValue?: string | number
-    valuePrompt?:
-      | ValuePrompt<'integer' | 'float'>
-      | ValuePrompt<'opening_hours'>
-      | ValuePrompt<'time_restriction'>
-    tagRecommendations: {
-      highwayValues?: string[]
-      accessTags?: { key: string; value: string }[]
-      modifierValue?: string
-      uniqueTags?: { key: string; value: string }[]
-      modifierValueFromValuePrompt?: boolean
-    }
-  } & SharedComments &
-  SharedQuestions &
-  SharedCatalogue<'modifier_sign' | 'modifier_sign_restriction'> &
-  SharedIdentifiyingTags &
-  SharedImage
+export type ModifierSignType = Prettify<
+  SharedId &
+    SharedContent & {
+      kind: 'exception_modifier' | 'condition_modifier'
+      signValue?: string | number
+      valuePrompt?:
+        | ValuePrompt<'integer' | 'float'>
+        | ValuePrompt<'opening_hours'>
+        | ValuePrompt<'time_restriction'>
+      tagRecommendations: {
+        highwayValues?: string[]
+        accessTags?: { key: string; value: string }[]
+        modifierValue?: string
+        uniqueTags?: { key: string; value: string }[]
+        modifierValueFromValuePrompt?: boolean
+      }
+    } & SharedComments &
+    SharedQuestions &
+    SharedCatalogue<'exception_modifier' | 'condition_modifier'> &
+    SharedIdentifiyingTags &
+    SharedImage
+>
 
 type SharedId = {
   osmValuePart: string

@@ -1,6 +1,5 @@
 import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
 
-// TODO: Group by main sign + modifiers because modifiers only apply to the main sign
 export const splitIntoSignGroups = (signs: SignStateType[]) => {
   const groups: SignStateType[][] = []
   let currentGroup: SignStateType[] = []
@@ -11,7 +10,7 @@ export const splitIntoSignGroups = (signs: SignStateType[]) => {
         groups.push(currentGroup)
       }
       currentGroup = [sign]
-    } else if (sign.kind === 'modifier_sign') {
+    } else if (['exception_modifier', 'condition_modifier'].includes(sign.kind)) {
       currentGroup.push(sign)
     }
   })
