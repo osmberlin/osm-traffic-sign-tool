@@ -20,6 +20,7 @@
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.8",
+    "svgo": "^3.3.2",
     "turbo": "^2.3.3",
     "vitest": "^2.1.4"
   },

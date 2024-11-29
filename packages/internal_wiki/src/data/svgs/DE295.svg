@@ -1,31 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   version="1.0"
-   width="1900"
-   height="870"
-   id="svg2">
-  <defs
-     id="defs4" />
-  <g
-     id="layer1">
-    <path
-       d="M 155.48427,861.16263 C 406.09832,570.82758 844.88942,151.45281 1206.1743,8.1416607 L 1672.6272,7.9419 C 1427.5969,395.7953 1519.3424,523.2448 1725.7143,864.28571 L 155.48427,861.16263 z "
-       style="fill:#999;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="path1882" />
-    <path
-       d="M 156.47493,859.78141 C 493.36042,487.67326 818.82004,176.60828 1206.3771,8.4885833 L 1170.2914,8.6489647 C 975.68651,69.82292 350.64061,483.14059 7.0224129,859.76996 L 156.47493,859.78141 z "
-       style="fill:white;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path1884" />
-    <path
-       d="M 1893.5341,862.13509 C 1679.4912,659.06271 1427.1879,434.75786 1690.254,10.230788 L 1671.8853,10.007585 C 1503.7502,307.20397 1433.3334,412.70231 1727.4974,862.12364 L 1893.5341,862.13509 z "
-       style="fill:white;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path2772" />
-    <path
-       d="M 952.58882,861.57995 L 1002.2671,862.14128 C 1024.5905,476.92483 1180.2132,249.52802 1432.5319,8.6284368 C 1432.5319,8.6284368 1408.6751,8.6284368 1408.6751,8.6284368 C 1162.71,207.63328 951.76087,574.57779 952.58882,861.57995 z "
-       style="fill:white;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path2774" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 1900 870" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 295 - Fahrstreifenbegrenzung und Fahrbahnbegrenzung</title>
+  <path d="M155.484 861.163C406.098 570.828 844.89 151.453 1206.174 8.142l466.453-.2c-245.03 387.853-153.285 515.303 53.087 856.344z" style="fill:#999;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+  <path d="M156.475 859.781C493.36 487.673 818.82 176.608 1206.377 8.49l-36.086.16C975.687 69.823 350.641 483.141 7.022 859.77zM1893.534 862.135c-214.043-203.072-466.346-427.377-203.28-851.904l-18.369-.223c-168.135 297.196-238.552 402.694 55.612 852.116zM952.589 861.58l49.678.561c22.323-385.216 177.946-612.613 430.265-853.513h-23.857C1162.71 207.633 951.761 574.578 952.59 861.58z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
 </svg>

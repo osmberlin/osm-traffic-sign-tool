@@ -26,6 +26,9 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.6.8
         version: 0.6.8(prettier-plugin-organize-imports@4.1.0)(prettier@3.3.3)
+      svgo:
+        specifier: ^3.3.2
+        version: 3.3.2
       turbo:
         specifier: ^2.3.3
         version: 2.3.3

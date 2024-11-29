@@ -1,5 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { optimize } from 'svgo'
+import type { XastElement } from 'svgo/lib/types.js'
 import trafficSignsWiki from '../data/trafficSignsWiki.json'
 import { cleanFilename } from '../utils/cleanFilename.js'
 
@@ -10,13 +12,62 @@ if (!fs.existsSync(svgFolder)) {
 
 const downloadErrors: string[] = []
 
-async function downloadSvg(svgId: string, svgUrl: string) {
+async function downloadSvg(svgId: string, svgUrl: string, name: string) {
   // const fileName = decodeURIComponent(svgUrl.split('/').pop() ?? svgUrl) // Extract the filename from the URL
-  const name = `${cleanFilename(svgId)}.svg`
-  const filePath = path.join(svgFolder, name)
+  const fileName = `${cleanFilename(svgId)}.svg`
+  const filePath = path.join(svgFolder, fileName)
   try {
     const response = await (await fetch(svgUrl)).text()
-    Bun.write(filePath, response)
+    const optimized = optimize(response, {
+      js2svg: {
+        indent: 2,
+        pretty: true,
+      },
+      // Taken from https://github.com/tailwindlabs/heroicons/blob/master/svgo.24.solid.mjs
+      plugins: [
+        'preset-default',
+        'removeDimensions',
+        'sortAttrs',
+        'cleanupListOfValues',
+        {
+          name: 'addAttributesToSVGElement',
+          params: {
+            attributes: [
+              {
+                role: 'img',
+                'aria-labelledby': 'title',
+              },
+            ],
+          },
+        },
+        {
+          name: 'addTitleElement',
+          fn: () => {
+            return {
+              element: {
+                enter: (node, parentNode) => {
+                  if (node.name === 'svg' && parentNode.type === 'root') {
+                    const titleElement = {
+                      type: 'element',
+                      name: 'title',
+                      attributes: { id: 'title' },
+                      children: [
+                        {
+                          type: 'text',
+                          value: `Verkehrszeichen ${svgId.replace('DE:', '')} - ${name}`,
+                        },
+                      ],
+                    } satisfies XastElement
+                    node.children.unshift(titleElement)
+                  }
+                },
+              },
+            }
+          },
+        },
+      ],
+    }).data
+    Bun.write(filePath, optimized)
     return { svgId, filePath }
   } catch (error) {
     downloadErrors.push(svgUrl)
@@ -26,8 +77,8 @@ async function downloadSvg(svgId: string, svgUrl: string) {
 
 async function downloadAllSvgs() {
   // DOWNLOAD FILES
-  const downloadPromises = trafficSignsWiki.map(({ sign, imageSvg }) => {
-    return downloadSvg(sign, imageSvg)
+  const downloadPromises = trafficSignsWiki.map(({ sign, imageSvg, name }) => {
+    return downloadSvg(sign, imageSvg, name)
   })
   const files = await Promise.all(downloadPromises)
 
