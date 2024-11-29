@@ -19,6 +19,7 @@ export const trafficSignData: SignType[] = [
           'Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
       },
     ],
+    compatibility: { incompatibleModifiers: ['1020-12', '1022-10'] },
     catalogue: {
       visibility: 'highlight',
       signCategory: 'traffic_sign',
@@ -1936,6 +1937,7 @@ export const trafficSignData: SignType[] = [
       uniqueTags: [{ key: 'area:highway', value: 'prohibited' }],
     },
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',
     },
@@ -1958,6 +1960,7 @@ export const trafficSignData: SignType[] = [
       uniqueTags: [{ key: 'area:highway', value: 'prohibited' }],
     },
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',
     },
@@ -2019,6 +2022,7 @@ export const trafficSignData: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'traffic_sign',
     },
@@ -2049,6 +2053,7 @@ export const trafficSignData: SignType[] = [
           'Aktuell vor allem [in Göttingen in Verwendung](https://overpass-turbo.eu/s/1Tfd).',
       },
     ],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'object_sign',
@@ -2070,6 +2075,7 @@ export const trafficSignData: SignType[] = [
     tagRecommendations: {
       uniqueTags: [{ key: 'highway', value: 'stop' }],
     },
+    compatibility: { canReceiveModifiers: false },
     comments: [{ comment: 'Wird als Punkt auf der Straße erfasst.' }],
     catalogue: {
       visibility: 'search_only',
@@ -2090,6 +2096,7 @@ export const trafficSignData: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'object_sign',
@@ -2158,6 +2165,7 @@ export const trafficSignData: SignType[] = [
           'Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet werden.',
       },
     ],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2184,6 +2192,7 @@ export const trafficSignData: SignType[] = [
           'Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet werden.',
       },
     ],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2236,6 +2245,7 @@ export const trafficSignData: SignType[] = [
           'Aus [der Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign=DE:224) geht nicth hervor, an welchem `public_transport=*` Object das `traffic_sign` hinterlegt werden sollte.',
       },
     ],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2293,6 +2303,7 @@ export const trafficSignData: SignType[] = [
           '[Die Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Key:priority_road) geht auf weitere Werte `yes_unposted` und `end` ein.',
       },
     ],
+    compatibility: { canReceiveModifiers: false },
     // TODO: foward/backward case https://wiki.openstreetmap.org/wiki/DE:Key:priority_road
     catalogue: {
       visibility: 'search_only',
@@ -2321,12 +2332,13 @@ export const trafficSignData: SignType[] = [
       ],
     },
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
     },
     image: {
-      svgPath: '/trafficSignsSvgs/Zeichen_306_-_Vorfahrtstraße,_StVO_1970.svg',
+      svgPath: '/trafficSignsSvgs/Zeichen_307_-_Ende_der_Vorfahrtstraße,_StVO_1981.svg',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_307_-_Ende_der_Vorfahrtstra%C3%9Fe,_StVO_1981.svg',
       licence: 'Public Domain',
@@ -2361,6 +2373,7 @@ export const trafficSignData: SignType[] = [
           '[Die Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign=DE:386.3) listet weitere übliche Tags auf um den Inhalt der Tafel zu erfassen.',
       },
     ],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2388,6 +2401,7 @@ export const trafficSignData: SignType[] = [
         },
       ],
     },
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2408,6 +2422,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {},
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'object_sign',
@@ -2429,6 +2444,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {},
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2452,6 +2468,7 @@ export const trafficSignData: SignType[] = [
       uniqueTags: [{ key: 'motorroad', value: 'yes' }],
     },
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2472,6 +2489,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {},
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2494,6 +2512,7 @@ export const trafficSignData: SignType[] = [
       highwayValues: ['motorway'],
     },
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2513,6 +2532,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {},
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2555,6 +2575,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {},
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2583,6 +2604,7 @@ export const trafficSignData: SignType[] = [
           'Alternativ wird `highway=mini_roundabout` wird als Punkt auf der `highway` Linie erfasst für Kreisverkehre ohne bauliche Begrenzung in der Mitte. Diese haben in Deutschland aber selten eine Beschilderung. ',
       },
     ],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2627,6 +2649,7 @@ export const trafficSignData: SignType[] = [
       uniqueTags: [{ key: 'hazard', value: 'curve' }],
     },
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'hazard_sign',
@@ -2649,6 +2672,7 @@ export const trafficSignData: SignType[] = [
       uniqueTags: [{ key: 'hazard', value: 'curve' }],
     },
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'hazard_sign',
@@ -2721,6 +2745,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {},
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'signpost',
@@ -2742,6 +2767,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {},
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'signpost',
@@ -2762,6 +2788,7 @@ export const trafficSignData: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {},
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'signpost',

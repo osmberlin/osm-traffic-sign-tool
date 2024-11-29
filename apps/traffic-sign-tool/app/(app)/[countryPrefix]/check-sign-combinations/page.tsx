@@ -21,6 +21,9 @@ export default async function SignsPage({
 
   const list = primarySigns
     .map((sign) => {
+      if (sign?.compatibility?.canReceiveModifiers === false) {
+        return [trafficSignTagToSigns(sign.osmValuePart, countryPrefix)]
+      }
       const signPlusModifierSigns = modifierSigns.map((modifierSign) => {
         return trafficSignTagToSigns(
           [sign.osmValuePart, modifierSign.osmValuePart].join(','),

@@ -49,6 +49,7 @@ export type TrafficSignType = SharedId &
     }
   } & SharedComments &
   SharedQuestions &
+  SharedCompatibility &
   SharedCatalogue<
     'traffic_sign' | 'object_sign' | 'surface_sign' | 'hazard_sign' | 'train_sign' | 'signpost'
   > &
@@ -73,6 +74,7 @@ export type ModifierSignType = Prettify<
       }
     } & SharedComments &
     SharedQuestions &
+    SharedCompatibility &
     SharedCatalogue<'exception_modifier' | 'condition_modifier'> &
     SharedIdentifiyingTags &
     SharedImage
@@ -86,6 +88,13 @@ type SharedContent = {
   name: string
   descriptiveName: string
   description: string | null
+}
+type SharedCompatibility = {
+  compatibility?: {
+    canReceiveModifiers?: boolean
+    /** @desc Value of `signId` */
+    incompatibleModifiers?: string[]
+  }
 }
 type SharedCatalogue<T> = {
   catalogue: {

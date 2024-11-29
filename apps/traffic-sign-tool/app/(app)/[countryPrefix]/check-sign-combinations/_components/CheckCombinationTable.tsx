@@ -13,6 +13,7 @@ import {
   signToTags,
   signToTrafficSignTagValue,
 } from '@osm-traffic-signs/converter'
+import clsx from 'clsx'
 import { useState } from 'react'
 import { TagList } from '../../_components/results/ResultTagRecommendations/TagList'
 
@@ -72,6 +73,15 @@ export const CheckCombinationTable = ({ list, countryPrefix }: Props) => {
           <TableBody>
             {list.map((signs) => {
               const tagValue = signToTrafficSignTagValue(signs, countryPrefix)
+
+              const primarySign = signs.filter((s) => s.recodgnizedSign === true).at(0)
+              const modifierSign = signs.filter((s) => s.recodgnizedSign === true).at(1)
+              const canReceiveModifiers = primarySign?.compatibility?.canReceiveModifiers !== false
+              const canReceiveThisModifier =
+                modifierSign &&
+                !primarySign?.compatibility?.incompatibleModifiers?.includes(modifierSign.signId)
+              const allowFeedback = canReceiveModifiers && canReceiveThisModifier
+
               const currentData = data.get(tagValue)
 
               return (
@@ -92,36 +102,57 @@ export const CheckCombinationTable = ({ list, countryPrefix }: Props) => {
                         />
                       ))}
                   </TableCell>
-                  <TableCell className="align-top">
+                  <TableCell
+                    className={clsx(
+                      'align-top',
+                      canReceiveThisModifier
+                        ? ''
+                        : 'text-xs leading-snug text-gray-300 hover:text-gray-600',
+                    )}
+                  >
                     <TagList tags={signToTags(signs, countryPrefix)} />
                   </TableCell>
                   <TableCell className="align-top text-sm leading-snug">
-                    <div className="space-y-4 sm:flex sm:items-center sm:space-x-4 sm:space-y-0">
-                      {feedbackOptions.map((option) => {
-                        return (
-                          <div key={option.key} className="flex items-center">
-                            <input
-                              // defaultChecked={option.key === 'OK'}
-                              id={option.key}
-                              onChange={() => handleStatusChange(tagValue, option.key)}
-                              name={`feedback-${tagValue}`}
-                              type="radio"
-                              className="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden [&:not(:checked)]:before:hidden"
-                            />
-                            <label htmlFor={option.key} className="ml-2 block">
-                              {option.label}
-                            </label>
-                          </div>
-                        )
-                      })}
-                    </div>
-                    {currentData?.status !== 'OK' && (
-                      <textarea
-                        placeholder="Enter comment"
-                        value={currentData?.comment || ''}
-                        onChange={(e) => handleCommentChange(tagValue, e.target.value)}
-                        className="mt-3 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-                      />
+                    {allowFeedback && (
+                      <>
+                        <div className="space-y-4 sm:flex sm:items-center sm:space-x-4 sm:space-y-0">
+                          {feedbackOptions.map((option) => {
+                            return (
+                              <div key={option.key} className="flex items-center">
+                                <input
+                                  // defaultChecked={option.key === 'OK'}
+                                  id={option.key}
+                                  onChange={() => handleStatusChange(tagValue, option.key)}
+                                  name={`feedback-${tagValue}`}
+                                  type="radio"
+                                  className="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden [&:not(:checked)]:before:hidden"
+                                />
+                                <label htmlFor={option.key} className="ml-2 block">
+                                  {option.label}
+                                </label>
+                              </div>
+                            )
+                          })}
+                        </div>
+                        {currentData?.status !== 'OK' && (
+                          <textarea
+                            placeholder="Enter comment"
+                            value={currentData?.comment || ''}
+                            onChange={(e) => handleCommentChange(tagValue, e.target.value)}
+                            className="mt-3 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                          />
+                        )}
+                      </>
+                    )}
+                    {!canReceiveModifiers && (
+                      <p>
+                        <small>Sign cannot be combined with modifier signs</small>
+                      </p>
+                    )}
+                    {!canReceiveThisModifier && (
+                      <p>
+                        <small>Sign cannot be combined with this modifier signs</small>
+                      </p>
                     )}
                   </TableCell>
                 </TableRow>
