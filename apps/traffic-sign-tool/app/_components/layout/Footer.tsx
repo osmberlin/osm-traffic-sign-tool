@@ -73,6 +73,12 @@ export const Footer = () => {
             >
               Full sign list
             </Link>
+            <Link
+              href={`/${countryPrefix}/check-sign-combinations`}
+              className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
+            >
+              Check sign combinations
+            </Link>
           </div>
         )}
       </nav>

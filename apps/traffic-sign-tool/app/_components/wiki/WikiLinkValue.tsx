@@ -1,3 +1,4 @@
+'use client'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
 import { ExternalLink } from '../links/ExternalLink'
 
