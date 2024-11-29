@@ -149,7 +149,7 @@ export const CheckCombinationTable = ({ list, countryPrefix }: Props) => {
                         <small>Sign cannot be combined with modifier signs</small>
                       </p>
                     )}
-                    {!canReceiveThisModifier && (
+                    {canReceiveModifiers && !canReceiveThisModifier && (
                       <p>
                         <small>Sign cannot be combined with this modifier signs</small>
                       </p>
