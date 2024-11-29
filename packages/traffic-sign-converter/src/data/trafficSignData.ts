@@ -811,6 +811,7 @@ export const trafficSignData: SignType[] = [
       conditionalTags: [],
     },
     comments: [],
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
@@ -2116,6 +2117,7 @@ export const trafficSignData: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'search_only',
       signCategory: 'object_sign',
