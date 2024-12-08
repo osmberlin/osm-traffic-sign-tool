@@ -1,4 +1,4 @@
-import type { SignComentType, SignStateType } from '../data/TrafficSignDataTypes.js'
+import type { SignComentType, SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 
 export const signToComments = (signs: SignStateType[]) => {
   const signCommentsMap: Map<string, SignComentType[]> = new Map()

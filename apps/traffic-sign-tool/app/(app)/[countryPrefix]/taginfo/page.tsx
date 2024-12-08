@@ -3,7 +3,7 @@ import { linkStyle } from '@app/app/_components/links/linkStyles'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
 import { WikiLinkListTrafficSignValues } from '@app/app/_components/wiki/WikiLinkListTrafficSignValues'
 import { taginfoTrafficSignData } from '@internal/taginfo'
-import { countryPrefixes } from '@osm-traffic-signs/converter'
+import { countries } from '@osm-traffic-signs/converter'
 import Link from 'next/link'
 import { z } from 'zod'
 import {
@@ -19,7 +19,7 @@ import { TagRecommendations } from './_components/TagRecommendations'
 import { TagSignImages } from './_components/TagSignImages'
 
 export async function generateStaticParams() {
-  return countryPrefixes.map((prefx) => ({
+  return countries.map((prefx) => ({
     countryPrefix: prefx,
   }))
 }

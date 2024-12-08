@@ -1,8 +1,11 @@
 import { expect, test } from 'vitest'
-import { signsStateByDescriptiveName } from '../../data/utils/signsByDescriptiveName.js'
+import { countryDefinitions } from '../../data-definitions/countryDefinitions.js'
+import { signsStateByDescriptiveName } from '../../utils/signsByDescriptiveName.js'
 import { collectHighwayValues } from './collectHighwayValues.js'
 
 test('collectHighwayValues', () => {
-  const signs = signsStateByDescriptiveName(['Fahrradstraße', 'Anlieger frei'])
+  const data = countryDefinitions.DE
+
+  const signs = signsStateByDescriptiveName(data, ['Fahrradstraße', 'Anlieger frei'])
   expect(collectHighwayValues(signs)).toMatchObject(['cycleway', 'residential', 'service'])
 })

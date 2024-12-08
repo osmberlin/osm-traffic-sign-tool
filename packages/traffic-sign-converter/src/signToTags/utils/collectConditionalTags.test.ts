@@ -1,21 +1,24 @@
 import { describe, expect, test } from 'vitest'
-import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
-import { signsStateByDescriptiveName } from '../../data/utils/signsByDescriptiveName.js'
-import { combineSignIdSignValue } from '../../signIdSignValueUtils/combineSignIdSignValue.js'
+import { countryDefinitions } from '../../data-definitions/countryDefinitions.js'
+import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
+import { combineSignIdSignValue } from '../../utils/combineSignIdSignValue.js'
+import { signsStateByDescriptiveName } from '../../utils/signsByDescriptiveName.js'
 import { collectAccessTags } from './collectAccessTags.js'
 import { collectConditionalTags } from './collectConditionalTags.js'
 import { collectUniqueTags } from './collectUniqueTags.js'
 
 describe('collectConditionalTags()', () => {
+  const data = countryDefinitions.DE
+
   // https://osmtools.de/traffic_signs/?signs=276
   test('Single sign with conditional tag', () => {
-    const signs = signsStateByDescriptiveName(['Überholverbot für Kraftfahrzeuge aller Art'])
+    const signs = signsStateByDescriptiveName(data, ['Überholverbot für Kraftfahrzeuge aller Art'])
     expect(collectConditionalTags(signs)).toMatchObject([{ key: 'overtaking', value: 'no' }])
   })
 
   // https://osmtools.de/traffic_signs/?signs=276,1040-30%5B16:00-18:00%5D
   test('Sign group with conditional sign with prompt', () => {
-    const signs = signsStateByDescriptiveName([
+    const signs = signsStateByDescriptiveName(data, [
       'Überholverbot für Kraftfahrzeuge aller Art',
       'Zeitliche Beschräkung',
     ])
@@ -28,7 +31,7 @@ describe('collectConditionalTags()', () => {
   })
 
   test('Sign group with conditional sign with static value', () => {
-    const signs = signsStateByDescriptiveName([
+    const signs = signsStateByDescriptiveName(data, [
       'Überholverbot für Kraftfahrzeuge aller Art',
       'Zeitliche Beschräkung: werktags',
     ])
@@ -41,7 +44,7 @@ describe('collectConditionalTags()', () => {
   })
 
   test('Use the updated custom value', () => {
-    const signs = signsStateByDescriptiveName(['Zulässige Höchstgeschwindigkeit'])
+    const signs = signsStateByDescriptiveName(data, ['Zulässige Höchstgeschwindigkeit'])
     const sign = signs[0]!
     const customValue = 999
     const updated = [
@@ -60,7 +63,7 @@ describe('collectConditionalTags()', () => {
   })
 
   test('Handle valueTemplate (One Sign)', () => {
-    const signs = signsStateByDescriptiveName(['Tempo 30-Zone'])
+    const signs = signsStateByDescriptiveName(data, ['Tempo 30-Zone'])
     expect(collectConditionalTags(signs)).toMatchObject([
       {
         key: 'maxspeed',
@@ -80,7 +83,7 @@ describe('collectConditionalTags()', () => {
   })
 
   test('Handle valueTemplate (with modifier sign)', () => {
-    const signs = signsStateByDescriptiveName(['Tempo 30-Zone', 'Zeitliche Beschräkung'])
+    const signs = signsStateByDescriptiveName(data, ['Tempo 30-Zone', 'Zeitliche Beschräkung'])
     expect(collectConditionalTags(signs)).toMatchObject([
       {
         key: 'maxspeed:conditional',
@@ -101,7 +104,7 @@ describe('collectConditionalTags()', () => {
 
   describe('Check that access and conditional tags do not mix', () => {
     test('set access when no conditionalValues given', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
@@ -117,7 +120,7 @@ describe('collectConditionalTags()', () => {
 
   describe('Handle different modifer signs', () => {
     test('handle `exception_modifier`', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
@@ -131,7 +134,7 @@ describe('collectConditionalTags()', () => {
     })
 
     test('handle `condition_modifier`', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
         'Anlieger frei',
       ])

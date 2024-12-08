@@ -1,10 +1,10 @@
-import { alternativeKeyFormats } from '../data/alternativeKeyFormats.js'
-import type { CountryPrefixType } from '../data/countryPrefixes.js'
-import { getSignBySignId } from '../data/getSignBySignId.js'
-import { getSignsMap } from '../data/getSignsMap.js'
-import { namedTrafficSignValues } from '../data/namedTrafficSignValues.js'
-import type { SignStateType } from '../data/TrafficSignDataTypes.js'
-import { combineSignIdSignValue } from '../signIdSignValueUtils/combineSignIdSignValue.js'
+import { countryAlternativeKeyFormats } from '../data-definitions/countryAlternativeKeyFormats.js'
+import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
+import { namedTrafficSignValues } from '../data-definitions/namedTrafficSignValues.js'
+import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
+import { combineSignIdSignValue } from '../utils/combineSignIdSignValue.js'
+import { getSignBySignId } from '../utils/getSignBySignId.js'
+import { getSignsMap } from '../utils/getSignsMap.js'
 import { removeCountryPrefix } from './utils/removeCountryPrefix.js'
 import { removeKeys } from './utils/removeKeys.js'
 import { splitIntoSignValueParts } from './utils/splitIntoSignValueParts.js'
@@ -16,7 +16,7 @@ export const trafficSignTagToSigns = (
 ) => {
   if (!countryPrefix) return []
 
-  const signsMap = getSignsMap()
+  const signsMap = getSignsMap(countryPrefix)
 
   // PART 1: Cleanup
   let cleaned = input
@@ -30,7 +30,7 @@ export const trafficSignTagToSigns = (
   // We also store the fact that we renamed something in our data, so we can show it in the UI
   workingValueParts = workingValueParts
     .map((osmValuePart) => {
-      const alternativeValuePart = alternativeKeyFormats[countryPrefix].get(osmValuePart)
+      const alternativeValuePart = countryAlternativeKeyFormats[countryPrefix].get(osmValuePart)
 
       if (alternativeValuePart) {
         // Lookup the sign (two ways)

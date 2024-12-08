@@ -1,3 +1,4 @@
+'use client'
 import { useParamSigns } from '@app/app/_store/useParamSigns.nuqs'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import { useEffect, useState } from 'react'

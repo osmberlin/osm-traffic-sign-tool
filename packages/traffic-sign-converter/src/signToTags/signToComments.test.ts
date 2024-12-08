@@ -1,10 +1,13 @@
 import { describe, expect, test } from 'vitest'
-import { signsStateByDescriptiveName } from '../data/utils/signsByDescriptiveName.js'
+import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
+import { signsStateByDescriptiveName } from '../utils/signsByDescriptiveName.js'
 import { signToComments } from './signToComments.js'
 
 describe('signToComments()', () => {
+  const data = countryDefinitions.DE
+
   test('Two groups, Empty is ignored', () => {
-    const signs = signsStateByDescriptiveName([
+    const signs = signsStateByDescriptiveName(data, [
       'Gehweg',
       'Radfahrer frei',
       'Personenkraftwagen frei',

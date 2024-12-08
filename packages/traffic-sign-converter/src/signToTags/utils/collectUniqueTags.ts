@@ -1,4 +1,4 @@
-import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
+import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
 
 export const collectUniqueTags = (signs: SignStateType[]) => {
   const mergedUniqueTags: Map<string, { key: string; value: string }> = new Map()

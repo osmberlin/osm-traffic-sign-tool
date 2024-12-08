@@ -11,6 +11,13 @@
     "build": "tsc",
     "taginfo": "pnpm run taginfo:fetch",
     "taginfo:fetch": "bun run ./src/fetch.ts && prettier ./data --write",
+    "bleach": "rm -rf .turbo && rm -rf node_modules",
+    "type-check": "tsc --skipLibCheck --noEmit",
+    "lint": "tsc --noEmit",
+    "format": "prettier . --write",
+    "check": "pnpm run type-check && pnpm run format && pnpm run lint",
+    "test": "",
+    "test:watch": "",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {

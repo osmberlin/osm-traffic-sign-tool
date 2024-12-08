@@ -1,10 +1,11 @@
-'use client'
-import { trafficSignData } from '@osm-traffic-signs/converter'
+import { SignType } from '@osm-traffic-signs/converter'
 import { SearchSignInput } from './signGroups/SearchSignInput'
 import { SignGrid } from './signGroups/SignGrid'
 import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
 
-export const SignSelectionColumn = () => {
+type Props = { trafficSignData: SignType[] }
+
+export const SignSelectionColumn = ({ trafficSignData }: Props) => {
   // Data
   const signsMostUsed = trafficSignData.filter((sign) => sign.catalogue.visibility === 'highlight')
   const signsCatSigns = trafficSignData.filter(
@@ -42,7 +43,7 @@ export const SignSelectionColumn = () => {
         <SearchSignInput />
       </div>
 
-      <SignGridSearchQuery />
+      <SignGridSearchQuery trafficSignData={trafficSignData} />
 
       <SignGrid headline="Häufig verwendet" signs={signsMostUsed} />
 

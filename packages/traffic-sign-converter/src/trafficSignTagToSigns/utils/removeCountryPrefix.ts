@@ -1,4 +1,4 @@
-import type { CountryPrefixType } from '../../data/countryPrefixes.js'
+import type { CountryPrefixType } from '../../data-definitions/countryDefinitions.js'
 
 /**
  * @param `input` – For example "DE:123", "DE:123[4.4]", "123-45", "DE:123,123-45;DE:567"

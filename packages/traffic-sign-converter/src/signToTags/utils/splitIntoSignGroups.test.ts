@@ -1,10 +1,13 @@
 import { describe, expect, test } from 'vitest'
-import { signsStateByDescriptiveName } from '../../data/utils/signsByDescriptiveName.js'
+import { countryDefinitions } from '../../data-definitions/countryDefinitions.js'
+import { signsStateByDescriptiveName } from '../../utils/signsByDescriptiveName.js'
 import { splitIntoSignGroups } from './splitIntoSignGroups.js'
 
 describe('splitIntoSignGroups()', () => {
+  const data = countryDefinitions.DE
+
   test('sign + modifier sign', () => {
-    const signs = signsStateByDescriptiveName(['Gehweg', 'Radfahrer frei'])
+    const signs = signsStateByDescriptiveName(data, ['Gehweg', 'Radfahrer frei'])
     const result = splitIntoSignGroups(signs)
     const groupLength = result.length
     expect(groupLength).toBe(1)
@@ -18,7 +21,7 @@ describe('splitIntoSignGroups()', () => {
   })
 
   test('sign + modifier sign + sign + modifier sign + modifier sign', () => {
-    const signs = signsStateByDescriptiveName([
+    const signs = signsStateByDescriptiveName(data, [
       'Gehweg',
       'Radfahrer frei',
       'Radweg',

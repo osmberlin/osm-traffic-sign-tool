@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 501 500.994" role="img" aria-labelledby="title">
-  <title id="title">Verkehrszeichen 308 - Vorrang vor dem Gegenverkehr</title>
-  <path d="M24.398 400.397c-13.257 0-24-10.742-24-24V24.401c0-13.254 10.743-24 24-24h352c13.262 0 24 10.746 24 24v351.996c0 13.258-10.738 24-24 24z" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.25 0 0 -1.25 0 500.994)"/>
-  <path d="M24.398 392.401c-8.835 0-16-7.164-16-16v-352c0-8.84 7.165-16 16-16h352c8.84 0 16 7.16 16 16v352c0 8.836-7.16 16-16 16z" style="fill:#154889;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.25 0 0 -1.25 0 500.994)"/>
-  <path d="M24.398 400.795C10.93 400.795 0 389.866 0 376.397V24.401C0 10.928 10.93-.002 24.398-.002h352c13.473 0 24.403 10.93 24.403 24.403v351.996c0 13.469-10.93 24.398-24.403 24.398zm0-.398h352c13.262 0 24-10.742 24-24V24.401c0-13.254-10.738-24-24-24h-352c-13.257 0-24 10.746-24 24v351.996c0 13.258 10.743 24 24 24" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.25 0 0 -1.25 0 500.994)"/>
-  <path d="M208.797 264.471v-47.023l54.937 54.937V80.963l37.911-.082V272.33l54.937-54.937v46.996l-73.887 73.039-73.914-72.953z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(1.25 0 0 -1.25 0 500.994)"/>
-  <path d="M192.012 136.327v47.019l-54.938-54.937v191.425l-37.91.079v-191.45l-54.949 54.938v-46.996l73.89-73.039 73.915 72.953z" style="fill:#c1121c;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(1.25 0 0 -1.25 0 500.994)"/>
-</svg>

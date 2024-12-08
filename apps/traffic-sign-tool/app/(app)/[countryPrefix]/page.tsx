@@ -1,19 +1,25 @@
-import { countryPrefixes } from '@osm-traffic-signs/converter'
+import { countries, countryDefinitions } from '@osm-traffic-signs/converter'
 import { ResultColumn } from './_components/ResultColumn'
 import { SelectedSignsColumn } from './_components/SelectedSignsColumn'
 import { SignSelectionColumn } from './_components/SignSelectionColumn'
 
 export async function generateStaticParams() {
-  return countryPrefixes.map((prefx) => ({
+  return countries.map((prefx) => ({
     countryPrefix: prefx,
   }))
 }
 
-export default function App() {
+export default function App({
+  params: { countryPrefix },
+}: {
+  params: Awaited<ReturnType<typeof generateStaticParams>>[number]
+}) {
+  const trafficSignData = countryDefinitions[countryPrefix]
+
   return (
     <article className="flex flex-col gap-4 md:flex-row">
       <section className="relative rounded bg-stone-300 px-6 py-4">
-        <SignSelectionColumn />
+        <SignSelectionColumn trafficSignData={trafficSignData} />
       </section>
 
       <section className="relative flex-none rounded bg-stone-300 py-4 md:w-60">

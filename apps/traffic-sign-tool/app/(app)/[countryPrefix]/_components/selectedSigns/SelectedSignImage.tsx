@@ -1,21 +1,20 @@
 'use client'
 import { SignStateType } from '@osm-traffic-signs/converter'
+import { PackageSvgTrafficSign } from '../PackageSvgTrafficSign'
 
 type Props = { sign: SignStateType }
 
 export const SelectedSignImage = ({ sign }: Props) => {
   return (
     <div className="mx-2 px-3">
-      {'image' in sign && sign.image?.svgPath ? (
+      {sign.recodgnizedSign ? (
         <div className="relative mx-auto max-w-24">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={sign.image.svgPath}
-            alt={sign.name}
+          <PackageSvgTrafficSign
+            sign={sign}
             className="pointer-events-none inline h-auto max-h-24 w-full max-w-24"
           />
 
-          {sign.signValue &&
+          {'valuePrompt' in sign &&
             sign.valuePrompt &&
             sign.signValue !== sign.valuePrompt.defaultValue && (
               <div className="absolute inset-0 flex items-center justify-center">
@@ -27,12 +26,16 @@ export const SelectedSignImage = ({ sign }: Props) => {
         </div>
       ) : (
         <div className="mx-auto flex size-20 items-center justify-center rounded border border-stone-800 bg-stone-600 pt-1 text-stone-50">
-          <code className="whitespace-nowrap tracking-tighter">{sign.signId}</code>
+          <code className="whitespace-nowrap tracking-tighter">?</code>
           <br />
         </div>
       )}
 
-      {'name' in sign && sign.name && <h3 className="mt-1 w-full font-light">{sign.name}</h3>}
+      {
+        <h3 className="mt-1 w-full font-light">
+          {sign.recodgnizedSign ? sign.name : 'Unbekanntes Zeichen'}
+        </h3>
+      }
 
       {'descriptiveName' in sign && sign.descriptiveName && (
         <div>

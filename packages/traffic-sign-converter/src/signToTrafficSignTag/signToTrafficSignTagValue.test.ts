@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
-import type { CountryPrefixType } from '../data/countryPrefixes.js'
-import type { SignStateType } from '../data/TrafficSignDataTypes.js'
+import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
+import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 import { signToTrafficSignTagValue } from './signToTrafficSignTagValue.js'
 
 describe('signToTrafficSignTag()', () => {

@@ -1,12 +1,18 @@
 {
   "name": "@osm-traffic-signs/converter",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Convert traffic sign IDs to OSM tags; suggest a traffic_sign-tag based on OSM tags.",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "dev": "tsc --watch",
-    "build": "rimraf dist && tsc",
     "build:watch": "tsc --watch",
+    "build": "npm run build:clean && npm run build:clean-svgs && npm run build:transfer-svgs && npm run build:ts && npm run build:copy-types && npm run build:copy-svgs",
+    "build:clean": "rimraf dist",
+    "build:clean-svgs": "rimraf ./src/data-svgs",
+    "build:transfer-svgs": "copyfiles -u 4 '../internal_svgs/src/data-svgs/**/*' './src/data-svgs'",
+    "build:ts": "tsc",
+    "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
+    "build:copy-svgs": "copyfiles -u 2 './src/data-svgs/**/*' './dist/data-svgs'",
     "check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run test",
     "format": "prettier --write .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
@@ -21,13 +27,25 @@
     "@arethetypeswrong/cli": "^0.16.4",
     "@total-typescript/ts-reset": "^0.6.1",
     "rimraf": "^6.0.1",
-    "svgo": "^3.3.2",
+    "copyfiles": "^2.4.1",
     "typescript": "^5.6.2",
     "vitest": "^2.1.1",
     "zod": "^3.23.8"
   },
   "type": "module",
   "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./data-svgs": {
+      "import": "./dist/data-svgs/index.js",
+      "default": "./dist/data-svgs/index.js",
+      "types": "./dist/data-svgs/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],

@@ -1,4 +1,4 @@
-import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
+import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
 
 export const splitIntoSignGroups = (signs: SignStateType[]) => {
   const groups: SignStateType[][] = []

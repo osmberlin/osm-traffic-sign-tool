@@ -8,9 +8,9 @@
 // - traffic_sign=DE:310;city_limit hier ist das Semikolon aufgrund de Bedeutung von `city_limit` als named value anders zu bewerten als …
 // - traffic_sign=DE:244.1,"Kfz-Verkehr frei" … wo ein Freitext verwendet wird https://github.com/osmberlin/osm-traffic-sign-tool/issues/51#issuecomment-2389663867 (TODO: dieses Beispiel hinkt, da der Freitext hier ein Zusatzzeichen ist; ich muss prüfen, ob es auch Freitext-Verkehrszeichen gibt)
 
-import type { CountryPrefixType } from '../data/countryPrefixes.js'
-import { namedTrafficSignValues } from '../data/namedTrafficSignValues.js'
-import type { SignStateType } from '../data/TrafficSignDataTypes.js'
+import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
+import { namedTrafficSignValues } from '../data-definitions/namedTrafficSignValues.js'
+import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 
 export const signToTrafficSignTagValue = (
   signs: SignStateType[],

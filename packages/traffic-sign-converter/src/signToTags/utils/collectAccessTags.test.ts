@@ -1,23 +1,26 @@
 import { describe, expect, test } from 'vitest'
-import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
-import { signsStateByDescriptiveName } from '../../data/utils/signsByDescriptiveName.js'
+import { countryDefinitions } from '../../data-definitions/countryDefinitions.js'
+import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
+import { signsStateByDescriptiveName } from '../../utils/signsByDescriptiveName.js'
 import { collectAccessTags } from './collectAccessTags.js'
 import { collectConditionalTags } from './collectConditionalTags.js'
 
 describe('collectAccessTags()', () => {
+  const data = countryDefinitions.DE
+
   describe('Real signs', () => {
     test('Fahrradstraße', () => {
-      const signs = signsStateByDescriptiveName(['Fahrradstraße'])
+      const signs = signsStateByDescriptiveName(data, ['Fahrradstraße'])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'no' }])
     })
 
     test('Fahrradstraße+Anlieger frei', () => {
-      const signs = signsStateByDescriptiveName(['Fahrradstraße', 'Anlieger frei'])
+      const signs = signsStateByDescriptiveName(data, ['Fahrradstraße', 'Anlieger frei'])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
     })
 
     test('Verbot für Krafträder, Kleinkrafträder und Mofas', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
       ])
       expect(collectAccessTags(signs)).toMatchObject([
@@ -28,7 +31,7 @@ describe('collectAccessTags()', () => {
     })
 
     test('Verbot für Krafträder, Kleinkrafträder und Mofas + Mofas frei', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
         'Mofas frei',
       ])
@@ -40,7 +43,7 @@ describe('collectAccessTags()', () => {
     })
 
     test('(Fiktive Kombination) Verbot für Krafträder, Kleinkrafträder und Mofas + Alles wieder "yes"', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
         'Krafträder auch mit Beiwagen, Krafträder und Mofas frei',
       ])
@@ -52,7 +55,7 @@ describe('collectAccessTags()', () => {
     })
 
     test('Verbot für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge + Kraftomnibus frei', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
         'Kraftomnibus frei',
       ])
@@ -64,7 +67,7 @@ describe('collectAccessTags()', () => {
     })
 
     test('Verbot für Fahrzeuge aller Art + Radfahrer, Anlieger frei', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Fahrzeuge aller Art',
         'Anlieger frei',
         'Land- und forstwirtschaftlicher Verkehr frei',
@@ -75,7 +78,7 @@ describe('collectAccessTags()', () => {
     })
 
     test('https://trafficsigns.osm-verkehrswende.org/DE?signs=DE:250,1020-30,1026-38', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
@@ -205,7 +208,7 @@ describe('collectAccessTags()', () => {
 
   describe('One sign without access "slots", modifier sign adds general access=*', () => {
     test('agricultural', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Gemeinsamer Fuß- und Radweg',
         'Landwirtschaftlicher Verkehr frei',
       ])
@@ -214,13 +217,13 @@ describe('collectAccessTags()', () => {
     })
 
     test('agricultural', () => {
-      const signs = signsStateByDescriptiveName(['Fußgängerbereich', 'Anlieger frei'])
+      const signs = signsStateByDescriptiveName(data, ['Fußgängerbereich', 'Anlieger frei'])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
       expect(collectConditionalTags(signs)).toMatchObject([])
     })
 
     test('Only Anlieger frei => Custom A', () => {
-      const signs = signsStateByDescriptiveName(['Anlieger frei'])
+      const signs = signsStateByDescriptiveName(data, ['Anlieger frei'])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
       expect(collectConditionalTags(signs)).toMatchObject([])
     })
@@ -228,7 +231,7 @@ describe('collectAccessTags()', () => {
 
   describe('Check that access and conditional tags do not mix', () => {
     test('no access when conditionalValues given', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung',
         'Anlieger frei',
       ])

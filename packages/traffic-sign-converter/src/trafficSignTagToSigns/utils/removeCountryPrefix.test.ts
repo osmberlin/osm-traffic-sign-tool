@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import type { CountryPrefixType } from '../../data/countryPrefixes.js'
+import type { CountryPrefixType } from '../../data-definitions/countryDefinitions.js'
 import { removeCountryPrefix, removeCountryPrefixes } from './removeCountryPrefix.js'
 
 describe('removeCountryPrefix()', () => {

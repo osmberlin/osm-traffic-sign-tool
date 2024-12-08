@@ -1,5 +1,5 @@
-import type { CountryPrefixType } from '../data/countryPrefixes.js'
-import type { SignStateType } from '../data/TrafficSignDataTypes.js'
+import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
+import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 import { signToTrafficSignTagValue } from '../signToTrafficSignTag/signToTrafficSignTagValue.js'
 import { collectAccessTags } from './utils/collectAccessTags.js'
 import { collectConditionalTags } from './utils/collectConditionalTags.js'

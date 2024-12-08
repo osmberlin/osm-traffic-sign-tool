@@ -1,12 +1,15 @@
 import { describe, expect, test } from 'vitest'
-import type { SignStateType } from '../data/TrafficSignDataTypes.js'
-import { signsStateByDescriptiveName } from '../data/utils/signsByDescriptiveName.js'
+import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
+import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
+import { signsStateByDescriptiveName } from '../utils/signsByDescriptiveName.js'
 import { signToTags } from './signToTags.js'
 
 describe('signToTags()', () => {
+  const data = countryDefinitions.DE
+
   describe('highway tag', () => {
     test('Collects unique values', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Gehweg',
         'Gemeinsamer Fuß- und Radweg',
         'Getrennter Rad- und Gehweg',
@@ -16,13 +19,13 @@ describe('signToTags()', () => {
     })
 
     test('No empty list', () => {
-      const signs = signsStateByDescriptiveName(['Zulässige Höchstgeschwindigkeit'])
+      const signs = signsStateByDescriptiveName(data, ['Zulässige Höchstgeschwindigkeit'])
       const result = signToTags(signs, 'DE')
       expect(result.has('highway')).toBeFalsy()
     })
 
     test('Handle valueTemplate', () => {
-      const signs = signsStateByDescriptiveName(['Tempo 30-Zone'])
+      const signs = signsStateByDescriptiveName(data, ['Tempo 30-Zone'])
       const result = signToTags(signs, 'DE')
       expect(result.get('zone:maxspeed')).toBe('DE:30')
     })
@@ -30,7 +33,7 @@ describe('signToTags()', () => {
 
   describe('access tag', () => {
     test('Merged access tags', () => {
-      const signs = signsStateByDescriptiveName(['Fahrradstraße', 'Anlieger frei'])
+      const signs = signsStateByDescriptiveName(data, ['Fahrradstraße', 'Anlieger frei'])
       const result = signToTags(signs, 'DE')
       expect(result.get('vehicle')).toBe('destination')
     })
@@ -38,7 +41,7 @@ describe('signToTags()', () => {
 
   describe('unique tags', () => {
     test('One sign with unique tags', () => {
-      const signs = signsStateByDescriptiveName(['Fahrradstraße'])
+      const signs = signsStateByDescriptiveName(data, ['Fahrradstraße'])
       const result = signToTags(signs, 'DE')
       expect(result.get('bicycle_road')).toBe('yes')
       expect(result.get('bicycle')).toBe('designated')
@@ -108,13 +111,15 @@ describe('signToTags()', () => {
 
   describe('conditional tag', () => {
     test('Single sign with conditional tag', () => {
-      const signs = signsStateByDescriptiveName(['Überholverbot für Kraftfahrzeuge aller Art'])
+      const signs = signsStateByDescriptiveName(data, [
+        'Überholverbot für Kraftfahrzeuge aller Art',
+      ])
       const result = signToTags(signs, 'DE')
       expect(result.get('overtaking')).toBe('no')
     })
 
     test('Sign group with conditional sign with prompt', () => {
-      const signs = signsStateByDescriptiveName([
+      const signs = signsStateByDescriptiveName(data, [
         'Überholverbot für Kraftfahrzeuge aller Art',
         'Zeitliche Beschräkung',
       ])

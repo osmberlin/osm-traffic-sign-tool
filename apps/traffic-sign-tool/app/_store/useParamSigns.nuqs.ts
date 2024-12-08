@@ -8,7 +8,7 @@ import {
   trafficSignTagToSigns,
 } from '@osm-traffic-signs/converter'
 import { createParser, useQueryState } from 'nuqs'
-import { useCountryPrefix } from './utils/useCountryPrefix'
+import { useCountryPrefixOptional } from './utils/useCountryPrefix'
 
 // From String to Data
 const parse = (input: string, countryPrefix: CountryPrefixType | undefined) => {
@@ -24,7 +24,7 @@ const serialize = (trafficSigns: SignStateType[], countryPrefix: CountryPrefixTy
 }
 
 export const useParamSigns = () => {
-  const countryPrefix = useCountryPrefix()
+  const countryPrefix = useCountryPrefixOptional()
   const [paramSigns, setParamSigns] = useQueryState(
     'signs',
     createParser({

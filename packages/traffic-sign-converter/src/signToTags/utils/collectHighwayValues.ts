@@ -1,4 +1,4 @@
-import type { SignStateType } from '../../data/TrafficSignDataTypes.js'
+import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
 import { uniqueArray } from './uniqueArray.js'
 
 export const collectHighwayValues = (signs: SignStateType[] | undefined) => {

@@ -7,20 +7,22 @@ import {
   TableRow,
 } from '@app/app/_components/catalyst/table'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
-import { countryPrefixes, trafficSignData } from '@osm-traffic-signs/converter'
-import Image from 'next/image'
+import { countries, countryDefinitions } from '@osm-traffic-signs/converter'
+import { PackageSvgTrafficSign } from '../_components/PackageSvgTrafficSign'
 
 export async function generateStaticParams() {
-  return countryPrefixes.map((prefx) => ({
+  return countries.map((prefx) => ({
     countryPrefix: prefx,
   }))
 }
 
 export default async function SignsPage({
-  params,
+  params: { countryPrefix },
 }: {
   params: Awaited<ReturnType<typeof generateStaticParams>>[number]
 }) {
+  const trafficSignData = countryDefinitions[countryPrefix]
+
   return (
     <article className="rounded bg-stone-300 px-6 py-4">
       <h2 className="my-4 text-3xl font-light uppercase text-black">
@@ -48,17 +50,7 @@ export default async function SignsPage({
                 <TableHeader className="space-y-3 text-center align-top">
                   <code>{sign.osmValuePart}</code>
                   <br />
-                  {sign.image.svgPath ? (
-                    <Image
-                      height={100}
-                      width={100}
-                      src={sign.image.svgPath}
-                      alt={sign.name}
-                      className="inline-block h-auto w-20"
-                    />
-                  ) : (
-                    <span className="inline-block text-amber-700">Missing</span>
-                  )}
+                  <PackageSvgTrafficSign sign={sign} className="inline-block h-auto w-20" />
                 </TableHeader>
                 <TableCell className="align-top">
                   <pre className="w-full overflow-x-scroll leading-tight">

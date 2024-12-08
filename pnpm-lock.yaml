@@ -136,6 +136,30 @@ importers:
         specifier: ^2.1.4
         version: 2.1.4(@types/node@20.17.5)(jsdom@25.0.1)
 
+  packages/internal_svgs:
+    devDependencies:
+      '@osm-traffic-signs/converter':
+        specifier: workspace:*
+        version: link:../traffic-sign-converter
+      cheerio:
+        specifier: ^1.0.0
+        version: 1.0.0
+      copyfiles:
+        specifier: ^2.4.1
+        version: 2.4.1
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      svgo:
+        specifier: ^3.3.2
+        version: 3.3.2
+      typescript:
+        specifier: ^5.0.0
+        version: 5.6.3
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
+
   packages/internal_taginfo:
     dependencies:
       typescript:
@@ -151,15 +175,15 @@ importers:
 
   packages/internal_wiki:
     devDependencies:
+      '@internal/svgs':
+        specifier: workspace:*
+        version: link:../internal_svgs
       '@osm-traffic-signs/converter':
         specifier: workspace:*
         version: link:../traffic-sign-converter
       cheerio:
         specifier: ^1.0.0
         version: 1.0.0
-      copyfiles:
-        specifier: ^2.4.1
-        version: 2.4.1
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -178,12 +202,12 @@ importers:
       '@total-typescript/ts-reset':
         specifier: ^0.6.1
         version: 0.6.1
+      copyfiles:
+        specifier: ^2.4.1
+        version: 2.4.1
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
-      svgo:
-        specifier: ^3.3.2
-        version: 3.3.2
       typescript:
         specifier: ^5.6.2
         version: 5.6.3

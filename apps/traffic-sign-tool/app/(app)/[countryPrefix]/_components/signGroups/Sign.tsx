@@ -4,6 +4,7 @@ import { BugAntIcon, CheckCircleIcon, PlusCircleIcon } from '@heroicons/react/20
 import { SignStateType, SignType } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import { useState } from 'react'
+import { PackageSvgTrafficSign } from '../PackageSvgTrafficSign'
 
 type Props = {
   sign: SignStateType | SignType
@@ -45,18 +46,18 @@ export const Sign = ({ sign }: Props) => {
           {active ? <CheckCircleIcon className="size-6" /> : <PlusCircleIcon className="size-6" />}
         </span>
 
-        {sign?.image?.svgPath ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={sign.image.svgPath} alt={sign.name} className="h-auto max-h-full w-full" />
-        ) : (
-          <div>
-            <code className="whitespace-nowrap tracking-tighter">
-              {sign.osmValuePart.replaceAll('DE:', '')}
-            </code>
-            <br />
-            <p className="text-[0.6rem] leading-tight">{sign.descriptiveName ?? '–'}</p>
-          </div>
-        )}
+        <PackageSvgTrafficSign
+          key={sign.osmValuePart}
+          sign={sign}
+          className="h-auto max-h-full w-full"
+        />
+        {/* // <div>
+          //   <code className="whitespace-nowrap tracking-tighter">
+          //     {sign.osmValuePart.replaceAll('DE:', '')}
+          //   </code>
+          //   <br />
+          //   <p className="text-[0.6rem] leading-tight">{sign.descriptiveName ?? '–'}</p>
+          // </div> */}
 
         <div className="absolute top-14 z-10 hidden min-w-32 rounded bg-stone-800 px-2 py-1 text-xs/4 text-stone-50 group-hover/item:block">
           <strong>{sign.osmValuePart}</strong>

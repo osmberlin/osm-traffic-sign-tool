@@ -29,8 +29,12 @@ export const Tablelize = ({ data }: { data: Partial<SignStateType> | Partial<Wik
                 <strong>{key}</strong>
               </TableCell>
               <TableCell>
-                {Array.isArray(value) || typeof value === 'object' ? (
-                  JSON.stringify(value, undefined, 2)
+                {typeof value === 'boolean' ? (
+                  JSON.stringify(value)
+                ) : Array.isArray(value) || typeof value === 'object' ? (
+                  <pre className="text-xs leading-snug">
+                    <code>{JSON.stringify(value, undefined, 1)}</code>
+                  </pre>
                 ) : key.toLocaleLowerCase().includes('url') ? (
                   <ExternalLink href={value} blank>
                     {value}

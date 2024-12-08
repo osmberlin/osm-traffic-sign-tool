@@ -1,10 +1,13 @@
-import { trafficSignData } from '../data/trafficSignData.js'
-import type { SignType } from '../data/TrafficSignDataTypes.js'
+import {
+  countryDefinitions,
+  type CountryPrefixType,
+} from '../data-definitions/countryDefinitions.js'
+import type { SignType } from '../data-definitions/TrafficSignDataTypes.js'
 
-export const tagsToSigns = (osmTags: string[]) => {
+export const tagsToSigns = (countryPrefix: CountryPrefixType, osmTags: string[]) => {
   const signCandidates: SignType[] = []
 
-  for (const sign of trafficSignData) {
+  for (const sign of countryDefinitions[countryPrefix]) {
     const identifyingTags: string[] =
       sign.identifyingTags?.map((tag) => `${tag.key}=${tag.value}`) || []
 
