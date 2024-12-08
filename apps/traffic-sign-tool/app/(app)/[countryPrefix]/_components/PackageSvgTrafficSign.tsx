@@ -1,4 +1,5 @@
 'use client'
+import { isDev } from '@app/app/_components/utils/isDev'
 import { useCountryPrefix } from '@app/app/_store/utils/useCountryPrefix'
 import {
   CountryPrefixType,
@@ -32,7 +33,7 @@ export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
   const file = svgs[name]
 
   if (!file) {
-    console.warn('SVG MISSING', countryPrefix, sign)
+    isDev() && console.warn('SVG MISSING', countryPrefix, sign)
     return null
   }
 
