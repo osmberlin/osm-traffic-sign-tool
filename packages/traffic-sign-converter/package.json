@@ -15,7 +15,7 @@
     "build:copy-svgs": "copyfiles -u 2 './src/data-svgs/**/*' './dist/data-svgs'",
     "check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run test",
     "format": "prettier --write .",
-    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm --profile node16",
     "lint": "tsc --noEmit",
     "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test": "vitest run --passWithNoTests",
