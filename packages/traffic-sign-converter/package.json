@@ -21,6 +21,8 @@
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
     "release:patch": "npm version patch && turbo build --force && pnpm run check && npm publish",
+    "updatePackages:major": "pnpx taze major --includeLocked --write --exclude // && pnpm run updatePackages:minor && pnpm install",
+    "updatePackages:minor": "pnpx taze minor --includeLocked --write && pnpm install",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
