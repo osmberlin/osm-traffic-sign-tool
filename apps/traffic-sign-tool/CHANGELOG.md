@@ -10,7 +10,7 @@ All notable changes to this project will be manually documented in this file.
 
 ## 2.1.3
 
-- Fix bug in package to handle two types of modifier signs ([more…](../../packages/traffic-sign-converter/CHANGELOG.md))
+- Fix bug in package to handle two types of modifier signs ([more…](../../packages/traffic-sign-converter/CHANGELOG.md#013))
 - Add `/check-sign-combinations` to allow checking primary and secondary sign combinations
 
 ## 2.1.2
@@ -26,7 +26,9 @@ All notable changes to this project will be manually documented in this file.
 - Custom sign value: Fix form not working for more than one character
 - Modifier signs now add `access=*` when traffic sign does not provide access tags to modify.
 
-## [2.1.0] - 2024-10-30
+## 2.1.0
+
+_2024-10-30_
 
 - Full rewrite of the internal logic
 - Logic was moved into the [`@osm-traffic-signs/converter`](https://www.npmjs.com/package/@osm-traffic-signs/converter) package
@@ -40,7 +42,9 @@ All notable changes to this project will be manually documented in this file.
 - Disclaimer: This migration to split the app and package is still WIP
 - Fix layout for mobile – however, the UI is not optimized for Mobile in any ways, it is just not broken
 
-## [2.0.13] - 2024-09-14
+## 2.0.13
+
+_2024-09-14_
 
 - Migrate to NextJS
 - Update all dependencies
@@ -49,11 +53,14 @@ All notable changes to this project will be manually documented in this file.
 - Change project font, [see Notes](./app/_components/layout/fonts/README.md)
 - Change the version number system to start with `2.0` in the spirit that https://osmtools.de/traffic_signs/ was the `1.0`.
 
-## [2.0.12] - 2024-04-01
+## 2.0.12
+
+_2024-04-01_
 
 Initial verions written in Svelte.
 
-## [2.0.0] - 2023-05-01
+## 2.0.0
 
-Start of the proof of concept.
-We call it version `2.0.0` in the spirit that https://osmtools.de/traffic_signs/ was the `1.0`.
+_2023-05-01_
+
+Start of the proof of concept. We call it version `2.0.0` in the spirit that https://osmtools.de/traffic_signs/ was the `1.0`.
