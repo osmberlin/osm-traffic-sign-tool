@@ -8,6 +8,12 @@ All notable changes to this project will be manually documented in this file.
 > The logic behind this page is part of the `@osm-traffic-signs/converter` package
 > [which has it's own changelog](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/packages/traffic-sign-converter/CHANGELOG.md).
 
+## 2.1.4
+
+_2024-12-29_
+
+- Rework how SVG images are handeled. ([Learn more…](../../packages/traffic-sign-converter/CHANGELOG.md#014))
+
 ## 2.1.3
 
 - Fix bug in package to handle two types of modifier signs ([more…](../../packages/traffic-sign-converter/CHANGELOG.md#013))
