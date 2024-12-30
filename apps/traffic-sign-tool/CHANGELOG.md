@@ -2,7 +2,7 @@
 
 ## About
 
-All notable changes to this project will be [manually](packages/traffic-sign-converter/.changeset/README.md) documented in this file.
+All notable changes to this project will be manually documented in this file.
 
 > [INFO]
 > The logic behind this page is part of the `@osm-traffic-signs/converter` package

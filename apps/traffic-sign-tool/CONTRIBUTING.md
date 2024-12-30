@@ -6,7 +6,10 @@ This section is TODO. Please let me know what you where looking for.
 
 ## Release
 
-- `npm run local-release` uses the `changeset` package to release local version
-- Use `npx changeset` to create a new changeset manually
+1. Increase the version…
+   - Update the [CHANGELOG](./CHANGELOG.md)
+   - Update the [package version](./package.json)
+2. Maybe release [the related package](../../packages/traffic-sign-converter/CONTRIBUTING.md)
+3. Push to `main`
 
-This package is not on npm (specified by the `package.json` > `private: true`).
+Github acttions will release a new version of the app at [trafficsigns.osm-verkehrswende.org](https://trafficsigns.osm-verkehrswende.org).

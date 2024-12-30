@@ -9,7 +9,6 @@
     "lint": "turbo run lint",
     "bleach": "turbo run bleach && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "changeset": "cd ./apps/traffic-sign-tool && changeset",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky"
   },
