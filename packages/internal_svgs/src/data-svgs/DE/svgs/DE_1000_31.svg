@@ -20,25 +20,19 @@
       <path d="M0 0h480v265H0z"/>
     </clipPath>
     <clipPath id="g" clipPathUnits="userSpaceOnUse">
-      <path d="M0 1h480v264H0z"/>
+      <path d="M0 264.996h480v-264H0z"/>
     </clipPath>
     <clipPath id="h" clipPathUnits="userSpaceOnUse">
-      <path d="M0 265h479.996V1H0z"/>
+      <path d="M106 43h108v170H106z"/>
     </clipPath>
     <clipPath id="i" clipPathUnits="userSpaceOnUse">
-      <path d="M69 125h321v97H69z"/>
-    </clipPath>
-    <clipPath id="j" clipPathUnits="userSpaceOnUse">
       <path d="M0 0h480v265H0z"/>
     </clipPath>
+    <clipPath id="j" clipPathUnits="userSpaceOnUse">
+      <path d="M0 264.996h480v-264H0z"/>
+    </clipPath>
     <clipPath id="k" clipPathUnits="userSpaceOnUse">
-      <path d="M0 1h480v264H0z"/>
-    </clipPath>
-    <clipPath id="l" clipPathUnits="userSpaceOnUse">
-      <path d="M0 265h479.996V1H0z"/>
-    </clipPath>
-    <clipPath id="m" clipPathUnits="userSpaceOnUse">
-      <path d="M90 44h321v97H90z"/>
+      <path d="M266 53h108v170H266z"/>
     </clipPath>
   </defs>
   <g clip-path="url(#a)" transform="matrix(1.25 0 0 -1.25 0 331.25)">
@@ -61,18 +55,14 @@
   <g clip-path="url(#f)" transform="matrix(1.25 0 0 -1.25 0 331.25)">
     <g clip-path="url(#g)">
       <g clip-path="url(#h)">
-        <g clip-path="url(#i)">
-          <path d="m69.992 173.672 48 48H148l-36-36h278v-24H112l36-36.012h-30.008" style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
-        </g>
+        <path d="M160.004 43 106 96.996V127l42.004-42.004V213h24V84.996L214 127V96.996" style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
       </g>
     </g>
   </g>
-  <g clip-path="url(#j)" transform="matrix(1.25 0 0 -1.25 0 331.25)">
-    <g clip-path="url(#k)">
-      <g clip-path="url(#l)">
-        <g clip-path="url(#m)">
-          <path d="m410.008 92.328-48.012-48H332l36 36H90v24h278l-36 36h29.996" style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
-        </g>
+  <g clip-path="url(#i)" transform="matrix(1.25 0 0 -1.25 0 331.25)">
+    <g clip-path="url(#j)">
+      <g clip-path="url(#k)">
+        <path d="M319.996 223 374 168.996V139l-41.992 41.996V53h-24v127.996L266 139v29.996" style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
       </g>
     </g>
   </g>

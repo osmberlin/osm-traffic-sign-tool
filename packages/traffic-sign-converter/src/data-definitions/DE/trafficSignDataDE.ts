@@ -1757,7 +1757,7 @@ export const trafficSignDataDE: SignType[] = [
     },
     image: {
       sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
+        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-31_-_beide_Richtungen,_zwei_gegengerichtete_senkrechte_Pfeile,_StVO_1992.svg',
       licence: 'Public Domain',
     },
   },
