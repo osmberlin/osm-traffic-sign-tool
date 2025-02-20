@@ -1797,7 +1797,7 @@ export const trafficSignDataDE: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      uniqueTags: [{ key: 'oneway:cycleway', value: 'no' }],
+      uniqueTags: [{ key: 'oneway:bicycle', value: 'no' }],
     },
     comments: [
       {
