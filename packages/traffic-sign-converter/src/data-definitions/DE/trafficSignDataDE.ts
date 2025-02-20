@@ -266,6 +266,37 @@ export const trafficSignDataDE: SignType[] = [
     },
   },
   {
+    osmValuePart: '244.3',
+    signId: '244.3',
+    name: 'Zeichen 244.3',
+    descriptiveName: 'Fahrradzone',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: ['residential'],
+      accessTags: [{ key: 'vehicle', value: 'no' }],
+      uniqueTags: [
+        { key: 'bicycle', value: 'designated' },
+        { key: 'bicycle_road', value: 'yes' },
+        { key: 'maxspeed', value: '30' },
+        { key: 'source:maxspeed', value: 'DE:bicycle_zone' },
+      ],
+    },
+    comments: [
+      {
+        tagReference: 'highway=*',
+        comment:
+          'Die Straßenklasse ist nach ihrer Verkehrsbedeutung auszuwählen. Siehe auch [Wiki Fahrradstraßen](https://wiki.openstreetmap.org/wiki/DE:Tag:bicycle_road%3Dyes)',
+      },
+    ],
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_244.3_-_Beginn_einer_Fahrradzone,_StVO_2020.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '245',
     signId: '245',
     name: 'Zeichen 245',
