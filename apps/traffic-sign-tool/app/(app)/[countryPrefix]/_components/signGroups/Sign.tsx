@@ -76,7 +76,7 @@ export const Sign = ({ sign }: Props) => {
           </p>
           <p>{sign.descriptiveName}</p>
         </div>
-        <pre className="mt-5">
+        <pre className="mt-5 text-xs leading-snug tracking-tight">
           <code>{JSON.stringify(sign, undefined, 2)}</code>
         </pre>
       </dialog>
