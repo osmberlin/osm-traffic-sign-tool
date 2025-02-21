@@ -25,7 +25,7 @@ describe('collectConditionalTags()', () => {
     expect(collectConditionalTags(signs)).toMatchObject([
       {
         key: 'overtaking:conditional',
-        value: 'no @ 16-18',
+        value: 'no @ (16-18)',
       },
     ])
   })
@@ -38,7 +38,7 @@ describe('collectConditionalTags()', () => {
     expect(collectConditionalTags(signs)).toMatchObject([
       {
         key: 'overtaking:conditional',
-        value: 'no @ Mo-Sa;PH off',
+        value: 'no @ (Mo-Sa;PH off)',
       },
     ])
   })
@@ -87,7 +87,7 @@ describe('collectConditionalTags()', () => {
     expect(collectConditionalTags(signs)).toMatchObject([
       {
         key: 'maxspeed:conditional',
-        value: '30 @ 16-18',
+        value: '30 @ (16-18)',
       },
     ])
     expect(collectUniqueTags(signs)).toMatchObject([

@@ -42,7 +42,7 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
         if (sign.kind === 'condition_modifier') {
           for (const [mergedKey, mergedTag] of mergedConditionalTags) {
             const key = `${mergedTag.key}:conditional`
-            const value = `${mergedTag.value} @ ${sign.signValue || sign.tagRecommendations.modifierValue}`
+            const value = `${mergedTag.value} @ (${sign.signValue || sign.tagRecommendations.modifierValue})`
             // We overwrite the existing key
             mergedConditionalTags.set(mergedKey, { key, value })
           }

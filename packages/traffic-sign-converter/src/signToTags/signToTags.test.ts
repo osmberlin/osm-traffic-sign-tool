@@ -125,7 +125,7 @@ describe('signToTags()', () => {
       ])
       const result = signToTags(signs, 'DE')
       expect(result.get('overtaking')).toBeUndefined()
-      expect(result.get('overtaking:conditional')).toBe('no @ 16-18')
+      expect(result.get('overtaking:conditional')).toBe('no @ (16-18)')
     })
   })
 })
