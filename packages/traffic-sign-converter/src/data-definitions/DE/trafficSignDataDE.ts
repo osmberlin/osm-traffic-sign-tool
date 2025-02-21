@@ -2841,6 +2841,26 @@ export const trafficSignDataDE: SignType[] = [
     },
   },
   {
+    osmValuePart: '101',
+    signId: '101',
+    name: 'Zeichen 101',
+    descriptiveName: 'Gefahrstelle',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'yes' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_101_-_Gefahrstelle,_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '301',
     signId: '301',
     name: 'Zeichen 301',
@@ -2900,7 +2920,6 @@ export const trafficSignDataDE: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'hazard_sign',
     },
     image: {
@@ -2922,7 +2941,6 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'hazard_sign',
     },
     image: {
@@ -3076,7 +3094,6 @@ export const trafficSignDataDE: SignType[] = [
     ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'highlight',
       signCategory: 'hazard_sign',
     },
     image: {
@@ -3099,7 +3116,6 @@ export const trafficSignDataDE: SignType[] = [
     ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'highlight',
       signCategory: 'hazard_sign',
     },
     image: {
