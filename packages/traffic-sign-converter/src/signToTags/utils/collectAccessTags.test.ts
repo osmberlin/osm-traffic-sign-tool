@@ -159,7 +159,7 @@ describe('collectAccessTags()', () => {
         },
         {
           recodgnizedSign: true,
-          kind: 'modifier_sign',
+          kind: 'exception_modifier',
           tagRecommendations: { modifierValue: 'added' },
         },
       ] as SignStateType[]
@@ -175,7 +175,7 @@ describe('collectAccessTags()', () => {
         },
         {
           recodgnizedSign: true,
-          kind: 'modifier_sign',
+          kind: 'exception_modifier',
           tagRecommendations: { modifierValue: 'replaced' },
         },
       ] as SignStateType[]
@@ -191,12 +191,12 @@ describe('collectAccessTags()', () => {
         },
         {
           recodgnizedSign: true,
-          kind: 'modifier_sign',
+          kind: 'exception_modifier',
           tagRecommendations: { modifierValue: 'aaa' },
         },
         {
           recodgnizedSign: true,
-          kind: 'modifier_sign',
+          kind: 'exception_modifier',
           tagRecommendations: { modifierValue: 'bbb' },
         },
       ] as SignStateType[]

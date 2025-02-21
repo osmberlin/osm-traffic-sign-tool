@@ -5,7 +5,7 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
 
   // Handle `traffic_sign`
   // A conditional tag on a stand alone `traffic_sign` is treated like a regular tag.
-  // Only once there is a `modifier_sign`, the conditional syntax is applied.
+  // Only once there is a modifier sign (`exception_modifier` or `condition_modifier`), the conditional syntax is applied.
   signs
     .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind === 'traffic_sign')

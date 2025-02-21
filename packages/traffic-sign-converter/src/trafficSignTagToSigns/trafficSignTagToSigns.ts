@@ -89,8 +89,8 @@ export const trafficSignTagToSigns = (
       signValue: osmValuePart,
       signId: null,
       descriptiveName: osmValuePart,
-      // When the initial string (`cleaned`) includes our unkown values when split by the `traffic_sign` separator (`;`) then it is this, all else is a `modifier_sign`; which would include `traffic_sign=foobar` as modifier.
-      kind: cleaned.split(';').includes(osmValuePart) ? 'traffic_sign' : 'condition_modifier',
+      // When the initial string (`cleaned`) includes our unkown values when split by the `traffic_sign` separator (`;`) then it is this, all else is a modifier sign (we pick a `exception_modifier`); which would include `traffic_sign=foobar` as modifier.
+      kind: cleaned.split(';').includes(osmValuePart) ? 'traffic_sign' : 'exception_modifier',
     }
     return unkownSign
   })
