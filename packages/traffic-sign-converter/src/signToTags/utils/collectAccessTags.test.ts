@@ -60,9 +60,7 @@ describe('collectAccessTags()', () => {
         'Kraftomnibus frei',
       ])
       expect(collectAccessTags(signs)).toMatchObject([
-        { key: 'motorcar', value: 'no' },
-        { key: 'bus', value: 'yes' },
-        { key: 'tourist_bus', value: 'yes' },
+        { key: 'motorcar', value: 'bus;tourist_bus' },
       ])
     })
 

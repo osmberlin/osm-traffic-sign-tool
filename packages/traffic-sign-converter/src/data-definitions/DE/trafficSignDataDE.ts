@@ -1164,10 +1164,7 @@ export const trafficSignDataDE: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      accessTags: [
-        { key: 'motorcar', value: 'yes' },
-        { key: 'motorcycle', value: 'yes' },
-      ],
+      modifierValue: 'motorcar;motorcycle',
     },
     comments: [
       {
@@ -1216,7 +1213,7 @@ export const trafficSignDataDE: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      uniqueTags: [{ key: 'motorcar', value: 'yes' }],
+      modifierValue: 'motorcar',
     },
     comments: [
       {
@@ -1244,7 +1241,7 @@ export const trafficSignDataDE: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      accessTags: [{ key: 'hgv', value: 'yes' }],
+      modifierValue: 'hgv',
     },
     comments: [],
     catalogue: {
@@ -1265,10 +1262,7 @@ export const trafficSignDataDE: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      accessTags: [
-        { key: 'bus', value: 'yes' },
-        { key: 'tourist_bus', value: 'yes' },
-      ],
+      modifierValue: 'bus;tourist_bus',
     },
     comments: [],
     catalogue: {
@@ -1290,7 +1284,7 @@ export const trafficSignDataDE: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['track'],
-      uniqueTags: [{ key: 'agricultural', value: 'yes' }],
+      modifierValue: 'agricultural',
     },
     comments: [
       {
@@ -1338,7 +1332,7 @@ export const trafficSignDataDE: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      uniqueTags: [{ key: 'bus', value: 'yes' }],
+      modifierValue: 'bus',
     },
     comments: [],
     catalogue: {
@@ -1360,7 +1354,6 @@ export const trafficSignDataDE: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
       modifierValue: 'delivery',
-      uniqueTags: [],
     },
     comments: [],
     catalogue: {
@@ -1452,7 +1445,7 @@ export const trafficSignDataDE: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      uniqueTags: [{ key: 'emergency', value: 'yes' }],
+      modifierValue: 'emergency',
     },
     comments: [],
     catalogue: {
