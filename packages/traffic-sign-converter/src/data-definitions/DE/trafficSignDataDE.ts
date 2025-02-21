@@ -1135,6 +1135,33 @@ export const trafficSignDataDE: SignType[] = [
     },
   },
   {
+    osmValuePart: '1024-10,1022-12',
+    signId: '1024-10,1022-12',
+    name: 'Zusatzzeichen 1024-10+1022-12',
+    descriptiveName: 'Kfz-Verkehr frei',
+    description: 'Eine inoffizielle Kombination; Nicht Teil es Verkehrszeichenkataloges.',
+    kind: 'exception_modifier',
+    tagRecommendations: {
+      highwayValues: [],
+      accessTags: [
+        { key: 'motorcar', value: 'yes' },
+        { key: 'motorcycle', value: 'yes' },
+      ],
+    },
+    comments: [
+      {
+        comment: 'Dieses Schild ist nicht Teil des offiziellen Verkehrszeichenkataloges.',
+      },
+    ],
+    catalogue: {
+      signCategory: 'exception_modifier',
+    },
+    image: {
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_KFZ_frei.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '1022-12',
     signId: '1022-12',
     name: 'Zusatzzeichen 1022-12',
