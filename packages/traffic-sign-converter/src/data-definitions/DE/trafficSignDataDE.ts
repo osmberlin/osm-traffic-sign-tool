@@ -2681,18 +2681,22 @@ export const trafficSignDataDE: SignType[] = [
     signId: 'Kein Winterdienst',
     name: 'Zeichen "Kein Winterdienst"',
     descriptiveName: 'Kein Winterdienst',
-    description: null,
+    description: 'Ein inoffizielles Verkehrszeichen.',
     kind: 'traffic_sign',
     tagRecommendations: { uniqueTags: [{ key: 'winter_service', value: 'no' }] },
-    comments: [],
+    comments: [
+      {
+        comment: 'Dieses Schild ist nicht Teil des offiziellen Verkehrszeichenkataloges.',
+      },
+    ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'highlight',
       signCategory: 'hazard_sign',
     },
     image: {
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_-_Kein_Winterdienst.svg',
-      licence: 'CC-0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Kein_Winterdienst.svg',
+      licence: 'Public Domain',
     },
   },
   {
@@ -2700,10 +2704,14 @@ export const trafficSignDataDE: SignType[] = [
     signId: 'Eingeschränkter Winterdienst',
     name: 'Zeichen "Eingeschränkter Winterdienst"',
     descriptiveName: 'Eingeschränkter Winterdienst',
-    description: null,
+    description: 'Ein inoffizielles Verkehrszeichen.',
     kind: 'traffic_sign',
     tagRecommendations: { uniqueTags: [{ key: 'winter_service', value: 'limited' }] },
-    comments: [],
+    comments: [
+      {
+        comment: 'Dieses Schild ist nicht Teil des offiziellen Verkehrszeichenkataloges.',
+      },
+    ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       visibility: 'highlight',
@@ -2711,8 +2719,8 @@ export const trafficSignDataDE: SignType[] = [
     },
     image: {
       sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_-_Eingeschr%C3%A4nkter_Winterdienst.svg',
-      licence: 'CC-0',
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Eingeschr%C3%A4nkter_Winterdienst.svg',
+      licence: 'Public Domain',
     },
   },
 ]
