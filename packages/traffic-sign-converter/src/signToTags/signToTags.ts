@@ -5,6 +5,7 @@ import { collectAccessTags } from './utils/collectAccessTags.js'
 import { collectConditionalTags } from './utils/collectConditionalTags.js'
 import { collectHighwayValues } from './utils/collectHighwayValues.js'
 import { collectUniqueTags } from './utils/collectUniqueTags.js'
+import { sortTags } from './utils/sortTags.js'
 import { splitIntoSignGroups } from './utils/splitIntoSignGroups.js'
 import { uniqueArray } from './utils/uniqueArray.js'
 
@@ -56,5 +57,6 @@ export const signToTags = (
     tagMap.delete('highway')
   }
 
-  return tagMap
+  // Sort and return
+  return sortTags(tagMap)
 }
