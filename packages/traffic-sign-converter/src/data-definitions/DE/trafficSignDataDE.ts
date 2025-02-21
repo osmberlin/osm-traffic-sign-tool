@@ -2676,4 +2676,44 @@ export const trafficSignDataDE: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: 'Kein Winterdienst',
+    signId: 'Kein Winterdienst',
+    name: 'Zeichen "Kein Winterdienst"',
+    descriptiveName: 'Kein Winterdienst',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: { uniqueTags: [{ key: 'winter_service', value: 'no' }] },
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      visibility: 'highlight',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-50_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(B),_StVO_2007.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'Eingeschränkter Winterdienst',
+    signId: 'Eingeschränkter Winterdienst',
+    name: 'Zeichen "Eingeschränkter Winterdienst"',
+    descriptiveName: 'Eingeschränkter Winterdienst',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: { uniqueTags: [{ key: 'winter_service', value: 'limited' }] },
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      visibility: 'highlight',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-50_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(B),_StVO_2007.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]

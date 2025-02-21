@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 421.014 232.018" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Kein Winterdienst - Kein Winterdienst</title>
+  <defs>
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h316v175H0Z"/>
+    </clipPath>
+    <clipPath id="b" clipPathUnits="userSpaceOnUse">
+      <path d="M5 6h306v164H5Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 233.333)">
+    <path d="M21.375 1.367C9.781 1.367.379 10.77.379 22.363v131.258c0 11.594 9.402 21.004 20.996 21.004h273.008c11.597 0 20.996-9.41 20.996-21.004V22.363c0-11.593-9.399-20.996-20.996-20.996z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M21.375 175C9.578 175 0 165.422 0 153.625V22.363C0 10.562 9.578.988 21.375.988h273.008c11.801 0 21.379 9.574 21.379 21.375v131.262c0 11.797-9.578 21.375-21.379 21.375zm0-.375h273.008c11.597 0 20.996-9.41 20.996-21.008V22.363c0-11.593-9.399-20.996-20.996-20.996H21.375C9.781 1.367.379 10.77.379 22.363v131.254c0 11.598 9.402 21.008 20.996 21.008" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  </g>
+  <g clip-path="url(#b)" transform="matrix(1.33333 0 0 -1.33333 0 233.333)">
+    <path d="M21.375 6.617c-8.699 0-15.746 7.055-15.746 15.746v131.258c0 8.699 7.047 15.754 15.746 15.754h273.008c8.695 0 15.75-7.055 15.75-15.754V22.363c0-8.691-7.055-15.746-15.75-15.746z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M21.375 14.492c-4.344 0-7.871 3.528-7.871 7.875v131.254c0 4.348 3.527 7.875 7.871 7.875h273.008a7.877 7.877 0 0 0 7.875-7.875V22.367a7.88 7.88 0 0 0-7.875-7.875z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M139.828 95.379h22.152c7.25 0 13.122 5.871 13.122 13.121s-5.872 13.121-13.122 13.121h-22.152zm0-40.199h22.973c7.695 0 13.949 6.246 13.949 13.941 0 7.707-6.254 13.953-13.949 13.953h-22.973Zm-13.941-13.133v91.887h37.73c13.598 0 24.61-11.02 24.61-24.614a24.61 24.61 0 0 0-10.489-20.16 25.43 25.43 0 0 0 12.133-21.676c0-14.043-11.379-25.437-25.433-25.437z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  </g>
+</svg>
