@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 600 330" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 1010-61 - Kraftfahrzeuge bis 25 km/h</title>
+  <defs>
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h480v264H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)" transform="matrix(1.25 0 0 -1.25 0 330)">
+    <path d="M31.996 263.758c-17.512 0-31.754-14.25-31.754-31.766V31.996C.242 14.484 14.484.242 31.996.242h416.008c17.512 0 31.754 14.242 31.754 31.754v199.996c0 17.516-14.242 31.766-31.754 31.766" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <path d="M31.996.469C14.613.469.48 14.613.48 31.996v199.996c0 17.383 14.133 31.528 31.516 31.528h416.008c17.383 0 31.516-14.145 31.516-31.528V31.996c0-17.383-14.133-31.527-31.516-31.527zM448.004 264H31.996C14.32 264 0 249.672 0 231.992V31.996C0 14.328 14.32 0 31.996 0h416.008C465.672 0 480 14.328 480 31.996v199.996c0 17.68-14.328 32.008-31.996 32.008" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  </g>
+  <path d="M39.995 305.005h520.01c8.286 0 15-6.714 15-15V40.01c0-8.286-6.714-15-15-15H39.995c-8.286 0-15 6.714-15 15v249.995c0 8.286 6.714 15 15 15m0 15c-16.572 0-30-13.427-30-30V40.01c0-16.573 13.427-30 30-30h520.01c16.573 0 30 13.427 30 30v249.995c0 16.573-13.427 30-30 30" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  <path d="M295.232 14.906c-15.277 2.608-22.934 10.06-29 18.53l-17.78 107.688H37.388c-22.634 3.418-18.157 13.703-18.157 21.97L36.39 268.155h15.125c11.923-39.654 92.739-38.218 105.312 0h90.688c-4.378-69.286 95.27-166.912 195.968-71.75v-56.907h.25V14.906zm-6 27.593h110.375l.313 97.375-129.844 1.063 15.938-92.938c.555-1.896.836-3.806 3.218-5.5" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" transform="translate(156.148 49.858)scale(.59979)"/>
+  <path d="M665.828 917.76c0 42.621-34.551 77.172-77.172 77.172s-77.171-34.55-77.171-77.171c0-42.62 34.55-77.172 77.171-77.172s77.172 34.551 77.172 77.172" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="translate(18.18 -340.545)scale(.59979)"/>
+  <path d="M665.828 917.76c0 42.621-34.551 77.172-77.172 77.172s-77.171-34.55-77.171-77.171c0-42.62 34.55-77.172 77.171-77.172s77.172 34.551 77.172 77.172" style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="matrix(.35484 0 0 .35484 9.788 -90.71)"/>
+</svg>

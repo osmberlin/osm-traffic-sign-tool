@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 600 330" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 1010-63 - Mofas</title>
+  <defs>
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h480v264H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)" transform="matrix(1.25 0 0 -1.25 0 330)">
+    <path d="M31.996 263.758c-17.512 0-31.754-14.25-31.754-31.766V31.996C.242 14.484 14.484.242 31.996.242h416.008c17.512 0 31.754 14.242 31.754 31.754v199.996c0 17.516-14.242 31.766-31.754 31.766" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <path d="M31.996.469C14.613.469.48 14.613.48 31.996v199.996c0 17.383 14.133 31.528 31.516 31.528h416.008c17.383 0 31.516-14.145 31.516-31.528V31.996c0-17.383-14.133-31.527-31.516-31.527zM448.004 264H31.996C14.32 264 0 249.672 0 231.992V31.996C0 14.328 14.32 0 31.996 0h416.008C465.672 0 480 14.328 480 31.996v199.996c0 17.68-14.328 32.008-31.996 32.008" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  </g>
+  <path d="M31.996 19.996h416.008c6.629 0 12 5.371 12 12v199.996c0 6.629-5.371 12-12 12H31.996c-6.629 0-12-5.371-12-12V31.996c0-6.629 5.371-12 12-12m0-12c-13.258 0-24 10.742-24 24v199.996c0 13.258 10.742 24 24 24h416.008c13.258 0 24-10.742 24-24V31.996c0-13.258-10.742-24-24-24" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.25 0 0 -1.25 0 330)"/>
+  <path d="M190.402 160.176c0 24.152-19.582 43.73-43.734 43.73-24.156 0-43.734-19.578-43.734-43.73 0-24.156 19.578-43.735 43.734-43.735 24.152 0 43.734 19.579 43.734 43.735" style="fill:none;stroke:#000;stroke-width:12.67880154;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="scale(1.25)"/>
+  <path d="M373.121 173.973h-91.816c-3.461-1.344-5.938-3.543-3.973-9.594l23.707-15.348c10.125 7.594 20.625 8.852 31.106 10.414l41.25.137zM344.695 92.492l-95.57.113c-19.961.606-31.363 17.145-43.762 35.043-21.679 31.317-24.804 31.653-29.254 46.196l31.825-.031c2.121-.649 4.242-.965 6.363-3.59l19.156-27.27c1.598-6.754.274-12.211-1.402-17.996-1.934-6.684 5.75-18.586 17.738-18.102l95.133 5.563z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(1.25 0 0 -1.25 0 330)"/>
+  <path d="M140.352 107.176c.777 2.328 36.933 90.449 36.933 90.449 4.395 7.879 10.559 12.219 18.606 12.789h24.808l-.136-14.566h-23.918c-2.926.273-5.122-1.567-6.954-6.75l-36.046-87.985c-3.504-8.187-16.825-5.308-13.293 6.063" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(1.25 0 0 -1.25 0 330)"/>
+  <path d="M377.066 160.34c0 24.156-19.578 43.734-43.734 43.734-24.152 0-43.734-19.578-43.734-43.734 0-24.152 19.582-43.731 43.734-43.731 24.156 0 43.734 19.579 43.734 43.731" style="fill:none;stroke:#000;stroke-width:12.67880154;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="scale(1.25)"/>
+</svg>
