@@ -34,3 +34,26 @@ Glossar:
 - `274`, `244.1`, `1022-10` – **Sign ID** – The official sign number/identifier.
 - `274[60]`, `1040-30[16-18]`, `244.1`, `1022-10` – **OSM Sign Value Part** – The Sign ID together with encoded values.
 - `60` (km/h), `16-18` (h) – **OSM Sign Value** – The encoded value of the sign
+
+## Workflows
+
+### Adding a sign with new image
+
+1. Update the traffic sign data
+
+   1. `cd packages/traffic-sign-converter`
+   2. `pnpm run build`
+
+1. Download new signs
+
+   1. `cd packages/internal_svgs`
+   2. `pnpm run updateSvgs`
+
+1. Build the traffic sign data with the new sign
+
+   1. `cd packages/traffic-sign-converter`
+   2. `pnpm run build`
+
+1. Run the app
+   1. `cd apps/traffic-sign-tool`
+   2. `pnpm run dev` or `pnpm run build`
