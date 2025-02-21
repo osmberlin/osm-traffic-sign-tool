@@ -2691,9 +2691,8 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
-      sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-50_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(B),_StVO_2007.svg',
-      licence: 'Public Domain',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_-_Kein_Winterdienst.svg',
+      licence: 'CC-0',
     },
   },
   {
@@ -2712,8 +2711,8 @@ export const trafficSignDataDE: SignType[] = [
     },
     image: {
       sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1014-50_-_Tunnelkategorie_gem%C3%A4%C3%9F_ADR-%C3%9Cbereinkommen_(B),_StVO_2007.svg',
-      licence: 'Public Domain',
+        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_-_Eingeschr%C3%A4nkter_Winterdienst.svg',
+      licence: 'CC-0',
     },
   },
 ]

@@ -131,6 +131,6 @@ type SharedIdentifiyingTags = { identifyingTags?: { key: string; value: string }
 type SharedImage = {
   image: {
     sourceUrl: string
-    licence: 'Public Domain'
+    licence: 'Public Domain' | 'CC-0'
   }
 }
