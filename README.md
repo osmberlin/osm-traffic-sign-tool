@@ -39,21 +39,6 @@ Glossar:
 
 ### Adding a sign with new image
 
-1. Update the traffic sign data
+Run `bun script-new-sign.ts` from the root folder to update the svgs, data and run the app.
 
-   1. `cd packages/traffic-sign-converter`
-   2. `pnpm run build`
-
-1. Download new signs
-
-   1. `cd packages/internal_svgs`
-   2. `pnpm run updateSvgs`
-
-1. Build the traffic sign data with the new sign
-
-   1. `cd packages/traffic-sign-converter`
-   2. `pnpm run build`
-
-1. Run the app
-   1. `cd apps/traffic-sign-tool`
-   2. `pnpm run dev` or `pnpm run build`
+Alternatively, the [script lists the separate commands](./script-new-sign.ts)

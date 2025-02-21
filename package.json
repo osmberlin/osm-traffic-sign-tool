@@ -13,6 +13,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@colors/colors": "^1.6.0",
     "@types/bun": "latest",
     "eslint": "^8.57.0",
     "husky": "^9.1.6",

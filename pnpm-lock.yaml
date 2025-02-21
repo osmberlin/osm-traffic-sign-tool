@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@colors/colors':
+        specifier: ^1.6.0
+        version: 1.6.0
       '@types/bun':
         specifier: latest
         version: 1.1.12
@@ -432,6 +435,11 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@colors/colors@1.6.0:
+    resolution: {integrity: sha512-Ir+AOibqzrIsL6ajt3Rz3LskB7OiMVHqltZmspbW/TJuTVuyOMirVqAkjfY6JISiLHgyNqicAC8AyHHGzNd/dA==}
+    engines: {node: '>=0.1.90'}
+    dev: true
 
   /@esbuild/aix-ppc64@0.21.5:
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
