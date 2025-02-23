@@ -32,7 +32,9 @@
     "copyfiles": "^2.4.1",
     "rimraf": "^6.0.1",
     "typescript": "^5.7.2",
-    "vitest": "^3.0.6",
+    "vitest": "^3.0.6"
+  },
+  "dependencies": {
     "zod": "^3.24.1"
   },
   "type": "module",
