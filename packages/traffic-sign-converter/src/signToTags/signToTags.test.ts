@@ -25,9 +25,9 @@ describe('signToTags()', () => {
     })
 
     test('Handle valueTemplate', () => {
-      const signs = signsStateByDescriptiveName(data, ['Tempo 30-Zone'])
+      const signs = signsStateByDescriptiveName(data, ['Tempo ??-Zone'])
       const result = signToTags(signs, 'DE')
-      expect(result.get('zone:maxspeed')).toBe('DE:30')
+      expect(result.get('zone:maxspeed')).toBe('DE:47')
     })
   })
 

@@ -40,25 +40,22 @@ describe('trafficSignTagToSigns()', () => {
       expect(joinSignValueParts(result)).toMatch('')
     })
     test('speed value 60km/h', () => {
-      const input = 'traffic_sign=DE:274-60'
+      const input = 'traffic_sign=DE:274[60]'
       const result = trafficSignTagToSigns(input, countryPrefix)
-      expect(joinOsmValueParts(result)).toMatch('274[60]')
-      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274-60')
-      expect(joinSignValueParts(result)).toMatch('60')
+      expect(joinOsmValueParts(result)).toMatch('274-60')
+      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274[60]')
     })
     test('speed value 100km/h', () => {
-      const input = 'traffic_sign=DE:274-100'
+      const input = 'traffic_sign=DE:274[100]'
       const result = trafficSignTagToSigns(input, countryPrefix)
-      expect(joinOsmValueParts(result)).toMatch('274[100]')
-      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274-100')
-      expect(joinSignValueParts(result)).toMatch('100')
+      expect(joinOsmValueParts(result)).toMatch('274-100')
+      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274[100]')
     })
     test('speed value 50km/h', () => {
-      const input = 'traffic_sign=DE:274-50'
+      const input = 'traffic_sign=DE:274[50]'
       const result = trafficSignTagToSigns(input, countryPrefix)
-      expect(joinOsmValueParts(result)).toMatch('274[50]')
-      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274-50')
-      expect(joinSignValueParts(result)).toMatch('50')
+      expect(joinOsmValueParts(result)).toMatch('274-50')
+      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274[50]')
     })
   })
 

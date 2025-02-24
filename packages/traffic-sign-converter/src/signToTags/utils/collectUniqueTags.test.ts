@@ -8,21 +8,21 @@ import { collectUniqueTags } from './collectUniqueTags.js'
 describe('collectUniqueTags()', () => {
   const data = countryDefinitions.DE
 
-  test('uniqute tag with value', () => {
+  test('unique tag with value', () => {
     const signs = signsStateByDescriptiveName(data, ['Überholverbot für Kraftfahrzeuge über 3,5 t'])
     expect(collectUniqueTags(signs)).toMatchObject([{ key: 'overtaking:hgv', value: 'no' }])
   })
 
-  test('uniqute tag with valueTemplate', () => {
-    const signs = signsStateByDescriptiveName(data, ['Tempo 30-Zone'])
+  test('unique tag with valueTemplate', () => {
+    const signs = signsStateByDescriptiveName(data, ['Tempo ??-Zone'])
     expect(collectUniqueTags(signs)).toMatchObject([
-      { key: 'source:maxspeed', value: 'DE:zone' },
-      { key: 'zone:maxspeed', value: 'DE:30' },
+      { key: 'source:maxspeed', value: 'DE:zone47' },
+      { key: 'zone:maxspeed', value: 'DE:47' },
     ])
   })
 
-  test('uniqute tag with valueTemplate', () => {
-    const signs = signsStateByDescriptiveName(data, ['Tempo 30-Zone'])
+  test('unique tag with valueTemplate', () => {
+    const signs = signsStateByDescriptiveName(data, ['Tempo ??-Zone'])
     const sign = signs[0]!
     const customValue = 999
     const updated = [
@@ -33,7 +33,7 @@ describe('collectUniqueTags()', () => {
       } as SignStateType,
     ]
     expect(collectUniqueTags(updated)).toMatchObject([
-      { key: 'source:maxspeed', value: 'DE:zone' },
+      { key: 'source:maxspeed', value: 'DE:zone999' },
       { key: 'zone:maxspeed', value: 'DE:999' },
     ])
   })

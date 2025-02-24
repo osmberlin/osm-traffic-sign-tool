@@ -51,7 +51,13 @@ export type TrafficSignType = SharedId &
   SharedQuestions &
   SharedCompatibility &
   SharedCatalogue<
-    'traffic_sign' | 'object_sign' | 'surface_sign' | 'hazard_sign' | 'train_sign' | 'signpost'
+    | 'traffic_sign'
+    | 'object_sign'
+    | 'surface_sign'
+    | 'hazard_sign'
+    | 'train_sign'
+    | 'signpost'
+    | 'speed'
   > &
   SharedIdentifiyingTags &
   SharedImage

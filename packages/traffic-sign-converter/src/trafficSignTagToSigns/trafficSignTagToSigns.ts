@@ -31,7 +31,6 @@ export const trafficSignTagToSigns = (
   workingValueParts = workingValueParts
     .map((osmValuePart) => {
       const alternativeValuePart = countryAlternativeKeyFormats[countryPrefix].get(osmValuePart)
-
       if (alternativeValuePart) {
         // Lookup the sign (two ways)
         // Plan A: Direct lookup (most precise)

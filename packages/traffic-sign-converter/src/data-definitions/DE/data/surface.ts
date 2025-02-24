@@ -1,0 +1,48 @@
+import type { SignType } from '../../TrafficSignDataTypes.js'
+
+export const _surface: SignType[] = [
+  {
+    osmValuePart: '298',
+    signId: '298',
+    name: 'Zeichen 298',
+    descriptiveName: 'Sperrflächen',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [{ key: 'area:highway', value: 'prohibited' }],
+    },
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      signCategory: 'surface_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://de.wikipedia.org/wiki/Datei:Zeichen_298_-_Sperrfl%C3%A4chen,_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '299',
+    signId: '299',
+    name: 'Zeichen 299',
+    descriptiveName: 'Sperrflächen',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [{ key: 'area:highway', value: 'prohibited' }],
+    },
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      signCategory: 'surface_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://de.wikipedia.org/wiki/Datei:Zeichen_299_-_Grenzmarkierung_für_Halt-_und_Parkverbote,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+]

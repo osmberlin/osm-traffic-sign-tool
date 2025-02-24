@@ -73,7 +73,7 @@ describe('collectConditionalTags()', () => {
     expect(collectUniqueTags(signs)).toMatchObject([
       {
         key: 'source:maxspeed',
-        value: 'DE:zone',
+        value: 'DE:zone30',
       },
       {
         key: 'zone:maxspeed',
@@ -93,7 +93,7 @@ describe('collectConditionalTags()', () => {
     expect(collectUniqueTags(signs)).toMatchObject([
       {
         key: 'source:maxspeed',
-        value: 'DE:zone',
+        value: 'DE:zone30',
       },
       {
         key: 'zone:maxspeed',
