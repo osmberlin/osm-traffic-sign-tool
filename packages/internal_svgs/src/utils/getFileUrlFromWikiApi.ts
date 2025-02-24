@@ -45,7 +45,7 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
   if (!imageInfo) {
     return {
       success: false,
-      error: 'Could not extract `data.query.pages[-1].imageInfo.url`',
+      error: `Could not extract ${JSON.stringify(data, undefined, 0)}`,
       data: { response },
     } as const
   }

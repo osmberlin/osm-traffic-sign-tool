@@ -2,9 +2,9 @@ import type { SignType } from '../../TrafficSignDataTypes.js'
 
 export const _speed_minspeed_end: SignType[] = [
   {
-    osmValuePart: '275[47]',
-    signId: '275',
-    name: 'Zeichen 275',
+    osmValuePart: '279[47]',
+    signId: '279',
+    name: 'Zeichen 279',
     descriptiveName: 'Ende der vorgeschriebenen Mindestgeschwindigkeit von ?? km/h',
     description: null,
     kind: 'traffic_sign',
@@ -31,7 +31,7 @@ export const _speed_minspeed_end: SignType[] = [
     },
     image: {
       sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg',
+        'https://de.wikipedia.org/wiki/Datei:Zeichen_279-30_-_Ende_der_vorgeschriebenen_Mindestgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
     },
   },

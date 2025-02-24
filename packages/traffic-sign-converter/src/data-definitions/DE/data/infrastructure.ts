@@ -210,7 +210,7 @@ export const _infrastructure: SignType[] = [
   {
     osmValuePart: '242.1',
     signId: '242.1',
-    name: 'Zeichen 242',
+    name: 'Zeichen 242.1',
     descriptiveName: 'Fußgängerbereich',
     description: 'Beginn einer Fußgängerzone',
     kind: 'traffic_sign',
