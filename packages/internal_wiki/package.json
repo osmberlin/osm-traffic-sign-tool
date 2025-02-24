@@ -24,11 +24,11 @@
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
-    "@osm-traffic-signs/converter": "workspace:*",
     "@internal/svgs": "workspace:*",
+    "@osm-traffic-signs/converter": "workspace:*",
     "cheerio": "^1.0.0",
     "rimraf": "^6.0.1",
-    "typescript": "^5.0.0",
-    "zod": "^3.23.8"
+    "typescript": "^5.7.3",
+    "zod": "^3.24.2"
   }
 }

@@ -15,16 +15,16 @@
   "devDependencies": {
     "@colors/colors": "^1.6.0",
     "@types/bun": "latest",
-    "eslint": "^8.57.0",
-    "husky": "^9.1.6",
-    "prettier": "^3.3.3",
+    "eslint": "^8.57.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.2",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-tailwindcss": "^0.6.8",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "svgo": "^3.3.2",
-    "turbo": "^2.3.3",
-    "vitest": "^2.1.4"
+    "turbo": "^2.3.7",
+    "vitest": "^2.1.9"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@8.15.9",
   "engines": {
     "node": ">=22.9.0"
   }
