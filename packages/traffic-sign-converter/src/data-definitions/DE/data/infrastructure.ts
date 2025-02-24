@@ -235,33 +235,6 @@ export const _infrastructure: SignType[] = [
     },
   },
   {
-    osmValuePart: '242.1',
-    signId: '242.1',
-    name: 'Zeichen 242.1',
-    descriptiveName: 'Fußgängerzone',
-    description: 'Beginn einer Fußgängerzone',
-    kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['pedestrian'],
-      uniqueTags: [{ key: 'foot', value: 'designated' }],
-    },
-    comments: [
-      {
-        tagReference: 'highway=pedestrian',
-        comment:
-          'Das Verkehrszeichen und die Highway-Klasse werden für alle Straßen in der Zone eingetragen.',
-      },
-    ],
-    catalogue: {
-      signCategory: 'traffic_sign',
-    },
-    image: {
-      sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:Zeichen_242.1_-_Beginn_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg',
-      licence: 'Public Domain',
-    },
-  },
-  {
     osmValuePart: '242.2',
     signId: '242.2',
     name: 'Zeichen 242.2',
