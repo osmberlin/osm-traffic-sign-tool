@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 import { Suspense } from 'react'
 import { fontClasses } from './_components/layout/fonts/fonts'
 import { Footer } from './_components/layout/Footer'

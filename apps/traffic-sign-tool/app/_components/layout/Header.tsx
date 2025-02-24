@@ -1,6 +1,7 @@
 'use client'
 import { clsx } from 'clsx'
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import packageJson from '../../../package.json'
 import { ExternalLink } from '../links/ExternalLink'
@@ -13,7 +14,7 @@ export const Header = () => {
   return (
     <header className="mx-auto mb-6 mt-5 flex max-w-prose flex-col flex-wrap overflow-hidden px-4 sm:px-6 md:mt-10 lg:w-[65ch] lg:max-w-prose lg:px-8">
       <h1>
-        <a
+        <Link
           className={clsx(
             'mb-3 flex items-center gap-3 text-xl font-light leading-tight text-stone-400 decoration-violet-700 underline-offset-4 hover:underline md:text-3xl',
             isHome ? 'cursor-auto hover:no-underline' : '',
@@ -30,7 +31,7 @@ export const Header = () => {
             </span>{' '}
             <small className="text-xs">{version}</small>
           </span>
-        </a>
+        </Link>
       </h1>
 
       <details open className="my-5 self-center leading-tight text-stone-300">
