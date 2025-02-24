@@ -5,46 +5,42 @@ import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
 
 type Props = { trafficSignData: SignType[] }
 
+const signGroupTranslations: Map<SignType['catalogue']['signCategory'], string> = new Map([
+  ['traffic_sign', 'Verkehrszeichen'],
+  ['exception_modifier', 'Zusatzzeichen'],
+  ['condition_modifier', 'Zusatzzeichen Einschränkungen'],
+  ['speed', 'Geschwindigkeitsbeschränkungen'],
+  ['hazard_sign', 'Gefahrenzeichen'],
+  ['surface_sign', 'Straßenoberfläche'],
+  // ['object_sign', ''], // search only
+  // ['signpost', ''], // search only
+])
+
 export const SignSelectionColumn = ({ trafficSignData }: Props) => {
   // Data
-  const signsMostUsed = trafficSignData.filter((sign) => sign.catalogue.visibility === 'highlight')
-  const signsCatSigns = trafficSignData.filter(
-    (sign) =>
-      sign.catalogue.signCategory === 'traffic_sign' &&
-      sign.catalogue.visibility !== 'highlight' &&
-      sign.catalogue.visibility !== 'search_only',
-  )
-  const signsCatExceptionModifiers = trafficSignData.filter(
-    (sign) =>
-      sign.catalogue.signCategory === 'exception_modifier' &&
-      sign.catalogue.visibility !== 'search_only',
-  )
-  const signsCatConditionModifiers = trafficSignData.filter(
-    (sign) =>
-      sign.catalogue.signCategory === 'condition_modifier' &&
-      sign.catalogue.visibility !== 'search_only',
-  )
-  const signsCatSpeed = trafficSignData.filter(
-    (sign) =>
-      sign.catalogue.signCategory === 'speed' && sign.catalogue.visibility !== 'search_only',
-  )
-  const signsCatHazard = trafficSignData.filter(
-    (sign) =>
-      sign.catalogue.signCategory === 'hazard_sign' && sign.catalogue.visibility !== 'search_only',
-  )
-  const rest = trafficSignData.filter(
-    (sign) =>
-      ![
-        ...signsMostUsed,
-        ...signsCatSigns,
-        ...signsCatExceptionModifiers,
-        ...signsCatConditionModifiers,
-        ...signsCatSpeed,
-        ...signsCatHazard,
-      ]
-        .map((s) => s.osmValuePart)
-        .includes(sign.osmValuePart),
-  )
+  const displaySigns = trafficSignData.filter((sign) => sign.catalogue.visibility !== 'search_only')
+  const signsMostUsed = displaySigns.filter((sign) => sign.catalogue.visibility === 'highlight')
+
+  // Group data
+  const groupedSigns: Map<SignType['catalogue']['signCategory'], SignType[]> = new Map([])
+  displaySigns
+    .filter((sign) => sign.catalogue.visibility !== 'highlight')
+    .forEach((sign) => {
+      const category = sign.catalogue.signCategory
+      groupedSigns.set(category, [...(groupedSigns.get(category) || []), sign])
+    })
+
+  const uncategorizedAndSearchOnly = trafficSignData.filter((sign) => {
+    return ![
+      ...signsMostUsed,
+      // all the grouped signs
+      ...Array.from(groupedSigns)
+        .map((line) => line[1])
+        .flat(),
+    ]
+      .map((s) => s.osmValuePart)
+      .includes(sign.osmValuePart)
+  })
 
   return (
     <>
@@ -57,17 +53,13 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
 
       <SignGrid headline="Häufig verwendet" signs={signsMostUsed} />
 
-      <SignGrid headline="Kategorie Verkehrszeichen" signs={signsCatSigns} />
+      {Array.from(signGroupTranslations).map(([category, headline]) => {
+        const signs = groupedSigns.get(category)
+        return signs?.length ? <SignGrid key={category} headline={headline} signs={signs} /> : null
+      })}
 
-      <SignGrid headline="Zusatzzeichen" signs={signsCatExceptionModifiers} />
-
-      <SignGrid headline="Zusatzzeichen Einschränkungen" signs={signsCatConditionModifiers} />
-
-      <SignGrid headline="Geschwindigkeitsbeschränkungen" signs={signsCatSpeed} />
-
-      <SignGrid headline="Gefahrenzeichen" signs={signsCatHazard} />
-
-      <SignGrid headline="Weitere" defaultOpen={false} signs={rest} />
+      {/* Lists all those `search only` signs */}
+      <SignGrid headline="Weitere" defaultOpen={false} signs={uncategorizedAndSearchOnly} />
     </>
   )
 }
