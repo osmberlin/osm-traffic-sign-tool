@@ -1,5 +1,5 @@
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
-import { CheckCircleIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
+import { CheckCircleIcon, PencilSquareIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
 import { SignStateType, SignType } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
@@ -62,6 +62,14 @@ export const Sign = ({ sign }: Props) => {
           {sign.descriptiveName ?? ''}
         </div>
       </button>
+
+      {sign.valuePrompt && (
+        <p className="absolute bottom-2 right-1">
+          <div className="rounded-full bg-stone-800 p-1 text-gray-400">
+            <PencilSquareIcon className="size-3" />
+          </div>
+        </p>
+      )}
     </div>
   )
 }
