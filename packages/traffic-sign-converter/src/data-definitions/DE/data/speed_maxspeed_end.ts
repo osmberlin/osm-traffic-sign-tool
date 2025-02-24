@@ -17,7 +17,7 @@ export const _speed_maxspeed_end: SignType[] = [
     tagRecommendations: {},
     comments: [],
     catalogue: {
-      signCategory: 'traffic_sign',
+      signCategory: 'speed',
     },
     image: {
       sourceUrl:

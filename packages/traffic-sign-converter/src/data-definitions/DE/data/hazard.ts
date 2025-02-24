@@ -121,7 +121,7 @@ export const _hazard: SignType[] = [
     comments: [],
     catalogue: {
       visibility: 'search_only',
-      signCategory: 'train_sign',
+      signCategory: 'hazard_sign',
     },
     image: {
       sourceUrl:
@@ -145,7 +145,7 @@ export const _hazard: SignType[] = [
     comments: [],
     catalogue: {
       visibility: 'search_only',
-      signCategory: 'train_sign',
+      signCategory: 'hazard_sign',
     },
     image: {
       sourceUrl:

@@ -24,6 +24,10 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
       sign.catalogue.signCategory === 'condition_modifier' &&
       sign.catalogue.visibility !== 'search_only',
   )
+  const signsCatSpeed = trafficSignData.filter(
+    (sign) =>
+      sign.catalogue.signCategory === 'speed' && sign.catalogue.visibility !== 'search_only',
+  )
   const signsCatHazard = trafficSignData.filter(
     (sign) =>
       sign.catalogue.signCategory === 'hazard_sign' && sign.catalogue.visibility !== 'search_only',
@@ -35,6 +39,7 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
         ...signsCatSigns,
         ...signsCatExceptionModifiers,
         ...signsCatConditionModifiers,
+        ...signsCatSpeed,
         ...signsCatHazard,
       ]
         .map((s) => s.osmValuePart)
@@ -57,6 +62,8 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
       <SignGrid headline="Zusatzzeichen" signs={signsCatExceptionModifiers} />
 
       <SignGrid headline="Zusatzzeichen Einschränkungen" signs={signsCatConditionModifiers} />
+
+      <SignGrid headline="Geschwindigkeitsbeschränkungen" signs={signsCatSpeed} />
 
       <SignGrid headline="Gefahrenzeichen" signs={signsCatHazard} />
 
