@@ -45,11 +45,11 @@ export const SearchSignInput = () => {
           name="search"
           type="text"
           autoFocus={true}
-          className="block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+          className="block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
           placeholder="Search…"
         />
         <div className="absolute inset-y-0 right-0 flex items-center gap-1 py-1.5 pr-1.5">
-          <kbd className="inline-flex min-h-5 select-none items-center rounded border border-gray-200 px-1 font-sans text-xs text-gray-400">
+          <kbd className="inline-flex min-h-5 select-none items-center rounded-sm border border-gray-200 px-1 font-sans text-xs text-gray-400">
             {isMac ? '⌘K' : 'Ctrl+K'}
           </kbd>
           {paramQ && (
@@ -60,7 +60,7 @@ export const SearchSignInput = () => {
                   searchInputRef.current.value = ''
                 }
               }}
-              className="min-h-5 rounded border border-gray-200 px-0.5 text-gray-400 hover:border-gray-200 hover:bg-gray-100 hover:text-gray-800"
+              className="min-h-5 rounded-sm border border-gray-200 px-0.5 text-gray-400 hover:border-gray-200 hover:bg-gray-100 hover:text-gray-800"
             >
               <XMarkIcon className="size-4" />
             </button>

@@ -37,7 +37,7 @@ export default async function WikiPage({
   }
 
   return (
-    <article className="rounded bg-stone-300 px-6 py-4">
+    <article className="rounded-sm bg-stone-300 px-6 py-4">
       <h2 className="my-4 text-3xl font-light uppercase text-black">
         All Wiki Signs {innerTrafficSignsWiki.length} — {missingSignCount} missing
       </h2>

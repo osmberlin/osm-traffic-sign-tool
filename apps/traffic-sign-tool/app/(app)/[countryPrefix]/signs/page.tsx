@@ -24,7 +24,7 @@ export default async function SignsPage({
   const trafficSignData = countryDefinitions[countryPrefix]
 
   return (
-    <article className="rounded bg-stone-300 px-6 py-4">
+    <article className="rounded-sm bg-stone-300 px-6 py-4">
       <h2 className="my-4 text-3xl font-light uppercase text-black">
         Full sign list {trafficSignData.length}
       </h2>

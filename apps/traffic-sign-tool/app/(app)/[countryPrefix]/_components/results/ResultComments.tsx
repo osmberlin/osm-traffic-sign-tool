@@ -15,9 +15,9 @@ export const ResultComments = () => {
           return (
             <div
               key={signKey}
-              className="prose-white prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 hover:prose-a:decoration-stone-400 hover:prose-a:decoration-1 flex gap-2 break-all font-serif font-normal"
+              className="prose-white prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 prose-a:hover:decoration-stone-400 prose-a:hover:decoration-1 flex gap-2 break-all font-serif font-normal"
             >
-              <code className="mr-1 inline-flex items-center rounded bg-gray-50/10 px-1.5 py-0.5 pt-1 text-xs">
+              <code className="mr-1 inline-flex items-center rounded-sm bg-gray-50/10 px-1.5 py-0.5 pt-1 text-xs">
                 <span
                   style={{ writingMode: 'vertical-rl' }}
                   className="inline-block rotate-180 whitespace-nowrap"

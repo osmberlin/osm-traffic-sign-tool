@@ -26,7 +26,7 @@ export const Header = () => {
           <Image src={svgLogo} alt="" width={48} height={48} />{' '}
           <span>
             OSM Traffic Sign Tool 2{' '}
-            <span className="rounded bg-stone-300 px-2 pt-1 text-xl uppercase text-stone-800 md:text-2xl">
+            <span className="rounded-sm bg-stone-300 px-2 pt-1 text-xl uppercase text-stone-800 md:text-2xl">
               Beta
             </span>{' '}
             <small className="text-xs">{version}</small>

@@ -32,7 +32,7 @@ export default async function SignsPage({
     .flat()
 
   return (
-    <article className="rounded bg-stone-300 px-6 py-4">
+    <article className="rounded-sm bg-stone-300 px-6 py-4">
       <h2 className="my-4 text-3xl font-light uppercase text-black">
         Check primary sign & modifier sign list combinations ({list.length.toLocaleString('de-DE')})
       </h2>

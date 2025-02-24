@@ -15,7 +15,7 @@ export const TagRecommendations = ({ value }: Props) => {
     <ul>
       {Array.from(aggregatedTagsMap).map(([key, value]) => {
         return (
-          <li key={key} className="rounded px-2 py-0.5 leading-tight hover:bg-white/5">
+          <li key={key} className="rounded-sm px-2 py-0.5 leading-tight hover:bg-white/5">
             <Tag tagKey={key} tagValue={value} />
           </li>
         )

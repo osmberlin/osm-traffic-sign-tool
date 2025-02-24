@@ -6,7 +6,7 @@ export const TailwindResponsiveHelper = () => {
   return (
     <>
       <a
-        className="border-xl fixed bottom-1 left-1 z-10 flex h-5 flex-row items-center space-x-1 rounded bg-pink-300 px-1 text-xs shadow-xl hover:underline print:hidden"
+        className="border-xl fixed bottom-1 left-1 z-10 flex h-5 flex-row items-center space-x-1 rounded-sm bg-pink-300 px-1 text-xs shadow-xl hover:underline print:hidden"
         href="https://tailwindcss.com/docs/responsive-design"
       >
         <span className="font-bold underline" title="<640px Mobile">

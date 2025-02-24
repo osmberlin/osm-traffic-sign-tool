@@ -27,8 +27,8 @@ export const Sign = ({ sign }: Props) => {
       <button
         onClick={() => toggleSignPart(sign.osmValuePart)}
         className={clsx(
-          'group/item relative flex h-20 w-full items-center justify-center rounded border border-stone-200 p-2 hover:bg-stone-200',
-          active ? 'bg-stone-100 shadow' : '',
+          'group/item relative flex h-20 w-full items-center justify-center rounded-sm border border-stone-200 p-2 hover:bg-stone-200',
+          active ? 'bg-stone-100 shadow-sm' : '',
         )}
       >
         <h3 className="sr-only">
@@ -59,14 +59,14 @@ export const Sign = ({ sign }: Props) => {
           //   <p className="text-[0.6rem] leading-tight">{sign.descriptiveName ?? '–'}</p>
           // </div> */}
 
-        <div className="absolute top-14 z-10 hidden min-w-32 rounded bg-stone-800 px-2 py-1 text-xs/4 text-stone-50 group-hover/item:block">
+        <div className="absolute top-14 z-10 hidden min-w-32 rounded-sm bg-stone-800 px-2 py-1 text-xs/4 text-stone-50 group-hover/item:block">
           <strong>{sign.osmValuePart}</strong>
           <br />
           {sign.descriptiveName ?? ''}
         </div>
       </button>
 
-      <dialog open={debugOpen} className="absolute z-10 max-w-md overflow-auto rounded p-5">
+      <dialog open={debugOpen} className="absolute z-10 max-w-md overflow-auto rounded-sm p-5">
         <form method="dialog" className="absolute right-3 top-3">
           <button className={buttonStyleSecondary}>&times;</button>
         </form>

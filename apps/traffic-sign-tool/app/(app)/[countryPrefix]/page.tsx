@@ -18,17 +18,17 @@ export default function App({
 
   return (
     <article className="flex flex-col gap-4 md:flex-row">
-      <section className="relative rounded bg-stone-300 px-6 py-4">
+      <section className="relative rounded-sm bg-stone-300 px-6 py-4">
         <SignSelectionColumn trafficSignData={trafficSignData} />
       </section>
 
-      <section className="relative flex-none rounded bg-stone-300 py-4 md:w-60">
+      <section className="relative flex-none rounded-sm bg-stone-300 py-4 md:w-60">
         <h2 className="mb-4 text-center text-lg font-light uppercase">Selected Signs</h2>
 
         <SelectedSignsColumn />
       </section>
 
-      <section className="relative flex-none rounded border border-white bg-stone-900 px-4 py-4 text-stone-100 md:w-96 md:border-0">
+      <section className="relative flex-none rounded-sm border border-white bg-stone-900 px-4 py-4 text-stone-100 md:w-96 md:border-0">
         <ResultColumn />
       </section>
     </article>

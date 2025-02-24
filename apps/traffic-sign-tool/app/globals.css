@@ -1,12 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  /*
+  // We only support some weights, see `app/_components/layout/fonts/fonts.ts`
+  // Docs https://tailwindcss.com/docs/font-weight
+  // thin: '100',
+  // extralight: '200',
+  light: '300',
+  normal: '400',
+  // medium: '500',
+  semibold: '600',
+  bold: '700',
+  // extrabold: '800',
+  // black: '900',
+  */
+  --font-weight-*: initial;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-mono:
+    var(--font-fira-code), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  --font-sans:
+    var(--font-fira-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-condensed:
+    var(--font-fira-condensed), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif: var(--font-noto-serif), ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
 
 @layer base {
-}
-
-@layer components {
-}
-
-@layer utilities {
 }

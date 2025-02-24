@@ -11,7 +11,7 @@ export const TagList = ({ tags, className }: Props) => {
           <li
             key={key}
             className={clsx(
-              'rounded px-2 py-0.5 leading-tight hover:bg-white/5',
+              'rounded-sm px-2 py-0.5 leading-tight hover:bg-white/5',
               key === 'traffic_sign' ? 'break-all' : 'break-words',
             )}
           >
