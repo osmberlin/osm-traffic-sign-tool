@@ -24,7 +24,7 @@ export const Sign = ({ sign }: Props) => {
       <button
         onClick={() => toggleSignPart(sign.osmValuePart)}
         className={clsx(
-          'group/item relative flex h-20 w-full items-center justify-center rounded-sm border border-stone-200 p-2 hover:bg-stone-200',
+          'group/item relative flex h-20 w-full cursor-pointer items-center justify-center rounded-sm border border-stone-200 p-2 hover:bg-stone-200',
           active ? 'bg-stone-100 shadow-sm' : '',
         )}
       >
@@ -34,10 +34,8 @@ export const Sign = ({ sign }: Props) => {
         </h3>
         <span
           className={clsx(
-            'absolute -right-1 -top-1 rounded-full',
-            active
-              ? 'group-hover/item:text-stone-700'
-              : 'text-white/0 transition-colors group-hover/item:text-stone-900',
+            'absolute right-0 top-0 rounded-full',
+            active ? '' : 'text-white/0 transition-colors group-hover/item:text-stone-900',
           )}
         >
           {active ? <CheckCircleIcon className="size-6" /> : <PlusCircleIcon className="size-6" />}
@@ -46,7 +44,7 @@ export const Sign = ({ sign }: Props) => {
         <PackageSvgTrafficSign
           key={sign.osmValuePart}
           sign={sign}
-          className="h-auto max-h-full w-full"
+          className="pointer-events-none h-auto max-h-full w-full"
         />
         {/* // <div>
           //   <code className="whitespace-nowrap tracking-tighter">
@@ -64,11 +62,9 @@ export const Sign = ({ sign }: Props) => {
       </button>
 
       {sign.valuePrompt && (
-        <p className="absolute bottom-2 right-1">
-          <div className="rounded-full bg-stone-800 p-1 text-gray-400">
-            <PencilSquareIcon className="size-3" />
-          </div>
-        </p>
+        <div className="absolute bottom-1 right-1 rounded-full bg-stone-800 p-1 text-stone-50">
+          <PencilSquareIcon className="size-3" />
+        </div>
       )}
     </div>
   )
