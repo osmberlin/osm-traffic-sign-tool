@@ -18,6 +18,7 @@ const eslintConfig = [
     //     rootDir: 'apps/my-app/',
     //   },
     // },
+    // WARNING: Does not work…
     ignorePatterns: ['./app/_components/catalyst/_unused/*.tsx'],
   }),
   // https://github.com/prettier/eslint-plugin-prettier?tab=readme-ov-file#configuration-new-eslintconfigjs
@@ -28,6 +29,7 @@ const eslintConfig = [
   reactCompiler.configs.recommended,
   {
     // https://eslint.org/docs/latest/use/configure/ignore#ignoring-files
+    // WARNING: Does not work…
     ignores: ['./app/_components/catalyst/_unused/*'],
   },
 ]
