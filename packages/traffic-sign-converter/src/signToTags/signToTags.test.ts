@@ -128,4 +128,50 @@ describe('signToTags()', () => {
       expect(result.get('overtaking:conditional')).toBe('no @ (16-18)')
     })
   })
+
+  describe('https://github.com/osmberlin/osm-traffic-sign-tool/issues/67', () => {
+    test('handle the exception_modifier (Verbot außer Lieferverkehr)', () => {
+      const signs = signsStateByDescriptiveName(data, [
+        'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
+        'Lieferverkehr frei',
+      ])
+      const result = signToTags(signs, 'DE')
+      expect(result).toMatchObject(
+        new Map([
+          ['hgv', 'delivery'],
+          ['traffic_sign', 'DE:253,1026-35'],
+        ]),
+      )
+    })
+    test('handle the condition_modifier (Verbot ab 7.5 t)', () => {
+      const signs = signsStateByDescriptiveName(data, [
+        'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
+        'Massenangabe 7,5 t',
+      ])
+      const result = signToTags(signs, 'DE')
+      expect(result).toMatchObject(
+        new Map([
+          ['hgv', 'no'],
+          ['hgv:conditional', 'no @ (maxweightrating>7.5)'],
+          ['traffic_sign', 'DE:253,1053-33'],
+        ]),
+      )
+    })
+    // UNSUPPORTED FOR NOW
+    // See https://github.com/osmberlin/osm-traffic-sign-tool/issues/67#issuecomment-2676036906
+    test.skip('handle the combination of condition_modifier and exception_modifier (Verbot für Lieferverkehr ab 7,5 t)', () => {
+      const signs = signsStateByDescriptiveName(data, [
+        'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
+        'Massenangabe 7,5 t',
+        'Lieferverkehr frei',
+      ])
+      const result = signToTags(signs, 'DE')
+      expect(result).toMatchObject(
+        new Map([
+          ['hgv:conditional', 'delivery @ (maxweightrating>7.5)'],
+          ['traffic_sign', 'DE:253,1026-35,1053-33'],
+        ]),
+      )
+    })
+  })
 })

@@ -19,6 +19,23 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
             value: sign.signValue === undefined ? conditionalTag.value : String(sign.signValue),
           })
         }
+      } else {
+        // Handle combinations like https://trafficsigns.osm-verkehrswende.org/DE?signs=DE:253,1053-33
+        // A `traffic_sign` with `accessTags` but a `condition_modifier` is applied.
+        // In this case, we need to treat the `accessTags` like `conditionalTags` so we can modify them below.
+        const groupHasConditionModifierSign = signs
+          .filter((sign) => sign.recodgnizedSign === true)
+          .some((sign) => sign.kind === 'condition_modifier')
+        const { accessTags } = sign.tagRecommendations
+
+        if (groupHasConditionModifierSign && accessTags) {
+          for (const conditionalTag of accessTags) {
+            mergedConditionalTags.set(conditionalTag.key, {
+              key: conditionalTag.key,
+              value: sign.signValue === undefined ? conditionalTag.value : String(sign.signValue),
+            })
+          }
+        }
       }
     })
 
@@ -34,8 +51,9 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
       // - `conditionalValueFromValuePrompt` is used when no fixed value is present
       //    so we always look at the`signValue` (set by the value prompt)
       const applyModfier =
-        sign.tagRecommendations.modifierValue ||
+        !!sign.tagRecommendations.modifierValue ||
         sign.tagRecommendations.modifierValueFromValuePrompt === true
+
       if (applyModfier) {
         // For `condition_modifier`, the primary condition is removed and only the `*:conditional` stays.
         // Eg. `maxspeed:conditional=30 @ (22-06)`

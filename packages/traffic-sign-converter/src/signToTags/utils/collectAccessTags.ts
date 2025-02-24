@@ -16,10 +16,12 @@ export const collectAccessTags = (signs: SignStateType[]) => {
       }
     })
 
-  // Handle modifier signs (`exception_modifier` and `condition_modifier`)
+  // Handle modifier signs `exception_modifier`
+  // Ignore `condition_modifier`, they are handled by `collectConditionalTags.ts`
   signs
     .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind !== 'traffic_sign')
+    .filter((sign) => sign.kind !== 'condition_modifier')
     .map((sign) => sign.tagRecommendations)
     .forEach((tags) => {
       // Signs can have a `modifierValue` or `accessTags`
@@ -27,11 +29,11 @@ export const collectAccessTags = (signs: SignStateType[]) => {
       //   BUT we have to make sure we only apply them, when the `traffic_sign` actually had an `accessTags`
       // `accessTags` are just added to the pile (and maybe updated by the next sign)
 
-      const hasAccessTagProp = signs
+      const groupHasSignWithAccessTagProp = signs
         .filter((sign) => sign.recodgnizedSign === true)
         .some((sign) => 'accessTags' in sign.tagRecommendations)
 
-      if (hasAccessTagProp && tags.modifierValue) {
+      if (groupHasSignWithAccessTagProp && !!tags.modifierValue) {
         for (const [_, tag] of mergedAccessTags) {
           if (tag.value === 'no') {
             mergedAccessTags.set(tag.key, { key: tag.key, value: tags.modifierValue })
