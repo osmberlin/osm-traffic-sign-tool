@@ -9,7 +9,7 @@ export default function Redirect() {
   const params = useSearchParams()
 
   useEffect(() => {
-    const url = new URL(`/${countryPrefixFallback}}`, window.location.href)
+    const url = new URL(`/${countryPrefixFallback}`, window.location.href)
     for (const [key, value] of params) {
       url.searchParams.append(key, value)
     }
