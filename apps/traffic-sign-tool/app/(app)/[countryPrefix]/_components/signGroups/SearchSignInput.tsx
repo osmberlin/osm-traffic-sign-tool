@@ -46,7 +46,7 @@ export const SearchSignInput = () => {
           type="text"
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={true}
-          className="block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+          className="shadow-xs block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
           placeholder="Search…"
         />
         <div className="absolute inset-y-0 right-0 flex items-center gap-1 py-1.5 pr-1.5">

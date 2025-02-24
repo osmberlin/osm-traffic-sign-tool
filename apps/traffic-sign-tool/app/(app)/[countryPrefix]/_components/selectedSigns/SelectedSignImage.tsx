@@ -18,7 +18,7 @@ export const SelectedSignImage = ({ sign }: Props) => {
             sign.valuePrompt &&
             sign.signValue !== sign.valuePrompt.defaultValue && (
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="font-condensed w-full -rotate-12 rounded-sm bg-amber-100/95 px-3 pt-1 text-center text-4xl font-normal text-amber-900 shadow-xs">
+                <div className="font-condensed shadow-xs w-full -rotate-12 rounded-sm bg-amber-100/95 px-3 pt-1 text-center text-4xl font-normal text-amber-900">
                   {sign.signValue}
                 </div>
               </div>

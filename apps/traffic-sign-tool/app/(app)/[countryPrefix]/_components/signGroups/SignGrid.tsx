@@ -14,8 +14,8 @@ type Props = {
 export const SignGrid = ({ headline, defaultOpen = true, signs }: Props) => {
   return (
     <Disclosure as="section" className="group mb-8" defaultOpen={defaultOpen}>
-      <DisclosureButton className="mb-0 flex w-full cursor-pointer items-center justify-start gap-1 group-data-open:mb-4">
-        <ChevronRightIcon className="fill-stone/60 group-data-hover:fill-stone/50 size-5 group-data-open:rotate-90" />
+      <DisclosureButton className="group-data-open:mb-4 mb-0 flex w-full cursor-pointer items-center justify-start gap-1">
+        <ChevronRightIcon className="fill-stone/60 group-data-hover:fill-stone/50 group-data-open:rotate-90 size-5" />
         <h2 id={`sign-grid-${headline}`}>
           {headline} ({signs.length})
         </h2>
