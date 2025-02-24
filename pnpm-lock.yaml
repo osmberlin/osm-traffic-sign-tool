@@ -208,6 +208,9 @@ importers:
 
   packages/traffic-sign-converter:
     dependencies:
+      babel-plugin-react-compiler:
+        specifier: 19.0.0-beta-e1e972c-20250221
+        version: 19.0.0-beta-e1e972c-20250221
       zod:
         specifier: ^3.24.2
         version: 3.24.2
@@ -1372,6 +1375,9 @@ packages:
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
     engines: {node: '>= 0.4'}
+
+  babel-plugin-react-compiler@19.0.0-beta-e1e972c-20250221:
+    resolution: {integrity: sha512-m3Y8KdwBwKj9l6bf1XPO2xm0WWzv/cYJPurkwP5j8SADGor6l9CdQVksrcOGzU/4Rylfa+tXW6+xaR3vAKs7Hg==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -4509,6 +4515,10 @@ snapshots:
   axe-core@4.10.2: {}
 
   axobject-query@4.1.0: {}
+
+  babel-plugin-react-compiler@19.0.0-beta-e1e972c-20250221:
+    dependencies:
+      '@babel/types': 7.26.9
 
   balanced-match@1.0.2: {}
 

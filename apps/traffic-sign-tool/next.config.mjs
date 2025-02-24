@@ -5,7 +5,7 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
     // https://nextjs.org/docs/app/api-reference/config/next-config-js/reactCompiler
-    // reactCompiler: true,
+    reactCompiler: true,
   },
   // NOTE: `redirects` don't work with `output: 'export'`
   // Docs: https://nextjs.org/docs/app/building-your-application/routing/redirecting#redirects-in-nextconfigjs

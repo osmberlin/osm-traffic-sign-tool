@@ -39,6 +39,7 @@
     "vitest": "^3.0.6"
   },
   "dependencies": {
+    "babel-plugin-react-compiler": "19.0.0-beta-e1e972c-20250221",
     "zod": "^3.24.2"
   },
   "type": "module",

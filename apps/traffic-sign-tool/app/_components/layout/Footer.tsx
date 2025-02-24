@@ -1,5 +1,5 @@
 'use client'
-import { useCountryPrefixOptional } from '@app/app/_store/utils/useCountryPrefix'
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import Link from 'next/link'
 import { ExternalLink } from '../links/ExternalLink'
 
@@ -19,7 +19,7 @@ const navigation = [
 ]
 
 export const Footer = () => {
-  const countryPrefix = useCountryPrefixOptional()
+  const { countryPrefix } = useCountryPrefix()
 
   return (
     <footer className="mx-auto mt-20 max-w-6xl px-4 py-12 sm:px-6 md:mt-0 lg:px-8">
