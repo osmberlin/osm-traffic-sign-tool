@@ -1,36 +1,34 @@
 import { FlatCompat } from '@eslint/eslintrc'
-// import reactCompiler from 'eslint-plugin-react-compiler'
+// import jsxA11y from 'eslint-plugin-jsx-a11y'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import reactCompiler from 'eslint-plugin-react-compiler'
 
 const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
   baseDirectory: import.meta.dirname,
 })
 
 const eslintConfig = [
   ...compat.config({
     // https://github.com/aridanpantoja/eslint-prettier-nextjs?tab=readme-ov-file#2-configure-eslint-and-prettier
-    extends: [
-      'next',
-      'next/core-web-vitals',
-      'next/typescript',
-      'plugin:prettier/recommended',
-      'plugin:jsx-a11y/recommended',
-    ],
-    plugins: [
-      // https://react.dev/learn/react-compiler#installing-eslint-plugin-react-compiler
-      // ['react-compiler': reactCompiler],
-      'prettier',
-      'jsx-a11y',
-    ],
-    rules: {
-      'react-compiler/react-compiler': 'error',
-    },
+    extends: ['next', 'next/core-web-vitals', 'next/typescript', 'plugin:jsx-a11y/recommended'],
+    plugins: ['jsx-a11y'],
     // settings: {
     //   // https://nextjs.org/docs/app/api-reference/config/eslint#specifying-a-root-directory-within-a-monorepo
     //   next: {
     //     rootDir: 'apps/my-app/',
     //   },
     // },
+    ignorePatterns: ['./app/_components/catalyst/_unused/*.tsx'],
   }),
+  // https://github.com/prettier/eslint-plugin-prettier?tab=readme-ov-file#configuration-new-eslintconfigjs
+  eslintPluginPrettierRecommended,
+  // https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+  // jsxA11y.flatConfigs.recommended,
+  // https://www.npmjs.com/package/eslint-plugin-react-compiler#usage
+  reactCompiler.configs.recommended,
+  {
+    // https://eslint.org/docs/latest/use/configure/ignore#ignoring-files
+    ignores: ['./app/_components/catalyst/_unused/*'],
+  },
 ]
 export default eslintConfig

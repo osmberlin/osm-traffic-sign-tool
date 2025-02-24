@@ -33,7 +33,9 @@ export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
   const file = svgs[name]
 
   if (!file) {
-    isDev() && console.warn('SVG MISSING', countryPrefix, sign)
+    if (isDev()) {
+      console.warn('SVG MISSING', countryPrefix, sign)
+    }
     return null
   }
 

@@ -26,7 +26,8 @@ export default async function WikiPage({
 }: {
   params: Awaited<ReturnType<typeof generateStaticParams>>[number]
 }) {
-  const innerTrafficSignsWiki: (WikiSign & { toolSign?: SignStateType })[] = trafficSignsWiki
+  const innerTrafficSignsWiki: (WikiSign & { toolSign?: SignStateType })[] =
+    structuredClone(trafficSignsWiki)
   let missingSignCount = 0
   for (const sign of innerTrafficSignsWiki) {
     const cleanSign = sign.sign.replace('traffic_sign', '')
@@ -56,6 +57,7 @@ export default async function WikiPage({
         </TableHead>
         <TableBody>
           {innerTrafficSignsWiki.map((sign) => {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const { toolSign, imageSvg: _, ...restsign } = sign
             return (
               <TableRow key={sign.sign} className={clsx(sign?.toolSign ? '' : 'bg-amber-300')}>

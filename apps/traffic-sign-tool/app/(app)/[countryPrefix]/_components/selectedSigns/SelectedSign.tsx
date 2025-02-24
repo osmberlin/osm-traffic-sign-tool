@@ -42,7 +42,9 @@ export const SelectedSign = ({ sign }: Props) => {
         <button
           onPointerDown={(event) => controls.start(event)}
           onMouseOver={() => setMoveHover(true)}
+          onFocus={() => setMoveHover(true)}
           onMouseOut={() => setMoveHover(false)}
+          onBlur={() => setMoveHover(false)}
           className={clsx(
             'flex items-center justify-center px-1 py-3 text-stone-400 group-hover/sign:text-stone-900',
             moveHover ? 'cursor-move bg-stone-100' : '',
@@ -63,7 +65,9 @@ export const SelectedSign = ({ sign }: Props) => {
       <figure
         onPointerDown={(event) => controls.start(event)}
         onMouseOver={() => setMoveHover(true)}
+        onFocus={() => setMoveHover(true)}
         onMouseOut={() => setMoveHover(false)}
+        onBlur={() => setMoveHover(false)}
         className={clsx(
           'flex w-full flex-col items-center justify-center py-2',
           moveHover ? 'cursor-move bg-stone-100' : '',

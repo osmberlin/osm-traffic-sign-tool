@@ -2,7 +2,7 @@
 import { isDev } from '../utils/isDev'
 
 type Props = {
-  state: Record<string, any>
+  state: Record<string, unknown>
 }
 
 export const StateHelper = ({ state }: Props) => {
