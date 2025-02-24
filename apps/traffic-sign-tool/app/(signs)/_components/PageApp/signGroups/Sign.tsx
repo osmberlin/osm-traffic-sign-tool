@@ -1,9 +1,7 @@
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
-import { buttonStyleSecondary } from '@app/app/_components/links/buttonStyles'
-import { BugAntIcon, CheckCircleIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
+import { CheckCircleIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
 import { SignStateType, SignType } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
-import { useState } from 'react'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
 
 type Props = {
@@ -11,7 +9,6 @@ type Props = {
 }
 
 export const Sign = ({ sign }: Props) => {
-  const [debugOpen, setDebugOpen] = useState(false)
   const { paramSigns, toggleOsmValuePart } = useParamSigns()
 
   const active = paramSigns.map((s) => s.signId).includes(sign.signId)
@@ -65,29 +62,6 @@ export const Sign = ({ sign }: Props) => {
           {sign.descriptiveName ?? ''}
         </div>
       </button>
-
-      <dialog open={debugOpen} className="absolute z-10 max-w-md overflow-auto rounded-sm p-5">
-        <form method="dialog" className="absolute right-3 top-3">
-          <button className={buttonStyleSecondary}>&times;</button>
-        </form>
-        <div className="bg-gray-100 py-1 text-center">
-          <p>
-            <strong>{sign.osmValuePart}</strong>
-          </p>
-          <p>{sign.descriptiveName}</p>
-        </div>
-        <pre className="mt-5 text-xs leading-snug tracking-tight">
-          <code>{JSON.stringify(sign, undefined, 2)}</code>
-        </pre>
-      </dialog>
-      <p className="absolute -bottom-2 -right-1">
-        <button
-          className="rounded-full bg-stone-200 p-0.5 text-gray-400 hover:bg-violet-400 hover:text-violet-50"
-          onClick={() => setDebugOpen(!debugOpen)}
-        >
-          <BugAntIcon className="size-3" />
-        </button>
-      </p>
     </div>
   )
 }
