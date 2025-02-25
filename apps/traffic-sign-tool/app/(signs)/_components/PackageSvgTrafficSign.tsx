@@ -28,9 +28,14 @@ const countrySvgs: Record<CountryPrefixType, Record<string, SVG>> = { DE: SvgsDE
 
 export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
-  const name = createSvgImportname(countryPrefix, sign.osmValuePart)
+
   const svgs = countrySvgs[countryPrefix]
-  const file = svgs[name]
+  const filename =
+    'svgName' in sign && !!sign.svgName
+      ? sign.svgName
+      : createSvgImportname(countryPrefix, sign.osmValuePart)
+
+  const file = svgs[filename]
 
   if (!file) {
     if (isDev()) {

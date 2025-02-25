@@ -1,3 +1,4 @@
+import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
 import type { SignType } from '../data-definitions/TrafficSignDataTypes.js'
 import { transformToSignState } from './transformToSignState.js'
 
@@ -22,7 +23,11 @@ export const signsByDescriptiveName = (signDefinition: SignType[], names: string
   return signs
 }
 
-export const signsStateByDescriptiveName = (signDefinition: SignType[], names: string[]) => {
+export const signsStateByDescriptiveName = (
+  countryPrefix: CountryPrefixType,
+  signDefinition: SignType[],
+  names: string[],
+) => {
   const signs = signsByDescriptiveName(signDefinition, names)
-  return signs.map((sign) => transformToSignState(sign))
+  return signs.map((sign) => transformToSignState(countryPrefix, sign))
 }

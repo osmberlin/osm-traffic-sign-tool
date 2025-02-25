@@ -12,13 +12,15 @@ describe('collectConditionalTags()', () => {
 
   // https://osmtools.de/traffic_signs/?signs=276
   test('Single sign with conditional tag', () => {
-    const signs = signsStateByDescriptiveName(data, ['Überholverbot für Kraftfahrzeuge aller Art'])
+    const signs = signsStateByDescriptiveName('DE', data, [
+      'Überholverbot für Kraftfahrzeuge aller Art',
+    ])
     expect(collectConditionalTags(signs)).toMatchObject([{ key: 'overtaking', value: 'no' }])
   })
 
   // https://osmtools.de/traffic_signs/?signs=276,1040-30%5B16:00-18:00%5D
   test('Sign group with conditional sign with prompt', () => {
-    const signs = signsStateByDescriptiveName(data, [
+    const signs = signsStateByDescriptiveName('DE', data, [
       'Überholverbot für Kraftfahrzeuge aller Art',
       'Zeitliche Beschräkung',
     ])
@@ -31,7 +33,7 @@ describe('collectConditionalTags()', () => {
   })
 
   test('Sign group with conditional sign with static value', () => {
-    const signs = signsStateByDescriptiveName(data, [
+    const signs = signsStateByDescriptiveName('DE', data, [
       'Überholverbot für Kraftfahrzeuge aller Art',
       'Zeitliche Beschräkung: werktags',
     ])
@@ -44,7 +46,7 @@ describe('collectConditionalTags()', () => {
   })
 
   test('Use the updated custom value', () => {
-    const signs = signsStateByDescriptiveName(data, ['Zulässige Höchstgeschwindigkeit'])
+    const signs = signsStateByDescriptiveName('DE', data, ['Zulässige Höchstgeschwindigkeit'])
     const sign = signs[0]!
     const customValue = 999
     const updated = [
@@ -63,7 +65,7 @@ describe('collectConditionalTags()', () => {
   })
 
   test('Handle valueTemplate (One Sign)', () => {
-    const signs = signsStateByDescriptiveName(data, ['Tempo 30-Zone'])
+    const signs = signsStateByDescriptiveName('DE', data, ['Tempo 30-Zone'])
     expect(collectConditionalTags(signs)).toMatchObject([
       {
         key: 'maxspeed',
@@ -83,7 +85,10 @@ describe('collectConditionalTags()', () => {
   })
 
   test('Handle valueTemplate (with modifier sign)', () => {
-    const signs = signsStateByDescriptiveName(data, ['Tempo 30-Zone', 'Zeitliche Beschräkung'])
+    const signs = signsStateByDescriptiveName('DE', data, [
+      'Tempo 30-Zone',
+      'Zeitliche Beschräkung',
+    ])
     expect(collectConditionalTags(signs)).toMatchObject([
       {
         key: 'maxspeed:conditional',
@@ -104,7 +109,7 @@ describe('collectConditionalTags()', () => {
 
   describe('Check that access and conditional tags do not mix', () => {
     test('set access when no conditionalValues given', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
@@ -120,7 +125,7 @@ describe('collectConditionalTags()', () => {
 
   describe('Handle different modifer signs', () => {
     test('handle `exception_modifier`', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
@@ -134,7 +139,7 @@ describe('collectConditionalTags()', () => {
     })
 
     test('handle `condition_modifier`', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
         'Anlieger frei',
       ])

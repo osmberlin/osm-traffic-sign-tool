@@ -9,12 +9,14 @@ describe('collectUniqueTags()', () => {
   const data = countryDefinitions.DE
 
   test('unique tag with value', () => {
-    const signs = signsStateByDescriptiveName(data, ['Überholverbot für Kraftfahrzeuge über 3,5 t'])
+    const signs = signsStateByDescriptiveName('DE', data, [
+      'Überholverbot für Kraftfahrzeuge über 3,5 t',
+    ])
     expect(collectUniqueTags(signs)).toMatchObject([{ key: 'overtaking:hgv', value: 'no' }])
   })
 
   test('unique tag with valueTemplate', () => {
-    const signs = signsStateByDescriptiveName(data, ['Tempo ??-Zone'])
+    const signs = signsStateByDescriptiveName('DE', data, ['Tempo ??-Zone'])
     expect(collectUniqueTags(signs)).toMatchObject([
       { key: 'source:maxspeed', value: 'DE:zone47' },
       { key: 'zone:maxspeed', value: 'DE:47' },
@@ -22,7 +24,7 @@ describe('collectUniqueTags()', () => {
   })
 
   test('unique tag with valueTemplate', () => {
-    const signs = signsStateByDescriptiveName(data, ['Tempo ??-Zone'])
+    const signs = signsStateByDescriptiveName('DE', data, ['Tempo ??-Zone'])
     const sign = signs[0]!
     const customValue = 999
     const updated = [

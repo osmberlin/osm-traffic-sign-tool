@@ -9,7 +9,7 @@ export const getSignsMap = (countryPrefix: CountryPrefixType) => {
   const signsMap = new Map<string, SignStateType>()
 
   for (const sign of countryDefinitions[countryPrefix]) {
-    signsMap.set(sign.osmValuePart, transformToSignState(sign))
+    signsMap.set(sign.osmValuePart, transformToSignState(countryPrefix, sign))
   }
 
   return signsMap

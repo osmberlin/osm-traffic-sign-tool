@@ -7,7 +7,7 @@ describe('splitIntoSignGroups()', () => {
   const data = countryDefinitions.DE
 
   test('sign + modifier sign', () => {
-    const signs = signsStateByDescriptiveName(data, ['Gehweg', 'Radfahrer frei'])
+    const signs = signsStateByDescriptiveName('DE', data, ['Gehweg', 'Radfahrer frei'])
     const result = splitIntoSignGroups(signs)
     const groupLength = result.length
     expect(groupLength).toBe(1)
@@ -21,7 +21,7 @@ describe('splitIntoSignGroups()', () => {
   })
 
   test('sign + modifier sign + sign + modifier sign + modifier sign', () => {
-    const signs = signsStateByDescriptiveName(data, [
+    const signs = signsStateByDescriptiveName('DE', data, [
       'Gehweg',
       'Radfahrer frei',
       'Radweg',

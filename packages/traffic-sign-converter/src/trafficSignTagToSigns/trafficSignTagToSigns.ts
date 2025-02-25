@@ -3,6 +3,7 @@ import type { CountryPrefixType } from '../data-definitions/countryDefinitions.j
 import { namedTrafficSignValues } from '../data-definitions/namedTrafficSignValues.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 import { combineSignIdSignValue } from '../utils/combineSignIdSignValue.js'
+import { createSvgImportname } from '../utils/createSvgImportname.js'
 import { getSignBySignId } from '../utils/getSignBySignId.js'
 import { getSignsMap } from '../utils/getSignsMap.js'
 import { removeCountryPrefix } from './utils/removeCountryPrefix.js'
@@ -66,6 +67,7 @@ export const trafficSignTagToSigns = (
 
     const signInMap = getSignBySignId(signsMap, signId)
     if (signInMap) {
+      signInMap.svgName = createSvgImportname(countryPrefix, signInMap.osmValuePart) // Needs to happen before we modify the signs
       signInMap.osmValuePart = combineSignIdSignValue(signId, signValue)
       signInMap.signValue = signValue
     }
@@ -79,7 +81,12 @@ export const trafficSignTagToSigns = (
     const { signId } = splitSignIdSignValue(osmValuePart)
     const sign = getSignBySignId(signsMap, signId)
     if (sign) {
-      return { ...sign, recodgnizedSign: true }
+      return {
+        // @ts-expect-error we use the re-assign to either add missing `svgName`s or they get overwritten by more precise once from above
+        svgName: createSvgImportname(countryPrefix, osmValuePart),
+        ...sign,
+        recodgnizedSign: true,
+      }
     }
 
     const unkownSign: SignStateType = {
@@ -90,6 +97,7 @@ export const trafficSignTagToSigns = (
       descriptiveName: osmValuePart,
       // When the initial string (`cleaned`) includes our unkown values when split by the `traffic_sign` separator (`;`) then it is this, all else is a modifier sign (we pick a `exception_modifier`); which would include `traffic_sign=foobar` as modifier.
       kind: cleaned.split(';').includes(osmValuePart) ? 'traffic_sign' : 'exception_modifier',
+      svgName: null,
     }
     return unkownSign
   })

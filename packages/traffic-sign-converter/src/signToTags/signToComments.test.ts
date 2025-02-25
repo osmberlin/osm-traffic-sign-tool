@@ -7,7 +7,7 @@ describe('signToComments()', () => {
   const data = countryDefinitions.DE
 
   test('Two groups, Empty is ignored', () => {
-    const signs = signsStateByDescriptiveName(data, [
+    const signs = signsStateByDescriptiveName('DE', data, [
       'Gehweg',
       'Radfahrer frei',
       'Personenkraftwagen frei',

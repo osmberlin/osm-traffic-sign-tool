@@ -9,7 +9,7 @@ describe('signToTags()', () => {
 
   describe('highway tag', () => {
     test('Collects unique values', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Gehweg',
         'Gemeinsamer Fuß- und Radweg',
         'Getrennter Rad- und Gehweg',
@@ -19,13 +19,13 @@ describe('signToTags()', () => {
     })
 
     test('No empty list', () => {
-      const signs = signsStateByDescriptiveName(data, ['Zulässige Höchstgeschwindigkeit'])
+      const signs = signsStateByDescriptiveName('DE', data, ['Zulässige Höchstgeschwindigkeit'])
       const result = signToTags(signs, 'DE')
       expect(result.has('highway')).toBeFalsy()
     })
 
     test('Handle valueTemplate', () => {
-      const signs = signsStateByDescriptiveName(data, ['Tempo ??-Zone'])
+      const signs = signsStateByDescriptiveName('DE', data, ['Tempo ??-Zone'])
       const result = signToTags(signs, 'DE')
       expect(result.get('zone:maxspeed')).toBe('DE:47')
     })
@@ -33,7 +33,7 @@ describe('signToTags()', () => {
 
   describe('access tag', () => {
     test('Merged access tags', () => {
-      const signs = signsStateByDescriptiveName(data, ['Fahrradstraße', 'Anlieger frei'])
+      const signs = signsStateByDescriptiveName('DE', data, ['Fahrradstraße', 'Anlieger frei'])
       const result = signToTags(signs, 'DE')
       expect(result.get('vehicle')).toBe('destination')
     })
@@ -41,7 +41,7 @@ describe('signToTags()', () => {
 
   describe('unique tags', () => {
     test('One sign with unique tags', () => {
-      const signs = signsStateByDescriptiveName(data, ['Fahrradstraße'])
+      const signs = signsStateByDescriptiveName('DE', data, ['Fahrradstraße'])
       const result = signToTags(signs, 'DE')
       expect(result.get('bicycle_road')).toBe('yes')
       expect(result.get('bicycle')).toBe('designated')
@@ -111,7 +111,7 @@ describe('signToTags()', () => {
 
   describe('conditional tag', () => {
     test('Single sign with conditional tag', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Überholverbot für Kraftfahrzeuge aller Art',
       ])
       const result = signToTags(signs, 'DE')
@@ -119,7 +119,7 @@ describe('signToTags()', () => {
     })
 
     test('Sign group with conditional sign with prompt', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Überholverbot für Kraftfahrzeuge aller Art',
         'Zeitliche Beschräkung',
       ])
@@ -131,7 +131,7 @@ describe('signToTags()', () => {
 
   describe('https://github.com/osmberlin/osm-traffic-sign-tool/issues/67', () => {
     test('handle the exception_modifier (Verbot außer Lieferverkehr)', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
         'Lieferverkehr frei',
       ])
@@ -144,7 +144,7 @@ describe('signToTags()', () => {
       )
     })
     test('handle the condition_modifier (Verbot ab 7.5 t)', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
         'Massenangabe 7,5 t',
       ])
@@ -160,7 +160,7 @@ describe('signToTags()', () => {
     // UNSUPPORTED FOR NOW
     // See https://github.com/osmberlin/osm-traffic-sign-tool/issues/67#issuecomment-2676036906
     test.skip('handle the combination of condition_modifier and exception_modifier (Verbot für Lieferverkehr ab 7,5 t)', () => {
-      const signs = signsStateByDescriptiveName(data, [
+      const signs = signsStateByDescriptiveName('DE', data, [
         'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
         'Massenangabe 7,5 t',
         'Lieferverkehr frei',

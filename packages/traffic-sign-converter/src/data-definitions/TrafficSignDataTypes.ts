@@ -4,14 +4,17 @@ export type SignStateType = Prettify<
   | (TrafficSignType & {
       recodgnizedSign: true
       matchdByAlternativeKey?: string
+      svgName: string
     })
   | (ModifierSignType & {
       recodgnizedSign: true
       matchdByAlternativeKey?: string
+      svgName: string
     })
   | (UnkownSignType & {
       recodgnizedSign: false
       matchdByAlternativeKey?: string
+      svgName: null
     })
 >
 
