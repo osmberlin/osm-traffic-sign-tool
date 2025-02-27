@@ -409,4 +409,27 @@ export const _traffic_ban: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '268',
+    signId: '268',
+    name: 'Zeichen 268',
+    descriptiveName: 'Schneeketten vorgeschrieben',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [{ key: 'snow_chains', value: 'required' }],
+      conditionalTags: [],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'traffic_sign',
+      visibility: 'search_only',
+    },
+    image: {
+      sourceUrl:
+        'https://de.m.wikipedia.org/wiki/Datei:Zeichen_268_-_Schneeketten_sind_vorgeschrieben,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
