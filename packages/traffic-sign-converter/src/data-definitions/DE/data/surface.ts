@@ -27,12 +27,12 @@ export const _surface: SignType[] = [
     osmValuePart: '299',
     signId: '299',
     name: 'Zeichen 299',
-    descriptiveName: 'Sperrflächen',
+    descriptiveName: 'Grenzmarkierung für Halt- und Parkverbote',
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {
       highwayValues: [],
-      uniqueTags: [{ key: 'area:highway', value: 'prohibited' }],
+      uniqueTags: [],
     },
     comments: [],
     compatibility: { canReceiveModifiers: false },
@@ -42,6 +42,49 @@ export const _surface: SignType[] = [
     image: {
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_299_-_Grenzmarkierung_für_Halt-_und_Parkverbote,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '295',
+    signId: '295',
+    name: 'Zeichen 295',
+    descriptiveName: 'Fahrstreifenbegrenzung und Fahrbahnbegrenzung',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+    },
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      signCategory: 'surface_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://de.wikipedia.org/wiki/Datei:Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung,_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '340',
+    signId: '340',
+    name: 'Zeichen 340',
+    descriptiveName: 'Leitlinie',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [],
+    },
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      signCategory: 'surface_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://de.wikipedia.org/wiki/Datei:Zeichen_340_%E2%80%93_Leitlinie,_StVO_1970.svg',
       licence: 'Public Domain',
     },
   },
