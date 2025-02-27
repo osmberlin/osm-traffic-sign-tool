@@ -1,5 +1,11 @@
 # @osm-traffic-signs/converter
 
+## 0.2.1
+
+- Rename methods to start with `signs` instead of `sign` when the input is an array of sign objects.
+- Add multiple traffic signs
+- Fix multiple bugs and add improvements
+
 ## 0.1.4
 
 - Rework how SVG files are behing handeled. They are now part of this package. We use [the wiki URLs in the data file](./src/data-definitions/DE/trafficSignDataDE.ts) to download > optimized > rename them and export the in a separate folder. You can use them like `import { SvgsDE } from '@osm-traffic-signs/converter/data-svgs'`. However, we had to disable the package export checks for now, because this setup using SVGs does not validate against [arethetypeswrong](https://github.com/arethetypeswrong/arethetypeswrong.github.io).
