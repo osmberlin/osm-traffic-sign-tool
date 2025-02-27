@@ -4,7 +4,7 @@ import { CopyButton } from '@app/app/_components/links/CopyButton'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
-import { signToTrafficSignTagValue, toTag } from '@osm-traffic-signs/converter'
+import { signsToTrafficSignTagValue, toTag } from '@osm-traffic-signs/converter'
 import { useCountryPrefix } from '../../store/CountryPrefixContext'
 import { Tag } from '../../wiki/Tag'
 import { WikiLinkListTrafficSignValues } from '../../wiki/WikiLinkListTrafficSignValues'
@@ -17,7 +17,7 @@ export const ResultTrafficSignTag = () => {
   // Copy signs
   const copyTrafficSignTag = toTag({
     key: 'traffic_sign',
-    value: signToTrafficSignTagValue(paramSigns, countryPrefix),
+    value: signsToTrafficSignTagValue(paramSigns, countryPrefix),
   })
   const trafficSignTag = copyTrafficSignTag?.split('=')
 

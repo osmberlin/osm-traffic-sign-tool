@@ -12,7 +12,7 @@ import type { CountryPrefixType } from '../data-definitions/countryDefinitions.j
 import { namedTrafficSignValues } from '../data-definitions/namedTrafficSignValues.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 
-export const signToTrafficSignTagValue = (
+export const signsToTrafficSignTagValue = (
   signs: SignStateType[],
   countryPrefix: CountryPrefixType | undefined,
 ) => {

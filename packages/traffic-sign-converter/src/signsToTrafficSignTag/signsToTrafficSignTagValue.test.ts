@@ -1,28 +1,28 @@
 import { describe, expect, test } from 'vitest'
 import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
-import { signToTrafficSignTagValue } from './signToTrafficSignTagValue.js'
+import { signsToTrafficSignTagValue } from './signsToTrafficSignTagValue.js'
 
-describe('signToTrafficSignTag()', () => {
+describe('signsToTrafficSignTag()', () => {
   const countryPrefixes = 'DE' satisfies CountryPrefixType
 
   test('no countryPrefixes => empty string', () => {
     const input = [{ osmValuePart: '333', kind: 'traffic_sign' }] as SignStateType[]
-    const result = signToTrafficSignTagValue(input, undefined)
+    const result = signsToTrafficSignTagValue(input, undefined)
 
     expect(result).toMatch('')
   })
 
   test('one key, primary category', () => {
     const input = [{ osmValuePart: '333', kind: 'traffic_sign' }] as SignStateType[]
-    const result = signToTrafficSignTagValue(input, countryPrefixes)
+    const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:333')
   })
 
   test('one key, secondary category', () => {
     const input = [{ osmValuePart: '10-10', kind: 'condition_modifier' }] as SignStateType[]
-    const result = signToTrafficSignTagValue(input, countryPrefixes)
+    const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:10-10')
   })
@@ -32,7 +32,7 @@ describe('signToTrafficSignTag()', () => {
       { osmValuePart: '333', kind: 'traffic_sign' },
       { osmValuePart: '444', kind: 'traffic_sign' },
     ] as SignStateType[]
-    const result = signToTrafficSignTagValue(input, countryPrefixes)
+    const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:333;444')
   })
@@ -42,7 +42,7 @@ describe('signToTrafficSignTag()', () => {
       { osmValuePart: '10-10', kind: 'condition_modifier' },
       { osmValuePart: '12-12', kind: 'exception_modifier' },
     ] as SignStateType[]
-    const result = signToTrafficSignTagValue(input, countryPrefixes)
+    const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:10-10,12-12')
   })
@@ -56,7 +56,7 @@ describe('signToTrafficSignTag()', () => {
       { osmValuePart: '555', kind: 'traffic_sign' },
       { osmValuePart: '13-13', kind: 'exception_modifier' },
     ] as SignStateType[]
-    const result = signToTrafficSignTagValue(input, countryPrefixes)
+    const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
     expect(result).toMatch('DE:333,10-10,12-12;444;555,13-13')
   })
@@ -67,7 +67,7 @@ describe('signToTrafficSignTag()', () => {
         { osmValuePart: 'city_limit', kind: 'traffic_sign' },
         { osmValuePart: '333', kind: 'traffic_sign' },
       ] as SignStateType[]
-      const result = signToTrafficSignTagValue(input, countryPrefixes)
+      const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
       expect(result).toMatch('city_limit;DE:333')
     })
@@ -77,7 +77,7 @@ describe('signToTrafficSignTag()', () => {
         { osmValuePart: '333', kind: 'traffic_sign' },
         { osmValuePart: 'city_limit', kind: 'traffic_sign' },
       ] as SignStateType[]
-      const result = signToTrafficSignTagValue(input, countryPrefixes)
+      const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
       expect(result).toMatch('DE:333;city_limit')
     })
@@ -87,7 +87,7 @@ describe('signToTrafficSignTag()', () => {
         { osmValuePart: '1010-10', kind: 'exception_modifier' },
         { osmValuePart: 'city_limit', kind: 'traffic_sign' },
       ] as SignStateType[]
-      const result = signToTrafficSignTagValue(input, countryPrefixes)
+      const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
       expect(result).toMatch('DE:1010-10;city_limit')
     })
@@ -97,7 +97,7 @@ describe('signToTrafficSignTag()', () => {
         { osmValuePart: 'city_limit', kind: 'traffic_sign' },
         { osmValuePart: '1010-10', kind: 'exception_modifier' },
       ] as SignStateType[]
-      const result = signToTrafficSignTagValue(input, countryPrefixes)
+      const result = signsToTrafficSignTagValue(input, countryPrefixes)
 
       expect(result).toMatch('city_limit;DE:1010-10')
     })

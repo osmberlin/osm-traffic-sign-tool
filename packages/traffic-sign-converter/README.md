@@ -15,12 +15,12 @@ npm install @osm-traffic-signs/converter
 
 ## Main methods
 
-| Function               | Input                         | Output                        |
-| ---------------------- | ----------------------------- | ----------------------------- |
-| `trafficSignTagToSign` | `traffic_sign=DE:250,1022-10` | `[{ /* Sign Object */ }]`     |
-| `tagsToSign`           | `vehicle=no+bicycle=yes`      | `[{ /* Sign Object */ }]`     |
-| `signToTrafficSignTag` | `[{ /* Sign Object */ }]`     | `traffic_sign=DE:250,1022-10` |
-| `signToTags`           | `[{ /* Sign Object */ }]`     | `vehicle=no+bicycle=yes`      |
+| Function                | Input                         | Output                        |
+| ----------------------- | ----------------------------- | ----------------------------- |
+| `trafficSignTagToSign`  | `traffic_sign=DE:250,1022-10` | `[{ /* Sign Object */ }]`     |
+| `tagsToSign`            | `vehicle=no+bicycle=yes`      | `[{ /* Sign Object */ }]`     |
+| `signsToTrafficSignTag` | `[{ /* Sign Object */ }]`     | `traffic_sign=DE:250,1022-10` |
+| `signToTags`            | `[{ /* Sign Object */ }]`     | `vehicle=no+bicycle=yes`      |
 
 ## Example usage
 

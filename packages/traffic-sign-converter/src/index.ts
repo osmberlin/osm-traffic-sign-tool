@@ -3,7 +3,7 @@ export { tagsToSigns } from './tagsToSigns/tagsToSigns.js'
 export { trafficSignTagToSigns } from './trafficSignTagToSigns/trafficSignTagToSigns.js'
 
 // To Tag
-export { signToTrafficSignTagValue } from './signToTrafficSignTag/signToTrafficSignTagValue.js'
+export { signsToTrafficSignTagValue } from './signsToTrafficSignTag/signsToTrafficSignTagValue.js'
 
 // To Tags
 export { signToComments } from './signToTags/signToComments.js'

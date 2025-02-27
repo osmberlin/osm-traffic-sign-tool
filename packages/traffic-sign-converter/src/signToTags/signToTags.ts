@@ -1,6 +1,6 @@
 import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
-import { signToTrafficSignTagValue } from '../signToTrafficSignTag/signToTrafficSignTagValue.js'
+import { signsToTrafficSignTagValue } from '../signsToTrafficSignTag/signsToTrafficSignTagValue.js'
 import { collectAccessTags } from './utils/collectAccessTags.js'
 import { collectConditionalTags } from './utils/collectConditionalTags.js'
 import { collectHighwayValues } from './utils/collectHighwayValues.js'
@@ -50,7 +50,7 @@ export const signToTags = (
   }
 
   // Add `traffic_sign=*`
-  tagMap.set('traffic_sign', signToTrafficSignTagValue(signs, countryPrefix))
+  tagMap.set('traffic_sign', signsToTrafficSignTagValue(signs, countryPrefix))
 
   // Cleanup `highway=[]`
   if (tagMap.get('highway')?.length === 0) {

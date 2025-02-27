@@ -3,7 +3,7 @@ import {
   combineSignIdSignValue,
   CountryPrefixType,
   SignStateType,
-  signToTrafficSignTagValue,
+  signsToTrafficSignTagValue,
   splitSignIdSignValue,
   trafficSignTagToSigns,
 } from '@osm-traffic-signs/converter'
@@ -20,7 +20,7 @@ const parse = (input: string, countryPrefix: CountryPrefixType | undefined) => {
 
 // From Data to String
 const serialize = (trafficSigns: SignStateType[], countryPrefix: CountryPrefixType | undefined) => {
-  return signToTrafficSignTagValue(trafficSigns, countryPrefix)
+  return signsToTrafficSignTagValue(trafficSigns, countryPrefix)
 }
 
 export const useParamSigns = () => {
