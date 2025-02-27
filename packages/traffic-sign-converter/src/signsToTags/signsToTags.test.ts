@@ -2,9 +2,9 @@ import { describe, expect, test } from 'vitest'
 import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 import { signsStateByDescriptiveName } from '../utils/signsByDescriptiveName.js'
-import { signToTags } from './signToTags.js'
+import { signsToTags } from './signsToTags.js'
 
-describe('signToTags()', () => {
+describe('signsToTags()', () => {
   const data = countryDefinitions.DE
 
   describe('highway tag', () => {
@@ -14,19 +14,19 @@ describe('signToTags()', () => {
         'Gemeinsamer Fuß- und Radweg',
         'Getrennter Rad- und Gehweg',
       ])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('highway')).toMatchObject(['footway', 'path', 'cycleway'])
     })
 
     test('No empty list', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Zulässige Höchstgeschwindigkeit'])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.has('highway')).toBeFalsy()
     })
 
     test('Handle valueTemplate', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Tempo ??-Zone'])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('zone:maxspeed')).toBe('DE:47')
     })
   })
@@ -34,7 +34,7 @@ describe('signToTags()', () => {
   describe('access tag', () => {
     test('Merged access tags', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Fahrradstraße', 'Anlieger frei'])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('vehicle')).toBe('destination')
     })
   })
@@ -42,7 +42,7 @@ describe('signToTags()', () => {
   describe('unique tags', () => {
     test('One sign with unique tags', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Fahrradstraße'])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('bicycle_road')).toBe('yes')
       expect(result.get('bicycle')).toBe('designated')
     })
@@ -60,7 +60,7 @@ describe('signToTags()', () => {
           tagRecommendations: { uniqueTags: [{ key: 'foo', value: 'bar2' }] },
         },
       ] as SignStateType[]
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('foo')).toBe('bar2')
     })
 
@@ -80,7 +80,7 @@ describe('signToTags()', () => {
           tagRecommendations: { highwayValues: ['winner2'] },
         },
       ] as SignStateType[]
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('highway')).toStrictEqual(['winner1', 'winner2'])
     })
 
@@ -103,7 +103,7 @@ describe('signToTags()', () => {
           },
         },
       ] as SignStateType[]
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('vehicle')).toBe('winner2')
       expect(result.get('bicycle')).toBe('this-is-intended')
     })
@@ -114,7 +114,7 @@ describe('signToTags()', () => {
       const signs = signsStateByDescriptiveName('DE', data, [
         'Überholverbot für Kraftfahrzeuge aller Art',
       ])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('overtaking')).toBe('no')
     })
 
@@ -123,7 +123,7 @@ describe('signToTags()', () => {
         'Überholverbot für Kraftfahrzeuge aller Art',
         'Zeitliche Beschräkung',
       ])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result.get('overtaking')).toBeUndefined()
       expect(result.get('overtaking:conditional')).toBe('no @ (16-18)')
     })
@@ -135,7 +135,7 @@ describe('signToTags()', () => {
         'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
         'Lieferverkehr frei',
       ])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result).toMatchObject(
         new Map([
           ['hgv', 'delivery'],
@@ -148,7 +148,7 @@ describe('signToTags()', () => {
         'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t…',
         'Massenangabe 7,5 t',
       ])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result).toMatchObject(
         new Map([
           ['hgv', 'no'],
@@ -165,7 +165,7 @@ describe('signToTags()', () => {
         'Massenangabe 7,5 t',
         'Lieferverkehr frei',
       ])
-      const result = signToTags(signs, 'DE')
+      const result = signsToTags(signs, 'DE')
       expect(result).toMatchObject(
         new Map([
           ['hgv:conditional', 'delivery @ (maxweightrating>7.5)'],

@@ -1,11 +1,11 @@
 'use client'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
-import { signToComments } from '@osm-traffic-signs/converter'
+import { signsToComments } from '@osm-traffic-signs/converter'
 import { WikiLinkify } from '../../wiki/WikiLinkify'
 
 export const ResultComments = () => {
   const { paramSigns } = useParamSigns()
-  const signsCommentsMap = signToComments(paramSigns)
+  const signsCommentsMap = signsToComments(paramSigns)
   return (
     <div className="mt-10 space-y-2">
       <h3 className="text-lg font-light uppercase text-stone-50">Notes</h3>

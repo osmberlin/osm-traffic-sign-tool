@@ -2,7 +2,7 @@
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
-import { signToTags, toTag } from '@osm-traffic-signs/converter'
+import { signsToTags, toTag } from '@osm-traffic-signs/converter'
 import { useCountryPrefixWithFallback } from '../../store/CountryPrefixContext'
 import { TagList } from './ResultTagRecommendations/TagList'
 
@@ -10,7 +10,7 @@ export const ResultTagRecommendations = () => {
   const { countryPrefix } = useCountryPrefixWithFallback()
   const { paramSigns } = useParamSigns()
 
-  const aggregatedTagsMap = signToTags(paramSigns, countryPrefix)
+  const aggregatedTagsMap = signsToTags(paramSigns, countryPrefix)
   const copyAllTags = Array.from(aggregatedTagsMap)
     .map(([key, value]) => toTag({ key, value: Array.isArray(value) ? value.join(';') : value }))
     .join('\n')

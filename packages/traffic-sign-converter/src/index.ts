@@ -6,8 +6,8 @@ export { trafficSignTagToSigns } from './trafficSignTagToSigns/trafficSignTagToS
 export { signsToTrafficSignTagValue } from './signsToTrafficSignTag/signsToTrafficSignTagValue.js'
 
 // To Tags
-export { signToComments } from './signToTags/signToComments.js'
-export { signToTags } from './signToTags/signToTags.js'
+export { signsToComments as signsToComments } from './signsToTags/signsToComments.js'
+export { signsToTags as signsToTags } from './signsToTags/signsToTags.js'
 
 // Data Definitions
 export * from './data-definitions/countryDefinitions.js'

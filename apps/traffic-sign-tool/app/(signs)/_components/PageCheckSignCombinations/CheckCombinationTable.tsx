@@ -7,7 +7,11 @@ import {
   TableHeader,
   TableRow,
 } from '@app/app/_components/catalyst/table'
-import { SignStateType, signToTags, signsToTrafficSignTagValue } from '@osm-traffic-signs/converter'
+import {
+  SignStateType,
+  signsToTags,
+  signsToTrafficSignTagValue,
+} from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import { useState } from 'react'
 import { PackageSvgTrafficSign } from '../PackageSvgTrafficSign'
@@ -104,7 +108,7 @@ export const CheckCombinationTable = ({ list }: Props) => {
                       : 'text-xs leading-snug text-gray-300 hover:text-gray-600',
                   )}
                 >
-                  <TagList tags={signToTags(signs, countryPrefix)} />
+                  <TagList tags={signsToTags(signs, countryPrefix)} />
                 </TableCell>
                 <TableCell className="align-top text-sm leading-snug">
                   {allowFeedback && (

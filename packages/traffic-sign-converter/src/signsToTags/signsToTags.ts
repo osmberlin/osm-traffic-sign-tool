@@ -9,7 +9,7 @@ import { sortTags } from './utils/sortTags.js'
 import { splitIntoSignGroups } from './utils/splitIntoSignGroups.js'
 import { uniqueArray } from './utils/uniqueArray.js'
 
-export const signToTags = (
+export const signsToTags = (
   signs: SignStateType[],
   countryPrefix: CountryPrefixType | undefined,
 ) => {

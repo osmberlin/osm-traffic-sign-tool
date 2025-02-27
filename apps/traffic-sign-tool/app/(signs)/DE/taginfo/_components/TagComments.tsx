@@ -1,7 +1,7 @@
 'use client'
 import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { WikiLinkify } from '@app/app/(signs)/_components/wiki/WikiLinkify'
-import { signToComments, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
+import { signsToComments, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 
 type Props = { value: string }
 
@@ -9,7 +9,7 @@ type Props = { value: string }
 export const TagComments = ({ value }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
   const signs = trafficSignTagToSigns(value, countryPrefix)
-  const signsCommentsMap = signToComments(signs)
+  const signsCommentsMap = signsToComments(signs)
 
   return (
     <div className="break-all">

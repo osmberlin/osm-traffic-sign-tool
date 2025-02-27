@@ -20,7 +20,12 @@ npm install @osm-traffic-signs/converter
 | `trafficSignTagToSign`  | `traffic_sign=DE:250,1022-10` | `[{ /* Sign Object */ }]`     |
 | `tagsToSign`            | `vehicle=no+bicycle=yes`      | `[{ /* Sign Object */ }]`     |
 | `signsToTrafficSignTag` | `[{ /* Sign Object */ }]`     | `traffic_sign=DE:250,1022-10` |
-| `signToTags`            | `[{ /* Sign Object */ }]`     | `vehicle=no+bicycle=yes`      |
+| `signsToTags`           | `[{ /* Sign Object */ }]`     | `vehicle=no+bicycle=yes`      |
+| `signsToComments`       | `[{ /* Sign Object */ }]`     | Opt. Array of comments        |
+
+## Main data
+
+Use `countryDefinitions` to access the traffic sign objects per country.
 
 ## Example usage
 

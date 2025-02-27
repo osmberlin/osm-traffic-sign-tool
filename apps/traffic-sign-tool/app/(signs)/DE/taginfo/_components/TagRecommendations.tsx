@@ -1,7 +1,7 @@
 'use client'
 import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { Tag } from '@app/app/(signs)/_components/wiki/Tag'
-import { signToTags, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
+import { signsToTags, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 
 type Props = { value: string }
 
@@ -9,7 +9,7 @@ type Props = { value: string }
 export const TagRecommendations = ({ value }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
   const signs = trafficSignTagToSigns(value, countryPrefix)
-  const aggregatedTagsMap = signToTags(signs, countryPrefix)
+  const aggregatedTagsMap = signsToTags(signs, countryPrefix)
 
   return (
     <ul>
