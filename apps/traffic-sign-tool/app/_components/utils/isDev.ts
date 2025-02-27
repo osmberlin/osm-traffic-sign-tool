@@ -1,3 +1,1 @@
-export const isDev = () => {
-  return process.env.NODE_ENV === 'development'
-}
+export const isDev = process.env.NEXT_PUBLIC_ENV === 'development'
