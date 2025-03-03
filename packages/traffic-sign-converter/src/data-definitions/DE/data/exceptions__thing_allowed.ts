@@ -473,4 +473,24 @@ export const _exceptions__thing_allowed: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '1012-32',
+    signId: '1012-32',
+    name: 'Zusatzzeichen 1012-32',
+    descriptiveName: 'Radfahrer absteigen',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'bicycle', value: 'dismount' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'exception_modifier',
+    },
+    image: {
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1012-32_-_Radfahrer_absteigen_(420x231),_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
