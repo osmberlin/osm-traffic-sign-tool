@@ -25,6 +25,7 @@
     "@internal/taginfo": "workspace:*",
     "@internal/wiki": "workspace:*",
     "@osm-traffic-signs/converter": "workspace:*",
+    "babel-plugin-react-compiler": "19.0.0-beta-40c6c23-20250301",
     "clsx": "^2.1.1",
     "framer-motion": "^12.4.7",
     "next": "15.1.7",
