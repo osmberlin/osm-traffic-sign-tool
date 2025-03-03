@@ -63,6 +63,47 @@ export const _hazard: SignType[] = [
     },
   },
   {
+    osmValuePart: '101-15',
+    signId: '101-15',
+    name: 'Zeichen 101-15',
+    descriptiveName: 'Steinschlag',
+    description: 'Aufstellung rechts',
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_101-15_-_Steinschlag,_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '101-25',
+    signId: '101-25',
+    name: 'Zeichen 101-25',
+    descriptiveName: 'Steinschlag',
+    description: 'Aufstellung links',
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'hazard_sign',
+      visibility: 'search_only',
+    },
+    image: {
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_101-25_-_Steinschlag,_Aufstellung_links,_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '103-20',
     signId: '103-20',
     name: 'Zeichen 103-20',
