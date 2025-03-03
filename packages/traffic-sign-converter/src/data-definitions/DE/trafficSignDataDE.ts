@@ -6,6 +6,7 @@ import { _exceptions__thing_allowed } from './data/exceptions__thing_allowed.js'
 import { _hazard } from './data/hazard.js'
 import { _infrastructure } from './data/infrastructure.js'
 import { _notice } from './data/notice.js'
+import { _numbers } from './data/numbers.js'
 import { _overtaking } from './data/overtaking.js'
 import { _speed_maxspeed_end } from './data/speed_maxspeed_end.js'
 import { _speed_maxspeed_start } from './data/speed_maxspeed_start.js'
@@ -31,6 +32,7 @@ export const trafficSignDataDE: SignType[] = [
   ..._conditions__other,
   ..._surface,
   ..._hazard,
+  ..._numbers,
 
   // MISC SIGNS that are not grouped yet
   {
