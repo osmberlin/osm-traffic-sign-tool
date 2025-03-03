@@ -10,6 +10,22 @@
 
 - See https://github.com/osmberlin/osm-traffic-sign-tool/issues/40
 
+### Design decisions
+
+- The tool gives recommendations; mappers still have to verify.
+- If a sign has multiple values / spellings recommend one and rewrite the result accordingly.
+- The tool recommends the official ID for most signs that are listed in the law.
+- The tool recommends the ID plus bracked notation for less common signs that are mentioned in the law with an undefined list IDs.
+  See [countryAlternativeKeyFormats.ts](./packages/traffic-sign-converter/src/data-definitions/countryAlternativeKeyFormats.ts) for more.
+- Unknown signs are listed in the UI and `traffic_sign` value but they are not part of the tagging recommendations.
+- To generate tag recommendations signs are first split in groups of primary and modifier signs. Modifications are applied per group.
+- Only the latest ID of a sign is knows. Signs IDs that where reassigned in the past are not handled in a special way.
+
+Limitations:
+
+- Using more than one modifying sign will result in imprecise tagging recommendations.
+- See Github Issues for more.
+
 ## Development
 
 ```bash
