@@ -2,12 +2,13 @@
 export { tagsToSigns } from './tagsToSigns/tagsToSigns.js'
 export { trafficSignTagToSigns } from './trafficSignTagToSigns/trafficSignTagToSigns.js'
 
-// To Tag
+// To `traffic_sign`-Tag
 export { signsToTrafficSignTagValue } from './signsToTrafficSignTag/signsToTrafficSignTagValue.js'
 
 // To Tags
-export { signsToComments as signsToComments } from './signsToTags/signsToComments.js'
-export { signsToTags as signsToTags } from './signsToTags/signsToTags.js'
+export { showSignsToTagsWarning } from './signsToTags/showSignsToTagsWarning.js'
+export { signsToComments } from './signsToTags/signsToComments.js'
+export { signsToTags } from './signsToTags/signsToTags.js'
 
 // Data Definitions
 export * from './data-definitions/countryDefinitions.js'
