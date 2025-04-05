@@ -2,16 +2,16 @@ import type { SignType } from '../../TrafficSignDataTypes.js'
 
 export const _conditions__time: SignType[] = [
   {
-    osmValuePart: '1040-30[16-18]',
+    osmValuePart: '1040-30[16:00-18:00]',
     signId: '1040-30',
     name: 'Zusatzzeichen 1040-30',
     descriptiveName: 'Zeitliche Beschräkung',
     description: null,
     kind: 'condition_modifier',
-    signValue: '16-18',
+    signValue: '16:00-18:00',
     valuePrompt: {
       prompt: 'Uhrzeit von-bis',
-      defaultValue: '16-18',
+      defaultValue: '16:00-18:00',
       format: 'time_restriction',
     },
     tagRecommendations: {
@@ -27,16 +27,16 @@ export const _conditions__time: SignType[] = [
     },
   },
   {
-    osmValuePart: '1040-31[08-11,16-18]',
+    osmValuePart: '1040-31[08:00-11:00,16:00-18:00]',
     signId: '1040-31',
     name: 'Zusatzzeichen 1040-31',
     descriptiveName: 'Zeitliche Beschräkung',
     description: null,
     kind: 'condition_modifier',
-    signValue: '08-11,16-18',
+    signValue: '08:00-11:00,16:00-18:00',
     valuePrompt: {
       prompt: 'Uhrzeit von-bis, von-bis',
-      defaultValue: '08-11,16-18',
+      defaultValue: '08:00-11:00,16:00-18:00',
       format: 'opening_hours',
     },
     tagRecommendations: {
@@ -74,16 +74,16 @@ export const _conditions__time: SignType[] = [
     },
   },
   {
-    osmValuePart: '1042-31[Mo-Sa 18-19]',
+    osmValuePart: '1042-31[Mo-Sa 18:00-19:00]',
     signId: '1042-31',
     name: 'Zusatzzeichen 1042-31',
     descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis',
     description: null,
     kind: 'condition_modifier',
-    signValue: 'Mo-Sa 18-19',
+    signValue: 'Mo-Sa 18:00-19:00',
     valuePrompt: {
       prompt: 'Werktags, Uhrzeit von-bis',
-      defaultValue: 'Mo-Sa 18-19',
+      defaultValue: 'Mo-Sa 18:00-19:00',
       format: 'opening_hours',
     },
     tagRecommendations: {
@@ -102,16 +102,16 @@ export const _conditions__time: SignType[] = [
     },
   },
   {
-    osmValuePart: '1042-32[PH off;Mo-Sa 8:30-11:30,16-18]',
+    osmValuePart: '1042-32[PH off;Mo-Sa 8:30-11:30,16:00-18:00]',
     signId: '1042-32',
     name: 'Zusatzzeichen 1042-32',
     descriptiveName: 'Zeitliche Beschräkung: werktags, von-bis, von-bis',
     description: null,
     kind: 'condition_modifier',
-    signValue: 'PH off;Mo-Sa 8:30-11:30,16-18',
+    signValue: 'PH off;Mo-Sa 8:30-11:30,16:00-18:00',
     valuePrompt: {
       prompt: 'Werktags, Uhrzeit von-bis, von-bis',
-      defaultValue: 'PH off;Mo-Sa 8:30-11:30,16-18',
+      defaultValue: 'PH off;Mo-Sa 8:30-11:30,16:00-18:00',
       format: 'opening_hours',
     },
     tagRecommendations: {
@@ -130,16 +130,16 @@ export const _conditions__time: SignType[] = [
     },
   },
   {
-    osmValuePart: '1042-33[Mo-Fr 16-18]',
+    osmValuePart: '1042-33[Mo-Fr 16:00-18:00]',
     signId: '1042-33',
     name: 'Zusatzzeichen 1042-33',
     descriptiveName: 'Zeitliche Beschräkung: Mo-Fr, von-bis',
     description: null,
     kind: 'condition_modifier',
-    signValue: 'Mo-Fr 16-18',
+    signValue: 'Mo-Fr 16:00-18:00',
     valuePrompt: {
       prompt: 'Mo-Fr, Uhrzeit von-bis',
-      defaultValue: 'Mo-Fr 16-18',
+      defaultValue: 'Mo-Fr 16:00-18:00',
       format: 'opening_hours',
     },
     tagRecommendations: {
@@ -158,16 +158,16 @@ export const _conditions__time: SignType[] = [
     },
   },
   {
-    osmValuePart: '1042-34[Tu,Th,Fr 16-18]',
+    osmValuePart: '1042-34[Tu,Th,Fr 16:00-18:00]',
     signId: '1042-34',
     name: 'Zusatzzeichen 1042-34',
     descriptiveName: 'Zeitliche Beschräkung: Di,Do,Fr, von-bis',
     description: null,
     kind: 'condition_modifier',
-    signValue: 'Tu,Th,Fr 16-18',
+    signValue: 'Tu,Th,Fr 16:00-18:00',
     valuePrompt: {
       prompt: 'Tu,Th,Fr, Uhrzeit von-bis',
-      defaultValue: 'Tu,Th,Fr 16-18',
+      defaultValue: 'Tu,Th,Fr 16:00-18:00',
       format: 'opening_hours',
     },
     tagRecommendations: {
@@ -186,16 +186,16 @@ export const _conditions__time: SignType[] = [
     },
   },
   {
-    osmValuePart: '1042-35[Su,PH 6-22]',
+    osmValuePart: '1042-35[Su,PH 6:00-22:00]',
     signId: '1042-35',
     name: 'Zusatzzeichen 1042-35',
     descriptiveName: 'Zeitliche Beschräkung: So- und Feiertage, von-bis',
     description: null,
     kind: 'condition_modifier',
-    signValue: 'Su,PH 6-22',
+    signValue: 'Su,PH 6:00-22:00',
     valuePrompt: {
       prompt: 'So- und Feiertage, Uhrzeit von-bis',
-      defaultValue: 'Su,PH 6-22',
+      defaultValue: 'Su,PH 6:00-22:00',
       format: 'opening_hours',
     },
     tagRecommendations: {
