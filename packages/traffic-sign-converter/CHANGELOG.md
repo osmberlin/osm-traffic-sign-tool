@@ -1,5 +1,9 @@
 # @osm-traffic-signs/converter
 
+## 0.2.6
+
+- Fix syntax for time restriction signs
+
 ## 0.2.1
 
 - Rename methods to start with `signs` instead of `sign` when the input is an array of sign objects.
