@@ -1,5 +1,6 @@
 'use client'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import { useEffect, useState } from 'react'
 
@@ -66,7 +67,7 @@ export const SelectedSignValuePrompt = ({ sign }: Props) => {
   if (!('valuePrompt' in sign && sign.valuePrompt)) return null
 
   return (
-    <form className="mx-2 mt-2 rounded-sm border border-stone-400/50 p-1 text-sm leading-tight">
+    <form className="group mx-2 mt-2 rounded-sm border border-stone-400/50 p-1 text-sm leading-tight">
       <label htmlFor={sign.osmValuePart} className="break-word">
         {sign.valuePrompt.prompt}:
       </label>
@@ -79,6 +80,16 @@ export const SelectedSignValuePrompt = ({ sign }: Props) => {
         value={value}
         className="shadow-xs block w-full rounded-md border-0 px-1 py-1.5 text-center text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:leading-6"
       />
+      {(sign.valuePrompt.format === 'opening_hours' ||
+        sign.valuePrompt.format === 'time_restriction') && (
+        <p className="mt-2 text-gray-500 group-hover:text-gray-800">
+          Please use {/* TODO: Make URL translatable */}
+          <ExternalLink href="https://wiki.openstreetmap.org/wiki/DE:Conditional_restrictions">
+            the Wiki on conditional restrictions
+          </ExternalLink>{' '}
+          to check the correct format .
+        </p>
+      )}
     </form>
   )
 }
