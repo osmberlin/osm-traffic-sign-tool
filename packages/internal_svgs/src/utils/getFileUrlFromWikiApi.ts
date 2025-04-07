@@ -27,6 +27,7 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
   }
 
   const apiUrl = `${sourceOrigin}/w/api.php`
+  // @ts-expect-error TODO why does this fail out of the blue? It follows https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams#using_urlsearchparams
   const params = new URLSearchParams({
     action: 'query',
     titles: filePage,
