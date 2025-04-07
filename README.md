@@ -39,6 +39,6 @@ Glossar:
 
 ### Adding a sign with new image
 
-Run `bun script-new-sign.ts` from the root folder to update the svgs, data and run the app.
+Run `bun script-new-data.ts` from the root folder to update the svgs, data and run the app.
 
 Alternatively, the [script lists the separate commands](./script-new-sign.ts)
