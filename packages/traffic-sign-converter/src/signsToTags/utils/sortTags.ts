@@ -48,6 +48,7 @@ const sortedAccessKeys = [
   'taxi',
   'minibus',
   'share_taxi',
+  'tram',
   'hov',
   'carpool',
   'car_sharing',
