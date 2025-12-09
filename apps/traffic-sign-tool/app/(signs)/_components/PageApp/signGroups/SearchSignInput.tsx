@@ -28,10 +28,11 @@ export const SearchSignInput = () => {
     }
   }, [])
 
-  const [isMac, setIsMac] = useState(false)
-  useEffect(() => {
-    setIsMac(/Mac|iPod|iPhone|iPad/.test(window.navigator?.userAgent))
-  }, [])
+  const [isMac] = useState(() =>
+    typeof window !== 'undefined'
+      ? /Mac|iPod|iPhone|iPad/.test(window.navigator?.userAgent)
+      : false,
+  )
 
   return (
     <div className="relative -mt-1.5">

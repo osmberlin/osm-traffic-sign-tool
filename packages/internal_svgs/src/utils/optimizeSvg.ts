@@ -1,5 +1,4 @@
-import { optimize } from 'svgo'
-import type { XastElement } from 'svgo/lib/types.js'
+import { optimize, type XastElement } from 'svgo'
 
 type Props = { svgString: string; signId: string; signTitle: string }
 

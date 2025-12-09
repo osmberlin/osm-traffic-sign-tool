@@ -26,9 +26,9 @@
   "devDependencies": {
     "@internal/svgs": "workspace:*",
     "@osm-traffic-signs/converter": "workspace:*",
-    "cheerio": "^1.0.0",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.7.3",
-    "zod": "^3.24.2"
+    "cheerio": "^1.1.2",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3",
+    "zod": "^4.1.13"
   }
 }

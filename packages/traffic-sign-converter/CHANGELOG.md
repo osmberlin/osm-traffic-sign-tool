@@ -1,5 +1,9 @@
 # @osm-traffic-signs/converter
 
+## Unreleased
+
+- Update all dependencies to latest versions
+
 ## 0.2.6
 
 - Fix syntax for time restriction signs

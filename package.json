@@ -10,23 +10,26 @@
     "bleach": "turbo run bleach && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky"
+    "prepare": "husky",
+    "updatePackages:major": "pnpm dlx taze -r major --includeLocked --write && pnpm install",
+    "updatePackages:minor": "pnpm dlx taze -r minor --includeLocked --write && pnpm install"
   },
   "devDependencies": {
     "@colors/colors": "^1.6.0",
     "@types/bun": "latest",
-    "eslint": "^9.21.0",
+    "eslint": "^9.39.1",
     "husky": "^9.1.7",
-    "prettier": "^3.5.2",
-    "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "svgo": "^3.3.2",
-    "turbo": "^2.4.4",
-    "vitest": "^3.0.6"
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "svgo": "^4.0.0",
+    "turbo": "^2.6.3",
+    "vitest": "^4.0.15"
   },
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.25.0",
   "engines": {
-    "node": ">=22.9.0"
+    "node": ">=22.21.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
