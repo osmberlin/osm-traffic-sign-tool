@@ -10,6 +10,10 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+## 2.1.5
+
+_2025-12-09_
+
 - Update all dependencies to latest versions
 
 ## 2.1.4

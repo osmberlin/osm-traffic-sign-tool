@@ -1,6 +1,6 @@
 {
   "name": "@osm-traffic-signs/converter",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Convert traffic sign IDs to OSM tags; suggest a traffic_sign-tag based on OSM tags.",
   "license": "AGPL-3.0-or-later",
   "scripts": {

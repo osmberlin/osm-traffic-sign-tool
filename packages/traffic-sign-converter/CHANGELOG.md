@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.2.7
+
+_2025-12-09_
+
 - Update all dependencies to latest versions
 
 ## 0.2.6
