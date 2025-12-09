@@ -12,7 +12,7 @@
     "build:transfer-svgs": "copyfiles -u 4 '../internal_svgs/src/data-svgs/**/*' './src/data-svgs'",
     "build:ts": "tsc",
     "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
-    "build:copy-svgs": "copyfiles -u 2 './src/data-svgs/**/*' './dist/data-svgs'",
+    "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
     "_check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run test",
     "check": "pnpm run format && pnpm run lint && pnpm run test",
     "format": "prettier --write .",
