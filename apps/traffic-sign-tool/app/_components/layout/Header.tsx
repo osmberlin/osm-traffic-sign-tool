@@ -12,11 +12,11 @@ export const Header = () => {
   const version = packageJson?.version || 'unknown'
 
   return (
-    <header className="mx-auto mb-6 mt-5 flex max-w-prose flex-col flex-wrap overflow-hidden px-4 sm:px-6 md:mt-10 lg:w-[65ch] lg:max-w-prose lg:px-8">
+    <header className="mx-auto mt-5 mb-6 flex max-w-prose flex-col flex-wrap overflow-hidden px-4 sm:px-6 md:mt-10 lg:w-[65ch] lg:max-w-prose lg:px-8">
       <h1>
         <Link
           className={clsx(
-            'mb-3 flex items-center gap-3 text-xl font-light leading-tight text-stone-400 decoration-violet-700 underline-offset-4 hover:underline md:text-3xl',
+            'mb-3 flex items-center gap-3 text-xl leading-tight font-light text-stone-400 decoration-violet-700 underline-offset-4 hover:underline md:text-3xl',
             isHome ? 'cursor-auto hover:no-underline' : '',
           )}
           aria-disabled={isHome}
@@ -26,7 +26,7 @@ export const Header = () => {
           <Image src={svgLogo} alt="" width={48} height={48} />{' '}
           <span>
             OSM Traffic Sign Tool 2{' '}
-            <span className="rounded-sm bg-stone-300 px-2 pt-1 text-xl uppercase text-stone-800 md:text-2xl">
+            <span className="rounded-sm bg-stone-300 px-2 pt-1 text-xl text-stone-800 uppercase md:text-2xl">
               Beta
             </span>{' '}
             <small className="text-xs">{version}</small>

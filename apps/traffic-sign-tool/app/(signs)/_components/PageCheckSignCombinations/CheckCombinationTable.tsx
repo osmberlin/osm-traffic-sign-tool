@@ -113,7 +113,7 @@ export const CheckCombinationTable = ({ list }: Props) => {
                 <TableCell className="align-top text-sm leading-snug">
                   {allowFeedback && (
                     <>
-                      <div className="space-y-4 sm:flex sm:items-center sm:space-x-4 sm:space-y-0">
+                      <div className="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-4">
                         {feedbackOptions.map((option) => {
                           return (
                             <div key={option.key} className="flex items-center">
@@ -123,7 +123,7 @@ export const CheckCombinationTable = ({ list }: Props) => {
                                 onChange={() => handleStatusChange(tagValue, option.key)}
                                 name={`feedback-${tagValue}`}
                                 type="radio"
-                                className="not-checked:before:hidden relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
+                                className="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden"
                               />
                               <label htmlFor={option.key} className="ml-2 block">
                                 {option.label}

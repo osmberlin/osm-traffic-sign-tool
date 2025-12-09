@@ -36,7 +36,7 @@ export default async function WikiPage() {
 
   return (
     <article className="rounded-sm bg-stone-300 px-6 py-4">
-      <h2 className="my-4 text-3xl font-light uppercase text-black">
+      <h2 className="my-4 text-3xl font-light text-black uppercase">
         All Wiki Signs {innerTrafficSignsWiki.length} — {missingSignCount} missing
       </h2>
       <p>
@@ -71,7 +71,7 @@ export default async function WikiPage() {
                             width={100}
                             src={sign?.imageSvg}
                             alt={sign.name}
-                            className="absolute right-1 top-1 size-20"
+                            className="absolute top-1 right-1 size-20"
                             title="Image from source URL"
                           />
                         ) : (
@@ -89,7 +89,7 @@ export default async function WikiPage() {
                     <div className="w-96 overflow-x-scroll">
                       <PackageSvgTrafficSign
                         sign={toolSign}
-                        className="absolute right-1 top-1 size-20"
+                        className="absolute top-1 right-1 size-20"
                       />
                       <Tablelize key={toolSign.osmValuePart} data={toolSign} />
                     </div>

@@ -34,7 +34,7 @@ export const SelectedSign = ({ sign }: Props) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       style={{ boxShadow, y }}
-      className="group/sign flex h-full w-full select-none items-start justify-start"
+      className="group/sign flex h-full w-full items-start justify-start select-none"
       dragListener={false}
       dragControls={controls}
     >

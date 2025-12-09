@@ -17,7 +17,7 @@ export const ResultTagRecommendations = () => {
 
   return (
     <>
-      <div className="mb-4 mt-10 flex items-center justify-between">
+      <div className="mt-10 mb-4 flex items-center justify-between">
         <h2 className="text-lg font-light uppercase">
           Recommended {/* <code>highway</code> */}
           tags

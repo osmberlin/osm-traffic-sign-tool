@@ -11,7 +11,7 @@ export const StateHelper = ({ state }: Props) => {
   }
 
   return (
-    <div className="border-xl absolute right-1 top-1 z-10 max-h-screen max-w-lg rounded-sm bg-pink-300 px-1 py-0.5 text-xs shadow-xl open:top-1 open:overflow-scroll print:hidden">
+    <div className="border-xl absolute top-1 right-1 z-10 max-h-screen max-w-lg rounded-sm bg-pink-300 px-1 py-0.5 text-xs shadow-xl open:top-1 open:overflow-scroll print:hidden">
       {Object.entries(state).map(([nameKey, stateValues]) => {
         return (
           <details key={nameKey} className="group">

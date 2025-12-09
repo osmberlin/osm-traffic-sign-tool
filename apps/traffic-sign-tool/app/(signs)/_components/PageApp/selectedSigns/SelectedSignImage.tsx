@@ -23,7 +23,7 @@ export const SelectedSignImage = ({ sign }: Props) => {
 
           {showBanderole && (
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="font-condensed shadow-xs w-full -rotate-12 rounded-sm bg-amber-100/95 px-3 pt-1 text-center text-4xl font-normal text-amber-900">
+              <div className="font-condensed w-full -rotate-12 rounded-sm bg-amber-100/95 px-3 pt-1 text-center text-4xl font-normal text-amber-900 shadow-xs">
                 {sign.signValue}
               </div>
             </div>
@@ -31,7 +31,7 @@ export const SelectedSignImage = ({ sign }: Props) => {
         </div>
       ) : (
         <div className="mx-auto flex size-20 items-center justify-center rounded-sm border border-stone-800 bg-stone-600 pt-1 text-stone-50">
-          <code className="whitespace-nowrap tracking-tighter">?</code>
+          <code className="tracking-tighter whitespace-nowrap">?</code>
           <br />
         </div>
       )}

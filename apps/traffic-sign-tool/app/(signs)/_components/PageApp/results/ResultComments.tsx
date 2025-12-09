@@ -8,13 +8,13 @@ export const ResultComments = () => {
   const signsCommentsMap = signsToComments(paramSigns)
   return (
     <div className="mt-10 space-y-2">
-      <h3 className="text-lg font-light uppercase text-stone-50">Notes</h3>
+      <h3 className="text-lg font-light text-stone-50 uppercase">Notes</h3>
       {!signsCommentsMap.size && '–'}
       {Array.from(signsCommentsMap).map(([signKey, signComments]) => {
         return (
           <div
             key={signKey}
-            className="prose-white prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 prose-a:hover:decoration-stone-400 prose-a:hover:decoration-1 flex gap-2 break-all font-serif font-normal"
+            className="prose-white prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 prose-a:hover:decoration-stone-400 prose-a:hover:decoration-1 flex gap-2 font-serif font-normal break-all"
           >
             <code className="mr-1 inline-flex items-center rounded-sm bg-gray-50/10 px-1.5 py-0.5 pt-1 text-xs">
               <span

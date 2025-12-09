@@ -15,7 +15,7 @@ export const PageAllApp = ({ countryPrefix, trafficSignData }: PageProps) => {
   return (
     <CountryPrefixProvider countryPrefix={countryPrefix}>
       <article className="rounded-sm bg-stone-300 px-6 py-4">
-        <h2 className="my-4 text-3xl font-light uppercase text-black">
+        <h2 className="my-4 text-3xl font-light text-black uppercase">
           Full sign list {trafficSignData.length}
         </h2>
         <p>

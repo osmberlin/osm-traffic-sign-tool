@@ -45,7 +45,7 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
   return (
     <>
       <div className="flex items-start justify-between">
-        <h2 className="mb-4 text-lg font-light uppercase text-black">Choose Signs</h2>
+        <h2 className="mb-4 text-lg font-light text-black uppercase">Choose Signs</h2>
         <SearchSignInput />
       </div>
 

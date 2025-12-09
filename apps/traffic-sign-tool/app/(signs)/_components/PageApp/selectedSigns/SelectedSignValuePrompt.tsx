@@ -78,7 +78,7 @@ export const SelectedSignValuePrompt = ({ sign }: Props) => {
         type={inputFormats[sign.valuePrompt.format].type ?? 'text'}
         step={inputFormats[sign.valuePrompt.format].steps ?? undefined}
         value={value}
-        className="shadow-xs block w-full rounded-md border-0 px-1 py-1.5 text-center text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:leading-6"
+        className="block w-full rounded-md border-0 px-1 py-1.5 text-center text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset sm:leading-6"
       />
       {(sign.valuePrompt.format === 'opening_hours' ||
         sign.valuePrompt.format === 'time_restriction') && (

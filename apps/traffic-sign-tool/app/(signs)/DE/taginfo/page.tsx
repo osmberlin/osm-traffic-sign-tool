@@ -31,7 +31,7 @@ export default function TaginfoPage() {
 
   return (
     <article className="rounded-sm bg-stone-300 px-6 py-4">
-      <h2 className="my-4 text-3xl font-light uppercase text-black">
+      <h2 className="my-4 text-3xl font-light text-black uppercase">
         Taginfo traffic sign values {data.length}
       </h2>
       <p>
@@ -65,7 +65,7 @@ export default function TaginfoPage() {
                 <TableHeader className="w-40 break-all">
                   <code>{value}</code>
                 </TableHeader>
-                <TableCell className="w-20 whitespace-nowrap text-right">
+                <TableCell className="w-20 text-right whitespace-nowrap">
                   {usageCount.toLocaleString()} &times;
                 </TableCell>
                 <TableCell className="w-60 text-sm">

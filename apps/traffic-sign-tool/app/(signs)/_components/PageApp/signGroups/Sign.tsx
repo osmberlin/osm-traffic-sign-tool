@@ -34,7 +34,7 @@ export const Sign = ({ sign }: Props) => {
         </h3>
         <span
           className={clsx(
-            'absolute right-0 top-0 rounded-full',
+            'absolute top-0 right-0 rounded-full',
             active ? '' : 'text-white/0 transition-colors group-hover/item:text-stone-900',
           )}
         >
@@ -62,7 +62,7 @@ export const Sign = ({ sign }: Props) => {
       </button>
 
       {sign.valuePrompt && (
-        <div className="absolute bottom-1 right-1 rounded-full bg-stone-800 p-1 text-stone-50">
+        <div className="absolute right-1 bottom-1 rounded-full bg-stone-800 p-1 text-stone-50">
           <PencilSquareIcon className="size-3" />
         </div>
       )}

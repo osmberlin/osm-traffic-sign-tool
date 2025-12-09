@@ -7,7 +7,7 @@ export const ResultDebug = () => {
 
   return (
     <details className="group mt-40 space-y-2">
-      <summary className="flex cursor-pointer items-center gap-2 text-lg font-light uppercase text-stone-500 underline-offset-2 hover:text-white hover:underline group-open:text-white">
+      <summary className="flex cursor-pointer items-center gap-2 text-lg font-light text-stone-500 uppercase underline-offset-2 group-open:text-white hover:text-white hover:underline">
         <BugAntIcon className="size-3" /> Source data
       </summary>
       <p>This section is to help debug the tool.</p>
