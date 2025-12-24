@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 1800 1540" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1540" role="img" aria-labelledby="title">
   <title id="title">Verkehrszeichen 299 - Grenzmarkierung für Halt- und Parkverbote</title>
   <path d="m168.709 52.027 448.66-.001 851.94 1482.37-968.232-.41z" style="fill:#999;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
   <path d="m500.707 1535.226.443-49.567L156.03 7.303 7.737 7.746 233.28 1486.352l268.064.195M1468.215 1533.05 618.752 51.128l1.287-28.894 145.188 1.287 1026.748 1447.367-322.537.063z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
   <path d="M1469.914 1470.87 619.29 23.08" style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
   <path d="M1398.065 1410.782h-263.488l73.946-217.355-212.127-97.1 74.829-154.38-177.904-73.431 83.093-122.826-157.039-54.942 59.754-110.545-130.711-50.79 51.537-103.823-123.01-49.482 43.836-95.421-105.05-51.69 103.605-1.012 5.597 10.127h-63.159l78.845 38.559-42.992 92.9 123.572 48.646-46.639 101.485 129.965 52.285-59.754 110.545 157.465 54.573-83.52 121.7 177.768 74.693-73.945 153.866 211.563 98.032-66.66 195.51 213.684.252z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
   <path d="m1059.605 697.539.916-378.856 13.285.458.458 378.856c-3.512 4.907-9.773 4.517-14.66-.458z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
-  <g style="fill-opacity:1" transform="matrix(2.1627 0 0 2.1627 988.135 189.554)">
+  <g style="fill-opacity:1" transform="translate(988.135 189.554)scale(2.1627)">
     <circle cx="37" cy="37" r="37" style="fill:#fc3;fill-opacity:1;stroke:#000;stroke-width:.35893741;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
     <circle cx="37" cy="37" r="35" style="fill:#093;fill-opacity:1"/>
     <circle cx="37" cy="37" r="25" style="fill:#fc3;fill-opacity:1"/>

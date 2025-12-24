@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 74" role="img" aria-labelledby="title">
   <title id="title">Verkehrszeichen 224 - Haltestelle</title>
-  <circle cx="37" cy="37" r="37" fill="#F0CA00"/>
+  <circle cx="37" cy="37" r="37" fill="#f0ca00"/>
   <circle cx="37" cy="37" r="35" fill="#008754"/>
-  <circle cx="37" cy="37" r="25" fill="#F0CA00"/>
+  <circle cx="37" cy="37" r="25" fill="#f0ca00"/>
   <path fill="#008754" d="M44.5 34h-15V18h-6v38h6V39h15v17h6V18h-6z"/>
 </svg>
