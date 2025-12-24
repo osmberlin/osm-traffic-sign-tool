@@ -2,7 +2,7 @@
 import { useParamQ } from '@app/app/(signs)/_components/store/useParamQ.nuqs'
 import { useParamQCountNumber } from '@app/app/(signs)/_components/store/useParamQCount.zustand'
 import { XMarkIcon } from '@heroicons/react/16/solid'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useSyncExternalStore } from 'react'
 
 export const SearchSignInput = () => {
   const { paramQ, setParamQ } = useParamQ()
@@ -28,10 +28,10 @@ export const SearchSignInput = () => {
     }
   }, [])
 
-  const [isMac] = useState(() =>
-    typeof window !== 'undefined'
-      ? /Mac|iPod|iPhone|iPad/.test(window.navigator?.userAgent)
-      : false,
+  const isMac = useSyncExternalStore(
+    () => () => {},
+    () => /Mac|iPod|iPhone|iPad/.test(window.navigator?.userAgent),
+    () => false,
   )
 
   return (
