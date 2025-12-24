@@ -317,4 +317,68 @@ export const _conditions__only_for_thing: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '1010-12',
+    signId: '1010-12',
+    name: 'Zusatzzeichen 1010-12',
+    descriptiveName: 'Parkflächen für Anhänger',
+    description: null,
+    kind: 'condition_modifier',
+    tagRecommendations: {
+      modifierValue: 'trailer',
+      uniqueTags: [{ key: 'amenity', value: 'parking' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+    },
+    image: {
+      sourceUrl:
+        'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-12_-_Kennzeichnung_von_Parkfl%C3%A4chen,_auf_denen_Anh%C3%A4nger_auch_l%C3%A4nger_als_14_Tage_parken_d%C3%BCrfen,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1048-11',
+    signId: '1048-11',
+    name: 'Zusatzzeichen 1048-11',
+    descriptiveName: 'Anhänger',
+    description: 'Zusatzzeichen zur Anwendung eines Hauptzeichens speziell auf Anhänger',
+    kind: 'condition_modifier',
+    tagRecommendations: {
+      modifierValue: 'trailer',
+      uniqueTags: [],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+    },
+    image: {
+      sourceUrl:
+        'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-59_-_Personenkraftwagen_mit_Anh%C3%A4nger,_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1049-13',
+    signId: '1049-13',
+    name: 'Zusatzzeichen 1049-13',
+    descriptiveName: 'Nur Kfz über 3,5 t einschl. ihrer Anhänger, Zugmaschinen, Kraftomnibusse und Pkw mit Anhänger',
+    description:
+      'Nur Kraftfahrzeuge über 3,5 t einschließlich ihrer Anhänger, Zugmaschinen, Kraftomnibusse und Personenkraftwagen mit Anhänger',
+    kind: 'condition_modifier',
+    tagRecommendations: {
+      modifierValue: 'hgv',
+      uniqueTags: [],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+    },
+    image: {
+      sourceUrl:
+        'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1049-13_-_nur_Lkw_(Zeichen_1048-12),_Kraftomnibus_(Zeichen_1048-16)_und_Pkw_mit_Anh%C3%A4nger_(Zeichen_1048-11),_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]

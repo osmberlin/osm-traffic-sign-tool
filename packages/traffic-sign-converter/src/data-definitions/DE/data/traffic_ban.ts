@@ -203,6 +203,27 @@ export const _traffic_ban: SignType[] = [
     },
   },
   {
+    osmValuePart: '257-56',
+    signId: '257-56',
+    name: 'Zeichen 257-56',
+    descriptiveName: 'Verbot für Personenkraftwagen mit Anhänger',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+      accessTags: [{ key: 'trailer', value: 'no' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zeichen_257-56_-_Verbot_für_Personenkraftwagen_mit_Anhänger,_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '259',
     signId: '259',
     name: 'Zeichen 259',
