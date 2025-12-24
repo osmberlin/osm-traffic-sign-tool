@@ -154,6 +154,24 @@ describe('collectAccessTags()', () => {
       ])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
     })
+
+    test('Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge + Betriebs- und Versorgungsfahrzeuge frei', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
+        'Betriebs- und Versorgungsfahrzeuge frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([
+        { key: 'motor_vehicle', value: 'private;delivery' },
+      ])
+    })
+
+    test('Verbot für Fahrzeuge aller Art + Betriebs- und Versorgungsfahrzeuge frei', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Verbot für Fahrzeuge aller Art',
+        'Betriebs- und Versorgungsfahrzeuge frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'private;delivery' }])
+    })
   })
 
   describe('Artificial signs', () => {

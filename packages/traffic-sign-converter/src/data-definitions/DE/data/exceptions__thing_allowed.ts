@@ -480,6 +480,27 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
   },
   {
+    osmValuePart: '1026-39',
+    signId: '1026-39',
+    name: 'Zusatzzeichen 1026-39',
+    descriptiveName: 'Betriebs- und Versorgungsfahrzeuge frei',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendations: {
+      highwayValues: [],
+      modifierValue: 'private;delivery',
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'exception_modifier',
+    },
+    image: {
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-39_-_Betriebs-_und_Versorgungsdienst_frei_(330x600),_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '1012-32',
     signId: '1012-32',
     name: 'Zusatzzeichen 1012-32',
