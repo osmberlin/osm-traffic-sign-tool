@@ -67,26 +67,46 @@ Reference `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataT
 }
 ```
 
-### Step 4: Visibility Decision Guide
+### Step 4: Add Tests for Special Interactions (Optional)
+
+If the research in Step 1 revealed special tagging logic when this sign is combined with others (e.g., specific `access` tag overrides or complex conditional tagging), add a test case in `packages/traffic-sign-converter/src/signsToTags/signsToTags.test.ts`.
+
+#### When to add a test:
+
+- The OSM Wiki mentions non-trivial interactions with other signs (e.g., "In combination with X, it means Y").
+- The interaction is not already covered by existing generic logic.
+- **Do not** add tests for every sign; only for those with documented special behavior.
+
+#### Example:
+
+```typescript
+test('Merged access tags for specific combination', () => {
+  const signs = signsStateByDescriptiveName('DE', data, ['Sign Name A', 'Sign Name B'])
+  const result = signsToTags(signs, 'DE')
+  expect(result.get('vehicle')).toBe('destination')
+})
+```
+
+### Step 5: Visibility Decision Guide
 
 Analyze sign frequency:
 
 - **`'highlight'`**: Common signs (speed limits, parking, bike lanes, stop signs).
 - **`'search_only'`**: Rare, specialized, deprecated, or object-marking signs (guide posts, lamp markers).
 
-### Step 5: Process and Build
+### Step 6: Process and Build
 
-1. **Build**: Run `bun script-new-svg.ts` from root.
+1. **Build**: Run `bun script-new-data.ts` from root.
 2. **Verify Errors**: Read `packages/internal_svgs/src/tmp/downloadErrors_DE.json`.
 3. **Lint**: Use the `read_lints` tool to check for TypeScript errors in the modified file.
 
-### Step 6: Testing
+### Step 7: Testing
 
 1. Script starts dev server on **port 3001**.
 2. Navigate to `http://localhost:3001/?signs=DE:<ID>`.
 3. Verify SVG rendering, tags, and modifier compatibility.
 
-### Step 7: Final Summary Output
+### Step 8: Final Summary Output
 
 Output ONLY this format:
 
