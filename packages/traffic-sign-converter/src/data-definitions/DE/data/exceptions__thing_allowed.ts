@@ -116,6 +116,27 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
   },
   {
+    osmValuePart: '1022-16',
+    signId: '1022-16',
+    name: 'Zusatzzeichen 1022-16',
+    descriptiveName: 'Elektrokleinstfahrzeuge frei',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendations: {
+      highwayValues: [],
+      accessTags: [{ key: 'small_electric_vehicle', value: 'yes' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'exception_modifier',
+    },
+    image: {
+      sourceUrl:
+        'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1022-16_-_Elektrokleinstfahrzeuge_frei_(600x600),_StVO_2019.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '1024-10,1022-12',
     signId: '1024-10,1022-12',
     name: 'Zusatzzeichen 1024-10+1022-12',
