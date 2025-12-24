@@ -25,7 +25,7 @@ async function downloadAllSvgs(countryPrefix: CountryPrefixType, data: SignType[
 
   // ERROR: RESET AND WRITE
   const errors = downloadResult.filter((r) => r.success === false)
-  const errorsFile = path.join(__dirname, 'tmp', `downloadErrors_${countryPrefix}.json`)
+  const errorsFile = path.join(__dirname, 'download-errors', `downloadErrors_${countryPrefix}.json`)
   console.log('-- WRITE ERRORS', errors.length, errors.length ? errorsFile : undefined)
   if (fs.existsSync(errorsFile)) unlinkSync(errorsFile) // Delete file
   if (errors.length > 0) {

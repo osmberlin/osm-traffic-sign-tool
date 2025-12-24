@@ -4,7 +4,11 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
   if (!filePageMatch) {
     return {
       success: false,
-      error: 'Could not extract file string from',
+      error: {
+        message: 'Could not extract file string from URL',
+        detail: sourceUrl,
+        createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+      },
       data: { sourceUrl },
     } as const
   }
@@ -12,16 +16,20 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
 
   // MediaWiki API endpoint
   const validOrigin = [
-    'https://wiki.openstreetmap.org/',
-    'https://de.wikipedia.org/',
-    'https://upload.wikimedia.org/',
-    'https://commons.wikimedia.org/',
+    'https://wiki.openstreetmap.org',
+    'https://de.wikipedia.org',
+    'https://upload.wikimedia.org',
+    'https://commons.wikimedia.org',
   ]
   const sourceOrigin = new URL(sourceUrl).origin
-  if (validOrigin.includes(sourceOrigin)) {
+  if (!validOrigin.includes(sourceOrigin)) {
     return {
       success: false,
-      error: 'Unkown Wikimedia host',
+      error: {
+        message: 'Unknown Wikimedia host',
+        detail: `Origin: ${sourceOrigin}, Valid origins: ${validOrigin.join(', ')}`,
+        createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+      },
       data: { sourceOrigin, validOrigin },
     } as const
   }
@@ -46,7 +54,11 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
   if (!imageInfo) {
     return {
       success: false,
-      error: `Could not extract ${JSON.stringify(data, undefined, 0)}`,
+      error: {
+        message: 'Could not extract imageinfo from API response',
+        detail: JSON.stringify(data, undefined, 2),
+        createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+      },
       data: { response },
     } as const
   }
