@@ -9,23 +9,35 @@ import { cleanupDirectories } from './utils/cleanupDirectories.js'
 import { downloadAndOptimizeSvg } from './utils/downloadAndOptimizeSvg.js'
 import { prepareDirectoryCountry } from './utils/prepareDirectoryCountry.js'
 
-async function downloadAllSvgs(countryPrefix: CountryPrefixType, data: SignType[]) {
-  console.log('START', countryPrefix)
+async function downloadAllSvgs(
+  countryPrefix: CountryPrefixType,
+  data: SignType[],
+  mode: 'incremental' | 'full',
+) {
+  console.log('START', countryPrefix, `mode: ${mode}`)
 
-  // Create & cleanup
+  // Create directory
   const countryDirectory = prepareDirectoryCountry(countryPrefix)
-  console.log('-- CLEANUP DIRECTORY', countryDirectory)
-  cleanupDirectories(countryDirectory)
 
-  // ERROR FILE: CLEANUP
+  // Only cleanup in full mode
+  if (mode === 'full') {
+    console.log('-- CLEANUP DIRECTORY', countryDirectory)
+    cleanupDirectories(countryDirectory)
+  } else {
+    console.log('-- INCREMENTAL MODE: Skipping directory cleanup')
+  }
+
+  // ERROR FILE: CLEANUP (only in full mode)
   const errorsFile = path.join(__dirname, 'download-errors', `downloadErrors_${countryPrefix}.json`)
-  if (await Bun.file(errorsFile).exists()) {
+  if (mode === 'full' && (await Bun.file(errorsFile).exists())) {
     await unlink(errorsFile)
     console.log('-- REMOVED OLD ERROR FILE', errorsFile)
   }
 
   // DOWNLOAD FILES
   console.log('-- DOWNLOAD FILES', data.length)
+
+  const skipExisting = mode === 'incremental'
 
   // Rate limiting: process in batches to avoid overwhelming the API
   const BATCH_SIZE = 10
@@ -39,7 +51,7 @@ async function downloadAllSvgs(countryPrefix: CountryPrefixType, data: SignType[
     )
 
     const batchResults = await Promise.all(
-      batch.map((sign) => downloadAndOptimizeSvg(countryPrefix, sign)),
+      batch.map((sign) => downloadAndOptimizeSvg(countryPrefix, sign, skipExisting)),
     )
     downloadResult.push(...batchResults)
 
@@ -82,8 +94,12 @@ async function downloadAllSvgs(countryPrefix: CountryPrefixType, data: SignType[
   console.log('DONE', countryPrefix)
 }
 
+// Read mode from environment variable or command-line arg
+const modeArg = process.argv[2] || process.env.DOWNLOAD_MODE || 'full'
+const mode = modeArg === 'incremental' ? 'incremental' : 'full'
+
 for (const [country, data] of countryDefinitionMap.entries()) {
-  await downloadAllSvgs(country, data).catch((error) => {
+  await downloadAllSvgs(country, data, mode).catch((error) => {
     console.error(error)
     process.exit(1)
   })

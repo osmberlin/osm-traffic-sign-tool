@@ -10,11 +10,20 @@ import { getFileUrlFromWikiApi } from './getFileUrlFromWikiApi.js'
 import { optimizeSvg } from './optimizeSvg.js'
 import { prepareDirectorySvgs } from './prepareDirectorySvgs.js'
 
-export const downloadAndOptimizeSvg = async (countryPrefix: CountryPrefixType, sign: SignType) => {
+export const downloadAndOptimizeSvg = async (
+  countryPrefix: CountryPrefixType,
+  sign: SignType,
+  skipExisting: boolean,
+) => {
   const importName = createSvgImportname(countryPrefix, sign)
   const fileName = createSvgFilename(countryPrefix, sign)
   const directorySvgs = prepareDirectorySvgs(countryPrefix)
   const filePath = path.join(directorySvgs, fileName)
+
+  // Skip if file exists and skipExisting is true
+  if (skipExisting && (await Bun.file(filePath).exists())) {
+    return { success: true, fileName, importName, skipped: true } as const
+  }
 
   if (!sign.image.sourceUrl) {
     return { success: false, error: '`sourceUrl` missing', sign } as const

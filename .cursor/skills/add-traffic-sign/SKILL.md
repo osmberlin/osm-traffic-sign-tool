@@ -96,13 +96,15 @@ Analyze sign frequency:
 
 ### Step 6: Process and Build
 
-1. **Build**: Run `bun script-new-data.ts` from root.
-2. **Verify Errors**: Read `packages/internal_svgs/src/tmp/downloadErrors_DE.json`.
+1. **Build**: Run `bun script-new-svg.ts` from root (uses incremental mode - only downloads new SVGs).
+2. **Verify Errors**: Read `packages/internal_svgs/src/download-errors/downloadErrors_DE.json`.
 3. **Lint**: Use the `read_lints` tool to check for TypeScript errors in the modified file.
+
+**Note**: For full refresh of all SVGs (re-downloads everything), use `bun script-refresh-all-svg.ts` manually when needed.
 
 ### Step 7: Testing
 
-1. Script starts dev server on **port 3001**.
+1. **Start dev server separately**: Run `cd apps/traffic-sign-tool && pnpm run dev` (runs on **port 3001**).
 2. Navigate to `http://localhost:3001/?signs=DE:<ID>`.
 3. Verify SVG rendering, tags, and modifier compatibility.
 
