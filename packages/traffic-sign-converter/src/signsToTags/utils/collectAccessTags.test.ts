@@ -60,7 +60,9 @@ describe('collectAccessTags()', () => {
         'Kraftomnibus frei',
       ])
       expect(collectAccessTags(signs)).toMatchObject([
-        { key: 'motorcar', value: 'bus;tourist_bus' },
+        { key: 'motorcar', value: 'no' },
+        { key: 'bus', value: 'yes' },
+        { key: 'tourist_bus', value: 'yes' },
       ])
     })
 
@@ -79,6 +81,76 @@ describe('collectAccessTags()', () => {
       const signs = signsStateByDescriptiveName('DE', data, [
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
+    })
+
+    test('Linienverkehr frei (standalone)', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Linienverkehr frei'])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'bus', value: 'yes' }])
+    })
+
+    test('Taxi frei (standalone)', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Taxi frei'])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'taxi', value: 'yes' }])
+    })
+
+    test('Einsatzfahrzeuge frei (standalone)', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Einsatzfahrzeuge frei'])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'emergency', value: 'yes' }])
+    })
+
+    test('Personenkraftwagen frei (standalone)', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Personenkraftwagen frei'])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'motorcar', value: 'yes' }])
+    })
+
+    test('HGV frei (standalone)', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t… frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'hgv', value: 'yes' }])
+    })
+
+    test('Kraftomnibus frei (standalone)', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Kraftomnibus frei'])
+      expect(collectAccessTags(signs)).toMatchObject([
+        { key: 'bus', value: 'yes' },
+        { key: 'tourist_bus', value: 'yes' },
+      ])
+    })
+
+    test('Verbot für Fahrzeuge aller Art + Linienverkehr frei', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Verbot für Fahrzeuge aller Art',
+        'Linienverkehr frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([
+        { key: 'vehicle', value: 'no' },
+        { key: 'bus', value: 'yes' },
+      ])
+    })
+
+    test('Verbot für Krafträder und KFZ + Einsatzfahrzeuge frei', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
+        'Einsatzfahrzeuge frei',
+      ])
+      expect(collectAccessTags(signs)).toMatchObject([
+        { key: 'motor_vehicle', value: 'no' },
+        { key: 'emergency', value: 'yes' },
+      ])
+    })
+
+    test('Lieferverkehr frei (standalone) - purpose-based should remain unchanged', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Lieferverkehr frei'])
+      expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'delivery' }])
+    })
+
+    test('Verbot für Fahrzeuge aller Art + Anlieger frei - purpose-based should remain unchanged', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Verbot für Fahrzeuge aller Art',
+        'Anlieger frei',
       ])
       expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
     })

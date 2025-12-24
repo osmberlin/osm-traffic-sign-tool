@@ -124,7 +124,10 @@ export const _exceptions__thing_allowed: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      modifierValue: 'motorcar;motorcycle',
+      accessTags: [
+        { key: 'motorcar', value: 'yes' },
+        { key: 'motorcycle', value: 'yes' },
+      ],
     },
     comments: [
       {
@@ -173,7 +176,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      modifierValue: 'motorcar',
+      accessTags: [{ key: 'motorcar', value: 'yes' }],
     },
     comments: [
       {
@@ -201,7 +204,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      modifierValue: 'hgv',
+      accessTags: [{ key: 'hgv', value: 'yes' }],
     },
     comments: [],
     catalogue: {
@@ -222,7 +225,10 @@ export const _exceptions__thing_allowed: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      modifierValue: 'bus;tourist_bus',
+      accessTags: [
+        { key: 'bus', value: 'yes' },
+        { key: 'tourist_bus', value: 'yes' },
+      ],
     },
     comments: [],
     catalogue: {
@@ -292,7 +298,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      modifierValue: 'bus',
+      accessTags: [{ key: 'bus', value: 'yes' }],
     },
     comments: [],
     catalogue: {
@@ -405,7 +411,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      modifierValue: 'emergency',
+      accessTags: [{ key: 'emergency', value: 'yes' }],
     },
     comments: [],
     catalogue: {
