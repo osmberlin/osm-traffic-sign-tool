@@ -4,6 +4,7 @@ import {
   type CountryPrefixType,
   type SignType,
 } from '@osm-traffic-signs/converter'
+import fs from 'node:fs'
 import path from 'node:path'
 import { getFileUrlFromWikiApi } from './getFileUrlFromWikiApi.js'
 import { optimizeSvg } from './optimizeSvg.js'
@@ -25,19 +26,81 @@ export const downloadAndOptimizeSvg = async (countryPrefix: CountryPrefixType, s
     return downloadUrlResp
   }
 
+  // Step 1: Fetch raw SVG
+  let rawSvg: string
   try {
-    const rawSvg = await (await fetch(downloadUrlResp.url)).text()
+    const response = await fetch(downloadUrlResp.url, {
+      headers: {
+        'User-Agent':
+          'osm-traffic-sign-tools (https://github.com/FixMyBerlin/osm-traffic-sign-tools)',
+      },
+    })
+    rawSvg = await response.text()
+  } catch (error) {
+    return {
+      success: false,
+      error: {
+        message: 'Fetch failed',
+        detail: error instanceof Error ? error.message : String(error),
+        createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+        url: downloadUrlResp.url,
+      },
+      sign,
+    } as const
+  }
 
-    const optimized = optimizeSvg({
+  // Step 2: Optimize SVG
+  let optimized: string
+  try {
+    optimized = optimizeSvg({
       svgString: rawSvg,
       signId: sign.osmValuePart,
       signTitle: sign.descriptiveName,
     })
-
-    Bun.write(filePath, optimized)
-
-    return { success: true, fileName, importName } as const
   } catch (error) {
-    return { success: false, error: 'Fetch or Optimize or Write failed', sign } as const
+    // Save raw content for debugging
+    const debugDir = path.join(__dirname, '../download-errors/failed-svgs', countryPrefix)
+    const debugFilePath = path.join(debugDir, fileName)
+    try {
+      await Bun.write(debugFilePath, rawSvg)
+    } catch {
+      // Create directory and try again
+      fs.mkdirSync(debugDir, { recursive: true })
+      try {
+        await Bun.write(debugFilePath, rawSvg)
+      } catch {
+        // Ignore write errors for debug files
+      }
+    }
+
+    return {
+      success: false,
+      error: {
+        message: 'Optimize failed',
+        detail: error instanceof Error ? error.message : String(error),
+        createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+        debugFilePath,
+        url: downloadUrlResp.url,
+      },
+      sign,
+    } as const
   }
+
+  // Step 3: Write optimized SVG
+  try {
+    await Bun.write(filePath, optimized)
+  } catch (error) {
+    return {
+      success: false,
+      error: {
+        message: 'Write failed',
+        detail: error instanceof Error ? error.message : String(error),
+        createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+        filePath,
+      },
+      sign,
+    } as const
+  }
+
+  return { success: true, fileName, importName } as const
 }

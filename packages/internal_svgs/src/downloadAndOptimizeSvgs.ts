@@ -3,7 +3,7 @@ import {
   type CountryPrefixType,
   type SignType,
 } from '@osm-traffic-signs/converter'
-import fs, { unlinkSync } from 'node:fs'
+import { unlink } from 'node:fs/promises'
 import path from 'node:path'
 import { cleanupDirectories } from './utils/cleanupDirectories.js'
 import { downloadAndOptimizeSvg } from './utils/downloadAndOptimizeSvg.js'
@@ -17,19 +17,43 @@ async function downloadAllSvgs(countryPrefix: CountryPrefixType, data: SignType[
   console.log('-- CLEANUP DIRECTORY', countryDirectory)
   cleanupDirectories(countryDirectory)
 
+  // ERROR FILE: CLEANUP
+  const errorsFile = path.join(__dirname, 'download-errors', `downloadErrors_${countryPrefix}.json`)
+  if (await Bun.file(errorsFile).exists()) {
+    await unlink(errorsFile)
+    console.log('-- REMOVED OLD ERROR FILE', errorsFile)
+  }
+
   // DOWNLOAD FILES
   console.log('-- DOWNLOAD FILES', data.length)
-  const downloadResult = await Promise.all(
-    data.map((sign) => downloadAndOptimizeSvg(countryPrefix, sign)),
-  )
 
-  // ERROR: RESET AND WRITE
+  // Rate limiting: process in batches to avoid overwhelming the API
+  const BATCH_SIZE = 10
+  const DELAY_BETWEEN_BATCHES_MS = 1000
+  const downloadResult = []
+
+  for (let i = 0; i < data.length; i += BATCH_SIZE) {
+    const batch = data.slice(i, i + BATCH_SIZE)
+    console.log(
+      `-- Processing batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(data.length / BATCH_SIZE)} (${batch.length} items)`,
+    )
+
+    const batchResults = await Promise.all(
+      batch.map((sign) => downloadAndOptimizeSvg(countryPrefix, sign)),
+    )
+    downloadResult.push(...batchResults)
+
+    // Delay between batches (except for the last one)
+    if (i + BATCH_SIZE < data.length) {
+      await Bun.sleep(DELAY_BETWEEN_BATCHES_MS)
+    }
+  }
+
+  // ERROR: WRITE
   const errors = downloadResult.filter((r) => r.success === false)
-  const errorsFile = path.join(__dirname, 'download-errors', `downloadErrors_${countryPrefix}.json`)
   console.log('-- WRITE ERRORS', errors.length, errors.length ? errorsFile : undefined)
-  if (fs.existsSync(errorsFile)) unlinkSync(errorsFile) // Delete file
   if (errors.length > 0) {
-    Bun.write(errorsFile, JSON.stringify(errors, null, 2))
+    await Bun.write(errorsFile, JSON.stringify(errors, null, 2))
   }
 
   // TYPES: WRITE TYPES FILE – one export line per file
@@ -53,7 +77,7 @@ async function downloadAllSvgs(countryPrefix: CountryPrefixType, data: SignType[
     })
     .join('\n')
 
-  Bun.write(typesFile, svgExportContent)
+  await Bun.write(typesFile, svgExportContent)
 
   console.log('DONE', countryPrefix)
 }
@@ -73,4 +97,4 @@ const barrelContent = Array.from(countryDefinitionMap.entries())
     return `export * as Svgs${country} from './${country}/index.js'`
   })
   .join('\n')
-Bun.write(barrelFile, barrelContent)
+await Bun.write(barrelFile, barrelContent)

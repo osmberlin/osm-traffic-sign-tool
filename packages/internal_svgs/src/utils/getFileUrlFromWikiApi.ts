@@ -34,18 +34,20 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
     } as const
   }
 
-  const apiUrl = `${sourceOrigin}/w/api.php`
-  // @ts-expect-error TODO why does this fail out of the blue? It follows https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams#using_urlsearchparams
-  const params = new URLSearchParams({
-    action: 'query',
-    titles: filePage,
-    prop: 'imageinfo',
-    iiprop: 'url',
-    format: 'json',
-  })
+  const apiUrl = new URL(`${sourceOrigin}/w/api.php`)
+  apiUrl.searchParams.append('action', 'query')
+  apiUrl.searchParams.append('titles', filePage)
+  apiUrl.searchParams.append('prop', 'imageinfo')
+  apiUrl.searchParams.append('iiprop', 'url')
+  apiUrl.searchParams.append('format', 'json')
 
   // Get imageInfo.url
-  const response = await fetch(`${apiUrl}?${params.toString()}`)
+  const response = await fetch(apiUrl.toString(), {
+    headers: {
+      'User-Agent':
+        'osm-traffic-sign-tools (https://github.com/FixMyBerlin/osm-traffic-sign-tools)',
+    },
+  })
   const data = (await response.json()) as any
   const pages = data.query.pages
   const page = Object.values(pages)[0] as any
