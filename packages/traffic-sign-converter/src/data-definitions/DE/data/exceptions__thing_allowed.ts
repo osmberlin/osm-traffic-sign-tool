@@ -137,11 +137,11 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
   },
   {
-    osmValuePart: '1024-10,1022-12',
-    signId: '1024-10,1022-12',
-    name: 'Zusatzzeichen 1024-10+1022-12',
+    osmValuePart: '"Kfz-Verkehr frei"',
+    signId: '"Kfz-Verkehr frei"',
+    name: 'Zusatzzeichen "Kfz-Verkehr frei"',
     descriptiveName: 'Kfz-Verkehr frei',
-    description: 'Eine inoffizielle Kombination; Nicht Teil es Verkehrszeichenkataloges.',
+    description: null,
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],

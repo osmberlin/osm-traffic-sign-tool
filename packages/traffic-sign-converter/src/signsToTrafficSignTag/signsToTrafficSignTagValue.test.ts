@@ -102,4 +102,16 @@ describe('signsToTrafficSignTag()', () => {
       expect(result).toMatch('city_limit;DE:1010-10')
     })
   })
+
+  describe('free-text signs', () => {
+    test('serialize free-text sign with quotes', () => {
+      const input = [
+        { osmValuePart: '244.1', kind: 'traffic_sign' },
+        { osmValuePart: '"Kfz-Verkehr frei"', kind: 'exception_modifier' },
+      ] as SignStateType[]
+      const result = signsToTrafficSignTagValue(input, countryPrefixes)
+
+      expect(result).toMatch('DE:244.1,"Kfz-Verkehr frei"')
+    })
+  })
 })

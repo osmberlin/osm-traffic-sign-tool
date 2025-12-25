@@ -25,4 +25,10 @@ describe('splitSignIdSignValue()', () => {
     const result = splitSignIdSignValue(input)
     expect(result).toMatchObject({ signId: '1234-56', signValue: undefined })
   })
+
+  test('Free-text sign (quoted)', () => {
+    const input = '"Kfz-Verkehr frei"'
+    const result = splitSignIdSignValue(input)
+    expect(result).toMatchObject({ signId: '"Kfz-Verkehr frei"', signValue: undefined })
+  })
 })

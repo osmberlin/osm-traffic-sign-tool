@@ -62,6 +62,12 @@ export const countryAlternativeKeyFormats: Record<CountryPrefixType, Map<string,
     // Misc
     ['no', 'none'], // 1k vs. 12k usage
     //
+    // Free-text sign redirects
+    // Issue #51: https://github.com/osmberlin/osm-traffic-sign-tool/issues/51
+    ['"Kraftfahrzeuge-frei"', '"Kfz-Verkehr frei"'],
+    ['"KFZ frei"', '"Kfz-Verkehr frei"'],
+    ['Kraftfahrzeuge-frei', '"Kfz-Verkehr frei"'], // without quotes
+    ['KFZ frei', '"Kfz-Verkehr frei"'], // without quotes
     //
     // For some signs we agreet to recommend the brackets-notation
     // For those signs, we add transformations the currently used values

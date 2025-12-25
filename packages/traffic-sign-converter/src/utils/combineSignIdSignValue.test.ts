@@ -16,4 +16,9 @@ describe('combineSignIdSignValue()', () => {
     const result = combineSignIdSignValue('1234-56', undefined)
     expect(result).toMatch('1234-56')
   })
+
+  test('Free-text sign (quoted)', () => {
+    const result = combineSignIdSignValue('"Kfz-Verkehr frei"', undefined)
+    expect(result).toMatch('"Kfz-Verkehr frei"')
+  })
 })

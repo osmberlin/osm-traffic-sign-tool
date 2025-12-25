@@ -106,4 +106,27 @@ describe('trafficSignTagToSigns()', () => {
       expect(joinSignValueParts(result)).toMatch('none')
     })
   })
+
+  describe('free-text signs', () => {
+    test('parse free-text sign with quotes', () => {
+      const input = 'traffic_sign=DE:244.1,"Kfz-Verkehr frei"'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toContain('"Kfz-Verkehr frei"')
+      expect(result.some((s) => s.descriptiveName === 'Kfz-Verkehr frei')).toBe(true)
+    })
+
+    test('redirect variant "Kraftfahrzeuge-frei" to canonical form', () => {
+      const input = 'traffic_sign=DE:244.1,Kraftfahrzeuge-frei'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toContain('"Kfz-Verkehr frei"')
+      expect(result.some((s) => s.matchdByAlternativeKey === 'Kraftfahrzeuge-frei')).toBe(true)
+    })
+
+    test('redirect variant without quotes to canonical form with quotes', () => {
+      const input = 'traffic_sign=DE:244.1,KFZ frei'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toContain('"Kfz-Verkehr frei"')
+      expect(result.some((s) => s.matchdByAlternativeKey === 'KFZ frei')).toBe(true)
+    })
+  })
 })

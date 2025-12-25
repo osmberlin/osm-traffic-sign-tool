@@ -27,5 +27,6 @@ export { createSvgImportname } from './utils/createSvgImportname.js'
 // Utils
 export { splitIntoSignValueParts } from './trafficSignTagToSigns/utils/splitIntoSignValueParts.js'
 export { splitSignIdSignValue } from './trafficSignTagToSigns/utils/splitSignIdSignValue.js'
+export { getRedirectsForSign } from './utils/getRedirectsForSign.js'
 export { combineSignIdSignValue } from './utils/combineSignIdSignValue.js'
 export { toTag } from './utils/toTag.js'

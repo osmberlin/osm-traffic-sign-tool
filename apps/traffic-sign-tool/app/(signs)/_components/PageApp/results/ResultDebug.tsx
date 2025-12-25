@@ -23,6 +23,7 @@ export const ResultDebug = () => {
                   <strong>{sign.osmValuePart}</strong>
                 </p>
                 <p>{sign.descriptiveName}</p>
+
                 <pre className="mt-5 text-xs leading-snug tracking-tight">
                   <code>{JSON.stringify(sign, undefined, 2)}</code>
                 </pre>
