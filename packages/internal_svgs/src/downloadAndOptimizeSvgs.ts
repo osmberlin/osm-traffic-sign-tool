@@ -34,31 +34,69 @@ async function downloadAllSvgs(
     console.log('-- REMOVED OLD ERROR FILE', errorsFile)
   }
 
-  // DOWNLOAD FILES
-  console.log('-- DOWNLOAD FILES', data.length)
-
+  // DOWNLOAD FILES: Filter out existing files in incremental mode
+  let filesToDownload = data
   const skipExisting = mode === 'incremental'
+
+  if (skipExisting) {
+    const countryDirectory = prepareDirectoryCountry(countryPrefix)
+    const svgsDirectory = path.join(countryDirectory, 'svgs')
+
+    // Filter to only include files that don't exist yet
+    const existingChecks = await Promise.all(
+      data.map(async (sign) => {
+        const { createSvgFilename } = await import('@osm-traffic-signs/converter')
+        const fileName = createSvgFilename(countryPrefix, sign)
+        const filePath = path.join(svgsDirectory, fileName)
+        const exists = await Bun.file(filePath).exists()
+        return { sign, exists }
+      }),
+    )
+
+    filesToDownload = existingChecks.filter(({ exists }) => !exists).map(({ sign }) => sign)
+    const skippedCount = data.length - filesToDownload.length
+
+    if (skippedCount > 0) {
+      console.log(`-- INCREMENTAL MODE: Skipping ${skippedCount} existing files`)
+    }
+  }
+
+  console.log('-- DOWNLOAD FILES', filesToDownload.length)
 
   // Rate limiting: process in batches to avoid overwhelming the API
   const BATCH_SIZE = 10
   const DELAY_BETWEEN_BATCHES_MS = 1000
   const downloadResult = []
 
-  for (let i = 0; i < data.length; i += BATCH_SIZE) {
-    const batch = data.slice(i, i + BATCH_SIZE)
+  for (let i = 0; i < filesToDownload.length; i += BATCH_SIZE) {
+    const batch = filesToDownload.slice(i, i + BATCH_SIZE)
     console.log(
-      `-- Processing batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(data.length / BATCH_SIZE)} (${batch.length} items)`,
+      `-- Processing batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(filesToDownload.length / BATCH_SIZE)} (${batch.length} items)`,
     )
 
     const batchResults = await Promise.all(
-      batch.map((sign) => downloadAndOptimizeSvg(countryPrefix, sign, skipExisting)),
+      batch.map((sign) => downloadAndOptimizeSvg(countryPrefix, sign, false)),
     )
     downloadResult.push(...batchResults)
 
     // Delay between batches (except for the last one)
-    if (i + BATCH_SIZE < data.length) {
+    if (i + BATCH_SIZE < filesToDownload.length) {
       await Bun.sleep(DELAY_BETWEEN_BATCHES_MS)
     }
+  }
+
+  // In incremental mode, also add skipped files to results for type generation
+  if (skipExisting) {
+    const { createSvgFilename, createSvgImportname } = await import('@osm-traffic-signs/converter')
+    const skippedResults = data
+      .filter((sign) => !filesToDownload.includes(sign))
+      .map((sign) => ({
+        success: true as const,
+        fileName: createSvgFilename(countryPrefix, sign),
+        importName: createSvgImportname(countryPrefix, sign),
+        skipped: true as const,
+      }))
+    downloadResult.push(...skippedResults)
   }
 
   // ERROR: WRITE
