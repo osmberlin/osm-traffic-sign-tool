@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 0.2.8
+
+_2025-12-25_
+
+- Add signs, update logic for signs.
+
 ## 0.2.7
 
 _2025-12-09_
