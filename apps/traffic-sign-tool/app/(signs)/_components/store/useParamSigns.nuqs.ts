@@ -34,11 +34,28 @@ export const useParamSigns = () => {
   )
 
   const toggleOsmValuePart = (osmValuePart: string) => {
-    if (paramSigns.some((sign) => sign.osmValuePart === osmValuePart)) {
+    // Check for exact match first
+    const hasExactMatch = paramSigns.some((sign) => sign.osmValuePart === osmValuePart)
+
+    // If no exact match, check if this osmValuePart redirects to something in state
+    let osmValuePartToRemove = osmValuePart
+    if (!hasExactMatch) {
+      // Parse the osmValuePart to see if it redirects to something else
+      const parsedSigns = trafficSignTagToSigns(osmValuePart, countryPrefix)
+      if (parsedSigns.length > 0) {
+        const redirectedOsmValuePart = parsedSigns[0].osmValuePart
+        // Check if the redirected value exists in state
+        if (paramSigns.some((sign) => sign.osmValuePart === redirectedOsmValuePart)) {
+          osmValuePartToRemove = redirectedOsmValuePart
+        }
+      }
+    }
+
+    if (paramSigns.some((sign) => sign.osmValuePart === osmValuePartToRemove)) {
       // REMOVE SIGN
       // We simply remove the sign object from our state array
       setParamSigns(() => {
-        return paramSigns.filter((sign) => sign.osmValuePart !== osmValuePart)
+        return paramSigns.filter((sign) => sign.osmValuePart !== osmValuePartToRemove)
       })
     } else {
       // ADD SIGN
