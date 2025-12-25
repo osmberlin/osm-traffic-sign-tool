@@ -38,7 +38,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       {
         tagReference: 'highway=*',
         comment:
-          'Aufgrund von "Anlieger frei" eventuell als [Tag:highway=residential] oder <code>service</code> einzustufen.',
+          'Aufgrund von "Anlieger frei" eventuell als [Tag:highway=residential] oder [Tag:highway=service] einzustufen.',
       },
     ],
     catalogue: {

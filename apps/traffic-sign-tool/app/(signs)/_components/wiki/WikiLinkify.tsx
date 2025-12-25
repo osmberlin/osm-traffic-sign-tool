@@ -1,52 +1,51 @@
+import { CountryPrefixType } from '@osm-traffic-signs/converter'
+import { micromark } from 'micromark'
+import { gfm, gfmHtml } from 'micromark-extension-gfm'
 import { useMemo } from 'react'
-import { Tag } from './Tag'
-import { WikiLinkKey } from './WikiLinkKey'
+
+import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
 
 type Props = {
   text: string
 }
 
-export const WikiLinkify = ({ text }: Props) => {
-  function addCodeTags(text: string) {
-    return text.replace(/`(.+?)`/g, '<code>$1</code>')
-  }
+/**
+ * Preprocessor that converts OSM-specific syntax to standard markdown
+ * before micromark parsing.
+ *
+ * - [Key:foo] → link to wiki key page
+ * - [Key:foo:bar] → link to wiki page for compound key foo:bar
+ * - [Tag:foo=bar] → link to wiki tag page with inline code styling
+ */
+function preprocessOsmSyntax(text: string, countryPrefix: CountryPrefixType): string {
+  const wikiKeyBase = `https://wiki.openstreetmap.org/wiki/${countryPrefix}:Key:`
+  const wikiTagBase = `https://wiki.openstreetmap.org/wiki/${countryPrefix}:Tag:`
 
-  const parts = useMemo(() => {
-    const regex = /\[(.*?)\]/g
-    return text.split(regex).map((part) => {
-      const partWithCode = addCodeTags(part)
-
-      // Case Code `foo=bar`; Code in `tagsComment` need to be treated as text
-      if (partWithCode.includes('<code>')) {
-        return { type: 'text', content: partWithCode }
-      }
-      // Case Key [Key:foo]
-      if (partWithCode.startsWith('Key:')) {
-        return { type: 'key', content: partWithCode.replace('Key:', '') }
-      }
-      // Case Tag [Tag:foo=bar]
-      if (partWithCode.startsWith('Tag:')) {
-        return { type: 'tag', content: partWithCode.replace('Tag:', '') }
-      }
-      return { type: 'text', content: partWithCode }
+  return text
+    .replace(/\[Key:([^\]]+)\]/g, (_, key: string) => {
+      return `[\`${key}\`](${wikiKeyBase}${key})`
     })
-  }, [text])
+    .replace(/\[Tag:([^=\]]+)=([^\]]+)\]/g, (_, key: string, value: string) => {
+      return `[\`${key}=${value}\`](${wikiTagBase}${key}=${value})`
+    })
+}
+
+export const WikiLinkify = ({ text }: Props) => {
+  const { countryPrefix } = useCountryPrefixWithFallback()
+
+  const html = useMemo(() => {
+    const preprocessed = preprocessOsmSyntax(text, countryPrefix)
+
+    return micromark(preprocessed, {
+      extensions: [gfm()],
+      htmlExtensions: [gfmHtml()],
+    })
+  }, [text, countryPrefix])
 
   return (
-    <>
-      {parts.map((part, index) => {
-        if (part.type === 'key') {
-          return <WikiLinkKey key={index} osmKey={part.content} />
-        }
-        if (part.type === 'tag') {
-          const [key, value] = part.content.split('=')
-          return <Tag key={index} tagKey={key} tagValue={value} />
-        }
-        if (part.type === 'text') {
-          return <span key={index} dangerouslySetInnerHTML={{ __html: part.content }} />
-        }
-        return null
-      })}
-    </>
+    <span
+      dangerouslySetInnerHTML={{ __html: html }}
+      className="prose-code:bg-stone-700 prose-code:rounded prose-code:px-0.5 prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 prose-a:hover:decoration-stone-400 prose-a:hover:decoration-1"
+    />
   )
 }
