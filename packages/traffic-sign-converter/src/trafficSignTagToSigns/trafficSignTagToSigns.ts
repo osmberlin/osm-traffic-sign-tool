@@ -29,9 +29,16 @@ export const trafficSignTagToSigns = (
   // PART 2: Normalize values
   // We rename our osmValueParts based on `alternativeKeyFormats`
   // We also store the fact that we renamed something in our data, so we can show it in the UI
+
+  // Create a lowercase version of the redirect map for case-insensitive lookup
+  const lowerCaseRedirectMap = new Map<string, string>()
+  for (const [key, value] of countryAlternativeKeyFormats[countryPrefix].entries()) {
+    lowerCaseRedirectMap.set(key.toLowerCase(), value)
+  }
+
   workingValueParts = workingValueParts
     .map((osmValuePart) => {
-      const alternativeValuePart = countryAlternativeKeyFormats[countryPrefix].get(osmValuePart)
+      const alternativeValuePart = lowerCaseRedirectMap.get(osmValuePart.toLowerCase())
       if (alternativeValuePart) {
         // Lookup the sign (two ways)
         // Plan A: Direct lookup (most precise)

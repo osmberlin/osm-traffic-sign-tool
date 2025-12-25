@@ -128,5 +128,19 @@ describe('trafficSignTagToSigns()', () => {
       expect(joinOsmValueParts(result)).toContain('"Kfz-Verkehr frei"')
       expect(result.some((s) => s.matchdByAlternativeKey === 'KFZ frei')).toBe(true)
     })
+
+    test('redirect is case-insensitive', () => {
+      const input = 'traffic_sign=DE:244.1,kraftfahrzeuge-frei'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toContain('"Kfz-Verkehr frei"')
+      expect(result.some((s) => s.matchdByAlternativeKey === 'kraftfahrzeuge-frei')).toBe(true)
+    })
+
+    test('redirect with different case variations', () => {
+      const input = 'traffic_sign=DE:244.1,kfz FREI'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toContain('"Kfz-Verkehr frei"')
+      expect(result.some((s) => s.matchdByAlternativeKey === 'kfz FREI')).toBe(true)
+    })
   })
 })
