@@ -151,10 +151,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: [],
-      accessTags: [
-        { key: 'motorcar', value: 'yes' },
-        { key: 'motorcycle', value: 'yes' },
-      ],
+      accessTags: [{ key: 'motor_vehicle', value: 'yes' }],
     },
     comments: [
       {
