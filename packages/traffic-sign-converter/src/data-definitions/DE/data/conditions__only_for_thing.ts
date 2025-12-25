@@ -363,7 +363,8 @@ export const _conditions__only_for_thing: SignType[] = [
     osmValuePart: '1049-13',
     signId: '1049-13',
     name: 'Zusatzzeichen 1049-13',
-    descriptiveName: 'Nur Kfz über 3,5 t einschl. ihrer Anhänger, Zugmaschinen, Kraftomnibusse und Pkw mit Anhänger',
+    descriptiveName:
+      'Nur Kfz über 3,5 t einschl. ihrer Anhänger, Zugmaschinen, Kraftomnibusse und Pkw mit Anhänger',
     description:
       'Nur Kraftfahrzeuge über 3,5 t einschließlich ihrer Anhänger, Zugmaschinen, Kraftomnibusse und Personenkraftwagen mit Anhänger',
     kind: 'condition_modifier',

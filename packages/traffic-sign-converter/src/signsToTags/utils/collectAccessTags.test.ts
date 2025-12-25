@@ -170,7 +170,9 @@ describe('collectAccessTags()', () => {
         'Verbot für Fahrzeuge aller Art',
         'Betriebs- und Versorgungsfahrzeuge frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'private;delivery' }])
+      expect(collectAccessTags(signs)).toMatchObject([
+        { key: 'vehicle', value: 'private;delivery' },
+      ])
     })
   })
 
