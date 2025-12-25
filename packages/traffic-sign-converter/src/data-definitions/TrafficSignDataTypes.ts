@@ -1,5 +1,7 @@
 import type { Prettify } from '../types/types.js'
 
+export type RedirectMapping = { from: string; to: string }
+
 export type SignStateType = Prettify<
   | (TrafficSignType & {
       recodgnizedSign: true
@@ -26,6 +28,7 @@ export type UnkownSignType = {
   signValue: string
   kind: 'traffic_sign' | 'exception_modifier' | 'condition_modifier'
   descriptiveName: string
+  redirects?: never
 }
 
 export type TrafficSignType = SharedId &
@@ -86,6 +89,7 @@ export type ModifierSignType = Prettify<
 type SharedId = {
   osmValuePart: string
   signId: string
+  redirects?: RedirectMapping[]
 }
 type SharedContent = {
   name: string

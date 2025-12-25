@@ -256,6 +256,7 @@ export const _infrastructure: SignType[] = [
   {
     osmValuePart: '244.1',
     signId: '244.1',
+    redirects: [{ from: '244', to: '244.1' }],
     name: 'Zeichen 244.1',
     descriptiveName: 'Fahrradstraße',
     description: 'Beginn einer Fahrradstraße',

@@ -1,5 +1,5 @@
 import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
-import { countryAlternativeKeyFormats } from '../data-definitions/countryAlternativeKeyFormats.js'
+import { getSignsMap } from './getSignsMap.js'
 
 /**
  * @description Returns all alternative keys that redirect to the given sign
@@ -10,18 +10,13 @@ import { countryAlternativeKeyFormats } from '../data-definitions/countryAlterna
 export const getRedirectsForSign = (
   osmValuePart: string,
   countryPrefix: CountryPrefixType | undefined,
-): string[] => {
+) => {
   if (!countryPrefix) return []
 
-  const alternativeFormats = countryAlternativeKeyFormats[countryPrefix]
-  const redirects: string[] = []
+  const signsMap = getSignsMap(countryPrefix)
+  const sign = signsMap.get(osmValuePart)
 
-  // Iterate through the Map to find all keys that map to our target value
-  for (const [key, value] of alternativeFormats.entries()) {
-    if (value === osmValuePart) {
-      redirects.push(key)
-    }
-  }
+  if (!sign || !sign.redirects) return []
 
-  return redirects
+  return sign.redirects.map((redirect) => redirect.from)
 }

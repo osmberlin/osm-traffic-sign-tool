@@ -10,6 +10,8 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Refactor redirects to be part of sign configs and enhance search to include alternative identifiers
+
 ## 2.1.6
 
 _2025-12-09_

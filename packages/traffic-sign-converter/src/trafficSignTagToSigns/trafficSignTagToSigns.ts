@@ -1,7 +1,8 @@
-import { countryAlternativeKeyFormats } from '../data-definitions/countryAlternativeKeyFormats.js'
 import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
+import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
 import { namedTrafficSignValues } from '../data-definitions/namedTrafficSignValues.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
+import { buildRedirectMap } from '../utils/buildRedirectMap.js'
 import { combineSignIdSignValue } from '../utils/combineSignIdSignValue.js'
 import { createSvgImportname } from '../utils/createSvgImportname.js'
 import { getSignBySignIdAndCheckValue } from '../utils/getSignBySignIdAndCheckValue.js'
@@ -10,6 +11,19 @@ import { removeCountryPrefix } from './utils/removeCountryPrefix.js'
 import { removeKeys } from './utils/removeKeys.js'
 import { splitIntoSignValueParts } from './utils/splitIntoSignValueParts.js'
 import { splitSignIdSignValue } from './utils/splitSignIdSignValue.js'
+
+// Cache redirect maps per country to avoid rebuilding on every call
+const redirectMapCache = new Map<CountryPrefixType, Map<string, string>>()
+
+const getRedirectMap = (countryPrefix: CountryPrefixType) => {
+  let redirectMap = redirectMapCache.get(countryPrefix)
+  if (!redirectMap) {
+    const signs = countryDefinitions[countryPrefix]
+    redirectMap = buildRedirectMap(signs) // include general redirects
+    redirectMapCache.set(countryPrefix, redirectMap)
+  }
+  return redirectMap
+}
 
 export const trafficSignTagToSigns = (
   input: string,
@@ -27,12 +41,12 @@ export const trafficSignTagToSigns = (
   let workingValueParts = splitIntoSignValueParts(cleaned)
 
   // PART 2: Normalize values
-  // We rename our osmValueParts based on `alternativeKeyFormats`
+  // We rename our osmValueParts based on redirects (sign-specific + general)
   // We also store the fact that we renamed something in our data, so we can show it in the UI
 
-  // Create a lowercase version of the redirect map for case-insensitive lookup
+  // Get cached redirect map and create lowercase version for case-insensitive lookup
   const lowerCaseRedirectMap = new Map<string, string>()
-  for (const [key, value] of countryAlternativeKeyFormats[countryPrefix].entries()) {
+  for (const [key, value] of getRedirectMap(countryPrefix).entries()) {
     lowerCaseRedirectMap.set(key.toLowerCase(), value)
   }
 

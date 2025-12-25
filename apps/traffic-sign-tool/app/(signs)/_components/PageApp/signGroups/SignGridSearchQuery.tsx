@@ -19,7 +19,13 @@ export const SignGridSearchQuery = ({ trafficSignData }: Props) => {
       // Let's keep it simple for now and search on a partial object
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { image: _image, catalogue: _catalogue, ...searchObject } = sign
-      return JSON.stringify(searchObject, undefined, 0).toLocaleLowerCase().includes(term)
+      const searchObjectWithRedirects = {
+        ...searchObject,
+        redirects: sign.redirects?.map((r) => r.from).join(' '),
+      }
+      return JSON.stringify(searchObjectWithRedirects, undefined, 0)
+        .toLocaleLowerCase()
+        .includes(term)
     })
     return result
   }, [paramQ, trafficSignData])

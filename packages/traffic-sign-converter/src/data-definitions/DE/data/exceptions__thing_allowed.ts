@@ -138,6 +138,12 @@ export const _exceptions__thing_allowed: SignType[] = [
   },
   {
     osmValuePart: '"Kfz-Verkehr frei"',
+    redirects: [
+      { from: '"Kraftfahrzeuge-frei"', to: '"Kfz-Verkehr frei"' },
+      { from: '"KFZ frei"', to: '"Kfz-Verkehr frei"' },
+      { from: 'Kraftfahrzeuge-frei', to: '"Kfz-Verkehr frei"' },
+      { from: 'KFZ frei', to: '"Kfz-Verkehr frei"' },
+    ],
     signId: '"Kfz-Verkehr frei"',
     name: 'Zusatzzeichen "Kfz-Verkehr frei"',
     descriptiveName: 'Kfz-Verkehr frei',

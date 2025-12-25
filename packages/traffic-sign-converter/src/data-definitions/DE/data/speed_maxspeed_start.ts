@@ -33,6 +33,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-5',
     signId: '274-5',
+    redirects: [{ from: '274[5]', to: '274-5' }],
     name: 'Zeichen 274-5',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -55,6 +56,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-10',
     signId: '274-10',
+    redirects: [{ from: '274[10]', to: '274-10' }],
     name: 'Zeichen 274-10',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -77,6 +79,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-20',
     signId: '274-20',
+    redirects: [{ from: '274[20]', to: '274-20' }],
     name: 'Zeichen 274-20',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -99,6 +102,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-30',
     signId: '274-30',
+    redirects: [{ from: '274[30]', to: '274-30' }],
     name: 'Zeichen 274-30',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -122,6 +126,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-40',
     signId: '274-40',
+    redirects: [{ from: '274[40]', to: '274-40' }],
     name: 'Zeichen 274-40',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -144,6 +149,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-50',
     signId: '274-50',
+    redirects: [{ from: '274[50]', to: '274-50' }],
     name: 'Zeichen 274-50',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -167,6 +173,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-60',
     signId: '274-60',
+    redirects: [{ from: '274[60]', to: '274-60' }],
     name: 'Zeichen 274-60',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -190,6 +197,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-70',
     signId: '274-70',
+    redirects: [{ from: '274[70]', to: '274-70' }],
     name: 'Zeichen 274-70',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -213,6 +221,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-80',
     signId: '274-80',
+    redirects: [{ from: '274[80]', to: '274-80' }],
     name: 'Zeichen 274-80',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -235,6 +244,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-90',
     signId: '274-90',
+    redirects: [{ from: '274[90]', to: '274-90' }],
     name: 'Zeichen 274-90',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -257,6 +267,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-100',
     signId: '274-100',
+    redirects: [{ from: '274[100]', to: '274-100' }],
     name: 'Zeichen 274-100',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -279,6 +290,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-110',
     signId: '274-110',
+    redirects: [{ from: '274[110]', to: '274-110' }],
     name: 'Zeichen 274-110',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -301,6 +313,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-120',
     signId: '274-120',
+    redirects: [{ from: '274[120]', to: '274-120' }],
     name: 'Zeichen 274-120',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
@@ -323,6 +336,7 @@ export const _speed_maxspeed_start: SignType[] = [
   {
     osmValuePart: '274-130',
     signId: '274-130',
+    redirects: [{ from: '274[130]', to: '274-130' }],
     name: 'Zeichen 274-130',
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
