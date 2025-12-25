@@ -67,6 +67,73 @@ Reference `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataT
 }
 ```
 
+### Step 3a: Configurable Signs with Bracket Notation and Explicit IDs (Optional)
+
+Some signs exist in multiple variants with different values (e.g., speed zones, incline percentages). These use bracket notation `[value]` for flexibility combined with explicit IDs for common values.
+
+#### Pattern A: Explicit IDs Redirect to Bracket (RECOMMENDED)
+
+Use when the sign has many possible values but only a few common explicit IDs exist. Add the most common values as explicit IDs and uncommon values with brackets. Add redirects for all official IDs so the tool redirects them to the bracket notation.
+
+**Example: Sign 110 (Steigung / Incline)**
+
+```typescript
+// 1. Bracket sign with valuePrompt (catch-all for any value)
+{
+  osmValuePart: '110[10]',
+  signId: '110',
+  signValue: 10,
+  valuePrompt: {
+    prompt: 'Steigung in Prozent ohne Einheit',
+    defaultValue: '10',
+    format: 'integer',
+  },
+  redirects: [
+    { from: '110-11', to: '110[11]' },  // Less common explicit IDs redirect to bracket
+    { from: '110-12', to: '110[12]' },
+    // ... etc for uncommon values
+  ],
+  // ... other fields
+}
+
+// 2. Common explicit ID signs (NO redirects on these)
+{
+  osmValuePart: '110-10',
+  signId: '110-10',
+  // NO redirects property - stays as explicit ID
+  // ... other fields
+}
+```
+
+#### Pattern B: Bracket Values Redirect to Explicit ID (Alternative)
+
+Use when a specific bracket value should normalize to an explicit ID.
+
+**Example: Sign 274.1 (Tempo-Zone)**
+
+```typescript
+// 1. Bracket sign with valuePrompt (for non-30 values)
+{
+  osmValuePart: '274.1[47]',
+  signId: '274.1',
+  signValue: 47,
+  valuePrompt: {
+    prompt: 'Geschwindigkeit in km/h ohne Einheit',
+    defaultValue: '47',
+    format: 'integer',
+  },
+  // NO redirects here
+}
+
+// 2. Explicit ID for common value (WITH redirect from bracket)
+{
+  osmValuePart: '274.1',
+  signId: '274.1',
+  redirects: [{ from: '274.1[30]', to: '274.1' }],  // Bracket value redirects to explicit
+  // ... other fields
+}
+```
+
 ### Step 4: Add Tests for Special Interactions (Optional)
 
 If the research in Step 1 revealed special tagging logic when this sign is combined with others (e.g., specific `access` tag overrides or complex conditional tagging), add a test case in `packages/traffic-sign-converter/src/signsToTags/signsToTags.test.ts`.
