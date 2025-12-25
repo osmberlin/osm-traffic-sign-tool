@@ -10,6 +10,13 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+## 2.1.6
+
+_2025-12-09_
+
+- Add signs, update logic for signs.
+- Add links to the OSM wiki sign page (the list) and the Wikipedia sign list in the sidebar under "More…"
+
 ## 2.1.5
 
 _2025-12-09_
