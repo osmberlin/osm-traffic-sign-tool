@@ -11,10 +11,12 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
+    "release": "bun run release-cli.ts",
     "updatePackages:major": "pnpm dlx taze -r major --includeLocked --write && pnpm install",
     "updatePackages:minor": "pnpm dlx taze -r minor --includeLocked --write && pnpm install"
   },
   "devDependencies": {
+    "@clack/prompts": "^0.8.2",
     "@colors/colors": "^1.6.0",
     "@types/bun": "latest",
     "eslint": "^9.39.2",
