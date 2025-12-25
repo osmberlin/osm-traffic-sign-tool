@@ -194,4 +194,125 @@ export const _hazard: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '"Gehwegschäden"',
+    signId: '"Gehwegschäden"',
+    redirects: [{ from: 'Gehwegschäden', to: '"Gehwegschäden"' }],
+    name: 'Zusatzzeichen "Gehwegschäden"',
+    descriptiveName: 'Gehwegschäden',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: ['footway', 'path'],
+      uniqueTags: [
+        { key: 'hazard', value: 'damaged_road' },
+        { key: 'smoothness', value: 'bad' },
+      ],
+    },
+    comments: [
+      {
+        comment:
+          'Alternative smoothness values: `intermediate`, `very_bad`. See [smoothness gallery](https://wiki.openstreetmap.org/wiki/Key:smoothness/Gallery) for examples.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Gehwegsch%C3%A4den.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '"Radwegschäden"',
+    signId: '"Radwegschäden"',
+    redirects: [{ from: 'Radwegschäden', to: '"Radwegschäden"' }],
+    name: 'Zusatzzeichen "Radwegschäden"',
+    descriptiveName: 'Radwegschäden',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: ['cycleway', 'path'],
+      uniqueTags: [
+        { key: 'hazard', value: 'damaged_road' },
+        { key: 'smoothness', value: 'bad' },
+      ],
+    },
+    comments: [
+      {
+        comment:
+          'Alternative smoothness values: `intermediate`, `very_bad`. See [smoothness gallery](https://wiki.openstreetmap.org/wiki/Key:smoothness/Gallery) for examples.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Radwegsch%C3%A4den.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '"Geh- und Radwegschäden"',
+    signId: '"Geh- und Radwegschäden"',
+    redirects: [{ from: 'Geh- und Radwegschäden', to: '"Geh- und Radwegschäden"' }],
+    name: 'Zusatzzeichen "Geh- und Radwegschäden"',
+    descriptiveName: 'Geh- und Radwegschäden',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: ['path', 'cycleway'],
+      uniqueTags: [
+        { key: 'hazard', value: 'damaged_road' },
+        { key: 'smoothness', value: 'bad' },
+      ],
+    },
+    comments: [
+      {
+        comment:
+          'Alternative smoothness values: `intermediate`, `very_bad`. See [smoothness gallery](https://wiki.openstreetmap.org/wiki/Key:smoothness/Gallery) for examples.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Geh-_und_Radwegsch%C3%A4den.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '"Schäden im Gehweg"',
+    signId: '"Schäden im Gehweg"',
+    redirects: [{ from: 'Schäden im Gehweg', to: '"Schäden im Gehweg"' }],
+    name: 'Zusatzzeichen "Schäden im Gehweg"',
+    descriptiveName: 'Schäden im Gehweg',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: ['footway', 'path'],
+      uniqueTags: [
+        { key: 'hazard', value: 'damaged_road' },
+        { key: 'smoothness', value: 'bad' },
+      ],
+    },
+    comments: [
+      {
+        comment:
+          'Alternative smoothness values: `intermediate`, `very_bad`. See [smoothness gallery](https://wiki.openstreetmap.org/wiki/Key:smoothness/Gallery) for examples.',
+      },
+    ],
+    catalogue: {
+      visibility: 'search_only',
+      signCategory: 'hazard_sign',
+    },
+    image: {
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Sch%C3%A4den_im_Gehweg.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
