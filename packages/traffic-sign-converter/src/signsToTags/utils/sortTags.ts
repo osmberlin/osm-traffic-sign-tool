@@ -22,6 +22,7 @@ const sortedAccessKeys = [
   'trailer',
   'caravan',
   'motor_vehicle',
+  'electric_vehicle',
   'motorcycle',
   'moped',
   'speed_pedelec',

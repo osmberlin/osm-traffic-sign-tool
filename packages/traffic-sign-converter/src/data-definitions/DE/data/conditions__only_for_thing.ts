@@ -259,10 +259,11 @@ export const _conditions__only_for_thing: SignType[] = [
     osmValuePart: '1010-66',
     signId: '1010-66',
     name: 'Zusatzzeichen 1010-66',
-    descriptiveName: 'elektrisch betriebene Fahrzeuge',
-    description: null,
+    descriptiveName: 'Elektrisch betriebene Fahrzeuge',
+    description: 'Fahrzeuge mit E-Kennzeichen',
     kind: 'condition_modifier',
     tagRecommendations: {
+      modifierValue: 'electric_vehicle',
       uniqueTags: [],
     },
     comments: [],
