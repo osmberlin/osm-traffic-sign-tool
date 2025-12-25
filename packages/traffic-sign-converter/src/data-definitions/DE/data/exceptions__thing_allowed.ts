@@ -274,7 +274,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {
       highwayValues: ['track'],
-      modifierValue: 'agricultural',
+      accessTags: [{ key: 'agricultural', value: 'yes' }],
     },
     comments: [
       {
