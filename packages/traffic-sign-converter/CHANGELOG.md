@@ -2,7 +2,12 @@
 
 ## Unreleased
 
+## 0.2.9
+
+_2025-12-26_
+
 - Refactor redirects to be part of sign configs
+- Add and update signs
 
 ## 0.2.8
 
