@@ -24,7 +24,6 @@ type SVG = {
   blurHeight: number
 }
 
-// @ts-expect-error TODO this error as to do with the bun types package which interferes with types in NextJS (and Astro)
 const countrySvgs: Record<CountryPrefixType, Record<string, SVG>> = { DE: SvgsDE } as const
 
 export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
