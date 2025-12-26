@@ -116,6 +116,31 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
   },
   {
+    osmValuePart: '"Kleinkrafträder frei"',
+    redirects: [{ from: 'Kleinkrafträder frei', to: '"Kleinkrafträder frei"' }],
+    signId: '"Kleinkrafträder frei"',
+    name: 'Zusatzzeichen "Kleinkrafträder frei"',
+    descriptiveName: 'Kleinkrafträder frei',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendations: {
+      highwayValues: [],
+      accessTags: [
+        { key: 'mofa', value: 'yes' },
+        { key: 'moped', value: 'yes' },
+      ],
+    },
+    comments: [],
+    catalogue: {
+      visibility: 'highlight',
+      signCategory: 'exception_modifier',
+    },
+    image: {
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Kleinkrafträder_frei.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '1022-16',
     signId: '1022-16',
     name: 'Zusatzzeichen 1022-16',
