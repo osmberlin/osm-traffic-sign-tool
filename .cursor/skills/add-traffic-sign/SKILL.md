@@ -67,6 +67,24 @@ Reference `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataT
 }
 ```
 
+### Step 3b: Free Text Sign IDs (Quoted Sign IDs)
+
+Some signs use free text identifiers instead of official numeric IDs (e.g., `"Gehwegschäden"`, `"Kleinkrafträder frei"`, `"Kfz-Verkehr frei"`). These are typically non-standard or descriptive signs.
+
+**Rules for free text sign IDs:**
+
+- **Always use quotes**: Both `osmValuePart` and `signId` must include quotes around the text.
+- **Always add redirects**: Users may write the sign ID without quotes (e.g., `DE:Kleinkrafträder frei` instead of `DE:"Kleinkrafträder frei"`). Add a redirect to handle this:
+
+```typescript
+{
+  osmValuePart: '"Kleinkrafträder frei"',
+  signId: '"Kleinkrafträder frei"',
+  redirects: [{ from: 'Kleinkrafträder frei', to: '"Kleinkrafträder frei"' }],
+  // ...
+}
+```
+
 ### Step 3a: Configurable Signs with Bracket Notation and Explicit IDs (Optional)
 
 Some signs exist in multiple variants with different values (e.g., speed zones, incline percentages). These use bracket notation `[value]` for flexibility combined with explicit IDs for common values.
