@@ -10,7 +10,7 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
-## 2.2.0
+## 2.1.7
 
 _2025-12-26_
 
