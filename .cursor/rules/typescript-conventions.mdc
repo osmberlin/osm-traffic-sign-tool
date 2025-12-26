@@ -1,0 +1,6 @@
+---
+globs: *.ts,*.tsx
+alwaysApply: false
+---
+
+No return types (unless needed). Use `type` not `interface`. Avoid `any`, use `unknown` if needed.

@@ -1,0 +1,6 @@
+---
+description: 'Prefer Bun built-in helpers for file operations when using Bun runtime'
+alwaysApply: false
+---
+
+Prefer Bun built-in helpers: `Bun.file()` for reading, `Bun.write()` for writing, `Bun.file().exists()` for checking existence. Use `Bun.hash`, `Bun.password`, etc. when available.

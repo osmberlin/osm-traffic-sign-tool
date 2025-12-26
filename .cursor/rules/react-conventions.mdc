@@ -1,0 +1,6 @@
+---
+globs: apps/traffic-sign-tool/**/*.tsx, apps/traffic-sign-tool/**/*.ts
+alwaysApply: false
+---
+
+React 19/Compiler best practices: Use render props and composition over `useState`. Derive state from props when possible. Only use state for truly dynamic, interactive values.
