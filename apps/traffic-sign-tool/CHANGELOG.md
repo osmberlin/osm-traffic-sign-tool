@@ -10,7 +10,12 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
-- Refactor redirects to be part of sign configs and enhance search to include alternative identifiers
+## 2.2.0
+
+_2025-12-26_
+
+- Refactor redirects to be part of sign configs and enhance search to include alternative identifiers.
+- Add and update signs.
 
 ## 2.1.6
 
