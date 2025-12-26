@@ -201,21 +201,6 @@ async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: bool
   await $`cd ${PACKAGE_DIR} && pnpm run check`
   spinner.stop('✓ Checks passed')
 
-  // npm login prompt
-  p.log.warn('⚠️  Manual step required:')
-  p.log.info('Run `npm login` and visit the auth URL to authenticate.')
-  p.log.info('Then return here and confirm.')
-
-  const loginComplete = await p.confirm({
-    message: 'I have completed npm login',
-    initialValue: false,
-  })
-
-  if (!loginComplete) {
-    p.cancel('Release cancelled. Please complete npm login and try again.')
-    process.exit(1)
-  }
-
   // Publish
   spinner.start('Publishing to npm...')
   try {
@@ -224,46 +209,11 @@ async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: bool
   } catch (error) {
     spinner.stop('✗ Publish failed')
     p.log.error('Failed to publish to npm')
-    p.log.info('Common causes:')
-    p.log.info('  - Network issues or npm registry down')
-    p.log.info('  - Authentication expired (run `npm login` again)')
-    p.log.info('  - Version already exists on npm')
-    p.log.info('  - Package validation errors')
+    p.log.info('Test…')
+    p.log.info('  - `npm woami`')
+    p.log.info('  - `npm login`')
+    p.log.info(`  - \`cd ${PACKAGE_DIR} && npm publish\` manually`)
     p.log.info(`\nVersion ${newVersion} has already been bumped in package.json.`)
-
-    const retry = await p.confirm({
-      message: 'Retry publish?',
-      initialValue: true,
-    })
-
-    if (retry) {
-      spinner.start('Retrying publish...')
-      try {
-        await $`cd ${PACKAGE_DIR} && npm publish`
-        spinner.stop('✓ Published to npm')
-      } catch (retryError) {
-        spinner.stop('✗ Publish failed again')
-        p.log.error('Publish failed. You may need to:')
-        p.log.info('  1. Check npm login status: `npm whoami`')
-        p.log.info('  2. Fix any package issues')
-        p.log.info('  3. Manually run: `npm publish` in the package directory')
-        p.log.info(`  4. Version ${newVersion} is already bumped - commit when ready`)
-        p.cancel('Release incomplete. Fix issues and retry.')
-        process.exit(1)
-      }
-    } else {
-      p.log.warn('Publish skipped. Version has been bumped but not published.')
-      p.log.info('You can manually publish later with:')
-      p.log.info(`  cd ${PACKAGE_DIR} && npm publish`)
-      const continueAnyway = await p.confirm({
-        message: 'Continue with commit anyway?',
-        initialValue: false,
-      })
-      if (!continueAnyway) {
-        p.cancel('Release cancelled. Fix publish issues and retry.')
-        process.exit(1)
-      }
-    }
   }
 
   // Git commit
