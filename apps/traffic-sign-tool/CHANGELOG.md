@@ -10,6 +10,12 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+## 2.1.8
+
+_2026-01-28_
+
+- Update signs.
+
 ## 2.1.7
 
 _2025-12-26_

@@ -10,9 +10,16 @@ export const _surface: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {
       highwayValues: [],
-      uniqueTags: [{ key: 'area:highway', value: 'prohibited' }],
+      uniqueTags: [
+        { key: 'road_marking', value: 'restriction' },
+        { key: 'pattern', value: 'stripes' },
+      ],
     },
-    comments: [],
+    comments: [
+      {
+        comment: 'Optional: [Tag:colour=white]',
+      },
+    ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',
@@ -32,9 +39,16 @@ export const _surface: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendations: {
       highwayValues: [],
-      uniqueTags: [],
+      uniqueTags: [
+        { key: 'road_marking', value: 'restriction' },
+        { key: 'pattern', value: 'zigzag' },
+      ],
     },
-    comments: [],
+    comments: [
+      {
+        comment: 'Optional: [Tag:colour=white]',
+      },
+    ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',
