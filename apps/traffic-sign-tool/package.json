@@ -1,6 +1,6 @@
 {
   "name": "osm-traffic-sign-tool",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "private": true,
   "description": "Get OpenStreetMap tagging recommendations based on traffic sign combinations.",
   "license": "AGPL-3.0-or-later",
