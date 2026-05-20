@@ -1,3 +1,6 @@
+# Delay installing package versions published within the last 5 days (supply-chain posture).
+minimumReleaseAge: 7200
+
 packages:
   - "apps/*"
   - "packages/*"

@@ -15,8 +15,8 @@
     "check": "pnpm run type-check && pnpm run format && pnpm run lint",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
-    "updatePackages:major": "npx taze major --includeLocked --write --exclude eslint && pnpm run updatePackages:minor && pnpm install",
-    "updatePackages:minor": "npx taze minor --includeLocked --write",
+    "updatePackages:major": "npx taze major --includeLocked --write --maturity-period 5 --exclude eslint && pnpm run updatePackages:minor && pnpm install",
+    "updatePackages:minor": "npx taze minor --includeLocked --write --maturity-period 5",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
