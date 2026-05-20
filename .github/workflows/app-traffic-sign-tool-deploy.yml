@@ -1,4 +1,3 @@
-# See https://github.com/gregrickaby/nextjs-github-pages
 name: App 'Traffic Sign Tool' — Deploy to Github Pages
 
 on:
@@ -41,29 +40,20 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # TODO It is not clear how this works with pnpm, so lets disable it for now
-      # Source https://github.com/gregrickaby/nextjs-github-pages/blob/main/.github/workflows/deploy.yml#L62-L71
-      # - name: Restore cache
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: |
-      #       .next/cache
-      #     # Generate a new cache whenever packages or source files change.
-      #     key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-      #     # If source files changed but packages didn't, rebuild from a prior cache.
-      #     restore-keys: |
-      #       ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-
       - name: Install dependencies (Monorepo)
         run: pnpm install
 
-      - name: Build with Monorepo (Package, Next.js)
+      - name: Build monorepo (Vite app and packages)
         run: pnpm run build
 
-      - name: Upload artifact (Next.js)
+      - name: Add SPA fallback for GitHub Pages
+        run: cp dist/index.html dist/404.html
+        working-directory: apps/traffic-sign-tool
+
+      - name: Upload artifact (Vite)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./apps/traffic-sign-tool/out
+          path: ./apps/traffic-sign-tool/dist
 
   deploy:
     environment:
