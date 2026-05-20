@@ -5,7 +5,6 @@ import {
 } from '@osm-traffic-signs/converter'
 import { unlink } from 'node:fs/promises'
 import path from 'node:path'
-import { cleanupDirectories } from './utils/cleanupDirectories.js'
 import { downloadAndOptimizeSvg } from './utils/downloadAndOptimizeSvg.js'
 import { prepareDirectoryCountry } from './utils/prepareDirectoryCountry.js'
 
@@ -54,20 +53,10 @@ async function downloadAllSvgs(
   // Create directory
   const countryDirectory = prepareDirectoryCountry(countryPrefix)
 
-  // Only cleanup in full mode
-  if (mode === 'full') {
-    console.log('-- CLEANUP DIRECTORY', countryDirectory)
-    cleanupDirectories(countryDirectory)
-  } else {
-    console.log('-- INCREMENTAL MODE: Skipping directory cleanup')
-  }
+  console.log('-- NON-DESTRUCTIVE MODE: Keeping existing SVG files')
 
-  // ERROR FILE: CLEANUP (only in full mode)
+  // ERROR FILE
   const errorsFile = path.join(__dirname, 'download-errors', `downloadErrors_${countryPrefix}.json`)
-  if (mode === 'full' && (await Bun.file(errorsFile).exists())) {
-    await unlink(errorsFile)
-    console.log('-- REMOVED OLD ERROR FILE', errorsFile)
-  }
 
   // DOWNLOAD FILES: Filter out existing files in incremental mode
   let filesToDownload = data
@@ -98,26 +87,14 @@ async function downloadAllSvgs(
 
   console.log('-- DOWNLOAD FILES', filesToDownload.length)
 
-  // Rate limiting: process in batches to avoid overwhelming the API
-  const BATCH_SIZE = 10
-  const DELAY_BETWEEN_BATCHES_MS = 1000
   const downloadResult = []
 
-  for (let i = 0; i < filesToDownload.length; i += BATCH_SIZE) {
-    const batch = filesToDownload.slice(i, i + BATCH_SIZE)
-    console.log(
-      `-- Processing batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(filesToDownload.length / BATCH_SIZE)} (${batch.length} items)`,
-    )
-
-    const batchResults = await Promise.all(
-      batch.map((sign) => downloadAndOptimizeSvg(countryPrefix, sign, false)),
-    )
-    downloadResult.push(...batchResults)
-
-    // Delay between batches (except for the last one)
-    if (i + BATCH_SIZE < filesToDownload.length) {
-      await Bun.sleep(DELAY_BETWEEN_BATCHES_MS)
+  for (const [index, sign] of filesToDownload.entries()) {
+    if ((index + 1) % 10 === 0 || index === 0 || index + 1 === filesToDownload.length) {
+      console.log(`-- Processing ${index + 1}/${filesToDownload.length}`)
     }
+    const result = await downloadAndOptimizeSvg(countryPrefix, sign, false)
+    downloadResult.push(result)
   }
 
   // In incremental mode, also add skipped files to results for type generation
@@ -139,6 +116,9 @@ async function downloadAllSvgs(
   console.log('-- WRITE ERRORS', errors.length, errors.length ? errorsFile : undefined)
   if (errors.length > 0) {
     await Bun.write(errorsFile, JSON.stringify(errors, null, 2))
+  } else if (await Bun.file(errorsFile).exists()) {
+    await unlink(errorsFile)
+    console.log('-- REMOVED OLD ERROR FILE', errorsFile)
   }
 
   // TYPES: WRITE TYPES FILE – one export line per file

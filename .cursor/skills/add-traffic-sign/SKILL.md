@@ -185,7 +185,11 @@ Analyze sign frequency:
 2. **Verify Errors**: Read `packages/internal_svgs/src/download-errors/downloadErrors_DE.json`.
 3. **Lint**: Use the `read_lints` tool to check for TypeScript errors in the modified file.
 
-**Note**: For full refresh of all SVGs (re-downloads everything), use `bun script-refresh-all-svg.ts` manually when needed.
+**Note**:
+
+- `bun script-new-svg.ts` stays the default path and only downloads missing SVGs.
+- `pnpm --dir packages/internal_svgs run updateSvgs:full` re-downloads all signs in place without wiping existing files first.
+- Use `bun script-refresh-all-svg.ts` (or `updateSvgs:force-refresh`) only when you explicitly want a clean wipe + full rebuild.
 
 ### Step 7: Testing
 

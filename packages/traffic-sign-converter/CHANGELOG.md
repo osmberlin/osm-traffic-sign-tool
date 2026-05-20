@@ -5,6 +5,8 @@
 - Make `image` source metadata explicit via discriminated unions: all sign images now declare `kind: 'remote'` or `kind: 'local'`.
 - Add support for local SVG sources in the internal download pipeline and use local DE assets for missing minspeed signs (`275-40`, `275-80`, `279-40`, `279-80`).
 - Extend DE catalog coverage with redirects (`241` -> `241-30`, `242` -> `242.1`, `325` -> `325.1`) and additional signs (`274.1-20`, `350.1`, `350.2`) plus parser/redirect tests.
+- Harden Wikimedia SVG downloads with compliant bot `User-Agent`, serialized throttled requests, and retry/backoff handling for `429/503` responses.
+- Make full SVG refresh non-destructive by default (`updateSvgs:full`) and add explicit wipe mode via `updateSvgs:force-refresh`.
 
 ## 0.3.1
 

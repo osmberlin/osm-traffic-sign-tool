@@ -9,6 +9,7 @@ import path from 'node:path'
 import { getFileUrlFromWikiApi } from './getFileUrlFromWikiApi.js'
 import { optimizeSvg } from './optimizeSvg.js'
 import { prepareDirectorySvgs } from './prepareDirectorySvgs.js'
+import { fetchWithWikimediaPolicy } from './wikimediaHttp.js'
 
 export const downloadAndOptimizeSvg = async (
   countryPrefix: CountryPrefixType,
@@ -56,12 +57,19 @@ export const downloadAndOptimizeSvg = async (
 
     // Step 1: Fetch raw SVG
     try {
-      const response = await fetch(downloadUrlResp.url, {
-        headers: {
-          'User-Agent':
-            'osm-traffic-sign-tools (https://github.com/FixMyBerlin/osm-traffic-sign-tools)',
-        },
-      })
+      const response = await fetchWithWikimediaPolicy(downloadUrlResp.url)
+      if (!response.ok) {
+        return {
+          success: false,
+          error: {
+            message: `Fetch failed with status ${response.status}`,
+            detail: await response.text(),
+            createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+            url: downloadUrlResp.url,
+          },
+          sign,
+        } as const
+      }
       rawSvg = await response.text()
     } catch (error) {
       return {
