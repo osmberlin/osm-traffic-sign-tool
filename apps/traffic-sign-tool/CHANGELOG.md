@@ -10,6 +10,9 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Refresh bundled DE sign data/SVGs from converter updates, including additional sign coverage (`274.1-20`, `350.1`, `350.2`) and redirect aliases (`241`, `242`, `325`).
+- Improve DE minspeed rendering reliability by consuming local SVG assets for missing `275-*` and `279-*` variants.
+
 ## 2.1.9
 
 _2026-05-20_
