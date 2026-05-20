@@ -7,7 +7,8 @@ import {
 import { z } from 'zod'
 
 export const deSearchSchema = z.object({
-  q: z.string().optional(),
+  // routerSearch uses JSON.parse on param values; bare numbers (e.g. q=241) become number
+  q: z.coerce.string().optional(),
   signs: z.string().optional(),
 })
 
