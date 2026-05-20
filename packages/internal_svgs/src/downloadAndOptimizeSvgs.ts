@@ -9,6 +9,41 @@ import { cleanupDirectories } from './utils/cleanupDirectories.js'
 import { downloadAndOptimizeSvg } from './utils/downloadAndOptimizeSvg.js'
 import { prepareDirectoryCountry } from './utils/prepareDirectoryCountry.js'
 
+type ExportItem = {
+  importName: string
+  fileName: string
+}
+
+const sortExportItems = (a: ExportItem, b: ExportItem) => a.importName.localeCompare(b.importName)
+
+const createSvgExportsContent = (items: ExportItem[]) =>
+  items
+    .sort(sortExportItems)
+    .map(({ importName, fileName }) => {
+      const relativePath = path.join('./svgs', fileName)
+      return `export { default as ${importName} } from './${relativePath}'`
+    })
+    .join('\n')
+
+const createLoaderExportsContent = (countryPrefix: CountryPrefixType, items: ExportItem[]) => {
+  const loaderTypeName = `${countryPrefix}SvgLoaderMap`
+  const sortedItems = items.sort(sortExportItems)
+
+  return [
+    `type SvgModule = typeof import('./svgs/${sortedItems[0]?.fileName ?? `${countryPrefix}_missing.svg`}')`,
+    '',
+    `export type ${loaderTypeName} = Record<string, () => Promise<SvgModule>>`,
+    '',
+    `export const SvgLoaders${countryPrefix}: ${loaderTypeName} = {`,
+    ...sortedItems.map(
+      ({ importName, fileName }) =>
+        `  ${importName}: () => import('./svgs/${fileName.replaceAll('\\', '/')}'),`,
+    ),
+    '}',
+    '',
+  ].join('\n')
+}
+
 async function downloadAllSvgs(
   countryPrefix: CountryPrefixType,
   data: SignType[],
@@ -109,8 +144,9 @@ async function downloadAllSvgs(
   // TYPES: WRITE TYPES FILE – one export line per file
   const signs = downloadResult.filter((r) => r.success === true)
   const typesFile = path.join(countryDirectory, 'index.ts')
+  const loaderFile = path.join(countryDirectory, 'loaders.ts')
   console.log('-- WRITE TYPES', signs.length, typesFile)
-  const exportStrings = Array.from(
+  const exportItems = Array.from(
     new Set(
       signs.filter(Boolean).map(({ importName, fileName }) => ({
         importName,
@@ -119,15 +155,12 @@ async function downloadAllSvgs(
     ),
   ).filter(Boolean)
 
-  const svgExportContent = exportStrings
-    .sort((a, b) => a.importName.localeCompare(b.fileName))
-    .map((item) => {
-      const relativePath = path.join('./svgs', item.fileName)
-      return `export { default as ${item.importName} } from './${relativePath}'`
-    })
-    .join('\n')
-
+  const svgExportContent = createSvgExportsContent(exportItems)
   await Bun.write(typesFile, svgExportContent)
+
+  console.log('-- WRITE LOADERS', signs.length, loaderFile)
+  const loaderContent = createLoaderExportsContent(countryPrefix, exportItems)
+  await Bun.write(loaderFile, loaderContent)
 
   console.log('DONE', countryPrefix)
 }
@@ -148,7 +181,10 @@ const barrelFile = path.join(__dirname, 'data-svgs', 'index.ts')
 console.log('WRITE BARREL FILE', barrelFile)
 const barrelContent = Array.from(countryDefinitionMap.entries())
   .map(([country]) => {
-    return `export * as Svgs${country} from './${country}/index.js'`
+    return [
+      `export * as Svgs${country} from './${country}/index.js'`,
+      `export { SvgLoaders${country} } from './${country}/loaders.js'`,
+    ].join('\n')
   })
   .join('\n')
 await Bun.write(barrelFile, barrelContent)

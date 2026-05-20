@@ -1,6 +1,6 @@
 {
   "name": "@osm-traffic-signs/converter",
-  "version": "0.2.9",
+  "version": "0.3.1",
   "description": "Convert traffic sign IDs to OSM tags; suggest a traffic_sign-tag based on OSM tags.",
   "license": "AGPL-3.0-or-later",
   "scripts": {
@@ -14,9 +14,9 @@
     "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
     "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
     "_check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run test",
-    "check": "pnpm run format && pnpm run lint && pnpm run test",
+    "check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run test",
     "format": "prettier --write .",
-    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm --profile node16",
+    "check-exports": "attw --pack . --ignore-rules cjs-resolves-to-esm internal-resolution-error no-resolution --profile node16",
     "lint": "tsc --noEmit",
     "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test": "vitest run --passWithNoTests",
@@ -50,8 +50,24 @@
       "import": "./dist/data-svgs/index.js",
       "default": "./dist/data-svgs/index.js",
       "types": "./dist/data-svgs/index.d.ts"
+    },
+    "./data-svgs/*": {
+      "import": "./dist/data-svgs/*/index.js",
+      "default": "./dist/data-svgs/*/index.js",
+      "types": "./dist/data-svgs/*/index.d.ts"
+    },
+    "./data-svgs/*/loaders": {
+      "import": "./dist/data-svgs/*/loaders.js",
+      "default": "./dist/data-svgs/*/loaders.js",
+      "types": "./dist/data-svgs/*/loaders.d.ts"
+    },
+    "./data-svgs/*/svgs/*": {
+      "import": "./dist/data-svgs/*/svgs/*.svg",
+      "default": "./dist/data-svgs/*/svgs/*.svg",
+      "types": "./dist/types/svg.d.ts"
     }
   },
+  "sideEffects": false,
   "files": [
     "dist"
   ],

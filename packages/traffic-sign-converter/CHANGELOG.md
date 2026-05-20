@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+## 0.3.1
+
+_2026-05-20_
+
+- Add dual SVG APIs for compatibility and tree-shaking:
+  - legacy namespace API remains supported: `import { SvgsDE } from '@osm-traffic-signs/converter/data-svgs'`
+  - new lazy loader API for runtime `svgName`: `SvgLoadersDE`
+  - new country subpath entrypoints for static imports: `@osm-traffic-signs/converter/data-svgs/DE`
+- Re-enable package export validation in `check` and improve SVG module typings for both string and image-object consumers.
+- Versioning strategy: non-breaking feature release (minor bump), reserving a future major only for explicit legacy API removal.
+
 ## 0.2.9
 
 _2025-12-26_

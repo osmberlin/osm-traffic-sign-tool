@@ -10,6 +10,13 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+## 2.1.9
+
+_2026-05-20_
+
+- Update app SVG loading flow to support runtime lazy loading from `@osm-traffic-signs/converter`.
+- Update bundled converter package release to `0.3.1` (dual API support for legacy namespace and new loaders).
+
 ## 2.1.8
 
 _2026-01-28_
