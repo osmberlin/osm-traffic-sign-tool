@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.4.0
+
+_2026-05-20_
+
 - Make `image` source metadata explicit via discriminated unions: all sign images now declare `kind: 'remote'` or `kind: 'local'`.
 - Add support for local SVG sources in the internal download pipeline and use local DE assets for missing minspeed signs (`275-40`, `275-80`, `279-40`, `279-80`).
 - Extend DE catalog coverage with redirects (`241` -> `241-30`, `242` -> `242.1`, `325` -> `325.1`) and additional signs (`274.1-20`, `350.1`, `350.2`) plus parser/redirect tests.
