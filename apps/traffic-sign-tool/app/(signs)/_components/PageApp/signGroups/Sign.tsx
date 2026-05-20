@@ -1,4 +1,4 @@
-import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CheckCircleIcon, PencilSquareIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
 import { SignStateType, SignType } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'

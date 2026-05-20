@@ -2,8 +2,7 @@ import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { linkStyle } from '@app/app/_components/links/linkStyles'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
 import { taginfoTrafficSignData } from '@internal/taginfo'
-import { countries } from '@osm-traffic-signs/converter'
-import Link from 'next/link'
+import { Link } from '@tanstack/react-router'
 import { z } from 'zod'
 import {
   Table,
@@ -17,12 +16,6 @@ import { WikiLinkListTrafficSignValues } from '../../_components/wiki/WikiLinkLi
 import { TagComments } from './_components/TagComments'
 import { TagRecommendations } from './_components/TagRecommendations'
 import { TagSignImages } from './_components/TagSignImages'
-
-export async function generateStaticParams() {
-  return countries.map((prefx) => ({
-    countryPrefix: prefx,
-  }))
-}
 
 const Schema = z.array(z.tuple([z.string(), z.number()]))
 
@@ -72,14 +65,7 @@ export default function TaginfoPage() {
                   <TagSignImages value={value} />
                 </TableCell>
                 <TableCell className="w-20 text-sm">
-                  <Link
-                    href={{
-                      pathname: '/DE',
-                      search: new URLSearchParams({ signs: value }).toString(),
-                    }}
-                    target="_blank"
-                    className={linkStyle}
-                  >
+                  <Link to="/DE" search={{ signs: value }} target="_blank" className={linkStyle}>
                     This tool
                   </Link>
                   <br />

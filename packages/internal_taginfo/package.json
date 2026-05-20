@@ -1,24 +1,25 @@
 {
   "name": "@internal/taginfo",
-  "type": "module",
   "private": true,
-  "main": "dist/index.js",
   "files": [
     "dist"
   ],
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "taginfo": "pnpm run taginfo:fetch",
-    "taginfo:fetch": "bun run ./src/fetch.ts && prettier ./data --write",
     "bleach": "rm -rf .turbo && rm -rf node_modules",
-    "type-check": "tsc --skipLibCheck --noEmit",
-    "lint": "tsc --noEmit",
-    "format": "prettier . --write",
+    "build": "tsc",
     "check": "pnpm run type-check && pnpm run format && pnpm run lint",
-    "test": "",
-    "test:watch": "",
-    "preinstall": "npx only-allow pnpm"
+    "dev": "tsc --watch",
+    "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
+    "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
+    "lint": "oxlint -c ../../oxlint.config.mjs .",
+    "preinstall": "npx only-allow pnpm",
+    "taginfo": "pnpm run taginfo:fetch",
+    "taginfo:fetch": "bun run ./src/fetch.ts && oxfmt --config ../../oxfmt.config.mjs --write ./data",
+    "test": "echo No tests configured",
+    "test:watch": "echo No tests configured",
+    "type-check": "tsc --skipLibCheck --noEmit"
   },
   "devDependencies": {
     "cheerio": "^1.1.2",

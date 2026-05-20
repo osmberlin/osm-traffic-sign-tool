@@ -1,6 +1,6 @@
-import type { CountryPrefixType } from '@osm-traffic-signs/converter'
 import fs from 'node:fs'
 import path from 'node:path'
+import type { CountryPrefixType } from '@osm-traffic-signs/converter'
 import { prepareDirectoryCountry } from './prepareDirectoryCountry.js'
 
 /** @description Create `data/DE/svgs` */

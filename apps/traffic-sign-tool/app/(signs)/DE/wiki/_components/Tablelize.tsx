@@ -8,7 +8,6 @@ import {
 } from '@app/app/_components/catalyst/table'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { SignStateType } from '@osm-traffic-signs/converter'
-import Image from 'next/image'
 import { WikiSign } from '../page'
 
 export const Tablelize = ({ data }: { data: Partial<SignStateType> | Partial<WikiSign> }) => {
@@ -40,7 +39,7 @@ export const Tablelize = ({ data }: { data: Partial<SignStateType> | Partial<Wik
                     {value}
                   </ExternalLink>
                 ) : key.toLocaleLowerCase().includes('svg') ? (
-                  <Image src={value} height={50} width={50} alt={key} />
+                  <img src={String(value)} height={50} width={50} alt={key} />
                 ) : (
                   value
                 )}

@@ -1,5 +1,5 @@
 'use client'
-import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'

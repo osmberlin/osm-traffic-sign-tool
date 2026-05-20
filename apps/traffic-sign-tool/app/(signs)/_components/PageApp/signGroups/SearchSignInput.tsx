@@ -1,5 +1,5 @@
 'use client'
-import { useParamQ } from '@app/app/(signs)/_components/store/useParamQ.nuqs'
+import { useParamQ } from '@app/app/(signs)/_components/store/useParamQ.search'
 import { useParamQCountNumber } from '@app/app/(signs)/_components/store/useParamQCount.zustand'
 import { XMarkIcon } from '@heroicons/react/16/solid'
 import { useEffect, useRef, useSyncExternalStore } from 'react'

@@ -7,22 +7,15 @@ import {
   TableRow,
 } from '@app/app/_components/catalyst/table'
 import { trafficSignsWiki } from '@internal/wiki'
-import { countries, SignStateType, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
+import { SignStateType, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
-import Image from 'next/image'
 import { PackageSvgTrafficSign } from '../../_components/PackageSvgTrafficSign'
 import { countryPrefix } from '../_contryPrefix.const'
 import { Tablelize } from './_components/Tablelize'
 
-export async function generateStaticParams() {
-  return countries.map((prefx) => ({
-    countryPrefix: prefx,
-  }))
-}
-
 export type WikiSign = (typeof trafficSignsWiki)[number]
 
-export default async function WikiPage() {
+export default function WikiPage() {
   const innerTrafficSignsWiki: (WikiSign & { toolSign?: SignStateType })[] =
     structuredClone(trafficSignsWiki)
   let missingSignCount = 0
@@ -66,7 +59,7 @@ export default async function WikiPage() {
                     {restsign ? (
                       <>
                         {sign?.imageSvg ? (
-                          <Image
+                          <img
                             height={100}
                             width={100}
                             src={sign?.imageSvg}

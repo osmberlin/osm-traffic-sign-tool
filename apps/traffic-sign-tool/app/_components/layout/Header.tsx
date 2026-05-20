@@ -1,14 +1,13 @@
 'use client'
+import { Link, useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
-import Image from 'next/image'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import packageJson from '../../../package.json'
 import { ExternalLink } from '../links/ExternalLink'
 import svgLogo from './assets/logo.svg'
 
 export const Header = () => {
-  const isHome = usePathname() === '/'
+  const pathname = useRouterState({ select: (state) => state.location.pathname })
+  const isHome = pathname === '/'
   const version = packageJson?.version || 'unknown'
 
   return (
@@ -20,10 +19,10 @@ export const Header = () => {
             isHome ? 'cursor-auto hover:no-underline' : '',
           )}
           aria-disabled={isHome}
-          onClick={(e) => isHome && e.preventDefault()}
-          href="/"
+          onClick={(event) => isHome && event.preventDefault()}
+          to="/"
         >
-          <Image src={svgLogo} alt="" width={48} height={48} />{' '}
+          <img src={svgLogo} alt="" width={48} height={48} />{' '}
           <span>
             OSM Traffic Sign Tool 2 <small className="text-xs">{version}</small>
           </span>
@@ -36,7 +35,7 @@ export const Header = () => {
         </summary>
         <p>
           This tool helps to find the right <code>traffic_sign=*</code> tag as well as recommended
-          tags for the road that it applies to.{' '}
+          tags for the road that it applies to. <br />
           <strong>Please review all tags before updating OSM.</strong>
           <br />
           <ExternalLink blank href="https://github.com/osmberlin/osm-traffic-sign-tool">

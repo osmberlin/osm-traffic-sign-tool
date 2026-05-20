@@ -1,10 +1,10 @@
+import { unlink } from 'node:fs/promises'
+import path from 'node:path'
 import {
   countryDefinitionMap,
   type CountryPrefixType,
   type SignType,
 } from '@osm-traffic-signs/converter'
-import { unlink } from 'node:fs/promises'
-import path from 'node:path'
 import { downloadAndOptimizeSvg } from './utils/downloadAndOptimizeSvg.js'
 import { prepareDirectoryCountry } from './utils/prepareDirectoryCountry.js'
 

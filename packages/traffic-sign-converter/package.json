@@ -2,43 +2,24 @@
   "name": "@osm-traffic-signs/converter",
   "version": "0.4.0",
   "description": "Convert traffic sign IDs to OSM tags; suggest a traffic_sign-tag based on OSM tags.",
+  "keywords": [
+    "openstreetmap"
+  ],
+  "homepage": "https://www.osm-verkehrswende.org/traffic-signs/",
+  "bugs": {
+    "url": "https://github.com/osmberlin/osm-traffic-sign-tool/issues"
+  },
   "license": "AGPL-3.0-or-later",
-  "scripts": {
-    "dev": "tsc --watch",
-    "build:watch": "tsc --watch",
-    "build": "npm run build:clean && npm run build:clean-svgs && npm run build:transfer-svgs && npm run build:ts && npm run build:copy-types && npm run build:copy-svgs",
-    "build:clean": "rimraf dist",
-    "build:clean-svgs": "rimraf ./src/data-svgs",
-    "build:transfer-svgs": "copyfiles -u 4 '../internal_svgs/src/data-svgs/**/*' './src/data-svgs'",
-    "build:ts": "tsc",
-    "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
-    "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
-    "_check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run test",
-    "check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run test",
-    "format": "prettier --write .",
-    "check-exports": "attw --pack . --ignore-rules cjs-resolves-to-esm internal-resolution-error no-resolution --profile node16",
-    "lint": "tsc --noEmit",
-    "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "test": "vitest run --passWithNoTests",
-    "test:watch": "vitest --watch --passWithNoTests",
-    "release:patch": "npm version patch && turbo build --force && pnpm run check && npm run login && npm publish",
-    "updatePackages:major": "pnpx taze major --includeLocked --write --maturity-period 5 --exclude // && pnpm run updatePackages:minor && pnpm install",
-    "updatePackages:minor": "pnpx taze minor --includeLocked --write --maturity-period 5 && pnpm install",
-    "preinstall": "npx only-allow pnpm"
+  "author": "Tobias Jordans <t@tobiasjordans.de> (https://www.osm-verkehrswende.org/traffic-signs/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git"
   },
-  "devDependencies": {
-    "@arethetypeswrong/cli": "^0.18.2",
-    "@eslint/js": "^9.39.2",
-    "@total-typescript/ts-reset": "^0.6.1",
-    "copyfiles": "^2.4.1",
-    "eslint": "^9.39.2",
-    "globals": "^16.5.0",
-    "rimraf": "^6.1.2",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.50.1",
-    "vitest": "^4.0.16"
-  },
+  "files": [
+    "dist"
+  ],
   "type": "module",
+  "sideEffects": false,
   "main": "dist/index.js",
   "exports": {
     ".": {
@@ -67,20 +48,37 @@
       "types": "./dist/types/svg.d.ts"
     }
   },
-  "sideEffects": false,
-  "files": [
-    "dist"
-  ],
-  "homepage": "https://www.osm-verkehrswende.org/traffic-signs/",
-  "bugs": {
-    "url": "https://github.com/osmberlin/osm-traffic-sign-tool/issues"
+  "scripts": {
+    "_check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run type-check && pnpm run test",
+    "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "build": "npm run build:clean && npm run build:clean-svgs && npm run build:transfer-svgs && npm run build:ts && npm run build:copy-types && npm run build:copy-svgs",
+    "build:clean": "rimraf dist",
+    "build:clean-svgs": "rimraf ./src/data-svgs",
+    "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
+    "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
+    "build:transfer-svgs": "copyfiles -u 4 '../internal_svgs/src/data-svgs/**/*' './src/data-svgs'",
+    "build:ts": "tsc",
+    "build:watch": "tsc --watch",
+    "check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run type-check && pnpm run test",
+    "check-exports": "attw --pack . --ignore-rules cjs-resolves-to-esm internal-resolution-error no-resolution --profile node16",
+    "dev": "tsc --watch",
+    "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
+    "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
+    "lint": "oxlint -c ../../oxlint.config.mjs .",
+    "preinstall": "npx only-allow pnpm",
+    "release:patch": "npm version patch && turbo build --force && pnpm run check && npm run login && npm publish",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest --watch --passWithNoTests",
+    "type-check": "tsc --noEmit",
+    "updatePackages:major": "pnpx taze major --includeLocked --write --maturity-period 5 --exclude // && pnpm run updatePackages:minor && pnpm install",
+    "updatePackages:minor": "pnpx taze minor --includeLocked --write --maturity-period 5 && pnpm install"
   },
-  "author": "Tobias Jordans <t@tobiasjordans.de> (https://www.osm-verkehrswende.org/traffic-signs/)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git"
-  },
-  "keywords": [
-    "openstreetmap"
-  ]
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
 }

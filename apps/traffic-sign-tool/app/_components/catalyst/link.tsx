@@ -1,15 +1,21 @@
 import * as Headless from '@headlessui/react'
-import type { Route } from 'next'
-import NextLink, { type LinkProps } from 'next/link'
+import { Link as RouterLink } from '@tanstack/react-router'
 import { forwardRef } from 'react'
 
 export const Link = forwardRef(function Link(
-  props: LinkProps<Route> & React.ComponentPropsWithoutRef<'a'>,
+  props: React.ComponentPropsWithoutRef<'a'> & { href: string },
   ref: React.ForwardedRef<HTMLAnchorElement>,
 ) {
+  const { href, ...restProps } = props
+  const isExternal = href.startsWith('http://') || href.startsWith('https://')
+
   return (
     <Headless.DataInteractive>
-      <NextLink {...props} ref={ref} />
+      {isExternal ? (
+        <a {...restProps} href={href} ref={ref} />
+      ) : (
+        <RouterLink {...restProps} to={href} ref={ref} />
+      )}
     </Headless.DataInteractive>
   )
 })

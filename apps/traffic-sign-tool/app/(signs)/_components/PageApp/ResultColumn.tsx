@@ -1,5 +1,5 @@
 'use client'
-import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { showSignsToTagsWarning } from '@osm-traffic-signs/converter'
 import { ResultComments } from './results/ResultComments'

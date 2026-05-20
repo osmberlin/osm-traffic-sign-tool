@@ -1,5 +1,5 @@
 'use client'
-import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { TrashIcon } from '@heroicons/react/16/solid'
 import { Bars4Icon } from '@heroicons/react/20/solid'
 import { SignStateType } from '@osm-traffic-signs/converter'

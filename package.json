@@ -2,16 +2,17 @@
   "name": "osm-traffic-sign-tools-monorepo",
   "private": true,
   "scripts": {
+    "bleach": "turbo run bleach && rm -rf node_modules",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "test": "turbo run test",
-    "test:watch": "turbo run test:watch",
+    "format": "oxfmt --config ./oxfmt.config.mjs --write .",
+    "format:check": "oxfmt --config ./oxfmt.config.mjs --check .",
     "lint": "turbo run lint",
-    "bleach": "turbo run bleach && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
     "release": "bun run release-cli.ts",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "updatePackages:major": "pnpm dlx taze -r major --includeLocked --write --maturity-period 5 && pnpm install",
     "updatePackages:minor": "pnpm dlx taze -r minor --includeLocked --write --maturity-period 5 && pnpm install"
   },
@@ -19,20 +20,19 @@
     "@clack/prompts": "^0.8.2",
     "@colors/colors": "^1.6.0",
     "@types/bun": "latest",
-    "eslint": "^9.39.2",
     "husky": "^9.1.7",
+    "oxc-plugin-react-compiler": "^0.2.0",
+    "oxfmt": "0.50.0",
+    "oxlint": "1.65.0",
     "postcss": "^8.5.6",
-    "prettier": "^3.7.4",
-    "prettier-plugin-organize-imports": "^4.3.0",
-    "prettier-plugin-tailwindcss": "^0.7.2",
     "svgo": "^4.0.0",
     "turbo": "^2.7.1",
     "vitest": "^4.0.16"
   },
-  "packageManager": "pnpm@10.26.2",
   "engines": {
     "node": ">=22.21.1"
   },
+  "packageManager": "pnpm@10.26.2",
   "pnpm": {
     "onlyBuiltDependencies": [
       "sharp"

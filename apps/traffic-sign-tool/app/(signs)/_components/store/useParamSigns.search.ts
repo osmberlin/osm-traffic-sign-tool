@@ -1,37 +1,35 @@
 'use client'
+import { parseSignsParam, serializeSignsParam } from '@app/src/features/searchParams/deSearch'
 import {
   combineSignIdSignValue,
-  CountryPrefixType,
   SignStateType,
-  signsToTrafficSignTagValue,
   splitSignIdSignValue,
   trafficSignTagToSigns,
 } from '@osm-traffic-signs/converter'
-import { createParser, useQueryState } from 'nuqs'
+import { useNavigate, useSearch } from '@tanstack/react-router'
 import { useCountryPrefixWithFallback } from './CountryPrefixContext'
-
-// From String to Data
-const parse = (input: string, countryPrefix: CountryPrefixType | undefined) => {
-  // An earlier version of the tool used pipes to separate signs
-  // We migrate those here in nuqs instead of the package because it is tool secific logic
-  const migratedInput = input.replaceAll('|', ';')
-  return trafficSignTagToSigns(migratedInput, countryPrefix) satisfies SignStateType[]
-}
-
-// From Data to String
-const serialize = (trafficSigns: SignStateType[], countryPrefix: CountryPrefixType | undefined) => {
-  return signsToTrafficSignTagValue(trafficSigns, countryPrefix)
-}
 
 export const useParamSigns = () => {
   const { countryPrefix } = useCountryPrefixWithFallback()
-  const [paramSigns, setParamSigns] = useQueryState(
-    'signs',
-    createParser({
-      parse: (query) => parse(query, countryPrefix),
-      serialize: (value) => serialize(value, countryPrefix),
-    }).withDefault([]),
-  )
+  const navigate = useNavigate({ from: '/DE' })
+  const search = useSearch({ from: '/DE' })
+  const rawSigns = search.signs
+  const paramSigns = parseSignsParam(rawSigns, countryPrefix)
+
+  const setParamSigns = (
+    value: SignStateType[] | ((prevValue: SignStateType[]) => SignStateType[]),
+  ) => {
+    const nextValue = typeof value === 'function' ? value(paramSigns) : value
+
+    void navigate({
+      replace: true,
+      resetScroll: false,
+      search: (prev) => ({
+        ...prev,
+        signs: serializeSignsParam(nextValue, countryPrefix),
+      }),
+    })
+  }
 
   const toggleOsmValuePart = (osmValuePart: string) => {
     // Check for exact match first
@@ -77,7 +75,7 @@ export const useParamSigns = () => {
           'valuePrompt' in paramSign && paramSign?.valuePrompt
             ? paramSign.valuePrompt.defaultValue
             : undefined
-        const newOrFallbackValue = Boolean(newValue) ? newValue : defaultValue
+        const newOrFallbackValue = newValue ? newValue : defaultValue
 
         return {
           ...paramSign,

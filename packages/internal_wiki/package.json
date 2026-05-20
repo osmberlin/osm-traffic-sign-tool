@@ -1,27 +1,28 @@
 {
   "name": "@internal/wiki",
-  "type": "module",
   "private": true,
-  "main": "dist/index.js",
   "files": [
     "dist"
   ],
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "tsc --watch",
+    "bleach": "rm -rf .turbo && rm -rf node_modules",
     "build": "pnpm run build:clean && pnpm run build:ts",
     "build:clean": "rimraf dist",
     "build:ts": "tsc",
-    "wiki": "pnpm run wiki:downloadWiki && pnpm run wiki:parseWiki",
-    "wiki:downloadWiki": "bun ./src/downloadWiki/downloadWiki.ts && prettier ./ --write",
-    "wiki:parseWiki": "bun ./src/parseWiki/parseWiki.ts && prettier ./ --write",
-    "bleach": "rm -rf .turbo && rm -rf node_modules",
-    "type-check": "tsc --skipLibCheck --noEmit",
-    "lint": "tsc --noEmit",
-    "format": "prettier . --write",
     "check": "pnpm run type-check && pnpm run format && pnpm run lint",
-    "test": "",
-    "test:watch": "",
-    "preinstall": "npx only-allow pnpm"
+    "dev": "tsc --watch",
+    "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
+    "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
+    "lint": "oxlint -c ../../oxlint.config.mjs .",
+    "preinstall": "npx only-allow pnpm",
+    "test": "echo No tests configured",
+    "test:watch": "echo No tests configured",
+    "type-check": "tsc --skipLibCheck --noEmit",
+    "wiki": "pnpm run wiki:downloadWiki && pnpm run wiki:parseWiki",
+    "wiki:downloadWiki": "bun ./src/downloadWiki/downloadWiki.ts && oxfmt --config ../../oxfmt.config.mjs --write ./",
+    "wiki:parseWiki": "bun ./src/parseWiki/parseWiki.ts && oxfmt --config ../../oxfmt.config.mjs --write ./"
   },
   "devDependencies": {
     "@internal/svgs": "workspace:*",

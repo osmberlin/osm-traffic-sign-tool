@@ -11,18 +11,21 @@
     "target": "ES2022",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "noErrorTruncation": true, // https://stackoverflow.com/a/53131824
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "baseUrl": ".",
     "paths": {
       "@app/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "**/*.test.ts"
+  ],
+  "exclude": ["node_modules", "app/_components/catalyst/_unused/**"]
 }

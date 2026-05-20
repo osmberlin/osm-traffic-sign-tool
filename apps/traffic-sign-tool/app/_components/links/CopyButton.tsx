@@ -34,7 +34,9 @@ export const CopyButton = ({ text, secondary = false, children }: CopyButtonProp
   return (
     <div className="inline-flex gap-3">
       <button
-        onClick={() => copy(text)}
+        onClick={() => {
+          void copy(text)
+        }}
         className={secondary ? buttonStyleSecondary : buttonStyle}
         disabled={!text}
       >

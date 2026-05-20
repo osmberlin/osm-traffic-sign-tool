@@ -1,6 +1,6 @@
 'use client'
 import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
-import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { getRedirectsForSign, signsToComments } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import { WikiLinkify } from '../../wiki/WikiLinkify'

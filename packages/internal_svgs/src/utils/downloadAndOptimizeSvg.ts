@@ -1,11 +1,11 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import {
   createSvgFilename,
   createSvgImportname,
   type CountryPrefixType,
   type SignType,
 } from '@osm-traffic-signs/converter'
-import fs from 'node:fs'
-import path from 'node:path'
 import { getFileUrlFromWikiApi } from './getFileUrlFromWikiApi.js'
 import { optimizeSvg } from './optimizeSvg.js'
 import { prepareDirectorySvgs } from './prepareDirectorySvgs.js'

@@ -1,8 +1,8 @@
 #!/usr/bin/env bun
 
+import { join } from 'path'
 import * as p from '@clack/prompts'
 import { $ } from 'bun'
-import { join } from 'path'
 
 type ReleaseType = 'patch' | 'minor' | 'major'
 type ReleaseTarget = 'package' | 'app' | 'both'

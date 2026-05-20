@@ -1,10 +1,20 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
+@import '@fontsource-variable/fira-code';
+@import '@fontsource/fira-sans/300.css';
+@import '@fontsource/fira-sans/400.css';
+@import '@fontsource/fira-sans/600.css';
+@import '@fontsource/fira-sans/700.css';
+@import '@fontsource/fira-sans-condensed/400.css';
+@import '@fontsource/noto-serif/300.css';
+@import '@fontsource/noto-serif/600.css';
+@import '@fontsource/noto-serif/300-italic.css';
+@import '@fontsource/noto-serif/600-italic.css';
 
 @theme {
   /*
-  // We only support some weights, see `app/_components/layout/fonts/fonts.ts`
+  // We only support selected font weights in this app.
   // Docs https://tailwindcss.com/docs/font-weight
   // thin: '100',
   // extralight: '200',
@@ -23,15 +33,15 @@
   --font-weight-bold: 700;
 
   --font-mono:
-    var(--font-fira-code), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Fira Code Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
   --font-sans:
-    var(--font-fira-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    'Fira Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
   --font-condensed:
-    var(--font-fira-condensed), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Fira Sans Condensed', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-serif: var(--font-noto-serif), ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-serif: 'Noto Serif', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
 @layer base {

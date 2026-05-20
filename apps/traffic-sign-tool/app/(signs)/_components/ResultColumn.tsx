@@ -1,5 +1,5 @@
 'use client'
-import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { ResultComments } from './PageApp/results/ResultComments'
 import { ResultTagRecommendations } from './PageApp/results/ResultTagRecommendations'
 import { ResultTrafficSignTag } from './PageApp/results/ResultTrafficSignTag'

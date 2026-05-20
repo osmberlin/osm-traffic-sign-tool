@@ -2,5 +2,5 @@
 minimumReleaseAge: 7200
 
 packages:
-  - "apps/*"
-  - "packages/*"
+  - 'apps/*'
+  - 'packages/*'

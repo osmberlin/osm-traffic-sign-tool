@@ -1,6 +1,6 @@
+import path from 'node:path'
 import colors from '@colors/colors'
 import { $ } from 'bun'
-import path from 'node:path'
 
 const basePath = path.resolve(import.meta.dir)
 let cdPath = basePath

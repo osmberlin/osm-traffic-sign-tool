@@ -1,5 +1,5 @@
-import * as cheerio from 'cheerio'
 import path from 'node:path'
+import * as cheerio from 'cheerio'
 
 const html = await Bun.file(path.join(__dirname, '../downloadWiki/tmp/wikipage.html')).text()
 const $ = cheerio.load(html)

@@ -1,5 +1,5 @@
 'use client'
-import { useParamQ } from '@app/app/(signs)/_components/store/useParamQ.nuqs'
+import { useParamQ } from '@app/app/(signs)/_components/store/useParamQ.search'
 import { useParamQCountActions } from '@app/app/(signs)/_components/store/useParamQCount.zustand'
 import { SignType } from '@osm-traffic-signs/converter'
 import { useEffect, useMemo } from 'react'

@@ -7,7 +7,6 @@ import {
   SignType,
 } from '@osm-traffic-signs/converter'
 import { SvgLoadersDE } from '@osm-traffic-signs/converter/data-svgs'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useCountryPrefixWithFallback } from './store/CountryPrefixContext'
 
@@ -16,15 +15,7 @@ type Props = {
   className?: string
 }
 
-// Type comes from `JSON.stringify(DE103_20, undefined, 2)` with `import { DE103_20 } from '@internal/wiki'`
-type SVG = {
-  src: string
-  height: number
-  width: number
-  blurWidth?: number
-  blurHeight?: number
-  blurDataURL?: string
-}
+type SVG = string
 
 type SvgLoaderModule = { default: SVG }
 type SvgLoader = () => Promise<SvgLoaderModule>
@@ -110,6 +101,6 @@ export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
   }
 
   return (
-    <Image src={file} height={100} width={100} alt={sign.descriptiveName} className={className} />
+    <img src={file} height={100} width={100} alt={sign.descriptiveName} className={className} />
   )
 }

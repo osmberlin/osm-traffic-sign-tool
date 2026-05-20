@@ -2,7 +2,6 @@ import { CountryPrefixType } from '@osm-traffic-signs/converter'
 import { micromark } from 'micromark'
 import { gfm, gfmHtml } from 'micromark-extension-gfm'
 import { useMemo } from 'react'
-
 import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
 
 type Props = {

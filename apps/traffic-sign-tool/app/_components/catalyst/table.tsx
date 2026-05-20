@@ -1,6 +1,5 @@
 'use client'
 import clsx from 'clsx'
-import type { Route } from 'next'
 import type React from 'react'
 import { createContext, useContext, useState } from 'react'
 import { Link } from './link'
@@ -61,7 +60,7 @@ export function TableBody(props: React.ComponentPropsWithoutRef<'tbody'>) {
   return <tbody {...props} />
 }
 
-const TableRowContext = createContext<{ href?: Route; target?: string; title?: string }>({
+const TableRowContext = createContext<{ href?: string; target?: string; title?: string }>({
   href: undefined,
   target: undefined,
   title: undefined,

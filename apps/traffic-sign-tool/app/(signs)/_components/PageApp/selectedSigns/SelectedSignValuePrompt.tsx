@@ -1,5 +1,5 @@
 'use client'
-import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import { useEffect, useState } from 'react'

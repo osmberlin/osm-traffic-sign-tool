@@ -1,6 +1,6 @@
 'use client'
 import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
-import Link from 'next/link'
+import { Link } from '@tanstack/react-router'
 import { ExternalLink } from '../links/ExternalLink'
 
 const navigation = [
@@ -56,25 +56,25 @@ export const Footer = () => {
         {countryPrefix && (
           <div className="flex gap-10 px-5 py-2">
             <Link
-              href={`/${countryPrefix}/taginfo`}
+              to={`/${countryPrefix}/taginfo`}
               className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
             >
               Compare with taginfo
             </Link>
             <Link
-              href={`/${countryPrefix}/wiki`}
+              to={`/${countryPrefix}/wiki`}
               className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
             >
               Compare with wiki
             </Link>
             <Link
-              href={`/${countryPrefix}/signs`}
+              to={`/${countryPrefix}/signs`}
               className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
             >
               Full sign list
             </Link>
             <Link
-              href={`/${countryPrefix}/check-sign-combinations`}
+              to={`/${countryPrefix}/check-sign-combinations`}
               className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
             >
               Check sign combinations

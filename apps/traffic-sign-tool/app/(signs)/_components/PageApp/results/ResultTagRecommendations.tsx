@@ -1,5 +1,5 @@
 'use client'
-import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.nuqs'
+import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import { signsToTags, toTag } from '@osm-traffic-signs/converter'
