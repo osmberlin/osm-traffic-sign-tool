@@ -30,6 +30,7 @@ export const _speed_minspeed_end: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_279-30_-_Ende_der_vorgeschriebenen_Mindestgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -48,9 +49,8 @@ export const _speed_minspeed_end: SignType[] = [
       signCategory: 'speed',
     },
     image: {
-      sourceUrl:
-        // MISSING
-        'https://de.wikipedia.org/wiki/Datei:Zeichen_279-40_-_Ende_der_vorgeschriebenen_Mindestgeschwindigkeit,_StVO_2017.svg',
+      kind: 'local',
+      sourceLocalPath: 'local-svgs/DE/279-40.svg',
       licence: 'Public Domain',
     },
   },
@@ -67,9 +67,8 @@ export const _speed_minspeed_end: SignType[] = [
       signCategory: 'speed',
     },
     image: {
-      sourceUrl:
-        // MISSING
-        'https://de.wikipedia.org/wiki/Datei:Zeichen_279-80_-_Ende_der_vorgeschriebenen_Mindestgeschwindigkeit,_StVO_2017.svg',
+      kind: 'local',
+      sourceLocalPath: 'local-svgs/DE/279-80.svg',
       licence: 'Public Domain',
     },
   },

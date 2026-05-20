@@ -18,6 +18,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_250_-_Verbot_für_Fahrzeuge_aller_Art,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -41,6 +42,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_260_-_Verbot_für_Kraftr%C3%A4der_und_Mofas_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -62,6 +64,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_251_-_Verbot_für_Kraftwagen_und_sonstige_mehrspurige_Kraftfahrzeuge,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -84,6 +87,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_253_-_Verbot_für_Kraftfahrzeuge_mit_einem_zul%C3%A4ssigen_Gesamtgewicht,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -106,6 +110,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_254_-_Verbot_für_Radfahrer,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -131,6 +136,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_255_-_Verbot_für_Kraftr%C3%A4der,_auch_mit_Beiwagen,_Kleinkraftr%C3%A4der_und_Mofas,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -152,6 +158,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_256_-_Verbot_für_Mofas,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -173,6 +180,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_257-51_-_Verbot_für_Reiter,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -197,6 +205,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_257-54_-_Verbot_für_Kraftomnibusse,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -218,6 +227,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_257-56_-_Verbot_für_Personenkraftwagen_mit_Anhänger,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -239,6 +249,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_259_-_Verbot_für_Fu%C3%9Fg%C3%A4nger,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -260,6 +271,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_261_-_Verbot_für_kennzeichnungspflichtige_Kraftfahrzeuge_mit_gef%C3%A4hrlichen_Gütern,_StVO_1988.svg',
       licence: 'Public Domain',
@@ -288,6 +300,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_262_-_Verbot_für_Fahrzeuge_deren_tats%C3%A4chliches_Gewicht_eine_gewisse_Grenze_überschreitet_(600x600);_StVO_1992.svg',
       licence: 'Public Domain',
@@ -318,6 +331,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_263_-_Verbot_für_Fahrzeuge_über_angegebene_tats%C3%A4chliche_Achslast,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -347,6 +361,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_264_-_Verbot_für_Fahrzeuge_über_angegebene_Breite_einschlie%C3%9Flich_Ladung,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -375,6 +390,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_265_-_Verbot_für_Fahrzeuge,_deren_tats%C3%A4chliche_H%C3%B6he_einschlie%C3%9Flich_Ladung_eine_bestimmte_Grenze_überschreitet_(600x600);_StVO_1992.svg',
       licence: 'Public Domain',
@@ -403,6 +419,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_266_-_Verbot_für_Fahrzeuge_und_Züge_über_angegebene_L%C3%A4nge_einschlie%C3%9Flich_Ladung,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -425,6 +442,7 @@ export const _traffic_ban: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_269_-_Verbot_für_Fahrzeuge_mit_wassergef%C3%A4hrdender_Ladung,_StVO_1988.svg',
       licence: 'Public Domain',
@@ -448,6 +466,7 @@ export const _traffic_ban: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.m.wikipedia.org/wiki/Datei:Zeichen_268_-_Schneeketten_sind_vorgeschrieben,_StVO_1992.svg',
       licence: 'Public Domain',

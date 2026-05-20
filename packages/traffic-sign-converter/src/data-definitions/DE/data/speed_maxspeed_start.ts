@@ -25,6 +25,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-10_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -48,6 +49,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-5_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -71,6 +73,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-10_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -94,6 +97,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-20_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -118,6 +122,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-30_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -141,6 +146,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-40_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -165,6 +171,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-50_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -189,6 +196,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-60_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -213,6 +221,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-70_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -236,6 +245,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-80_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -259,6 +269,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-90_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -282,6 +293,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-100_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -305,6 +317,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-110_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -328,6 +341,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-120_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -351,6 +365,7 @@ export const _speed_maxspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274-130_-_Zul%C3%A4ssige_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',

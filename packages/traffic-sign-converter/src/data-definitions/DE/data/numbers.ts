@@ -20,6 +20,7 @@ export const _numbers: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1001-30_-_auf_..._m,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -44,6 +45,7 @@ export const _numbers: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1001-31_-_auf_..._km_(600x330),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -68,6 +70,7 @@ export const _numbers: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1001-32_-_noch_..._m,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -92,6 +95,7 @@ export const _numbers: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1001-33_-_noch_..._km,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -116,6 +120,7 @@ export const _numbers: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1001-34_-_auf_..._m_(500x1250),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -140,6 +145,7 @@ export const _numbers: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1001-35_-_auf_..._km_(500x1250),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -164,6 +170,7 @@ export const _numbers: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1004-30_-_nach_100_m,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -188,6 +195,7 @@ export const _numbers: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1004-31_-_in_..._km,_StVO_2017.svg',
       licence: 'Public Domain',

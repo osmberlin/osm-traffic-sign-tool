@@ -30,6 +30,7 @@ export const _speed_minspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -58,6 +59,7 @@ export const _speed_minspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_275_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -86,9 +88,8 @@ export const _speed_minspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
-      sourceUrl:
-        // MISSING
-        'https://wiki.openstreetmap.org/wiki/File:Zeichen_275-40_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg',
+      kind: 'local',
+      sourceLocalPath: 'local-svgs/DE/275-40.svg',
       licence: 'Public Domain',
     },
   },
@@ -115,9 +116,8 @@ export const _speed_minspeed_start: SignType[] = [
       signCategory: 'speed',
     },
     image: {
-      sourceUrl:
-        // MISSING
-        'https://wiki.openstreetmap.org/wiki/File:Zeichen_275-80_-_Vorgeschriebene_Mindestgeschwindigkeit,_StVO_1992.svg',
+      kind: 'local',
+      sourceLocalPath: 'local-svgs/DE/275-80.svg',
       licence: 'Public Domain',
     },
   },

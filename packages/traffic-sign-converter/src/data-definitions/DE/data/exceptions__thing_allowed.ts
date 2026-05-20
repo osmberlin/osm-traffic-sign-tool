@@ -18,6 +18,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1020-12_-_Radfahrer_und_Anlieger_frei_(450x600),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -46,6 +47,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1020-30_-_Anlieger_frei_(600x330),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -68,6 +70,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1022-10_-_Radfahrer_frei,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -89,6 +92,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1022-11_-_Mofas_frei_(600x450),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -110,6 +114,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1022-13_-_E-Bikes_frei_(450x600),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -136,6 +141,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Kleinkrafträder_frei.svg',
       licence: 'Public Domain',
     },
@@ -156,6 +162,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1022-16_-_Elektrokleinstfahrzeuge_frei_(600x600),_StVO_2019.svg',
       licence: 'Public Domain',
@@ -187,6 +194,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_KFZ_frei.svg',
       licence: 'Public Domain',
     },
@@ -211,6 +219,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1022-12_-_Kraftr%C3%A4der_auch_mit_Beiwagen,_Kleinkraftr%C3%A4der_und_Mofas_frei_(600x450),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -238,6 +247,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1024-10_-_Personenkraftwagen_frei,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -260,6 +270,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1024-12_-_Kraftfahrzeuge_mit_einem_zul%C3%A4ssigen_Gesamtgewicht_über_3,5_t,_einschlie%C3%9Flich_ihrer_Anh%C3%A4nger_und_Zugmaschinen,_ausgenommen_Personenkraftwagen_und_Kraftomnibusse_frei,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -284,6 +295,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1024-14_-_Kraftomnibusse_frei,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -312,6 +324,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1024-17_-_Kraftfahrzeuge_und_Züge,_die_nicht_schneller_als_25_km-h_fahren_k%C3%B6nnen_oder_dürfen,_frei,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -333,6 +346,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-30_-_Taxi_frei,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -354,6 +368,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-32_-_Linienverkehr_frei_(450x600),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -375,6 +390,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-35_-_Lieferverkehr_frei,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -404,6 +420,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-36_-_Landwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -425,6 +442,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1020-13_-_Inline-Skaten_und_Rollschuhfahren_frei,_StVO_2009.svg',
       licence: 'Public Domain',
@@ -446,6 +464,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1020-32_-_Bewohner_mit_Parkausweis_Nr._..._frei,_StVO_2002.svg',
       licence: 'Public Domain',
@@ -467,6 +486,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-33_-_Einsatzfahrzeuge_frei_(450x600),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -495,6 +515,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-37_-_Forstwirtschaftlicher_Verkehr_frei,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -523,6 +544,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-38_-_Land-_und_forstwirtschaftlicher_Verkehr_frei_(450x600),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -544,6 +566,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-39_-_Betriebs-_und_Versorgungsdienst_frei_(330x600),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -564,6 +587,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1012-32_-_Radfahrer_absteigen_(420x231),_StVO_1992.svg',
       licence: 'Public Domain',

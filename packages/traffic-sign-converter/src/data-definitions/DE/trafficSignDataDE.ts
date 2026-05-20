@@ -51,6 +51,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_220-10_-_Einbahnstra%C3%9Fe,_linksweisend,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -70,6 +71,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_220-20_-_Einbahnstra%C3%9Fe,_rechtsweisend,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -88,6 +90,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_205_-_Vorfahrt_gew%C3%A4hren!_StVO_1970.svg',
       licence: 'Public Domain',
@@ -119,6 +122,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'object_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_394_-_Schild_für_Laternen,_StVO_1970.svg',
       licence: 'Public Domain',
@@ -141,6 +145,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_206_-_Halt!_Vorfahrt_gew%C3%A4hren!_StVO_2017.svg',
       licence: 'Public Domain',
@@ -160,6 +165,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'object_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zeichen_620-40_-_Leitpfosten_(rechts),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -179,6 +185,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'object_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zeichen_620-41_-_Leitpfosten_(links),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -203,6 +210,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zeichen_357_-_Sackgasse,_StVO_1992.svg',
       licence: 'Public Domain',
     },
@@ -227,6 +235,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zeichen_357-50_-_Durchl%C3%A4ssige_Sackgasse_für_Fu%C3%9Fg%C3%A4nger_und_Radverkehr,_StVO_2009.svg',
       licence: 'Public Domain',
@@ -252,6 +261,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zeichen_357-51_-_Sackgasse;_für_Fu%C3%9Fg%C3%A4nger_durchl%C3%A4ssige_Sackgasse,_StVO_2009.svg',
       licence: 'Public Domain',
@@ -276,6 +286,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_357-52_-_Sackgasse;_für_Radverkehr_durchl%C3%A4ssige_Sackgasse,_StVO_2009.svg',
       licence: 'Public Domain',
@@ -301,6 +312,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zeichen_224.svg',
       licence: 'Public Domain',
     },
@@ -325,6 +337,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_267_-_Verbot_der_Einfahrt,_StVO_1970.svg',
       licence: 'Public Domain',
@@ -358,6 +371,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_306_-_Vorfahrtstra%C3%9Fe,_StVO_1970.svg',
       licence: 'Public Domain',
@@ -385,6 +399,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_307_-_Ende_der_Vorfahrtstra%C3%9Fe,_StVO_1981.svg',
       licence: 'Public Domain',
@@ -425,6 +440,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_386.3_-_Touristische_Unterrichtungstafel_(2400x3600),_StVO_2013.svg',
       licence: 'Public Domain',
@@ -451,6 +467,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_385_-_Ortshinweistafel,_StVO_1988.svg',
       licence: 'Public Domain',
@@ -471,6 +488,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'object_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_626-20_-_Leitplatte,_Aufstellung_links_(750x500),_StVO_2013.svg',
       licence: 'Public Domain',
@@ -491,6 +509,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_222_-_Vorgeschriebene_Vorbeifahrt,_Rechts_vorbei,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -513,6 +532,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_331.1_-_Kraftfahrstra%C3%9Fe,_StVO_2013.svg',
       licence: 'Public Domain',
@@ -533,6 +553,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_331.2_-_Ende_der_Kraftfahrstra%C3%9Fe,_StVO_2013.svg',
       licence: 'Public Domain',
@@ -555,6 +576,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zeichen_330.1_-_Autobahn,_StVO_2013.svg',
       licence: 'Public Domain',
     },
@@ -574,6 +596,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg',
       licence: 'Public Domain',
@@ -595,6 +618,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zeichen_301_-_Vorfahrt,_StVO_1970.svg',
       licence: 'Public Domain',
     },
@@ -623,6 +647,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_215_-_Kreisverkehr,_StVO_2000.svg',
       licence: 'Public Domain',
@@ -644,6 +669,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'signpost',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_449_-_Vorwegweiser_auf_Autobahnen_(nach_RWBA),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -664,6 +690,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'signpost',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_438_-_Vorwegweiser;_StVO_1992.svg',
       licence: 'Public Domain',
@@ -684,6 +711,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'signpost',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_439_-_Vorwegweiser,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -707,6 +735,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Kein_Winterdienst.svg',
       licence: 'Public Domain',
     },
@@ -729,6 +758,7 @@ export const trafficSignDataDE: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Eingeschr%C3%A4nkter_Winterdienst.svg',
       licence: 'Public Domain',

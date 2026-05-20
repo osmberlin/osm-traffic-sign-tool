@@ -23,6 +23,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-50_-_Kraftwagen_und_sonstige_mehrspurige_Fahrzeuge_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -45,6 +46,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-51_-_Kraftfahrzeuge_mit_einer_zul%C3%A4ssigen_Gesamtmasse_%C3%BCber_3,5_t_einschlie%C3%9Flich_ihrer_Anh%C3%A4nger_und_Zugmaschinen,_ausgenommen_Personenkraftwagen_und_Kraftomnibusse,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -66,6 +68,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-52_-_Radverkehr_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -87,6 +90,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-53_-_Fu%C3%9Fg%C3%A4nger_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -108,6 +112,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-54_-_Reiter_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -129,6 +134,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-56_-_Stra%C3%9Fenbahn,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -150,6 +156,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-57_-_Kraftomnibus,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -171,6 +178,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-58_-_Personenkraftwagen_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -193,6 +201,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-61_-_Kraftfahrzeuge_und_Z%C3%BCge,_die_nicht_schneller_als_25_km-h_fahren_k%C3%B6nnen_oder_d%C3%BCrfen_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -214,6 +223,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-62_-_Kraftr%C3%A4der,_auch_mit_Beiwagen,_Kleinkraftr%C3%A4der_und_Mofas_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -235,6 +245,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-63_-_Mofas_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -256,6 +267,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-65_-_E-Bikes,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -277,6 +289,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-66_-_elektrisch_betriebene_Fahrzeuge,_StVO_2015.svg',
       licence: 'Public Domain',
@@ -298,6 +311,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-68_-_Elektrokleinstfahrzeuge_im_Sinne_der_Elektrokleinstfahrzeuge-Verordnung_(eKFV),_(450x600),_StVO_2020.svg',
       licence: 'Public Domain',
@@ -319,6 +333,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-69_-_Fahrrad_zum_Transport_von_G%C3%BCtern_oder_Personen_-_Lastenfahrrad_(330x600),_StVO_2020.svg',
       licence: 'Public Domain',
@@ -340,6 +355,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-12_-_Kennzeichnung_von_Parkfl%C3%A4chen,_auf_denen_Anh%C3%A4nger_auch_l%C3%A4nger_als_14_Tage_parken_d%C3%BCrfen,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -361,6 +377,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-59_-_Personenkraftwagen_mit_Anh%C3%A4nger,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -384,6 +401,7 @@ export const _conditions__only_for_thing: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1049-13_-_nur_Lkw_(Zeichen_1048-12),_Kraftomnibus_(Zeichen_1048-16)_und_Pkw_mit_Anh%C3%A4nger_(Zeichen_1048-11),_StVO_1992.svg',
       licence: 'Public Domain',

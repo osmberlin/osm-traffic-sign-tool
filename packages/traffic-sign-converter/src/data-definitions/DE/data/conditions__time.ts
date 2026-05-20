@@ -21,6 +21,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1040-30_-_Zeitliche_Beschr%C3%A4nkung_(16_-_18_h),_330x600,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -49,6 +50,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1040-31_-_Zeitliche_Beschr%C3%A4nkung_(8_-_11_h,_16_-_18_h),_330x600,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -68,6 +70,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-30_-_werktags_(600x330),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -96,6 +99,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-31_-_werktags_18_-_19_h_(600x330),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -124,6 +128,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-32_-_werktags_8.30_-_11.30,_16_-_18_h_(600x450),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -152,6 +157,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-33_-_Mo_-_Fr,_16_-_18_h_(600x330),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -180,6 +186,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-34_-_Di,_Do,_Fr,_16_-_18_h_(600x330),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -208,6 +215,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-35_-_6_-_22_h_an_Sonn-und_Feiertagen_(450x600),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -230,6 +238,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-38_-_werktags_au%C3%9Fer_samstags_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -252,6 +261,7 @@ export const _conditions__time: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1042-51_-_Sa_und_So_(600x330),_StVO_2017.svg',
       licence: 'Public Domain',

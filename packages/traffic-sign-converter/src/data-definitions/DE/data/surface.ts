@@ -25,6 +25,7 @@ export const _surface: SignType[] = [
       signCategory: 'surface_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_298_-_Sperrfl%C3%A4chen,_StVO_1970.svg',
       licence: 'Public Domain',
@@ -54,6 +55,7 @@ export const _surface: SignType[] = [
       signCategory: 'surface_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_299_-_Grenzmarkierung_für_Halt-_und_Parkverbote,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -75,6 +77,7 @@ export const _surface: SignType[] = [
       signCategory: 'surface_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_295_-_Fahrstreifenbegrenzung_und_Fahrbahnbegrenzung,_StVO_1970.svg',
       licence: 'Public Domain',
@@ -97,6 +100,7 @@ export const _surface: SignType[] = [
       signCategory: 'surface_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_340_%E2%80%93_Leitlinie,_StVO_1970.svg',
       licence: 'Public Domain',

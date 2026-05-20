@@ -17,6 +17,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg',
       licence: 'Public Domain',
@@ -37,6 +38,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_101_-_Gefahrstelle,_StVO_1970.svg',
       licence: 'Public Domain',
@@ -57,6 +59,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_138-10_-_Radverkehr,_StVO_2013.svg',
       licence: 'Public Domain',
@@ -77,6 +80,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_101-15_-_Steinschlag,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -98,6 +102,7 @@ export const _hazard: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_101-25_-_Steinschlag,_Aufstellung_links,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -119,6 +124,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_103-20_-_Kurve_(rechts),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -141,6 +147,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zeichen_103-10_-_Kurve_(links),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -165,6 +172,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_201-50_%E2%80%93_Andreaskreuz_-_Dem_Schienenverkehr_Vorrang_gew%C3%A4hren!_StVO_1992.svg',
       licence: 'Public Domain',
@@ -189,6 +197,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_201-51_-_Andreaskreuz_(stehend)_mit_Blitzpfeil,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -220,6 +229,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Gehwegsch%C3%A4den.svg',
       licence: 'Public Domain',
     },
@@ -250,6 +260,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Radwegsch%C3%A4den.svg',
       licence: 'Public Domain',
     },
@@ -280,6 +291,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Geh-_und_Radwegsch%C3%A4den.svg',
       licence: 'Public Domain',
@@ -311,6 +323,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_Sch%C3%A4den_im_Gehweg.svg',
       licence: 'Public Domain',
     },
@@ -366,6 +379,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_108-10_-_Gef%C3%A4lle,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -389,6 +403,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_108-10_-_Gef%C3%A4lle,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -413,6 +428,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_108-15_-_Gef%C3%A4lle,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -469,6 +485,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_110-10_-_Steigung,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -492,6 +509,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_110-10_-_Steigung,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -516,6 +534,7 @@ export const _hazard: SignType[] = [
       signCategory: 'hazard_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_110-15_-_Steigung,_StVO_2017.svg',
       licence: 'Public Domain',

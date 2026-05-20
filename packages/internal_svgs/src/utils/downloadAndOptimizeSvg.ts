@@ -25,37 +25,56 @@ export const downloadAndOptimizeSvg = async (
     return { success: true, fileName, importName, skipped: true } as const
   }
 
-  if (!sign.image.sourceUrl) {
-    return { success: false, error: '`sourceUrl` missing', sign } as const
-  }
-
-  const downloadUrlResp = await getFileUrlFromWikiApi(sign.image.sourceUrl)
-
-  if (downloadUrlResp.success === false) {
-    return downloadUrlResp
-  }
-
-  // Step 1: Fetch raw SVG
   let rawSvg: string
-  try {
-    const response = await fetch(downloadUrlResp.url, {
-      headers: {
-        'User-Agent':
-          'osm-traffic-sign-tools (https://github.com/FixMyBerlin/osm-traffic-sign-tools)',
-      },
-    })
-    rawSvg = await response.text()
-  } catch (error) {
-    return {
-      success: false,
-      error: {
-        message: 'Fetch failed',
-        detail: error instanceof Error ? error.message : String(error),
-        createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
-        url: downloadUrlResp.url,
-      },
-      sign,
-    } as const
+  const sourceLabel =
+    sign.image.kind === 'local' ? sign.image.sourceLocalPath : sign.image.sourceUrl
+
+  if (sign.image.kind === 'local') {
+    const sourceLocalPath = sign.image.sourceLocalPath
+    const localSourcePath = path.join(__dirname, '..', sourceLocalPath)
+    try {
+      rawSvg = await Bun.file(localSourcePath).text()
+    } catch (error) {
+      return {
+        success: false,
+        error: {
+          message: 'Read local SVG failed',
+          detail: error instanceof Error ? error.message : String(error),
+          createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+          filePath: localSourcePath,
+        },
+        sign,
+      } as const
+    }
+  } else {
+    const sourceUrl = sign.image.sourceUrl
+    const downloadUrlResp = await getFileUrlFromWikiApi(sourceUrl)
+
+    if (downloadUrlResp.success === false) {
+      return downloadUrlResp
+    }
+
+    // Step 1: Fetch raw SVG
+    try {
+      const response = await fetch(downloadUrlResp.url, {
+        headers: {
+          'User-Agent':
+            'osm-traffic-sign-tools (https://github.com/FixMyBerlin/osm-traffic-sign-tools)',
+        },
+      })
+      rawSvg = await response.text()
+    } catch (error) {
+      return {
+        success: false,
+        error: {
+          message: 'Fetch failed',
+          detail: error instanceof Error ? error.message : String(error),
+          createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
+          url: downloadUrlResp.url,
+        },
+        sign,
+      } as const
+    }
   }
 
   // Step 2: Optimize SVG
@@ -89,7 +108,7 @@ export const downloadAndOptimizeSvg = async (
         detail: error instanceof Error ? error.message : String(error),
         createdAt: new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' }),
         debugFilePath,
-        url: downloadUrlResp.url,
+        source: sourceLabel,
       },
       sign,
     } as const

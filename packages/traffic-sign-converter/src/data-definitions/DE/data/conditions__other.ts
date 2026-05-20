@@ -17,6 +17,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1053-35_-_Bei_N%C3%A4sse_(600x600),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -39,6 +40,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1053-33_-_Massenangabe_%E2%80%93_7,5_t_(420x231),_StVO_2017.svg',
       licence: 'Public Domain',
@@ -61,6 +63,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1053-37_-_Massenangabe_%E2%80%93_12_t_(420x231),_StVO_2005.svg',
       licence: 'Public Domain',
@@ -87,6 +90,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'condition_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1060-33_-_Massenangabe_-_2,8_t,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -108,6 +112,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1012-31_-_Ende_(600x330),_StVO_1992.svg',
       licence: 'Public Domain',
@@ -129,6 +134,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-30_-_beide_Richtungen,_zwei_gegengerichtete_waagerechte_Pfeile,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -150,6 +156,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-31_-_beide_Richtungen,_zwei_gegengerichtete_senkrechte_Pfeile,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -176,6 +183,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-32_-_Radfahrer_kreuzen_von_rechts_und_links,_StVO_1997.svg',
       licence: 'Public Domain',
@@ -203,6 +211,7 @@ export const _conditions__other: SignType[] = [
       signCategory: 'exception_modifier',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-33_-_Radverkehr_im_Gegenverkehr,_StVO_1997.svg',
       licence: 'Public Domain',

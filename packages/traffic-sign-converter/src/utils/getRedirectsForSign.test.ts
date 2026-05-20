@@ -30,4 +30,10 @@ describe('getRedirectsForSign()', () => {
     const result = getRedirectsForSign('244.1', countryPrefix)
     expect(result).toContain('244')
   })
+
+  test('finds redirects for additional numeric aliases', () => {
+    expect(getRedirectsForSign('241-30', countryPrefix)).toContain('241')
+    expect(getRedirectsForSign('242.1', countryPrefix)).toContain('242')
+    expect(getRedirectsForSign('325.1', countryPrefix)).toContain('325')
+  })
 })

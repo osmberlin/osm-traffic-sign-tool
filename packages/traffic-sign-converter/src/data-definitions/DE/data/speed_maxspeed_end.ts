@@ -20,6 +20,7 @@ export const _speed_maxspeed_end: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-10_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -39,6 +40,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-10_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -58,6 +60,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-20_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -77,6 +80,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-30_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -96,6 +100,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-40_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -115,6 +120,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-50_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -134,6 +140,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-60_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -153,6 +160,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-70_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -172,6 +180,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-80_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -191,6 +200,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-90_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -210,6 +220,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-100_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -229,6 +240,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-110_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -248,6 +260,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-120_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',
@@ -267,6 +280,7 @@ export const _speed_maxspeed_end: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_278-130_-_Ende_der_zul%C3%A4ssigen_H%C3%B6chstgeschwindigkeit,_StVO_2017.svg',
       licence: 'Public Domain',

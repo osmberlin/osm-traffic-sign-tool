@@ -22,6 +22,7 @@ export const _overtaking: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_276_-_%C3%9Cberholverbot_für_Kraftfahrzeuge_aller_Art,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -49,6 +50,7 @@ export const _overtaking: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_277_-_Überholverbot_für_Kraftfahrzeuge_mit_einem_zulässigen_Gesamtgewicht_über_2,8_t,_einschließlich_ihrer_Anhänger,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -82,6 +84,7 @@ export const _overtaking: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_277.1_-_Verbot_des_%C3%9Cberholens_von_einspurigen_Fahrzeugen_für_mehrspurige_Kraftfahrzeuge_und_Kraftr%C3%A4dern_mit_Beiwagen;_StVO_2020.svg',
       licence: 'Public Domain',

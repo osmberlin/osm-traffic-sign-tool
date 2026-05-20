@@ -25,6 +25,7 @@ export const _infrastructure: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_237_-_Sonderweg_Radfahrer,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -50,8 +51,10 @@ export const _infrastructure: SignType[] = [
     ],
     catalogue: {
       signCategory: 'traffic_sign',
+      visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_238_-_Sonderweg_Reiter,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -94,6 +97,7 @@ export const _infrastructure: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_239_-_Sonderweg_Fu%C3%9Fg%C3%A4nger,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -130,6 +134,7 @@ export const _infrastructure: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_240_-_Gemeinsamer_Fu%C3%9F-_und_Radweg,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -138,6 +143,7 @@ export const _infrastructure: SignType[] = [
   {
     osmValuePart: '241-30',
     signId: '241-30',
+    redirects: [{ from: '241', to: '241-30' }],
     name: 'Zeichen 241-30',
     descriptiveName: 'Getrennter Rad- und Gehweg',
     description: 'Radweg links',
@@ -166,6 +172,7 @@ export const _infrastructure: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_241-30_-_getrennter_Rad-_und_Fu%C3%9Fweg,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -202,6 +209,7 @@ export const _infrastructure: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_241-31_-_getrennter_Fu%C3%9F-_und_Radweg,_StVO_1992.svg',
       licence: 'Public Domain',
@@ -210,6 +218,7 @@ export const _infrastructure: SignType[] = [
   {
     osmValuePart: '242.1',
     signId: '242.1',
+    redirects: [{ from: '242', to: '242.1' }],
     name: 'Zeichen 242.1',
     descriptiveName: 'Fußgängerbereich',
     description: 'Beginn einer Fußgängerzone',
@@ -229,6 +238,7 @@ export const _infrastructure: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_242.1_-_Beginn_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg',
       licence: 'Public Domain',
@@ -242,12 +252,18 @@ export const _infrastructure: SignType[] = [
     description: 'Ende einer Fußgängerzone',
     kind: 'traffic_sign',
     tagRecommendations: {},
-    comments: [],
+    comments: [
+      {
+        comment:
+          'Radschnellwege werden in OSM als Relation eingetragen, siehe [DE:Key:cycle_highway](https://wiki.openstreetmap.org/wiki/DE:Key:cycle_highway).',
+      },
+    ],
     catalogue: {
       signCategory: 'traffic_sign',
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_242.2_-_Ende_einer_Fu%C3%9Fg%C3%A4ngerzone,_StVO_2009.svg',
       licence: 'Public Domain',
@@ -280,6 +296,7 @@ export const _infrastructure: SignType[] = [
     ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_244.1_-_Beginn_einer_Fahrradstra%C3%9Fe,_StVO_2013.svg',
       licence: 'Public Domain',
@@ -296,6 +313,7 @@ export const _infrastructure: SignType[] = [
     comments: [],
     catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_244.2_-_Ende_einer_Fahrradstra%C3%9Fe,_StVO_2013.svg',
       licence: 'Public Domain',
@@ -327,6 +345,7 @@ export const _infrastructure: SignType[] = [
     ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_244.3_-_Beginn_einer_Fahrradzone,_StVO_2020.svg',
       licence: 'Public Domain',
@@ -343,6 +362,7 @@ export const _infrastructure: SignType[] = [
     comments: [],
     catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_244.4_-_Ende_einer_Fahrradzone,_StVO_2020.svg',
       licence: 'Public Domain',
@@ -351,6 +371,7 @@ export const _infrastructure: SignType[] = [
   {
     osmValuePart: '325.1',
     signId: '325.1',
+    redirects: [{ from: '325', to: '325.1' }],
     name: 'Zeichen 325.1',
     descriptiveName: 'Verkehrsberuhigter Bereich',
     description: 'Beginn eines verkehrsberuhigten Bereichs',
@@ -368,6 +389,7 @@ export const _infrastructure: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_325.1_-_Beginn_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg',
       licence: 'Public Domain',
@@ -387,8 +409,50 @@ export const _infrastructure: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://de.wikipedia.org/wiki/Datei:Zeichen_325.2_-_Ende_eines_verkehrsberuhigten_Bereichs,_StVO_2009.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '350.1',
+    signId: '350.1',
+    name: 'Zeichen 350.1',
+    descriptiveName: 'Radschnellweg',
+    description: 'Beginn eines Radschnellwegs',
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_350.1_-_Radschnellweg;_StVO_2020.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '350.2',
+    signId: '350.2',
+    name: 'Zeichen 350.2',
+    descriptiveName: 'Radschnellweg (Ende)',
+    description: 'Ende eines Radschnellwegs',
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      signCategory: 'traffic_sign',
+      visibility: 'search_only',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_350.2_-_Ende_des_Radschnellwegs;_StVO_2020.svg',
       licence: 'Public Domain',
     },
   },
@@ -413,6 +477,7 @@ export const _infrastructure: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_245_-_Bussonderfahrstreifen,_StVO_2013.svg',
       licence: 'Public Domain',

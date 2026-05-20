@@ -17,6 +17,7 @@ export const _notice: SignType[] = [
       signCategory: 'traffic_sign',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_354_-_Wasserschutzgebiet,_StVO_1988.svg',
       licence: 'Public Domain',

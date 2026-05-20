@@ -27,6 +27,7 @@ export const _speed_zones: SignType[] = [
       signCategory: 'speed',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg',
       licence: 'Public Domain',
@@ -54,8 +55,36 @@ export const _speed_zones: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '274.1-20',
+    signId: '274.1-20',
+    name: 'Zeichen 274.1-20',
+    descriptiveName: 'Tempo 20-Zone',
+    description: 'Beginn einer Tempo 20-Zone',
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      highwayValues: [],
+      uniqueTags: [
+        { key: 'source:maxspeed', value: 'DE:zone20' },
+        { key: 'zone:maxspeed', value: 'DE:20' },
+      ],
+      conditionalTags: [{ key: 'maxspeed', value: '20' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'speed',
+      visibility: 'search_only',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg',
       licence: 'Public Domain',
     },
   },
@@ -85,6 +114,7 @@ export const _speed_zones: SignType[] = [
       visibility: 'search_only',
     },
     image: {
+      kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Zeichen_274.2_-_Ende_einer_Tempo_30-Zone_(einseitig),_StVO_2013.svg',
       licence: 'Public Domain',

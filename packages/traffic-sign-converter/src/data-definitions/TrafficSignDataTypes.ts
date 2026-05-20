@@ -135,9 +135,20 @@ type SharedQuestions = {
 }
 type SharedIdentifiyingTags = { identifyingTags?: { key: string; value: string }[] }
 
+type SharedImageLicence = 'Public Domain' | 'CC-0'
+
+type SharedImageSourceRemote = {
+  kind: 'remote'
+  sourceUrl: string
+  licence: SharedImageLicence
+}
+
+type SharedImageSourceLocal = {
+  kind: 'local'
+  sourceLocalPath: string
+  licence: SharedImageLicence
+}
+
 type SharedImage = {
-  image: {
-    sourceUrl: string
-    licence: 'Public Domain' | 'CC-0'
-  }
+  image: SharedImageSourceRemote | SharedImageSourceLocal
 }

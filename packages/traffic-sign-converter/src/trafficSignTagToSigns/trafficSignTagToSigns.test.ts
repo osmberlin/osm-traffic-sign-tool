@@ -57,6 +57,24 @@ describe('trafficSignTagToSigns()', () => {
       expect(joinOsmValueParts(result)).toMatch('274-50')
       expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('274[50]')
     })
+    test('redirect 241 to 241-30', () => {
+      const input = 'traffic_sign=DE:241'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toMatch('241-30')
+      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('241')
+    })
+    test('redirect 242 to 242.1', () => {
+      const input = 'traffic_sign=DE:242'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toMatch('242.1')
+      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('242')
+    })
+    test('redirect 325 to 325.1', () => {
+      const input = 'traffic_sign=DE:325'
+      const result = trafficSignTagToSigns(input, countryPrefix)
+      expect(joinOsmValueParts(result)).toMatch('325.1')
+      expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('325')
+    })
   })
 
   describe('handle signs with default value`', () => {
@@ -104,6 +122,32 @@ describe('trafficSignTagToSigns()', () => {
       const result = trafficSignTagToSigns(input, countryPrefix)
       expect(joinOsmValueParts(result)).toMatch('none')
       expect(joinSignValueParts(result)).toMatch('none')
+    })
+  })
+
+  describe('newly supported DE signs', () => {
+    test('recognizes DE:350.1', () => {
+      const result = trafficSignTagToSigns('traffic_sign=DE:350.1', countryPrefix)
+      expect(result[0]?.recodgnizedSign).toBe(true)
+      expect(result[0]?.osmValuePart).toBe('350.1')
+    })
+
+    test('recognizes DE:350.2', () => {
+      const result = trafficSignTagToSigns('traffic_sign=DE:350.2', countryPrefix)
+      expect(result[0]?.recodgnizedSign).toBe(true)
+      expect(result[0]?.osmValuePart).toBe('350.2')
+    })
+
+    test('recognizes DE:274.1-20', () => {
+      const result = trafficSignTagToSigns('traffic_sign=DE:274.1-20', countryPrefix)
+      expect(result[0]?.recodgnizedSign).toBe(true)
+      expect(result[0]?.osmValuePart).toBe('274.1-20')
+    })
+
+    test('keeps DE:1020-10 unrecognized', () => {
+      const result = trafficSignTagToSigns('traffic_sign=DE:1020-10', countryPrefix)
+      expect(result[0]?.recodgnizedSign).toBe(false)
+      expect(result[0]?.svgName).toBe(null)
     })
   })
 
