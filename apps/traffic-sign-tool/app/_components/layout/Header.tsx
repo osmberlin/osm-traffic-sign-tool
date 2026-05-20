@@ -25,11 +25,7 @@ export const Header = () => {
         >
           <Image src={svgLogo} alt="" width={48} height={48} />{' '}
           <span>
-            OSM Traffic Sign Tool 2{' '}
-            <span className="rounded-sm bg-stone-300 px-2 pt-1 text-xl text-stone-800 uppercase md:text-2xl">
-              Beta
-            </span>{' '}
-            <small className="text-xs">{version}</small>
+            OSM Traffic Sign Tool 2 <small className="text-xs">{version}</small>
           </span>
         </Link>
       </h1>
@@ -43,13 +39,10 @@ export const Header = () => {
           tags for the road that it applies to.{' '}
           <strong>Please review all tags before updating OSM.</strong>
           <br />
-          <strong className="text-amber-500">
-            This project is in beta stage.{' '}
-            <ExternalLink blank href="https://github.com/osmberlin/osm-traffic-sign-tool">
-              Please report issues; please help with research
-            </ExternalLink>
-            .
-          </strong>
+          <ExternalLink blank href="https://github.com/osmberlin/osm-traffic-sign-tool">
+            Please report issues or help with research
+          </ExternalLink>
+          .
         </p>
       </details>
     </header>
