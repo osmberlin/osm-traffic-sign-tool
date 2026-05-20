@@ -181,7 +181,7 @@ Analyze sign frequency:
 
 ### Step 6: Process and Build
 
-1. **Build**: Run `bun script-new-svg.ts` from root (uses incremental mode - only downloads new SVGs).
+1. **Build**: Run `bun script-new-svg.ts` from root (incremental download/optimize + copies SVGs into `@osm-traffic-signs/converter` dist).
 2. **Verify Errors**: Read `packages/internal_svgs/src/download-errors/downloadErrors_DE.json`.
 3. **Lint**: Use the `read_lints` tool to check for TypeScript errors in the modified file.
 
