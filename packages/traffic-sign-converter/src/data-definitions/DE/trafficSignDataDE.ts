@@ -3,8 +3,10 @@ import { _conditions__only_for_thing } from './data/conditions__only_for_thing.j
 import { _conditions__other } from './data/conditions__other.js'
 import { _conditions__time } from './data/conditions__time.js'
 import { _exceptions__thing_allowed } from './data/exceptions__thing_allowed.js'
+import { _guidance_detour_additions } from './data/guidance_detour_additions.js'
 import { _hazard } from './data/hazard.js'
 import { _infrastructure } from './data/infrastructure.js'
+import { _modifiers_direction_additions } from './data/modifiers_direction_additions.js'
 import { _notice } from './data/notice.js'
 import { _numbers } from './data/numbers.js'
 import { _overtaking } from './data/overtaking.js'
@@ -13,6 +15,7 @@ import { _speed_maxspeed_start } from './data/speed_maxspeed_start.js'
 import { _speed_minspeed_end } from './data/speed_minspeed_end.js'
 import { _speed_minspeed_start } from './data/speed_minspeed_start.js'
 import { _speed_zones } from './data/speed_zones.js'
+import { _stopping_parking_additions } from './data/stopping_parking_additions.js'
 import { _surface } from './data/surface.js'
 import { _traffic_ban } from './data/traffic_ban.js'
 
@@ -236,6 +239,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -262,6 +266,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -287,6 +292,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -468,6 +474,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -533,6 +540,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
+      focus: ['parking'],
     },
     image: {
       kind: 'remote',
@@ -554,6 +562,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
+      focus: ['parking'],
     },
     image: {
       kind: 'remote',
@@ -577,6 +586,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
+      focus: ['highway', 'parking'],
     },
     image: {
       kind: 'remote',
@@ -597,6 +607,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'traffic_sign',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -670,6 +681,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'signpost',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -691,6 +703,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'signpost',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -712,6 +725,7 @@ export const trafficSignDataDE: SignType[] = [
     catalogue: {
       visibility: 'search_only',
       signCategory: 'signpost',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',

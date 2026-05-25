@@ -103,10 +103,18 @@ type SharedCompatibility = {
     incompatibleModifiers?: string[]
   }
 }
+export const signFocusTags = ['bike_foot', 'parking', 'highway'] as const
+export type SignFocusTag = (typeof signFocusTags)[number]
+
+export const focusAreas = ['default', ...signFocusTags, 'all'] as const
+export type FocusArea = (typeof focusAreas)[number]
+
 type SharedCatalogue<T> = {
   catalogue: {
     visibility?: 'highlight' | 'search_only'
     signCategory: T
+    /** Thematic filters (Fuß/Rad, Parkraum, Straßenraum). Omit when not in any focus. */
+    focus?: SignFocusTag[]
   }
 }
 type ValuePrompt<T> = {

@@ -108,6 +108,7 @@ export const _traffic_ban: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -247,6 +248,7 @@ export const _traffic_ban: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',

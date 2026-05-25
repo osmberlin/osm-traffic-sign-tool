@@ -12,6 +12,7 @@ export const Route = createFileRoute('/')({
       search: {
         ...(search.q ? { q: search.q } : {}),
         ...(search.signs ? { signs: search.signs } : {}),
+        ...(search.focus ? { focus: search.focus } : {}),
       },
     })
   },

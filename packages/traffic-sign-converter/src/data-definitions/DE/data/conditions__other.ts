@@ -181,6 +181,7 @@ export const _conditions__other: SignType[] = [
     ],
     catalogue: {
       signCategory: 'exception_modifier',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -209,6 +210,7 @@ export const _conditions__other: SignType[] = [
     ],
     catalogue: {
       signCategory: 'exception_modifier',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',

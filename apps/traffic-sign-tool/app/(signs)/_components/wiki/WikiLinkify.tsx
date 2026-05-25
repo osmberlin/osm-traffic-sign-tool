@@ -31,7 +31,11 @@ function preprocessOsmSyntax(text: string, countryPrefix: CountryPrefixType): st
     })
 }
 
-export const WikiLinkify = ({ text, className = proseLightClass }: Props) => {
+/** Default styles for dark result sidebar; light pages pass `proseLightClass`. */
+const wikiLinkifyDefaultClass =
+  'prose-code:bg-stone-700 prose-code:rounded prose-code:px-0.5 prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 prose-a:hover:decoration-stone-400 prose-a:hover:decoration-1'
+
+export const WikiLinkify = ({ text, className = wikiLinkifyDefaultClass }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
 
   const html = useMemo(() => {

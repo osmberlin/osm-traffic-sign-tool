@@ -1,4 +1,6 @@
+import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
 import { SignType } from '@osm-traffic-signs/converter'
+import { filterSignsByFocus } from './signGroups/focusFilter'
 import { SearchSignInput } from './signGroups/SearchSignInput'
 import { SignGrid } from './signGroups/SignGrid'
 import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
@@ -18,8 +20,10 @@ const signGroupTranslations: Map<SignType['catalogue']['signCategory'], string> 
 ])
 
 export const SignSelectionColumn = ({ trafficSignData }: Props) => {
+  const { focuses } = useParamFocus()
+
   // Data
-  const displaySigns = trafficSignData.filter((sign) => sign.catalogue.visibility !== 'search_only')
+  const displaySigns = filterSignsByFocus(trafficSignData, focuses)
   const signsMostUsed = displaySigns.filter((sign) => sign.catalogue.visibility === 'highlight')
 
   // Group data
@@ -31,7 +35,7 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
       groupedSigns.set(category, [...(groupedSigns.get(category) || []), sign])
     })
 
-  const uncategorizedAndSearchOnly = trafficSignData.filter((sign) => {
+  const uncategorizedAndSearchOnly = displaySigns.filter((sign) => {
     return ![
       ...signsMostUsed,
       // all the grouped signs
@@ -45,9 +49,11 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
 
   return (
     <>
-      <div className="flex items-start justify-between">
-        <h2 className="mb-4 text-lg font-light text-black uppercase">Choose Signs</h2>
-        <SearchSignInput />
+      <div className="mb-4 flex w-full flex-col gap-3 @sm/sign-selection:flex-row @sm/sign-selection:items-start @sm/sign-selection:justify-between">
+        <h2 className="shrink-0 text-lg font-light text-black uppercase">Choose Signs</h2>
+        <div className="w-full @sm/sign-selection:w-auto">
+          <SearchSignInput />
+        </div>
       </div>
 
       <SignGridSearchQuery trafficSignData={trafficSignData} />

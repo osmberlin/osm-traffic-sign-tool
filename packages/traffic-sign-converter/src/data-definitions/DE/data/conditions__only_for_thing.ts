@@ -66,6 +66,7 @@ export const _conditions__only_for_thing: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -88,6 +89,7 @@ export const _conditions__only_for_thing: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -265,6 +267,7 @@ export const _conditions__only_for_thing: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -331,6 +334,7 @@ export const _conditions__only_for_thing: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -353,6 +357,7 @@ export const _conditions__only_for_thing: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
+      focus: ['parking'],
     },
     image: {
       kind: 'remote',

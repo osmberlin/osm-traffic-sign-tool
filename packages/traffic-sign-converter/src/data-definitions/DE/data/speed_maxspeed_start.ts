@@ -23,6 +23,7 @@ export const _speed_maxspeed_start: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -47,6 +48,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -71,6 +73,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -95,6 +98,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -120,6 +124,7 @@ export const _speed_maxspeed_start: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -144,6 +149,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -169,6 +175,7 @@ export const _speed_maxspeed_start: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -194,6 +201,7 @@ export const _speed_maxspeed_start: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -219,6 +227,7 @@ export const _speed_maxspeed_start: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -243,6 +252,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -267,6 +277,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -291,6 +302,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -315,6 +327,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -339,6 +352,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -363,6 +377,7 @@ export const _speed_maxspeed_start: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',

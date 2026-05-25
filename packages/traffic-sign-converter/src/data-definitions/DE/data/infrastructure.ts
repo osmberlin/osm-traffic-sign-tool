@@ -23,6 +23,7 @@ export const _infrastructure: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -95,6 +96,7 @@ export const _infrastructure: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -132,6 +134,7 @@ export const _infrastructure: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -170,6 +173,7 @@ export const _infrastructure: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -207,6 +211,7 @@ export const _infrastructure: SignType[] = [
     catalogue: {
       visibility: 'highlight',
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -236,6 +241,7 @@ export const _infrastructure: SignType[] = [
     ],
     catalogue: {
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -260,6 +266,7 @@ export const _infrastructure: SignType[] = [
     ],
     catalogue: {
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
       visibility: 'search_only',
     },
     image: {
@@ -428,6 +435,7 @@ export const _infrastructure: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -447,6 +455,7 @@ export const _infrastructure: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
+      focus: ['bike_foot'],
       visibility: 'search_only',
     },
     image: {

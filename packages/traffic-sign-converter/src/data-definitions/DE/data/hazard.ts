@@ -85,6 +85,7 @@ export const _hazard: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
+      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',

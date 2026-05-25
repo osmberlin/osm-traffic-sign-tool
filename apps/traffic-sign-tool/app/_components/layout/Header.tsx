@@ -1,12 +1,12 @@
 'use client'
-import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
-import { Link, useRouterState } from '@tanstack/react-router'
-import { clsx } from 'clsx'
-import packageJson from '../../../package.json'
 import {
   useAboutToolOpen,
   useAboutToolOpenActions,
 } from '@app/app/_components/store/useAboutToolOpen.zustand'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
+import { Link, useRouterState } from '@tanstack/react-router'
+import { clsx } from 'clsx'
+import packageJson from '../../../package.json'
 import { ExternalLink } from '../links/ExternalLink'
 import svgLogo from './assets/logo.svg'
 

@@ -26,6 +26,7 @@ const createMinspeedEndSign = (
   ],
   catalogue: {
     signCategory: 'speed',
+    focus: ['highway'],
     ...(options?.visibility ? { visibility: options.visibility } : {}),
   },
   image: {
@@ -62,6 +63,7 @@ export const _speed_minspeed_end: SignType[] = [
     ],
     catalogue: {
       signCategory: 'speed',
+      focus: ['highway'],
     },
     image: {
       kind: 'remote',

@@ -35,7 +35,7 @@ export const SearchSignInput = () => {
   )
 
   return (
-    <div className="relative -mt-1.5">
+    <div className="relative -mt-1.5 w-full">
       <div className="relative flex items-center">
         <input
           ref={searchInputRef}
@@ -46,7 +46,7 @@ export const SearchSignInput = () => {
           name="search"
           type="text"
           autoFocus={true}
-          className="block rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset sm:text-sm"
+          className="block w-full min-w-0 rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset sm:text-sm @sm/sign-selection:w-48"
           placeholder="Search…"
         />
         <div className="absolute inset-y-0 right-0 flex items-center gap-1 py-1.5 pr-1.5">

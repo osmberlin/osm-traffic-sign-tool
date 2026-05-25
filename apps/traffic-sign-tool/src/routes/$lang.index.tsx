@@ -7,7 +7,7 @@ function LangIndexRouteComponent() {
   const trafficSignData = Route.useLoaderData()
   const { countryPrefix } = Route.useRouteContext()
   return (
-    <div className="mx-auto w-full min-w-0 max-w-6xl px-2">
+    <div className="mx-auto w-full max-w-6xl min-w-0 px-2">
       <PageApp countryPrefix={countryPrefix} trafficSignData={trafficSignData} />
     </div>
   )
