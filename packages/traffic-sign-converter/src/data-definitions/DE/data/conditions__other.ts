@@ -176,7 +176,7 @@ export const _conditions__other: SignType[] = [
       {
         tagReference: null,
         comment:
-          'Bitte <a href="https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33">Wiki beachten</a>, das Tool ist hier nicht vollständig.',
+          'Bitte [Wiki beachten](https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33), das Tool ist hier nicht vollständig.',
       },
     ],
     catalogue: {
@@ -205,7 +205,7 @@ export const _conditions__other: SignType[] = [
       {
         tagReference: null,
         comment:
-          'Bitte <a href="https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33">Wiki beachten</a>, das Tool ist hier nicht vollständig.',
+          'Bitte [Wiki beachten](https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33), das Tool ist hier nicht vollständig.',
       },
     ],
     catalogue: {

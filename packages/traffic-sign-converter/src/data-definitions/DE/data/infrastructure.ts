@@ -16,7 +16,7 @@ export const _infrastructure: SignType[] = [
       {
         tagReference: null,
         comment:
-          'Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
+          'Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
     ],
     compatibility: { incompatibleModifiers: ['1020-12', '1022-10'] },
@@ -128,7 +128,7 @@ export const _infrastructure: SignType[] = [
       {
         tagReference: null,
         comment:
-          'Manchmal wird auch [Tag:highway=cycleway] genutzt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>). Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
+          'Manchmal wird auch [Tag:highway=cycleway] genutzt (siehe [Kontroversen](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path)). Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
     ],
     catalogue: {
@@ -163,11 +163,11 @@ export const _infrastructure: SignType[] = [
       {
         tagReference: 'highway=cycleway',
         comment:
-          'Andere Länder haben sich auf ein Tagging mit [Tag:highway=cycleway] geeinigt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>).',
+          'Andere Länder haben sich auf ein Tagging mit [Tag:highway=cycleway] geeinigt (siehe [Kontroversen](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path)).',
       },
       {
         comment:
-          'Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
+          'Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
     ],
     catalogue: {
@@ -201,11 +201,11 @@ export const _infrastructure: SignType[] = [
       {
         tagReference: 'highway=cycleway',
         comment:
-          'Andere Länder haben sich auf ein Tagging mit [Tag:highway=cycleway] geeinigt (siehe <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path">Kontroversen</a>).',
+          'Andere Länder haben sich auf ein Tagging mit [Tag:highway=cycleway] geeinigt (siehe [Kontroversen](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path)).',
       },
       {
         comment:
-          'Auch beachten: <a href="https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege">Straßenbegleitende Wege</a>.',
+          'Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
     ],
     catalogue: {
