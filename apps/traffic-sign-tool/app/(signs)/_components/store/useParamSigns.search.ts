@@ -18,9 +18,7 @@ export const useParamSigns = () => {
   const search = useSearch({ from: '/$lang' })
   const rawSigns = search.signs
   const paramSigns = parseSignsParam(rawSigns, countryPrefix)
-  const signValueUpdateTimersRef = useRef(
-    new Map<string, ReturnType<typeof setTimeout>>(),
-  )
+  const signValueUpdateTimersRef = useRef(new Map<string, ReturnType<typeof setTimeout>>())
 
   const setParamSigns = useCallback(
     (value: SignStateType[] | ((prevValue: SignStateType[]) => SignStateType[])) => {

@@ -26,7 +26,9 @@ const SelectedSignValuePromptFields = ({ sign }: { sign: ValuePromptSign }) => {
   const [draftValue, setDraftValue] = useState<string | number | null>(null)
 
   const inputValue = draftValue ?? getCommittedInputValue(sign)
-  const { type: inputType, step: inputStep } = getValuePromptInputAttributes(sign.valuePrompt.format)
+  const { type: inputType, step: inputStep } = getValuePromptInputAttributes(
+    sign.valuePrompt.format,
+  )
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const nextValue = event.target.value

@@ -1,10 +1,5 @@
 /** All `valuePrompt.format` values used in sign data definitions. */
-export const valuePromptFormats = [
-  'integer',
-  'float',
-  'opening_hours',
-  'time_restriction',
-] as const
+export const valuePromptFormats = ['integer', 'float', 'opening_hours', 'time_restriction'] as const
 
 export type ValuePromptFormat = (typeof valuePromptFormats)[number]
 

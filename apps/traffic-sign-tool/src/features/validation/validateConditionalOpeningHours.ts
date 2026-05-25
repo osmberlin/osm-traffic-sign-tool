@@ -143,9 +143,7 @@ export const normalizeOpeningHoursLocale = (requestedLocale?: string): string =>
   return primary || 'de'
 }
 
-const buildNominatimObject = (
-  opts?: ValidateConditionalOpeningHoursOptions,
-): nominatim_object =>
+const buildNominatimObject = (opts?: ValidateConditionalOpeningHoursOptions): nominatim_object =>
   ({
     address: {
       country_code: (opts?.countryCode ?? 'de').toLowerCase(),

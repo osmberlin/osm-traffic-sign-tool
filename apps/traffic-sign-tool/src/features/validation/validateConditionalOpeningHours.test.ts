@@ -71,8 +71,7 @@ describe('splitOpeningHoursFeedbackMessage()', () => {
 
 describe('partitionOpeningHoursMessages()', () => {
   test('separates skippable and displayed messages', () => {
-    const phDetail =
-      'Es wurde keine Regel für "PH" (feiertags) angegeben. Weitere Hinweise.'
+    const phDetail = 'Es wurde keine Regel für "PH" (feiertags) angegeben. Weitere Hinweise.'
     const other = { reference: '16:00-18:00', detail: 'Some other warning.' }
 
     const result = partitionOpeningHoursMessages([
@@ -154,9 +153,9 @@ describe('validateConditionalOpeningHours()', () => {
 
     expect(result.severity).toBe('none')
     expect(result.messages).toEqual([])
-    expect(shouldSkipOpeningHoursMessage('Es wurde keine Regel für "PH" (feiertags) angegeben. …')).toBe(
-      true,
-    )
+    expect(
+      shouldSkipOpeningHoursMessage('Es wurde keine Regel für "PH" (feiertags) angegeben. …'),
+    ).toBe(true)
     expect(vi.mocked(console.info)).toHaveBeenCalledWith(
       '[opening_hours validation]',
       expect.objectContaining({

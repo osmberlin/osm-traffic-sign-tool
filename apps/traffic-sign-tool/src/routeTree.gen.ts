@@ -8,14 +8,14 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
 import { Route as LangRouteImport } from './routes/$lang'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as LangIndexRouteImport } from './routes/$lang.index'
-import { Route as LangWikiRouteImport } from './routes/$lang.wiki'
-import { Route as LangTaginfoRouteImport } from './routes/$lang.taginfo'
-import { Route as LangSignsRouteImport } from './routes/$lang.signs'
 import { Route as LangCheckSignCombinationsRouteImport } from './routes/$lang.check-sign-combinations'
+import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangSignsRouteImport } from './routes/$lang.signs'
+import { Route as LangTaginfoRouteImport } from './routes/$lang.taginfo'
+import { Route as LangWikiRouteImport } from './routes/$lang.wiki'
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
 
 const LangRoute = LangRouteImport.update({
   id: '/$lang',
@@ -47,12 +47,11 @@ const LangSignsRoute = LangSignsRouteImport.update({
   path: '/signs',
   getParentRoute: () => LangRoute,
 } as any)
-const LangCheckSignCombinationsRoute =
-  LangCheckSignCombinationsRouteImport.update({
-    id: '/check-sign-combinations',
-    path: '/check-sign-combinations',
-    getParentRoute: () => LangRoute,
-  } as any)
+const LangCheckSignCombinationsRoute = LangCheckSignCombinationsRouteImport.update({
+  id: '/check-sign-combinations',
+  path: '/check-sign-combinations',
+  getParentRoute: () => LangRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
