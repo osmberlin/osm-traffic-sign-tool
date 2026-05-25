@@ -17,25 +17,29 @@ export const Header = () => {
   const pathname = useRouterState({ select: (state) => state.location.pathname })
   const isHome = pathname === `/${lang}`
   const version = packageJson?.version || 'unknown'
+  const titleClassName = clsx(
+    'mb-3 flex items-center gap-3 text-xl leading-tight font-light text-stone-400 md:text-3xl',
+    !isHome && 'decoration-violet-700 underline-offset-4 hover:underline',
+  )
+  const titleContent = (
+    <>
+      <img src={svgLogo} alt="" width={48} height={48} />{' '}
+      <span>
+        OSM Traffic Sign Tool 2 <small className="text-xs">{version}</small>
+      </span>
+    </>
+  )
 
   return (
     <header className="mx-auto mt-5 mb-6 flex max-w-prose flex-col flex-wrap overflow-hidden px-4 sm:px-6 md:mt-10 lg:w-[65ch] lg:max-w-prose lg:px-8">
       <h1>
-        <Link
-          className={clsx(
-            'mb-3 flex items-center gap-3 text-xl leading-tight font-light text-stone-400 decoration-violet-700 underline-offset-4 hover:underline md:text-3xl',
-            isHome ? 'cursor-auto hover:no-underline' : '',
-          )}
-          aria-disabled={isHome}
-          onClick={(event) => isHome && event.preventDefault()}
-          to="/$lang"
-          params={{ lang }}
-        >
-          <img src={svgLogo} alt="" width={48} height={48} />{' '}
-          <span>
-            OSM Traffic Sign Tool 2 <small className="text-xs">{version}</small>
-          </span>
-        </Link>
+        {isHome ? (
+          <span className={titleClassName}>{titleContent}</span>
+        ) : (
+          <Link className={titleClassName} to="/$lang" params={{ lang }}>
+            {titleContent}
+          </Link>
+        )}
       </h1>
 
       <details
