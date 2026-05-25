@@ -1,4 +1,5 @@
 'use client'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Link } from '@tanstack/react-router'
 import { isDev } from '../utils/isDev'
 import { ExternalLink } from '../links/ExternalLink'
@@ -27,19 +28,20 @@ const navigation = [
 ]
 
 const baseInternalNavigation = [
-  { name: 'Compare with taginfo', to: '/DE/taginfo' as const },
-  { name: 'Compare with wiki', to: '/DE/wiki' as const },
-  { name: 'All signs', to: '/DE/signs' as const, active: true },
+  { name: 'Compare with taginfo', to: '/$lang/taginfo' as const },
+  { name: 'Compare with wiki', to: '/$lang/wiki' as const },
+  { name: 'All signs', to: '/$lang/signs' as const, active: true },
 ] as const
 
 export const Footer = () => {
+  const lang = useCurrentLang()
   const internalNavigation = [
     ...baseInternalNavigation,
     ...(isDev
       ? [
           {
             name: 'DEV ONLY: Check sign combinations',
-            to: '/DE/check-sign-combinations' as const,
+            to: '/$lang/check-sign-combinations' as const,
           },
         ]
       : []),
@@ -81,6 +83,7 @@ export const Footer = () => {
                 {'active' in item && item.active ? (
                   <Link
                     to={item.to}
+                    params={{ lang }}
                     activeOptions={{ exact: true }}
                     activeProps={footerLinkActiveProps}
                     className={footerLinkClassName}
@@ -88,7 +91,7 @@ export const Footer = () => {
                     {item.name}
                   </Link>
                 ) : (
-                  <Link to={item.to} className={footerLinkClassName}>
+                  <Link to={item.to} params={{ lang }} className={footerLinkClassName}>
                     {item.name}
                   </Link>
                 )}

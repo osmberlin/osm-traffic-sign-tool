@@ -1,4 +1,5 @@
 'use client'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Link, useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import packageJson from '../../../package.json'
@@ -6,8 +7,9 @@ import { ExternalLink } from '../links/ExternalLink'
 import svgLogo from './assets/logo.svg'
 
 export const Header = () => {
+  const lang = useCurrentLang()
   const pathname = useRouterState({ select: (state) => state.location.pathname })
-  const isHome = pathname === '/'
+  const isHome = pathname === `/${lang}`
   const version = packageJson?.version || 'unknown'
 
   return (
@@ -20,7 +22,8 @@ export const Header = () => {
           )}
           aria-disabled={isHome}
           onClick={(event) => isHome && event.preventDefault()}
-          to="/"
+          to="/$lang"
+          params={{ lang }}
         >
           <img src={svgLogo} alt="" width={48} height={48} />{' '}
           <span>

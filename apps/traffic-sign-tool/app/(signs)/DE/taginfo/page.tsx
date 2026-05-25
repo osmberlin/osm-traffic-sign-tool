@@ -1,6 +1,7 @@
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { linkStyle } from '@app/app/_components/links/linkStyles'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { taginfoTrafficSignData } from '@internal/taginfo'
 import { Link } from '@tanstack/react-router'
 import { z } from 'zod'
@@ -21,6 +22,7 @@ const Schema = z.array(z.tuple([z.string(), z.number()]))
 
 export default function TaginfoPage() {
   const data = Schema.parse(taginfoTrafficSignData)
+  const lang = useCurrentLang()
 
   return (
     <article className="rounded-sm bg-stone-300 px-6 py-4">
@@ -65,7 +67,13 @@ export default function TaginfoPage() {
                   <TagSignImages value={value} />
                 </TableCell>
                 <TableCell className="w-20 text-sm">
-                  <Link to="/DE" search={{ signs: value }} target="_blank" className={linkStyle}>
+                  <Link
+                    to="/$lang"
+                    params={{ lang }}
+                    search={{ signs: value }}
+                    target="_blank"
+                    className={linkStyle}
+                  >
                     This tool
                   </Link>
                   <br />

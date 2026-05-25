@@ -1,3 +1,4 @@
+import { defaultLang } from '@app/src/features/routing/lang'
 import { Link } from '@tanstack/react-router'
 
 export default function NotFound() {
@@ -5,7 +6,9 @@ export default function NotFound() {
     <div className="bg-white">
       <h2>Not Found</h2>
       <p>Could not find requested resource</p>
-      <Link to="/DE">Return Home</Link>
+      <Link to="/$lang" params={{ lang: defaultLang }}>
+        Return Home
+      </Link>
     </div>
   )
 }

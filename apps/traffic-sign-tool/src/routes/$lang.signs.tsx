@@ -3,15 +3,14 @@ import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { countryDefinitions } from '@osm-traffic-signs/converter'
 import { createFileRoute } from '@tanstack/react-router'
 
-const countryPrefix = 'DE' as const
-
-function DeSignsRouteComponent() {
+function LangSignsRouteComponent() {
   const trafficSignData = Route.useLoaderData()
+  const { countryPrefix } = Route.useRouteContext()
   return <PageAllApp countryPrefix={countryPrefix} trafficSignData={trafficSignData} />
 }
 
-export const Route = createFileRoute('/DE/signs')({
-  loader: () => countryDefinitions[countryPrefix],
+export const Route = createFileRoute('/$lang/signs')({
+  loader: ({ context }) => countryDefinitions[context.countryPrefix],
   validateSearch: deSearchSchema,
-  component: DeSignsRouteComponent,
+  component: LangSignsRouteComponent,
 })

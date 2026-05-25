@@ -9,17 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as DERouteImport } from './routes/DE'
+import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as DEIndexRouteImport } from './routes/DE.index'
-import { Route as DEWikiRouteImport } from './routes/DE.wiki'
-import { Route as DETaginfoRouteImport } from './routes/DE.taginfo'
-import { Route as DESignsRouteImport } from './routes/DE.signs'
-import { Route as DECheckSignCombinationsRouteImport } from './routes/DE.check-sign-combinations'
+import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangWikiRouteImport } from './routes/$lang.wiki'
+import { Route as LangTaginfoRouteImport } from './routes/$lang.taginfo'
+import { Route as LangSignsRouteImport } from './routes/$lang.signs'
+import { Route as LangCheckSignCombinationsRouteImport } from './routes/$lang.check-sign-combinations'
 
-const DERoute = DERouteImport.update({
-  id: '/DE',
-  path: '/DE',
+const LangRoute = LangRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -27,100 +27,101 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DEIndexRoute = DEIndexRouteImport.update({
+const LangIndexRoute = LangIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => DERoute,
+  getParentRoute: () => LangRoute,
 } as any)
-const DEWikiRoute = DEWikiRouteImport.update({
+const LangWikiRoute = LangWikiRouteImport.update({
   id: '/wiki',
   path: '/wiki',
-  getParentRoute: () => DERoute,
+  getParentRoute: () => LangRoute,
 } as any)
-const DETaginfoRoute = DETaginfoRouteImport.update({
+const LangTaginfoRoute = LangTaginfoRouteImport.update({
   id: '/taginfo',
   path: '/taginfo',
-  getParentRoute: () => DERoute,
+  getParentRoute: () => LangRoute,
 } as any)
-const DESignsRoute = DESignsRouteImport.update({
+const LangSignsRoute = LangSignsRouteImport.update({
   id: '/signs',
   path: '/signs',
-  getParentRoute: () => DERoute,
+  getParentRoute: () => LangRoute,
 } as any)
-const DECheckSignCombinationsRoute = DECheckSignCombinationsRouteImport.update({
-  id: '/check-sign-combinations',
-  path: '/check-sign-combinations',
-  getParentRoute: () => DERoute,
-} as any)
+const LangCheckSignCombinationsRoute =
+  LangCheckSignCombinationsRouteImport.update({
+    id: '/check-sign-combinations',
+    path: '/check-sign-combinations',
+    getParentRoute: () => LangRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/DE': typeof DERouteWithChildren
-  '/DE/check-sign-combinations': typeof DECheckSignCombinationsRoute
-  '/DE/signs': typeof DESignsRoute
-  '/DE/taginfo': typeof DETaginfoRoute
-  '/DE/wiki': typeof DEWikiRoute
-  '/DE/': typeof DEIndexRoute
+  '/$lang': typeof LangRouteWithChildren
+  '/$lang/check-sign-combinations': typeof LangCheckSignCombinationsRoute
+  '/$lang/signs': typeof LangSignsRoute
+  '/$lang/taginfo': typeof LangTaginfoRoute
+  '/$lang/wiki': typeof LangWikiRoute
+  '/$lang/': typeof LangIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/DE/check-sign-combinations': typeof DECheckSignCombinationsRoute
-  '/DE/signs': typeof DESignsRoute
-  '/DE/taginfo': typeof DETaginfoRoute
-  '/DE/wiki': typeof DEWikiRoute
-  '/DE': typeof DEIndexRoute
+  '/$lang/check-sign-combinations': typeof LangCheckSignCombinationsRoute
+  '/$lang/signs': typeof LangSignsRoute
+  '/$lang/taginfo': typeof LangTaginfoRoute
+  '/$lang/wiki': typeof LangWikiRoute
+  '/$lang': typeof LangIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/DE': typeof DERouteWithChildren
-  '/DE/check-sign-combinations': typeof DECheckSignCombinationsRoute
-  '/DE/signs': typeof DESignsRoute
-  '/DE/taginfo': typeof DETaginfoRoute
-  '/DE/wiki': typeof DEWikiRoute
-  '/DE/': typeof DEIndexRoute
+  '/$lang': typeof LangRouteWithChildren
+  '/$lang/check-sign-combinations': typeof LangCheckSignCombinationsRoute
+  '/$lang/signs': typeof LangSignsRoute
+  '/$lang/taginfo': typeof LangTaginfoRoute
+  '/$lang/wiki': typeof LangWikiRoute
+  '/$lang/': typeof LangIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/DE'
-    | '/DE/check-sign-combinations'
-    | '/DE/signs'
-    | '/DE/taginfo'
-    | '/DE/wiki'
-    | '/DE/'
+    | '/$lang'
+    | '/$lang/check-sign-combinations'
+    | '/$lang/signs'
+    | '/$lang/taginfo'
+    | '/$lang/wiki'
+    | '/$lang/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/DE/check-sign-combinations'
-    | '/DE/signs'
-    | '/DE/taginfo'
-    | '/DE/wiki'
-    | '/DE'
+    | '/$lang/check-sign-combinations'
+    | '/$lang/signs'
+    | '/$lang/taginfo'
+    | '/$lang/wiki'
+    | '/$lang'
   id:
     | '__root__'
     | '/'
-    | '/DE'
-    | '/DE/check-sign-combinations'
-    | '/DE/signs'
-    | '/DE/taginfo'
-    | '/DE/wiki'
-    | '/DE/'
+    | '/$lang'
+    | '/$lang/check-sign-combinations'
+    | '/$lang/signs'
+    | '/$lang/taginfo'
+    | '/$lang/wiki'
+    | '/$lang/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DERoute: typeof DERouteWithChildren
+  LangRoute: typeof LangRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/DE': {
-      id: '/DE'
-      path: '/DE'
-      fullPath: '/DE'
-      preLoaderRoute: typeof DERouteImport
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -130,65 +131,65 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/DE/': {
-      id: '/DE/'
+    '/$lang/': {
+      id: '/$lang/'
       path: '/'
-      fullPath: '/DE/'
-      preLoaderRoute: typeof DEIndexRouteImport
-      parentRoute: typeof DERoute
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
     }
-    '/DE/wiki': {
-      id: '/DE/wiki'
+    '/$lang/wiki': {
+      id: '/$lang/wiki'
       path: '/wiki'
-      fullPath: '/DE/wiki'
-      preLoaderRoute: typeof DEWikiRouteImport
-      parentRoute: typeof DERoute
+      fullPath: '/$lang/wiki'
+      preLoaderRoute: typeof LangWikiRouteImport
+      parentRoute: typeof LangRoute
     }
-    '/DE/taginfo': {
-      id: '/DE/taginfo'
+    '/$lang/taginfo': {
+      id: '/$lang/taginfo'
       path: '/taginfo'
-      fullPath: '/DE/taginfo'
-      preLoaderRoute: typeof DETaginfoRouteImport
-      parentRoute: typeof DERoute
+      fullPath: '/$lang/taginfo'
+      preLoaderRoute: typeof LangTaginfoRouteImport
+      parentRoute: typeof LangRoute
     }
-    '/DE/signs': {
-      id: '/DE/signs'
+    '/$lang/signs': {
+      id: '/$lang/signs'
       path: '/signs'
-      fullPath: '/DE/signs'
-      preLoaderRoute: typeof DESignsRouteImport
-      parentRoute: typeof DERoute
+      fullPath: '/$lang/signs'
+      preLoaderRoute: typeof LangSignsRouteImport
+      parentRoute: typeof LangRoute
     }
-    '/DE/check-sign-combinations': {
-      id: '/DE/check-sign-combinations'
+    '/$lang/check-sign-combinations': {
+      id: '/$lang/check-sign-combinations'
       path: '/check-sign-combinations'
-      fullPath: '/DE/check-sign-combinations'
-      preLoaderRoute: typeof DECheckSignCombinationsRouteImport
-      parentRoute: typeof DERoute
+      fullPath: '/$lang/check-sign-combinations'
+      preLoaderRoute: typeof LangCheckSignCombinationsRouteImport
+      parentRoute: typeof LangRoute
     }
   }
 }
 
-interface DERouteChildren {
-  DECheckSignCombinationsRoute: typeof DECheckSignCombinationsRoute
-  DESignsRoute: typeof DESignsRoute
-  DETaginfoRoute: typeof DETaginfoRoute
-  DEWikiRoute: typeof DEWikiRoute
-  DEIndexRoute: typeof DEIndexRoute
+interface LangRouteChildren {
+  LangCheckSignCombinationsRoute: typeof LangCheckSignCombinationsRoute
+  LangSignsRoute: typeof LangSignsRoute
+  LangTaginfoRoute: typeof LangTaginfoRoute
+  LangWikiRoute: typeof LangWikiRoute
+  LangIndexRoute: typeof LangIndexRoute
 }
 
-const DERouteChildren: DERouteChildren = {
-  DECheckSignCombinationsRoute: DECheckSignCombinationsRoute,
-  DESignsRoute: DESignsRoute,
-  DETaginfoRoute: DETaginfoRoute,
-  DEWikiRoute: DEWikiRoute,
-  DEIndexRoute: DEIndexRoute,
+const LangRouteChildren: LangRouteChildren = {
+  LangCheckSignCombinationsRoute: LangCheckSignCombinationsRoute,
+  LangSignsRoute: LangSignsRoute,
+  LangTaginfoRoute: LangTaginfoRoute,
+  LangWikiRoute: LangWikiRoute,
+  LangIndexRoute: LangIndexRoute,
 }
 
-const DERouteWithChildren = DERoute._addFileChildren(DERouteChildren)
+const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DERoute: DERouteWithChildren,
+  LangRoute: LangRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

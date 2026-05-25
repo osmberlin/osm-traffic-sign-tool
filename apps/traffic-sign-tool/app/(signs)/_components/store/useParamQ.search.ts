@@ -1,8 +1,8 @@
 import { useNavigate, useSearch } from '@tanstack/react-router'
 
 export const useParamQ = () => {
-  const navigate = useNavigate({ from: '/DE' })
-  const search = useSearch({ from: '/DE' })
+  const navigate = useNavigate({ from: '/$lang' })
+  const search = useSearch({ from: '/$lang' })
   const paramQ = search.q ?? null
 
   const setParamQ = (value: string | null) => {

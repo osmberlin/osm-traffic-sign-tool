@@ -11,8 +11,8 @@ import { useCountryPrefixWithFallback } from './CountryPrefixContext'
 
 export const useParamSigns = () => {
   const { countryPrefix } = useCountryPrefixWithFallback()
-  const navigate = useNavigate({ from: '/DE' })
-  const search = useSearch({ from: '/DE' })
+  const navigate = useNavigate({ from: '/$lang' })
+  const search = useSearch({ from: '/$lang' })
   const rawSigns = search.signs
   const paramSigns = parseSignsParam(rawSigns, countryPrefix)
 

@@ -12,6 +12,7 @@ export const router = createRouter({
   routeTree,
   scrollRestoration: true,
   stringifySearch: routerSearch.stringify,
+  trailingSlash: 'never',
 })
 
 declare module '@tanstack/react-router' {
