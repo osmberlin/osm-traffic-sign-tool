@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add many missing DE traffic signs (83 new SVGs); most entries are catalogue-only and do not yet define OSM tagging.
+- Replace catalogue `visibility` flags (`search_only`, `highlight`) with per-view `catalogue.focus` records to support thematic sign sets (Standard, bike/foot, parking, highway, Alle-only).
+- Export catalogue focus helpers and value-prompt format utilities from the package entry point.
+- Render Markdown links in sign descriptions.
+
 ## 0.4.0
 
 _2026-05-20_

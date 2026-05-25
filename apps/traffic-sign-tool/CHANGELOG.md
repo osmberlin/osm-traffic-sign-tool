@@ -10,10 +10,14 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
-- Add live syntax validation for conditional time inputs (`opening_hours` and `time_restriction` value prompts) using `opening_hours.js`, with localized fatal errors and soft warnings.
-- Refactor app routing/runtime from Next.js to TanStack Router SPA (Vite), including route migration, TanStack search-param handling with Zod validation, and static-hosting compatibility for GitHub Pages.
-- Refresh bundled DE sign data/SVGs from converter updates, including additional sign coverage (`274.1-20`, `350.1`, `350.2`) and redirect aliases (`241`, `242`, `325`).
-- Improve DE minspeed rendering reliability by consuming local SVG assets for missing `275-*` and `279-*` variants.
+- Migrate from Next.js to TanStack Router SPA (Vite), including route migration, TanStack search-param handling with Zod validation, and static-hosting compatibility for GitHub Pages.
+- Fix layout, width, and responsive behaviour after the TanStack migration (content pages, footer and header links, `/$lang/` route).
+- Add Focus filter row to browse signs by thematic catalogue views (Standard, Fuß und Rad, Parkraum, Straßenraum, Alle).
+- Add live syntax validation for `opening_hours` and `time_restriction` value prompts using `opening_hours.js`, with localized fatal errors and soft warnings.
+- Preserve sign description open/closed state in local storage.
+- Make the custom value prompt overlay narrower for long input strings.
+- Fix search validation when `q` is a bare number in the URL.
+- Refresh bundled DE sign data and SVGs from converter updates (many new signs and catalogue focus rework).
 
 ## 2.1.9
 
