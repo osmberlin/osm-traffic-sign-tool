@@ -1,7 +1,6 @@
 'use client'
 import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
-import { proseDarkClass } from '@app/app/_components/layout/proseClasses'
 import { getRedirectsForSign, signsToComments } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import { WikiLinkify } from '../../wiki/WikiLinkify'
@@ -53,12 +52,7 @@ export const ResultComments = () => {
               Notes on{' '}
               <code className="rounded-sm bg-stone-700 px-2 py-1 text-stone-50">{signKey}</code>
             </h4>
-            <ul
-              className={clsx(
-                'list-disc space-y-2 pl-5 font-serif font-normal break-all',
-                proseDarkClass,
-              )}
-            >
+            <ul className="prose-code:bg-white/10 prose-code:rounded prose-code:px-0.5 prose-white prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 prose-a:hover:decoration-stone-400 prose-a:hover:decoration-1 prose-code:whitespace-nowrap list-disc space-y-2 pl-5 font-serif font-normal break-all">
               {signComments.map(({ tagReference, important, comment }, index) => {
                 return (
                   <li
@@ -70,7 +64,7 @@ export const ResultComments = () => {
                         <code>{tagReference}</code>
                       </p>
                     )}
-                    <WikiLinkify text={comment} className={proseDarkClass} />
+                    <WikiLinkify text={comment} />
                   </li>
                 )
               })}
