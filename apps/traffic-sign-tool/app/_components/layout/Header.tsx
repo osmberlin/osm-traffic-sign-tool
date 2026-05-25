@@ -3,10 +3,16 @@ import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Link, useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import packageJson from '../../../package.json'
+import {
+  useAboutToolOpen,
+  useAboutToolOpenActions,
+} from '@app/app/_components/store/useAboutToolOpen.zustand'
 import { ExternalLink } from '../links/ExternalLink'
 import svgLogo from './assets/logo.svg'
 
 export const Header = () => {
+  const isAboutOpen = useAboutToolOpen()
+  const { setIsOpen: setAboutOpen } = useAboutToolOpenActions()
   const lang = useCurrentLang()
   const pathname = useRouterState({ select: (state) => state.location.pathname })
   const isHome = pathname === `/${lang}`
@@ -32,7 +38,11 @@ export const Header = () => {
         </Link>
       </h1>
 
-      <details open className="my-5 self-center leading-tight text-stone-300">
+      <details
+        open={isAboutOpen}
+        onToggle={(event) => setAboutOpen(event.currentTarget.open)}
+        className="my-5 self-center leading-tight text-stone-300"
+      >
         <summary className="cursor-pointer text-center underline-offset-2 hover:underline">
           About this tool…
         </summary>
