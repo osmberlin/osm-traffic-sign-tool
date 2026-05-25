@@ -10,11 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as DERouteImport } from './routes/DE'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as DEWikiRouteImport } from './routes/DE.wiki'
-import { Route as DETaginfoRouteImport } from './routes/DE.taginfo'
-import { Route as DESignsRouteImport } from './routes/DE.signs'
 import { Route as DECheckSignCombinationsRouteImport } from './routes/DE.check-sign-combinations'
+import { Route as DESignsRouteImport } from './routes/DE.signs'
+import { Route as DETaginfoRouteImport } from './routes/DE.taginfo'
+import { Route as DEWikiRouteImport } from './routes/DE.wiki'
+import { Route as IndexRouteImport } from './routes/index'
 
 const DERoute = DERouteImport.update({
   id: '/DE',
@@ -74,21 +74,9 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/DE'
-    | '/DE/check-sign-combinations'
-    | '/DE/signs'
-    | '/DE/taginfo'
-    | '/DE/wiki'
+  fullPaths: '/' | '/DE' | '/DE/check-sign-combinations' | '/DE/signs' | '/DE/taginfo' | '/DE/wiki'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/DE'
-    | '/DE/check-sign-combinations'
-    | '/DE/signs'
-    | '/DE/taginfo'
-    | '/DE/wiki'
+  to: '/' | '/DE' | '/DE/check-sign-combinations' | '/DE/signs' | '/DE/taginfo' | '/DE/wiki'
   id:
     | '__root__'
     | '/'
