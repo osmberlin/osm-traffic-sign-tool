@@ -172,12 +172,19 @@ test('Merged access tags for specific combination', () => {
 })
 ```
 
-### Step 5: Visibility Decision Guide
+### Step 5: Catalogue focus guide
 
-Analyze sign frequency:
+Use `catalogue.focus` (object keyed by view). Omit `focus` for ordinary **Standard** signs.
 
-- **`'highlight'`**: Common signs (speed limits, parking, bike lanes, stop signs).
-- **`'search_only'`**: Rare, specialized, deprecated, or object-marking signs (guide posts, lamp markers).
+| `catalogue.focus` | Meaning |
+|-------------------|---------|
+| *(omitted)* | Standard tab only (implicit `default: true`) |
+| `{ default: 'highlight' }` | Standard + “Häufig verwendet” |
+| `{ parking: true }` / `{ highway: true }` / `{ bike_foot: true }` | Thematic tab + Alle |
+| `{ highway: 'highlight' }` | Thematic tab + featured row there |
+| `{ all: true }` | Alle only (rare object markers) |
+
+Do not use `visibility` on new signs.
 
 ### Step 6: Process and Build
 

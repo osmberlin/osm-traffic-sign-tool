@@ -2,9 +2,8 @@
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
 import { useParamQ } from '@app/app/(signs)/_components/store/useParamQ.search'
 import { useParamQCountActions } from '@app/app/(signs)/_components/store/useParamQCount.zustand'
-import { SignType } from '@osm-traffic-signs/converter'
+import { filterSignsByFocus, SignType } from '@osm-traffic-signs/converter'
 import { useEffect, useMemo } from 'react'
-import { filterSignsByFocus } from './focusFilter'
 import { SignGrid } from './SignGrid'
 
 type Props = { trafficSignData: SignType[] }

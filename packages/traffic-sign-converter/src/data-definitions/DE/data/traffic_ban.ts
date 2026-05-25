@@ -14,7 +14,7 @@ export const _traffic_ban: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'highlight',
+      focus: { default: 'highlight' },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -38,7 +38,7 @@ export const _traffic_ban: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'highlight',
+      focus: { default: 'highlight' },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -106,9 +106,8 @@ export const _traffic_ban: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'highlight',
+      focus: { default: 'highlight' },
       signCategory: 'traffic_sign',
-      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -248,7 +247,6 @@ export const _traffic_ban: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
-      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -465,7 +463,7 @@ export const _traffic_ban: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
-      visibility: 'search_only',
+      focus: { all: true },
     },
     image: {
       kind: 'remote',

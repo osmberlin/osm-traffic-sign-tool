@@ -124,7 +124,7 @@ export const trafficSignDataDE: SignType[] = [
     ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'object_sign',
     },
     image: {
@@ -147,7 +147,7 @@ export const trafficSignDataDE: SignType[] = [
     compatibility: { canReceiveModifiers: false },
     comments: [{ comment: 'Wird als Punkt auf der Straße erfasst.' }],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -167,7 +167,7 @@ export const trafficSignDataDE: SignType[] = [
     tagRecommendations: {},
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'object_sign',
     },
     image: {
@@ -187,7 +187,7 @@ export const trafficSignDataDE: SignType[] = [
     tagRecommendations: {},
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'object_sign',
     },
     image: {
@@ -212,7 +212,7 @@ export const trafficSignDataDE: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -237,9 +237,8 @@ export const trafficSignDataDE: SignType[] = [
     ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'traffic_sign',
-      focus: ['bike_foot'],
+      focus: { bike_foot: true },
     },
     image: {
       kind: 'remote',
@@ -264,9 +263,8 @@ export const trafficSignDataDE: SignType[] = [
     ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'traffic_sign',
-      focus: ['bike_foot'],
+      focus: { bike_foot: true },
     },
     image: {
       kind: 'remote',
@@ -290,9 +288,8 @@ export const trafficSignDataDE: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'traffic_sign',
-      focus: ['bike_foot'],
+      focus: { bike_foot: true },
     },
     image: {
       kind: 'remote',
@@ -317,7 +314,7 @@ export const trafficSignDataDE: SignType[] = [
     ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -342,7 +339,7 @@ export const trafficSignDataDE: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -376,7 +373,7 @@ export const trafficSignDataDE: SignType[] = [
     compatibility: { canReceiveModifiers: false },
     // TODO: foward/backward case https://wiki.openstreetmap.org/wiki/DE:Key:priority_road
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -404,7 +401,7 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -445,7 +442,7 @@ export const trafficSignDataDE: SignType[] = [
     ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -472,9 +469,8 @@ export const trafficSignDataDE: SignType[] = [
     },
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'traffic_sign',
-      focus: ['highway'],
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -494,7 +490,7 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'object_sign',
     },
     image: {
@@ -515,7 +511,7 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -538,9 +534,8 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'traffic_sign',
-      focus: ['parking'],
+      focus: { parking: true },
     },
     image: {
       kind: 'remote',
@@ -560,9 +555,8 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'traffic_sign',
-      focus: ['parking'],
+      focus: { parking: true },
     },
     image: {
       kind: 'remote',
@@ -584,9 +578,8 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'traffic_sign',
-      focus: ['highway', 'parking'],
+      focus: { highway: true, parking: true },
     },
     image: {
       kind: 'remote',
@@ -605,9 +598,8 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'traffic_sign',
-      focus: ['highway'],
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -628,7 +620,7 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -657,7 +649,7 @@ export const trafficSignDataDE: SignType[] = [
     ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'traffic_sign',
     },
     image: {
@@ -679,9 +671,8 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'signpost',
-      focus: ['highway'],
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -701,9 +692,8 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'signpost',
-      focus: ['highway'],
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -723,9 +713,8 @@ export const trafficSignDataDE: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
       signCategory: 'signpost',
-      focus: ['highway'],
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',

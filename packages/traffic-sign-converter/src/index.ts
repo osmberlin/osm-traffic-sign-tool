@@ -15,8 +15,31 @@ export * from './data-definitions/countryDefinitions.js'
 export type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
 export * from './data-definitions/namedTrafficSignValues.js'
 export type * from './data-definitions/TrafficSignDataTypes.js'
-export { focusAreas, signFocusTags } from './data-definitions/TrafficSignDataTypes.js'
-export type { FocusArea, SignFocusTag } from './data-definitions/TrafficSignDataTypes.js'
+export {
+  activeCatalogueFocusView,
+  filterSignsByFocus,
+  focusLevel,
+  isAlleOnlySign,
+  isAllFocus,
+  isDefaultFocus,
+  isHighlightedInView,
+  isInCatalogueView,
+  matchesFocusFilter,
+  thematicFocuses,
+} from './data-definitions/catalogueFocus.js'
+export {
+  focusAreas,
+  signFocusTags,
+  catalogueFocusViews,
+} from './data-definitions/TrafficSignDataTypes.js'
+export type {
+  CatalogueFocus,
+  CatalogueFocusLevel,
+  CatalogueFocusView,
+  FocusArea,
+  SignFocusTag,
+  ValuePrompt,
+} from './data-definitions/TrafficSignDataTypes.js'
 export {
   getValuePromptInputAttributes,
   isOpeningHoursValuePromptFormat,

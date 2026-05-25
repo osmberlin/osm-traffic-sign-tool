@@ -10,7 +10,7 @@ export const _modifiers_direction_additions: SignType[] = [
     kind: 'condition_modifier',
     tagRecommendations: {},
     comments: [],
-    catalogue: { signCategory: 'direction_modifier', visibility: 'search_only' },
+    catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -27,7 +27,7 @@ export const _modifiers_direction_additions: SignType[] = [
     kind: 'condition_modifier',
     tagRecommendations: {},
     comments: [],
-    catalogue: { signCategory: 'direction_modifier', visibility: 'search_only' },
+    catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -44,7 +44,7 @@ export const _modifiers_direction_additions: SignType[] = [
     kind: 'condition_modifier',
     tagRecommendations: {},
     comments: [],
-    catalogue: { signCategory: 'direction_modifier', visibility: 'search_only' },
+    catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -61,7 +61,7 @@ export const _modifiers_direction_additions: SignType[] = [
     kind: 'condition_modifier',
     tagRecommendations: {},
     comments: [],
-    catalogue: { signCategory: 'direction_modifier', visibility: 'search_only' },
+    catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -78,7 +78,7 @@ export const _modifiers_direction_additions: SignType[] = [
     kind: 'condition_modifier',
     tagRecommendations: {},
     comments: [],
-    catalogue: { signCategory: 'direction_modifier', visibility: 'search_only' },
+    catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -95,7 +95,7 @@ export const _modifiers_direction_additions: SignType[] = [
     kind: 'condition_modifier',
     tagRecommendations: {},
     comments: [],
-    catalogue: { signCategory: 'direction_modifier', visibility: 'search_only' },
+    catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -112,7 +112,7 @@ export const _modifiers_direction_additions: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendations: {},
     comments: [],
-    catalogue: { signCategory: 'exception_modifier', visibility: 'search_only' },
+    catalogue: { signCategory: 'exception_modifier', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -129,7 +129,7 @@ export const _modifiers_direction_additions: SignType[] = [
     kind: 'condition_modifier',
     tagRecommendations: {},
     comments: [],
-    catalogue: { signCategory: 'condition_modifier', visibility: 'search_only' },
+    catalogue: { signCategory: 'condition_modifier', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:

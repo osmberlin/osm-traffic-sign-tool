@@ -1,4 +1,9 @@
 import type { Prettify } from '../types/types.js'
+import type {
+  NumericValuePromptFormat,
+  OpeningHoursValuePromptFormat,
+  ValuePromptFormat,
+} from './valuePromptFormats.js'
 
 export type RedirectMapping = { from: string; to: string }
 
@@ -36,7 +41,7 @@ export type TrafficSignType = SharedId &
     kind: 'traffic_sign'
     // maxspeed, maxweight
     signValue?: number
-    valuePrompt?: ValuePrompt<'integer' | 'float'>
+    valuePrompt?: ValuePrompt<NumericValuePromptFormat>
     tagRecommendations: {
       highwayValues?: string[]
       accessTags?: { key: string; value: string }[]
@@ -68,9 +73,8 @@ export type ModifierSignType = Prettify<
       kind: 'exception_modifier' | 'condition_modifier'
       signValue?: string | number
       valuePrompt?:
-        | ValuePrompt<'integer' | 'float'>
-        | ValuePrompt<'opening_hours'>
-        | ValuePrompt<'time_restriction'>
+        | ValuePrompt<NumericValuePromptFormat>
+        | ValuePrompt<OpeningHoursValuePromptFormat>
       tagRecommendations: {
         highwayValues?: string[]
         accessTags?: { key: string; value: string }[]
@@ -106,18 +110,28 @@ type SharedCompatibility = {
 export const signFocusTags = ['bike_foot', 'parking', 'highway'] as const
 export type SignFocusTag = (typeof signFocusTags)[number]
 
+export const catalogueFocusViews = ['default', ...signFocusTags] as const
+export type CatalogueFocusView = (typeof catalogueFocusViews)[number]
+
+/** Listed in tab. `'highlight'` = listed + featured ("Häufig verwendet") in that tab. */
+export type CatalogueFocusLevel = true | 'highlight'
+
+/** Per-view catalogue contract. Omit = Standard only (`default: true`, not featured). */
+export type CatalogueFocus = Partial<Record<CatalogueFocusView, CatalogueFocusLevel>> & {
+  /** Only in Alle tab (no Standard / thematic). */
+  all?: true
+}
+
 export const focusAreas = ['default', ...signFocusTags, 'all'] as const
 export type FocusArea = (typeof focusAreas)[number]
 
 type SharedCatalogue<T> = {
   catalogue: {
-    visibility?: 'highlight' | 'search_only'
     signCategory: T
-    /** Thematic filters (Fuß/Rad, Parkraum, Straßenraum). Omit when not in any focus. */
-    focus?: SignFocusTag[]
+    focus?: CatalogueFocus
   }
 }
-type ValuePrompt<T> = {
+export type ValuePrompt<T extends ValuePromptFormat = ValuePromptFormat> = {
   prompt: string
   defaultValue: string
   format: T

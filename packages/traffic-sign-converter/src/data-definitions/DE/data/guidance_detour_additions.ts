@@ -11,7 +11,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -29,7 +29,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -47,7 +47,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: { kind: 'local', sourceLocalPath: 'local-svgs/DE/350-40.svg', licence: 'Public Domain' },
   },
   {
@@ -60,7 +60,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -78,7 +78,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -98,7 +98,7 @@ export const _guidance_detour_additions: SignType[] = [
     },
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -116,7 +116,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -134,7 +134,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -152,7 +152,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -170,7 +170,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -188,7 +188,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -206,7 +206,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -224,7 +224,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -242,7 +242,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: { kind: 'local', sourceLocalPath: 'local-svgs/DE/460-21.svg', licence: 'Public Domain' },
   },
   {
@@ -255,7 +255,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -273,7 +273,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -291,7 +291,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -309,7 +309,7 @@ export const _guidance_detour_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -330,7 +330,7 @@ export const _guidance_detour_additions: SignType[] = [
     },
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -351,7 +351,7 @@ export const _guidance_detour_additions: SignType[] = [
     },
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'signpost', visibility: 'search_only' },
+    catalogue: { signCategory: 'signpost', focus: { highway: true } },
     image: {
       kind: 'remote',
       sourceUrl:

@@ -16,7 +16,6 @@ export const _exceptions__thing_allowed: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
-      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -44,7 +43,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'highlight',
+      focus: { default: 'highlight' },
       signCategory: 'exception_modifier',
     },
     image: {
@@ -67,9 +66,8 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'highlight',
+      focus: { default: 'highlight' },
       signCategory: 'exception_modifier',
-      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -114,7 +112,6 @@ export const _exceptions__thing_allowed: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
-      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',
@@ -140,7 +137,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'highlight',
+      focus: { default: 'highlight' },
       signCategory: 'exception_modifier',
     },
     image: {
@@ -323,7 +320,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'highlight',
+      focus: { default: 'highlight' },
       signCategory: 'exception_modifier',
     },
     image: {
@@ -419,7 +416,7 @@ export const _exceptions__thing_allowed: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'highlight',
+      focus: { default: 'highlight' },
       signCategory: 'exception_modifier',
     },
     image: {
@@ -588,7 +585,6 @@ export const _exceptions__thing_allowed: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
-      focus: ['bike_foot'],
     },
     image: {
       kind: 'remote',

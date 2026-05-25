@@ -1,6 +1,10 @@
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
-import { SignType } from '@osm-traffic-signs/converter'
-import { filterSignsByFocus } from './signGroups/focusFilter'
+import {
+  activeCatalogueFocusView,
+  filterSignsByFocus,
+  isHighlightedInView,
+  SignType,
+} from '@osm-traffic-signs/converter'
 import { SearchSignInput } from './signGroups/SearchSignInput'
 import { SignGrid } from './signGroups/SignGrid'
 import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
@@ -15,37 +19,28 @@ const signGroupTranslations: Map<SignType['catalogue']['signCategory'], string> 
   ['speed', 'Geschwindigkeitsbeschränkungen'],
   ['hazard_sign', 'Gefahrenzeichen'],
   ['surface_sign', 'Straßenoberfläche'],
-  // ['object_sign', ''], // search only
-  // ['signpost', ''], // search only
+  ['object_sign', 'Objektmarkierungen'],
+  ['signpost', 'Wegweiser / Umleitung'],
 ])
 
 export const SignSelectionColumn = ({ trafficSignData }: Props) => {
   const { focuses } = useParamFocus()
 
-  // Data
   const displaySigns = filterSignsByFocus(trafficSignData, focuses)
-  const signsMostUsed = displaySigns.filter((sign) => sign.catalogue.visibility === 'highlight')
+  const activeView = activeCatalogueFocusView(focuses)
 
-  // Group data
+  const signsFeatured =
+    activeView === null ? [] : displaySigns.filter((sign) => isHighlightedInView(sign, activeView))
+
+  const featuredIds = new Set(signsFeatured.map((s) => s.osmValuePart))
+
   const groupedSigns: Map<SignType['catalogue']['signCategory'], SignType[]> = new Map([])
   displaySigns
-    .filter((sign) => sign.catalogue.visibility !== 'highlight')
+    .filter((sign) => !featuredIds.has(sign.osmValuePart))
     .forEach((sign) => {
       const category = sign.catalogue.signCategory
       groupedSigns.set(category, [...(groupedSigns.get(category) || []), sign])
     })
-
-  const uncategorizedAndSearchOnly = displaySigns.filter((sign) => {
-    return ![
-      ...signsMostUsed,
-      // all the grouped signs
-      ...Array.from(groupedSigns)
-        .map((line) => line[1])
-        .flat(),
-    ]
-      .map((s) => s.osmValuePart)
-      .includes(sign.osmValuePart)
-  })
 
   return (
     <>
@@ -58,15 +53,14 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
 
       <SignGridSearchQuery trafficSignData={trafficSignData} />
 
-      <SignGrid headline="Häufig verwendet" signs={signsMostUsed} />
+      {signsFeatured.length > 0 ? (
+        <SignGrid headline="Häufig verwendet" signs={signsFeatured} />
+      ) : null}
 
       {Array.from(signGroupTranslations).map(([category, headline]) => {
         const signs = groupedSigns.get(category)
         return signs?.length ? <SignGrid key={category} headline={headline} signs={signs} /> : null
       })}
-
-      {/* Lists all those `search only` signs */}
-      <SignGrid headline="Weitere" defaultOpen={false} signs={uncategorizedAndSearchOnly} />
     </>
   )
 }

@@ -13,7 +13,7 @@ export const _hazard: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -63,7 +63,7 @@ export const _hazard: SignType[] = [
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'hazard_sign',
-      visibility: 'search_only',
+      focus: { all: true },
     },
     image: {
       kind: 'remote',
@@ -85,7 +85,7 @@ export const _hazard: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
-      focus: ['bike_foot'],
+      focus: { bike_foot: true },
     },
     image: {
       kind: 'remote',
@@ -128,7 +128,7 @@ export const _hazard: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
-      visibility: 'search_only',
+      focus: { all: true },
     },
     image: {
       kind: 'remote',
@@ -172,7 +172,7 @@ export const _hazard: SignType[] = [
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -196,7 +196,7 @@ export const _hazard: SignType[] = [
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'hazard_sign',
-      visibility: 'search_only',
+      focus: { all: true },
     },
     image: {
       kind: 'remote',
@@ -220,7 +220,7 @@ export const _hazard: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -245,7 +245,7 @@ export const _hazard: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -277,7 +277,7 @@ export const _hazard: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -308,7 +308,7 @@ export const _hazard: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -339,7 +339,7 @@ export const _hazard: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -371,7 +371,7 @@ export const _hazard: SignType[] = [
       },
     ],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -476,7 +476,7 @@ export const _hazard: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {
@@ -582,7 +582,7 @@ export const _hazard: SignType[] = [
     },
     comments: [],
     catalogue: {
-      visibility: 'search_only',
+      focus: { all: true },
       signCategory: 'hazard_sign',
     },
     image: {

@@ -20,7 +20,6 @@ export const _overtaking: SignType[] = [
     ],
     catalogue: {
       signCategory: 'traffic_sign',
-      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -49,7 +48,6 @@ export const _overtaking: SignType[] = [
     ],
     catalogue: {
       signCategory: 'traffic_sign',
-      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -84,7 +82,6 @@ export const _overtaking: SignType[] = [
     ],
     catalogue: {
       signCategory: 'traffic_sign',
-      focus: ['highway'],
     },
     image: {
       kind: 'remote',

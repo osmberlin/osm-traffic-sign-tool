@@ -53,7 +53,6 @@ export const _surface: SignType[] = [
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',
-      focus: ['parking'],
     },
     image: {
       kind: 'remote',
@@ -76,7 +75,6 @@ export const _surface: SignType[] = [
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',
-      focus: ['parking'],
     },
     image: {
       kind: 'remote',

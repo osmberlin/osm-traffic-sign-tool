@@ -3,10 +3,7 @@ import type { SignType } from '../../TrafficSignDataTypes.js'
 const minspeedLaneComment =
   'Dieses Verkehrszeichen wird nur außerhalb geschlossener Ortschaften fahrstreifenbezogen, niemals aber auf dem rechten von mehreren Fahrstreifen, angeordnet. Die Geschwindigkeit pro Fahrstreifen wird bspw. mit `minspeed:lanes=80|50|` (siehe [Key:minspeed]) angegeben.'
 
-const createMinspeedStartSign = (
-  speed: number,
-  options?: { visibility?: 'search_only' },
-): SignType => ({
+const createMinspeedStartSign = (speed: number, options?: { thematicOnly?: true }): SignType => ({
   osmValuePart: `275-${speed}`,
   signId: `275-${speed}`,
   name: `Zeichen 275-${speed}`,
@@ -26,8 +23,7 @@ const createMinspeedStartSign = (
   ],
   catalogue: {
     signCategory: 'speed',
-    focus: ['highway'],
-    ...(options?.visibility ? { visibility: options.visibility } : {}),
+    ...(options?.thematicOnly ? { focus: { highway: true } } : {}),
   },
   image: {
     kind: 'local',
@@ -63,7 +59,6 @@ export const _speed_minspeed_start: SignType[] = [
     ],
     catalogue: {
       signCategory: 'speed',
-      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -72,17 +67,17 @@ export const _speed_minspeed_start: SignType[] = [
       licence: 'Public Domain',
     },
   },
-  createMinspeedStartSign(10, { visibility: 'search_only' }),
-  createMinspeedStartSign(20, { visibility: 'search_only' }),
+  createMinspeedStartSign(10, { thematicOnly: true }),
+  createMinspeedStartSign(20, { thematicOnly: true }),
   createMinspeedStartSign(30),
-  createMinspeedStartSign(40, { visibility: 'search_only' }),
+  createMinspeedStartSign(40, { thematicOnly: true }),
   createMinspeedStartSign(50),
-  createMinspeedStartSign(60, { visibility: 'search_only' }),
-  createMinspeedStartSign(70, { visibility: 'search_only' }),
+  createMinspeedStartSign(60, { thematicOnly: true }),
+  createMinspeedStartSign(70, { thematicOnly: true }),
   createMinspeedStartSign(80),
-  createMinspeedStartSign(90, { visibility: 'search_only' }),
-  createMinspeedStartSign(100, { visibility: 'search_only' }),
-  createMinspeedStartSign(110, { visibility: 'search_only' }),
-  createMinspeedStartSign(120, { visibility: 'search_only' }),
-  createMinspeedStartSign(130, { visibility: 'search_only' }),
+  createMinspeedStartSign(90, { thematicOnly: true }),
+  createMinspeedStartSign(100, { thematicOnly: true }),
+  createMinspeedStartSign(110, { thematicOnly: true }),
+  createMinspeedStartSign(120, { thematicOnly: true }),
+  createMinspeedStartSign(130, { thematicOnly: true }),
 ]

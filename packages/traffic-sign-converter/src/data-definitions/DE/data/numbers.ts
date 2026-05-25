@@ -17,7 +17,7 @@ export const _numbers: SignType[] = [
     tagRecommendations: {},
     catalogue: {
       signCategory: 'condition_modifier',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -42,7 +42,7 @@ export const _numbers: SignType[] = [
     tagRecommendations: {},
     catalogue: {
       signCategory: 'condition_modifier',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -67,7 +67,7 @@ export const _numbers: SignType[] = [
     tagRecommendations: {},
     catalogue: {
       signCategory: 'condition_modifier',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -92,7 +92,7 @@ export const _numbers: SignType[] = [
     tagRecommendations: {},
     catalogue: {
       signCategory: 'condition_modifier',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -117,7 +117,7 @@ export const _numbers: SignType[] = [
     tagRecommendations: {},
     catalogue: {
       signCategory: 'condition_modifier',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -142,7 +142,7 @@ export const _numbers: SignType[] = [
     tagRecommendations: {},
     catalogue: {
       signCategory: 'condition_modifier',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -167,7 +167,7 @@ export const _numbers: SignType[] = [
     tagRecommendations: {},
     catalogue: {
       signCategory: 'condition_modifier',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -192,7 +192,7 @@ export const _numbers: SignType[] = [
     tagRecommendations: {},
     catalogue: {
       signCategory: 'condition_modifier',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',

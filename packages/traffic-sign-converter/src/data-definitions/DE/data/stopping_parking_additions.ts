@@ -11,7 +11,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zeichen_283_-_Haltverbot,_StVO_1970.svg',
@@ -28,7 +28,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -46,7 +46,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -64,7 +64,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -82,7 +82,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -100,7 +100,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -118,7 +118,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -136,7 +136,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -154,7 +154,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: { kind: 'local', sourceLocalPath: 'local-svgs/DE/286-10.svg', licence: 'Public Domain' },
   },
   {
@@ -167,7 +167,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -185,7 +185,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -203,7 +203,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -221,7 +221,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -239,7 +239,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -257,7 +257,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -275,7 +275,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zeichen_314.svg',
@@ -292,7 +292,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zeichen_314.1.svg',
@@ -309,7 +309,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zeichen_314.2.svg',
@@ -326,7 +326,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -344,7 +344,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: { kind: 'local', sourceLocalPath: 'local-svgs/DE/314-20.svg', licence: 'Public Domain' },
   },
   {
@@ -357,7 +357,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -375,7 +375,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -393,7 +393,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -411,7 +411,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -429,7 +429,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -447,7 +447,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -465,7 +465,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -483,7 +483,7 @@ export const _stopping_parking_additions: SignType[] = [
     tagRecommendations: {},
     comments: [],
     compatibility: { canReceiveModifiers: false },
-    catalogue: { signCategory: 'traffic_sign', visibility: 'search_only' },
+    catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {
       kind: 'remote',
       sourceUrl:

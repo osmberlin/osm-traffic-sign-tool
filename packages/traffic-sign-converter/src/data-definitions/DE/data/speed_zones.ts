@@ -25,7 +25,6 @@ export const _speed_zones: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
-      focus: ['highway'],
     },
     image: {
       kind: 'remote',
@@ -53,7 +52,7 @@ export const _speed_zones: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -80,8 +79,7 @@ export const _speed_zones: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
-      focus: ['highway'],
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -108,8 +106,7 @@ export const _speed_zones: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
-      focus: ['highway'],
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'local',
@@ -136,8 +133,7 @@ export const _speed_zones: SignType[] = [
     comments: [],
     catalogue: {
       signCategory: 'speed',
-      focus: ['highway'],
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'local',
@@ -168,8 +164,7 @@ export const _speed_zones: SignType[] = [
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'speed',
-      focus: ['highway'],
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'remote',
@@ -194,8 +189,7 @@ export const _speed_zones: SignType[] = [
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'speed',
-      focus: ['highway'],
-      visibility: 'search_only',
+      focus: { highway: true },
     },
     image: {
       kind: 'local',
