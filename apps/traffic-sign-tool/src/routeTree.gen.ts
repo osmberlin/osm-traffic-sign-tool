@@ -10,11 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as DERouteImport } from './routes/DE'
-import { Route as DECheckSignCombinationsRouteImport } from './routes/DE.check-sign-combinations'
-import { Route as DESignsRouteImport } from './routes/DE.signs'
-import { Route as DETaginfoRouteImport } from './routes/DE.taginfo'
-import { Route as DEWikiRouteImport } from './routes/DE.wiki'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DEIndexRouteImport } from './routes/DE.index'
+import { Route as DEWikiRouteImport } from './routes/DE.wiki'
+import { Route as DETaginfoRouteImport } from './routes/DE.taginfo'
+import { Route as DESignsRouteImport } from './routes/DE.signs'
+import { Route as DECheckSignCombinationsRouteImport } from './routes/DE.check-sign-combinations'
 
 const DERoute = DERouteImport.update({
   id: '/DE',
@@ -25,6 +26,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const DEIndexRoute = DEIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DERoute,
 } as any)
 const DEWikiRoute = DEWikiRouteImport.update({
   id: '/wiki',
@@ -54,14 +60,15 @@ export interface FileRoutesByFullPath {
   '/DE/signs': typeof DESignsRoute
   '/DE/taginfo': typeof DETaginfoRoute
   '/DE/wiki': typeof DEWikiRoute
+  '/DE/': typeof DEIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/DE': typeof DERouteWithChildren
   '/DE/check-sign-combinations': typeof DECheckSignCombinationsRoute
   '/DE/signs': typeof DESignsRoute
   '/DE/taginfo': typeof DETaginfoRoute
   '/DE/wiki': typeof DEWikiRoute
+  '/DE': typeof DEIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,12 +78,26 @@ export interface FileRoutesById {
   '/DE/signs': typeof DESignsRoute
   '/DE/taginfo': typeof DETaginfoRoute
   '/DE/wiki': typeof DEWikiRoute
+  '/DE/': typeof DEIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/DE' | '/DE/check-sign-combinations' | '/DE/signs' | '/DE/taginfo' | '/DE/wiki'
+  fullPaths:
+    | '/'
+    | '/DE'
+    | '/DE/check-sign-combinations'
+    | '/DE/signs'
+    | '/DE/taginfo'
+    | '/DE/wiki'
+    | '/DE/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/DE' | '/DE/check-sign-combinations' | '/DE/signs' | '/DE/taginfo' | '/DE/wiki'
+  to:
+    | '/'
+    | '/DE/check-sign-combinations'
+    | '/DE/signs'
+    | '/DE/taginfo'
+    | '/DE/wiki'
+    | '/DE'
   id:
     | '__root__'
     | '/'
@@ -85,6 +106,7 @@ export interface FileRouteTypes {
     | '/DE/signs'
     | '/DE/taginfo'
     | '/DE/wiki'
+    | '/DE/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -107,6 +129,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/DE/': {
+      id: '/DE/'
+      path: '/'
+      fullPath: '/DE/'
+      preLoaderRoute: typeof DEIndexRouteImport
+      parentRoute: typeof DERoute
     }
     '/DE/wiki': {
       id: '/DE/wiki'
@@ -144,6 +173,7 @@ interface DERouteChildren {
   DESignsRoute: typeof DESignsRoute
   DETaginfoRoute: typeof DETaginfoRoute
   DEWikiRoute: typeof DEWikiRoute
+  DEIndexRoute: typeof DEIndexRoute
 }
 
 const DERouteChildren: DERouteChildren = {
@@ -151,6 +181,7 @@ const DERouteChildren: DERouteChildren = {
   DESignsRoute: DESignsRoute,
   DETaginfoRoute: DETaginfoRoute,
   DEWikiRoute: DEWikiRoute,
+  DEIndexRoute: DEIndexRoute,
 }
 
 const DERouteWithChildren = DERoute._addFileChildren(DERouteChildren)

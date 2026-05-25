@@ -1,7 +1,15 @@
 'use client'
-import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { Link } from '@tanstack/react-router'
+import { isDev } from '../utils/isDev'
 import { ExternalLink } from '../links/ExternalLink'
+
+const footerLinkClassName =
+  'text-center text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-100'
+
+const footerLinkActiveProps = {
+  className: 'font-bold cursor-auto hover:no-underline decoration-transparent',
+  onClick: (event: React.MouseEvent<HTMLAnchorElement>) => event.preventDefault(),
+} as const
 
 const navigation = [
   {
@@ -18,9 +26,24 @@ const navigation = [
   },
 ]
 
-export const Footer = () => {
-  const { countryPrefix } = useCountryPrefix()
+const baseInternalNavigation = [
+  { name: 'Compare with taginfo', to: '/DE/taginfo' as const },
+  { name: 'Compare with wiki', to: '/DE/wiki' as const },
+  { name: 'All signs', to: '/DE/signs' as const, active: true },
+] as const
 
+export const Footer = () => {
+  const internalNavigation = [
+    ...baseInternalNavigation,
+    ...(isDev
+      ? [
+          {
+            name: 'DEV ONLY: Check sign combinations',
+            to: '/DE/check-sign-combinations' as const,
+          },
+        ]
+      : []),
+  ]
   return (
     <footer className="mx-auto mt-20 max-w-6xl px-4 py-12 sm:px-6 md:mt-0 lg:px-8">
       <p className="mb-8 text-center text-base text-stone-400">
@@ -38,49 +61,41 @@ export const Footer = () => {
           osmtools.de/traffic_signs
         </ExternalLink>
       </p>
-      <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-        {navigation.map((item) => {
-          return (
-            <div key={item.href} className="px-5 py-2">
-              <ExternalLink
-                href={item.href}
-                className="text-center text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
-                blank
-              >
-                {item.name}
-              </ExternalLink>
-            </div>
-          )
-        })}
+      <nav className="flex flex-col items-center gap-4" aria-label="Footer">
+        <div className="-mx-5 -my-2 flex flex-wrap justify-center">
+          {navigation.map((item) => {
+            return (
+              <div key={item.href} className="px-5 py-2">
+                <ExternalLink href={item.href} className={footerLinkClassName} blank>
+                  {item.name}
+                </ExternalLink>
+              </div>
+            )
+          })}
+        </div>
 
-        {countryPrefix && (
-          <div className="flex gap-10 px-5 py-2">
-            <Link
-              to={`/${countryPrefix}/taginfo`}
-              className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
-            >
-              Compare with taginfo
-            </Link>
-            <Link
-              to={`/${countryPrefix}/wiki`}
-              className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
-            >
-              Compare with wiki
-            </Link>
-            <Link
-              to={`/${countryPrefix}/signs`}
-              className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
-            >
-              Full sign list
-            </Link>
-            <Link
-              to={`/${countryPrefix}/check-sign-combinations`}
-              className="text-center text-base text-stone-300 underline decoration-stone-700 underline-offset-4 hover:text-stone-100"
-            >
-              Check sign combinations
-            </Link>
-          </div>
-        )}
+        <div className="-mx-5 -my-2 flex flex-wrap justify-center">
+          {internalNavigation.map((item) => {
+            return (
+              <div key={item.to} className="px-5 py-2">
+                {'active' in item && item.active ? (
+                  <Link
+                    to={item.to}
+                    activeOptions={{ exact: true }}
+                    activeProps={footerLinkActiveProps}
+                    className={footerLinkClassName}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <Link to={item.to} className={footerLinkClassName}>
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            )
+          })}
+        </div>
       </nav>
     </footer>
   )
