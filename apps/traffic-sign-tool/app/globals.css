@@ -43,6 +43,3 @@
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-serif: 'Noto Serif', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 }
-
-@layer base {
-}

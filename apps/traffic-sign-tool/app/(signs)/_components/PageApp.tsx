@@ -7,8 +7,8 @@ import { PageProps } from './types'
 export const PageApp = ({ countryPrefix, trafficSignData }: PageProps) => {
   return (
     <CountryPrefixProvider countryPrefix={countryPrefix}>
-      <article className="flex flex-col gap-4 md:flex-row">
-        <section className="relative rounded-sm bg-stone-300 px-6 py-4">
+      <article className="flex w-full flex-col gap-4 md:flex-row">
+        <section className="relative min-w-0 flex-1 rounded-sm bg-stone-300 px-6 py-4">
           <SignSelectionColumn trafficSignData={trafficSignData} />
         </section>
         <section className="relative flex-none rounded-sm bg-stone-300 py-4 md:w-60">
