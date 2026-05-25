@@ -33,6 +33,9 @@ export const trafficSignDataDE: SignType[] = [
   ..._surface,
   ..._hazard,
   ..._numbers,
+  ..._modifiers_direction_additions,
+  ..._stopping_parking_additions,
+  ..._guidance_detour_additions,
 
   // MISC SIGNS that are not grouped yet
   {

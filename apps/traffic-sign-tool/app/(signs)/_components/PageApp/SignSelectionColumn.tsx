@@ -9,6 +9,7 @@ const signGroupTranslations: Map<SignType['catalogue']['signCategory'], string> 
   ['traffic_sign', 'Verkehrszeichen'],
   ['exception_modifier', 'Zusatzzeichen'],
   ['condition_modifier', 'Zusatzzeichen Einschränkungen'],
+  ['direction_modifier', 'Pfeile'],
   ['speed', 'Geschwindigkeitsbeschränkungen'],
   ['hazard_sign', 'Gefahrenzeichen'],
   ['surface_sign', 'Straßenoberfläche'],

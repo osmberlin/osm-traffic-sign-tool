@@ -81,7 +81,7 @@ export type ModifierSignType = Prettify<
     } & SharedComments &
     SharedQuestions &
     SharedCompatibility &
-    SharedCatalogue<'exception_modifier' | 'condition_modifier'> &
+    SharedCatalogue<'exception_modifier' | 'condition_modifier' | 'direction_modifier'> &
     SharedIdentifiyingTags &
     SharedImage
 >

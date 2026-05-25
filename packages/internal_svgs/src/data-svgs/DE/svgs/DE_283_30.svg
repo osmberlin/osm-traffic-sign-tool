@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 912.466 912.466" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 283-30 - Absolutes Haltverbot – Mitte (rechts)</title>
+  <defs>
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h730v730H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)" transform="matrix(1.25 0 0 -1.25 0 912.5)">
+    <path d="M729.254 365.004C729.254 163.848 566.152.746 364.996.746 163.82.746.734 163.848.734 365.004c0 201.176 163.086 364.262 364.262 364.262 201.156 0 364.258-163.086 364.258-364.262" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <path d="M1.453 365.004c0 200.461 163.082 363.543 363.543 363.543S728.52 565.465 728.52 365.004 565.457 1.48 364.996 1.48 1.453 164.543 1.453 365.004m-1.453 0C0 163.754 163.727.027 364.996.027c201.25 0 364.977 163.727 364.977 364.977S566.246 730 364.996 730C163.727 730 0 566.254 0 365.004" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  </g>
+  <path d="M711.727 364.977c0-191.5-155.231-346.731-346.731-346.731-191.504 0-346.75 155.231-346.75 346.731 0 191.504 155.246 346.73 346.75 346.73 191.5 0 346.731-155.226 346.731-346.73" style="fill:#c1121c;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.25 0 0 -1.25 0 912.466)"/>
+  <path d="M364.996 416.59 211.992 569.594c90.723 67.84 215.27 67.84 306.008 0M313.363 364.977l-152.984-153c-67.836 90.718-67.836 215.285 0 306.004M364.996 313.363 518 160.359c-90.738-67.835-215.285-67.835-306.008 0M416.609 364.977l152.985 153.004c67.855-90.719 67.855-215.286 0-306.004" style="fill:#154889;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.25 0 0 -1.25 0 912.466)"/>
+  <path d="m269.145 547.465 54.738 54.762h30.426l-42.582-42.582h149.121v-24.336H311.727l42.582-42.582h-30.426M460.848 182.488l-54.758-54.757h-30.406l42.562 42.601H269.145v24.317h149.101l-42.562 42.582h30.406" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.25 0 0 -1.25 0 912.466)"/>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 421.025 630.723" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 315-57 - Parken halb auf Gehwegen in Fahrtrichtung rechts (Ende)</title>
+  <defs>
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M82.418 504.579H337v-505H82.418z"/>
+    </clipPath>
+    <clipPath id="b" clipPathUnits="userSpaceOnUse">
+      <path d="M82 0h255v505H82z"/>
+    </clipPath>
+    <clipPath id="c" clipPathUnits="userSpaceOnUse">
+      <path d="M82.418 505H337V0H82.418z"/>
+    </clipPath>
+    <clipPath id="d" clipPathUnits="userSpaceOnUse">
+      <path d="M83 0h254v505H83z"/>
+    </clipPath>
+    <clipPath id="e" clipPathUnits="userSpaceOnUse">
+      <path d="M83.051 504.332H337V0H83.051z"/>
+    </clipPath>
+    <clipPath id="f" clipPathUnits="userSpaceOnUse">
+      <path d="M146 279h128v73H146z"/>
+    </clipPath>
+    <clipPath id="g" clipPathUnits="userSpaceOnUse">
+      <path d="M146.418 352h127v-73h-127z"/>
+    </clipPath>
+    <clipPath id="h" clipPathUnits="userSpaceOnUse">
+      <path d="M146 279h127v73H146z"/>
+    </clipPath>
+  </defs>
+  <path d="M23.035.399H314.23c22.301 0 22.192 18.187 22.192 18.187v467.641s.144 17.949-19.176 17.949H20.207S.441 504.504.398 484.434V20.383C.398.352 23.035.399 23.035.399" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(1.25 0 0 -1.25 0 630.723)"/>
+  <path d="M19.648 9.305H317.27s10.828.027 10.828 10.953v464.926s-.008 10.73-11.981 10.73H20.805s-11.895 0-11.895-10.726V19.575c.039-10.379 10.738-10.27 10.738-10.27" style="fill:#154889;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(1.25 0 0 -1.25 0 630.723)"/>
+  <path d="M20.207 504.579c-.008 0-5.023.085-10.062-2.387C5.098 499.715.02 494.602 0 484.438V20.383C0 10.219 5.805 5.047 11.555 2.512 17.305-.019 23.035 0 23.035 0H314.23c11.258 0 16.977 4.637 19.801 9.286 2.821 4.648 2.789 9.296 2.789 9.296v467.645c0 .004.039 4.578-2.39 9.164s-7.399 9.188-17.184 9.188zm0-.403h297.039c19.32 0 19.176-17.949 19.176-17.949V18.582S336.531.399 314.23.399H23.035S.398.352.398 20.379v464.055c.043 20.07 19.809 19.742 19.809 19.742" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(1.25 0 0 -1.25 0 630.723)"/>
+  <path d="M91.652 377.547h42.77c16.039 0 29.789 12.985 29.789 29.785 0 16.039-13.75 29.024-29.789 29.024h-42.77zm-27.496-98.523v183.301h71.793c30.551 0 55.754-24.442 55.754-54.993 0-31.312-25.203-55.753-55.754-55.753H91.652v-72.555M216.203 215.547a11.48 11.48 0 0 0 10.18-6.113l21.312-40.281a41.8 41.8 0 0 1 5.45-7.93l3.027-3.449a13.8 13.8 0 0 0 3.387-8.055l2.269-29.789c.477-6.312-4.254-11.84-10.594-12.312L81.652 94.668c-6.336-.484-11.863 4.262-12.34 10.586l-2.269 29.801a13.83 13.83 0 0 0 2.121 8.453l2.473 3.875a41.3 41.3 0 0 1 4.195 8.656l14.957 43.04a11.44 11.44 0 0 0 9.953 7.687l114.61 8.746q.428.035.851.035m-2.07-11.707a5 5 0 0 1-.676 0l-109.043-8.312a4.59 4.59 0 0 1-4.004-3.078l-12.992-37.411 148.973 11.368-18.524 35.007a4.62 4.62 0 0 1-3.734 2.426m37.457-100.816 1.926-25.211c.296-3.797-2.551-7.121-6.352-7.399l-13.75-1.039c-3.797-.296-7.105 2.551-7.402 6.336l-1.922 25.203zM109.504 92.18l1.926-25.207a6.896 6.896 0 0 0-6.364-7.387l-13.738-1.05c-3.808-.309-7.121 2.55-7.414 6.347l-1.91 25.211zm185-22.832V42.254h-252v16.254h138.187v10.84z" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(1.25 0 0 -1.25 0 630.723)"/>
+  <g clip-path="url(#a)" transform="matrix(1.25 0 0 -1.25 0 630.723)">
+    <g clip-path="url(#b)" transform="translate(0 -.421)">
+      <g clip-path="url(#c)">
+        <g clip-path="url(#d)">
+          <g clip-path="url(#e)">
+            <g clip-path="url(#f)">
+              <g clip-path="url(#g)">
+                <g clip-path="url(#h)">
+                  <path d="m272.641 315.57-35.957 35.946h-19.965l27.961-27.957h-97.903v-15.973h97.903l-27.961-27.957h19.965" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,5 +1,40 @@
 import type { SignType } from '../../TrafficSignDataTypes.js'
 
+const minspeedLaneComment =
+  'Dieses Verkehrszeichen wird nur außerhalb geschlossener Ortschaften fahrstreifenbezogen, niemals aber auf dem rechten von mehreren Fahrstreifen, angeordnet. Die Geschwindigkeit pro Fahrstreifen wird bspw. mit `minspeed:lanes=80|50|` (siehe [Key:minspeed]) angegeben.'
+
+const createMinspeedEndSign = (
+  speed: number,
+  options?: { visibility?: 'search_only' },
+): SignType => ({
+  osmValuePart: `279-${speed}`,
+  signId: `279-${speed}`,
+  name: `Zeichen 279-${speed}`,
+  descriptiveName: 'Ende der vorgeschriebenen Mindestgeschwindigkeit',
+  description: null,
+  kind: 'traffic_sign',
+  tagRecommendations: {
+    highwayValues: [],
+    uniqueTags: [{ key: 'source:minspeed', value: 'sign' }],
+    conditionalTags: [{ key: 'minspeed', value: `${speed}` }],
+  },
+  comments: [
+    {
+      tagReference: null,
+      comment: minspeedLaneComment,
+    },
+  ],
+  catalogue: {
+    signCategory: 'speed',
+    ...(options?.visibility ? { visibility: options.visibility } : {}),
+  },
+  image: {
+    kind: 'local',
+    sourceLocalPath: `local-svgs/DE/279-${speed}.svg`,
+    licence: 'Public Domain',
+  },
+})
+
 export const _speed_minspeed_end: SignType[] = [
   {
     osmValuePart: '279[47]',
@@ -22,8 +57,7 @@ export const _speed_minspeed_end: SignType[] = [
     comments: [
       {
         tagReference: null,
-        comment:
-          'Dieses Verkehrszeichen wird nur außerhalb geschlossener Ortschaften fahrstreifenbezogen, niemals aber auf dem rechten von mehreren Fahrstreifen, angeordnet. Die Geschwindigkeit pro Fahrstreifen wird bspw. mit `minspeed:lanes=80|50|` (siehe [Key:minspeed]) angegeben.',
+        comment: minspeedLaneComment,
       },
     ],
     catalogue: {
@@ -36,40 +70,17 @@ export const _speed_minspeed_end: SignType[] = [
       licence: 'Public Domain',
     },
   },
-  {
-    osmValuePart: '279-40',
-    signId: '279-40',
-    name: 'Zeichen 279-40',
-    descriptiveName: 'Ende der vorgeschriebenen Mindestgeschwindigkeit',
-    description: null,
-    kind: 'traffic_sign',
-    tagRecommendations: {},
-    comments: [],
-    catalogue: {
-      signCategory: 'speed',
-    },
-    image: {
-      kind: 'local',
-      sourceLocalPath: 'local-svgs/DE/279-40.svg',
-      licence: 'Public Domain',
-    },
-  },
-  {
-    osmValuePart: '279-80',
-    signId: '279-80',
-    name: 'Zeichen 279-80',
-    descriptiveName: 'Ende der vorgeschriebenen Mindestgeschwindigkeit',
-    description: null,
-    kind: 'traffic_sign',
-    tagRecommendations: {},
-    comments: [],
-    catalogue: {
-      signCategory: 'speed',
-    },
-    image: {
-      kind: 'local',
-      sourceLocalPath: 'local-svgs/DE/279-80.svg',
-      licence: 'Public Domain',
-    },
-  },
+  createMinspeedEndSign(10, { visibility: 'search_only' }),
+  createMinspeedEndSign(20, { visibility: 'search_only' }),
+  createMinspeedEndSign(30),
+  createMinspeedEndSign(40, { visibility: 'search_only' }),
+  createMinspeedEndSign(50),
+  createMinspeedEndSign(60, { visibility: 'search_only' }),
+  createMinspeedEndSign(70, { visibility: 'search_only' }),
+  createMinspeedEndSign(80, { visibility: 'search_only' }),
+  createMinspeedEndSign(90, { visibility: 'search_only' }),
+  createMinspeedEndSign(100, { visibility: 'search_only' }),
+  createMinspeedEndSign(110, { visibility: 'search_only' }),
+  createMinspeedEndSign(120, { visibility: 'search_only' }),
+  createMinspeedEndSign(130, { visibility: 'search_only' }),
 ]

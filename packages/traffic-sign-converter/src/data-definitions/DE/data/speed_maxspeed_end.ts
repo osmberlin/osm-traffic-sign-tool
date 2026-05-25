@@ -47,6 +47,25 @@ export const _speed_maxspeed_end: SignType[] = [
     },
   },
   {
+    osmValuePart: '278-5',
+    signId: '278-5',
+    name: 'Zeichen 278-5',
+    descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {},
+    comments: [],
+    catalogue: {
+      signCategory: 'speed',
+      visibility: 'search_only',
+    },
+    image: {
+      kind: 'local',
+      sourceLocalPath: 'local-svgs/DE/278-5.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '278-20',
     signId: '278-20',
     name: 'Zeichen 278-20',

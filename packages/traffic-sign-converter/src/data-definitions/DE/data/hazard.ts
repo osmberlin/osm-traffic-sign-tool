@@ -45,6 +45,34 @@ export const _hazard: SignType[] = [
     },
   },
   {
+    osmValuePart: '102',
+    signId: '102',
+    name: 'Zeichen 102',
+    descriptiveName: 'Kreuzung oder Einmündung mit Vorfahrt von rechts',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'yes' }],
+    },
+    comments: [
+      {
+        comment:
+          'Für dieses Verkehrszeichen scheint kein etablierter `hazard=*` ([Key:hazard]) vorzuliegen.',
+      },
+    ],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      signCategory: 'hazard_sign',
+      visibility: 'search_only',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_102_-_Kreuzung_oder_Einm%C3%BCndung_mit_Vorfahrt_von_rechts,_StVO_1970.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '138-10',
     signId: '138-10',
     name: 'Zeichen 138-10',
@@ -69,8 +97,8 @@ export const _hazard: SignType[] = [
     osmValuePart: '101-15',
     signId: '101-15',
     name: 'Zeichen 101-15',
-    descriptiveName: 'Steinschlag',
-    description: 'Aufstellung rechts',
+    descriptiveName: 'Steinschlag – Aufstellung rechts',
+    description: null,
     kind: 'traffic_sign',
     tagRecommendations: {
       uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }],
@@ -90,8 +118,8 @@ export const _hazard: SignType[] = [
     osmValuePart: '101-25',
     signId: '101-25',
     name: 'Zeichen 101-25',
-    descriptiveName: 'Steinschlag',
-    description: 'Aufstellung links',
+    descriptiveName: 'Steinschlag – Aufstellung links',
+    description: null,
     kind: 'traffic_sign',
     tagRecommendations: {
       uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }],
@@ -150,6 +178,29 @@ export const _hazard: SignType[] = [
       kind: 'remote',
       sourceUrl:
         'https://commons.wikimedia.org/wiki/File:Zeichen_103-10_-_Kurve_(links),_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '142-10',
+    signId: '142-10',
+    name: 'Zeichen 142-10',
+    descriptiveName: 'Wildwechsel – Aufstellung rechts',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendations: {
+      uniqueTags: [{ key: 'hazard', value: 'animal_crossing' }],
+    },
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      signCategory: 'hazard_sign',
+      visibility: 'search_only',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_142-10_-_Wildwechsel,_Aufstellung_rechts,_StVO_1992.svg',
       licence: 'Public Domain',
     },
   },
