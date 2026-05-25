@@ -1,5 +1,6 @@
 'use client'
 import { SignStateType } from '@osm-traffic-signs/converter'
+import clsx from 'clsx'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
 
 type Props = { sign: SignStateType }
@@ -22,7 +23,7 @@ export const SelectedSignImage = ({ sign }: Props) => {
       : false
 
   return (
-    <div className="mx-2 px-3">
+    <div className="px-1">
       {sign.recodgnizedSign ? (
         <div className="relative mx-auto max-w-24">
           <PackageSvgTrafficSign

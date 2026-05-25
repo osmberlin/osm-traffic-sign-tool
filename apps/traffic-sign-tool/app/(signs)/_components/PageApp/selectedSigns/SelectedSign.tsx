@@ -34,11 +34,11 @@ export const SelectedSign = ({ sign }: Props) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       style={{ boxShadow, y }}
-      className="group/sign flex h-full w-full items-start justify-start select-none"
+      className="group/sign flex h-full w-full min-w-0 items-start justify-start select-none"
       dragListener={false}
       dragControls={controls}
     >
-      <div className="flex flex-col">
+      <div className="flex shrink-0 flex-col">
         <button
           onPointerDown={(event) => controls.start(event)}
           onMouseOver={() => setMoveHover(true)}
@@ -69,11 +69,11 @@ export const SelectedSign = ({ sign }: Props) => {
         onMouseOut={() => setMoveHover(false)}
         onBlur={() => setMoveHover(false)}
         className={clsx(
-          'flex w-full flex-col items-center justify-center py-2',
+          'flex min-w-0 flex-1 flex-col items-center justify-center py-2',
           moveHover ? 'cursor-move bg-stone-100' : '',
         )}
       >
-        <div className="text-center leading-tight">
+        <div className="w-full min-w-0 text-center leading-tight">
           <SelectedSignImage sign={sign} />
 
           <SelectedSignValuePrompt sign={sign} />

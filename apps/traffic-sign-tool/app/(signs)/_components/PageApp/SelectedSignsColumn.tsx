@@ -21,7 +21,7 @@ export const SelectedSignsColumn = () => {
         axis="y"
         values={paramSignValueList}
         onReorder={updateParamSigns}
-        className="text-base"
+        className="w-full text-base"
       >
         {paramSignValueList.map((item) => {
           const sign = paramSigns.find((sign) => sign.osmValuePart === item)!

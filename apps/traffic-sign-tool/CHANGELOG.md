@@ -10,6 +10,7 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Add live syntax validation for conditional time inputs (`opening_hours` and `time_restriction` value prompts) using `opening_hours.js`, with localized fatal errors and soft warnings.
 - Refactor app routing/runtime from Next.js to TanStack Router SPA (Vite), including route migration, TanStack search-param handling with Zod validation, and static-hosting compatibility for GitHub Pages.
 - Refresh bundled DE sign data/SVGs from converter updates, including additional sign coverage (`274.1-20`, `350.1`, `350.2`) and redirect aliases (`241`, `242`, `325`).
 - Improve DE minspeed rendering reliability by consuming local SVG assets for missing `275-*` and `279-*` variants.

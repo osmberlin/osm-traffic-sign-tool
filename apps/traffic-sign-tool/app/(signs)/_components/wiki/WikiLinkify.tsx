@@ -1,4 +1,3 @@
-import { proseLightClass } from '@app/app/_components/layout/proseClasses'
 import { CountryPrefixType } from '@osm-traffic-signs/converter'
 import { micromark } from 'micromark'
 import { gfm, gfmHtml } from 'micromark-extension-gfm'

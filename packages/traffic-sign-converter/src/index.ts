@@ -17,6 +17,18 @@ export * from './data-definitions/namedTrafficSignValues.js'
 export type * from './data-definitions/TrafficSignDataTypes.js'
 export { focusAreas, signFocusTags } from './data-definitions/TrafficSignDataTypes.js'
 export type { FocusArea, SignFocusTag } from './data-definitions/TrafficSignDataTypes.js'
+export {
+  getValuePromptInputAttributes,
+  isOpeningHoursValuePromptFormat,
+  valuePromptFormats,
+  valuePromptInputFormats,
+} from './data-definitions/valuePromptFormats.js'
+export type {
+  NumericValuePromptFormat,
+  OpeningHoursValuePromptFormat,
+  ValuePromptFormat,
+  ValuePromptInputAttributes,
+} from './data-definitions/valuePromptFormats.js'
 
 // Data SVGs
 export { createSvgFilename } from './utils/createSvgFilename.js'
