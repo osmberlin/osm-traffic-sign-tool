@@ -4,6 +4,15 @@ import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
 
 type Props = { sign: SignStateType }
 
+const getBanderoleTextClass = (value: string) => {
+  const length = value.length
+  if (length <= 4) return 'text-4xl px-3'
+  if (length <= 8) return 'text-2xl px-2'
+  if (length <= 12) return 'text-lg px-2'
+  if (length <= 16) return 'text-base px-1.5'
+  return 'text-sm px-1'
+}
+
 export const SelectedSignImage = ({ sign }: Props) => {
   const showBanderole =
     'valuePrompt' in sign
@@ -23,7 +32,12 @@ export const SelectedSignImage = ({ sign }: Props) => {
 
           {showBanderole && (
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="font-condensed w-full -rotate-12 rounded-sm bg-amber-100/95 px-3 pt-1 text-center text-4xl font-normal text-amber-900 shadow-xs">
+              <div
+                className={clsx(
+                  'font-condensed w-full -rotate-12 rounded-sm bg-amber-100/95 pt-1 text-center font-normal text-amber-900 shadow-xs',
+                  getBanderoleTextClass(String(sign.signValue)),
+                )}
+              >
                 {sign.signValue}
               </div>
             </div>
