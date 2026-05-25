@@ -1,7 +1,9 @@
 'use client'
 import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { WikiLinkify } from '@app/app/(signs)/_components/wiki/WikiLinkify'
+import { inlineCodeClass, proseLightClass } from '@app/app/_components/layout/proseClasses'
 import { signsToComments, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
+import clsx from 'clsx'
 
 type Props = { value: string }
 
@@ -15,9 +17,9 @@ export const TagComments = ({ value }: Props) => {
     <div className="break-all">
       {Array.from(signsCommentsMap).map(([signKey, signComments]) => {
         return (
-          <div key={signKey} className="gap-2 px-2 font-serif">
+          <div key={signKey} className={clsx('gap-2 px-2 font-serif', proseLightClass)}>
             <h3 className="font-bold">
-              Zeichen <code>{signKey}</code>:
+              Zeichen <code className={inlineCodeClass}>{signKey}</code>:
             </h3>
             <ul className="space-y-2">
               {signComments.map(({ tagReference, important, comment }) => {
@@ -25,10 +27,10 @@ export const TagComments = ({ value }: Props) => {
                   <li key={comment} className={important ? 'text-amber-800' : ''}>
                     {tagReference && (
                       <p>
-                        <code>{tagReference}</code>
+                        <code className={inlineCodeClass}>{tagReference}</code>
                       </p>
                     )}
-                    <WikiLinkify text={comment} />
+                    <WikiLinkify text={comment} className={proseLightClass} />
                   </li>
                 )
               })}

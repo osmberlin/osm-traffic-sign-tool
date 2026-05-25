@@ -9,7 +9,7 @@ const RootLayout = () => {
   return (
     <div className="flex min-h-screen w-full flex-none flex-col items-center bg-stone-800 text-base text-slate-800">
       <Header />
-      <main className="w-full max-w-6xl px-2 md:mx-0 xl:mx-0">
+      <main className="w-full min-w-0 overflow-x-hidden">
         <Outlet />
       </main>
       <Footer />

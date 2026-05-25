@@ -1,5 +1,5 @@
-import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { defaultLang } from '@app/src/features/routing/lang'
+import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { createFileRoute, redirect } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({

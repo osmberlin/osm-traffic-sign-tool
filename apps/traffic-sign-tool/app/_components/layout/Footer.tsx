@@ -1,8 +1,8 @@
 'use client'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Link } from '@tanstack/react-router'
-import { isDev } from '../utils/isDev'
 import { ExternalLink } from '../links/ExternalLink'
+import { isDev } from '../utils/isDev'
 
 const footerLinkClassName =
   'text-center text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-100'

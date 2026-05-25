@@ -1,3 +1,13 @@
+import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
+import {
+  ContentTable,
+  ContentTableBody,
+  ContentTableCell,
+  ContentTableHead,
+  ContentTableHeader,
+  ContentTableRow,
+} from '@app/app/_components/layout/ContentTable'
+import { inlineCodeClass, proseLightClass } from '@app/app/_components/layout/proseClasses'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { linkStyle } from '@app/app/_components/links/linkStyles'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
@@ -5,14 +15,6 @@ import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { taginfoTrafficSignData } from '@internal/taginfo'
 import { Link } from '@tanstack/react-router'
 import { z } from 'zod'
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '../../../_components/catalyst/table'
 import { WikiLinkListTrafficSignValues } from '../../_components/wiki/WikiLinkListTrafficSignValues'
 import { TagComments } from './_components/TagComments'
 import { TagRecommendations } from './_components/TagRecommendations'
@@ -25,48 +27,50 @@ export default function TaginfoPage() {
   const lang = useCurrentLang()
 
   return (
-    <article className="rounded-sm bg-stone-300 px-6 py-4">
+    <ContentPageLayout>
       <h2 className="my-4 text-3xl font-light text-black uppercase">
         Taginfo traffic sign values {data.length}
       </h2>
-      <p>
-        This page is to understand, debug and improve the traffic sign recommendation for traffic
-        signs that are actually used by mappers today. The taginfo is for Germany and updated
-        manually{' '}
-        <ExternalLink
-          href="https://github.com/osmberlin/osm-traffic-sign-tool/tree/main/data/taginfo"
-          blank
-        >
-          using this script.
-        </ExternalLink>{' '}
-        The data is the sum of values for <code>traffic_sign</code>,{' '}
-        <code>traffic_sign:forward</code>, <code>traffic_sign:backward</code>.
-      </p>
+      <div className={proseLightClass}>
+        <p>
+          This page is to understand, debug and improve the traffic sign recommendation for traffic
+          signs that are actually used by mappers today. The taginfo is for Germany and updated
+          manually{' '}
+          <ExternalLink
+            href="https://github.com/osmberlin/osm-traffic-sign-tool/tree/main/data/taginfo"
+            blank
+          >
+            using this script.
+          </ExternalLink>{' '}
+          The data is the sum of values for <code>traffic_sign</code>,{' '}
+          <code>traffic_sign:forward</code>, <code>traffic_sign:backward</code>.
+        </p>
+      </div>
 
-      <Table className="mt-10">
-        <TableHead>
-          <TableRow>
-            <TableHeader>Sign key</TableHeader>
-            <TableHeader>Usage</TableHeader>
-            <TableHeader>Signs</TableHeader>
-            <TableHeader>Links</TableHeader>
-            <TableHeader>Tag recommendations, comments</TableHeader>
-          </TableRow>
-        </TableHead>
-        <TableBody>
+      <ContentTable>
+        <ContentTableHead>
+          <ContentTableRow>
+            <ContentTableHeader className="w-[14%]">Sign key</ContentTableHeader>
+            <ContentTableHeader className="w-[8%]">Usage</ContentTableHeader>
+            <ContentTableHeader className="w-[14%]">Signs</ContentTableHeader>
+            <ContentTableHeader className="w-[12%]">Links</ContentTableHeader>
+            <ContentTableHeader>Tag recommendations, comments</ContentTableHeader>
+          </ContentTableRow>
+        </ContentTableHead>
+        <ContentTableBody>
           {data.map(([value, usageCount]) => {
             return (
-              <TableRow key={value}>
-                <TableHeader className="w-40 break-all">
-                  <code>{value}</code>
-                </TableHeader>
-                <TableCell className="w-20 text-right whitespace-nowrap">
+              <ContentTableRow key={value}>
+                <ContentTableHeader>
+                  <code className={inlineCodeClass}>{value}</code>
+                </ContentTableHeader>
+                <ContentTableCell className="text-right">
                   {usageCount.toLocaleString()} &times;
-                </TableCell>
-                <TableCell className="w-60 text-sm">
+                </ContentTableCell>
+                <ContentTableCell className="text-sm">
                   <TagSignImages value={value} />
-                </TableCell>
-                <TableCell className="w-20 text-sm">
+                </ContentTableCell>
+                <ContentTableCell className="text-sm">
                   <Link
                     to="/$lang"
                     params={{ lang }}
@@ -81,17 +85,17 @@ export default function TaginfoPage() {
                     osmtools.de
                   </ExternalLink>
                   <WikiLinkListTrafficSignValues value={value} inline={false} />
-                </TableCell>
-                <TableCell className="max-w-20 text-sm">
+                </ContentTableCell>
+                <ContentTableCell className="text-sm">
                   <TagRecommendations value={value} />
                   <hr className="my-5" />
                   <TagComments value={value} />
-                </TableCell>
-              </TableRow>
+                </ContentTableCell>
+              </ContentTableRow>
             )
           })}
-        </TableBody>
-      </Table>
-    </article>
+        </ContentTableBody>
+      </ContentTable>
+    </ContentPageLayout>
   )
 }

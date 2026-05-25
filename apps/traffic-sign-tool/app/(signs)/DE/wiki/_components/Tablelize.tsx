@@ -1,53 +1,56 @@
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@app/app/_components/catalyst/table'
+  ContentTable,
+  ContentTableBody,
+  ContentTableCell,
+  ContentTableHead,
+  ContentTableHeader,
+  ContentTableRow,
+  contentPreClass,
+} from '@app/app/_components/layout/ContentTable'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import { WikiSign } from '../page'
 
+const isImageUrl = (value: string) => /^(https?:|data:image\/)/i.test(value)
+
 export const Tablelize = ({ data }: { data: Partial<SignStateType> | Partial<WikiSign> }) => {
   return (
-    <Table className="mt-5" dense>
-      <TableHead>
-        <TableRow>
-          <TableHeader>key</TableHeader>
-          <TableHeader>value</TableHeader>
-        </TableRow>
-      </TableHead>
-      <TableBody>
+    <ContentTable className="mt-3">
+      <ContentTableHead>
+        <ContentTableRow>
+          <ContentTableHeader className="w-[30%]">key</ContentTableHeader>
+          <ContentTableHeader>value</ContentTableHeader>
+        </ContentTableRow>
+      </ContentTableHead>
+      <ContentTableBody>
         {Object.entries(data).map(([key, value]) => {
           if (!key) return null
           return (
-            <TableRow key={key}>
-              <TableCell className="w-40">
+            <ContentTableRow key={key}>
+              <ContentTableCell>
                 <strong>{key}</strong>
-              </TableCell>
-              <TableCell>
+              </ContentTableCell>
+              <ContentTableCell>
                 {typeof value === 'boolean' ? (
                   JSON.stringify(value)
                 ) : Array.isArray(value) || typeof value === 'object' ? (
-                  <pre className="text-xs leading-snug">
+                  <pre className={contentPreClass}>
                     <code>{JSON.stringify(value, undefined, 1)}</code>
                   </pre>
                 ) : key.toLocaleLowerCase().includes('url') ? (
-                  <ExternalLink href={value} blank>
-                    {value}
+                  <ExternalLink href={String(value)} blank>
+                    {String(value)}
                   </ExternalLink>
-                ) : key.toLocaleLowerCase().includes('svg') ? (
+                ) : isImageUrl(String(value)) ? (
                   <img src={String(value)} height={50} width={50} alt={key} />
                 ) : (
-                  value
+                  String(value)
                 )}
-              </TableCell>
-            </TableRow>
+              </ContentTableCell>
+            </ContentTableRow>
           )
         })}
-      </TableBody>
-    </Table>
+      </ContentTableBody>
+    </ContentTable>
   )
 }

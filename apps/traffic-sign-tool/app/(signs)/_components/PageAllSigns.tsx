@@ -1,11 +1,13 @@
+import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@app/app/_components/catalyst/table'
+  ContentTable,
+  ContentTableBody,
+  ContentTableCell,
+  ContentTableHead,
+  ContentTableHeader,
+  ContentTableRow,
+  contentPreClass,
+} from '@app/app/_components/layout/ContentTable'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { PackageSvgTrafficSign } from './PackageSvgTrafficSign'
 import { CountryPrefixProvider } from './store/CountryPrefixContext'
@@ -14,7 +16,7 @@ import { PageProps } from './types'
 export const PageAllApp = ({ countryPrefix, trafficSignData }: PageProps) => {
   return (
     <CountryPrefixProvider countryPrefix={countryPrefix}>
-      <article className="rounded-sm bg-stone-300 px-6 py-4">
+      <ContentPageLayout>
         <h2 className="my-4 text-3xl font-light text-black uppercase">
           Full sign list {trafficSignData.length}
         </h2>
@@ -26,33 +28,31 @@ export const PageAllApp = ({ countryPrefix, trafficSignData }: PageProps) => {
           .
         </p>
 
-        <Table className="mt-10">
-          <TableHead>
-            <TableRow>
-              <TableHeader>Sign key</TableHeader>
-              <TableHeader>Raw sign data</TableHeader>
-            </TableRow>
-          </TableHead>
-          <TableBody>
+        <ContentTable>
+          <ContentTableHead>
+            <ContentTableRow>
+              <ContentTableHeader className="w-[18%]">Sign key</ContentTableHeader>
+              <ContentTableHeader>Raw sign data</ContentTableHeader>
+            </ContentTableRow>
+          </ContentTableHead>
+          <ContentTableBody>
             {trafficSignData.map((sign) => {
               return (
-                <TableRow key={sign.osmValuePart}>
-                  <TableHeader className="space-y-3 text-center align-top">
+                <ContentTableRow key={sign.osmValuePart}>
+                  <ContentTableHeader className="space-y-3 text-center">
                     <code>{sign.osmValuePart}</code>
                     <br />
                     <PackageSvgTrafficSign sign={sign} className="inline-block h-auto w-20" />
-                  </TableHeader>
-                  <TableCell className="align-top">
-                    <pre className="w-full overflow-x-scroll leading-tight">
-                      {JSON.stringify(sign, undefined, 2)}
-                    </pre>
-                  </TableCell>
-                </TableRow>
+                  </ContentTableHeader>
+                  <ContentTableCell>
+                    <pre className={contentPreClass}>{JSON.stringify(sign, undefined, 2)}</pre>
+                  </ContentTableCell>
+                </ContentTableRow>
               )
             })}
-          </TableBody>
-        </Table>
-      </article>
+          </ContentTableBody>
+        </ContentTable>
+      </ContentPageLayout>
     </CountryPrefixProvider>
   )
 }

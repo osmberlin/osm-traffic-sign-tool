@@ -6,7 +6,11 @@ import { createFileRoute } from '@tanstack/react-router'
 function LangIndexRouteComponent() {
   const trafficSignData = Route.useLoaderData()
   const { countryPrefix } = Route.useRouteContext()
-  return <PageApp countryPrefix={countryPrefix} trafficSignData={trafficSignData} />
+  return (
+    <div className="mx-auto w-full min-w-0 max-w-6xl px-2">
+      <PageApp countryPrefix={countryPrefix} trafficSignData={trafficSignData} />
+    </div>
+  )
 }
 
 export const Route = createFileRoute('/$lang/')({

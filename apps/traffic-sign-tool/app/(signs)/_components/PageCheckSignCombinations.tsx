@@ -1,3 +1,4 @@
+import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
 import { trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 import { CheckCombinationTable } from './PageCheckSignCombinations/CheckCombinationTable'
 import { PageProps } from './types'
@@ -22,7 +23,7 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
     .flat()
 
   return (
-    <article className="rounded-sm bg-stone-300 px-6 py-4">
+    <ContentPageLayout>
       <h2 className="my-4 text-3xl font-light text-black uppercase">
         DEV ONLY: Check primary sign & modifier sign list combinations (
         {list.length.toLocaleString('de-DE')})
@@ -33,6 +34,6 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
       </p>
 
       <CheckCombinationTable list={list} />
-    </article>
+    </ContentPageLayout>
   )
 }

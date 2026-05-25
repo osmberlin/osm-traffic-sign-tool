@@ -1,12 +1,12 @@
 'use client'
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@app/app/_components/catalyst/table'
+  ContentTable,
+  ContentTableBody,
+  ContentTableCell,
+  ContentTableHead,
+  ContentTableHeader,
+  ContentTableRow,
+} from '@app/app/_components/layout/ContentTable'
 import {
   SignStateType,
   signsToTags,
@@ -61,16 +61,16 @@ export const CheckCombinationTable = ({ list }: Props) => {
 
   return (
     <form>
-      <Table className="mt-10">
-        <TableHead>
-          <TableRow>
-            <TableHeader>Sign</TableHeader>
-            <TableHeader>Image</TableHeader>
-            <TableHeader>Tags</TableHeader>
-            <TableHeader>Check</TableHeader>
-          </TableRow>
-        </TableHead>
-        <TableBody>
+      <ContentTable>
+        <ContentTableHead>
+          <ContentTableRow>
+            <ContentTableHeader className="w-[22%]">Sign</ContentTableHeader>
+            <ContentTableHeader className="w-[10%]">Image</ContentTableHeader>
+            <ContentTableHeader className="w-[28%]">Tags</ContentTableHeader>
+            <ContentTableHeader>Check</ContentTableHeader>
+          </ContentTableRow>
+        </ContentTableHead>
+        <ContentTableBody>
           {list.map((signs) => {
             const tagValue = signsToTrafficSignTagValue(signs, countryPrefix)
 
@@ -85,11 +85,11 @@ export const CheckCombinationTable = ({ list }: Props) => {
             const currentData = data.get(tagValue)
 
             return (
-              <TableRow key={tagValue}>
-                <TableHeader className="space-y-3 align-top">
+              <ContentTableRow key={tagValue}>
+                <ContentTableHeader className="space-y-3">
                   <code>{tagValue}</code>
-                </TableHeader>
-                <TableCell className="align-top">
+                </ContentTableHeader>
+                <ContentTableCell>
                   {signs
                     .filter((sign) => sign.recodgnizedSign === true)
                     .map((sign) => (
@@ -99,18 +99,17 @@ export const CheckCombinationTable = ({ list }: Props) => {
                         className="h-auto max-h-10 w-full max-w-10"
                       />
                     ))}
-                </TableCell>
-                <TableCell
+                </ContentTableCell>
+                <ContentTableCell
                   className={clsx(
-                    'align-top',
                     canReceiveThisModifier
                       ? ''
-                      : 'text-xs leading-snug text-gray-300 hover:text-gray-600',
+                      : 'text-xs leading-snug text-gray-500 hover:text-gray-700',
                   )}
                 >
                   <TagList tags={signsToTags(signs, countryPrefix)} />
-                </TableCell>
-                <TableCell className="align-top text-sm leading-snug">
+                </ContentTableCell>
+                <ContentTableCell className="text-sm leading-snug">
                   {allowFeedback && (
                     <>
                       <div className="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-4">
@@ -118,7 +117,6 @@ export const CheckCombinationTable = ({ list }: Props) => {
                           return (
                             <div key={option.key} className="flex items-center">
                               <input
-                                // defaultChecked={option.key === 'OK'}
                                 id={option.key}
                                 onChange={() => handleStatusChange(tagValue, option.key)}
                                 name={`feedback-${tagValue}`}
@@ -152,12 +150,12 @@ export const CheckCombinationTable = ({ list }: Props) => {
                       <small>Sign cannot be combined with this modifier signs</small>
                     </p>
                   )}
-                </TableCell>
-              </TableRow>
+                </ContentTableCell>
+              </ContentTableRow>
             )
           })}
-        </TableBody>
-      </Table>
+        </ContentTableBody>
+      </ContentTable>
       <h3 className="mt-6 text-lg">Output</h3>
       <textarea
         className="mt-2 w-full border bg-gray-200"

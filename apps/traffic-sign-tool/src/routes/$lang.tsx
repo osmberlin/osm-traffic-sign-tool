@@ -1,5 +1,5 @@
-import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { isSupportedLang } from '@app/src/features/routing/lang'
+import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { createFileRoute, notFound, Outlet, redirect } from '@tanstack/react-router'
 
 function LangLayoutComponent() {

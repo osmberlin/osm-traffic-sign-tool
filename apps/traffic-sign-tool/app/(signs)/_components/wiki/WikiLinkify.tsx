@@ -1,3 +1,4 @@
+import { proseLightClass } from '@app/app/_components/layout/proseClasses'
 import { CountryPrefixType } from '@osm-traffic-signs/converter'
 import { micromark } from 'micromark'
 import { gfm, gfmHtml } from 'micromark-extension-gfm'
@@ -6,6 +7,7 @@ import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
 
 type Props = {
   text: string
+  className?: string
 }
 
 /**
@@ -29,7 +31,7 @@ function preprocessOsmSyntax(text: string, countryPrefix: CountryPrefixType): st
     })
 }
 
-export const WikiLinkify = ({ text }: Props) => {
+export const WikiLinkify = ({ text, className = proseLightClass }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
 
   const html = useMemo(() => {
@@ -41,10 +43,5 @@ export const WikiLinkify = ({ text }: Props) => {
     })
   }, [text, countryPrefix])
 
-  return (
-    <span
-      dangerouslySetInnerHTML={{ __html: html }}
-      className="prose-code:bg-stone-700 prose-code:rounded prose-code:px-0.5 prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 prose-a:hover:decoration-stone-400 prose-a:hover:decoration-1"
-    />
-  )
+  return <span dangerouslySetInnerHTML={{ __html: html }} className={className} />
 }
