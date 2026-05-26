@@ -4,6 +4,7 @@ import { CopyButton } from '@app/app/_components/links/CopyButton'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import { signsToTags, toTag } from '@osm-traffic-signs/converter'
 import { useCountryPrefixWithFallback } from '../../store/CountryPrefixContext'
+import { ExplicitNoneTaggingNote } from './ResultTagRecommendations/ExplicitNoneTaggingNote'
 import { TagList } from './ResultTagRecommendations/TagList'
 
 export const ResultTagRecommendations = () => {
@@ -31,6 +32,8 @@ export const ResultTagRecommendations = () => {
           </div>
         )}
       </div>
+
+      <ExplicitNoneTaggingNote paramSigns={paramSigns} />
 
       <TagList tags={aggregatedTagsMap} className="-mx-2" />
     </>
