@@ -15,6 +15,7 @@ export const _speed_maxspeed_end: SignType[] = [
       format: 'integer',
     },
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -34,6 +35,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -54,6 +56,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -73,6 +76,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -93,6 +97,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -113,6 +118,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -133,6 +139,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -153,6 +160,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -173,6 +181,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -193,6 +202,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -213,6 +223,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -233,6 +244,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -253,6 +265,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -273,6 +286,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -293,6 +307,7 @@ export const _speed_maxspeed_end: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [],
     catalogue: {
       signCategory: 'speed',

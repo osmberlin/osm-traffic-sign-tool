@@ -10,11 +10,8 @@ const createMinspeedEndSign = (speed: number, options?: { thematicOnly?: true })
   descriptiveName: 'Ende der vorgeschriebenen Mindestgeschwindigkeit',
   description: null,
   kind: 'traffic_sign',
-  tagRecommendations: {
-    highwayValues: [],
-    uniqueTags: [{ key: 'source:minspeed', value: 'sign' }],
-    conditionalTags: [{ key: 'minspeed', value: `${speed}` }],
-  },
+  tagRecommendations: {},
+  taggingSuggestionsQa: 'explicit_none',
   comments: [
     {
       tagReference: null,
@@ -46,11 +43,8 @@ export const _speed_minspeed_end: SignType[] = [
       defaultValue: '47',
       format: 'integer',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:minspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'minspeed', value: '47' }],
-    },
+    tagRecommendations: {},
+    taggingSuggestionsQa: 'explicit_none',
     comments: [
       {
         tagReference: null,
