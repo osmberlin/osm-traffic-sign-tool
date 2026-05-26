@@ -12,6 +12,7 @@ export const Sign = ({ sign }: Props) => {
   const { paramSigns, toggleOsmValuePart } = useParamSigns()
 
   const active = paramSigns.map((s) => s.signId).includes(sign.signId)
+  const isSecondarySign = sign.kind !== 'traffic_sign'
 
   if ('recodgnizedSign' in sign && sign.recodgnizedSign === false) return null
 
@@ -44,7 +45,10 @@ export const Sign = ({ sign }: Props) => {
         <PackageSvgTrafficSign
           key={sign.osmValuePart}
           sign={sign}
-          className="pointer-events-none h-auto max-h-full w-full"
+          className={clsx(
+            'pointer-events-none h-auto max-h-full w-full',
+            isSecondarySign ? 'md:max-w-21 2xl:max-w-19' : '',
+          )}
         />
         {/* // <div>
           //   <code className="whitespace-nowrap tracking-tighter">
