@@ -1,7 +1,11 @@
+import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
+
 export const RouterPending = () => {
   return (
-    <output className="rounded-sm bg-stone-300 px-6 py-4 text-center text-sm text-stone-700">
-      Loading...
-    </output>
+    <ContentPageLayout>
+      <div className="flex min-h-[400px] w-full items-center justify-center">
+        <output className="text-center text-sm text-stone-700">Loading…</output>
+      </div>
+    </ContentPageLayout>
   )
 }
