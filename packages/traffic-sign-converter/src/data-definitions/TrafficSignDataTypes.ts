@@ -65,7 +65,8 @@ export type TrafficSignType = SharedId &
     'traffic_sign' | 'object_sign' | 'surface_sign' | 'hazard_sign' | 'signpost' | 'speed'
   > &
   SharedIdentifiyingTags &
-  SharedImage
+  SharedImage &
+  SharedTaggingSuggestionsQa
 
 export type ModifierSignType = Prettify<
   SharedId &
@@ -87,7 +88,8 @@ export type ModifierSignType = Prettify<
     SharedCompatibility &
     SharedCatalogue<'exception_modifier' | 'condition_modifier' | 'direction_modifier'> &
     SharedIdentifiyingTags &
-    SharedImage
+    SharedImage &
+    SharedTaggingSuggestionsQa
 >
 
 type SharedId = {
@@ -124,6 +126,14 @@ export type CatalogueFocus = Partial<Record<CatalogueFocusView, CatalogueFocusLe
 
 export const focusAreas = ['default', ...signFocusTags, 'all'] as const
 export type FocusArea = (typeof focusAreas)[number]
+
+export const taggingSuggestionsQaStatuses = ['explicit_none'] as const
+export type TaggingSuggestionsQaStatus = (typeof taggingSuggestionsQaStatuses)[number]
+
+type SharedTaggingSuggestionsQa = {
+  /** QA: empty `tagRecommendations` is intentional (not missing work). */
+  taggingSuggestionsQa?: TaggingSuggestionsQaStatus
+}
 
 type SharedCatalogue<T> = {
   catalogue: {

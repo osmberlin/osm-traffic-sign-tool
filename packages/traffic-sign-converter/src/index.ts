@@ -31,15 +31,29 @@ export {
   focusAreas,
   signFocusTags,
   catalogueFocusViews,
+  taggingSuggestionsQaStatuses,
 } from './data-definitions/TrafficSignDataTypes.js'
+export {
+  classifyTaggingSuggestionsQa,
+  countSignsByTaggingSuggestionsQa,
+  filterSignsByTaggingSuggestionsQa,
+  hasTagRecommendationsContent,
+  taggingSuggestionsQaFilters,
+} from './data-definitions/taggingSuggestionsQa.js'
 export type {
   CatalogueFocus,
   CatalogueFocusLevel,
   CatalogueFocusView,
   FocusArea,
   SignFocusTag,
+  TaggingSuggestionsQaStatus,
   ValuePrompt,
 } from './data-definitions/TrafficSignDataTypes.js'
+export type {
+  TaggingSuggestionsQaCategory,
+  TaggingSuggestionsQaCounts,
+  TaggingSuggestionsQaFilter,
+} from './data-definitions/taggingSuggestionsQa.js'
 export {
   getValuePromptInputAttributes,
   isOpeningHoursValuePromptFormat,

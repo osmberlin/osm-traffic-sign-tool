@@ -32,7 +32,7 @@ export const PageAllApp = ({ countryPrefix, trafficSignData }: PageProps) => {
           <ContentTableHead>
             <ContentTableRow>
               <ContentTableHeader className="w-[18%]">Sign key</ContentTableHeader>
-              <ContentTableHeader>Raw sign data</ContentTableHeader>
+              <ContentTableHeader>Raw sign config data</ContentTableHeader>
             </ContentTableRow>
           </ContentTableHead>
           <ContentTableBody>

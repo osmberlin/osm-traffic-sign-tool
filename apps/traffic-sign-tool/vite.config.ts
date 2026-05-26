@@ -10,7 +10,7 @@ const defaultBase = '/'
 export default defineConfig({
   base: process.env.VITE_BASE_PATH ?? defaultBase,
   plugins: [
-    TanStackRouterVite(),
+    TanStackRouterVite({ autoCodeSplitting: true }),
     reactCompilerOxc({ compilationMode: 'annotation', target: '19' }),
     react(),
     tailwindcss(),

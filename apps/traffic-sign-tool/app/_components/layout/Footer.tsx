@@ -30,6 +30,7 @@ const navigation = [
 const baseInternalNavigation = [
   { name: 'Compare with taginfo', to: '/$lang/taginfo' as const },
   { name: 'Compare with wiki', to: '/$lang/wiki' as const },
+  { name: 'Tagging QA', to: '/$lang/signs-qa' as const },
   { name: 'All signs', to: '/$lang/signs' as const, active: true },
 ] as const
 

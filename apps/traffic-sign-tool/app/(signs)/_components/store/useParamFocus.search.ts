@@ -1,49 +1,36 @@
 'use client'
+import { useReplaceDeSearch } from '@app/app/(signs)/_components/store/useReplaceDeSearch'
 import {
   type FocusArea,
   parseFocusParam,
   serializeFocusParam,
 } from '@app/src/features/searchParams/deSearch'
-import { useNavigate, useSearch } from '@tanstack/react-router'
 
 export const useParamFocus = () => {
-  const navigate = useNavigate({ from: '/$lang' })
-  const search = useSearch({ from: '/$lang' })
+  const { search, replaceSearch } = useReplaceDeSearch()
   const focuses = parseFocusParam(search.focus)
 
   const setFocuses = (next: FocusArea[]) => {
     const withoutDefault = next.filter((f) => f !== 'default')
-    void navigate({
-      replace: true,
-      resetScroll: false,
-      search: (prev) => ({
-        ...prev,
-        focus: serializeFocusParam(withoutDefault),
-      }),
-    })
+    replaceSearch((prev) => ({
+      ...prev,
+      focus: serializeFocusParam(withoutDefault),
+    }))
   }
 
   const setSingleFocus = (focus: FocusArea | undefined) => {
     if (!focus || focus === 'default') {
-      void navigate({
-        replace: true,
-        resetScroll: false,
-        search: (prev) => ({
-          ...prev,
-          focus: undefined,
-        }),
-      })
+      replaceSearch((prev) => ({
+        ...prev,
+        focus: undefined,
+      }))
       return
     }
 
-    void navigate({
-      replace: true,
-      resetScroll: false,
-      search: (prev) => ({
-        ...prev,
-        focus: serializeFocusParam([focus]),
-      }),
-    })
+    replaceSearch((prev) => ({
+      ...prev,
+      focus: serializeFocusParam([focus]),
+    }))
   }
 
   const toggleFocus = (focus: FocusArea) => {

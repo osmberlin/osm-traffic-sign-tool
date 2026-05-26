@@ -4,6 +4,8 @@ import {
   type FocusArea,
   SignStateType,
   signsToTrafficSignTagValue,
+  taggingSuggestionsQaFilters,
+  type TaggingSuggestionsQaFilter,
   trafficSignTagToSigns,
 } from '@osm-traffic-signs/converter'
 import { z } from 'zod'
@@ -13,7 +15,10 @@ export const deSearchSchema = z.object({
   q: z.coerce.string().optional(),
   signs: z.string().optional(),
   focus: z.string().optional(),
+  qa: z.enum(taggingSuggestionsQaFilters).optional(),
 })
+
+export { taggingSuggestionsQaFilters, type TaggingSuggestionsQaFilter }
 
 export { focusAreas, type FocusArea }
 
@@ -39,6 +44,30 @@ export const serializeFocusParam = (focuses: FocusArea[]): string | undefined =>
 
   const sorted = [...new Set(focuses)].sort()
   return sorted.join(',')
+}
+
+export const parseTaggingQaParam = (
+  value: string | undefined,
+): TaggingSuggestionsQaFilter => {
+  if (!value) {
+    return 'all'
+  }
+
+  if (taggingSuggestionsQaFilters.includes(value as TaggingSuggestionsQaFilter)) {
+    return value as TaggingSuggestionsQaFilter
+  }
+
+  return 'all'
+}
+
+export const serializeTaggingQaParam = (
+  filter: TaggingSuggestionsQaFilter,
+): TaggingSuggestionsQaFilter | undefined => {
+  if (filter === 'all') {
+    return undefined
+  }
+
+  return filter
 }
 
 export type DeSearchSchema = z.infer<typeof deSearchSchema>

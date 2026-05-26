@@ -10,6 +10,11 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Add **Tagging QA** page at `/$lang/signs-qa` to review sign tagging suggestions with focus and QA filters, per-sign tasks, and export to GitHub issues.
+- Add GitHub issue template and Cursor automation workflow for Tagging QA catalogue updates (opens PR via `@cursor` agent).
+- Fix filter URL updates on QA pages to stay on the current route without scroll jumps.
+- Enable TanStack Router route code splitting.
+- Rename all-signs table column to “Raw sign config data”.
 - Migrate from Next.js to TanStack Router SPA (Vite), including route migration, TanStack search-param handling with Zod validation, and static-hosting compatibility for GitHub Pages.
 - Fix layout, width, and responsive behaviour after the TanStack migration (content pages, footer and header links, `/$lang/` route).
 - Add Focus filter row to browse signs by thematic catalogue views (Standard, Fuß und Rad, Parkraum, Straßenraum, Alle).

@@ -1,0 +1,55 @@
+# Triggers a Cursor cloud agent when a Tagging QA issue is opened.
+# Cursor Automations have no native "GitHub issue opened" trigger; @cursor on the issue is the supported path.
+# See https://cursor.com/docs/cloud-agent and .github/TAGGING_QA_AUTOMATION.md
+name: Cursor Tagging QA automation
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  issues: write
+
+jobs:
+  trigger-cursor:
+    if: |
+      (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'tagging-qa')) ||
+      (github.event.action == 'labeled' && github.event.label.name == 'tagging-qa')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start Cursor agent via issue comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const { owner, repo } = context.repo;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number: issue.number,
+              per_page: 100,
+            });
+
+            const triggerMarker = '@cursor repo=';
+            const alreadyTriggered = comments.some((comment) =>
+              comment.body?.includes(triggerMarker),
+            );
+
+            if (alreadyTriggered) {
+              core.info('Cursor trigger comment already exists; skipping.');
+              return;
+            }
+
+            const body = `@cursor repo=${owner}/${repo} branch=main
+
+**Tagging QA** issue #${issue.number} (label \`tagging-qa\`).
+
+Read the **issue body** (agent instructions + tasks). Follow \`.cursor/skills/add-traffic-sign/SKILL.md\`. Update sign config under \`packages/traffic-sign-converter/src/data-definitions/DE/\`, run converter tests, and **open a PR** linking #${issue.number}.`;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body,
+            });
