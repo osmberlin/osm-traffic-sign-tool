@@ -1,5 +1,5 @@
-import { describe, expect, test } from 'bun:test'
 import type { SignType } from '@osm-traffic-signs/converter'
+import { describe, expect, test } from 'vitest'
 import {
   buildGithubIssueUrl,
   collectSignTaskEntries,

@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'bun:test'
+import { describe, expect, test } from 'vitest'
 import { catalogueFocusViews, signFocusTags } from '../TrafficSignDataTypes.js'
 import { trafficSignDataDE } from './trafficSignDataDE.js'
 
