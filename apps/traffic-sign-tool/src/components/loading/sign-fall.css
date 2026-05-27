@@ -1,0 +1,38 @@
+@keyframes sign-fall {
+  0% {
+    transform: translate(
+        calc(var(--drift-x, 0px) + var(--fall-drift, 0%)),
+        calc(-1 * var(--fall-distance, 300px))
+      )
+      rotate(var(--start-rot, 0deg));
+    opacity: 0.92;
+  }
+
+  70% {
+    transform: translate(var(--drift-x, 0px), 0) rotate(var(--end-rot, 0deg));
+    opacity: 1;
+  }
+
+  85% {
+    transform: translate(var(--drift-x, 0px), -8px) rotate(var(--end-rot, 0deg));
+  }
+
+  100% {
+    transform: translate(var(--drift-x, 0px), 0) rotate(var(--end-rot, 0deg));
+    opacity: 1;
+  }
+}
+
+.sign-fall-piece {
+  animation: sign-fall var(--fall-duration, 1.2s) cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--fall-delay, 0ms);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sign-fall-piece {
+    animation: none;
+    transform: translate(var(--drift-x, 0px), 0) rotate(var(--end-rot, 0deg));
+    will-change: auto;
+  }
+}

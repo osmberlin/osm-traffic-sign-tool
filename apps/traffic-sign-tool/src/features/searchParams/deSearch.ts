@@ -22,6 +22,8 @@ export const deSearchSchema = z.object({
   comb: z.enum(combinationQaFilters).optional(),
   /** Selected primary sign `osmValuePart` on check-sign-combinations */
   primary: z.coerce.string().optional(),
+  /** Demo delay for `/$lang/pending` loader (ms) */
+  hold: z.coerce.number().int().min(0).max(30_000).optional(),
 })
 
 export { taggingSuggestionsQaFilters, type TaggingSuggestionsQaFilter }
