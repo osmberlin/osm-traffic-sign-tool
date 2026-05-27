@@ -1,0 +1,20 @@
+# Netlify deploy previews for pull requests only.
+#
+# Builds from the monorepo root so workspace packages (@osm-traffic-signs/converter,
+# @internal/*) are linked from the checked-in source — not from npm releases.
+#
+# Production deploys stay on GitHub Pages (.github/workflows/app-traffic-sign-tool-deploy.yml).
+
+[build]
+  # Node: .nvmrc (also mirrored in package.json engines.node)
+  # pnpm: package.json packageManager + pnpm-lock.yaml (Netlify runs pnpm install via Corepack)
+  command = "pnpm run build"
+  publish = "apps/traffic-sign-tool/dist"
+  # Exit 0 = skip build. Only run for PR deploy previews, not main/develop pushes.
+  ignore = "bash -c 'test \"$CONTEXT\" = \"deploy-preview\" && exit 1 || exit 0'"
+
+# TanStack Router SPA — serve index.html for client-side routes.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
