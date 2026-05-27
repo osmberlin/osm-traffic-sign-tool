@@ -1,4 +1,5 @@
 import type { SignType } from '../../TrafficSignDataTypes.js'
+import { deEndeHauptzeichenOsmMappingComment } from './sharedComments.js'
 
 export const _infrastructure: SignType[] = [
   {
@@ -259,14 +260,8 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Fußgängerzone (Ende)',
     description: 'Ende einer Fußgängerzone',
     kind: 'traffic_sign',
-    tagRecommendations: {},
-    comments: [
-      {
-        lang: 'de',
-        comment:
-          'Radschnellwege werden in OSM als Relation eingetragen, siehe [DE:Key:cycle_highway](https://wiki.openstreetmap.org/wiki/DE:Key:cycle_highway).',
-      },
-    ],
+    tagRecommendations: 'none',
+    comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: {
       signCategory: 'traffic_sign',
     },
@@ -413,8 +408,8 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Verkehrsberuhigter Bereich (Ende)',
     description: 'Ende eines verkehrsberuhigten Bereichs',
     kind: 'traffic_sign',
-    tagRecommendations: {},
-    comments: [],
+    tagRecommendations: 'none',
+    comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: {
       signCategory: 'traffic_sign',
     },
@@ -435,7 +430,13 @@ export const _infrastructure: SignType[] = [
     tagRecommendations: {
       highwayValues: [],
     },
-    comments: [],
+    comments: [
+      {
+        lang: 'de',
+        comment:
+          'Radschnellwege werden in OSM als Relation eingetragen, siehe [DE:Key:cycle_highway](https://wiki.openstreetmap.org/wiki/DE:Key:cycle_highway).',
+      },
+    ],
     catalogue: {
       signCategory: 'traffic_sign',
     },
@@ -453,8 +454,8 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Radschnellweg (Ende)',
     description: 'Ende eines Radschnellwegs',
     kind: 'traffic_sign',
-    tagRecommendations: {},
-    comments: [],
+    tagRecommendations: 'none',
+    comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: {
       signCategory: 'traffic_sign',
     },
