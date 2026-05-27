@@ -86,7 +86,7 @@ const formatAgentBrief = (): string[] => [
   '',
   '1. Apply every task in the sections below.',
   `2. Read [\`${TAGGING_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${TAGGING_QA_AGENT_SKILL_PATH}) for \`tagRecommendations\` shape, DE \`data/*.ts\` file choice, and OSM wiki tagging research.`,
-  '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`tagRecommendations`, optional `taggingSuggestionsQa: "explicit_none"`).',
+  '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`tagRecommendations: "none" | {...}` for intentional none vs recommendations).',
   '4. Run tests in `packages/traffic-sign-converter`. Open a PR that links this issue.',
   '',
   '## Tasks',
@@ -108,13 +108,13 @@ export const formatTaggingQaTaskResults = (entries: SignTaskEntry[]): string => 
     lines,
     explicitNone,
     '### Mark as explicit no tagging suggestions',
-    'Add `taggingSuggestionsQa: "explicit_none"` on each sign object. Keep `tagRecommendations: {}` unless notes say otherwise.',
+    'Set `tagRecommendations: "none"` on each sign object. Keep object recommendations only when concrete tags are present.',
   )
   formatTaskSection(
     lines,
     addSuggestions,
     '### Add tagging suggestions',
-    'Update `tagRecommendations` from the notes (JSON or prose). Use the skill and OSM wiki if notes are incomplete. Remove `taggingSuggestionsQa` if present.',
+    'Update `tagRecommendations` from the notes (JSON or prose). Use the skill and OSM wiki if notes are incomplete. Use object form for concrete recommendations.',
   )
   formatTaskSection(
     lines,

@@ -1,6 +1,6 @@
 import type { ModifierSignType, SignType, TrafficSignType } from './TrafficSignDataTypes.js'
 
-export const taggingSuggestionsQaStatuses = ['explicit_none'] as const
+export const taggingSuggestionsQaStatuses = ['none'] as const
 export type TaggingSuggestionsQaStatus = (typeof taggingSuggestionsQaStatuses)[number]
 
 export type TaggingSuggestionsQaCategory =
@@ -16,6 +16,7 @@ type TagRecommendations =
   | ModifierSignType['tagRecommendations']
 
 export const hasTagRecommendationsContent = (tagRecommendations: TagRecommendations): boolean =>
+  tagRecommendations !== 'none' &&
   Object.values(tagRecommendations).some((value) => {
     if (value === undefined) {
       return false
@@ -34,7 +35,7 @@ export const classifyTaggingSuggestionsQa = (sign: SignType): TaggingSuggestions
     return 'withSuggestions'
   }
 
-  if (sign.taggingSuggestionsQa === 'explicit_none') {
+  if (sign.tagRecommendations === 'none') {
     return 'explicitNoSuggestions'
   }
 

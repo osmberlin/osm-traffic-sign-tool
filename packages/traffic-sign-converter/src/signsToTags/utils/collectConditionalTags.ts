@@ -9,6 +9,7 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
   signs
     .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind === 'traffic_sign')
+    .filter((sign) => sign.tagRecommendations !== 'none')
     .forEach((sign) => {
       const { conditionalTags } = sign.tagRecommendations
 
@@ -43,6 +44,7 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
   signs
     .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind !== 'traffic_sign')
+    .filter((sign) => sign.tagRecommendations !== 'none')
     .forEach((sign) => {
       // If a sign has `conditionalTags`, we update the previously
       // applied `traffic_sign` conditional tags to apply the conditional syntax to key and value.

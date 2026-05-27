@@ -42,7 +42,7 @@ describe('taggingSuggestionsQa', () => {
     }
     const explicit: SignType = {
       ...missing,
-      taggingSuggestionsQa: 'explicit_none',
+      tagRecommendations: 'none',
     }
 
     expect(classifyTaggingSuggestionsQa(withTags)).toBe('withSuggestions')
@@ -62,8 +62,7 @@ describe('taggingSuggestionsQa', () => {
         ...baseSign,
         osmValuePart: 'c',
         kind: 'traffic_sign',
-        tagRecommendations: {},
-        taggingSuggestionsQa: 'explicit_none',
+        tagRecommendations: 'none',
       },
     ]
 

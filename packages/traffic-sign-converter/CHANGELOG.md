@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Add tagging QA helpers and optional `taggingSuggestionsQa: "explicit_none"` marker on sign configs to distinguish intentional empty `tagRecommendations` from missing work.
+- Add tagging QA helpers and `tagRecommendations: "none"` marker on sign configs to distinguish intentional empty recommendations from missing work.
 - Add many missing DE traffic signs (83 new SVGs); most entries are catalogue-only and do not yet define OSM tagging.
 - Replace catalogue `visibility` flags (`search_only`, `highlight`) with per-view `catalogue.focus` records to support thematic sign sets (Standard, bike/foot, parking, highway, Alle-only).
 - Export catalogue focus helpers and value-prompt format utilities from the package entry point.

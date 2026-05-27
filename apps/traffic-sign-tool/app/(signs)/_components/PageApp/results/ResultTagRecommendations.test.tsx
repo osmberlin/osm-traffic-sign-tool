@@ -30,7 +30,7 @@ vi.mock('@app/app/(signs)/_components/PageApp/results/ResultTagRecommendations/T
 
 vi.mock('@osm-traffic-signs/converter', () => ({
   classifyTaggingSuggestionsQa: (sign: any) =>
-    sign.taggingSuggestionsQa === 'explicit_none' ? 'explicitNoSuggestions' : 'withSuggestions',
+    sign.tagRecommendations === 'none' ? 'explicitNoSuggestions' : 'withSuggestions',
   signsToTags: () => new Map([['traffic_sign', 'DE:279-30']]),
   toTag: ({ key, value }: { key: string; value: string }) => `${key}=${value}`,
 }))
@@ -46,7 +46,7 @@ describe('ResultTagRecommendations', () => {
       {
         recodgnizedSign: true,
         osmValuePart: '279-30',
-        taggingSuggestionsQa: 'explicit_none',
+        tagRecommendations: 'none',
       },
     ]
 
@@ -75,7 +75,7 @@ describe('ResultTagRecommendations', () => {
       {
         recodgnizedSign: true,
         osmValuePart: '279-30',
-        taggingSuggestionsQa: 'explicit_none',
+        tagRecommendations: 'none',
       },
       {
         recodgnizedSign: true,
@@ -95,12 +95,12 @@ describe('ResultTagRecommendations', () => {
       {
         recodgnizedSign: true,
         osmValuePart: '279-30',
-        taggingSuggestionsQa: 'explicit_none',
+        tagRecommendations: 'none',
       },
       {
         recodgnizedSign: true,
         osmValuePart: '279-50',
-        taggingSuggestionsQa: 'explicit_none',
+        tagRecommendations: 'none',
       },
     ]
 

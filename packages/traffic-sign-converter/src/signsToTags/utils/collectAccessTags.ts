@@ -8,6 +8,7 @@ export const collectAccessTags = (signs: SignStateType[]) => {
     .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind === 'traffic_sign')
     .map((sign) => sign.tagRecommendations)
+    .filter((tagRecommendations) => tagRecommendations !== 'none')
     .forEach((tags) => {
       if (tags.accessTags) {
         for (const tag of tags.accessTags) {
@@ -23,6 +24,7 @@ export const collectAccessTags = (signs: SignStateType[]) => {
     .filter((sign) => sign.kind !== 'traffic_sign')
     .filter((sign) => sign.kind !== 'condition_modifier')
     .map((sign) => sign.tagRecommendations)
+    .filter((tagRecommendations) => tagRecommendations !== 'none')
     .forEach((tags) => {
       // Signs can have a `modifierValue` or `accessTags`
       // `modifierValue` updates or add to the value of all existing access tags
@@ -31,7 +33,10 @@ export const collectAccessTags = (signs: SignStateType[]) => {
 
       const groupHasSignWithAccessTagProp = signs
         .filter((sign) => sign.recodgnizedSign === true)
-        .some((sign) => 'accessTags' in sign.tagRecommendations)
+        .some(
+          (sign) =>
+            sign.tagRecommendations !== 'none' && sign.tagRecommendations.accessTags !== undefined,
+        )
 
       if (groupHasSignWithAccessTagProp && !!tags.modifierValue) {
         for (const [_, tag] of mergedAccessTags) {
@@ -60,7 +65,12 @@ export const collectAccessTags = (signs: SignStateType[]) => {
 
       const hasConditionalTagProp = signs
         .filter((sign) => sign.recodgnizedSign === true)
-        .some((sign) => 'conditionalTags' in sign.tagRecommendations)
+        .some(
+          (sign) =>
+            sign.kind === 'traffic_sign' &&
+            sign.tagRecommendations !== 'none' &&
+            sign.tagRecommendations.conditionalTags !== undefined,
+        )
 
       if (!hasConditionalTagProp && mergedAccessTags.size === 0 && tags.modifierValue) {
         mergedAccessTags.set('access', { key: 'access', value: tags.modifierValue })

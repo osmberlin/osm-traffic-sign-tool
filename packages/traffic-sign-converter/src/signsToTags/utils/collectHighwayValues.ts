@@ -6,9 +6,8 @@ export const collectHighwayValues = (signs: SignStateType[] | undefined) => {
 
   const all = signs
     .filter((sign) => sign.recodgnizedSign === true)
-    .map((sign) => {
-      return sign.tagRecommendations
-    })
+    .map((sign) => sign.tagRecommendations)
+    .filter((tagRecommendations) => tagRecommendations !== 'none')
     .map((tags) => {
       return tags.highwayValues
     })

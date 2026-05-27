@@ -42,22 +42,7 @@ export type TrafficSignType = SharedId &
     // maxspeed, maxweight
     signValue?: number
     valuePrompt?: ValuePrompt<NumericValuePromptFormat>
-    tagRecommendations: {
-      highwayValues?: string[]
-      accessTags?: { key: string; value: string }[]
-      uniqueTags?: (
-        | { key: string; value: string }
-        | {
-            key: string
-            /** @description Format: `"FOO:"` will result in `"FOO:30"` for `signValue=30` */
-            valueTemplate?: `${string}$` | `$${string}` | `${string}$${string}`
-          }
-      )[]
-      conditionalTags?: {
-        key: string
-        value: string
-      }[]
-    }
+    tagRecommendations: TagRecommendationsTrafficSign
   } & SharedComments &
   SharedQuestions &
   SharedCompatibility &
@@ -76,13 +61,7 @@ export type ModifierSignType = Prettify<
       valuePrompt?:
         | ValuePrompt<NumericValuePromptFormat>
         | ValuePrompt<OpeningHoursValuePromptFormat>
-      tagRecommendations: {
-        highwayValues?: string[]
-        accessTags?: { key: string; value: string }[]
-        modifierValue?: string
-        uniqueTags?: { key: string; value: string }[]
-        modifierValueFromValuePrompt?: boolean
-      }
+      tagRecommendations: TagRecommendationsModifierSign
     } & SharedComments &
     SharedQuestions &
     SharedCompatibility &
@@ -127,13 +106,44 @@ export type CatalogueFocus = Partial<Record<CatalogueFocusView, CatalogueFocusLe
 export const focusAreas = ['default', ...signFocusTags, 'all'] as const
 export type FocusArea = (typeof focusAreas)[number]
 
-export const taggingSuggestionsQaStatuses = ['explicit_none'] as const
+export const taggingSuggestionsQaStatuses = ['none'] as const
 export type TaggingSuggestionsQaStatus = (typeof taggingSuggestionsQaStatuses)[number]
 
-type SharedTaggingSuggestionsQa = {
-  /** QA: empty `tagRecommendations` is intentional (not missing work). */
-  taggingSuggestionsQa?: TaggingSuggestionsQaStatus
+type SharedTaggingSuggestionsQa = {}
+
+type TagRecommendationsNone = 'none'
+
+type TagRecommendationsTrafficSignObject = {
+  highwayValues?: string[]
+  accessTags?: { key: string; value: string }[]
+  uniqueTags?: (
+    | { key: string; value: string }
+    | {
+        key: string
+        /** @description Format: `"FOO:"` will result in `"FOO:30"` for `signValue=30` */
+        valueTemplate?: `${string}$` | `$${string}` | `${string}$${string}`
+      }
+  )[]
+  conditionalTags?: {
+    key: string
+    value: string
+  }[]
 }
+
+type TagRecommendationsModifierSignObject = {
+  highwayValues?: string[]
+  accessTags?: { key: string; value: string }[]
+  modifierValue?: string
+  uniqueTags?: { key: string; value: string }[]
+  modifierValueFromValuePrompt?: boolean
+}
+
+export type TagRecommendationsTrafficSign =
+  | TagRecommendationsNone
+  | TagRecommendationsTrafficSignObject
+export type TagRecommendationsModifierSign =
+  | TagRecommendationsNone
+  | TagRecommendationsModifierSignObject
 
 type SharedCatalogue<T> = {
   catalogue: {

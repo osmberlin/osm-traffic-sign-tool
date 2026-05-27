@@ -5,6 +5,7 @@ export const collectUniqueTags = (signs: SignStateType[]) => {
 
   signs
     .filter((sign) => sign.recodgnizedSign === true)
+    .filter((sign) => sign.tagRecommendations !== 'none')
     .forEach((sign) => {
       const { uniqueTags } = sign.tagRecommendations
 
