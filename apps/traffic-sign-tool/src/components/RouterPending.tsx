@@ -7,7 +7,6 @@ export const RouterPending = () => {
     <ContentPageLayout>
       <div
         className="flex min-h-[400px] w-full flex-col items-center justify-center gap-4"
-        role="status"
         aria-live="polite"
       >
         <FallingSignPile />

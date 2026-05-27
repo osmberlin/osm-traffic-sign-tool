@@ -24,7 +24,6 @@ function LangPendingRouteComponent() {
 
         <div
           className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-sm border border-stone-400/60 bg-stone-200/50 p-4"
-          role="status"
           aria-live="polite"
         >
           <FallingSignPile key={replayKey} />
