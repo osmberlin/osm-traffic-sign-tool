@@ -43,3 +43,30 @@
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-serif: 'Noto Serif', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 }
+
+@layer base {
+  /*
+   Browsers leave most controls with `default` arrow; reserve pointer for clickable UI.
+   Excludes disabled / aria-disabled so those can stay default or pick not-allowed where styled.
+   */
+  button:not(:disabled):not([aria-disabled='true']),
+  [role='button']:not(:disabled):not([aria-disabled='true']),
+  [role='menuitem']:not([aria-disabled='true']),
+  [role='option']:not([aria-disabled='true']),
+  [role='tab']:not([aria-disabled='true']),
+  input:is(
+      [type='button'],
+      [type='submit'],
+      [type='reset'],
+      [type='image'],
+      [type='file'],
+      [type='checkbox'],
+      [type='radio']
+    ):not(:disabled),
+  select:not(:disabled),
+  summary,
+  label,
+  a:any-link {
+    cursor: pointer;
+  }
+}
