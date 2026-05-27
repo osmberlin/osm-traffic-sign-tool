@@ -19,7 +19,7 @@ export const _hazard: SignType[] = [
     image: {
       kind: 'remote',
       sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:Zeichen_330.2_-_Ende_der_Autobahn,_StVO_2013.svg',
+        'https://commons.wikimedia.org/wiki/File:Zeichen_136-10_-_Kinder,_Aufstellung_rechts,_StVO_1992.svg',
       licence: 'Public Domain',
     },
   },
