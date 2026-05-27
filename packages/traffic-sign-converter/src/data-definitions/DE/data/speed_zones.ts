@@ -1,4 +1,5 @@
 import type { SignType } from '../../TrafficSignDataTypes.js'
+import { deEndeHauptzeichenOsmMappingComment } from './sharedComments.js'
 
 export const _speed_zones: SignType[] = [
   {
@@ -160,7 +161,7 @@ export const _speed_zones: SignType[] = [
       uniqueTags: [],
       conditionalTags: [],
     },
-    comments: [],
+    comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'speed',
@@ -185,7 +186,7 @@ export const _speed_zones: SignType[] = [
       uniqueTags: [],
       conditionalTags: [],
     },
-    comments: [],
+    comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'speed',

@@ -10,6 +10,7 @@ import { _modifiers_direction_additions } from './data/modifiers_direction_addit
 import { _notice } from './data/notice.js'
 import { _numbers } from './data/numbers.js'
 import { _overtaking } from './data/overtaking.js'
+import { deEndeHauptzeichenOsmMappingComment } from './data/sharedComments.js'
 import { _speed_maxspeed_end } from './data/speed_maxspeed_end.js'
 import { _speed_maxspeed_start } from './data/speed_maxspeed_start.js'
 import { _speed_minspeed_end } from './data/speed_minspeed_end.js'
@@ -552,7 +553,7 @@ export const trafficSignDataDE: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
-    comments: [],
+    comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'traffic_sign',
@@ -595,7 +596,7 @@ export const trafficSignDataDE: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
-    comments: [],
+    comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'traffic_sign',

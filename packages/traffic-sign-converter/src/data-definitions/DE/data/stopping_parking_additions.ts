@@ -1,4 +1,5 @@
 import type { SignType } from '../../TrafficSignDataTypes.js'
+import { deEndeHauptzeichenOsmMappingComment } from './sharedComments.js'
 
 export const _stopping_parking_additions: SignType[] = [
   {
@@ -307,7 +308,7 @@ export const _stopping_parking_additions: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendations: {},
-    comments: [],
+    comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: { signCategory: 'traffic_sign', focus: { parking: true } },
     image: {

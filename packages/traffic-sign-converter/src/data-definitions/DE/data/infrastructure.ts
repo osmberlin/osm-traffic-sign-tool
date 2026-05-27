@@ -314,7 +314,7 @@ export const _infrastructure: SignType[] = [
     description: 'Ende einer Fahrradstraße',
     kind: 'traffic_sign',
     tagRecommendations: {},
-    comments: [],
+    comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: { signCategory: 'traffic_sign', focus: { all: true } },
     image: {
       kind: 'remote',
@@ -364,7 +364,7 @@ export const _infrastructure: SignType[] = [
     description: 'Ende einer Fahrradzone',
     kind: 'traffic_sign',
     tagRecommendations: {},
-    comments: [],
+    comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: { signCategory: 'traffic_sign', focus: { all: true } },
     image: {
       kind: 'remote',
