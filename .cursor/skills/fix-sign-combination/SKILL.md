@@ -80,9 +80,13 @@ Optional: if you added a focused test in Step 2, that test is the long-term guar
 
 ### Step 5: Open PR
 
+- Start the PR description with `**[Cursor Agent]**`, then `Automated catalogue update for #<issue-number>.`
 - Link the GitHub issue.
 - Summarize which sign config files changed and why.
 - Mention any new `signsToTags` tests.
+- Prefix any issue comments with `**[Cursor Agent]**`; do not write as the submitter.
+
+See [`.cursor/rules/github-agent-attribution.mdc`](../rules/github-agent-attribution.mdc).
 
 ## CLI helpers
 

@@ -18,6 +18,9 @@ describe('combinationQaTaskFormat', () => {
     expect(entries).toHaveLength(2)
 
     const text = formatCombinationQaTaskResults(entries)
+    expect(text).toContain('Human (issue submitter)')
+    expect(text).toContain('Machine-generated')
+    expect(text).toContain('[Cursor Agent]')
     expect(text).toContain('Sign combination QA')
     expect(text).toContain('open a PR')
     expect(text).toContain('.cursor/skills/fix-sign-combination/SKILL.md')

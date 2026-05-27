@@ -228,6 +228,17 @@ Output ONLY this format:
 - **SVG Missing**: Verify `sourceUrl` points to a Wikimedia `File:` page.
 - **Sign Not in UI**: Ensure data file is exported in `packages/traffic-sign-converter/src/data-definitions/DE/trafficSignDataDE.ts`.
 
+## GitHub attribution
+
+When working from a GitHub issue or opening a PR (including tagging QA issues):
+
+1. Start every **issue or PR comment** with `**[Cursor Agent]**` on its own line.
+2. Start the **PR description** with `**[Cursor Agent]**`, then `Automated catalogue update for #<issue-number>.`, then your summary.
+3. Do not write as the human submitter; call them **the submitter**.
+4. Workflow comments prefixed with `> **GitHub Actions (automation)**` are not from you.
+
+See [`.cursor/rules/github-agent-attribution.mdc`](../rules/github-agent-attribution.mdc).
+
 ## Related: sign combination QA
 
 For GitHub issues labeled `combination-qa` (primary + modifier pairs), use [`.cursor/skills/fix-sign-combination/SKILL.md`](fix-sign-combination/SKILL.md) instead. Those tasks focus on `compatibility` rules and combined tag output rather than adding a new sign.

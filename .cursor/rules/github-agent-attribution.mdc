@@ -1,0 +1,17 @@
+---
+description: GitHub comment and PR attribution when acting as a Cursor cloud agent
+globs:
+  - .cursor/skills/**
+  - .github/workflows/cursor-*-qa-automation.yml
+---
+
+# GitHub attribution (Cursor agent)
+
+When posting on GitHub (issues, pull requests, reviews) as a cloud agent:
+
+1. Every **issue or PR comment** must start with `**[Cursor Agent]**` on its own line (no exceptions).
+2. **PR descriptions** must start with `**[Cursor Agent]**`, then a line like `Automated catalogue update for #<issue-number>.`, then the summary.
+3. Do **not** write as if you are the human who opened the issue; refer to them as **the submitter**.
+4. Status comments on the source issue must use the prefix and state you are not the submitter.
+
+GitHub Actions automation comments use `> **GitHub Actions (automation)** — …` and are not from you.

@@ -1,4 +1,5 @@
 import type { SignType } from '@osm-traffic-signs/converter'
+import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
 
 export type SignTaskType = 'explicit_none' | 'add_suggestions' | 'comment'
 
@@ -77,6 +78,8 @@ const formatTaskSection = (
 
 const formatAgentBrief = (): string[] => [
   '# Tagging QA – catalogue config update',
+  '',
+  QA_ISSUE_ATTRIBUTION_BANNER,
   '',
   'Created from the [Tagging QA page](https://trafficsigns.osm-verkehrswende.org/DE/signs-qa).',
   '',

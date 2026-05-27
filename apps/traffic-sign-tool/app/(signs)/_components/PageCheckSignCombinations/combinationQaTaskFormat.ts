@@ -4,6 +4,7 @@ import {
   type CountryPrefixType,
   type SignStateType,
 } from '@osm-traffic-signs/converter'
+import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
 
 export type CombinationFeedbackStatus = 'OK' | 'NOTOK' | 'INVALID'
 
@@ -118,6 +119,8 @@ const formatTaskSection = (
 
 const formatAgentBrief = (): string[] => [
   '# Sign combination QA – catalogue config update',
+  '',
+  QA_ISSUE_ATTRIBUTION_BANNER,
   '',
   'Created from the [Sign combinations QA page](https://trafficsigns.osm-verkehrswende.org/DE/check-sign-combinations).',
   '',
