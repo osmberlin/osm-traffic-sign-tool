@@ -1,6 +1,7 @@
 import WikiPage from '@app/app/(signs)/DE/wiki/page'
 import * as m from '@app/paraglide/messages'
 import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
+import { buildNoindexPageHead } from '@app/src/features/seo/seoHead'
 import { createFileRoute } from '@tanstack/react-router'
 
 function LangWikiRouteComponent() {
@@ -8,9 +9,7 @@ function LangWikiRouteComponent() {
 }
 
 export const Route = createFileRoute('/$lang/wiki')({
-  head: () => ({
-    meta: [{ title: `${m.wiki_title()} — ${m.header_title()}` }],
-  }),
+  head: () => buildNoindexPageHead(m.wiki_title()),
   validateSearch: deSearchSchema,
   component: LangWikiRouteComponent,
 })

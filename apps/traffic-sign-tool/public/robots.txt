@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /DE/signs
+Disallow: /DE/signs-qa
+Disallow: /DE/check-sign-combinations
+Disallow: /DE/wiki
+Disallow: /DE/taginfo
+
+Sitemap: https://trafficsigns.osm-verkehrswende.org/sitemap.xml

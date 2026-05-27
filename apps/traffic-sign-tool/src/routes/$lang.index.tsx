@@ -1,7 +1,8 @@
 import { PageApp } from '@app/app/(signs)/_components/PageApp'
 import * as m from '@app/paraglide/messages'
 import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
-import { countryDefinitions } from '@osm-traffic-signs/converter'
+import { buildPageHead, catalogueHomeUrl, hasDeSearchParams } from '@app/src/features/seo/seoHead'
+import { type CountryPrefixType, countryDefinitions } from '@osm-traffic-signs/converter'
 import { createFileRoute } from '@tanstack/react-router'
 
 function LangIndexRouteComponent() {
@@ -15,10 +16,22 @@ function LangIndexRouteComponent() {
 }
 
 export const Route = createFileRoute('/$lang/')({
-  head: () => ({
-    meta: [{ title: m.header_title() }],
-  }),
   loader: ({ context }) => countryDefinitions[context.countryPrefix],
   validateSearch: deSearchSchema,
+  head: ({ match }) => {
+    const head = buildPageHead({ title: m.header_title() })
+    if (hasDeSearchParams(match.search)) {
+      return {
+        ...head,
+        links: [
+          {
+            rel: 'canonical',
+            href: catalogueHomeUrl(match.params.lang as CountryPrefixType),
+          },
+        ],
+      }
+    }
+    return head
+  },
   component: LangIndexRouteComponent,
 })

@@ -7,6 +7,8 @@
   "lang_ui_en": "English",
   "lang_ui_de": "Deutsch",
   "header_title": "OSM Traffic Sign Tool 2",
+  "seo_default_description": "Get OpenStreetMap tagging recommendations based on traffic sign combinations.",
+  "seo_og_image_alt": "OpenStreetMap Verkehrswende Community",
   "header_about_summary": "About this tool…",
   "header_about_body": "This tool helps to find the right {trafficSignTag} tag as well as recommended tags for the road that it applies to.",
   "header_about_review": "Please review all tags before updating OSM.",

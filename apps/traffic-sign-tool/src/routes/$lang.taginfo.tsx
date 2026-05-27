@@ -1,6 +1,7 @@
 import TaginfoPage from '@app/app/(signs)/DE/taginfo/page'
 import * as m from '@app/paraglide/messages'
 import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
+import { buildNoindexPageHead } from '@app/src/features/seo/seoHead'
 import { createFileRoute } from '@tanstack/react-router'
 
 function LangTaginfoRouteComponent() {
@@ -8,9 +9,7 @@ function LangTaginfoRouteComponent() {
 }
 
 export const Route = createFileRoute('/$lang/taginfo')({
-  head: () => ({
-    meta: [{ title: `${m.taginfo_title()} — ${m.header_title()}` }],
-  }),
+  head: () => buildNoindexPageHead(m.taginfo_title()),
   validateSearch: deSearchSchema,
   component: LangTaginfoRouteComponent,
 })

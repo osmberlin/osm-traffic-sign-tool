@@ -7,6 +7,8 @@
   "lang_ui_en": "English",
   "lang_ui_de": "Deutsch",
   "header_title": "OSM Verkehrszeichen-Tool 2",
+  "seo_default_description": "Erhalten Sie OpenStreetMap-Tagging-Empfehlungen basierend auf Verkehrszeichenkombinationen.",
+  "seo_og_image_alt": "OpenStreetMap-Verkehrswende-Community",
   "header_about_summary": "Über dieses Tool…",
   "header_about_body": "Dieses Tool hilft, das richtige {trafficSignTag}-Tag sowie empfohlene Tags für die betroffene Straße zu finden.",
   "header_about_review": "Bitte alle Tags prüfen, bevor OSM aktualisiert wird.",

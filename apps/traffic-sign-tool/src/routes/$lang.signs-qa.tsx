@@ -1,6 +1,7 @@
 import { PageSignsQa } from '@app/app/(signs)/_components/PageSignsQa'
 import * as m from '@app/paraglide/messages'
 import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
+import { buildNoindexPageHead } from '@app/src/features/seo/seoHead'
 import { countryDefinitions } from '@osm-traffic-signs/converter'
 import { createFileRoute } from '@tanstack/react-router'
 
@@ -11,9 +12,7 @@ function LangSignsQaRouteComponent() {
 }
 
 export const Route = createFileRoute('/$lang/signs-qa')({
-  head: () => ({
-    meta: [{ title: `${m.page_tagging_qa_title()} — ${m.header_title()}` }],
-  }),
+  head: () => buildNoindexPageHead(m.page_tagging_qa_title()),
   loader: ({ context }) => countryDefinitions[context.countryPrefix],
   validateSearch: deSearchSchema,
   component: LangSignsQaRouteComponent,

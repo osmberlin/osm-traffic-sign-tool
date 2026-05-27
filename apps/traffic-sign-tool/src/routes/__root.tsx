@@ -5,6 +5,7 @@ import { Header } from '@app/app/_components/layout/Header'
 import { TailwindResponsiveHelper } from '@app/app/_components/layout/TailwindResponsiveHelper'
 import NotFound from '@app/app/not-found'
 import * as m from '@app/paraglide/messages'
+import { buildPageHead } from '@app/src/features/seo/seoHead'
 import { createRootRoute, HeadContent, Outlet } from '@tanstack/react-router'
 import '../../app/globals.css'
 
@@ -33,9 +34,7 @@ const RootLayout = () => {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [{ title: m.header_title() }],
-  }),
+  head: () => buildPageHead({ title: m.header_title() }),
   component: RootLayout,
   notFoundComponent: NotFound,
 })
