@@ -1,8 +1,8 @@
 import path from 'node:path'
+import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
-import react from '@vitejs/plugin-react'
-import { reactCompilerOxc } from 'oxc-plugin-react-compiler'
+import react, { reactCompilerPreset } from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 const defaultBase = '/'
@@ -11,8 +11,8 @@ export default defineConfig({
   base: process.env.VITE_BASE_PATH ?? defaultBase,
   plugins: [
     TanStackRouterVite({ autoCodeSplitting: true }),
-    reactCompilerOxc({ compilationMode: 'annotation', target: '19' }),
     react(),
+    babel({ presets: [reactCompilerPreset({ target: '19' })] }),
     tailwindcss(),
   ],
   resolve: {

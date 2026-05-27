@@ -47,6 +47,8 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@rolldown/plugin-babel": "^0.2.3",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
@@ -58,9 +60,9 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
+    "babel-plugin-react-compiler": "^1.0.0",
     "husky": "^9.1.7",
     "jsdom": "^27.3.0",
-    "oxc-plugin-react-compiler": "^0.2.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "vite": "^8.0.13",
