@@ -120,21 +120,4 @@ export const _modifiers_direction_additions: SignType[] = [
       licence: 'Public Domain',
     },
   },
-  {
-    osmValuePart: '1024-16',
-    signId: '1024-16',
-    name: 'Zusatzzeichen 1024-16',
-    descriptiveName: 'Straßenbahn frei',
-    description: null,
-    kind: 'condition_modifier',
-    tagRecommendations: {},
-    comments: [],
-    catalogue: { signCategory: 'condition_modifier', focus: { highway: true } },
-    image: {
-      kind: 'remote',
-      sourceUrl:
-        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1024-16_-_Stra%C3%9Fenbahn_frei,_StVO_1992.svg',
-      licence: 'Public Domain',
-    },
-  },
 ]

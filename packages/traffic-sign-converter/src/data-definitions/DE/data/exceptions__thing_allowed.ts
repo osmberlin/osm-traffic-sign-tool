@@ -305,6 +305,28 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
   },
   {
+    osmValuePart: '1024-16',
+    signId: '1024-16',
+    name: 'Zusatzzeichen 1024-16',
+    descriptiveName: 'Straßenbahn frei',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendations: {
+      highwayValues: [],
+      accessTags: [{ key: 'tram', value: 'yes' }],
+    },
+    comments: [],
+    catalogue: {
+      signCategory: 'exception_modifier',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1024-16_-_Stra%C3%9Fenbahn_frei,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '1024-17',
     signId: '1024-17',
     name: 'Zusatzzeichen 1024-17',
