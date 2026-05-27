@@ -90,7 +90,7 @@ const formatAgentBrief = (): string[] => [
   '1. Apply every task in the sections below.',
   `2. Read [\`${TAGGING_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${TAGGING_QA_AGENT_SKILL_PATH}) for \`tagRecommendations\` shape, DE \`data/*.ts\` file choice, and OSM wiki tagging research.`,
   '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`tagRecommendations: "none" | {...}` for intentional none vs recommendations).',
-  '4. Run tests in `packages/traffic-sign-converter`. Open a PR that links this issue.',
+  '4. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
   '',
   '## Tasks',
   '',

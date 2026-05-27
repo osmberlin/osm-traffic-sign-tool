@@ -99,7 +99,7 @@ jobs:
             }
 
             if (webhookTriggered) {
-              const body = `${GHA_ATTRIBUTION}${WEBHOOK_TRIGGER_MARKER}\n\nTriggered Cursor **webhook** automation for **Sign combination QA** issue #${issue.number}. The agent should read the issue body and open a PR.`;
+              const body = `${GHA_ATTRIBUTION}${WEBHOOK_TRIGGER_MARKER}\n\nTriggered Cursor **webhook** automation for **Sign combination QA** issue #${issue.number}. The agent should read the issue body and open a PR whose description includes \`Closes #${issue.number}\`.`;
 
               await github.rest.issues.createComment({
                 owner,
@@ -114,7 +114,7 @@ jobs:
 
 **Sign combination QA** issue #${issue.number} (label \`combination-qa\`).
 
-Read the **issue body** (agent instructions + tasks). Follow \`.cursor/skills/fix-sign-combination/SKILL.md\`. Update sign config under \`packages/traffic-sign-converter/src/data-definitions/DE/\`, run converter tests, and **open a PR** linking #${issue.number}. Prefix all GitHub comments and the PR description with \`**[Cursor Agent]**\`.`;
+Read the **issue body** (agent instructions + tasks). Follow \`.cursor/skills/fix-sign-combination/SKILL.md\`. Update sign config under \`packages/traffic-sign-converter/src/data-definitions/DE/\`, run converter tests, and **open a PR** whose description includes \`Closes #${issue.number}\` (auto-closes this issue on merge). Prefix all GitHub comments and the PR description with \`**[Cursor Agent]**\`.`;
 
             await github.rest.issues.createComment({
               owner,

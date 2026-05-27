@@ -36,7 +36,7 @@ Recommended setup:
 
 1. At [cursor.com/automations](https://cursor.com/automations), create a **Team Owned** automation with a **Webhook** trigger and repository `osmberlin/osm-traffic-sign-tool`.
 2. Enable tools: **Open pull request** (and **Comment on pull request** if needed).
-3. Prompt the agent to read the webhook JSON (`issueUrl`, `title`, `body`, `issueNumber`), follow `.cursor/skills/add-traffic-sign/SKILL.md`, use `**[Cursor Agent]**` on all GitHub text, and open a PR linking the issue.
+3. Prompt the agent to read the webhook JSON (`issueUrl`, `title`, `body`, `issueNumber`), follow `.cursor/skills/add-traffic-sign/SKILL.md`, use `**[Cursor Agent]**` on all GitHub text, and open a PR whose description includes `Closes #<issueNumber>` (auto-closes the issue on merge).
 4. Save the automation, copy the webhook URL and API key (`Authorization: Bearer crsr_…`).
 5. Add GitHub repository secrets:
    - `CURSOR_TAGGING_QA_WEBHOOK_URL` — webhook URL from the dashboard

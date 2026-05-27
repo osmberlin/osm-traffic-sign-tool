@@ -45,6 +45,7 @@ describe('taggingQaTaskFormat', () => {
     expect(text).toContain('[Cursor Agent]')
     expect(text).toContain('catalogue config update')
     expect(text).toContain('open a PR')
+    expect(text).toContain('Closes #<issue-number>')
     expect(text).toContain('.cursor/skills/add-traffic-sign/SKILL.md')
     expect(text).toContain('TrafficSignDataTypes.ts')
     expect(text).toContain('explicit no tagging suggestions')

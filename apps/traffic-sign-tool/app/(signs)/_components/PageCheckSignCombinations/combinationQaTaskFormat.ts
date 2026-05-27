@@ -133,7 +133,7 @@ const formatAgentBrief = (): string[] => [
   '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`compatibility.canReceiveModifiers`, `compatibility.incompatibleModifiers`, `tagRecommendations`).',
   '4. For **Not OK** tasks: fix the combined tag output (usually `tagRecommendations` on primary/modifier and/or `signsToTags` interaction tests).',
   '5. For **Invalid combination** tasks: update compatibility so the converter blocks the pair (add `incompatibleModifiers` on the primary sign or set `canReceiveModifiers: false` when the primary must never take modifiers).',
-  '6. Run tests in `packages/traffic-sign-converter`. Open a PR that links this issue.',
+  '6. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
   '',
   '## Tasks',
   '',

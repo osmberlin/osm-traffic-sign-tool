@@ -233,7 +233,7 @@ Output ONLY this format:
 When working from a GitHub issue or opening a PR (including tagging QA issues):
 
 1. Start every **issue or PR comment** with `**[Cursor Agent]**` on its own line.
-2. Start the **PR description** with `**[Cursor Agent]**`, then `Automated catalogue update for #<issue-number>.`, then your summary.
+2. Start the **PR description** with `**[Cursor Agent]**`, include `Closes #<issue-number>` (auto-closes the source issue on merge), then `Automated catalogue update for #<issue-number>.`, then your summary.
 3. Do not write as the human submitter; call them **the submitter**.
 4. Workflow comments prefixed with `> **GitHub Actions (automation)**` are not from you.
 
