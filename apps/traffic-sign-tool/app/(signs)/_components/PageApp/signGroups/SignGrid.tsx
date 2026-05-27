@@ -1,4 +1,4 @@
-'use client'
+import * as m from '@app/paraglide/messages'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { SignStateType, SignType } from '@osm-traffic-signs/converter'
@@ -28,7 +28,7 @@ export const SignGrid = ({ headline, defaultOpen = true, signs }: Props) => {
         )}
       >
         {signs.length === 0 && (
-          <p className="text-center text-sm text-gray-500 uppercase">No results</p>
+          <p className="text-center text-sm text-gray-500 uppercase">{m.search_no_results()}</p>
         )}
 
         {signs.map((sign) => {

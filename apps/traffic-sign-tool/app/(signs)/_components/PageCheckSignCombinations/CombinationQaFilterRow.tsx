@@ -1,4 +1,3 @@
-'use client'
 import { useParamCombinationQa } from '@app/app/(signs)/_components/store/useParamCombinationQa.search'
 import type { CombinationQaFilter } from '@app/src/features/searchParams/deSearch'
 import { clsx } from 'clsx'

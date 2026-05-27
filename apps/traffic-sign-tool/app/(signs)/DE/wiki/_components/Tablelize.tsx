@@ -8,14 +8,17 @@ import {
   contentPreClass,
 } from '@app/app/_components/layout/ContentTable'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import { catalogueHtmlLang } from '@app/src/features/routing/lang'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import { WikiSign } from '../page'
 
 const isImageUrl = (value: string) => /^(https?:|data:image\/)/i.test(value)
 
 export const Tablelize = ({ data }: { data: Partial<SignStateType> | Partial<WikiSign> }) => {
+  const catalogueLangAttr = catalogueHtmlLang('DE')
+
   return (
-    <ContentTable className="mt-3">
+    <ContentTable className="mt-3" lang={catalogueLangAttr}>
       <ContentTableHead>
         <ContentTableRow>
           <ContentTableHeader className="w-[30%]">key</ContentTableHeader>

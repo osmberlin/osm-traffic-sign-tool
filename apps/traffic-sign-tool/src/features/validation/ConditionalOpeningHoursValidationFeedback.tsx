@@ -1,6 +1,8 @@
-'use client'
 import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import { useUiLocale } from '@app/app/_components/i18n/useUiLocale'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import * as m from '@app/paraglide/messages'
+import { ParaglideMessage } from '@inlang/paraglide-js-react'
 import {
   isOpeningHoursValuePromptFormat,
   type ValuePromptFormat,
@@ -15,11 +17,8 @@ type Props = {
   inputValue: string
 }
 
-const getRequestedLocale = (countryPrefix: string) => {
-  if (typeof navigator !== 'undefined' && navigator.language) {
-    return navigator.language
-  }
-  return countryPrefix.toLowerCase()
+const getRequestedLocale = (uiLocale: string, countryPrefix: string) => {
+  return uiLocale === 'de' ? 'de' : countryPrefix.toLowerCase()
 }
 
 const ValidationMessageList = ({ validation }: { validation: ConditionalValidationResult }) => {
@@ -55,9 +54,10 @@ const ValidationMessageList = ({ validation }: { validation: ConditionalValidati
 
 export const ConditionalOpeningHoursValidationFeedback = ({ format, inputValue }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
+  const uiLocale = useUiLocale()
 
   const validation = validateConditionalOpeningHours(inputValue, {
-    requestedLocale: getRequestedLocale(countryPrefix),
+    requestedLocale: getRequestedLocale(uiLocale, countryPrefix),
     countryCode: countryPrefix.toLowerCase(),
   })
 
@@ -68,11 +68,16 @@ export const ConditionalOpeningHoursValidationFeedback = ({ format, inputValue }
   return (
     <>
       <p className="mt-2 text-gray-500 group-hover:text-gray-800">
-        Please use {/* TODO: Make URL translatable */}
-        <ExternalLink href="https://wiki.openstreetmap.org/wiki/DE:Conditional_restrictions">
-          the Wiki on conditional restrictions
-        </ExternalLink>{' '}
-        to check the correct format .
+        <ParaglideMessage
+          message={m.opening_hours_wiki_block}
+          markup={{
+            link: ({ children, options }) => (
+              <ExternalLink href={options.to} blank>
+                {children}
+              </ExternalLink>
+            ),
+          }}
+        />
       </p>
       <ValidationMessageList validation={validation} />
     </>

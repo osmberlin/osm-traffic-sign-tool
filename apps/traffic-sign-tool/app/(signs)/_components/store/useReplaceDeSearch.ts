@@ -1,4 +1,3 @@
-'use client'
 import type { DeSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { useNavigate, useSearch } from '@tanstack/react-router'
 

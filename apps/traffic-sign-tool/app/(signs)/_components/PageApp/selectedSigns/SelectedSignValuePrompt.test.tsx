@@ -21,8 +21,17 @@ vi.mock('@app/app/(signs)/_components/store/useParamSigns.search', () => ({
   }),
 }))
 
-vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', () => ({
-  useCountryPrefixWithFallback: () => ({ countryPrefix: 'DE' }),
+vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', async (importOriginal) => {
+  const actual =
+    await importOriginal<typeof import('@app/app/(signs)/_components/store/CountryPrefixContext')>()
+  return {
+    ...actual,
+    useCountryPrefixWithFallback: () => ({ countryPrefix: 'DE' as const }),
+  }
+})
+
+vi.mock('@app/app/_components/i18n/useUiLocale', () => ({
+  useUiLocale: () => 'en',
 }))
 
 const openingHoursSign = {

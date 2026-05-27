@@ -1,8 +1,8 @@
-'use client'
 import {
   useAboutToolOpen,
   useAboutToolOpenActions,
 } from '@app/app/_components/store/useAboutToolOpen.zustand'
+import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Link, useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
@@ -25,7 +25,7 @@ export const Header = () => {
     <>
       <img src={svgLogo} alt="" width={48} height={48} />{' '}
       <span>
-        OSM Traffic Sign Tool 2 <small className="text-xs">{version}</small>
+        {m.header_title()} <small className="text-xs">{version}</small>
       </span>
     </>
   )
@@ -48,15 +48,14 @@ export const Header = () => {
         className="my-5 self-center leading-tight text-stone-300"
       >
         <summary className="cursor-pointer text-center underline-offset-2 hover:underline">
-          About this tool…
+          {m.header_about_summary()}
         </summary>
         <p>
-          This tool helps to find the right <code>traffic_sign=*</code> tag as well as recommended
-          tags for the road that it applies to. <br />
-          <strong>Please review all tags before updating OSM.</strong>
+          {m.header_about_body({ trafficSignTag: 'traffic_sign=*' })} <br />
+          <strong>{m.header_about_review()}</strong>
           <br />
           <ExternalLink blank href="https://github.com/osmberlin/osm-traffic-sign-tool">
-            Please report issues or help with research
+            {m.header_about_report()}
           </ExternalLink>
           .
         </p>

@@ -83,6 +83,7 @@ export const _conditions__other: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment: 'Nur in Verbindung mit Zeichen 277 "Überholverbot für Kraftfahrzeuge über 3,5 t"',
       },
     ],
@@ -175,6 +176,7 @@ export const _conditions__other: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Bitte [Wiki beachten](https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33), das Tool ist hier nicht vollständig.',
       },
@@ -203,6 +205,7 @@ export const _conditions__other: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Bitte [Wiki beachten](https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33), das Tool ist hier nicht vollständig.',
       },

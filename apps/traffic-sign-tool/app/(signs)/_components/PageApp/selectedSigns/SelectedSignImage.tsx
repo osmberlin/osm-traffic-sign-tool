@@ -1,4 +1,5 @@
-'use client'
+import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import * as m from '@app/paraglide/messages'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
@@ -15,6 +16,7 @@ const getBanderoleTextClass = (value: string) => {
 }
 
 export const SelectedSignImage = ({ sign }: Props) => {
+  const catalogueLang = useCatalogueHtmlLang()
   const showBanderole =
     'valuePrompt' in sign
       ? sign.valuePrompt &&
@@ -53,14 +55,12 @@ export const SelectedSignImage = ({ sign }: Props) => {
 
       {
         <h3 className="mt-1 w-full font-light">
-          {sign.recodgnizedSign ? sign.name : 'Unbekanntes Zeichen'}
+          {sign.recodgnizedSign ? <span lang={catalogueLang}>{sign.name}</span> : m.unknown_sign()}
         </h3>
       }
 
       {'descriptiveName' in sign && sign.descriptiveName && (
-        <div>
-          <>{sign.descriptiveName}</>
-        </div>
+        <div lang={catalogueLang}>{sign.descriptiveName}</div>
       )}
     </div>
   )

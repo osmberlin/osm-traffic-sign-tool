@@ -18,6 +18,7 @@ const createMinspeedStartSign = (speed: number, options?: { thematicOnly?: true 
   comments: [
     {
       tagReference: null,
+      lang: 'de',
       comment: minspeedLaneComment,
     },
   ],
@@ -54,6 +55,7 @@ export const _speed_minspeed_start: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment: minspeedLaneComment,
       },
     ],

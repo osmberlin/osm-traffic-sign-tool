@@ -1,5 +1,5 @@
-'use client'
 import { isDev } from '@app/app/_components/utils/isDev'
+import { catalogueHtmlLang } from '@app/src/features/routing/lang'
 import {
   CountryPrefixType,
   createSvgImportname,
@@ -101,6 +101,13 @@ export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
   }
 
   return (
-    <img src={file} height={100} width={100} alt={sign.descriptiveName} className={className} />
+    <img
+      src={file}
+      height={100}
+      width={100}
+      alt={sign.descriptiveName}
+      className={className}
+      lang={catalogueHtmlLang(countryPrefix)}
+    />
   )
 }

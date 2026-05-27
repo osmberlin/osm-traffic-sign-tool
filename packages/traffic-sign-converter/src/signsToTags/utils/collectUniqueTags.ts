@@ -1,12 +1,15 @@
-import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
+import { type SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
 
 export const collectUniqueTags = (signs: SignStateType[]) => {
   const mergedUniqueTags: Map<string, { key: string; value: string }> = new Map()
 
   signs
     .filter((sign) => sign.recodgnizedSign === true)
-    .filter((sign) => sign.tagRecommendations !== 'none')
     .forEach((sign) => {
+      if (sign.tagRecommendations === 'none') {
+        return
+      }
+
       const { uniqueTags } = sign.tagRecommendations
 
       if (uniqueTags) {

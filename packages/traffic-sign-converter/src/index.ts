@@ -29,7 +29,10 @@ export {
 } from './data-definitions/catalogueFocus.js'
 export {
   focusAreas,
+  modifierSignCatalogueCategories,
+  signCategories,
   signFocusTags,
+  trafficSignCatalogueCategories,
   catalogueFocusViews,
   taggingSuggestionsQaStatuses,
 } from './data-definitions/TrafficSignDataTypes.js'
@@ -45,8 +48,11 @@ export type {
   CatalogueFocusLevel,
   CatalogueFocusView,
   FocusArea,
+  ModifierSignCatalogueCategory,
+  SignCategory,
   SignFocusTag,
   TaggingSuggestionsQaStatus,
+  TrafficSignCatalogueCategory,
   ValuePrompt,
 } from './data-definitions/TrafficSignDataTypes.js'
 export type {

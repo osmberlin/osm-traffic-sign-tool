@@ -2,10 +2,12 @@ import { isSupportedLang } from '@app/src/features/routing/lang'
 import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { createFileRoute, notFound, Outlet, redirect } from '@tanstack/react-router'
 
-function LangLayoutComponent() {
-  return <Outlet />
-}
-
+/**
+ * Sign catalogue routes under `/$lang/…`.
+ *
+ * `params.lang` is the catalogue country prefix (e.g. `DE`), not the UI language.
+ * UI locale is managed separately by Paraglide + `useUiLocale` (localStorage).
+ */
 export const Route = createFileRoute('/$lang')({
   beforeLoad: ({ location, params }) => {
     if (!isSupportedLang(params.lang)) {
@@ -24,5 +26,5 @@ export const Route = createFileRoute('/$lang')({
     return { countryPrefix: params.lang }
   },
   validateSearch: deSearchSchema,
-  component: LangLayoutComponent,
+  component: Outlet,
 })

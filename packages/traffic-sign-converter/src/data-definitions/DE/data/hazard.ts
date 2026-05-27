@@ -56,6 +56,7 @@ export const _hazard: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Für dieses Verkehrszeichen scheint kein etablierter `hazard=*` ([Key:hazard]) vorzuliegen.',
       },
@@ -272,6 +273,7 @@ export const _hazard: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Alternative smoothness values: `intermediate`, `very_bad`. See [smoothness gallery](https://wiki.openstreetmap.org/wiki/Key:smoothness/Gallery) for examples.',
       },
@@ -303,6 +305,7 @@ export const _hazard: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Alternative smoothness values: `intermediate`, `very_bad`. See [smoothness gallery](https://wiki.openstreetmap.org/wiki/Key:smoothness/Gallery) for examples.',
       },
@@ -334,6 +337,7 @@ export const _hazard: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Alternative smoothness values: `intermediate`, `very_bad`. See [smoothness gallery](https://wiki.openstreetmap.org/wiki/Key:smoothness/Gallery) for examples.',
       },
@@ -366,6 +370,7 @@ export const _hazard: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Alternative smoothness values: `intermediate`, `very_bad`. See [smoothness gallery](https://wiki.openstreetmap.org/wiki/Key:smoothness/Gallery) for examples.',
       },
@@ -423,6 +428,7 @@ export const _hazard: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Es gibt eine Reihe weiterer Zeichen mit expliziten IDs. Das Tool unterstützt zurzeit nur 10 % und 15 % als explizite Einträge und verwendet die Klammer-Notation für alle weiteren Werte. Eine [Liste aller offiziellen IDs findest du im Wiki](https://de.wikipedia.org/wiki/Bildtafel_der_Verkehrszeichen_in_der_Bundesrepublik_Deutschland_seit_2017#Gefahrzeichen_nach_Anlage_1_(zu_%C2%A7_40_Absatz_6_und_7_StVO)).',
       },
@@ -529,6 +535,7 @@ export const _hazard: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Es gibt eine Reihe weiterer Zeichen mit expliziten IDs. Das Tool unterstützt zurzeit nur 10 % und 15 % als explizite Einträge und verwendet die Klammer-Notation für alle weiteren Werte. Eine [Liste aller offiziellen IDs findest du im Wiki](https://de.wikipedia.org/wiki/Bildtafel_der_Verkehrszeichen_in_der_Bundesrepublik_Deutschland_seit_2017#Gefahrzeichen_nach_Anlage_1_(zu_%C2%A7_40_Absatz_6_und_7_StVO)).',
       },

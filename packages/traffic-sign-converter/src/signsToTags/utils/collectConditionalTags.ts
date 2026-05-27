@@ -1,4 +1,4 @@
-import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
+import { type SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
 
 export const collectConditionalTags = (signs: SignStateType[]) => {
   const mergedConditionalTags: Map<string, { key: string; value: string }> = new Map()
@@ -9,8 +9,11 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
   signs
     .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind === 'traffic_sign')
-    .filter((sign) => sign.tagRecommendations !== 'none')
     .forEach((sign) => {
+      if (sign.tagRecommendations === 'none') {
+        return
+      }
+
       const { conditionalTags } = sign.tagRecommendations
 
       if (conditionalTags) {
@@ -44,8 +47,11 @@ export const collectConditionalTags = (signs: SignStateType[]) => {
   signs
     .filter((sign) => sign.recodgnizedSign === true)
     .filter((sign) => sign.kind !== 'traffic_sign')
-    .filter((sign) => sign.tagRecommendations !== 'none')
     .forEach((sign) => {
+      if (sign.tagRecommendations === 'none') {
+        return
+      }
+
       // If a sign has `conditionalTags`, we update the previously
       // applied `traffic_sign` conditional tags to apply the conditional syntax to key and value.
       // Data:

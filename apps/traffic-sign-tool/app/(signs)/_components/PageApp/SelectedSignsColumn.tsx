@@ -1,4 +1,3 @@
-'use client'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { StateHelper } from '@app/app/_components/layout/StateHelper'
 import { Reorder } from 'framer-motion'

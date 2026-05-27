@@ -46,9 +46,7 @@ export type TrafficSignType = SharedId &
   } & SharedComments &
   SharedQuestions &
   SharedCompatibility &
-  SharedCatalogue<
-    'traffic_sign' | 'object_sign' | 'surface_sign' | 'hazard_sign' | 'signpost' | 'speed'
-  > &
+  SharedCatalogue<TrafficSignCatalogueCategory> &
   SharedIdentifiyingTags &
   SharedImage &
   SharedTaggingSuggestionsQa
@@ -65,7 +63,7 @@ export type ModifierSignType = Prettify<
     } & SharedComments &
     SharedQuestions &
     SharedCompatibility &
-    SharedCatalogue<'exception_modifier' | 'condition_modifier' | 'direction_modifier'> &
+    SharedCatalogue<ModifierSignCatalogueCategory> &
     SharedIdentifiyingTags &
     SharedImage &
     SharedTaggingSuggestionsQa
@@ -88,6 +86,39 @@ type SharedCompatibility = {
     incompatibleModifiers?: string[]
   }
 }
+export const trafficSignCatalogueCategories = [
+  'traffic_sign',
+  'object_sign',
+  'surface_sign',
+  'hazard_sign',
+  'signpost',
+  'speed',
+] as const
+
+export const modifierSignCatalogueCategories = [
+  'exception_modifier',
+  'condition_modifier',
+  'direction_modifier',
+] as const
+
+export type TrafficSignCatalogueCategory = (typeof trafficSignCatalogueCategories)[number]
+export type ModifierSignCatalogueCategory = (typeof modifierSignCatalogueCategories)[number]
+
+/** Sign-picker section order; must list every catalogue category exactly once. */
+export const signCategories = [
+  'traffic_sign',
+  'exception_modifier',
+  'condition_modifier',
+  'direction_modifier',
+  'speed',
+  'hazard_sign',
+  'surface_sign',
+  'object_sign',
+  'signpost',
+] as const satisfies readonly (TrafficSignCatalogueCategory | ModifierSignCatalogueCategory)[]
+
+export type SignCategory = (typeof signCategories)[number]
+
 export const signFocusTags = ['bike_foot', 'parking', 'highway'] as const
 export type SignFocusTag = (typeof signFocusTags)[number]
 
@@ -113,7 +144,7 @@ type SharedTaggingSuggestionsQa = {}
 
 type TagRecommendationsNone = 'none'
 
-type TagRecommendationsTrafficSignObject = {
+export type TagRecommendationsTrafficSignObject = {
   highwayValues?: string[]
   accessTags?: { key: string; value: string }[]
   uniqueTags?: (
@@ -130,7 +161,7 @@ type TagRecommendationsTrafficSignObject = {
   }[]
 }
 
-type TagRecommendationsModifierSignObject = {
+export type TagRecommendationsModifierSignObject = {
   highwayValues?: string[]
   accessTags?: { key: string; value: string }[]
   modifierValue?: string
@@ -160,6 +191,8 @@ export type ValuePrompt<T extends ValuePromptFormat = ValuePromptFormat> = {
 export type SignComentType = {
   tagReference?: string | null
   important?: true | undefined
+  /** BCP-47 language of the comment text (e.g. `de`, `en`). */
+  lang?: string
   comment: string
 }
 

@@ -14,6 +14,7 @@ export const _overtaking: SignType[] = [
     comments: [
       {
         tagReference: 'overtaking:forward=*',
+        lang: 'de',
         comment:
           'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking=forward/backward] entsprechend der Wegrichtung.',
       },
@@ -42,6 +43,7 @@ export const _overtaking: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking:hgv=forward/backward] entsprechend der Wegrichtung.',
       },
@@ -72,10 +74,12 @@ export const _overtaking: SignType[] = [
       {
         tagReference: null,
         important: true,
+        lang: 'de',
         comment: 'Es gibt noch kein etabliertes Tagging Schema für dieses Verkehrszeichen.',
       },
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Wenn Überholen in eine Richtung erlaubt: [Tag:overtaking:hgv=forward/backward] entsprechend der Wegrichtung.',
       },

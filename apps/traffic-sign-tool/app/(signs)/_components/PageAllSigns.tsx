@@ -9,21 +9,25 @@ import {
   contentPreClass,
 } from '@app/app/_components/layout/ContentTable'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import * as m from '@app/paraglide/messages'
+import { catalogueHtmlLang } from '@app/src/features/routing/lang'
 import { PackageSvgTrafficSign } from './PackageSvgTrafficSign'
 import { CountryPrefixProvider } from './store/CountryPrefixContext'
 import { PageProps } from './types'
 
 export const PageAllApp = ({ countryPrefix, trafficSignData }: PageProps) => {
+  const catalogueLangAttr = catalogueHtmlLang(countryPrefix)
+
   return (
     <CountryPrefixProvider countryPrefix={countryPrefix}>
       <ContentPageLayout>
         <h2 className="my-4 text-3xl font-light text-black uppercase">
-          Full sign list {trafficSignData.length}
+          {m.page_all_signs_title({ count: String(trafficSignData.length) })}
         </h2>
         <p>
-          All the signs that are defined in this tool and{' '}
+          {m.page_all_signs_intro()}{' '}
           <ExternalLink href="https://www.npmjs.com/package/@osm-traffic-signs/converter">
-            the NPM package that it is using
+            {m.page_all_signs_package()}
           </ExternalLink>
           .
         </p>
@@ -31,8 +35,10 @@ export const PageAllApp = ({ countryPrefix, trafficSignData }: PageProps) => {
         <ContentTable>
           <ContentTableHead>
             <ContentTableRow>
-              <ContentTableHeader className="w-[18%]">Sign key</ContentTableHeader>
-              <ContentTableHeader>Raw sign config data</ContentTableHeader>
+              <ContentTableHeader className="w-[18%]">
+                {m.page_all_signs_sign_key()}
+              </ContentTableHeader>
+              <ContentTableHeader>{m.page_all_signs_raw_config()}</ContentTableHeader>
             </ContentTableRow>
           </ContentTableHead>
           <ContentTableBody>
@@ -40,11 +46,11 @@ export const PageAllApp = ({ countryPrefix, trafficSignData }: PageProps) => {
               return (
                 <ContentTableRow key={sign.osmValuePart}>
                   <ContentTableHeader className="space-y-3 text-center">
-                    <code>{sign.osmValuePart}</code>
+                    <code lang={catalogueLangAttr}>{sign.osmValuePart}</code>
                     <br />
                     <PackageSvgTrafficSign sign={sign} className="inline-block h-auto w-20" />
                   </ContentTableHeader>
-                  <ContentTableCell>
+                  <ContentTableCell lang={catalogueLangAttr}>
                     <pre className={contentPreClass}>{JSON.stringify(sign, undefined, 2)}</pre>
                   </ContentTableCell>
                 </ContentTableRow>

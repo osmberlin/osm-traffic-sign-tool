@@ -1,3 +1,5 @@
+import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import * as m from '@app/paraglide/messages'
 import { InformationCircleIcon } from '@heroicons/react/20/solid'
 import { classifyTaggingSuggestionsQa, type SignStateType } from '@osm-traffic-signs/converter'
 
@@ -5,7 +7,7 @@ type Props = {
   paramSigns: SignStateType[]
 }
 
-const renderSignKeys = (keys: string[]) =>
+const renderSignKeys = (keys: string[], catalogueLang: string) =>
   keys.map((key, index) => {
     const isLast = index === keys.length - 1
     const isSecondLast = index === keys.length - 2
@@ -14,13 +16,15 @@ const renderSignKeys = (keys: string[]) =>
     return (
       <span key={key}>
         {separator}
-        <code>{key}</code>
+        <code lang={catalogueLang}>{key}</code>
       </span>
     )
   })
 
 export const ExplicitNoneTaggingNote = ({ paramSigns }: Props) => {
+  const catalogueLang = useCatalogueHtmlLang()
   const hasMultipleSelectedSigns = paramSigns.length > 1
+  const trafficSignKey = 'traffic_sign'
 
   const explicitNoneSignKeys = paramSigns
     .filter((sign) => sign.recodgnizedSign)
@@ -37,18 +41,21 @@ export const ExplicitNoneTaggingNote = ({ paramSigns }: Props) => {
       <span>
         {explicitNoneSignKeys.length === 1 && !hasMultipleSelectedSigns ? (
           <>
-            This sign (<code>{explicitNoneSignKeys[0]}</code>) is marked to have no tagging
-            recommendations apart from the <code>traffic_sign</code> key.
+            {m.explicit_none_single_home_prefix()}
+            <code lang={catalogueLang}>{explicitNoneSignKeys[0]}</code>
+            {m.explicit_none_single_home_suffix({ trafficSignKey })}
           </>
         ) : explicitNoneSignKeys.length === 1 ? (
           <>
-            Sign <code>{explicitNoneSignKeys[0]}</code> is marked to have no tagging recommendations
-            apart from the <code>traffic_sign</code> key.
+            {m.explicit_none_single_prefix()}
+            <code lang={catalogueLang}>{explicitNoneSignKeys[0]}</code>
+            {m.explicit_none_single_suffix({ trafficSignKey })}
           </>
         ) : (
           <>
-            Signs {renderSignKeys(explicitNoneSignKeys)} are marked to have no tagging
-            recommendations apart from the <code>traffic_sign</code> key.
+            {m.explicit_none_multiple_prefix()}
+            {renderSignKeys(explicitNoneSignKeys, catalogueLang)}{' '}
+            {m.explicit_none_multiple_suffix({ trafficSignKey })}
           </>
         )}
       </span>

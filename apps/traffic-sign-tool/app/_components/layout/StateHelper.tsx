@@ -1,4 +1,3 @@
-'use client'
 import { isDev } from '../utils/isDev'
 
 type Props = {

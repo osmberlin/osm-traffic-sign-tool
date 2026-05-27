@@ -1,4 +1,3 @@
-'use client'
 import { parseSignsParam, serializeSignsParam } from '@app/src/features/searchParams/deSearch'
 import {
   combineSignIdSignValue,

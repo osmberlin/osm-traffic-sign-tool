@@ -1,4 +1,3 @@
-'use client'
 import { SelectedSignImage } from '@app/app/(signs)/_components/PageApp/selectedSigns/SelectedSignImage'
 import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { trafficSignTagToSigns } from '@osm-traffic-signs/converter'

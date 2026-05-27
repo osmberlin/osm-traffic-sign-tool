@@ -1,7 +1,7 @@
-'use client'
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
 import { useParamQ } from '@app/app/(signs)/_components/store/useParamQ.search'
 import { useParamQCountActions } from '@app/app/(signs)/_components/store/useParamQCount.zustand'
+import * as m from '@app/paraglide/messages'
 import { filterSignsByFocus, SignType } from '@osm-traffic-signs/converter'
 import { useEffect } from 'react'
 import { SignGrid } from './SignGrid'
@@ -37,5 +37,5 @@ export const SignGridSearchQuery = ({ trafficSignData }: Props) => {
 
   if (!paramQ) return null
 
-  return <SignGrid headline="Suchergebnisse" signs={searchSigns} />
+  return <SignGrid headline={m.search_results()} signs={searchSigns} />
 }

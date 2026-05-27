@@ -1,3 +1,4 @@
+import * as m from '@app/paraglide/messages'
 import { ResultColumn } from './PageApp/ResultColumn'
 import { SelectedSignsColumn } from './PageApp/SelectedSignsColumn'
 import { FocusFilterRow } from './PageApp/signGroups/FocusFilterRow'
@@ -15,7 +16,9 @@ export const PageApp = ({ countryPrefix, trafficSignData }: PageProps) => {
             <SignSelectionColumn trafficSignData={trafficSignData} />
           </section>
           <section className="relative min-w-0 rounded-sm bg-stone-300 py-4">
-            <h2 className="mb-4 text-center text-lg font-light uppercase">Selected Signs</h2>
+            <h2 className="mb-4 text-center text-lg font-light uppercase">
+              {m.page_selected_signs()}
+            </h2>
             <SelectedSignsColumn />
           </section>
           <section className="relative min-w-0 rounded-sm border border-white bg-stone-900 px-4 py-4 text-stone-100 md:border-0">

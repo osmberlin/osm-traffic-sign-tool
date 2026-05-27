@@ -1,4 +1,3 @@
-'use client'
 import { PackageSvgTrafficSign } from '@app/app/(signs)/_components/PackageSvgTrafficSign'
 import {
   collectSignTaskEntries,
@@ -7,6 +6,7 @@ import {
   type SignTaskType,
 } from '@app/app/(signs)/_components/PageSignsQa/taggingQaTaskFormat'
 import { TaggingQaTaskResults } from '@app/app/(signs)/_components/PageSignsQa/TaggingQaTaskResults'
+import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import {
   ContentTable,
   ContentTableBody,
@@ -16,19 +16,20 @@ import {
   ContentTableRow,
   contentPreClass,
 } from '@app/app/_components/layout/ContentTable'
+import * as m from '@app/paraglide/messages'
 import { classifyTaggingSuggestionsQa, type SignType } from '@osm-traffic-signs/converter'
 import { useState } from 'react'
 
 const qaCategoryLabels = {
-  withSuggestions: 'With tagging suggestions',
-  missingSuggestions: 'Missing tagging suggestions',
-  explicitNoSuggestions: 'Explicit no tagging suggestions',
+  withSuggestions: () => m.qa_with_suggestions(),
+  missingSuggestions: () => m.qa_missing_suggestions(),
+  explicitNoSuggestions: () => m.qa_explicit_no_suggestions(),
 } as const
 
-const taskOptions: { value: SignTaskType; label: string }[] = [
-  { value: 'explicit_none', label: 'Mark sign as "has no tagging suggestion"' },
-  { value: 'add_suggestions', label: 'Add tagging suggestions' },
-  { value: 'comment', label: 'Leave a comment' },
+const taskOptions: { value: SignTaskType; label: () => string }[] = [
+  { value: 'explicit_none', label: m.qa_task_explicit_none },
+  { value: 'add_suggestions', label: m.qa_task_add_suggestions },
+  { value: 'comment', label: m.qa_task_comment },
 ]
 
 const radioClassName =
@@ -39,6 +40,7 @@ type Props = {
 }
 
 export const TaggingQaTable = ({ signs }: Props) => {
+  const catalogueLang = useCatalogueHtmlLang()
   const [tasks, setTasks] = useState<Map<string, ReturnType<typeof emptySignTaskState>>>(
     () => new Map(),
   )
@@ -75,9 +77,9 @@ export const TaggingQaTable = ({ signs }: Props) => {
       <ContentTable>
         <ContentTableHead>
           <ContentTableRow>
-            <ContentTableHeader className="w-[14%]">Sign key</ContentTableHeader>
-            <ContentTableHeader className="w-[36%]">Task</ContentTableHeader>
-            <ContentTableHeader>Raw sign config data</ContentTableHeader>
+            <ContentTableHeader className="w-[14%]">{m.qa_table_sign_key()}</ContentTableHeader>
+            <ContentTableHeader className="w-[36%]">{m.qa_table_task()}</ContentTableHeader>
+            <ContentTableHeader>{m.page_all_signs_raw_config()}</ContentTableHeader>
           </ContentTableRow>
         </ContentTableHead>
         <ContentTableBody>
@@ -89,14 +91,18 @@ export const TaggingQaTable = ({ signs }: Props) => {
             return (
               <ContentTableRow key={sign.osmValuePart}>
                 <ContentTableHeader className="space-y-3 text-center">
-                  <code>{sign.osmValuePart}</code>
+                  <code lang={catalogueLang}>{sign.osmValuePart}</code>
                   <br />
                   <PackageSvgTrafficSign sign={sign} className="inline-block h-auto w-20" />
                 </ContentTableHeader>
                 <ContentTableCell className="align-top text-sm leading-snug">
-                  <p className="mb-3 font-medium text-stone-700">{qaCategoryLabels[qaCategory]}</p>
+                  <p className="mb-3 font-medium text-stone-700">
+                    {qaCategoryLabels[qaCategory]()}
+                  </p>
                   <fieldset className="space-y-3">
-                    <legend className="sr-only">Task for {sign.osmValuePart}</legend>
+                    <legend className="sr-only">
+                      {m.qa_task_for({ signKey: sign.osmValuePart })}
+                    </legend>
                     {taskOptions.map(({ value, label }) => {
                       const id = `${groupName}-${value}`
 
@@ -110,7 +116,7 @@ export const TaggingQaTable = ({ signs }: Props) => {
                             onChange={() => setTaskType(sign.osmValuePart, value)}
                             className={radioClassName}
                           />
-                          <label htmlFor={id}>{label}</label>
+                          <label htmlFor={id}>{label()}</label>
                         </div>
                       )
                     })}
@@ -125,7 +131,7 @@ export const TaggingQaTable = ({ signs }: Props) => {
                     )}
                   </fieldset>
                 </ContentTableCell>
-                <ContentTableCell>
+                <ContentTableCell lang={catalogueLang}>
                   <pre className={contentPreClass}>{JSON.stringify(sign, undefined, 2)}</pre>
                 </ContentTableCell>
               </ContentTableRow>

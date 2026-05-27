@@ -1,6 +1,6 @@
-'use client'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
+import * as m from '@app/paraglide/messages'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import { signsToTags, toTag } from '@osm-traffic-signs/converter'
 import { useCountryPrefixWithFallback } from '../../store/CountryPrefixContext'
@@ -19,10 +19,7 @@ export const ResultTagRecommendations = () => {
   return (
     <>
       <div className="mt-10 mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-light uppercase">
-          Recommended {/* <code>highway</code> */}
-          tags
-        </h2>
+        <h2 className="text-lg font-light uppercase">{m.recommended_tags_heading()}</h2>
 
         {copyAllTags && (
           <div>

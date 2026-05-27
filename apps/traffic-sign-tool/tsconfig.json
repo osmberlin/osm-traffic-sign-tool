@@ -25,6 +25,8 @@
     "src/**/*.d.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "paraglide/**/*.ts",
+    "paraglide/**/*.js",
     "**/*.test.ts"
   ],
   "exclude": ["node_modules", "app/_components/catalyst/_unused/**"]

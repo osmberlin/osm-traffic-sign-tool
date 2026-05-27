@@ -1,16 +1,9 @@
-'use client'
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
+import * as m from '@app/paraglide/messages'
+import { getFocusLabel } from '@app/src/features/i18n/focusLabels'
 import type { FocusArea } from '@app/src/features/searchParams/deSearch'
 import { focusAreas } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
-
-const focusLabels: Record<FocusArea, string> = {
-  default: 'Standard',
-  bike_foot: 'Fuß und Rad',
-  parking: 'Parkraum',
-  highway: 'Straßenraum',
-  all: 'Alle',
-}
 
 export const FocusFilterRow = () => {
   const { uiFocus, setSingleFocus } = useParamFocus()
@@ -27,7 +20,7 @@ export const FocusFilterRow = () => {
 
   return (
     <nav
-      aria-label="Verkehrszeichen-Fokus"
+      aria-label={m.focus_nav_label()}
       className="w-full rounded-sm px-2 py-1.5 outline -outline-offset-1 outline-stone-500/50"
     >
       <div className="flex flex-wrap gap-x-4 gap-y-0.5">
@@ -47,7 +40,7 @@ export const FocusFilterRow = () => {
                   : 'text-stone-400 hover:bg-stone-700/60 hover:text-stone-100',
               )}
             >
-              {focusLabels[focus]}
+              {getFocusLabel(focus)}
             </button>
           )
         })}

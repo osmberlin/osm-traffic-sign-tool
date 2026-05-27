@@ -1,4 +1,3 @@
-'use client'
 import { animate, MotionValue, useMotionValue } from 'framer-motion'
 import { useEffect } from 'react'
 

@@ -1,6 +1,7 @@
-'use client'
 import { CombinationQaFilterRow } from '@app/app/(signs)/_components/PageCheckSignCombinations/CombinationQaFilterRow'
 import type { CombinationQaCounts } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaFilters'
+import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import * as m from '@app/paraglide/messages'
 import type { CombinationQaFilter } from '@app/src/features/searchParams/deSearch'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import type { SignType } from '@osm-traffic-signs/converter'
@@ -23,6 +24,7 @@ export const CombinationQaSignPicker = ({
   onPrimarySelect,
   onFilterChange,
 }: Props) => {
+  const catalogueLang = useCatalogueHtmlLang()
   const selectedSign = filteredPrimarySigns.find(
     (sign) => sign.osmValuePart === primaryOsmValuePart,
   )
@@ -41,12 +43,21 @@ export const CombinationQaSignPicker = ({
       >
         <ChevronRightIcon className="size-4 shrink-0 text-stone-500 transition-transform group-open:rotate-90" />
         <span>
-          {selectedSign
-            ? `Primary sign: ${selectedSign.osmValuePart} – ${selectedSign.descriptiveName}`
-            : 'Select primary sign'}
+          {selectedSign ? (
+            <>
+              {m.combinations_primary_select()}:{' '}
+              <span lang={catalogueLang}>
+                {selectedSign.osmValuePart} – {selectedSign.descriptiveName}
+              </span>
+            </>
+          ) : (
+            m.combinations_primary_select()
+          )}
         </span>
         {selectedSign && (
-          <span className="text-stone-500">({filteredPrimarySigns.length} matching filter)</span>
+          <span className="text-stone-500">
+            {m.combinations_primary_matching({ count: String(filteredPrimarySigns.length) })}
+          </span>
         )}
       </summary>
 
@@ -74,7 +85,7 @@ export const CombinationQaSignPicker = ({
                     isSelected ? 'bg-stone-900 text-stone-50' : 'text-stone-700 hover:bg-stone-100',
                   )}
                 >
-                  <span className="min-w-0 flex-1">
+                  <span lang={catalogueLang} className="min-w-0 flex-1">
                     <code className="block font-medium">{sign.osmValuePart}</code>
                     <span
                       className={clsx(
@@ -100,7 +111,7 @@ export const CombinationQaSignPicker = ({
         </ul>
 
         {filteredPrimarySigns.length === 0 && (
-          <p className="text-sm text-stone-600">No primary signs match this filter.</p>
+          <p className="text-sm text-stone-600">{m.combinations_no_match()}</p>
         )}
       </div>
     </details>

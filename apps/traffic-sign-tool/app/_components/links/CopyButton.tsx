@@ -1,4 +1,4 @@
-'use client'
+import * as m from '@app/paraglide/messages'
 import { useState } from 'react'
 import { buttonStyle, buttonStyleSecondary } from './buttonStyles'
 
@@ -40,7 +40,7 @@ export const CopyButton = ({ text, secondary = false, children }: CopyButtonProp
         className={secondary ? buttonStyleSecondary : buttonStyle}
         disabled={!text}
       >
-        {copiedText ? <span>copied</span> : children}
+        {copiedText ? <span>{m.copied()}</span> : children}
       </button>
     </div>
   )

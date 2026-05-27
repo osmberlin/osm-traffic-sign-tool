@@ -11,6 +11,7 @@ import { inlineCodeClass, proseLightClass } from '@app/app/_components/layout/pr
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { linkStyle } from '@app/app/_components/links/linkStyles'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
+import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { taginfoTrafficSignData } from '@internal/taginfo'
 import { Link } from '@tanstack/react-router'
@@ -29,7 +30,7 @@ export default function TaginfoPage() {
   return (
     <ContentPageLayout>
       <h2 className="my-4 text-3xl font-light text-black uppercase">
-        Taginfo traffic sign values {data.length}
+        {m.taginfo_title_count({ count: String(data.length) })}
       </h2>
       <div className={proseLightClass}>
         <p>

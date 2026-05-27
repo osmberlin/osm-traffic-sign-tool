@@ -1,4 +1,3 @@
-'use client'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
 

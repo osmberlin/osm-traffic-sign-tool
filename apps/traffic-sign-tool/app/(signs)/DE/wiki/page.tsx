@@ -7,6 +7,7 @@ import {
   ContentTableHeader,
   ContentTableRow,
 } from '@app/app/_components/layout/ContentTable'
+import * as m from '@app/paraglide/messages'
 import { trafficSignsWiki } from '@internal/wiki'
 import { SignStateType, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
@@ -31,12 +32,12 @@ export default function WikiPage() {
   return (
     <ContentPageLayout>
       <h2 className="my-4 text-3xl font-light text-black uppercase">
-        All Wiki Signs {innerTrafficSignsWiki.length} — {missingSignCount} missing
+        {m.wiki_title_counts({
+          total: String(innerTrafficSignsWiki.length),
+          missing: String(missingSignCount),
+        })}
       </h2>
-      <p>
-        This page is to understand, debug and improve the trafficSigns object that is the source of
-        data for this app.
-      </p>
+      <p>{m.wiki_page_intro()}</p>
 
       <ContentTable>
         <ContentTableHead>

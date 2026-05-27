@@ -15,6 +15,7 @@ export const _conditions__only_for_thing: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Dieses Schild umfasst sämtliche zweispurige, motorisierte Fahrzeuge (PKW, LKW, etc.), während Zeichen 1010-58 ausschließlich für PKW gilt. Im Wiki wird das selten genutzte Tag [Tag:double_tracked_motor_vehicle=*] erwähnt, das grundsätzlich richtig wäre, aber mit nur ~300 Verwendungen nicht etabliert ist.',
       },

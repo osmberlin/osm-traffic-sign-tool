@@ -1,4 +1,4 @@
-'use client'
+import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { ConditionalOpeningHoursValidationFeedback } from '@app/src/features/validation/ConditionalOpeningHoursValidationFeedback'
 import {
@@ -21,6 +21,7 @@ const getCommittedInputValue = (sign: ValuePromptSign): string | number | undefi
 
 // Local draft buffers typing; URL `signs` search param updates via useParamSigns (TanStack navigate).
 const SelectedSignValuePromptFields = ({ sign }: { sign: ValuePromptSign }) => {
+  const catalogueLang = useCatalogueHtmlLang()
   const { updateSignValue, updateSignValueDebounced, cancelPendingSignValueUpdate } =
     useParamSigns()
   const [draftValue, setDraftValue] = useState<string | number | null>(null)
@@ -49,7 +50,7 @@ const SelectedSignValuePromptFields = ({ sign }: { sign: ValuePromptSign }) => {
   return (
     <form className="group mx-1 mt-2 rounded-sm border border-stone-400/50 p-1 text-sm leading-tight">
       <label htmlFor={sign.osmValuePart} className="break-word">
-        {sign.valuePrompt.prompt}:
+        <span lang={catalogueLang}>{sign.valuePrompt.prompt}</span>:
       </label>
       <input
         onChange={handleChange}

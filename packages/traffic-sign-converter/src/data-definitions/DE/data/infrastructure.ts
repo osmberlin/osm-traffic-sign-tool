@@ -15,6 +15,7 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
@@ -45,6 +46,7 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: 'highway=bridleway',
+        lang: 'de',
         comment:
           'Mit highway=bridleway wird die Benutzungserlaubnis auf Reitende beschränkt, siehe [Default Access Restrictions](https://wiki.openstreetmap.org/wiki/OSM_tags_for_routing/Access-Restrictions#Germany).',
       },
@@ -73,6 +75,7 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: 'highway=footway',
+        lang: 'de',
         comment: 'Ohne Zusatzzeichen sind diese Wege nicht für Radfahrende zugelassen.',
       },
     ],
@@ -124,6 +127,7 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Manchmal wird auch [Tag:highway=cycleway] genutzt (siehe [Kontroversen](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path)). Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
@@ -158,10 +162,12 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: 'highway=cycleway',
+        lang: 'de',
         comment:
           'Andere Länder haben sich auf ein Tagging mit [Tag:highway=cycleway] geeinigt (siehe [Kontroversen](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path)).',
       },
       {
+        lang: 'de',
         comment:
           'Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
@@ -195,10 +201,12 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: 'highway=cycleway',
+        lang: 'de',
         comment:
           'Andere Länder haben sich auf ein Tagging mit [Tag:highway=cycleway] geeinigt (siehe [Kontroversen](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Entscheidungshilfe_zwischen_footway.2C_cycleway_und_path)).',
       },
       {
+        lang: 'de',
         comment:
           'Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
@@ -229,6 +237,7 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: 'highway=pedestrian',
+        lang: 'de',
         comment:
           'Das Verkehrszeichen und die Highway-Klasse werden für alle Straßen in der Zone eingetragen.',
       },
@@ -253,6 +262,7 @@ export const _infrastructure: SignType[] = [
     tagRecommendations: {},
     comments: [
       {
+        lang: 'de',
         comment:
           'Radschnellwege werden in OSM als Relation eingetragen, siehe [DE:Key:cycle_highway](https://wiki.openstreetmap.org/wiki/DE:Key:cycle_highway).',
       },
@@ -288,6 +298,7 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: 'highway=*',
+        lang: 'de',
         comment:
           'Die Straßenklasse ist nach ihrer Verkehrsbedeutung auszuwählen. Siehe auch [Wiki Fahrradstraßen](https://wiki.openstreetmap.org/wiki/DE:Tag:bicycle_road%3Dyes)',
       },
@@ -337,6 +348,7 @@ export const _infrastructure: SignType[] = [
     comments: [
       {
         tagReference: 'highway=*',
+        lang: 'de',
         comment:
           'Die Straßenklasse ist nach ihrer Verkehrsbedeutung auszuwählen. Siehe auch [Wiki Fahrradstraßen](https://wiki.openstreetmap.org/wiki/DE:Tag:bicycle_road%3Dyes)',
       },
@@ -379,6 +391,7 @@ export const _infrastructure: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Impliziert [Tag:foot=yes], [Tag:bicycle=yes]. Kein [Key:maxspeed] setzen, siehe [Tag:highway=living_street]. Auch maxspeed-Source-Angaben sind nicht wichtig, da der highway-Tag bereits ausreicht.',
       },

@@ -1,4 +1,3 @@
-'use client'
 import {
   buildGithubIssueUrl,
   formatTaggingQaTaskResults,
@@ -7,16 +6,18 @@ import {
 import { contentPreClass } from '@app/app/_components/layout/ContentTable'
 import { buttonStyle } from '@app/app/_components/links/buttonStyles'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import * as m from '@app/paraglide/messages'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 type Props = {
   entries: SignTaskEntry[]
 }
 
 export const TaggingQaTaskResults = ({ entries }: Props) => {
-  const [copyLabel, setCopyLabel] = useState('Copy to clipboard')
+  const [copied, setCopied] = useState(false)
+  const copyFeedbackGenerationRef = useRef(0)
   const resultText = formatTaggingQaTaskResults(entries)
   const issueUrl = entries.length > 0 ? buildGithubIssueUrl(entries) : undefined
   const hasResults = entries.length > 0
@@ -27,8 +28,14 @@ export const TaggingQaTaskResults = ({ entries }: Props) => {
     }
 
     await navigator.clipboard.writeText(resultText)
-    setCopyLabel('Copied!')
-    setTimeout(() => setCopyLabel('Copy to clipboard'), 2000)
+    const generation = ++copyFeedbackGenerationRef.current
+    setCopied(true)
+
+    window.setTimeout(() => {
+      if (copyFeedbackGenerationRef.current === generation) {
+        setCopied(false)
+      }
+    }, 2000)
   }
 
   return (
@@ -53,25 +60,20 @@ export const TaggingQaTaskResults = ({ entries }: Props) => {
             hasResults ? 'text-stone-400' : 'text-stone-500',
           )}
         />
-        <span>
-          Task Results ({entries.length}) – Copy those into a new Github Issue so the catalogue can
-          be updated
-        </span>
+        <span>{m.qa_task_results_summary({ count: String(entries.length) })}</span>
       </summary>
 
       <div className={clsx('space-y-4 px-2 pb-3', hasResults && 'border-t border-stone-700 pt-3')}>
         {!hasResults ? (
-          <p className="text-sm text-stone-600">
-            Select a task for one or more signs in the table below.
-          </p>
+          <p className="text-sm text-stone-600">{m.qa_task_results_empty()}</p>
         ) : (
           <>
             <div className="flex flex-wrap gap-3">
               <ExternalLink href={issueUrl} className={buttonStyle} blank>
-                Open Tagging QA issue (triggers Cursor)
+                {m.qa_open_tagging_issue()}
               </ExternalLink>
               <button type="button" className={buttonStyle} onClick={() => void handleCopy()}>
-                {copyLabel}
+                {copied ? m.qa_copied() : m.qa_copy_clipboard()}
               </button>
             </div>
 

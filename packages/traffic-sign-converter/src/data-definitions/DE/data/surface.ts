@@ -17,6 +17,7 @@ export const _surface: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment: 'Optional: [Tag:colour=white]',
       },
     ],
@@ -47,6 +48,7 @@ export const _surface: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment: 'Optional: [Tag:colour=white]',
       },
     ],

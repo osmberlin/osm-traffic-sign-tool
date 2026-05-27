@@ -38,6 +38,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     comments: [
       {
         tagReference: 'highway=*',
+        lang: 'de',
         comment:
           'Aufgrund von "Anlieger frei" eventuell als [Tag:highway=residential] oder [Tag:highway=service] einzustufen.',
       },
@@ -187,6 +188,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment: 'Dieses Schild ist nicht Teil des offiziellen Verkehrszeichenkataloges.',
       },
     ],
@@ -239,6 +241,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Zeichen 1024-10 (PKW frei) stimmt eigentlich nicht mit [Tag:motorcar=yes] überein, was sonst für "Kraftwagen und sonstige mehrspurige Kraftfahrzeuge" (inkl. LKW, Bus) genutzt wird. Zur Zeit gibt es aber noch keine bessere Alternative.',
       },
@@ -315,6 +318,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
     comments: [
       {
+        lang: 'de',
         comment:
           'Aufgrund von Zusatzzeichen 1024-17 eventuell als [Tag:highway=track] einzustufen.',
       },
@@ -411,6 +415,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Aufgrund von "Landwirtschaftlicher Verkehr frei" eventuell als [Tag:highway=track] einzustufen.',
       },
@@ -507,6 +512,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Aufgrund von "Forstwirtschaftlicher Verkehr frei" eventuell als [Tag:highway=track] einzustufen.',
       },
@@ -536,6 +542,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment:
           'Aufgrund von "Land- und forstwirtschaftlicher Verkehr frei" eventuell als [Tag:highway=track] einzustufen.',
       },

@@ -14,6 +14,7 @@ const createMinspeedEndSign = (speed: number, options?: { thematicOnly?: true })
   comments: [
     {
       tagReference: null,
+      lang: 'de',
       comment: minspeedLaneComment,
     },
   ],
@@ -46,6 +47,7 @@ export const _speed_minspeed_end: SignType[] = [
     comments: [
       {
         tagReference: null,
+        lang: 'de',
         comment: minspeedLaneComment,
       },
     ],

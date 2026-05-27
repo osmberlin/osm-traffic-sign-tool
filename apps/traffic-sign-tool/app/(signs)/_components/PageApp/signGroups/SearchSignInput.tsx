@@ -1,6 +1,6 @@
-'use client'
 import { useParamQ } from '@app/app/(signs)/_components/store/useParamQ.search'
 import { useParamQCountNumber } from '@app/app/(signs)/_components/store/useParamQCount.zustand'
+import * as m from '@app/paraglide/messages'
 import { XMarkIcon } from '@heroicons/react/16/solid'
 import { useEffect, useRef, useSyncExternalStore } from 'react'
 
@@ -47,7 +47,7 @@ export const SearchSignInput = () => {
           type="text"
           autoFocus={true}
           className="block w-full min-w-0 rounded-md border-0 px-2 py-1.5 text-left text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset sm:text-sm @sm/sign-selection:w-48"
-          placeholder="Search…"
+          placeholder={m.search_placeholder()}
         />
         <div className="absolute inset-y-0 right-0 flex items-center gap-1 py-1.5 pr-1.5">
           <kbd className="inline-flex min-h-5 items-center rounded-sm border border-gray-200 px-1 font-sans text-xs text-gray-400 select-none">
@@ -69,7 +69,9 @@ export const SearchSignInput = () => {
         </div>
       </div>
       {paramQ && !searchSignsCount && (
-        <div className="absolute right-0.5 -bottom-4 text-xs text-indigo-700">No results</div>
+        <div className="absolute right-0.5 -bottom-4 text-xs text-indigo-700">
+          {m.search_no_results()}
+        </div>
       )}
     </div>
   )

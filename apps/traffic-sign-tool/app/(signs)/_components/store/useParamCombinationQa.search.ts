@@ -1,4 +1,3 @@
-'use client'
 import { useReplaceDeSearch } from '@app/app/(signs)/_components/store/useReplaceDeSearch'
 import {
   parseCombinationQaParam,

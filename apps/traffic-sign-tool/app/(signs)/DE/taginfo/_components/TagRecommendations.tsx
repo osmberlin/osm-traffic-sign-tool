@@ -1,4 +1,3 @@
-'use client'
 import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { Tag } from '@app/app/(signs)/_components/wiki/Tag'
 import { signsToTags, trafficSignTagToSigns } from '@osm-traffic-signs/converter'

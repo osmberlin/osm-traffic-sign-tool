@@ -1,6 +1,6 @@
-'use client'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import * as m from '@app/paraglide/messages'
 import { showSignsToTagsWarning } from '@osm-traffic-signs/converter'
 import { ResultComments } from './results/ResultComments'
 import { ResultDebug } from './results/ResultDebug'
@@ -13,10 +13,8 @@ export const ResultColumn = () => {
   if (!paramSigns.length) {
     return (
       <>
-        <h2 className="mb-4 text-lg font-light uppercase">Recommended Tags</h2>
-        <p className="font-light text-stone-400">
-          Select a traffic sign to display recommended tags …
-        </p>
+        <h2 className="mb-4 text-lg font-light uppercase">{m.page_recommended_tags()}</h2>
+        <p className="font-light text-stone-400">{m.page_select_sign_hint()}</p>
       </>
     )
   }
@@ -27,26 +25,23 @@ export const ResultColumn = () => {
       {showSignsToTagsWarning(paramSigns) ? (
         <>
           <p className="py-6">
-            <strong className="text-amber-500">
-              You selected more than one sign that modifies access or conditional tags which this
-              tool does not handle, yet.
-            </strong>{' '}
-            The tagging recommendations are very likely wrong. Please consult the{' '}
+            <strong className="text-amber-500">{m.page_multi_modifier_warning()}</strong>{' '}
+            {m.page_multi_modifier_followup()}{' '}
             <ExternalLink
               href="https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland"
               blank
             >
-              Wiki
+              {m.page_wiki()}
             </ExternalLink>{' '}
-            and{' '}
+            {m.page_multi_modifier_and()}{' '}
             <ExternalLink href="https://community.openstreetmap.org/tag/traffic_sign" blank>
-              Forum
+              {m.page_forum()}
             </ExternalLink>{' '}
-            to find suitable recommendations.
+            {m.page_multi_modifier_end()}
           </p>
           <details>
             <summary className="cursor-pointer underline-offset-2 hover:text-white hover:underline">
-              Show results anyway
+              {m.page_show_results_anyway()}
             </summary>
 
             <ResultTagRecommendations />

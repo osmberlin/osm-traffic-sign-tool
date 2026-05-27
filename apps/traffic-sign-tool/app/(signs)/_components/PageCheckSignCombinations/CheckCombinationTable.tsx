@@ -1,4 +1,3 @@
-'use client'
 import type { CombinationRow } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaFilters'
 import {
   feedbackCommentPlaceholder,
@@ -12,6 +11,7 @@ import {
   ContentTableHeader,
   ContentTableRow,
 } from '@app/app/_components/layout/ContentTable'
+import { catalogueHtmlLang } from '@app/src/features/routing/lang'
 import { SignStateType, signsToTags } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import type { Dispatch, SetStateAction } from 'react'
@@ -38,6 +38,7 @@ const radioClassName =
 
 export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
+  const catalogueLangAttr = catalogueHtmlLang(countryPrefix)
 
   const handleStatusChange = (tagValue: string, status: FeedbackKey) => {
     onFeedbackChange((prev) => {
@@ -84,7 +85,7 @@ export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Prop
           return (
             <ContentTableRow key={tagValue}>
               <ContentTableHeader className="space-y-3">
-                <code>{tagValue}</code>
+                <code lang={catalogueLangAttr}>{tagValue}</code>
               </ContentTableHeader>
               <ContentTableCell>
                 {recognizedSigns.map((sign) => (

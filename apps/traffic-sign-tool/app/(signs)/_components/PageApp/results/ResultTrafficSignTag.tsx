@@ -1,8 +1,8 @@
-'use client'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
+import * as m from '@app/paraglide/messages'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import { SignStateType, signsToTrafficSignTagValue, toTag } from '@osm-traffic-signs/converter'
 import { Fragment } from 'react'
@@ -30,7 +30,6 @@ export const ResultTrafficSignTag = () => {
   const { countryPrefix } = useCountryPrefix()
   const { paramSigns } = useParamSigns()
 
-  // Copy signs
   const copyTrafficSignTag = toTag({
     key: 'traffic_sign',
     value: signsToTrafficSignTagValue(paramSigns, countryPrefix),
@@ -42,7 +41,7 @@ export const ResultTrafficSignTag = () => {
   return (
     <>
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-lg font-light uppercase">Traffic sign tag</h2>
+        <h2 className="text-lg font-light uppercase">{m.traffic_sign_tag_heading()}</h2>
         <CopyButton text={copyTrafficSignTag}>
           <ClipboardDocumentIcon className="size-4" />
         </CopyButton>
@@ -54,7 +53,7 @@ export const ResultTrafficSignTag = () => {
             <Tag tagKey={trafficSignTag[0]} tagValue={trafficSignTag[1]} />
           </div>
           <div className="mt-1 space-x-2 text-xs">
-            <strong>Wiki:</strong>
+            <strong>{m.wiki_label()}</strong>
             <WikiLinkListTrafficSignValues value={trafficSignTag[1]} inline />
 
             {countryPrefix === 'DE' && (
@@ -69,7 +68,7 @@ export const ResultTrafficSignTag = () => {
                 {paramSigns.length > 0 && (
                   <details className="inline">
                     <summary className="inline cursor-pointer underline decoration-transparent underline-offset-4 hover:decoration-stone-400 hover:decoration-1">
-                      More…
+                      {m.more_label()}
                     </summary>
                     <ul className="mt-2 space-y-1 pl-4">
                       {paramSigns.map((sign) => {
@@ -83,14 +82,14 @@ export const ResultTrafficSignTag = () => {
                             {osmUrl && (
                               <li className="list-disc">
                                 <ExternalLink href={osmUrl} blank className={wikiLinkClasses}>
-                                  OSM Wiki Table {signLabel}
+                                  {m.osm_wiki_table({ signLabel })}
                                 </ExternalLink>
                               </li>
                             )}
                             {wikiUrl && (
                               <li className="list-disc">
                                 <ExternalLink href={wikiUrl} blank className={wikiLinkClasses}>
-                                  Wikipedia Table {signLabel}
+                                  {m.wikipedia_table({ signLabel })}
                                 </ExternalLink>
                               </li>
                             )}

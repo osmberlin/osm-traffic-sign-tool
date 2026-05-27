@@ -1,23 +1,22 @@
-'use client'
 import { useParamTaggingQa } from '@app/app/(signs)/_components/store/useParamTaggingQa.search'
+import * as m from '@app/paraglide/messages'
 import type {
   TaggingSuggestionsQaCounts,
   TaggingSuggestionsQaFilter,
 } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 
-const qaFilterOptions: {
-  filter: TaggingSuggestionsQaFilter
-  label: string
-}[] = [
-  { filter: 'all', label: 'All signs' },
-  { filter: 'with', label: 'All signs with tagging suggestions' },
-  { filter: 'missing', label: 'All signs with missing tagging suggestions' },
-  {
-    filter: 'explicit_none',
-    label: 'All signs with explicit no tagging suggestions',
-  },
-]
+const qaFilterOptions: TaggingSuggestionsQaFilter[] = ['all', 'with', 'missing', 'explicit_none']
+
+const getQaFilterLabel = (filter: TaggingSuggestionsQaFilter): string => {
+  const labels: Record<TaggingSuggestionsQaFilter, () => string> = {
+    all: m.qa_filter_all,
+    with: m.qa_filter_with,
+    missing: m.qa_filter_missing,
+    explicit_none: m.qa_filter_explicit_none,
+  }
+  return labels[filter]()
+}
 
 type Props = {
   counts: TaggingSuggestionsQaCounts
@@ -28,11 +27,11 @@ export const TaggingQaFilterRow = ({ counts }: Props) => {
 
   return (
     <nav
-      aria-label="Tagging suggestions QA"
+      aria-label={m.qa_filter_nav_label()}
       className="w-full rounded-sm px-2 py-1.5 outline -outline-offset-1 outline-stone-500/50"
     >
       <div className="flex flex-wrap gap-x-4 gap-y-1">
-        {qaFilterOptions.map(({ filter, label }) => {
+        {qaFilterOptions.map((filter) => {
           const isActive = qaFilter === filter
           const count = counts[filter]
 
@@ -49,7 +48,7 @@ export const TaggingQaFilterRow = ({ counts }: Props) => {
                   : 'text-stone-400 hover:bg-stone-700/60 hover:text-stone-100',
               )}
             >
-              {label} ({count})
+              {getQaFilterLabel(filter)} ({count})
             </button>
           )
         })}

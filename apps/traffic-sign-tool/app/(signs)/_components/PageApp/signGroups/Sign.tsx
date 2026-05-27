@@ -1,3 +1,4 @@
+import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CheckCircleIcon, PencilSquareIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
 import { SignStateType, SignType } from '@osm-traffic-signs/converter'
@@ -10,6 +11,7 @@ type Props = {
 
 export const Sign = ({ sign }: Props) => {
   const { paramSigns, toggleOsmValuePart } = useParamSigns()
+  const catalogueLang = useCatalogueHtmlLang()
 
   const active = paramSigns.map((s) => s.signId).includes(sign.signId)
   const isSecondarySign = sign.kind !== 'traffic_sign'
@@ -23,6 +25,8 @@ export const Sign = ({ sign }: Props) => {
   return (
     <div className="relative">
       <button
+        type="button"
+        lang={catalogueLang}
         onClick={() => toggleSignPart(sign.osmValuePart)}
         className={clsx(
           'group/item relative flex h-20 w-full cursor-pointer items-center justify-center rounded-sm border border-stone-200 p-2 hover:bg-stone-200',
