@@ -5,7 +5,6 @@ import {
   isOpeningHoursValuePromptFormat,
   type ValuePromptFormat,
 } from '@osm-traffic-signs/converter'
-import { useMemo } from 'react'
 import {
   validateConditionalOpeningHours,
   type ConditionalValidationResult,
@@ -57,14 +56,10 @@ const ValidationMessageList = ({ validation }: { validation: ConditionalValidati
 export const ConditionalOpeningHoursValidationFeedback = ({ format, inputValue }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
 
-  const validation = useMemo(
-    () =>
-      validateConditionalOpeningHours(inputValue, {
-        requestedLocale: getRequestedLocale(countryPrefix),
-        countryCode: countryPrefix.toLowerCase(),
-      }),
-    [inputValue, countryPrefix],
-  )
+  const validation = validateConditionalOpeningHours(inputValue, {
+    requestedLocale: getRequestedLocale(countryPrefix),
+    countryCode: countryPrefix.toLowerCase(),
+  })
 
   if (!isOpeningHoursValuePromptFormat(format)) {
     return null

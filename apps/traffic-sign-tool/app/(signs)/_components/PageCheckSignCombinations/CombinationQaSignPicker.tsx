@@ -2,8 +2,8 @@
 import { CombinationQaFilterRow } from '@app/app/(signs)/_components/PageCheckSignCombinations/CombinationQaFilterRow'
 import type { CombinationQaCounts } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaFilters'
 import type { CombinationQaFilter } from '@app/src/features/searchParams/deSearch'
-import type { SignType } from '@osm-traffic-signs/converter'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
+import type { SignType } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 
 type Props = {
@@ -23,7 +23,9 @@ export const CombinationQaSignPicker = ({
   onPrimarySelect,
   onFilterChange,
 }: Props) => {
-  const selectedSign = filteredPrimarySigns.find((sign) => sign.osmValuePart === primaryOsmValuePart)
+  const selectedSign = filteredPrimarySigns.find(
+    (sign) => sign.osmValuePart === primaryOsmValuePart,
+  )
   const selectedInList = Boolean(selectedSign)
 
   return (
@@ -44,9 +46,7 @@ export const CombinationQaSignPicker = ({
             : 'Select primary sign'}
         </span>
         {selectedSign && (
-          <span className="text-stone-500">
-            ({filteredPrimarySigns.length} matching filter)
-          </span>
+          <span className="text-stone-500">({filteredPrimarySigns.length} matching filter)</span>
         )}
       </summary>
 
@@ -71,9 +71,7 @@ export const CombinationQaSignPicker = ({
                   onClick={() => onPrimarySelect(sign.osmValuePart)}
                   className={clsx(
                     'flex w-full cursor-pointer items-center justify-between gap-3 rounded-md px-2 py-2 text-left text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-300',
-                    isSelected
-                      ? 'bg-stone-900 text-stone-50'
-                      : 'text-stone-700 hover:bg-stone-100',
+                    isSelected ? 'bg-stone-900 text-stone-50' : 'text-stone-700 hover:bg-stone-100',
                   )}
                 >
                   <span className="min-w-0 flex-1">

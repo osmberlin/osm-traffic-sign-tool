@@ -1,11 +1,11 @@
 import { describe, expect, test } from 'bun:test'
-import type { SignType } from './TrafficSignDataTypes.js'
 import {
   classifyTaggingSuggestionsQa,
   countSignsByTaggingSuggestionsQa,
   filterSignsByTaggingSuggestionsQa,
   hasTagRecommendationsContent,
 } from './taggingSuggestionsQa.js'
+import type { SignType } from './TrafficSignDataTypes.js'
 
 const baseSign = {
   osmValuePart: 'test',

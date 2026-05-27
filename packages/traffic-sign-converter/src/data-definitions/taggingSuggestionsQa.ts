@@ -8,15 +8,12 @@ export type TaggingSuggestionsQaCategory =
   | 'missingSuggestions'
   | 'explicitNoSuggestions'
 
-export const taggingSuggestionsQaFilters = [
-  'all',
-  'with',
-  'missing',
-  'explicit_none',
-] as const
+export const taggingSuggestionsQaFilters = ['all', 'with', 'missing', 'explicit_none'] as const
 export type TaggingSuggestionsQaFilter = (typeof taggingSuggestionsQaFilters)[number]
 
-type TagRecommendations = TrafficSignType['tagRecommendations'] | ModifierSignType['tagRecommendations']
+type TagRecommendations =
+  | TrafficSignType['tagRecommendations']
+  | ModifierSignType['tagRecommendations']
 
 export const hasTagRecommendationsContent = (tagRecommendations: TagRecommendations): boolean =>
   Object.values(tagRecommendations).some((value) => {

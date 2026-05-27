@@ -1,7 +1,6 @@
 import { CountryPrefixType } from '@osm-traffic-signs/converter'
 import { micromark } from 'micromark'
 import { gfm, gfmHtml } from 'micromark-extension-gfm'
-import { useMemo } from 'react'
 import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
 
 type Props = {
@@ -37,14 +36,11 @@ const wikiLinkifyDefaultClass =
 export const WikiLinkify = ({ text, className = wikiLinkifyDefaultClass }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
 
-  const html = useMemo(() => {
-    const preprocessed = preprocessOsmSyntax(text, countryPrefix)
-
-    return micromark(preprocessed, {
-      extensions: [gfm()],
-      htmlExtensions: [gfmHtml()],
-    })
-  }, [text, countryPrefix])
+  const preprocessed = preprocessOsmSyntax(text, countryPrefix)
+  const html = micromark(preprocessed, {
+    extensions: [gfm()],
+    htmlExtensions: [gfmHtml()],
+  })
 
   return <span dangerouslySetInnerHTML={{ __html: html }} className={className} />
 }

@@ -1,4 +1,9 @@
 'use client'
+import type { CombinationRow } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaFilters'
+import {
+  feedbackCommentPlaceholder,
+  type CombinationFeedbackState,
+} from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaTaskFormat'
 import {
   ContentTable,
   ContentTableBody,
@@ -7,11 +12,6 @@ import {
   ContentTableHeader,
   ContentTableRow,
 } from '@app/app/_components/layout/ContentTable'
-import type { CombinationRow } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaFilters'
-import {
-  feedbackCommentPlaceholder,
-  type CombinationFeedbackState,
-} from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaTaskFormat'
 import { SignStateType, signsToTags } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import type { Dispatch, SetStateAction } from 'react'

@@ -1,6 +1,9 @@
 'use client'
 import { useParamTaggingQa } from '@app/app/(signs)/_components/store/useParamTaggingQa.search'
-import type { TaggingSuggestionsQaCounts, TaggingSuggestionsQaFilter } from '@osm-traffic-signs/converter'
+import type {
+  TaggingSuggestionsQaCounts,
+  TaggingSuggestionsQaFilter,
+} from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 
 const qaFilterOptions: {

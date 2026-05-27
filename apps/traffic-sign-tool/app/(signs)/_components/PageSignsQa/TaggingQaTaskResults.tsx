@@ -1,12 +1,12 @@
 'use client'
-import { contentPreClass } from '@app/app/_components/layout/ContentTable'
-import { buttonStyle } from '@app/app/_components/links/buttonStyles'
-import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import {
   buildGithubIssueUrl,
   formatTaggingQaTaskResults,
   type SignTaskEntry,
 } from '@app/app/(signs)/_components/PageSignsQa/taggingQaTaskFormat'
+import { contentPreClass } from '@app/app/_components/layout/ContentTable'
+import { buttonStyle } from '@app/app/_components/links/buttonStyles'
+import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import clsx from 'clsx'
 import { useState } from 'react'
@@ -35,9 +35,7 @@ export const TaggingQaTaskResults = ({ entries }: Props) => {
     <details
       className={clsx(
         'group mt-6 w-full rounded-sm outline -outline-offset-1 transition-colors',
-        hasResults
-          ? 'bg-stone-900 shadow-sm outline-stone-900'
-          : 'outline-stone-500/50',
+        hasResults ? 'bg-stone-900 shadow-sm outline-stone-900' : 'outline-stone-500/50',
       )}
     >
       <summary
@@ -61,12 +59,7 @@ export const TaggingQaTaskResults = ({ entries }: Props) => {
         </span>
       </summary>
 
-      <div
-        className={clsx(
-          'space-y-4 px-2 pb-3',
-          hasResults && 'border-t border-stone-700 pt-3',
-        )}
-      >
+      <div className={clsx('space-y-4 px-2 pb-3', hasResults && 'border-t border-stone-700 pt-3')}>
         {!hasResults ? (
           <p className="text-sm text-stone-600">
             Select a task for one or more signs in the table below.

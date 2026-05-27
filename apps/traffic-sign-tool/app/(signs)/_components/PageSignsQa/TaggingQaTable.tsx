@@ -1,4 +1,12 @@
 'use client'
+import { PackageSvgTrafficSign } from '@app/app/(signs)/_components/PackageSvgTrafficSign'
+import {
+  collectSignTaskEntries,
+  emptySignTaskState,
+  taskNotesPlaceholder,
+  type SignTaskType,
+} from '@app/app/(signs)/_components/PageSignsQa/taggingQaTaskFormat'
+import { TaggingQaTaskResults } from '@app/app/(signs)/_components/PageSignsQa/TaggingQaTaskResults'
 import {
   ContentTable,
   ContentTableBody,
@@ -8,16 +16,8 @@ import {
   ContentTableRow,
   contentPreClass,
 } from '@app/app/_components/layout/ContentTable'
-import { TaggingQaTaskResults } from '@app/app/(signs)/_components/PageSignsQa/TaggingQaTaskResults'
-import {
-  collectSignTaskEntries,
-  emptySignTaskState,
-  taskNotesPlaceholder,
-  type SignTaskType,
-} from '@app/app/(signs)/_components/PageSignsQa/taggingQaTaskFormat'
-import { PackageSvgTrafficSign } from '@app/app/(signs)/_components/PackageSvgTrafficSign'
 import { classifyTaggingSuggestionsQa, type SignType } from '@osm-traffic-signs/converter'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 
 const qaCategoryLabels = {
   withSuggestions: 'With tagging suggestions',
@@ -43,7 +43,7 @@ export const TaggingQaTable = ({ signs }: Props) => {
     () => new Map(),
   )
 
-  const taskEntries = useMemo(() => collectSignTaskEntries(signs, tasks), [signs, tasks])
+  const taskEntries = collectSignTaskEntries(signs, tasks)
 
   const setTaskType = (osmValuePart: string, taskType: SignTaskType) => {
     setTasks((prev) => {
@@ -94,9 +94,7 @@ export const TaggingQaTable = ({ signs }: Props) => {
                   <PackageSvgTrafficSign sign={sign} className="inline-block h-auto w-20" />
                 </ContentTableHeader>
                 <ContentTableCell className="align-top text-sm leading-snug">
-                  <p className="mb-3 font-medium text-stone-700">
-                    {qaCategoryLabels[qaCategory]}
-                  </p>
+                  <p className="mb-3 font-medium text-stone-700">{qaCategoryLabels[qaCategory]}</p>
                   <fieldset className="space-y-3">
                     <legend className="sr-only">Task for {sign.osmValuePart}</legend>
                     {taskOptions.map(({ value, label }) => {
@@ -112,9 +110,7 @@ export const TaggingQaTable = ({ signs }: Props) => {
                             onChange={() => setTaskType(sign.osmValuePart, value)}
                             className={radioClassName}
                           />
-                          <label htmlFor={id}>
-                            {label}
-                          </label>
+                          <label htmlFor={id}>{label}</label>
                         </div>
                       )
                     })}

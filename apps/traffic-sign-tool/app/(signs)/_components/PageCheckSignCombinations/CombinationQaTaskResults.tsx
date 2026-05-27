@@ -1,12 +1,12 @@
 'use client'
-import { contentPreClass } from '@app/app/_components/layout/ContentTable'
-import { buttonStyle } from '@app/app/_components/links/buttonStyles'
-import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import {
   buildGithubIssueUrl,
   formatCombinationQaTaskResults,
   type CombinationTaskEntry,
 } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaTaskFormat'
+import { contentPreClass } from '@app/app/_components/layout/ContentTable'
+import { buttonStyle } from '@app/app/_components/links/buttonStyles'
+import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import clsx from 'clsx'
 import { useState } from 'react'

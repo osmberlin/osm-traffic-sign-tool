@@ -51,7 +51,10 @@ export const getPrimaryCombinationMeta = (
   }
 }
 
-const primaryMatchesFilter = (meta: PrimaryCombinationMeta, filter: CombinationQaFilter): boolean => {
+const primaryMatchesFilter = (
+  meta: PrimaryCombinationMeta,
+  filter: CombinationQaFilter,
+): boolean => {
   switch (filter) {
     case 'actionable':
       return meta.hasActionable
@@ -97,7 +100,9 @@ export const filterPrimarySigns = (
 const getRecognizedSigns = (signs: SignStateType[]) =>
   signs.filter((sign): sign is SignStateType & { recodgnizedSign: true } => sign.recodgnizedSign)
 
-const classifyCombinationRow = (signs: SignStateType[]): Omit<CombinationRow, 'signs' | 'tagValue'> => {
+const classifyCombinationRow = (
+  signs: SignStateType[],
+): Omit<CombinationRow, 'signs' | 'tagValue'> => {
   const recognized = getRecognizedSigns(signs)
   const primarySign = recognized.at(0)
   const modifierSign = recognized.at(1)
