@@ -10,19 +10,34 @@ import {
 } from '@osm-traffic-signs/converter'
 import { z } from 'zod'
 
+export const combinationQaFilters = ['actionable', 'blocked', 'all'] as const
+export type CombinationQaFilter = (typeof combinationQaFilters)[number]
+
 export const deSearchSchema = z.object({
   // routerSearch uses JSON.parse on param values; bare numbers (e.g. q=241) become number
   q: z.coerce.string().optional(),
   signs: z.string().optional(),
   focus: z.string().optional(),
   qa: z.enum(taggingSuggestionsQaFilters).optional(),
+  comb: z.enum(combinationQaFilters).optional(),
+  /** Selected primary sign `osmValuePart` on check-sign-combinations */
+  primary: z.coerce.string().optional(),
 })
 
 export { taggingSuggestionsQaFilters, type TaggingSuggestionsQaFilter }
-
 export { focusAreas, type FocusArea }
 
 const focusAreaSet = new Set<string>(focusAreas)
+
+const parseEnumParam = <const T extends readonly string[]>(
+  value: string | undefined,
+  allowed: T,
+  fallback: T[number],
+): T[number] =>
+  value && (allowed as readonly string[]).includes(value) ? (value as T[number]) : fallback
+
+const serializeEnumParam = <T extends string>(value: T, defaultValue: T): T | undefined =>
+  value === defaultValue ? undefined : value
 
 export const parseFocusParam = (value: string | undefined): FocusArea[] => {
   if (!value) {
@@ -46,29 +61,17 @@ export const serializeFocusParam = (focuses: FocusArea[]): string | undefined =>
   return sorted.join(',')
 }
 
-export const parseTaggingQaParam = (
-  value: string | undefined,
-): TaggingSuggestionsQaFilter => {
-  if (!value) {
-    return 'all'
-  }
+export const parseTaggingQaParam = (value?: string) =>
+  parseEnumParam(value, taggingSuggestionsQaFilters, 'all')
 
-  if (taggingSuggestionsQaFilters.includes(value as TaggingSuggestionsQaFilter)) {
-    return value as TaggingSuggestionsQaFilter
-  }
+export const serializeTaggingQaParam = (filter: TaggingSuggestionsQaFilter) =>
+  serializeEnumParam(filter, 'all')
 
-  return 'all'
-}
+export const parseCombinationQaParam = (value?: string) =>
+  parseEnumParam(value, combinationQaFilters, 'actionable')
 
-export const serializeTaggingQaParam = (
-  filter: TaggingSuggestionsQaFilter,
-): TaggingSuggestionsQaFilter | undefined => {
-  if (filter === 'all') {
-    return undefined
-  }
-
-  return filter
-}
+export const serializeCombinationQaParam = (filter: CombinationQaFilter) =>
+  serializeEnumParam(filter, 'actionable')
 
 export type DeSearchSchema = z.infer<typeof deSearchSchema>
 

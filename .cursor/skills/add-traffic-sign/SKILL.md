@@ -227,3 +227,7 @@ Output ONLY this format:
 - **Build Failure**: Ensure `tagRecommendations` is provided (use `{}` if empty).
 - **SVG Missing**: Verify `sourceUrl` points to a Wikimedia `File:` page.
 - **Sign Not in UI**: Ensure data file is exported in `packages/traffic-sign-converter/src/data-definitions/DE/trafficSignDataDE.ts`.
+
+## Related: sign combination QA
+
+For GitHub issues labeled `combination-qa` (primary + modifier pairs), use [`.cursor/skills/fix-sign-combination/SKILL.md`](fix-sign-combination/SKILL.md) instead. Those tasks focus on `compatibility` rules and combined tag output rather than adding a new sign.

@@ -112,7 +112,7 @@ export const TaggingQaTable = ({ signs }: Props) => {
                             onChange={() => setTaskType(sign.osmValuePart, value)}
                             className={radioClassName}
                           />
-                          <label htmlFor={id} className="cursor-pointer">
+                          <label htmlFor={id}>
                             {label}
                           </label>
                         </div>

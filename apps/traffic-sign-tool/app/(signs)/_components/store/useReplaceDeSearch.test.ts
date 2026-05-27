@@ -30,9 +30,10 @@ describe('useReplaceDeSearch', () => {
     })
 
     expect(result.current.search).toEqual(currentSearch)
-    expect(mockUseNavigate).toHaveBeenCalledWith({ from: '/$lang' })
-    expect(mockUseSearch).toHaveBeenCalledWith({ from: '/$lang' })
+    expect(mockUseNavigate).toHaveBeenCalledWith()
+    expect(mockUseSearch).toHaveBeenCalledWith({ strict: false })
     expect(navigate).toHaveBeenCalledWith({
+      to: '.',
       replace: true,
       resetScroll: false,
       search: setSearch,

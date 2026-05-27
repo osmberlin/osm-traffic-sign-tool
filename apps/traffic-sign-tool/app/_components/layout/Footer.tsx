@@ -2,7 +2,6 @@
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Link } from '@tanstack/react-router'
 import { ExternalLink } from '../links/ExternalLink'
-import { isDev } from '../utils/isDev'
 
 const footerLinkClassName =
   'text-center text-base text-stone-400 underline decoration-stone-700 underline-offset-4 hover:text-stone-100'
@@ -27,26 +26,16 @@ const navigation = [
   },
 ]
 
-const baseInternalNavigation = [
+const internalNavigation = [
   { name: 'Compare with taginfo', to: '/$lang/taginfo' as const },
   { name: 'Compare with wiki', to: '/$lang/wiki' as const },
-  { name: 'Tagging QA', to: '/$lang/signs-qa' as const },
+  { name: 'Tagging Recommendation QA', to: '/$lang/signs-qa' as const },
+  { name: 'Sign combinations QA', to: '/$lang/check-sign-combinations' as const },
   { name: 'All signs', to: '/$lang/signs' as const, active: true },
 ] as const
 
 export const Footer = () => {
   const lang = useCurrentLang()
-  const internalNavigation = [
-    ...baseInternalNavigation,
-    ...(isDev
-      ? [
-          {
-            name: 'DEV ONLY: Check sign combinations',
-            to: '/$lang/check-sign-combinations' as const,
-          },
-        ]
-      : []),
-  ]
   return (
     <footer className="mx-auto mt-20 max-w-6xl px-4 py-12 sm:px-6 md:mt-0 lg:px-8">
       <p className="mb-8 text-center text-base text-stone-400">
