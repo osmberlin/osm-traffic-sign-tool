@@ -10,11 +10,14 @@ const createMinspeedStartSign = (speed: number, options?: { thematicOnly?: true 
   descriptiveName: 'Vorgeschriebene Mindestgeschwindigkeit',
   description: null,
   kind: 'traffic_sign',
-  tagRecommendations: {
-    highwayValues: [],
-    uniqueTags: [{ key: 'source:minspeed', value: 'sign' }],
-    conditionalTags: [{ key: 'minspeed', value: `${speed}` }],
-  },
+  tagRecommendationsByGeometry: [
+    {
+      geometries: ['way'],
+      highwayValues: [],
+      uniqueTags: [{ key: 'source:minspeed', value: 'sign' }],
+      conditionalTags: [{ key: 'minspeed', value: `${speed}` }],
+    },
+  ],
   comments: [
     {
       tagReference: null,
@@ -47,11 +50,14 @@ export const _speed_minspeed_start: SignType[] = [
       defaultValue: '47',
       format: 'integer',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:minspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'minspeed', value: '47' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:minspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'minspeed', value: '47' }],
+      },
+    ],
     comments: [
       {
         tagReference: null,

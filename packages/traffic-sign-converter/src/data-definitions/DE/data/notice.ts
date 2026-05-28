@@ -8,10 +8,13 @@ export const _notice: SignType[] = [
     descriptiveName: 'Wasserschutzgebiet',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'hazmat:water', value: 'permissive' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'hazmat:water', value: 'permissive' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',

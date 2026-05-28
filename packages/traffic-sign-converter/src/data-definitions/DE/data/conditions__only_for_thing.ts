@@ -8,10 +8,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Kraftwagen und sonstige mehrspurige Fahrzeuge',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'motorcar',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'motorcar', uniqueTags: [] },
+    ],
     comments: [
       {
         tagReference: null,
@@ -38,10 +37,7 @@ export const _conditions__only_for_thing: SignType[] = [
     description:
       'Kraftfahrzeuge mit einer zulässigen Gesamtmasse über 3,5 t, einschließlich ihrer Anhänger, und Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'hgv',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'hgv', uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -60,10 +56,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Radverkehr',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'bicycle',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'bicycle', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -82,10 +77,7 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Fußgänger',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'foot',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'foot', uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -104,10 +96,7 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Reiter',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'horse',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'horse', uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -126,10 +115,7 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Straßenbahn',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'tram',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'tram', uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -148,10 +134,7 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Kraftomnibus',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'bus',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'bus', uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -170,10 +153,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Personenkraftwagen',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'motorcar',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'motorcar', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -193,10 +175,9 @@ export const _conditions__only_for_thing: SignType[] = [
     description:
       'Kraftfahrzeuge und Züge, die nicht schneller als 25 km/h fahren können oder dürfen',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'agricultural',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'agricultural', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -215,10 +196,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Krafträder,…',
     description: 'Krafträder, auch mit Beiwagen, Kleinkrafträder und Mopeds',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'motorcycle',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'motorcycle', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -237,10 +217,7 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Mofas',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'mofa',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'mofa', uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -259,10 +236,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'E-Bikes',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'electric_bicycle',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'electric_bicycle', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -281,10 +257,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Elektrisch betriebene Fahrzeuge',
     description: 'Fahrzeuge mit E-Kennzeichen',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'electric_vehicle',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'electric_vehicle', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -303,10 +278,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Elektrokleinstfahrzeuge',
     description: 'Elektrokleinstfahrzeuge im Sinne der Elektrokleinstfahrzeuge-Verordnung (eKFV)',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'small_electric_vehicle',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'small_electric_vehicle', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -325,10 +299,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Lastenfahrrad',
     description: 'Fahrrad zum Transport von Gütern oder Personen',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'cargo_bike',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'cargo_bike', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -347,10 +320,13 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Parkflächen für Anhänger',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'trailer',
-      uniqueTags: [{ key: 'amenity', value: 'parking' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        modifierValue: 'trailer',
+        uniqueTags: [{ key: 'amenity', value: 'parking' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -369,10 +345,9 @@ export const _conditions__only_for_thing: SignType[] = [
     descriptiveName: 'Anhänger',
     description: 'Zusatzzeichen zur Anwendung eines Hauptzeichens speziell auf Anhänger',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'trailer',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'trailer', uniqueTags: [] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -393,10 +368,7 @@ export const _conditions__only_for_thing: SignType[] = [
     description:
       'Nur Kraftfahrzeuge über 3,5 t einschließlich ihrer Anhänger, Zugmaschinen, Kraftomnibusse und Personenkraftwagen mit Anhänger',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'hgv',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'hgv', uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',

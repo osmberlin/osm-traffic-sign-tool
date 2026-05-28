@@ -13,7 +13,7 @@ const baseSign = {
   descriptiveName: 'Höchstgeschwindigkeit',
   description: null,
   kind: 'traffic_sign' as const,
-  tagRecommendations: {},
+  tagRecommendationsByGeometry: [{ geometries: ['way'] }],
   catalogue: { signCategory: 'speed' as const },
   image: {
     kind: 'remote' as const,

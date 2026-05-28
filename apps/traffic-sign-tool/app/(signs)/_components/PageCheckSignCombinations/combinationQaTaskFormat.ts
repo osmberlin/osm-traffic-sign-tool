@@ -55,7 +55,7 @@ export const collectCombinationTaskEntries = (
     const primarySign = recognized.at(0)
     const modifierSign = recognized.at(1)
 
-    const tags = signsToTags(signs, countryPrefix)
+    const tags = signsToTags(signs, countryPrefix, 'way')
     const currentTags = [...tags.entries()]
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([key, value]) => `${key}=${value}`)
@@ -130,8 +130,8 @@ const formatAgentBrief = (): string[] => [
   '',
   '1. Apply every task in the sections below.',
   `2. Read [\`${COMBINATION_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${COMBINATION_QA_AGENT_SKILL_PATH}) for compatibility fields, tag output fixes, and test expectations.`,
-  '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`compatibility.canReceiveModifiers`, `compatibility.incompatibleModifiers`, `tagRecommendations`).',
-  '4. For **Not OK** tasks: fix the combined tag output (usually `tagRecommendations` on primary/modifier and/or `signsToTags` interaction tests).',
+  '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`compatibility.canReceiveModifiers`, `compatibility.incompatibleModifiers`, `tagRecommendationsByGeometry`).',
+  '4. For **Not OK** tasks: fix the combined tag output (usually `tagRecommendationsByGeometry` on primary/modifier and/or `signsToTags` interaction tests).',
   '5. For **Invalid combination** tasks: update compatibility so the converter blocks the pair (add `incompatibleModifiers` on the primary sign or set `canReceiveModifiers: false` when the primary must never take modifiers).',
   '6. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
   '',

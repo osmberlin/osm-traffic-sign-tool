@@ -14,7 +14,7 @@ export const _numbers: SignType[] = [
       defaultValue: '800',
       format: 'integer',
     },
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: {
       signCategory: 'condition_modifier',
       focus: { highway: true },
@@ -39,7 +39,7 @@ export const _numbers: SignType[] = [
       defaultValue: '3',
       format: 'integer',
     },
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: {
       signCategory: 'condition_modifier',
       focus: { highway: true },
@@ -64,7 +64,7 @@ export const _numbers: SignType[] = [
       defaultValue: '500',
       format: 'integer',
     },
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: {
       signCategory: 'condition_modifier',
       focus: { highway: true },
@@ -89,7 +89,7 @@ export const _numbers: SignType[] = [
       defaultValue: '2',
       format: 'integer',
     },
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: {
       signCategory: 'condition_modifier',
       focus: { highway: true },
@@ -114,7 +114,7 @@ export const _numbers: SignType[] = [
       defaultValue: '800',
       format: 'integer',
     },
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: {
       signCategory: 'condition_modifier',
       focus: { highway: true },
@@ -139,7 +139,7 @@ export const _numbers: SignType[] = [
       defaultValue: '24',
       format: 'integer',
     },
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: {
       signCategory: 'condition_modifier',
       focus: { highway: true },
@@ -164,7 +164,7 @@ export const _numbers: SignType[] = [
       defaultValue: '100',
       format: 'integer',
     },
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: {
       signCategory: 'condition_modifier',
       focus: { highway: true },
@@ -189,7 +189,7 @@ export const _numbers: SignType[] = [
       defaultValue: '2',
       format: 'integer',
     },
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: {
       signCategory: 'condition_modifier',
       focus: { highway: true },

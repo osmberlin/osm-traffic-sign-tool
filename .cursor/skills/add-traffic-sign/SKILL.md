@@ -47,17 +47,20 @@ Reference `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataT
   name: 'Zeichen 274',
   descriptiveName: 'Zulässige Höchstgeschwindigkeit',
   kind: 'traffic_sign',
-  tagRecommendations: {
-    uniqueTags: [{ key: 'maxspeed', value: '$' }],
-    highwayValues: ['residential'],
-  },
+  tagRecommendationsByGeometry: [
+    {
+      geometries: ['way'],
+      uniqueTags: [{ key: 'maxspeed', value: '$' }],
+      highwayValues: ['residential'],
+    },
+  ],
   valuePrompt: {
     prompt: 'Geschwindigkeit',
     defaultValue: '50',
     format: 'integer'
   },
   catalogue: {
-    visibility: 'highlight', // See Visibility Decision Guide
+    focus: { default: 'highlight' },
     signCategory: 'speed',
   },
   image: {
@@ -167,7 +170,7 @@ If the research in Step 1 revealed special tagging logic when this sign is combi
 ```typescript
 test('Merged access tags for specific combination', () => {
   const signs = signsStateByDescriptiveName('DE', data, ['Sign Name A', 'Sign Name B'])
-  const result = signsToTags(signs, 'DE')
+  const result = signsToTags(signs, 'DE', 'way')
   expect(result.get('vehicle')).toBe('destination')
 })
 ```
@@ -224,7 +227,7 @@ Output ONLY this format:
 
 ## Troubleshooting
 
-- **Build Failure**: Ensure `tagRecommendations` is provided (use `{}` if empty).
+- **Build Failure**: Ensure `tagRecommendationsByGeometry` is provided (use `[{ geometries: ['way'] }]` for placeholders or `"none"` with `taggingSuggestionsQa: 'none'` when explicit no-suggestion is intended).
 - **SVG Missing**: Verify `sourceUrl` points to a Wikimedia `File:` page.
 - **Sign Not in UI**: Ensure data file is exported in `packages/traffic-sign-converter/src/data-definitions/DE/trafficSignDataDE.ts`.
 

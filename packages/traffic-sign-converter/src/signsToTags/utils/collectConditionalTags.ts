@@ -1,98 +1,77 @@
+import type { GeometryType } from '../../data-definitions/geometryTypes.js'
 import { type SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
+import { getRecommendations } from './getRecommendations.js'
 
-export const collectConditionalTags = (signs: SignStateType[]) => {
+export const collectConditionalTags = (signs: SignStateType[], geometry: GeometryType) => {
   const mergedConditionalTags: Map<string, { key: string; value: string }> = new Map()
 
   // Handle `traffic_sign`
   // A conditional tag on a stand alone `traffic_sign` is treated like a regular tag.
   // Only once there is a modifier sign (`exception_modifier` or `condition_modifier`), the conditional syntax is applied.
-  signs
-    .filter((sign) => sign.recodgnizedSign === true)
-    .filter((sign) => sign.kind === 'traffic_sign')
-    .forEach((sign) => {
-      if (sign.tagRecommendations === 'none') {
-        return
+  for (const sign of signs) {
+    if (!sign.recodgnizedSign) continue
+    if (sign.kind !== 'traffic_sign') continue
+
+    const recs = getRecommendations(sign, geometry)
+
+    if (recs?.conditionalTags) {
+      for (const conditionalTag of recs.conditionalTags) {
+        mergedConditionalTags.set(conditionalTag.key, {
+          key: conditionalTag.key,
+          value: sign.signValue === undefined ? conditionalTag.value : String(sign.signValue),
+        })
       }
+    } else {
+      const groupHasConditionModifierSign = signs.some((otherSign) => {
+        if (!otherSign.recodgnizedSign) return false
+        return otherSign.kind === 'condition_modifier'
+      })
 
-      const { conditionalTags } = sign.tagRecommendations
-
-      if (conditionalTags) {
-        for (const conditionalTag of conditionalTags) {
+      if (groupHasConditionModifierSign && recs?.accessTags) {
+        for (const conditionalTag of recs.accessTags) {
           mergedConditionalTags.set(conditionalTag.key, {
             key: conditionalTag.key,
             value: sign.signValue === undefined ? conditionalTag.value : String(sign.signValue),
           })
         }
-      } else {
-        // Handle combinations like https://trafficsigns.osm-verkehrswende.org/DE?signs=DE:253,1053-33
-        // A `traffic_sign` with `accessTags` but a `condition_modifier` is applied.
-        // In this case, we need to treat the `accessTags` like `conditionalTags` so we can modify them below.
-        const groupHasConditionModifierSign = signs
-          .filter((sign) => sign.recodgnizedSign === true)
-          .some((sign) => sign.kind === 'condition_modifier')
-        const { accessTags } = sign.tagRecommendations
-
-        if (groupHasConditionModifierSign && accessTags) {
-          for (const conditionalTag of accessTags) {
-            mergedConditionalTags.set(conditionalTag.key, {
-              key: conditionalTag.key,
-              value: sign.signValue === undefined ? conditionalTag.value : String(sign.signValue),
-            })
-          }
-        }
       }
-    })
+    }
+  }
 
   // Handle modifier signs (`exception_modifier` and `condition_modifier`)
-  signs
-    .filter((sign) => sign.recodgnizedSign === true)
-    .filter((sign) => sign.kind !== 'traffic_sign')
-    .forEach((sign) => {
-      if (sign.tagRecommendations === 'none') {
-        return
-      }
+  for (const sign of signs) {
+    if (!sign.recodgnizedSign) continue
+    if (sign.kind === 'traffic_sign') continue
 
-      // If a sign has `conditionalTags`, we update the previously
-      // applied `traffic_sign` conditional tags to apply the conditional syntax to key and value.
-      // Data:
-      // - `conditionalValue` is used when a fixed (but possibly modifable) conditional value is present
-      // - `conditionalValueFromValuePrompt` is used when no fixed value is present
-      //    so we always look at the`signValue` (set by the value prompt)
-      const applyModfier =
-        !!sign.tagRecommendations.modifierValue ||
-        sign.tagRecommendations.modifierValueFromValuePrompt === true
+    const recs = getRecommendations(sign, geometry)
+    if (!recs) continue
 
-      if (applyModfier) {
-        // For `condition_modifier`, the primary condition is removed and only the `*:conditional` stays.
-        // Eg. `maxspeed:conditional=30 @ (22-06)`
-        if (sign.kind === 'condition_modifier') {
-          for (const [mergedKey, mergedTag] of mergedConditionalTags) {
-            const key = `${mergedTag.key}:conditional`
-            const value = `${mergedTag.value} @ (${sign.signValue || sign.tagRecommendations.modifierValue})`
-            // We overwrite the existing key
-            mergedConditionalTags.set(mergedKey, { key, value })
-          }
-        }
+    const applyModfier = !!recs.modifierValue || recs.modifierValueFromValuePrompt === true
 
-        // For `exception_modifier`, the primary condition stays but is resolved conditionally.
-        // Eg. `maxweight=5.5 + maxweight:conditional=none @ (destination)`
-        if (sign.kind === 'exception_modifier') {
-          const additionalTags = new Map<string, { key: string; value: string }>()
-
-          for (const [_, mergedTag] of mergedConditionalTags) {
-            const key = `${mergedTag.key}:conditional`
-            const value = `none @ (${sign.signValue || sign.tagRecommendations.modifierValue})`
-            // We need to add the additional conditional tags indirectly to the `mergedConditionalTags`
-            // Otherwise we end up with an invinite loop because the for of loop first adds and then iterates over the just added tag.
-            additionalTags.set(key, { key, value })
-          }
-
-          for (const [key, value] of additionalTags) {
-            mergedConditionalTags.set(key, value)
-          }
+    if (applyModfier) {
+      if (sign.kind === 'condition_modifier') {
+        for (const [mergedKey, mergedTag] of mergedConditionalTags) {
+          const key = `${mergedTag.key}:conditional`
+          const value = `${mergedTag.value} @ (${sign.signValue || recs.modifierValue})`
+          mergedConditionalTags.set(mergedKey, { key, value })
         }
       }
-    })
+
+      if (sign.kind === 'exception_modifier') {
+        const additionalTags = new Map<string, { key: string; value: string }>()
+
+        for (const [_, mergedTag] of mergedConditionalTags) {
+          const key = `${mergedTag.key}:conditional`
+          const value = `none @ (${sign.signValue || recs.modifierValue})`
+          additionalTags.set(key, { key, value })
+        }
+
+        for (const [key, value] of additionalTags) {
+          mergedConditionalTags.set(key, value)
+        }
+      }
+    }
+  }
 
   return Array.from(mergedConditionalTags.values())
 }

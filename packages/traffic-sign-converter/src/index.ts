@@ -7,12 +7,15 @@ export { signsToTrafficSignTagValue } from './signsToTrafficSignTag/signsToTraff
 
 // To Tags
 export { showSignsToTagsWarning } from './signsToTags/showSignsToTagsWarning.js'
+export { signsToApplicability } from './signsToTags/signsToApplicability.js'
 export { signsToComments } from './signsToTags/signsToComments.js'
 export { signsToTags } from './signsToTags/signsToTags.js'
+export { signsToTopLevelComments } from './signsToTags/signsToTopLevelComments.js'
 
 // Data Definitions
 export * from './data-definitions/countryDefinitions.js'
 export type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
+export * from './data-definitions/geometryTypes.js'
 export * from './data-definitions/namedTrafficSignValues.js'
 export type * from './data-definitions/TrafficSignDataTypes.js'
 export {

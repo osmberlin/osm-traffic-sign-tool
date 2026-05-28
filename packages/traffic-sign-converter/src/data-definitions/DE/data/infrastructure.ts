@@ -9,10 +9,13 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Radweg',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['cycleway'],
-      uniqueTags: [{ key: 'bicycle', value: 'designated' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway'],
+        uniqueTags: [{ key: 'bicycle', value: 'designated' }],
+      },
+    ],
     comments: [
       {
         tagReference: null,
@@ -41,9 +44,7 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Reitweg',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['bridleway'],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['bridleway'] }],
     comments: [
       {
         tagReference: 'highway=bridleway',
@@ -69,10 +70,13 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Gehweg',
     description: 'Weg für Fußgänger',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['footway'],
-      uniqueTags: [{ key: 'foot', value: 'designated' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['footway'],
+        uniqueTags: [{ key: 'foot', value: 'designated' }],
+      },
+    ],
     comments: [
       {
         tagReference: 'highway=footway',
@@ -117,14 +121,17 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Gemeinsamer Fuß- und Radweg',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['path'],
-      uniqueTags: [
-        { key: 'bicycle', value: 'designated' },
-        { key: 'foot', value: 'designated' },
-        { key: 'segregated', value: 'no' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['path'],
+        uniqueTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'foot', value: 'designated' },
+          { key: 'segregated', value: 'no' },
+        ],
+      },
+    ],
     comments: [
       {
         tagReference: null,
@@ -152,14 +159,17 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Getrennter Rad- und Gehweg',
     description: 'Radweg links',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['path', 'cycleway'],
-      uniqueTags: [
-        { key: 'bicycle', value: 'designated' },
-        { key: 'foot', value: 'designated' },
-        { key: 'segregated', value: 'yes' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['path', 'cycleway'],
+        uniqueTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'foot', value: 'designated' },
+          { key: 'segregated', value: 'yes' },
+        ],
+      },
+    ],
     comments: [
       {
         tagReference: 'highway=cycleway',
@@ -191,14 +201,17 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Getrennter Rad- und Gehweg',
     description: 'Radweg rechts',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['path', 'cycleway'],
-      uniqueTags: [
-        { key: 'bicycle', value: 'designated' },
-        { key: 'foot', value: 'designated' },
-        { key: 'segregated', value: 'yes' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['path', 'cycleway'],
+        uniqueTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'foot', value: 'designated' },
+          { key: 'segregated', value: 'yes' },
+        ],
+      },
+    ],
     comments: [
       {
         tagReference: 'highway=cycleway',
@@ -231,10 +244,13 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Fußgängerbereich',
     description: 'Beginn einer Fußgängerzone',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['pedestrian'],
-      uniqueTags: [{ key: 'foot', value: 'designated' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['pedestrian'],
+        uniqueTags: [{ key: 'foot', value: 'designated' }],
+      },
+    ],
     comments: [
       {
         tagReference: 'highway=pedestrian',
@@ -260,7 +276,8 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Fußgängerzone (Ende)',
     description: 'Ende einer Fußgängerzone',
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -280,16 +297,19 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Fahrradstraße',
     description: 'Beginn einer Fahrradstraße',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['cycleway', 'residential'],
-      accessTags: [{ key: 'vehicle', value: 'no' }],
-      uniqueTags: [
-        { key: 'bicycle', value: 'designated' },
-        { key: 'bicycle_road', value: 'yes' },
-        { key: 'maxspeed', value: '30' }, // TODO Tagging: I remember to not tag `maxspeed` as a value but as a category
-        { key: 'source:maxspeed', value: 'DE:bicycle_road' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway', 'residential'],
+        accessTags: [{ key: 'vehicle', value: 'no' }],
+        uniqueTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'bicycle_road', value: 'yes' },
+          { key: 'maxspeed', value: '30' }, // TODO Tagging: I remember to not tag `maxspeed` as a value but as a category
+          { key: 'source:maxspeed', value: 'DE:bicycle_road' },
+        ],
+      },
+    ],
     comments: [
       {
         tagReference: 'highway=*',
@@ -313,7 +333,7 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Fahrradstraße',
     description: 'Ende einer Fahrradstraße',
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: { signCategory: 'traffic_sign', focus: { all: true } },
     image: {
@@ -330,16 +350,19 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Fahrradzone',
     description: 'Beginn einer Fahrradzone',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['residential'],
-      accessTags: [{ key: 'vehicle', value: 'no' }],
-      uniqueTags: [
-        { key: 'bicycle', value: 'designated' },
-        { key: 'bicycle_road', value: 'yes' },
-        { key: 'maxspeed', value: '30' },
-        { key: 'source:maxspeed', value: 'DE:bicycle_zone' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['residential'],
+        accessTags: [{ key: 'vehicle', value: 'no' }],
+        uniqueTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'bicycle_road', value: 'yes' },
+          { key: 'maxspeed', value: '30' },
+          { key: 'source:maxspeed', value: 'DE:bicycle_zone' },
+        ],
+      },
+    ],
     comments: [
       {
         tagReference: 'highway=*',
@@ -363,7 +386,7 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Fahrradzone',
     description: 'Ende einer Fahrradzone',
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: { signCategory: 'traffic_sign', focus: { all: true } },
     image: {
@@ -381,9 +404,7 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Verkehrsberuhigter Bereich',
     description: 'Beginn eines verkehrsberuhigten Bereichs',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['living_street'],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['living_street'] }],
     comments: [
       {
         lang: 'de',
@@ -408,7 +429,8 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Verkehrsberuhigter Bereich (Ende)',
     description: 'Ende eines verkehrsberuhigten Bereichs',
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -427,9 +449,7 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Radschnellweg',
     description: 'Beginn eines Radschnellwegs',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: [] }],
     comments: [
       {
         lang: 'de',
@@ -454,7 +474,8 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Radschnellweg (Ende)',
     description: 'Ende eines Radschnellwegs',
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [deEndeHauptzeichenOsmMappingComment],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -473,11 +494,14 @@ export const _infrastructure: SignType[] = [
     descriptiveName: 'Bussonderfahrstreifen',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['service', 'busway'],
-      uniqueTags: [{ key: 'bus', value: 'designated' }],
-      conditionalTags: [{ key: 'vehicle', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['service', 'busway'],
+        uniqueTags: [{ key: 'bus', value: 'designated' }],
+        conditionalTags: [{ key: 'vehicle', value: 'no' }],
+      },
+    ],
     comments: [
       // TODO: Hier ist die Aufteilung Centerline / Separate Linie essentiell, da in DE meist über das lane-Schema zu taggen.
       // Siehe auch https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland

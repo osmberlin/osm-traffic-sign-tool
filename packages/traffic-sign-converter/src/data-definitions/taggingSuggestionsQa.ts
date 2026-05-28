@@ -1,4 +1,8 @@
-import type { ModifierSignType, SignType, TrafficSignType } from './TrafficSignDataTypes.js'
+import type {
+  SignType,
+  TagRecommendationsModifierSignObject,
+  TagRecommendationsTrafficSignObject,
+} from './TrafficSignDataTypes.js'
 
 export const taggingSuggestionsQaStatuses = ['none'] as const
 export type TaggingSuggestionsQaStatus = (typeof taggingSuggestionsQaStatuses)[number]
@@ -11,13 +15,18 @@ export type TaggingSuggestionsQaCategory =
 export const taggingSuggestionsQaFilters = ['all', 'with', 'missing', 'explicit_none'] as const
 export type TaggingSuggestionsQaFilter = (typeof taggingSuggestionsQaFilters)[number]
 
-type TagRecommendations =
-  | TrafficSignType['tagRecommendations']
-  | ModifierSignType['tagRecommendations']
+type TagRecommendationsByGeometry =
+  | SignType['tagRecommendationsByGeometry']
+  | TagRecommendationsTrafficSignObject[]
+  | TagRecommendationsModifierSignObject[]
 
-export const hasTagRecommendationsContent = (tagRecommendations: TagRecommendations): boolean =>
-  tagRecommendations !== 'none' &&
-  Object.values(tagRecommendations).some((value) => {
+const hasSingleRecommendationContent = (
+  recommendation: TagRecommendationsTrafficSignObject | TagRecommendationsModifierSignObject,
+): boolean =>
+  Object.entries(recommendation).some(([key, value]) => {
+    if (key === 'geometries') {
+      return false
+    }
     if (value === undefined) {
       return false
     }
@@ -30,12 +39,20 @@ export const hasTagRecommendationsContent = (tagRecommendations: TagRecommendati
     return true
   })
 
+export const hasTagRecommendationsContent = (
+  tagRecommendationsByGeometry: TagRecommendationsByGeometry,
+): boolean =>
+  tagRecommendationsByGeometry !== 'none' &&
+  tagRecommendationsByGeometry.some((recommendation) =>
+    hasSingleRecommendationContent(recommendation),
+  )
+
 export const classifyTaggingSuggestionsQa = (sign: SignType): TaggingSuggestionsQaCategory => {
-  if (hasTagRecommendationsContent(sign.tagRecommendations)) {
+  if (hasTagRecommendationsContent(sign.tagRecommendationsByGeometry)) {
     return 'withSuggestions'
   }
 
-  if (sign.tagRecommendations === 'none') {
+  if (sign.taggingSuggestionsQa === 'none' || sign.tagRecommendationsByGeometry === 'none') {
     return 'explicitNoSuggestions'
   }
 

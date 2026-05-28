@@ -11,19 +11,21 @@ describe('collectAccessTags()', () => {
   describe('Real signs', () => {
     test('Fahrradstraße', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Fahrradstraße'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'no' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'vehicle', value: 'no' }])
     })
 
     test('Fahrradstraße+Anlieger frei', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Fahrradstraße', 'Anlieger frei'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
+        { key: 'vehicle', value: 'destination' },
+      ])
     })
 
     test('Verbot für Krafträder, Kleinkrafträder und Mofas', () => {
       const signs = signsStateByDescriptiveName('DE', data, [
         'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'motorcycle', value: 'no' },
         { key: 'moped', value: 'no' },
         { key: 'mofa', value: 'no' },
@@ -35,7 +37,7 @@ describe('collectAccessTags()', () => {
         'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
         'Mofas frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'motorcycle', value: 'no' },
         { key: 'moped', value: 'no' },
         { key: 'mofa', value: 'yes' },
@@ -47,7 +49,7 @@ describe('collectAccessTags()', () => {
         'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
         'Krafträder auch mit Beiwagen, Krafträder und Mofas frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'motorcycle', value: 'yes' },
         { key: 'moped', value: 'yes' },
         { key: 'mofa', value: 'yes' },
@@ -59,7 +61,7 @@ describe('collectAccessTags()', () => {
         'Verbot für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
         'Kraftomnibus frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'motorcar', value: 'no' },
         { key: 'bus', value: 'yes' },
         { key: 'tourist_bus', value: 'yes' },
@@ -72,7 +74,7 @@ describe('collectAccessTags()', () => {
         'Anlieger frei',
         'Land- und forstwirtschaftlicher Verkehr frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'vehicle', value: 'destination;agricultural;forestry' },
       ])
     })
@@ -82,39 +84,41 @@ describe('collectAccessTags()', () => {
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
+        { key: 'vehicle', value: 'destination' },
+      ])
     })
 
     test('Linienverkehr frei (standalone)', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Linienverkehr frei'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'bus', value: 'yes' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'bus', value: 'yes' }])
     })
 
     test('Taxi frei (standalone)', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Taxi frei'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'taxi', value: 'yes' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'taxi', value: 'yes' }])
     })
 
     test('Einsatzfahrzeuge frei (standalone)', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Einsatzfahrzeuge frei'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'emergency', value: 'yes' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'emergency', value: 'yes' }])
     })
 
     test('Personenkraftwagen frei (standalone)', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Personenkraftwagen frei'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'motorcar', value: 'yes' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'motorcar', value: 'yes' }])
     })
 
     test('HGV frei (standalone)', () => {
       const signs = signsStateByDescriptiveName('DE', data, [
         'Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t… frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'hgv', value: 'yes' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'hgv', value: 'yes' }])
     })
 
     test('Kraftomnibus frei (standalone)', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Kraftomnibus frei'])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'bus', value: 'yes' },
         { key: 'tourist_bus', value: 'yes' },
       ])
@@ -125,7 +129,7 @@ describe('collectAccessTags()', () => {
         'Verbot für Fahrzeuge aller Art',
         'Linienverkehr frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'vehicle', value: 'no' },
         { key: 'bus', value: 'yes' },
       ])
@@ -136,7 +140,7 @@ describe('collectAccessTags()', () => {
         'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
         'Einsatzfahrzeuge frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'motor_vehicle', value: 'no' },
         { key: 'emergency', value: 'yes' },
       ])
@@ -144,7 +148,7 @@ describe('collectAccessTags()', () => {
 
     test('Lieferverkehr frei (standalone) - purpose-based should remain unchanged', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Lieferverkehr frei'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'delivery' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'access', value: 'delivery' }])
     })
 
     test('Verbot für Fahrzeuge aller Art + Anlieger frei - purpose-based should remain unchanged', () => {
@@ -152,7 +156,9 @@ describe('collectAccessTags()', () => {
         'Verbot für Fahrzeuge aller Art',
         'Anlieger frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'vehicle', value: 'destination' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
+        { key: 'vehicle', value: 'destination' },
+      ])
     })
 
     test('Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge + Betriebs- und Versorgungsfahrzeuge frei', () => {
@@ -160,7 +166,7 @@ describe('collectAccessTags()', () => {
         'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
         'Betriebs- und Versorgungsfahrzeuge frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'motor_vehicle', value: 'private;delivery' },
       ])
     })
@@ -170,7 +176,7 @@ describe('collectAccessTags()', () => {
         'Verbot für Fahrzeuge aller Art',
         'Betriebs- und Versorgungsfahrzeuge frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'vehicle', value: 'private;delivery' },
       ])
     })
@@ -182,10 +188,12 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
+          tagRecommendationsByGeometry: [
+            { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar' }] },
+          ],
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'bar' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'foo', value: 'bar' }])
     })
 
     test('One Sign, two Tags', () => {
@@ -193,15 +201,18 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: {
-            accessTags: [
-              { key: 'foo', value: 'bar' },
-              { key: 'foo2', value: 'bar2' },
-            ],
-          },
+          tagRecommendationsByGeometry: [
+            {
+              geometries: ['way'],
+              accessTags: [
+                { key: 'foo', value: 'bar' },
+                { key: 'foo2', value: 'bar2' },
+              ],
+            },
+          ],
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'foo', value: 'bar' },
         { key: 'foo2', value: 'bar2' },
       ])
@@ -212,15 +223,19 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
+          tagRecommendationsByGeometry: [
+            { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar' }] },
+          ],
         },
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar2' }] },
+          tagRecommendationsByGeometry: [
+            { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar2' }] },
+          ],
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'bar2' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'foo', value: 'bar2' }])
     })
 
     test('Two Signs, different keys', () => {
@@ -228,15 +243,19 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
+          tagRecommendationsByGeometry: [
+            { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar' }] },
+          ],
         },
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo2', value: 'bar2' }] },
+          tagRecommendationsByGeometry: [
+            { geometries: ['way'], accessTags: [{ key: 'foo2', value: 'bar2' }] },
+          ],
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         { key: 'foo', value: 'bar' },
         { key: 'foo2', value: 'bar2' },
       ])
@@ -247,15 +266,17 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo', value: 'non-no' }] },
+          tagRecommendationsByGeometry: [
+            { geometries: ['way'], accessTags: [{ key: 'foo', value: 'non-no' }] },
+          ],
         },
         {
           recodgnizedSign: true,
           kind: 'exception_modifier',
-          tagRecommendations: { modifierValue: 'added' },
+          tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'added' }],
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'non-no;added' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'foo', value: 'non-no;added' }])
     })
 
     test('One sign ("no"), one modifer', () => {
@@ -263,15 +284,17 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo', value: 'no' }] },
+          tagRecommendationsByGeometry: [
+            { geometries: ['way'], accessTags: [{ key: 'foo', value: 'no' }] },
+          ],
         },
         {
           recodgnizedSign: true,
           kind: 'exception_modifier',
-          tagRecommendations: { modifierValue: 'replaced' },
+          tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'replaced' }],
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'replaced' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'foo', value: 'replaced' }])
     })
 
     test('One sign, two modifer', () => {
@@ -279,20 +302,22 @@ describe('collectAccessTags()', () => {
         {
           recodgnizedSign: true,
           kind: 'traffic_sign',
-          tagRecommendations: { accessTags: [{ key: 'foo', value: 'bar' }] },
+          tagRecommendationsByGeometry: [
+            { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar' }] },
+          ],
         },
         {
           recodgnizedSign: true,
           kind: 'exception_modifier',
-          tagRecommendations: { modifierValue: 'aaa' },
+          tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'aaa' }],
         },
         {
           recodgnizedSign: true,
           kind: 'exception_modifier',
-          tagRecommendations: { modifierValue: 'bbb' },
+          tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'bbb' }],
         },
       ] as SignStateType[]
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'foo', value: 'bar;aaa;bbb' }])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([{ key: 'foo', value: 'bar;aaa;bbb' }])
     })
   })
 
@@ -302,20 +327,26 @@ describe('collectAccessTags()', () => {
         'Gemeinsamer Fuß- und Radweg',
         'Landwirtschaftlicher Verkehr frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'agricultural' }])
-      expect(collectConditionalTags(signs)).toMatchObject([])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
+        { key: 'access', value: 'agricultural' },
+      ])
+      expect(collectConditionalTags(signs, 'way')).toMatchObject([])
     })
 
     test('agricultural', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Fußgängerbereich', 'Anlieger frei'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
-      expect(collectConditionalTags(signs)).toMatchObject([])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
+        { key: 'access', value: 'destination' },
+      ])
+      expect(collectConditionalTags(signs, 'way')).toMatchObject([])
     })
 
     test('Only Anlieger frei => Custom A', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Anlieger frei'])
-      expect(collectAccessTags(signs)).toMatchObject([{ key: 'access', value: 'destination' }])
-      expect(collectConditionalTags(signs)).toMatchObject([])
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
+        { key: 'access', value: 'destination' },
+      ])
+      expect(collectConditionalTags(signs, 'way')).toMatchObject([])
     })
   })
 
@@ -325,8 +356,8 @@ describe('collectAccessTags()', () => {
         'Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung',
         'Anlieger frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([])
-      expect(collectConditionalTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([])
+      expect(collectConditionalTags(signs, 'way')).toMatchObject([
         { key: 'maxwidth', value: '2' },
         { key: 'maxwidth:conditional', value: 'none @ (destination)' },
       ])

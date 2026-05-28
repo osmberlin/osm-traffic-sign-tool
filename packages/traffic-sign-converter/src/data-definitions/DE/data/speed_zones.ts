@@ -15,14 +15,17 @@ export const _speed_zones: SignType[] = [
       defaultValue: '47',
       format: 'integer',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [
-        { key: 'source:maxspeed', valueTemplate: 'DE:zone$' },
-        { key: 'zone:maxspeed', valueTemplate: 'DE:$' },
-      ],
-      conditionalTags: [{ key: 'maxspeed', value: '30' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [
+          { key: 'source:maxspeed', valueTemplate: 'DE:zone$' },
+          { key: 'zone:maxspeed', valueTemplate: 'DE:$' },
+        ],
+        conditionalTags: [{ key: 'maxspeed', value: '30' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -42,14 +45,17 @@ export const _speed_zones: SignType[] = [
     descriptiveName: 'Tempo 30-Zone',
     description: 'Beginn einer Tempo 30-Zone',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [
-        { key: 'source:maxspeed', value: 'DE:zone30' },
-        { key: 'zone:maxspeed', value: 'DE:30' },
-      ],
-      conditionalTags: [{ key: 'maxspeed', value: '30' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [
+          { key: 'source:maxspeed', value: 'DE:zone30' },
+          { key: 'zone:maxspeed', value: 'DE:30' },
+        ],
+        conditionalTags: [{ key: 'maxspeed', value: '30' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -69,14 +75,17 @@ export const _speed_zones: SignType[] = [
     descriptiveName: 'Tempo 20-Zone',
     description: 'Beginn einer Tempo 20-Zone',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [
-        { key: 'source:maxspeed', value: 'DE:zone20' },
-        { key: 'zone:maxspeed', value: 'DE:20' },
-      ],
-      conditionalTags: [{ key: 'maxspeed', value: '20' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [
+          { key: 'source:maxspeed', value: 'DE:zone20' },
+          { key: 'zone:maxspeed', value: 'DE:20' },
+        ],
+        conditionalTags: [{ key: 'maxspeed', value: '20' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -96,14 +105,17 @@ export const _speed_zones: SignType[] = [
     descriptiveName: 'Tempo 30-Zone (doppelseitig)',
     description: 'Beginn einer Tempo 30-Zone, doppelseitig (Rückseite Zeichen 274.2)',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [
-        { key: 'source:maxspeed', value: 'DE:zone30' },
-        { key: 'zone:maxspeed', value: 'DE:30' },
-      ],
-      conditionalTags: [{ key: 'maxspeed', value: '30' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [
+          { key: 'source:maxspeed', value: 'DE:zone30' },
+          { key: 'zone:maxspeed', value: 'DE:30' },
+        ],
+        conditionalTags: [{ key: 'maxspeed', value: '30' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -123,14 +135,17 @@ export const _speed_zones: SignType[] = [
     description:
       'Beginn einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen, doppelseitig (Rückseite Zeichen 274.2-20)',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [
-        { key: 'source:maxspeed', value: 'DE:zone20' },
-        { key: 'zone:maxspeed', value: 'DE:20' },
-      ],
-      conditionalTags: [{ key: 'maxspeed', value: '20' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [
+          { key: 'source:maxspeed', value: 'DE:zone20' },
+          { key: 'zone:maxspeed', value: 'DE:20' },
+        ],
+        conditionalTags: [{ key: 'maxspeed', value: '20' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -156,11 +171,9 @@ export const _speed_zones: SignType[] = [
       defaultValue: '30',
       format: 'integer',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      conditionalTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], uniqueTags: [], conditionalTags: [] },
+    ],
     comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -181,11 +194,9 @@ export const _speed_zones: SignType[] = [
     descriptiveName: 'Tempo 20-Zone (Ende)',
     description: 'Ende einer Tempo 20-Zone',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      conditionalTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], uniqueTags: [], conditionalTags: [] },
+    ],
     comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: {

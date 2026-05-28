@@ -18,7 +18,7 @@ const sign = (focus?: SignType['catalogue']['focus']): SignType =>
     descriptiveName: 'test',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'traffic_sign', focus },
     image: { kind: 'local', sourceLocalPath: 'x.svg', licence: 'Public Domain' },
   }) as SignType

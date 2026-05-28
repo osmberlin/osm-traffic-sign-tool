@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Mf_Relation - OSM Geometry Icon - Relation</title>
+  <path d="m5.311 8.671-.559 4.978M7.372 8.671l2.596 4.66M8.735 7.341l4.704 2.672M8.735 5.438l4.619-.233" style="fill:none;fill-rule:evenodd;stroke:#a4a4a4;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"/>
+  <use xlink:href="#a" width="20" height="20" transform="translate(10.8 -10.48)"/>
+  <path id="a" d="M149.503 18.485a132.835 110.612 0 1 1-265.67 0 132.835 110.612 0 1 1 265.67 0z" style="fill:#000;fill-opacity:1;stroke:#000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="matrix(.01445 0 0 .01742 4.294 15.262)"/>
+  <use xlink:href="#a" width="20" height="20" transform="translate(10.887 -4.445)"/>
+  <rect width="19.014" height="19.014" x=".493" y=".493" ry="2.703" style="fill:none;fill-opacity:1;stroke:#000;stroke-width:.98591548;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:1;stroke-dasharray:none;stroke-dashoffset:4.6;stroke-opacity:1"/>
+  <use xlink:href="#a" width="20" height="20" transform="translate(6.54 -.265)"/>
+  <path d="M9.546 6.83a2.828 2.828 0 1 1-5.657 0 2.828 2.828 0 1 1 5.657 0z" style="fill:#bee6be;fill-opacity:1;stroke:#000;stroke-width:.5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:4.59999999999999964;stroke-opacity:1" transform="translate(-1.06 -1.237)"/>
+</svg>

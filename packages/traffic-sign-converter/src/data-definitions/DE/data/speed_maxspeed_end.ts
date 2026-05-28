@@ -14,7 +14,8 @@ export const _speed_maxspeed_end: SignType[] = [
       defaultValue: '47',
       format: 'integer',
     },
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -33,7 +34,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -53,7 +55,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -72,7 +75,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -92,7 +96,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -112,7 +117,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -132,7 +138,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -152,7 +159,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -172,7 +180,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -192,7 +201,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -212,7 +222,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -232,7 +243,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -252,7 +264,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -272,7 +285,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -292,7 +306,8 @@ export const _speed_maxspeed_end: SignType[] = [
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: 'none',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     comments: [],
     catalogue: {
       signCategory: 'speed',

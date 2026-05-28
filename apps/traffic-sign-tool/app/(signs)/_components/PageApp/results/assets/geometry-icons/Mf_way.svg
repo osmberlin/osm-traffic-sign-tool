@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Mf_way - OSM Geometry Icon - Way</title>
+  <path d="m6.286 8.897 4.946-3.78" style="fill:none;fill-rule:evenodd;stroke:#000;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter;marker-start:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:4.59999999999999964;stroke-opacity:.31372549"/>
+  <path d="m6.286 11.116 6.976 2.703" style="fill:none;fill-rule:evenodd;stroke:#000;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:.31372549;stroke-miterlimit:4;stroke-dasharray:none"/>
+  <use xlink:href="#a" width="20" height="20" transform="translate(8.856 -6.767)"/>
+  <path id="a" d="M149.503 18.485a132.835 110.612 0 1 1-265.67 0 132.835 110.612 0 1 1 265.67 0z" style="fill:#000;fill-opacity:1;stroke:#000;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="matrix(.01445 0 0 .01742 4.117 10.048)"/>
+  <use xlink:href="#a" width="20" height="20" transform="translate(10.887 4.217)"/>
+  <rect width="19.014" height="19.014" x=".493" y=".493" ry="2.703" style="fill:none;fill-opacity:1;stroke:#000;stroke-width:.98591548;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:1;stroke-dasharray:none;stroke-dashoffset:4.6;stroke-opacity:1"/>
+</svg>

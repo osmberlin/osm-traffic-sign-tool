@@ -8,10 +8,7 @@ export const _conditions__other: SignType[] = [
     descriptiveName: 'Beschräkung: bei Nässe',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      uniqueTags: [],
-      modifierValue: 'wet',
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], uniqueTags: [], modifierValue: 'wet' }],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -31,10 +28,9 @@ export const _conditions__other: SignType[] = [
     description:
       '7,5 t zulässige Gesamtmasse einschließlich Anhänger überschreitet die angegebene Grenze',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      uniqueTags: [],
-      modifierValue: 'maxweightrating>7.5',
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [], modifierValue: 'maxweightrating>7.5' },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -54,10 +50,9 @@ export const _conditions__other: SignType[] = [
     description:
       '12 t zulässige Gesamtmasse einschließlich Anhänger überschreitet die angegebene Grenze',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      uniqueTags: [],
-      modifierValue: 'weight>12',
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [], modifierValue: 'weight>12' },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -77,10 +72,9 @@ export const _conditions__other: SignType[] = [
     description:
       '2,8 t zulässige Gesamtmasse einschließlich Anhänger überschreitet die angegebene Grenze',
     kind: 'condition_modifier',
-    tagRecommendations: {
-      uniqueTags: [],
-      modifierValue: 'weight>2.8',
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [], modifierValue: 'weight>2.8' },
+    ],
     comments: [
       {
         lang: 'de',
@@ -104,10 +98,7 @@ export const _conditions__other: SignType[] = [
     descriptiveName: 'Ende',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: [], uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -126,10 +117,9 @@ export const _conditions__other: SignType[] = [
     descriptiveName: 'Beide Richtungen',
     description: 'zwei gegengerichtete waagerechte Pfeile',
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'oneway', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'oneway', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -148,10 +138,13 @@ export const _conditions__other: SignType[] = [
     descriptiveName: 'Beide Richtungen',
     description: 'zwei gegengerichtete senkrechte Pfeile',
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: ['path', 'cycleway'],
-      uniqueTags: [{ key: 'oneway', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['path', 'cycleway'],
+        uniqueTags: [{ key: 'oneway', value: 'no' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -170,9 +163,9 @@ export const _conditions__other: SignType[] = [
     descriptiveName: 'Radverkehr kreuzt von links und rechts',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'oneway:bicycle', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'oneway:bicycle', value: 'no' }] },
+    ],
     comments: [
       {
         tagReference: null,
@@ -198,10 +191,13 @@ export const _conditions__other: SignType[] = [
     descriptiveName: 'Radverkehr im Gegenverkehr',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'oneway:bicycle', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'oneway:bicycle', value: 'no' }],
+      },
+    ],
     comments: [
       {
         tagReference: null,

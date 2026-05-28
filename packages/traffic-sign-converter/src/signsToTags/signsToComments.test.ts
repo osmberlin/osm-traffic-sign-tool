@@ -12,10 +12,10 @@ describe('signsToComments()', () => {
       'Radfahrer frei',
       'Personenkraftwagen frei',
     ])
-    const result = signsToComments(signs)
-    expect(result.size).toBe(2)
-    expect(result.has('239')).toBeTruthy()
+    const result = signsToComments(signs, 'way')
+    expect(result.size).toBe(0)
+    expect(result.has('239')).toBeFalsy()
     expect(result.has('1022-10')).toBeFalsy()
-    expect(result.has('1024-10')).toBeTruthy()
+    expect(result.has('1024-10')).toBeFalsy()
   })
 })

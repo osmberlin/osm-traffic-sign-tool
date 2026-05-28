@@ -23,26 +23,35 @@ const baseSign = {
 
 describe('taggingSuggestionsQa', () => {
   test('hasTagRecommendationsContent', () => {
-    expect(hasTagRecommendationsContent({})).toBe(false)
-    expect(hasTagRecommendationsContent({ accessTags: [] })).toBe(false)
-    expect(hasTagRecommendationsContent({ accessTags: [{ key: 'a', value: 'b' }] })).toBe(true)
-    expect(hasTagRecommendationsContent({ modifierValueFromValuePrompt: true })).toBe(true)
+    expect(hasTagRecommendationsContent([{ geometries: ['way'] }])).toBe(false)
+    expect(hasTagRecommendationsContent([{ geometries: ['way'], accessTags: [] }])).toBe(false)
+    expect(
+      hasTagRecommendationsContent([
+        { geometries: ['way'], accessTags: [{ key: 'a', value: 'b' }] },
+      ]),
+    ).toBe(true)
+    expect(
+      hasTagRecommendationsContent([{ geometries: ['way'], modifierValueFromValuePrompt: true }]),
+    ).toBe(true)
   })
 
   test('classifyTaggingSuggestionsQa', () => {
     const withTags: SignType = {
       ...baseSign,
       kind: 'traffic_sign',
-      tagRecommendations: { uniqueTags: [{ key: 'maxspeed', value: '30' }] },
+      tagRecommendationsByGeometry: [
+        { geometries: ['way'], uniqueTags: [{ key: 'maxspeed', value: '30' }] },
+      ],
     }
     const missing: SignType = {
       ...baseSign,
       kind: 'traffic_sign',
-      tagRecommendations: {},
+      tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     }
     const explicit: SignType = {
       ...missing,
-      tagRecommendations: 'none',
+      tagRecommendationsByGeometry: 'none',
+      taggingSuggestionsQa: 'none',
     }
 
     expect(classifyTaggingSuggestionsQa(withTags)).toBe('withSuggestions')
@@ -55,14 +64,22 @@ describe('taggingSuggestionsQa', () => {
       {
         ...baseSign,
         kind: 'traffic_sign',
-        tagRecommendations: { uniqueTags: [{ key: 'a', value: 'b' }] },
+        tagRecommendationsByGeometry: [
+          { geometries: ['way'], uniqueTags: [{ key: 'a', value: 'b' }] },
+        ],
       },
-      { ...baseSign, osmValuePart: 'b', kind: 'traffic_sign', tagRecommendations: {} },
+      {
+        ...baseSign,
+        osmValuePart: 'b',
+        kind: 'traffic_sign',
+        tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+      },
       {
         ...baseSign,
         osmValuePart: 'c',
         kind: 'traffic_sign',
-        tagRecommendations: 'none',
+        tagRecommendationsByGeometry: 'none',
+        taggingSuggestionsQa: 'none',
       },
     ]
 

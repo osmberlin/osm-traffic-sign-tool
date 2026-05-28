@@ -14,11 +14,14 @@ export const _speed_maxspeed_start: SignType[] = [
       defaultValue: '47',
       format: 'integer',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '47' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '47' }],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -39,11 +42,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '5' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '5' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -63,11 +69,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '10' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '10' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -87,11 +96,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '20' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '20' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -111,11 +123,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '30' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '30' }],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -136,11 +151,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '40' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '40' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -160,11 +178,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '50' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '50' }],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -185,11 +206,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '60' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '60' }],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -210,11 +234,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '70' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '70' }],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -235,11 +262,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '80' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '80' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -259,11 +289,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '90' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '90' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -283,11 +316,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '100' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '100' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -307,11 +343,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '110' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '110' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -331,11 +370,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '120' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '120' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',
@@ -355,11 +397,14 @@ export const _speed_maxspeed_start: SignType[] = [
     descriptiveName: 'Zulässige Höchstgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
-      conditionalTags: [{ key: 'maxspeed', value: '130' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxspeed', value: 'sign' }],
+        conditionalTags: [{ key: 'maxspeed', value: '130' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'speed',

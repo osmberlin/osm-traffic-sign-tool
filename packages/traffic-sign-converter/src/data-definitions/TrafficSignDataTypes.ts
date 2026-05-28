@@ -1,4 +1,5 @@
 import type { Prettify } from '../types/types.js'
+import type { GeometryType } from './geometryTypes.js'
 import type {
   NumericValuePromptFormat,
   OpeningHoursValuePromptFormat,
@@ -42,7 +43,7 @@ export type TrafficSignType = SharedId &
     // maxspeed, maxweight
     signValue?: number
     valuePrompt?: ValuePrompt<NumericValuePromptFormat>
-    tagRecommendations: TagRecommendationsTrafficSign
+    tagRecommendationsByGeometry: TagRecommendationsTrafficSign
   } & SharedComments &
   SharedQuestions &
   SharedCompatibility &
@@ -59,7 +60,7 @@ export type ModifierSignType = Prettify<
       valuePrompt?:
         | ValuePrompt<NumericValuePromptFormat>
         | ValuePrompt<OpeningHoursValuePromptFormat>
-      tagRecommendations: TagRecommendationsModifierSign
+      tagRecommendationsByGeometry: TagRecommendationsModifierSign
     } & SharedComments &
     SharedQuestions &
     SharedCompatibility &
@@ -140,11 +141,14 @@ export type FocusArea = (typeof focusAreas)[number]
 export const taggingSuggestionsQaStatuses = ['none'] as const
 export type TaggingSuggestionsQaStatus = (typeof taggingSuggestionsQaStatuses)[number]
 
-type SharedTaggingSuggestionsQa = {}
+type SharedTaggingSuggestionsQa = {
+  taggingSuggestionsQa?: TaggingSuggestionsQaStatus
+}
 
 type TagRecommendationsNone = 'none'
 
 export type TagRecommendationsTrafficSignObject = {
+  geometries: GeometryType[]
   highwayValues?: string[]
   accessTags?: { key: string; value: string }[]
   uniqueTags?: (
@@ -159,22 +163,28 @@ export type TagRecommendationsTrafficSignObject = {
     key: string
     value: string
   }[]
+  comments?: SignComentType[]
 }
 
 export type TagRecommendationsModifierSignObject = {
+  geometries: GeometryType[]
   highwayValues?: string[]
   accessTags?: { key: string; value: string }[]
   modifierValue?: string
   uniqueTags?: { key: string; value: string }[]
   modifierValueFromValuePrompt?: boolean
+  comments?: SignComentType[]
 }
+
+export type TagRecommendationByGeometry = TagRecommendationsTrafficSignObject
+export type ModifierTagRecommendationByGeometry = TagRecommendationsModifierSignObject
 
 export type TagRecommendationsTrafficSign =
   | TagRecommendationsNone
-  | TagRecommendationsTrafficSignObject
+  | TagRecommendationsTrafficSignObject[]
 export type TagRecommendationsModifierSign =
   | TagRecommendationsNone
-  | TagRecommendationsModifierSignObject
+  | TagRecommendationsModifierSignObject[]
 
 type SharedCatalogue<T> = {
   catalogue: {

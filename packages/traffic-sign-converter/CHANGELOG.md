@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- **BREAKING**: Replace flat `tagRecommendations` with geometry-aware `tagRecommendationsByGeometry` and add `GeometryType` exports (`GEOMETRY_TYPES`).
+- Add geometry-aware recommendation helpers: `signsToApplicability`, `signsToTopLevelComments`, and geometry-parameterized `signsToTags` / `signsToComments`.
+- Migrate DE sign data to geometry-aware recommendation records and keep explicit-none QA semantics via `tagRecommendationsByGeometry: "none"` + `taggingSuggestionsQa: "none"`.
 - Add tagging QA helpers and `tagRecommendations: "none"` marker on sign configs to distinguish intentional empty recommendations from missing work.
 - Add many missing DE traffic signs (83 new SVGs); most entries are catalogue-only and do not yet define OSM tagging.
 - Replace catalogue `visibility` flags (`search_only`, `highlight`) with per-view `catalogue.focus` records to support thematic sign sets (Standard, bike/foot, parking, highway, Alle-only).

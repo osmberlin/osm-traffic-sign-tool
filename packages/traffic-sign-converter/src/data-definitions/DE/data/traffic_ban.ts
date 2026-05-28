@@ -8,10 +8,9 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Fahrzeuge aller Art',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'vehicle', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'vehicle', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -32,10 +31,13 @@ export const _traffic_ban: SignType[] = [
       'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas sowie für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'motor_vehicle', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [{ key: 'motor_vehicle', value: 'no' }],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -55,10 +57,9 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Kraftwagen und sonstige mehrspurige Kraftfahrzeuge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'motorcar', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'motorcar', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -78,10 +79,9 @@ export const _traffic_ban: SignType[] = [
     description:
       'Verbot für Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t, einschließlich ihrer Anhäger, und Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse',
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'hgv', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'hgv', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -100,10 +100,9 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Radfahrer',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'bicycle', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'bicycle', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -123,14 +122,17 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Krafträder, auch mit Beiwagen, Kleinkrafträder und Mofas',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [
-        { key: 'motorcycle', value: 'no' },
-        { key: 'moped', value: 'no' },
-        { key: 'mofa', value: 'no' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [
+          { key: 'motorcycle', value: 'no' },
+          { key: 'moped', value: 'no' },
+          { key: 'mofa', value: 'no' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -149,10 +151,9 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Mofas',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'mofa', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'mofa', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -171,10 +172,9 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Reiter',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'horse', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'horse', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -193,13 +193,16 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Kraftomnibusse',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [
-        { key: 'bus', value: 'no' },
-        { key: 'tourist_bus', value: 'no' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [
+          { key: 'bus', value: 'no' },
+          { key: 'tourist_bus', value: 'no' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -218,10 +221,9 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Personenkraftwagen mit Anhänger',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'trailer', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'trailer', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -240,10 +242,9 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Fußgänger',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'foot', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'foot', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -262,10 +263,9 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für kennzeichnungspflichtige Kraftfahrzeuge mit gefährlichen Gütern',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'hazmat', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'hazmat', value: 'no' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -290,11 +290,14 @@ export const _traffic_ban: SignType[] = [
       defaultValue: '5.5',
       format: 'float',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxweight', value: 'sign' }],
-      conditionalTags: [{ key: 'maxweight', value: '5.5' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxweight', value: 'sign' }],
+        conditionalTags: [{ key: 'maxweight', value: '5.5' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -321,11 +324,14 @@ export const _traffic_ban: SignType[] = [
       defaultValue: '8',
       format: 'float',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxaxleload', value: 'sign' }],
-      conditionalTags: [{ key: 'maxaxleload', value: '8' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxaxleload', value: 'sign' }],
+        conditionalTags: [{ key: 'maxaxleload', value: '8' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -351,11 +357,14 @@ export const _traffic_ban: SignType[] = [
       defaultValue: '2',
       format: 'float',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxwidth', value: 'sign' }],
-      conditionalTags: [{ key: 'maxwidth', value: '2' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxwidth', value: 'sign' }],
+        conditionalTags: [{ key: 'maxwidth', value: '2' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -380,11 +389,14 @@ export const _traffic_ban: SignType[] = [
       defaultValue: '3.8',
       format: 'float',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxheight', value: 'sign' }],
-      conditionalTags: [{ key: 'maxheight', value: '3.8' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxheight', value: 'sign' }],
+        conditionalTags: [{ key: 'maxheight', value: '3.8' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -409,11 +421,14 @@ export const _traffic_ban: SignType[] = [
       defaultValue: '10',
       format: 'float',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'source:maxlength', value: 'sign' }],
-      conditionalTags: [{ key: 'maxlength', value: '10' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'source:maxlength', value: 'sign' }],
+        conditionalTags: [{ key: 'maxlength', value: '10' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -432,11 +447,14 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Verbot für Fahrzeuge mit wassergefährdender Ladung',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      conditionalTags: [{ key: 'hazmat:water', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [],
+        conditionalTags: [{ key: 'hazmat:water', value: 'no' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -455,11 +473,14 @@ export const _traffic_ban: SignType[] = [
     descriptiveName: 'Schneeketten vorgeschrieben',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'snow_chains', value: 'required' }],
-      conditionalTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'snow_chains', value: 'required' }],
+        conditionalTags: [],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',

@@ -48,9 +48,12 @@ const openingHoursSign = {
     defaultValue: 'Mo-Sa 18:00-19:00',
     format: 'opening_hours',
   },
-  tagRecommendations: {
-    modifierValueFromValuePrompt: true,
-  },
+  tagRecommendationsByGeometry: [
+    {
+      geometries: ['way'],
+      modifierValueFromValuePrompt: true,
+    },
+  ],
   catalogue: {
     signCategory: 'condition_modifier',
   },

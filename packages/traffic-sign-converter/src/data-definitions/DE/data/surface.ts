@@ -8,13 +8,16 @@ export const _surface: SignType[] = [
     descriptiveName: 'Sperrflächen',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [
-        { key: 'road_marking', value: 'restriction' },
-        { key: 'pattern', value: 'stripes' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [
+          { key: 'road_marking', value: 'restriction' },
+          { key: 'pattern', value: 'stripes' },
+        ],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -39,13 +42,16 @@ export const _surface: SignType[] = [
     descriptiveName: 'Grenzmarkierung für Halt- und Parkverbote',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [
-        { key: 'road_marking', value: 'restriction' },
-        { key: 'pattern', value: 'zigzag' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [
+          { key: 'road_marking', value: 'restriction' },
+          { key: 'pattern', value: 'zigzag' },
+        ],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -70,9 +76,7 @@ export const _surface: SignType[] = [
     descriptiveName: 'Fahrstreifenbegrenzung und Fahrbahnbegrenzung',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: [] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -92,10 +96,7 @@ export const _surface: SignType[] = [
     descriptiveName: 'Leitlinie',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: [], uniqueTags: [] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {

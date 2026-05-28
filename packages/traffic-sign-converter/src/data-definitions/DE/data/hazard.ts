@@ -8,9 +8,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Vorsicht, Kinder! – Aufstellung rechts',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'children' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'children' }] },
+    ],
     comments: [],
     catalogue: {
       focus: { all: true },
@@ -30,9 +30,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Gefahrstelle',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'yes' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
@@ -51,9 +51,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Kreuzung oder Einmündung mit Vorfahrt von rechts',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'yes' }] },
+    ],
     comments: [
       {
         lang: 'de',
@@ -80,9 +80,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Radverkehr – Aufstellung rechts',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'cyclists' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'cyclists' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
@@ -102,9 +102,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Steinschlag – Aufstellung rechts',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
@@ -123,9 +123,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Steinschlag – Aufstellung links',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
@@ -145,9 +145,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Kurve (rechts)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'curve' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'curve' }] },
+    ],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -167,9 +167,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Kurve (links)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'curve' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'curve' }] },
+    ],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -190,9 +190,9 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Wildwechsel – Aufstellung rechts',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'hazard', value: 'animal_crossing' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'animal_crossing' }] },
+    ],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -213,12 +213,15 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Andreaskreuz — stehend',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        { key: 'railway', value: 'level_crossing' },
-        { key: 'crossing:saltire', value: 'yes' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'railway', value: 'level_crossing' },
+          { key: 'crossing:saltire', value: 'yes' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { all: true },
@@ -238,12 +241,15 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Andreaskreuz — stehend',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        { key: 'railway', value: 'level_crossing' },
-        { key: 'crossing:saltire', value: 'yes' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'railway', value: 'level_crossing' },
+          { key: 'crossing:saltire', value: 'yes' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { all: true },
@@ -264,13 +270,16 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Gehwegschäden',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['footway', 'path'],
-      uniqueTags: [
-        { key: 'hazard', value: 'damaged_road' },
-        { key: 'smoothness', value: 'bad' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['footway', 'path'],
+        uniqueTags: [
+          { key: 'hazard', value: 'damaged_road' },
+          { key: 'smoothness', value: 'bad' },
+        ],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -296,13 +305,16 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Radwegschäden',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['cycleway', 'path'],
-      uniqueTags: [
-        { key: 'hazard', value: 'damaged_road' },
-        { key: 'smoothness', value: 'bad' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway', 'path'],
+        uniqueTags: [
+          { key: 'hazard', value: 'damaged_road' },
+          { key: 'smoothness', value: 'bad' },
+        ],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -328,13 +340,16 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Geh- und Radwegschäden',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['path', 'cycleway'],
-      uniqueTags: [
-        { key: 'hazard', value: 'damaged_road' },
-        { key: 'smoothness', value: 'bad' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['path', 'cycleway'],
+        uniqueTags: [
+          { key: 'hazard', value: 'damaged_road' },
+          { key: 'smoothness', value: 'bad' },
+        ],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -361,13 +376,16 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Schäden im Gehweg',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['footway', 'path'],
-      uniqueTags: [
-        { key: 'hazard', value: 'damaged_road' },
-        { key: 'smoothness', value: 'bad' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['footway', 'path'],
+        uniqueTags: [
+          { key: 'hazard', value: 'damaged_road' },
+          { key: 'smoothness', value: 'bad' },
+        ],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -420,12 +438,15 @@ export const _hazard: SignType[] = [
       { from: '108-24', to: '108[24]' },
       { from: '108-25', to: '108[25]' },
     ],
-    tagRecommendations: {
-      uniqueTags: [
-        { key: 'incline', valueTemplate: '-$%' },
-        { key: 'hazard', value: 'incline' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'incline', valueTemplate: '-$%' },
+          { key: 'hazard', value: 'incline' },
+        ],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -450,12 +471,15 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Gefälle von 10 %',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        { key: 'incline', value: '-10%' },
-        { key: 'hazard', value: 'incline' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'incline', value: '-10%' },
+          { key: 'hazard', value: 'incline' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
@@ -474,12 +498,15 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Gefälle von 15 %',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        { key: 'incline', value: '-15%' },
-        { key: 'hazard', value: 'incline' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'incline', value: '-15%' },
+          { key: 'hazard', value: 'incline' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { all: true },
@@ -527,12 +554,15 @@ export const _hazard: SignType[] = [
       { from: '110-24', to: '110[24]' },
       { from: '110-25', to: '110[25]' },
     ],
-    tagRecommendations: {
-      uniqueTags: [
-        { key: 'incline', valueTemplate: '$%' },
-        { key: 'hazard', value: 'incline' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'incline', valueTemplate: '$%' },
+          { key: 'hazard', value: 'incline' },
+        ],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -557,12 +587,15 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Steigung von 10 %',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        { key: 'incline', value: '10%' },
-        { key: 'hazard', value: 'incline' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'incline', value: '10%' },
+          { key: 'hazard', value: 'incline' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'hazard_sign',
@@ -581,12 +614,15 @@ export const _hazard: SignType[] = [
     descriptiveName: 'Steigung von 15 %',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        { key: 'incline', value: '15%' },
-        { key: 'hazard', value: 'incline' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'incline', value: '15%' },
+          { key: 'hazard', value: 'incline' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { all: true },

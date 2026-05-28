@@ -49,10 +49,9 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Einbahnstraße – linksweisend',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'oneway', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'oneway', value: 'yes' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'traffic_sign',
@@ -71,9 +70,9 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Einbahnstraße – rechtsweisend',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'oneway', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'oneway', value: 'yes' }] },
+    ],
     catalogue: {
       signCategory: 'traffic_sign',
     },
@@ -91,7 +90,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Vorfahrt gewähren',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'traffic_sign',
@@ -110,9 +109,9 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Laternenring – Schild',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'highway', value: 'street_lamp' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['node'], uniqueTags: [{ key: 'highway', value: 'street_lamp' }] },
+    ],
     comments: [
       {
         comment:
@@ -142,9 +141,9 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Halt! Vorfahrt gewähren',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'highway', value: 'stop' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['node'], uniqueTags: [{ key: 'highway', value: 'stop' }] },
+    ],
     compatibility: { canReceiveModifiers: false },
     comments: [{ comment: 'Wird als Punkt auf der Straße erfasst.' }],
     catalogue: {
@@ -165,7 +164,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Leitpfosten (rechts)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       focus: { all: true },
@@ -185,7 +184,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Leitpfosten (links)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       focus: { all: true },
@@ -205,7 +204,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Sackgasse',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [
       {
         comment:
@@ -229,7 +228,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Für Radverkehr und Fußgänger durchlässige Sackgasse',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [
       {
         comment:
@@ -255,7 +254,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Für Fußgänger durchlässige Sackgasse',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [
       {
         comment:
@@ -281,7 +280,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Für Radverkehr durchlässige Sackgasse',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [
       {
         comment:
@@ -306,7 +305,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Haltestelle',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [
       {
         comment:
@@ -331,7 +330,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Verbot der Einfahrt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [
       {
         important: true,
@@ -357,14 +356,17 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Vorfahrtstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        {
-          key: 'priority_road',
-          value: 'designated',
-        },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          {
+            key: 'priority_road',
+            value: 'designated',
+          },
+        ],
+      },
+    ],
     comments: [
       {
         comment:
@@ -391,14 +393,17 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Ende der Vorfahrtstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        {
-          key: 'priority_road',
-          value: 'end',
-        },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          {
+            key: 'priority_road',
+            value: 'end',
+          },
+        ],
+      },
+    ],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -419,22 +424,25 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Touristische Unterrichtungstafel',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        {
-          key: 'tourism',
-          value: 'information',
-        },
-        {
-          key: 'information',
-          value: 'board',
-        },
-        {
-          key: 'board_type',
-          value: 'sight',
-        },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['node'],
+        uniqueTags: [
+          {
+            key: 'tourism',
+            value: 'information',
+          },
+          {
+            key: 'information',
+            value: 'board',
+          },
+          {
+            key: 'board_type',
+            value: 'sight',
+          },
+        ],
+      },
+    ],
     comments: [
       {
         comment:
@@ -460,14 +468,17 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Ortshinweistafel',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [
-        {
-          key: 'name',
-          value: '*',
-        },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['node'],
+        uniqueTags: [
+          {
+            key: 'name',
+            value: '*',
+          },
+        ],
+      },
+    ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'traffic_sign',
@@ -487,7 +498,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Leitplatte, Aufstellung links',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -508,7 +519,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Vorgeschriebene Vorbeifahrt, Rechts vorbei',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -529,9 +540,9 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Kraftfahrstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'motorroad', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'motorroad', value: 'yes' }] },
+    ],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -552,7 +563,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Ende der Kraftfahrstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -573,9 +584,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Autobahn',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: ['motorway'],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['motorway'] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -595,7 +604,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Ende der Autobahn',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [deEndeHauptzeichenOsmMappingComment],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -617,7 +626,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Vorfahrt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -637,9 +646,9 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Kreisverkehr',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'junction', value: 'roundabout' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'junction', value: 'roundabout' }] },
+    ],
     comments: [
       { comment: '`oneway=true` im Kreisverkehr wird automatisch angenommen.' },
       {
@@ -668,7 +677,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Vorwegweiser auf Autobahnen',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -689,7 +698,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Vorwegweiser außerhalb von Autobahnen',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -710,7 +719,7 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Gegliederter Vorwegweiser außerhalb von Autobahnen',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
     comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
@@ -731,7 +740,9 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Kein Winterdienst',
     description: 'Ein inoffizielles Verkehrszeichen.',
     kind: 'traffic_sign',
-    tagRecommendations: { uniqueTags: [{ key: 'winter_service', value: 'no' }] },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'winter_service', value: 'no' }] },
+    ],
     comments: [
       {
         comment: 'Dieses Schild ist nicht Teil des offiziellen Verkehrszeichenkataloges.',
@@ -754,7 +765,9 @@ export const trafficSignDataDE: SignType[] = [
     descriptiveName: 'Eingeschränkter Winterdienst',
     description: 'Ein inoffizielles Verkehrszeichen.',
     kind: 'traffic_sign',
-    tagRecommendations: { uniqueTags: [{ key: 'winter_service', value: 'limited' }] },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'winter_service', value: 'limited' }] },
+    ],
     comments: [
       {
         comment: 'Dieses Schild ist nicht Teil des offiziellen Verkehrszeichenkataloges.',

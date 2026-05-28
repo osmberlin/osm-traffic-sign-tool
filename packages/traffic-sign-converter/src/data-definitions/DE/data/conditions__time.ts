@@ -14,9 +14,7 @@ export const _conditions__time: SignType[] = [
       defaultValue: '16:00-18:00',
       format: 'time_restriction',
     },
-    tagRecommendations: {
-      modifierValueFromValuePrompt: true,
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValueFromValuePrompt: true }],
     catalogue: {
       signCategory: 'condition_modifier',
     },
@@ -40,11 +38,14 @@ export const _conditions__time: SignType[] = [
       defaultValue: '08:00-11:00,16:00-18:00',
       format: 'opening_hours',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      modifierValueFromValuePrompt: true,
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [],
+        modifierValueFromValuePrompt: true,
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -63,9 +64,7 @@ export const _conditions__time: SignType[] = [
     descriptiveName: 'Zeitliche Beschräkung: werktags',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      modifierValue: 'Mo-Sa;PH off',
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'Mo-Sa;PH off' }],
     catalogue: {
       signCategory: 'condition_modifier',
     },
@@ -89,11 +88,14 @@ export const _conditions__time: SignType[] = [
       defaultValue: 'Mo-Sa 18:00-19:00',
       format: 'opening_hours',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      modifierValueFromValuePrompt: true,
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [],
+        modifierValueFromValuePrompt: true,
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -118,11 +120,14 @@ export const _conditions__time: SignType[] = [
       defaultValue: 'PH off;Mo-Sa 8:30-11:30,16:00-18:00',
       format: 'opening_hours',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      modifierValueFromValuePrompt: true,
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [],
+        modifierValueFromValuePrompt: true,
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -147,11 +152,14 @@ export const _conditions__time: SignType[] = [
       defaultValue: 'Mo-Fr 16:00-18:00',
       format: 'opening_hours',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      modifierValueFromValuePrompt: true,
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [],
+        modifierValueFromValuePrompt: true,
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -176,11 +184,14 @@ export const _conditions__time: SignType[] = [
       defaultValue: 'Tu,Th,Fr 16:00-18:00',
       format: 'opening_hours',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      modifierValueFromValuePrompt: true,
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [],
+        modifierValueFromValuePrompt: true,
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -205,11 +216,14 @@ export const _conditions__time: SignType[] = [
       defaultValue: 'Su,PH 6:00-22:00',
       format: 'opening_hours',
     },
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      modifierValueFromValuePrompt: true,
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [],
+        modifierValueFromValuePrompt: true,
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -228,11 +242,9 @@ export const _conditions__time: SignType[] = [
     descriptiveName: 'Zeitliche Beschräkung: Werktags, außer Samstags',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      modifierValue: 'Mo-Fr;PH off',
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], uniqueTags: [], modifierValue: 'Mo-Fr;PH off' },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',
@@ -251,11 +263,9 @@ export const _conditions__time: SignType[] = [
     descriptiveName: 'Zeitliche Beschräkung: Sa und So',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-      modifierValue: 'Sa,Su',
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], uniqueTags: [], modifierValue: 'Sa,Su' },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'condition_modifier',

@@ -14,6 +14,7 @@ import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
 import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { taginfoTrafficSignData } from '@internal/taginfo'
+import { GEOMETRY_TYPES, type GeometryType } from '@osm-traffic-signs/converter'
 import { Link } from '@tanstack/react-router'
 import { z } from 'zod'
 import { WikiLinkListTrafficSignValues } from '../../_components/wiki/WikiLinkListTrafficSignValues'
@@ -22,6 +23,13 @@ import { TagRecommendations } from './_components/TagRecommendations'
 import { TagSignImages } from './_components/TagSignImages'
 
 const Schema = z.array(z.tuple([z.string(), z.number()]))
+const geometryLabels: Record<GeometryType, string> = {
+  node: 'Nodes',
+  way: 'Ways',
+  way_centerline: 'Ways (centerline)',
+  area: 'Areas',
+  relation: 'Relations',
+}
 
 export default function TaginfoPage() {
   const data = Schema.parse(taginfoTrafficSignData)
@@ -88,9 +96,16 @@ export default function TaginfoPage() {
                   <WikiLinkListTrafficSignValues value={value} inline={false} />
                 </ContentTableCell>
                 <ContentTableCell className="text-sm">
-                  <TagRecommendations value={value} />
-                  <hr className="my-5" />
-                  <TagComments value={value} />
+                  {GEOMETRY_TYPES.map((geometry, index) => {
+                    return (
+                      <div key={geometry}>
+                        {index > 0 && <hr className="my-5" />}
+                        <h4 className="mb-2 font-light uppercase">{geometryLabels[geometry]}</h4>
+                        <TagRecommendations value={value} geometry={geometry} />
+                        <TagComments value={value} geometry={geometry} />
+                      </div>
+                    )
+                  })}
                 </ContentTableCell>
               </ContentTableRow>
             )

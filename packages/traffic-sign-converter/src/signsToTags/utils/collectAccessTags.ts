@@ -1,81 +1,70 @@
+import type { GeometryType } from '../../data-definitions/geometryTypes.js'
 import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
+import { getRecommendations } from './getRecommendations.js'
 
-export const collectAccessTags = (signs: SignStateType[]) => {
+export const collectAccessTags = (signs: SignStateType[], geometry: GeometryType) => {
   const mergedAccessTags: Map<string, { key: string; value: string }> = new Map()
 
   // Handle `traffic_sign`
-  signs
-    .filter((sign) => sign.recodgnizedSign === true)
-    .filter((sign) => sign.kind === 'traffic_sign')
-    .map((sign) => sign.tagRecommendations)
-    .filter((tagRecommendations) => tagRecommendations !== 'none')
-    .forEach((tags) => {
-      if (tags.accessTags) {
-        for (const tag of tags.accessTags) {
-          mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
-        }
+  for (const sign of signs) {
+    if (!sign.recodgnizedSign) continue
+    if (sign.kind !== 'traffic_sign') continue
+
+    const recs = getRecommendations(sign, geometry)
+    if (recs?.accessTags) {
+      for (const tag of recs.accessTags) {
+        mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
       }
-    })
+    }
+  }
 
   // Handle modifier signs `exception_modifier`
   // Ignore `condition_modifier`, they are handled by `collectConditionalTags.ts`
-  signs
-    .filter((sign) => sign.recodgnizedSign === true)
-    .filter((sign) => sign.kind !== 'traffic_sign')
-    .filter((sign) => sign.kind !== 'condition_modifier')
-    .map((sign) => sign.tagRecommendations)
-    .filter((tagRecommendations) => tagRecommendations !== 'none')
-    .forEach((tags) => {
-      // Signs can have a `modifierValue` or `accessTags`
-      // `modifierValue` updates or add to the value of all existing access tags
-      //   BUT we have to make sure we only apply them, when the `traffic_sign` actually had an `accessTags`
-      // `accessTags` are just added to the pile (and maybe updated by the next sign)
+  for (const sign of signs) {
+    if (!sign.recodgnizedSign) continue
+    if (sign.kind === 'traffic_sign') continue
+    if (sign.kind === 'condition_modifier') continue
 
-      const groupHasSignWithAccessTagProp = signs
-        .filter((sign) => sign.recodgnizedSign === true)
-        .some(
-          (sign) =>
-            sign.tagRecommendations !== 'none' && sign.tagRecommendations.accessTags !== undefined,
-        )
+    const tags = getRecommendations(sign, geometry)
+    if (!tags) continue
 
-      if (groupHasSignWithAccessTagProp && !!tags.modifierValue) {
-        for (const [_, tag] of mergedAccessTags) {
-          if (tag.value === 'no') {
-            mergedAccessTags.set(tag.key, { key: tag.key, value: tags.modifierValue })
-          } else {
-            mergedAccessTags.set(tag.key, {
-              key: tag.key,
-              value: [tag.value, tags.modifierValue].join(';'),
-            })
-          }
-        }
-      }
-
-      if (tags.accessTags) {
-        for (const tag of tags.accessTags) {
-          mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
-        }
-      }
-
-      // Now we have do handle the case, when our `traffic_sign` did not give any
-      // value to merge access restriction on. In this case, we set a general access
-      // tag with tags.modifierValue
-      // BUT we don't so this, when `condtionalTags` are present in which case the modifierValue
-      // should only change the `conditionalTags`.
-
-      const hasConditionalTagProp = signs
-        .filter((sign) => sign.recodgnizedSign === true)
-        .some(
-          (sign) =>
-            sign.kind === 'traffic_sign' &&
-            sign.tagRecommendations !== 'none' &&
-            sign.tagRecommendations.conditionalTags !== undefined,
-        )
-
-      if (!hasConditionalTagProp && mergedAccessTags.size === 0 && tags.modifierValue) {
-        mergedAccessTags.set('access', { key: 'access', value: tags.modifierValue })
-      }
+    const groupHasSignWithAccessTagProp = signs.some((otherSign) => {
+      if (!otherSign.recodgnizedSign) return false
+      if (otherSign.kind !== 'traffic_sign') return false
+      const recs = getRecommendations(otherSign, geometry)
+      return recs?.accessTags !== undefined
     })
+
+    if (groupHasSignWithAccessTagProp && !!tags.modifierValue) {
+      for (const [_, tag] of mergedAccessTags) {
+        if (tag.value === 'no') {
+          mergedAccessTags.set(tag.key, { key: tag.key, value: tags.modifierValue })
+        } else {
+          mergedAccessTags.set(tag.key, {
+            key: tag.key,
+            value: [tag.value, tags.modifierValue].join(';'),
+          })
+        }
+      }
+    }
+
+    if (tags.accessTags) {
+      for (const tag of tags.accessTags) {
+        mergedAccessTags.set(tag.key, { key: tag.key, value: tag.value })
+      }
+    }
+
+    const hasConditionalTagProp = signs.some((otherSign) => {
+      if (!otherSign.recodgnizedSign) return false
+      if (otherSign.kind !== 'traffic_sign') return false
+      const recs = getRecommendations(otherSign, geometry)
+      return recs?.conditionalTags !== undefined
+    })
+
+    if (!hasConditionalTagProp && mergedAccessTags.size === 0 && tags.modifierValue) {
+      mergedAccessTags.set('access', { key: 'access', value: tags.modifierValue })
+    }
+  }
 
   return Array.from(mergedAccessTags.values())
 }

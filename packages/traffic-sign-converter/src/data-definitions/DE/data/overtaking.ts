@@ -8,9 +8,9 @@ export const _overtaking: SignType[] = [
     descriptiveName: 'Überholverbot für Kraftfahrzeuge aller Art',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      conditionalTags: [{ key: 'overtaking', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], conditionalTags: [{ key: 'overtaking', value: 'no' }] },
+    ],
     comments: [
       {
         tagReference: 'overtaking:forward=*',
@@ -36,10 +36,13 @@ export const _overtaking: SignType[] = [
     descriptiveName: 'Überholverbot für Kraftfahrzeuge über 3,5 t',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'overtaking:hgv', value: 'no' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'overtaking:hgv', value: 'no' }],
+      },
+    ],
     comments: [
       {
         tagReference: null,
@@ -66,10 +69,7 @@ export const _overtaking: SignType[] = [
       'Verbot des Überholens von einspurigen Fahrzeugen für mehrspurige Kraftfahrzeuge und Krafträder mit Beiwagen',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: [], uniqueTags: [] }],
     comments: [
       {
         tagReference: null,

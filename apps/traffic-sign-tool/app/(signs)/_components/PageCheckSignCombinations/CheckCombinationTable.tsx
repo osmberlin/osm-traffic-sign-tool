@@ -101,7 +101,7 @@ export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Prop
                   allowFeedback ? '' : 'text-xs leading-snug text-gray-500 hover:text-gray-700',
                 )}
               >
-                <TagList tags={signsToTags(signs, countryPrefix)} />
+                <TagList tags={signsToTags(signs, countryPrefix, 'way')} />
               </ContentTableCell>
               <ContentTableCell className="text-sm leading-snug">
                 {allowFeedback && (

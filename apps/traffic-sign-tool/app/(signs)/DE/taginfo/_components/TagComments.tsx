@@ -7,17 +7,25 @@ import * as m from '@app/paraglide/messages'
 import {
   signsToComments,
   trafficSignTagToSigns,
+  type GeometryType,
   type SignComentType,
 } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 
-type Props = { value: string }
+type Props = {
+  value: string
+  geometry: GeometryType
+}
 
-export const TagComments = ({ value }: Props) => {
+export const TagComments = ({ value, geometry }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
   const uiLocale = useUiLocale()
   const signs = trafficSignTagToSigns(value, countryPrefix)
-  const signsCommentsMap = signsToComments(signs)
+  const signsCommentsMap = signsToComments(signs, geometry)
+
+  if (signsCommentsMap.size === 0) {
+    return null
+  }
 
   return (
     <div className="break-all">

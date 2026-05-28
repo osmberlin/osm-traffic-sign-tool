@@ -5,7 +5,6 @@ import { showSignsToTagsWarning } from '@osm-traffic-signs/converter'
 import { ResultComments } from './results/ResultComments'
 import { ResultDebug } from './results/ResultDebug'
 import { ResultTagRecommendations } from './results/ResultTagRecommendations'
-import { ResultTrafficSignTag } from './results/ResultTrafficSignTag'
 
 export const ResultColumn = () => {
   const { paramSigns } = useParamSigns()
@@ -21,7 +20,6 @@ export const ResultColumn = () => {
 
   return (
     <>
-      <ResultTrafficSignTag />
       {showSignsToTagsWarning(paramSigns) ? (
         <>
           <p className="py-6">

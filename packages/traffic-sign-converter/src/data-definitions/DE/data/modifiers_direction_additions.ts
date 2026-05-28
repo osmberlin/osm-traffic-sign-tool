@@ -8,7 +8,7 @@ export const _modifiers_direction_additions: SignType[] = [
     descriptiveName: 'Richtung der Gefahrstelle, linksweisend',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [],
     catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
@@ -25,7 +25,7 @@ export const _modifiers_direction_additions: SignType[] = [
     descriptiveName: 'Richtungsangaben durch Pfeile, rechtsweisend',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [],
     catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
@@ -42,7 +42,7 @@ export const _modifiers_direction_additions: SignType[] = [
     descriptiveName: 'Richtung der Gefahrstelle, rechtsweisend',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [],
     catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
@@ -59,7 +59,7 @@ export const _modifiers_direction_additions: SignType[] = [
     descriptiveName: 'Fußgänger Gehweg gegenüber benutzen, rechtsweisend',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [],
     catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
@@ -76,7 +76,7 @@ export const _modifiers_direction_additions: SignType[] = [
     descriptiveName: 'Umleitungsbeschilderung Viertelkreis',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [],
     catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
@@ -93,7 +93,7 @@ export const _modifiers_direction_additions: SignType[] = [
     descriptiveName: 'Umleitungsbeschilderung Halbkreis',
     description: null,
     kind: 'condition_modifier',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [],
     catalogue: { signCategory: 'direction_modifier', focus: { highway: true } },
     image: {
@@ -110,7 +110,7 @@ export const _modifiers_direction_additions: SignType[] = [
     descriptiveName: 'Anlieger oder Parken frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {},
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     comments: [],
     catalogue: { signCategory: 'exception_modifier', focus: { highway: true } },
     image: {

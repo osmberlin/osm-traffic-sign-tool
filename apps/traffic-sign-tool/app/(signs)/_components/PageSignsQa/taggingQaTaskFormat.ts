@@ -88,8 +88,8 @@ const formatAgentBrief = (): string[] => [
   '## Agent instructions',
   '',
   '1. Apply every task in the sections below.',
-  `2. Read [\`${TAGGING_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${TAGGING_QA_AGENT_SKILL_PATH}) for \`tagRecommendations\` shape, DE \`data/*.ts\` file choice, and OSM wiki tagging research.`,
-  '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`tagRecommendations: "none" | {...}` for intentional none vs recommendations).',
+  `2. Read [\`${TAGGING_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${TAGGING_QA_AGENT_SKILL_PATH}) for \`tagRecommendationsByGeometry\` shape, DE \`data/*.ts\` file choice, and OSM wiki tagging research.`,
+  '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`tagRecommendationsByGeometry: "none" | [{ geometries, ... }]` for intentional none vs recommendations).',
   '4. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
   '',
   '## Tasks',
@@ -111,13 +111,13 @@ export const formatTaggingQaTaskResults = (entries: SignTaskEntry[]): string => 
     lines,
     explicitNone,
     '### Mark as explicit no tagging suggestions',
-    'Set `tagRecommendations: "none"` on each sign object. Keep object recommendations only when concrete tags are present.',
+    'Set `tagRecommendationsByGeometry: "none"` on each sign object. Keep geometry recommendations only when concrete tags are present.',
   )
   formatTaskSection(
     lines,
     addSuggestions,
     '### Add tagging suggestions',
-    'Update `tagRecommendations` from the notes (JSON or prose). Use the skill and OSM wiki if notes are incomplete. Use object form for concrete recommendations.',
+    'Update `tagRecommendationsByGeometry` from the notes (JSON or prose). Use the skill and OSM wiki if notes are incomplete.',
   )
   formatTaskSection(
     lines,

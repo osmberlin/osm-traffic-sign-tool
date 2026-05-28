@@ -34,9 +34,15 @@ vi.mock('@app/app/(signs)/_components/PageApp/results/ResultTagRecommendations/T
 }))
 
 vi.mock('@osm-traffic-signs/converter', () => ({
+  GEOMETRY_TYPES: ['node', 'way'],
   classifyTaggingSuggestionsQa: (sign: any) =>
-    sign.tagRecommendations === 'none' ? 'explicitNoSuggestions' : 'withSuggestions',
-  signsToTags: () => new Map([['traffic_sign', 'DE:279-30']]),
+    sign.taggingSuggestionsQa === 'none' || sign.tagRecommendationsByGeometry === 'none'
+      ? 'explicitNoSuggestions'
+      : 'withSuggestions',
+  signsToApplicability: () => ({ applicable: [], notApplicable: [] }),
+  signsToComments: () => new Map(),
+  signsToTags: (_signs: any, _countryPrefix: string, geometry: string) =>
+    geometry === 'node' ? new Map([['traffic_sign', 'DE:279-30']]) : new Map(),
   toTag: ({ key, value }: { key: string; value: string }) => `${key}=${value}`,
 }))
 
@@ -51,7 +57,8 @@ describe('ResultTagRecommendations', () => {
       {
         recodgnizedSign: true,
         osmValuePart: '279-30',
-        tagRecommendations: 'none',
+        tagRecommendationsByGeometry: 'none',
+        taggingSuggestionsQa: 'none',
       },
     ]
 
@@ -80,7 +87,8 @@ describe('ResultTagRecommendations', () => {
       {
         recodgnizedSign: true,
         osmValuePart: '279-30',
-        tagRecommendations: 'none',
+        tagRecommendationsByGeometry: 'none',
+        taggingSuggestionsQa: 'none',
       },
       {
         recodgnizedSign: true,
@@ -100,12 +108,14 @@ describe('ResultTagRecommendations', () => {
       {
         recodgnizedSign: true,
         osmValuePart: '279-30',
-        tagRecommendations: 'none',
+        tagRecommendationsByGeometry: 'none',
+        taggingSuggestionsQa: 'none',
       },
       {
         recodgnizedSign: true,
         osmValuePart: '279-50',
-        tagRecommendations: 'none',
+        tagRecommendationsByGeometry: 'none',
+        taggingSuggestionsQa: 'none',
       },
     ]
 

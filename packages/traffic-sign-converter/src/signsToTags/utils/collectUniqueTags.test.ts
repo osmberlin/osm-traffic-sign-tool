@@ -12,12 +12,12 @@ describe('collectUniqueTags()', () => {
     const signs = signsStateByDescriptiveName('DE', data, [
       'Überholverbot für Kraftfahrzeuge über 3,5 t',
     ])
-    expect(collectUniqueTags(signs)).toMatchObject([{ key: 'overtaking:hgv', value: 'no' }])
+    expect(collectUniqueTags(signs, 'way')).toMatchObject([{ key: 'overtaking:hgv', value: 'no' }])
   })
 
   test('unique tag with valueTemplate', () => {
     const signs = signsStateByDescriptiveName('DE', data, ['Tempo ??-Zone'])
-    expect(collectUniqueTags(signs)).toMatchObject([
+    expect(collectUniqueTags(signs, 'way')).toMatchObject([
       { key: 'source:maxspeed', value: 'DE:zone47' },
       { key: 'zone:maxspeed', value: 'DE:47' },
     ])
@@ -34,7 +34,7 @@ describe('collectUniqueTags()', () => {
         signValue: customValue,
       } as SignStateType,
     ]
-    expect(collectUniqueTags(updated)).toMatchObject([
+    expect(collectUniqueTags(updated, 'way')).toMatchObject([
       { key: 'source:maxspeed', value: 'DE:zone999' },
       { key: 'zone:maxspeed', value: 'DE:999' },
     ])

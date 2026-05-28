@@ -15,7 +15,7 @@ describe('collectConditionalTags()', () => {
     const signs = signsStateByDescriptiveName('DE', data, [
       'Überholverbot für Kraftfahrzeuge aller Art',
     ])
-    expect(collectConditionalTags(signs)).toMatchObject([{ key: 'overtaking', value: 'no' }])
+    expect(collectConditionalTags(signs, 'way')).toMatchObject([{ key: 'overtaking', value: 'no' }])
   })
 
   // https://osmtools.de/traffic_signs/?signs=276,1040-30%5B16:00-18:00%5D
@@ -24,7 +24,7 @@ describe('collectConditionalTags()', () => {
       'Überholverbot für Kraftfahrzeuge aller Art',
       'Zeitliche Beschräkung',
     ])
-    expect(collectConditionalTags(signs)).toMatchObject([
+    expect(collectConditionalTags(signs, 'way')).toMatchObject([
       {
         key: 'overtaking:conditional',
         value: 'no @ (16:00-18:00)',
@@ -37,7 +37,7 @@ describe('collectConditionalTags()', () => {
       'Überholverbot für Kraftfahrzeuge aller Art',
       'Zeitliche Beschräkung: werktags',
     ])
-    expect(collectConditionalTags(signs)).toMatchObject([
+    expect(collectConditionalTags(signs, 'way')).toMatchObject([
       {
         key: 'overtaking:conditional',
         value: 'no @ (Mo-Sa;PH off)',
@@ -56,7 +56,7 @@ describe('collectConditionalTags()', () => {
         signValue: customValue,
       } as SignStateType,
     ]
-    expect(collectConditionalTags(updated)).toMatchObject([
+    expect(collectConditionalTags(updated, 'way')).toMatchObject([
       {
         key: 'maxspeed',
         value: String(customValue),
@@ -66,13 +66,13 @@ describe('collectConditionalTags()', () => {
 
   test('Handle valueTemplate (One Sign)', () => {
     const signs = signsStateByDescriptiveName('DE', data, ['Tempo 30-Zone'])
-    expect(collectConditionalTags(signs)).toMatchObject([
+    expect(collectConditionalTags(signs, 'way')).toMatchObject([
       {
         key: 'maxspeed',
         value: '30',
       },
     ])
-    expect(collectUniqueTags(signs)).toMatchObject([
+    expect(collectUniqueTags(signs, 'way')).toMatchObject([
       {
         key: 'source:maxspeed',
         value: 'DE:zone30',
@@ -89,13 +89,13 @@ describe('collectConditionalTags()', () => {
       'Tempo 30-Zone',
       'Zeitliche Beschräkung',
     ])
-    expect(collectConditionalTags(signs)).toMatchObject([
+    expect(collectConditionalTags(signs, 'way')).toMatchObject([
       {
         key: 'maxspeed:conditional',
         value: '30 @ (16:00-18:00)',
       },
     ])
-    expect(collectUniqueTags(signs)).toMatchObject([
+    expect(collectUniqueTags(signs, 'way')).toMatchObject([
       {
         key: 'source:maxspeed',
         value: 'DE:zone30',
@@ -113,13 +113,13 @@ describe('collectConditionalTags()', () => {
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         {
           key: 'vehicle',
           value: 'destination',
         },
       ])
-      expect(collectConditionalTags(signs)).toMatchObject([])
+      expect(collectConditionalTags(signs, 'way')).toMatchObject([])
     })
   })
 
@@ -129,13 +129,13 @@ describe('collectConditionalTags()', () => {
         'Verbot für Fahrzeuge aller Art',
         'Radfahrer und Anlieger frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([
         {
           key: 'vehicle',
           value: 'destination',
         },
       ])
-      expect(collectConditionalTags(signs)).toMatchObject([])
+      expect(collectConditionalTags(signs, 'way')).toMatchObject([])
     })
 
     test('handle `condition_modifier`', () => {
@@ -143,8 +143,8 @@ describe('collectConditionalTags()', () => {
         'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
         'Anlieger frei',
       ])
-      expect(collectAccessTags(signs)).toMatchObject([])
-      expect(collectConditionalTags(signs)).toMatchObject([
+      expect(collectAccessTags(signs, 'way')).toMatchObject([])
+      expect(collectConditionalTags(signs, 'way')).toMatchObject([
         { key: 'maxweight', value: '5.5' },
         { key: 'maxweight:conditional', value: 'none @ (destination)' },
       ])

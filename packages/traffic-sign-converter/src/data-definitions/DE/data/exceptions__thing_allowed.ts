@@ -8,11 +8,14 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Radfahrer und Anlieger frei',
     description: 'Anlieger im Sinne von Bewohner',
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'bicycle', value: 'yes' }],
-      modifierValue: 'destination',
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'bicycle', value: 'yes' }],
+        modifierValue: 'destination',
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -31,10 +34,13 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Anlieger frei',
     description: 'Anlieger im Sinne von Bewohner und Lieferverkehr',
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: ['residential', 'service'],
-      modifierValue: 'destination',
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['residential', 'service'],
+        modifierValue: 'destination',
+      },
+    ],
     comments: [
       {
         tagReference: 'highway=*',
@@ -61,10 +67,13 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Radfahrer frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: ['footway'],
-      uniqueTags: [{ key: 'bicycle', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['footway'],
+        uniqueTags: [{ key: 'bicycle', value: 'yes' }],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -84,10 +93,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Mofas frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'mofa', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'mofa', value: 'yes' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -106,10 +114,13 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'E-Bikes frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'electric_bicycle', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [{ key: 'electric_bicycle', value: 'yes' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -129,13 +140,16 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Kleinkrafträder frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [
-        { key: 'mofa', value: 'yes' },
-        { key: 'moped', value: 'yes' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [
+          { key: 'mofa', value: 'yes' },
+          { key: 'moped', value: 'yes' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       focus: { default: 'highlight' },
@@ -154,10 +168,13 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Elektrokleinstfahrzeuge frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'small_electric_vehicle', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [{ key: 'small_electric_vehicle', value: 'yes' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -182,10 +199,13 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Kfz-Verkehr frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'motor_vehicle', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [{ key: 'motor_vehicle', value: 'yes' }],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -208,14 +228,17 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Krafträder auch mit Beiwagen, Krafträder und Mofas frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [
-        { key: 'motorcycle', value: 'yes' },
-        { key: 'mofa', value: 'yes' },
-        { key: 'moped', value: 'yes' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [
+          { key: 'motorcycle', value: 'yes' },
+          { key: 'mofa', value: 'yes' },
+          { key: 'moped', value: 'yes' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -234,10 +257,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Personenkraftwagen frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'motorcar', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'motorcar', value: 'yes' }] },
+    ],
     comments: [
       {
         tagReference: null,
@@ -264,10 +286,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     description:
       'Kraftfahrzeuge mit einem zulässigen Gesamtgewicht über 3,5 t, einschließlich ihrer Anhäger und Zugmaschinen, ausgenommen Personenkraftwagen und Kraftomnibusse frei (zulässiges Gewicht, nicht das tatsächliche Gewicht)',
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'hgv', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'hgv', value: 'yes' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -286,13 +307,16 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Kraftomnibus frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [
-        { key: 'bus', value: 'yes' },
-        { key: 'tourist_bus', value: 'yes' },
-      ],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [
+          { key: 'bus', value: 'yes' },
+          { key: 'tourist_bus', value: 'yes' },
+        ],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -311,10 +335,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Straßenbahn frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'tram', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'tram', value: 'yes' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -334,10 +357,13 @@ export const _exceptions__thing_allowed: SignType[] = [
     description:
       'Kraftfahrzeuge und Züge, die nicht schneller als 25 km/h fahren können oder dürfen frei (im Gegensatz zu "landwirtschaftlicher Verkehr" handelt es sich hier um eine Fahrzeugklasse)',
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: ['track'],
-      accessTags: [{ key: 'agricultural', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['track'],
+        accessTags: [{ key: 'agricultural', value: 'yes' }],
+      },
+    ],
     comments: [
       {
         lang: 'de',
@@ -363,10 +389,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Taxi frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'taxi', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'taxi', value: 'yes' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -385,10 +410,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Linienverkehr frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'bus', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'bus', value: 'yes' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -407,10 +431,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Lieferverkehr frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      modifierValue: 'delivery',
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], modifierValue: 'delivery' },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -429,11 +452,14 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Landwirtschaftlicher Verkehr frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: ['track'],
-      modifierValue: 'agricultural',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['track'],
+        modifierValue: 'agricultural',
+        uniqueTags: [],
+      },
+    ],
     comments: [
       {
         tagReference: null,
@@ -460,10 +486,13 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Inline Skater frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [{ key: 'inline_skates', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'inline_skates', value: 'yes' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -482,10 +511,7 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Bewohner mit Parkausweis Nr. … frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: [], uniqueTags: [] }],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -504,10 +530,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Einsatzfahrzeuge frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      accessTags: [{ key: 'emergency', value: 'yes' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'emergency', value: 'yes' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -526,11 +551,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Forstwirtschaftlicher Verkehr frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: ['track'],
-      modifierValue: 'forestry',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: ['track'], modifierValue: 'forestry', uniqueTags: [] },
+    ],
     comments: [
       {
         tagReference: null,
@@ -556,11 +579,14 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Land- und forstwirtschaftlicher Verkehr frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: ['track'],
-      modifierValue: 'agricultural;forestry',
-      uniqueTags: [],
-    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['track'],
+        modifierValue: 'agricultural;forestry',
+        uniqueTags: [],
+      },
+    ],
     comments: [
       {
         tagReference: null,
@@ -586,10 +612,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Betriebs- und Versorgungsfahrzeuge frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      highwayValues: [],
-      modifierValue: 'private;delivery',
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], modifierValue: 'private;delivery' },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
@@ -608,9 +633,9 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Radfahrer absteigen',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendations: {
-      uniqueTags: [{ key: 'bicycle', value: 'dismount' }],
-    },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'bicycle', value: 'dismount' }] },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',
