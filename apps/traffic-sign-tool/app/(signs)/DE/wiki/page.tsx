@@ -8,16 +8,17 @@ import {
   ContentTableRow,
 } from '@app/app/_components/layout/ContentTable'
 import * as m from '@app/paraglide/messages'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { trafficSignsWiki } from '@internal/wiki'
 import { SignStateType, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import { PackageSvgTrafficSign } from '../../_components/PackageSvgTrafficSign'
-import { countryPrefix } from '../_contryPrefix.const'
 import { Tablelize } from './_components/Tablelize'
 
 export type WikiSign = (typeof trafficSignsWiki)[number]
 
 export default function WikiPage() {
+  const countryPrefix = useCurrentLang()
   const innerTrafficSignsWiki: (WikiSign & { toolSign?: SignStateType })[] =
     structuredClone(trafficSignsWiki)
   let missingSignCount = 0

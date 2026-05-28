@@ -21,6 +21,7 @@ export default defineConfig({
     'eslint/no-underscore-dangle': 'off',
     'eslint/no-unused-expressions': 'off',
     'eslint/no-useless-escape': 'off',
+    'typescript/switch-exhaustiveness-check': 'error',
     'import/no-unassigned-import': 'off',
     'jsx-a11y/anchor-has-content': 'off',
     'jsx-a11y/control-has-associated-label': 'off',

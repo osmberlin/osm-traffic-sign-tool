@@ -1,12 +1,12 @@
-import { deReferenceLinks } from '@app/app/(signs)/DE/referenceLinks.config'
 import { describe, expect, test } from 'vitest'
+import { catalogueMetaDE } from '../data-definitions/DE/catalogueMetaDE.js'
 import { buildSignReferenceLinks } from './buildSignReferenceLinks.js'
 
 describe('buildSignReferenceLinks()', () => {
   test('builds main sign URLs for DE', () => {
     const result = buildSignReferenceLinks(
       { kind: 'traffic_sign', signId: '274.1', osmValuePart: '274.1' } as never,
-      deReferenceLinks,
+      catalogueMetaDE.referenceLinks,
     )
 
     expect(result.osmWikiTableUrl).toBe(
@@ -20,7 +20,7 @@ describe('buildSignReferenceLinks()', () => {
   test('builds modifier sign URLs for DE', () => {
     const result = buildSignReferenceLinks(
       { kind: 'exception_modifier', signId: '1022-10', osmValuePart: '1022-10' } as never,
-      deReferenceLinks,
+      catalogueMetaDE.referenceLinks,
     )
 
     expect(result.osmWikiTableUrl).toBe(

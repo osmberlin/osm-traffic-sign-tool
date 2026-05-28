@@ -1,4 +1,4 @@
-import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { getGeometryLabel } from '@app/src/features/i18n/geometryLabels'
 import {
   GEOMETRY_TYPES,
@@ -32,7 +32,7 @@ const geometryHasContent = (
 }
 
 export const TagGeometrySections = ({ value }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const relevantGeometries = GEOMETRY_TYPES.filter((geometry) =>
     geometryHasContent(value, geometry, countryPrefix),
   )

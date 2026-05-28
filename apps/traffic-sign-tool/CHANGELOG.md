@@ -27,6 +27,11 @@ All notable changes to this project will be manually documented in this file.
 - Make the custom value prompt overlay narrower for long input strings.
 - Fix search validation when `q` is a bare number in the URL.
 - Refresh bundled DE sign data and SVGs from converter updates (many new signs and catalogue focus rework).
+- Move country-specific catalogue metadata out of app code into `@osm-traffic-signs/converter` and consume package exports for reference links/wiki URL builders.
+- Simplify country prefix state management: remove app-level country-prefix provider/context and derive prefix directly from TanStack route state (`/$lang`).
+- Tighten country-prefix and locale contracts (no fallback naming/contracts, strict typing for route-derived prefix, `WikiLinkKey` requires `lang`).
+- Update SVG loader flow to use country-specific converter loader entrypoints and exhaustive country-prefix switching (no permissive default branch).
+- Align opening-hours validation message locale with current UI locale while keeping country code from route context.
 
 ## 2.1.9
 

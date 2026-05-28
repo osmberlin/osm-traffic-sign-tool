@@ -6,9 +6,8 @@ import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { LanguageIcon } from '@heroicons/react/24/outline'
+import { countries } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
-
-const signCatalogueOptions = [{ id: 'DE' as const }]
 
 /** Two independent settings: catalogue country (`/$lang`) vs UI language (Paraglide). */
 export const FloatingLanguageSwitcher = () => {
@@ -46,11 +45,11 @@ export const FloatingLanguageSwitcher = () => {
                     {m.lang_switcher_sign_catalogue()}
                   </h3>
                   <ul className="space-y-1">
-                    {signCatalogueOptions.map((option) => {
-                      const isSelected = signConfigLang === option.id
+                    {countries.map((countryPrefix) => {
+                      const isSelected = signConfigLang === countryPrefix
                       return (
                         <li
-                          key={option.id}
+                          key={countryPrefix}
                           className={clsx(
                             'relative flex items-center gap-x-3 rounded-lg p-3',
                             isSelected ? 'bg-stone-900/80' : 'opacity-60',
@@ -58,13 +57,13 @@ export const FloatingLanguageSwitcher = () => {
                           aria-current={isSelected ? 'true' : undefined}
                         >
                           <div className="flex size-9 flex-none items-center justify-center rounded-lg bg-stone-800 text-sm font-bold text-stone-200">
-                            {option.id}
+                            {countryPrefix}
                           </div>
                           <div className="min-w-0 flex-1">
                             <p className="font-semibold text-stone-100">
-                              {option.id === 'DE'
+                              {countryPrefix === 'DE'
                                 ? m.lang_switcher_sign_catalogue_de_name()
-                                : option.id}
+                                : countryPrefix}
                             </p>
                           </div>
                           {isSelected ? (

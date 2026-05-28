@@ -1,13 +1,16 @@
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
-import { showSignsToTagsWarning } from '@osm-traffic-signs/converter'
+import { getCountryCatalogueMeta, showSignsToTagsWarning } from '@osm-traffic-signs/converter'
 import { ResultComments } from './results/ResultComments'
 import { ResultDebug } from './results/ResultDebug'
 import { ResultTagRecommendations } from './results/ResultTagRecommendations'
 
 export const ResultColumn = () => {
   const { paramSigns } = useParamSigns()
+  const { countryPrefix } = useCountryPrefix()
+  const { osmWikiOverviewUrl } = getCountryCatalogueMeta(countryPrefix)
 
   if (!paramSigns.length) {
     return (
@@ -25,10 +28,7 @@ export const ResultColumn = () => {
           <p className="py-3 md:py-6">
             <strong className="text-amber-500">{m.page_multi_modifier_warning()}</strong>{' '}
             {m.page_multi_modifier_followup()}{' '}
-            <ExternalLink
-              href="https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland"
-              blank
-            >
+            <ExternalLink href={osmWikiOverviewUrl} blank>
               {m.page_wiki()}
             </ExternalLink>{' '}
             {m.page_multi_modifier_and()}{' '}

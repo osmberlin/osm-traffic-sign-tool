@@ -1,4 +1,4 @@
-import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import * as m from '@app/paraglide/messages'
 import { getRedirectsForSign, signsToTopLevelComments } from '@osm-traffic-signs/converter'
@@ -6,7 +6,7 @@ import { CommentsMap } from './ResultTagRecommendations/CommentsMap'
 
 export const ResultComments = () => {
   const { paramSigns } = useParamSigns()
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const signsCommentsMap = signsToTopLevelComments(paramSigns)
 
   const commentsMapWithRedirects = new Map(signsCommentsMap)

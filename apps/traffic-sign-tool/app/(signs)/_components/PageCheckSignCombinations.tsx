@@ -12,7 +12,6 @@ import {
   type CombinationFeedbackState,
 } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaTaskFormat'
 import { CombinationQaTaskResults } from '@app/app/(signs)/_components/PageCheckSignCombinations/CombinationQaTaskResults'
-import { CountryPrefixProvider } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useParamCombinationPrimary } from '@app/app/(signs)/_components/store/useParamCombinationPrimary.search'
 import { useParamCombinationQa } from '@app/app/(signs)/_components/store/useParamCombinationQa.search'
 import { useReplaceDeSearch } from '@app/app/(signs)/_components/store/useReplaceDeSearch'
@@ -94,76 +93,73 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
   }
 
   return (
-    <CountryPrefixProvider countryPrefix={countryPrefix}>
-      <ContentPageLayout>
-        <h2 className="my-4 text-3xl font-light text-black uppercase">
-          {m.page_combinations_qa_title()}
-        </h2>
-        <p>{m.combinations_intro()}</p>
+    <ContentPageLayout>
+      <h2 className="my-4 text-3xl font-light text-black uppercase">
+        {m.page_combinations_qa_title()}
+      </h2>
+      <p>{m.combinations_intro()}</p>
 
-        <CombinationQaTaskResults entries={taskEntries} />
+      <CombinationQaTaskResults entries={taskEntries} />
 
-        <CombinationQaSignPicker
-          filteredPrimarySigns={filteredPrimarySigns}
-          combinationCountByOsm={combinationCountByOsm}
-          counts={signFilterCounts}
-          primaryOsmValuePart={primaryOsmValuePart}
-          onPrimarySelect={handlePrimarySelect}
-          onFilterChange={handleFilterChange}
-        />
+      <CombinationQaSignPicker
+        filteredPrimarySigns={filteredPrimarySigns}
+        combinationCountByOsm={combinationCountByOsm}
+        counts={signFilterCounts}
+        primaryOsmValuePart={primaryOsmValuePart}
+        onPrimarySelect={handlePrimarySelect}
+        onFilterChange={handleFilterChange}
+      />
 
-        {primaryOsmValuePart && !selectedPrimarySign && (
-          <p className="mt-8 text-sm text-stone-600">
-            <code lang={catalogueLangAttr}>{primaryOsmValuePart}</code> is not in the current
-            filter.{' '}
-            <button
-              type="button"
-              className="underline hover:text-stone-900"
-              onClick={handleClearPrimary}
-            >
-              Clear selection
-            </button>
-          </p>
-        )}
+      {primaryOsmValuePart && !selectedPrimarySign && (
+        <p className="mt-8 text-sm text-stone-600">
+          <code lang={catalogueLangAttr}>{primaryOsmValuePart}</code> is not in the current filter.{' '}
+          <button
+            type="button"
+            className="underline hover:text-stone-900"
+            onClick={handleClearPrimary}
+          >
+            Clear selection
+          </button>
+        </p>
+      )}
 
-        {selectedPrimarySign ? (
-          <section className="mt-8">
-            <div className="mb-4 flex items-center gap-4">
-              <PackageSvgTrafficSign sign={selectedPrimarySign} className="h-auto w-16 shrink-0" />
-              <div>
-                <h3 className="text-xl font-light text-black">
-                  <span lang={catalogueLangAttr}>
-                    <code>{selectedPrimarySign.osmValuePart}</code> –{' '}
-                    {selectedPrimarySign.descriptiveName}
-                  </span>
-                </h3>
-                <p className="mt-1 text-sm text-stone-700">
-                  {selectedCombinationRows.length === 1
-                    ? m.combinations_showing({ count: String(selectedCombinationRows.length) })
-                    : m.combinations_showing_plural({
-                        count: String(selectedCombinationRows.length),
-                      })}{' '}
-                  · {modifierSigns.length} modifier signs in catalogue.{' '}
-                  <ExternalLink href="https://www.npmjs.com/package/@osm-traffic-signs/converter">
-                    {m.converter_package()}
-                  </ExternalLink>
-                </p>
-              </div>
+      {selectedPrimarySign ? (
+        <section className="mt-8">
+          <div className="mb-4 flex items-center gap-4">
+            <PackageSvgTrafficSign sign={selectedPrimarySign} className="h-auto w-16 shrink-0" />
+            <div>
+              <h3 className="text-xl font-light text-black">
+                <span lang={catalogueLangAttr}>
+                  <code>{selectedPrimarySign.osmValuePart}</code> –{' '}
+                  {selectedPrimarySign.descriptiveName}
+                </span>
+              </h3>
+              <p className="mt-1 text-sm text-stone-700">
+                {selectedCombinationRows.length === 1
+                  ? m.combinations_showing({ count: String(selectedCombinationRows.length) })
+                  : m.combinations_showing_plural({
+                      count: String(selectedCombinationRows.length),
+                    })}{' '}
+                · {modifierSigns.length} modifier signs in catalogue.{' '}
+                <ExternalLink href="https://www.npmjs.com/package/@osm-traffic-signs/converter">
+                  {m.converter_package()}
+                </ExternalLink>
+              </p>
             </div>
+          </div>
 
-            <CheckCombinationTable
-              key={selectedPrimarySign.osmValuePart}
-              rows={selectedCombinationRows}
-              feedback={feedback}
-              onFeedbackChange={setFeedback}
-            />
-          </section>
-        ) : (
-          !primaryOsmValuePart && (
-            <p className="mt-8 text-sm text-stone-600">{m.combinations_select_primary_hint()}</p>
-          )
-        )}
-      </ContentPageLayout>
-    </CountryPrefixProvider>
+          <CheckCombinationTable
+            key={selectedPrimarySign.osmValuePart}
+            rows={selectedCombinationRows}
+            feedback={feedback}
+            onFeedbackChange={setFeedback}
+          />
+        </section>
+      ) : (
+        !primaryOsmValuePart && (
+          <p className="mt-8 text-sm text-stone-600">{m.combinations_select_primary_hint()}</p>
+        )
+      )}
+    </ContentPageLayout>
   )
 }

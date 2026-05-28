@@ -1,4 +1,4 @@
-import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useUiLocale } from '@app/app/_components/i18n/useUiLocale'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
@@ -15,10 +15,6 @@ import {
 type Props = {
   format: ValuePromptFormat
   inputValue: string
-}
-
-const getRequestedLocale = (uiLocale: string, countryPrefix: string) => {
-  return uiLocale === 'de' ? 'de' : countryPrefix.toLowerCase()
 }
 
 const ValidationMessageList = ({ validation }: { validation: ConditionalValidationResult }) => {
@@ -53,11 +49,11 @@ const ValidationMessageList = ({ validation }: { validation: ConditionalValidati
 }
 
 export const ConditionalOpeningHoursValidationFeedback = ({ format, inputValue }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const uiLocale = useUiLocale()
 
   const validation = validateConditionalOpeningHours(inputValue, {
-    requestedLocale: getRequestedLocale(uiLocale, countryPrefix),
+    requestedLocale: uiLocale,
     countryCode: countryPrefix.toLowerCase(),
   })
 

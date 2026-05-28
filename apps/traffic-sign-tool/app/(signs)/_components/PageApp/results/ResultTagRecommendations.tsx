@@ -10,7 +10,7 @@ import {
   signsToTags,
   type GeometryType,
 } from '@osm-traffic-signs/converter'
-import { useCountryPrefixWithFallback } from '../../store/CountryPrefixContext'
+import { useCountryPrefix } from '../../store/CountryPrefixContext'
 import { GeometryIcon } from './assets/geometry-icons/GeometryIcon'
 import { ApplicabilityInfo } from './ResultTagRecommendations/ApplicabilityInfo'
 import { CommentsMap } from './ResultTagRecommendations/CommentsMap'
@@ -20,7 +20,7 @@ import { tagsToString } from './ResultTagRecommendations/tagsToString'
 import { TrafficSignTagReferenceLinks } from './ResultTagRecommendations/TrafficSignTagReferenceLinks'
 
 export const ResultTagRecommendations = () => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const { paramSigns } = useParamSigns()
 
   const geometrySections = GEOMETRY_TYPES.map((geometry) => {

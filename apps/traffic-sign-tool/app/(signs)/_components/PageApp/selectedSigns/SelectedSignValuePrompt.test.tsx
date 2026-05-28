@@ -26,7 +26,7 @@ vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', async (import
     await importOriginal<typeof import('@app/app/(signs)/_components/store/CountryPrefixContext')>()
   return {
     ...actual,
-    useCountryPrefixWithFallback: () => ({ countryPrefix: 'DE' as const }),
+    useCountryPrefix: () => ({ countryPrefix: 'DE' as const }),
   }
 })
 

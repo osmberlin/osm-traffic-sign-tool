@@ -1,23 +1,22 @@
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
-import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
+import { buildOsmWikiTagUrl } from '@osm-traffic-signs/converter'
+import { useCountryPrefix } from '../store/CountryPrefixContext'
 
 type Props = {
   osmKey: string
   osmValue: string | string[]
 }
 
-const wikiLink = 'https://wiki.openstreetmap.org/wiki'
-
 export const wikiLinkClasses =
   'underline decoration-transparent underline-offset-4 hover:decoration-stone-400 hover:decoration-1'
 
 export const WikiLinkValue = ({ osmKey, osmValue }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
 
   function prepareLinks(values: string[] | undefined) {
     if (!values) return []
     return values.map((valuePart) => {
-      const link = `${wikiLink}/${countryPrefix}:Tag:${osmKey}=${valuePart}`
+      const link = buildOsmWikiTagUrl(countryPrefix, osmKey, valuePart)
 
       return {
         link,

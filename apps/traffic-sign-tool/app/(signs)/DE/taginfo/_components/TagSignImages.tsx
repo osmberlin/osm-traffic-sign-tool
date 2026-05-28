@@ -1,11 +1,11 @@
 import { SelectedSignImage } from '@app/app/(signs)/_components/PageApp/selectedSigns/SelectedSignImage'
-import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 
 type Props = { value: string }
 
 export const TagSignImages = ({ value }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const signs = trafficSignTagToSigns(value, countryPrefix)
 
   return (

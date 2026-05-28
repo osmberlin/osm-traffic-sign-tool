@@ -3,13 +3,13 @@ import {
   splitIntoSignValueParts,
   splitSignIdSignValue,
 } from '@osm-traffic-signs/converter'
-import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
+import { useCountryPrefix } from '../store/CountryPrefixContext'
 import { WikiLinkValue } from '../wiki/WikiLinkValue'
 
 type Props = { value: string; inline?: boolean }
 
 export const WikiLinkListTrafficSignValues = ({ value, inline }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const splitTrafficSignValue = splitIntoSignValueParts(value)
   const signValues = splitTrafficSignValue.map((part) => splitSignIdSignValue(part).signId)
 

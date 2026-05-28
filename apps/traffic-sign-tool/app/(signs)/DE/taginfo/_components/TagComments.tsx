@@ -1,4 +1,4 @@
-import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { WikiLinkify } from '@app/app/(signs)/_components/wiki/WikiLinkify'
 import { CommentTranslateLink } from '@app/app/_components/i18n/CommentTranslateLink'
 import { useUiLocale } from '@app/app/_components/i18n/useUiLocale'
@@ -18,7 +18,7 @@ type Props = {
 }
 
 export const TagComments = ({ value, geometry }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const uiLocale = useUiLocale()
   const signs = trafficSignTagToSigns(value, countryPrefix)
   const signsCommentsMap = signsToComments(signs, geometry)

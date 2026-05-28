@@ -2,11 +2,13 @@ import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
 import * as m from '@app/paraglide/messages'
-import { buildSignReferenceLinks } from '@app/src/features/referenceLinks/buildSignReferenceLinks'
-import { getCountryReferenceLinks } from '@app/src/features/referenceLinks/countryReferenceLinks'
-import type { SignStateType } from '@osm-traffic-signs/converter'
+import {
+  buildSignReferenceLinks,
+  getCountryCatalogueMeta,
+  type SignStateType,
+} from '@osm-traffic-signs/converter'
 import { Fragment } from 'react'
-import { useCountryPrefixWithFallback } from '../../../store/CountryPrefixContext'
+import { useCountryPrefix } from '../../../store/CountryPrefixContext'
 import { WikiLinkListTrafficSignValues } from '../../../wiki/WikiLinkListTrafficSignValues'
 import { wikiLinkClasses } from '../../../wiki/WikiLinkValue'
 
@@ -17,9 +19,9 @@ type Props = {
 }
 
 export const TrafficSignTagReferenceLinks = ({ tagValue }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const { paramSigns } = useParamSigns()
-  const referenceLinks = getCountryReferenceLinks(countryPrefix)
+  const referenceLinks = getCountryCatalogueMeta(countryPrefix).referenceLinks
 
   return (
     <div className="mt-1 space-x-2 text-xs">
@@ -28,7 +30,11 @@ export const TrafficSignTagReferenceLinks = ({ tagValue }: Props) => {
 
       {referenceLinks && (
         <>
-          <ExternalLink href={osmtoolsUrl(tagValue)} blank className={wikiLinkClasses}>
+          <ExternalLink
+            href={osmtoolsUrl(tagValue, countryPrefix)}
+            blank
+            className={wikiLinkClasses}
+          >
             osmtools.de
           </ExternalLink>
           {paramSigns.length > 0 && (
@@ -52,11 +58,13 @@ export const TrafficSignTagReferenceLinks = ({ tagValue }: Props) => {
                           {m.osm_wiki_table({ signLabel })}
                         </ExternalLink>
                       </li>
-                      <li className="list-disc">
-                        <ExternalLink href={wikipediaTableUrl} blank className={wikiLinkClasses}>
-                          {m.wikipedia_table({ signLabel })}
-                        </ExternalLink>
-                      </li>
+                      {wikipediaTableUrl && (
+                        <li className="list-disc">
+                          <ExternalLink href={wikipediaTableUrl} blank className={wikiLinkClasses}>
+                            {m.wikipedia_table({ signLabel })}
+                          </ExternalLink>
+                        </li>
+                      )}
                     </Fragment>
                   )
                 })}

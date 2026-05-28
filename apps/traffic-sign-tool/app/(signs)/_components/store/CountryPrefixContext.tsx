@@ -1,33 +1,13 @@
 import { catalogueHtmlLang } from '@app/src/features/routing/lang'
-import { CountryPrefixType } from '@osm-traffic-signs/converter'
-import { createContext, useContext } from 'react'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 
-const CountryPrefixContext = createContext<CountryPrefixType | undefined>(undefined)
-
-export type CountryPrefixProviderProps = {
-  children: React.ReactElement
-  countryPrefix: CountryPrefixType
-}
-export const CountryPrefixProvider = ({ children, countryPrefix }: CountryPrefixProviderProps) => {
-  return (
-    <CountryPrefixContext.Provider value={countryPrefix}>{children}</CountryPrefixContext.Provider>
-  )
-}
-
-export const countryPrefixFallback = 'DE'
-
-export const useCountryPrefixWithFallback = () => {
-  const countryPrefix = useContext(CountryPrefixContext)
-  return { countryPrefix: countryPrefix || countryPrefixFallback }
+export const useCountryPrefix = () => {
+  const countryPrefix = useCurrentLang()
+  return { countryPrefix }
 }
 
 /** HTML `lang` for sign-catalogue strings (≠ Paraglide UI locale on the shell). */
-export const useCatalogueHtmlLang = (): string => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+export const useCatalogueHtmlLang = () => {
+  const { countryPrefix } = useCountryPrefix()
   return catalogueHtmlLang(countryPrefix)
-}
-
-export const useCountryPrefix = () => {
-  const countryPrefix = useContext(CountryPrefixContext)
-  return { countryPrefix }
 }

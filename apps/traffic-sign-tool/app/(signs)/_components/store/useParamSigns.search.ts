@@ -7,12 +7,12 @@ import {
 } from '@osm-traffic-signs/converter'
 import { useNavigate, useSearch } from '@tanstack/react-router'
 import { useRef } from 'react'
-import { useCountryPrefixWithFallback } from './CountryPrefixContext'
+import { useCountryPrefix } from './CountryPrefixContext'
 
 const DEFAULT_SIGN_VALUE_DEBOUNCE_MS = 2000
 
 export const useParamSigns = () => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const navigate = useNavigate({ from: '/$lang' })
   const search = useSearch({ from: '/$lang' })
   const rawSigns = search.signs

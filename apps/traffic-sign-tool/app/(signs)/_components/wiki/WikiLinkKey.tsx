@@ -1,16 +1,16 @@
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import { buildOsmWikiKeyUrl, type CountryPrefixType } from '@osm-traffic-signs/converter'
 
 type Props = {
   osmKey: string
-  lang?: 'DE' | 'US'
+  lang: CountryPrefixType
 }
 
-export const WikiLinkKey = ({ osmKey, lang = 'DE' }: Props) => {
-  const wikiLink = 'https://wiki.openstreetmap.org/wiki/'
+export const WikiLinkKey = ({ osmKey, lang }: Props) => {
   const splitKeys: string[] = osmKey.split(':')
 
   const links = splitKeys.map((keyPart) => {
-    const link = `${wikiLink}${lang}:Key:${keyPart}`
+    const link = buildOsmWikiKeyUrl(lang, keyPart)
     return {
       link,
       keyPart,

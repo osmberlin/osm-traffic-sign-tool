@@ -1,6 +1,7 @@
 import type { CombinationQaFilter } from '@app/src/features/searchParams/deSearch'
 import {
   type CountryPrefixType,
+  getCountryCatalogueMeta,
   type SignStateType,
   type SignType,
   signsToTrafficSignTagValue,
@@ -128,6 +129,7 @@ export const buildCombinationRowsForPrimary = (
   modifierSigns: SignType[],
   countryPrefix: CountryPrefixType,
 ): CombinationRow[] => {
+  const { catalogueLocale } = getCountryCatalogueMeta(countryPrefix)
   if (primarySign.compatibility?.canReceiveModifiers === false) {
     const signs = trafficSignTagToSigns(primarySign.osmValuePart, countryPrefix)
     const tagValue = signsToTrafficSignTagValue(signs, countryPrefix)
@@ -143,7 +145,7 @@ export const buildCombinationRowsForPrimary = (
       const tagValue = signsToTrafficSignTagValue(signs, countryPrefix)
       return { signs, tagValue, ...classifyCombinationRow(signs) }
     })
-    .sort((a, b) => a.tagValue.localeCompare(b.tagValue, 'de'))
+    .sort((a, b) => a.tagValue.localeCompare(b.tagValue, catalogueLocale))
 }
 
 export const buildCombinationRows = (
@@ -151,9 +153,10 @@ export const buildCombinationRows = (
   modifierSigns: SignType[],
   countryPrefix: CountryPrefixType,
 ): CombinationRow[] => {
+  const { catalogueLocale } = getCountryCatalogueMeta(countryPrefix)
   return primarySigns
     .flatMap((sign) => buildCombinationRowsForPrimary(sign, modifierSigns, countryPrefix))
-    .sort((a, b) => a.tagValue.localeCompare(b.tagValue, 'de'))
+    .sort((a, b) => a.tagValue.localeCompare(b.tagValue, catalogueLocale))
 }
 
 export const filterCombinationRows = (

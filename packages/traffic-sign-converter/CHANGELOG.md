@@ -10,6 +10,9 @@
 - Replace catalogue `visibility` flags (`search_only`, `highlight`) with per-view `catalogue.focus` records to support thematic sign sets (Standard, bike/foot, parking, highway, Alle-only).
 - Export catalogue focus helpers and value-prompt format utilities from the package entry point.
 - Render Markdown links in sign descriptions.
+- Add country-level catalogue metadata registry: `countryCatalogueMeta` / `getCountryCatalogueMeta` (locale, wiki overview URL, reference-link templates).
+- Add reusable reference-link helpers for host apps/editors: `buildSignReferenceLinks`, `buildOsmWikiKeyUrl`, `buildOsmWikiTagUrl`.
+- Add DE catalogue metadata module (`catalogueMetaDE`) and tests for metadata + reference-link URL builders.
 
 ## 0.4.0
 

@@ -15,6 +15,10 @@ export { signsToTopLevelComments } from './signsToTags/signsToTopLevelComments.j
 // Data Definitions
 export * from './data-definitions/countryDefinitions.js'
 export type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
+export {
+  countryCatalogueMeta,
+  getCountryCatalogueMeta,
+} from './data-definitions/countryCatalogueMeta.js'
 export * from './data-definitions/geometryTypes.js'
 export * from './data-definitions/namedTrafficSignValues.js'
 export type * from './data-definitions/TrafficSignDataTypes.js'
@@ -79,6 +83,12 @@ export type {
 // Data SVGs
 export { createSvgFilename } from './utils/createSvgFilename.js'
 export { createSvgImportname } from './utils/createSvgImportname.js'
+
+// Country reference links
+export { buildSignReferenceLinks } from './referenceLinks/buildSignReferenceLinks.js'
+export type { SignReferenceLinks } from './referenceLinks/buildSignReferenceLinks.js'
+export { buildOsmWikiKeyUrl, buildOsmWikiTagUrl } from './referenceLinks/buildOsmWikiUrl.js'
+export type { CountryCatalogueMeta, CountryReferenceLinkConfig } from './referenceLinks/types.js'
 
 // Data PER COUNTRY: DE
 // export * from './data-definitions/DE/trafficSignDataDE.js'

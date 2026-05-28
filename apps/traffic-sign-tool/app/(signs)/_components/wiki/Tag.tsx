@@ -1,3 +1,4 @@
+import { useCountryPrefix } from '../store/CountryPrefixContext'
 import { WikiLinkKey } from './WikiLinkKey'
 import { WikiLinkValue } from './WikiLinkValue'
 
@@ -7,10 +8,12 @@ type Props = {
 }
 
 export const Tag = ({ tagKey, tagValue }: Props) => {
+  const { countryPrefix } = useCountryPrefix()
+
   if (tagKey === 'traffic_sign') {
     return (
       <code>
-        <WikiLinkKey osmKey={tagKey} />
+        <WikiLinkKey osmKey={tagKey} lang={countryPrefix} />
         <span className="mx-0.5 text-gray-500">=</span>
         <span>{tagValue}</span>
       </code>
@@ -19,7 +22,7 @@ export const Tag = ({ tagKey, tagValue }: Props) => {
 
   return (
     <code>
-      <WikiLinkKey osmKey={tagKey} />
+      <WikiLinkKey osmKey={tagKey} lang={countryPrefix} />
       <span className="mx-0.5 text-gray-500">=</span>
       <WikiLinkValue osmKey={tagKey} osmValue={tagValue} />
     </code>

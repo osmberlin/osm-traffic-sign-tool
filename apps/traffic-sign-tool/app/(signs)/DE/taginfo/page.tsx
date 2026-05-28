@@ -81,7 +81,7 @@ export default function TaginfoPage() {
                     This tool
                   </Link>
                   <br />
-                  <ExternalLink href={osmtoolsUrl(value)} blank>
+                  <ExternalLink href={osmtoolsUrl(value, lang)} blank>
                     osmtools.de
                   </ExternalLink>
                   <WikiLinkListTrafficSignValues value={value} inline={false} />

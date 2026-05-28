@@ -17,7 +17,7 @@ import clsx from 'clsx'
 import type { Dispatch, SetStateAction } from 'react'
 import { PackageSvgTrafficSign } from '../PackageSvgTrafficSign'
 import { TagList } from '../PageApp/results/ResultTagRecommendations/TagList'
-import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
+import { useCountryPrefix } from '../store/CountryPrefixContext'
 
 type Props = {
   rows: CombinationRow[]
@@ -37,7 +37,7 @@ const radioClassName =
   'relative size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden'
 
 export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const catalogueLangAttr = catalogueHtmlLang(countryPrefix)
 
   const handleStatusChange = (tagValue: string, status: FeedbackKey) => {

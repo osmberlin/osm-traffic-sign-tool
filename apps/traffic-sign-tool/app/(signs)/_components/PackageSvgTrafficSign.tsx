@@ -6,9 +6,8 @@ import {
   SignStateType,
   SignType,
 } from '@osm-traffic-signs/converter'
-import { SvgLoadersDE } from '@osm-traffic-signs/converter/data-svgs'
 import { useEffect, useState } from 'react'
-import { useCountryPrefixWithFallback } from './store/CountryPrefixContext'
+import { useCountryPrefix } from './store/CountryPrefixContext'
 
 type Props = {
   sign: SignType | SignStateType
@@ -19,10 +18,28 @@ type SVG = string
 
 type SvgLoaderModule = { default: SVG }
 type SvgLoader = () => Promise<SvgLoaderModule>
+type CountrySvgLoaderMap = Record<string, SvgLoader>
 
-const countrySvgLoaders: Record<CountryPrefixType, Record<string, SvgLoader>> = {
-  DE: SvgLoadersDE,
-} as const
+const countrySvgLoaderCache = new Map<CountryPrefixType, Promise<CountrySvgLoaderMap | undefined>>()
+
+const loadCountrySvgLoaders = (
+  countryPrefix: CountryPrefixType,
+): Promise<CountrySvgLoaderMap | undefined> => {
+  const activeLoad = countrySvgLoaderCache.get(countryPrefix)
+  if (activeLoad) return activeLoad
+
+  let loadPromise: Promise<CountrySvgLoaderMap | undefined>
+  switch (countryPrefix) {
+    case 'DE':
+      loadPromise = import('@osm-traffic-signs/converter/data-svgs/DE/loaders').then(
+        (module) => module.SvgLoadersDE as CountrySvgLoaderMap,
+      )
+      break
+  }
+
+  countrySvgLoaderCache.set(countryPrefix, loadPromise)
+  return loadPromise
+}
 
 const loadedSvgCache = new Map<string, SVG>()
 const loadingSvgCache = new Map<string, Promise<SVG | undefined>>()
@@ -35,7 +52,7 @@ const loadSvgForSign = async (countryPrefix: CountryPrefixType, svgName: string)
   const activeLoad = loadingSvgCache.get(cacheKey)
   if (activeLoad) return activeLoad
 
-  const countryLoaders = countrySvgLoaders[countryPrefix]
+  const countryLoaders = await loadCountrySvgLoaders(countryPrefix)
   const loader = countryLoaders?.[svgName]
   if (!loader) return undefined
 
@@ -53,17 +70,21 @@ const loadSvgForSign = async (countryPrefix: CountryPrefixType, svgName: string)
 }
 
 export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const filename =
     'svgName' in sign && !!sign.svgName
       ? sign.svgName
       : createSvgImportname(countryPrefix, sign.osmValuePart)
   const cacheKey = `${countryPrefix}:${filename}`
   const cachedFile = loadedSvgCache.get(cacheKey)
-  const hasLoader = Boolean(countrySvgLoaders[countryPrefix]?.[filename])
-  const [loadedFileState, setLoadedFileState] = useState<{ cacheKey: string; file?: SVG }>({
+  const [loadedFileState, setLoadedFileState] = useState<{
+    cacheKey: string
+    file?: SVG
+    loadAttempted: boolean
+  }>({
     cacheKey,
     file: cachedFile,
+    loadAttempted: false,
   })
 
   useEffect(() => {
@@ -77,7 +98,7 @@ export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
 
     void loadSvgForSign(countryPrefix, filename).then((loadedSvg) => {
       if (!isCancelled) {
-        setLoadedFileState({ cacheKey, file: loadedSvg })
+        setLoadedFileState({ cacheKey, file: loadedSvg, loadAttempted: true })
       }
     })
 
@@ -88,8 +109,10 @@ export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
 
   const file =
     cachedFile ?? (loadedFileState.cacheKey === cacheKey ? loadedFileState.file : undefined)
+  const loadAttempted =
+    loadedFileState.cacheKey === cacheKey ? loadedFileState.loadAttempted : false
 
-  if (!file && !hasLoader) {
+  if (!file && loadAttempted) {
     if (isDev) {
       console.warn('SVG MISSING', countryPrefix, sign)
     }

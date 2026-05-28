@@ -1,4 +1,4 @@
-import { useCountryPrefixWithFallback } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { Tag } from '@app/app/(signs)/_components/wiki/Tag'
 import { signsToTags, trafficSignTagToSigns, type GeometryType } from '@osm-traffic-signs/converter'
 
@@ -8,7 +8,7 @@ type Props = {
 }
 
 export const TagRecommendations = ({ value, geometry }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
   const signs = trafficSignTagToSigns(value, countryPrefix)
   const geometries: GeometryType[] = geometry === 'way' ? ['way', 'way_centerline'] : [geometry]
   const aggregatedTagsMap = new Map<string, string | string[]>()

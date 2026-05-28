@@ -1,7 +1,11 @@
-import { CountryPrefixType } from '@osm-traffic-signs/converter'
+import {
+  buildOsmWikiKeyUrl,
+  buildOsmWikiTagUrl,
+  CountryPrefixType,
+} from '@osm-traffic-signs/converter'
 import { micromark } from 'micromark'
 import { gfm, gfmHtml } from 'micromark-extension-gfm'
-import { useCountryPrefixWithFallback } from '../store/CountryPrefixContext'
+import { useCountryPrefix } from '../store/CountryPrefixContext'
 
 type Props = {
   text: string
@@ -17,15 +21,12 @@ type Props = {
  * - [Tag:foo=bar] → link to wiki tag page with inline code styling
  */
 function preprocessOsmSyntax(text: string, countryPrefix: CountryPrefixType): string {
-  const wikiKeyBase = `https://wiki.openstreetmap.org/wiki/${countryPrefix}:Key:`
-  const wikiTagBase = `https://wiki.openstreetmap.org/wiki/${countryPrefix}:Tag:`
-
   return text
     .replace(/\[Key:([^\]]+)\]/g, (_, key: string) => {
-      return `[\`${key}\`](${wikiKeyBase}${key})`
+      return `[\`${key}\`](${buildOsmWikiKeyUrl(countryPrefix, key)})`
     })
     .replace(/\[Tag:([^=\]]+)=([^\]]+)\]/g, (_, key: string, value: string) => {
-      return `[\`${key}=${value}\`](${wikiTagBase}${key}=${value})`
+      return `[\`${key}=${value}\`](${buildOsmWikiTagUrl(countryPrefix, key, value)})`
     })
 }
 
@@ -34,7 +35,7 @@ const wikiLinkifyDefaultClass =
   'prose-code:bg-stone-700 prose-code:rounded prose-code:px-0.5 prose-a:underline prose-a:decoration-stone-700 prose-a:underline-offset-4 prose-a:hover:decoration-stone-400 prose-a:hover:decoration-1'
 
 export const WikiLinkify = ({ text, className = wikiLinkifyDefaultClass }: Props) => {
-  const { countryPrefix } = useCountryPrefixWithFallback()
+  const { countryPrefix } = useCountryPrefix()
 
   const preprocessed = preprocessOsmSyntax(text, countryPrefix)
   const html = micromark(preprocessed, {
