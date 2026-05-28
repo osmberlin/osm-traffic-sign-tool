@@ -48,7 +48,7 @@ const SelectedSignValuePromptFields = ({ sign }: { sign: ValuePromptSign }) => {
   }, [cancelPendingSignValueUpdate, sign.osmValuePart])
 
   return (
-    <form className="group mx-1 mt-2 rounded-sm border border-stone-400/50 p-1 text-sm leading-tight">
+    <form className="group mt-2 rounded-sm border border-stone-400/50 p-1 text-sm leading-tight md:mx-1">
       <label htmlFor={sign.osmValuePart} className="break-word">
         <span lang={catalogueLang}>{sign.valuePrompt.prompt}</span>:
       </label>

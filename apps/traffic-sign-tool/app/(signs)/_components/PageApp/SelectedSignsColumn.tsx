@@ -20,7 +20,7 @@ export const SelectedSignsColumn = () => {
         axis="y"
         values={paramSignValueList}
         onReorder={updateParamSigns}
-        className="w-full space-y-3 text-base"
+        className="flex w-full flex-col gap-3 text-base"
       >
         {paramSignValueList.map((item) => {
           const sign = paramSigns.find((sign) => sign.osmValuePart === item)!
