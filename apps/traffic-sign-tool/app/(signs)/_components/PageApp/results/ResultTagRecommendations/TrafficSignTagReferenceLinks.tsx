@@ -2,6 +2,8 @@ import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
 import * as m from '@app/paraglide/messages'
+import { buildSignReferenceLinks } from '@app/src/features/referenceLinks/buildSignReferenceLinks'
+import { getCountryReferenceLinks } from '@app/src/features/referenceLinks/countryReferenceLinks'
 import type { SignStateType } from '@osm-traffic-signs/converter'
 import { Fragment } from 'react'
 import { useCountryPrefixWithFallback } from '../../../store/CountryPrefixContext'
@@ -10,19 +12,6 @@ import { wikiLinkClasses } from '../../../wiki/WikiLinkValue'
 
 type SignWithId = SignStateType & { signId: string }
 
-const getOsmWikiTableUrl = (sign: SignWithId) => {
-  const isZusatzzeichen = sign.kind === 'exception_modifier' || sign.kind === 'condition_modifier'
-  const hashPrefix = isZusatzzeichen ? 'Zusatzzeichen_' : 'Zeichen_'
-  return `https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#${hashPrefix}${sign.signId}`
-}
-
-const getWikipediaUrl = (sign: SignWithId) => {
-  const isZusatzzeichen = sign.kind === 'exception_modifier' || sign.kind === 'condition_modifier'
-  const signType = isZusatzzeichen ? 'Zusatzzeichen' : 'Zeichen'
-  const textFragment = encodeURIComponent(`${signType} ${sign.signId}`)
-  return `https://de.wikipedia.org/wiki/Bildtafel_der_Verkehrszeichen_in_der_Bundesrepublik_Deutschland_seit_2017#:~:text=${textFragment}`
-}
-
 type Props = {
   tagValue: string
 }
@@ -30,13 +19,14 @@ type Props = {
 export const TrafficSignTagReferenceLinks = ({ tagValue }: Props) => {
   const { countryPrefix } = useCountryPrefixWithFallback()
   const { paramSigns } = useParamSigns()
+  const referenceLinks = getCountryReferenceLinks(countryPrefix)
 
   return (
     <div className="mt-1 space-x-2 text-xs">
       <strong>{m.wiki_label()}</strong>
       <WikiLinkListTrafficSignValues value={tagValue} inline />
 
-      {countryPrefix === 'DE' && (
+      {referenceLinks && (
         <>
           <ExternalLink href={osmtoolsUrl(tagValue)} blank className={wikiLinkClasses}>
             osmtools.de
@@ -49,26 +39,24 @@ export const TrafficSignTagReferenceLinks = ({ tagValue }: Props) => {
               <ul className="mt-2 space-y-1 pl-4">
                 {paramSigns.map((sign) => {
                   if (!sign.signId) return null
-                  const osmUrl = getOsmWikiTableUrl(sign as SignWithId)
-                  const wikiUrl = getWikipediaUrl(sign as SignWithId)
+                  const { osmWikiTableUrl, wikipediaTableUrl } = buildSignReferenceLinks(
+                    sign as SignWithId,
+                    referenceLinks,
+                  )
                   const signLabel = `${countryPrefix}:${sign.osmValuePart}`
 
                   return (
                     <Fragment key={sign.osmValuePart}>
-                      {osmUrl && (
-                        <li className="list-disc">
-                          <ExternalLink href={osmUrl} blank className={wikiLinkClasses}>
-                            {m.osm_wiki_table({ signLabel })}
-                          </ExternalLink>
-                        </li>
-                      )}
-                      {wikiUrl && (
-                        <li className="list-disc">
-                          <ExternalLink href={wikiUrl} blank className={wikiLinkClasses}>
-                            {m.wikipedia_table({ signLabel })}
-                          </ExternalLink>
-                        </li>
-                      )}
+                      <li className="list-disc">
+                        <ExternalLink href={osmWikiTableUrl} blank className={wikiLinkClasses}>
+                          {m.osm_wiki_table({ signLabel })}
+                        </ExternalLink>
+                      </li>
+                      <li className="list-disc">
+                        <ExternalLink href={wikipediaTableUrl} blank className={wikiLinkClasses}>
+                          {m.wikipedia_table({ signLabel })}
+                        </ExternalLink>
+                      </li>
                     </Fragment>
                   )
                 })}
