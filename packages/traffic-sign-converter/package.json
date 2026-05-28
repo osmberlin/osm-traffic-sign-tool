@@ -49,9 +49,9 @@
     }
   },
   "scripts": {
-    "_check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run type-check && pnpm run test",
-    "bleach": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "build": "npm run build:clean && npm run build:clean-svgs && npm run build:transfer-svgs && npm run build:ts && npm run build:copy-types && npm run build:copy-svgs",
+    "_check": "bun run format && bun run check-exports && bun run lint && bun run type-check && bun run test",
+    "bleach": "rm -rf node_modules && rm -rf dist",
+    "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:copy-types && bun run build:copy-svgs",
     "build:clean": "rimraf dist",
     "build:clean-svgs": "rimraf ./src/data-svgs",
     "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
@@ -59,19 +59,18 @@
     "build:transfer-svgs": "copyfiles -u 4 '../internal_svgs/src/data-svgs/**/*' './src/data-svgs'",
     "build:ts": "tsc",
     "build:watch": "tsc --watch",
-    "check": "pnpm run format && pnpm run check-exports && pnpm run lint && pnpm run type-check && pnpm run test",
+    "check": "bun run format && bun run check-exports && bun run lint && bun run type-check && bun run test",
     "check-exports": "attw --pack . --ignore-rules cjs-resolves-to-esm internal-resolution-error no-resolution --profile node16",
     "dev": "tsc --watch",
     "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
     "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
     "lint": "oxlint -c ../../oxlint.config.mjs .",
-    "preinstall": "npx only-allow pnpm",
-    "release:patch": "npm version patch && turbo build --force && pnpm run check && npm run login && npm publish",
+    "release:patch": "npm version patch && bun run build && bun run check && npm run login && npm publish",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
     "type-check": "tsc --noEmit",
-    "updatePackages:major": "pnpx taze major --includeLocked --write --maturity-period 5 --exclude // && pnpm run updatePackages:minor && pnpm install",
-    "updatePackages:minor": "pnpx taze minor --includeLocked --write --maturity-period 5 && pnpm install"
+    "updatePackages:major": "bunx taze major --includeLocked --write --maturity-period 5 --exclude // && bun run updatePackages:minor && bun install",
+    "updatePackages:minor": "bunx taze minor --includeLocked --write --maturity-period 5 && bun install"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",

@@ -30,12 +30,12 @@ Limitations:
 
 ```bash
 nvm use
-pnpm install
-pnpm run dev
+bun install
+bun run dev
 ```
 
-- pnpm and Turborepo
-- Framework: [NextJS](https://nextjs.org/)
+- Bun workspaces (monorepo orchestration via `bun run --filter`)
+- Framework: [Vite](https://vite.dev/) + [TanStack Router](https://tanstack.com/router)
 - Internal States: [Zustand](https://github.com/pmndrs/zustand)
 - External States (URL): [NUQS](https://nuqs.47ng.com/)
 - Testing: [Vitest](https://vitest.dev)
@@ -48,8 +48,8 @@ pnpm run dev
 Test your work: Use `check` and `build`
 
 ```bash
-pnpm run check
-pnpm run build # and pnpm run preview
+bun run check
+bun run build # and bun run preview
 ```
 
 ## Deployment
@@ -59,7 +59,7 @@ Our custom script will automatically increase the `prepatch` version.
 Remember to update the [CHANGELOG](./CHANGELOG.md).
 
 ```bash
-pnpm run deploy
+bun run release
 ```
 
 ## Licence & Thanks

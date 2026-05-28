@@ -195,13 +195,13 @@ Do not use `visibility` on new signs.
 **Note**:
 
 - `bun script-new-svg.ts` stays the default path and only downloads missing SVGs.
-- `pnpm --dir packages/internal_svgs run updateSvgs:full` re-downloads all signs in place without wiping existing files first.
+- `bun run --filter '@internal/svgs' updateSvgs:full` re-downloads all signs in place without wiping existing files first.
 - Use `bun script-refresh-all-svg.ts` (or `updateSvgs:force-refresh`) only when you explicitly want a clean wipe + full rebuild.
 
 ### Step 7: Testing
 
-1. **Start dev server separately**: Run `cd apps/traffic-sign-tool && pnpm run dev` (runs on **port 3001**).
-2. Navigate to `http://localhost:3001/?signs=DE:<ID>`.
+1. **Start dev server separately**: Run `cd apps/traffic-sign-tool && bun run dev` (Vite default port **5173**, or check terminal output).
+2. Navigate to `http://localhost:5173/?signs=DE:<ID>`.
 3. Verify SVG rendering, tags, and modifier compatibility.
 
 ### Step 8: Final Summary Output
@@ -212,13 +212,13 @@ Output ONLY this format:
 **Signs added:**
 
 - [ ] **DE:<ID> - <Descriptive Name>**
-      Dev: http://localhost:3001/?signs=DE:<ID>
+      Dev: http://localhost:5173/?signs=DE:<ID>
       Prod: https://trafficsigns.osm-verkehrswende.org/?signs=DE:<ID>
 
 **Relevant combinations:**
 
 - [ ] **DE:<ID>,DE:<MODIFIER_ID>**
-      Dev: http://localhost:3001/?signs=DE:<ID>,DE:<MODIFIER_ID>
+      Dev: http://localhost:5173/?signs=DE:<ID>,DE:<MODIFIER_ID>
       Prod: https://trafficsigns.osm-verkehrswende.org/?signs=DE:<ID>,DE:<MODIFIER_ID>
 ```
 

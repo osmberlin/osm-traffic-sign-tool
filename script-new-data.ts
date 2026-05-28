@@ -7,8 +7,8 @@ let cdPath = basePath
 
 cdPath = path.join(basePath, 'packages/traffic-sign-converter')
 console.log(colors.bgBlue.white('\n\n1. Update the traffic sign data'), cdPath)
-await $`cd ${cdPath} && pnpm run build`
+await $`cd ${cdPath} && bun run build`
 
 cdPath = path.join(basePath, 'apps/traffic-sign-tool')
 console.log(colors.bgBlue.white('\n\n2. Run the app'), cdPath)
-await $`cd ${cdPath} && pnpm run dev`
+await $`cd ${cdPath} && bun run dev`

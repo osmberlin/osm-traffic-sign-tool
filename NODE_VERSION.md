@@ -1,30 +1,21 @@
-# How the node version is set up
-
-It looks like there is no standard on how to define the node version on pnpm + github action.
-This is the setup we use for now
+# How the node and Bun versions are set up
 
 **Node version is specified in…**
 
-- `./package.json` as `engines` for ??
-- `./.npmrc` as `use-node-version` for pnpm
-- `./.nvmrc` for github actions
+- `./.nvmrc` — used by GitHub Actions (`setup-node`) and local `nvm use`
+- `./package.json` `engines.node` — documents the minimum Node version (>=22.21.1)
 
-**Node version is inverred in…**
+**Bun version is specified in…**
 
-- Github actions
+- `./package.json` `packageManager` — e.g. `bun@1.3.13`; used by `oven-sh/setup-bun` in CI
 
-**Which value …**
+**Which value to use**
 
-It looks like pnpm requires a explict version.
-So no way to just say `lts/Jod` ([Node version names](https://nodejs.org/en/about/previous-releases)).
+Use an explicit semver (e.g. `22.21.1`), not `lts/*` ([Node version names](https://nodejs.org/en/about/previous-releases)).
 
-> The correct syntax for stable release is strictly X.Y.Z or release/X.Y.Z
+The best way to get the Node version string is `node -v` and remove the leading `v`.
 
-The best way to get the version string is to use `node -v` and remove the `v`.
+**Links**
 
-**A few links…**
-
-- pnpm does not read `nvmrc` https://github.com/pnpm/pnpm/issues/4471
-  - docs https://pnpm.io/npmrc#use-node-version
-- github actions does not read `pnpmrc` https://github.com/actions/setup-node/issues/1130
-  - and seems to not cache things https://github.com/pnpm/action-setup/issues/70
+- [Bun install docs](https://bun.com/docs/pm/cli/install)
+- [setup-node cache for Bun](https://github.com/actions/setup-node)

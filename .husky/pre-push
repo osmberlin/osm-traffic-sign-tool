@@ -1,1 +1,1 @@
-pnpm run check
+bun run check

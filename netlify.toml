@@ -7,8 +7,8 @@
 
 [build]
   # Node: .nvmrc (also mirrored in package.json engines.node)
-  # pnpm: package.json packageManager + pnpm-lock.yaml (Netlify runs pnpm install via Corepack)
-  command = "pnpm run build"
+  # Bun: package.json packageManager + bun.lock (Netlify runs bun install when bun.lock is present)
+  command = "bun run build"
   publish = "apps/traffic-sign-tool/dist"
   # Exit 0 = skip build. Only run for PR deploy previews, not main/develop pushes.
   ignore = "bash -c 'test \"$CONTEXT\" = \"deploy-preview\" && exit 1 || exit 0'"

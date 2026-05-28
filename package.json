@@ -1,23 +1,23 @@
 {
   "name": "osm-traffic-sign-tools-monorepo",
   "private": true,
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
-    "bleach": "turbo run bleach && rm -rf node_modules",
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "check": "turbo run check",
-    "format": "turbo run format && pnpm run format:root",
-    "format:check": "turbo run format:check && pnpm run format:check:root",
+    "bleach": "bun run --filter '*' bleach && rm -rf node_modules",
+    "build": "bun run --sequential --filter '*' build",
+    "dev": "bun run --parallel --filter '*' dev",
+    "check": "bun run --filter '*' check",
+    "format": "bun run --filter '*' format && bun run format:root",
+    "format:check": "bun run --filter '*' format:check && bun run format:check:root",
     "format:check:root": "oxfmt --config ./oxfmt.config.mjs --check release-cli.ts vitest.workspace.ts script-commons-audit.ts script-new-data.ts script-new-svg.ts script-rank-tier-b.ts script-refresh-all-svg.ts",
     "format:root": "oxfmt --config ./oxfmt.config.mjs --write release-cli.ts vitest.workspace.ts script-commons-audit.ts script-new-data.ts script-new-svg.ts script-rank-tier-b.ts script-refresh-all-svg.ts",
-    "lint": "turbo run lint",
-    "preinstall": "npx only-allow pnpm",
+    "lint": "bun run --filter '*' lint",
     "prepare": "husky",
     "release": "bun run release-cli.ts",
-    "test": "turbo run test",
-    "test:watch": "turbo run test:watch",
-    "updatePackages:major": "pnpm dlx taze -r major --includeLocked --write --maturity-period 5 && pnpm install",
-    "updatePackages:minor": "pnpm dlx taze -r minor --includeLocked --write --maturity-period 5 && pnpm install"
+    "test": "bun run --filter '*' test",
+    "test:watch": "bun run --parallel --filter '*' test:watch",
+    "updatePackages:major": "bunx taze -r major --includeLocked --write --maturity-period 5 && bun install",
+    "updatePackages:minor": "bunx taze -r minor --includeLocked --write --maturity-period 5 && bun install"
   },
   "devDependencies": {
     "@clack/prompts": "^0.8.2",
@@ -29,16 +29,10 @@
     "oxlint": "1.65.0",
     "postcss": "^8.5.6",
     "svgo": "^4.0.0",
-    "turbo": "^2.7.1",
     "vitest": "^4.0.16"
   },
   "engines": {
     "node": ">=22.21.1"
   },
-  "packageManager": "pnpm@10.26.2",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp"
-    ]
-  }
+  "packageManager": "bun@1.3.13"
 }

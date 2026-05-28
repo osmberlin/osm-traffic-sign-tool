@@ -193,12 +193,12 @@ async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: bool
 
   // Build
   spinner.start('Building package...')
-  await $`turbo build --force`
+  await $`bun run --filter '@osm-traffic-signs/converter' build`
   spinner.stop('✓ Build complete')
 
   // Check
   spinner.start('Running checks...')
-  await $`cd ${PACKAGE_DIR} && pnpm run check`
+  await $`cd ${PACKAGE_DIR} && bun run check`
   spinner.stop('✓ Checks passed')
 
   // Publish
@@ -263,7 +263,7 @@ async function releaseApp(
   if (packageJustReleased) {
     const spinner = p.spinner()
     spinner.start('Updating lockfile...')
-    await $`pnpm install`
+    await $`bun install`
     spinner.stop('✓ Lockfile updated')
   }
 
