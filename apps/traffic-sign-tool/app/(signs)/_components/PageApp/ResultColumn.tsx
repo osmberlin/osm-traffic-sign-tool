@@ -12,7 +12,7 @@ export const ResultColumn = () => {
   if (!paramSigns.length) {
     return (
       <>
-        <h2 className="mb-4 text-lg font-light uppercase">{m.page_recommended_tags()}</h2>
+        <h2 className="mb-3 text-lg font-light uppercase md:mb-4">{m.page_recommended_tags()}</h2>
         <p className="font-light text-stone-400">{m.page_select_sign_hint()}</p>
       </>
     )
@@ -22,7 +22,7 @@ export const ResultColumn = () => {
     <>
       {showSignsToTagsWarning(paramSigns) ? (
         <>
-          <p className="py-6">
+          <p className="py-3 md:py-6">
             <strong className="text-amber-500">{m.page_multi_modifier_warning()}</strong>{' '}
             {m.page_multi_modifier_followup()}{' '}
             <ExternalLink

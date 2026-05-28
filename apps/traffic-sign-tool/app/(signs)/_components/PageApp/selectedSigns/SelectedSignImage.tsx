@@ -4,7 +4,7 @@ import { SignStateType } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
 
-type Props = { sign: SignStateType }
+type Props = { sign: SignStateType; compact?: boolean }
 
 const getBanderoleTextClass = (value: string) => {
   const length = value.length
@@ -15,53 +15,77 @@ const getBanderoleTextClass = (value: string) => {
   return 'text-sm px-1'
 }
 
-export const SelectedSignImage = ({ sign }: Props) => {
-  const catalogueLang = useCatalogueHtmlLang()
+export const SelectedSignGraphic = ({ sign, compact = false }: Props) => {
   const showBanderole =
     'valuePrompt' in sign
       ? sign.valuePrompt &&
-        // We take 47 as a default value for some signs with number; we always want to show the sign here.
         (sign.valuePrompt.defaultValue === '47' || sign.signValue !== sign.valuePrompt.defaultValue)
       : false
 
-  return (
-    <div className="px-1">
-      {sign.recodgnizedSign ? (
-        <div className="relative mx-auto max-w-24">
-          <PackageSvgTrafficSign
-            sign={sign}
-            className="pointer-events-none inline h-auto max-h-24 w-full max-w-24"
-          />
+  if (!sign.recodgnizedSign) {
+    return (
+      <div
+        className={clsx(
+          'mx-auto flex items-center justify-center rounded-sm border border-stone-800 bg-stone-600 text-stone-50',
+          compact ? 'size-full min-h-0 pt-1' : 'size-20 pt-1',
+        )}
+      >
+        <code className="tracking-tighter whitespace-nowrap">?</code>
+      </div>
+    )
+  }
 
-          {showBanderole && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className={clsx(
-                  'font-condensed w-full -rotate-12 rounded-sm bg-amber-100/95 pt-1 text-center font-normal text-amber-900 shadow-xs',
-                  getBanderoleTextClass(String(sign.signValue)),
-                )}
-              >
-                {sign.signValue}
-              </div>
-            </div>
-          )}
-        </div>
-      ) : (
-        <div className="mx-auto flex size-20 items-center justify-center rounded-sm border border-stone-800 bg-stone-600 pt-1 text-stone-50">
-          <code className="tracking-tighter whitespace-nowrap">?</code>
-          <br />
+  return (
+    <div className={clsx('relative mx-auto', compact ? 'h-full w-full' : 'max-w-24')}>
+      <PackageSvgTrafficSign
+        sign={sign}
+        className={clsx(
+          'pointer-events-none inline h-auto w-full',
+          compact ? 'max-h-full max-w-full' : 'max-h-24 max-w-24',
+        )}
+      />
+
+      {showBanderole && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div
+            className={clsx(
+              'font-condensed w-full -rotate-12 rounded-sm bg-amber-100/95 pt-1 text-center font-normal text-amber-900 shadow-xs',
+              getBanderoleTextClass(String(sign.signValue)),
+              compact && 'px-1 text-sm',
+            )}
+          >
+            {sign.signValue}
+          </div>
         </div>
       )}
+    </div>
+  )
+}
 
-      {
-        <h3 className="mt-1 w-full font-light">
-          {sign.recodgnizedSign ? <span lang={catalogueLang}>{sign.name}</span> : m.unknown_sign()}
-        </h3>
-      }
+export const SelectedSignLabels = ({ sign }: Pick<Props, 'sign'>) => {
+  const catalogueLang = useCatalogueHtmlLang()
+
+  return (
+    <>
+      <h3 className="w-full font-light">
+        {sign.recodgnizedSign ? <span lang={catalogueLang}>{sign.name}</span> : m.unknown_sign()}
+      </h3>
 
       {'descriptiveName' in sign && sign.descriptiveName && (
         <div lang={catalogueLang}>{sign.descriptiveName}</div>
       )}
+    </>
+  )
+}
+
+/** Used by taginfo and other stacked sign previews. */
+export const SelectedSignImage = ({ sign }: Pick<Props, 'sign'>) => {
+  return (
+    <div className="px-1">
+      <SelectedSignGraphic sign={sign} />
+      <div className="mt-1 w-full text-center leading-tight">
+        <SelectedSignLabels sign={sign} />
+      </div>
     </div>
   )
 }

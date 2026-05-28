@@ -1,4 +1,5 @@
 import { setUiLocale, useUiLocale } from '@app/app/_components/i18n/useUiLocale'
+import { stonePillButton } from '@app/app/_components/links/buttonStyles'
 import * as m from '@app/paraglide/messages'
 import { uiLocales, type UiLocale } from '@app/src/features/i18n/uiLocale'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
@@ -23,7 +24,7 @@ export const FloatingLanguageSwitcher = () => {
     <div className="pointer-events-none fixed top-4 right-4 z-50">
       <Popover className="pointer-events-auto relative">
         <PopoverButton
-          className="inline-flex items-center gap-x-1.5 rounded-full bg-stone-700/90 px-3 py-2 text-sm font-semibold text-stone-100 shadow-lg ring-1 ring-stone-600/80 backdrop-blur-sm hover:bg-stone-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-800"
+          className={clsx(stonePillButton, 'gap-x-1.5 px-3 py-2 text-sm font-semibold')}
           aria-label={m.lang_switcher_button()}
         >
           <LanguageIcon aria-hidden="true" className="size-5 shrink-0" />

@@ -1,6 +1,7 @@
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
 import * as m from '@app/paraglide/messages'
+import { getGeometryLabel } from '@app/src/features/i18n/geometryLabels'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import {
   GEOMETRY_TYPES,
@@ -35,13 +36,8 @@ export const ResultTagRecommendations = () => {
   const showDetailedWayLabels = relevantSections.some(
     (section) => section.geometry === 'way_centerline',
   )
-  const geometryLabels = {
-    node: 'Nodes',
-    way: showDetailedWayLabels ? 'Ways (separate)' : 'Ways',
-    way_centerline: 'Ways (centerline)',
-    area: 'Areas',
-    relation: 'Relations',
-  } as const satisfies Record<GeometryType, string>
+  const geometryLabel = (geometry: GeometryType) =>
+    getGeometryLabel(geometry, { wayAsSeparate: showDetailedWayLabels })
 
   if (relevantSections.length === 0) {
     return null
@@ -49,16 +45,19 @@ export const ResultTagRecommendations = () => {
 
   return (
     <>
-      <h2 className="mt-10 mb-4 text-lg font-light uppercase">{m.recommended_tags_heading()}</h2>
+      <h2 className="mb-3 text-lg font-light uppercase md:mb-4">{m.recommended_tags_heading()}</h2>
 
       <ExplicitNoneTaggingNote paramSigns={paramSigns} />
 
       {relevantSections.map(({ geometry, tags, applicable, notApplicable, comments }, index) => {
         const copyAllTags = tagsToString(tags)
         return (
-          <div key={geometry} className="mt-10 first:mt-0">
-            {index > 0 && <hr className="mb-10 border-stone-100" />}
-
+          <div
+            key={geometry}
+            className={
+              index > 0 ? 'mt-4 border-t border-stone-500/50 pt-4 md:mt-6 md:pt-6' : undefined
+            }
+          >
             <div className="group/section">
               <ApplicabilityInfo
                 geometry={geometry}
@@ -73,16 +72,16 @@ export const ResultTagRecommendations = () => {
               >
                 <h3 className="flex items-center gap-2 text-lg font-light uppercase">
                   <GeometryIcon geometry={geometry} />
-                  {geometryLabels[geometry]}
+                  {geometryLabel(geometry)}
                 </h3>
               </ApplicabilityInfo>
 
               <TagList tags={tags} className="-mx-2" />
 
               {comments.size > 0 && (
-                <div className="mt-6 opacity-60 transition-opacity group-hover/section:opacity-100">
+                <div className="mt-4 opacity-60 transition-opacity group-hover/section:opacity-100 md:mt-6">
                   <h4 className="mb-3 text-sm font-light text-stone-300">
-                    {m.notes_heading()} ({geometryLabels[geometry]})
+                    {m.notes_heading()} ({geometryLabel(geometry)})
                   </h4>
                   <CommentsMap comments={comments} />
                 </div>

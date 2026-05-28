@@ -31,7 +31,7 @@ export const Header = () => {
   )
 
   return (
-    <header className="mx-auto mt-5 mb-6 flex max-w-prose flex-col flex-wrap overflow-hidden px-4 sm:px-6 md:mt-10 lg:w-[65ch] lg:max-w-prose lg:px-8">
+    <header className="mx-auto mt-5 mb-6 flex w-full max-w-prose flex-col flex-wrap overflow-hidden px-4 sm:px-6 md:mt-10 lg:px-8">
       <h1>
         {isHome ? (
           <span className={titleClassName}>{titleContent}</span>

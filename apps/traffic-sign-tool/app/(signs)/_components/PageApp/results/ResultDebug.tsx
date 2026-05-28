@@ -8,7 +8,7 @@ export const ResultDebug = () => {
   const catalogueLang = useCatalogueHtmlLang()
 
   return (
-    <details className="group mt-40 space-y-2">
+    <details className="group mt-6 space-y-2 md:mt-40">
       <summary className="flex cursor-pointer items-center gap-2 text-lg font-light text-stone-500 uppercase underline-offset-2 group-open:text-white hover:text-white hover:underline">
         <BugAntIcon className="size-3" /> {m.debug_source_data()}
       </summary>

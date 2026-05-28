@@ -5,7 +5,7 @@ import { SignStateType } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import { Reorder, useDragControls, useMotionValue } from 'framer-motion'
 import { useState } from 'react'
-import { SelectedSignImage } from './SelectedSignImage'
+import { SelectedSignGraphic, SelectedSignLabels } from './SelectedSignImage'
 import { SelectedSignValuePrompt } from './SelectedSignValuePrompt'
 import { useRaisedShadow } from './utils/useRaisedShadow'
 
@@ -13,8 +13,6 @@ type Props = {
   sign: SignStateType
 }
 
-// Docs for Frame Motion Reorder https://www.framer.com/motion/reorder/
-// Example https://codesandbox.io/p/sandbox/framer-motion-5-drag-to-reorder-lists-uonye?file=%2Fsrc%2FApp.tsx%3A12%2C1-13%2C1&from-embed
 export const SelectedSign = ({ sign }: Props) => {
   const y = useMotionValue(0)
   const boxShadow = useRaisedShadow(y)
@@ -24,60 +22,75 @@ export const SelectedSign = ({ sign }: Props) => {
 
   const [moveHover, setMoveHover] = useState(false)
 
+  const setMoveHoverOn = () => setMoveHover(true)
+  const setMoveHoverOff = () => setMoveHover(false)
+
   return (
     <Reorder.Item
-      key={sign.osmValuePart}
       value={sign.osmValuePart}
       id={sign.osmValuePart}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       style={{ boxShadow, y }}
-      className="group/sign flex h-full w-full min-w-0 items-start justify-start select-none"
+      className="w-full select-none"
       dragListener={false}
       dragControls={controls}
     >
-      <div className="flex shrink-0 flex-col">
-        <button
+      <div className="group/sign flex w-full min-w-0 items-start">
+        <div className="flex shrink-0 flex-col">
+          <button
+            type="button"
+            onPointerDown={(event) => controls.start(event)}
+            onMouseOver={setMoveHoverOn}
+            onFocus={setMoveHoverOn}
+            onMouseOut={setMoveHoverOff}
+            onBlur={setMoveHoverOff}
+            className={clsx(
+              'flex items-center justify-center px-1 py-3 text-stone-400 group-hover/sign:text-stone-900',
+              moveHover ? 'cursor-move bg-stone-100' : '',
+            )}
+          >
+            <Bars4Icon className="size-4" />
+          </button>
+          <button
+            type="button"
+            onClick={() => toggleOsmValuePart(sign.osmValuePart)}
+            className={clsx(
+              'flex items-center justify-center px-1 py-3 text-stone-400 group-hover/sign:text-stone-900',
+              'hover:bg-stone-100',
+            )}
+          >
+            <TrashIcon className="size-4" />
+          </button>
+        </div>
+
+        <div
           onPointerDown={(event) => controls.start(event)}
-          onMouseOver={() => setMoveHover(true)}
-          onFocus={() => setMoveHover(true)}
-          onMouseOut={() => setMoveHover(false)}
-          onBlur={() => setMoveHover(false)}
+          onMouseOver={setMoveHoverOn}
+          onFocus={setMoveHoverOn}
+          onMouseOut={setMoveHoverOff}
+          onBlur={setMoveHoverOff}
           className={clsx(
-            'flex items-center justify-center px-1 py-3 text-stone-400 group-hover/sign:text-stone-900',
+            'flex min-w-0 flex-1 items-start gap-3 py-2 md:flex-col md:items-center',
             moveHover ? 'cursor-move bg-stone-100' : '',
           )}
         >
-          <Bars4Icon className="size-4" />
-        </button>
-        <button
-          onClick={() => toggleOsmValuePart(sign.osmValuePart)}
-          className={clsx(
-            'flex items-center justify-center px-1 py-3 text-stone-400 group-hover/sign:text-stone-900',
-            'hover:bg-stone-100',
-          )}
-        >
-          <TrashIcon className="size-4" />
-        </button>
-      </div>
-      <figure
-        onPointerDown={(event) => controls.start(event)}
-        onMouseOver={() => setMoveHover(true)}
-        onFocus={() => setMoveHover(true)}
-        onMouseOut={() => setMoveHover(false)}
-        onBlur={() => setMoveHover(false)}
-        className={clsx(
-          'flex min-w-0 flex-1 flex-col items-center justify-center py-2',
-          moveHover ? 'cursor-move bg-stone-100' : '',
-        )}
-      >
-        <div className="w-full min-w-0 text-center leading-tight">
-          <SelectedSignImage sign={sign} />
+          <figure className="relative flex h-20 w-20 shrink-0 items-center justify-center md:h-auto md:w-full md:max-w-none md:p-0">
+            <div className="h-full w-full md:hidden">
+              <SelectedSignGraphic sign={sign} compact />
+            </div>
+            <div className="hidden w-full px-1 md:block">
+              <SelectedSignGraphic sign={sign} />
+            </div>
+          </figure>
 
-          <SelectedSignValuePrompt sign={sign} />
+          <div className="min-w-0 flex-1 leading-tight max-md:pt-1 max-md:text-left md:w-full md:text-center">
+            <SelectedSignLabels sign={sign} />
+            <SelectedSignValuePrompt sign={sign} />
+          </div>
         </div>
-      </figure>
+      </div>
     </Reorder.Item>
   )
 }
