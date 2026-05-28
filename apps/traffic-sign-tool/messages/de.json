@@ -52,6 +52,7 @@
   "notes_empty": "–",
   "applicability_based_on": "Basierend auf:",
   "applicability_not_applicable": "Nicht anwendbar:",
+  "applicability_details": "Anwendbarkeit anzeigen",
   "geometry_node": "Knoten",
   "geometry_way": "Wege",
   "geometry_way_separate": "Wege (getrennt)",

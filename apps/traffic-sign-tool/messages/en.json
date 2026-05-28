@@ -52,6 +52,7 @@
   "notes_empty": "–",
   "applicability_based_on": "Based on:",
   "applicability_not_applicable": "Not applicable:",
+  "applicability_details": "Show applicability details",
   "geometry_node": "Nodes",
   "geometry_way": "Ways",
   "geometry_way_separate": "Ways (separate)",

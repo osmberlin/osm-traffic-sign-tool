@@ -4,7 +4,7 @@ import { Bars4Icon } from '@heroicons/react/20/solid'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
 import { Reorder, useDragControls, useMotionValue } from 'framer-motion'
-import { useEffect, useState, type PointerEvent } from 'react'
+import { useState, type PointerEvent } from 'react'
 import { SelectedSignGraphic, SelectedSignLabels } from './SelectedSignImage'
 import { SelectedSignValuePrompt } from './SelectedSignValuePrompt'
 import { useRaisedShadow } from './utils/useRaisedShadow'
@@ -13,6 +13,8 @@ type Props = {
   sign: SignStateType
 }
 
+const dragSurfaceHighlight = (isDragging: boolean) => (isDragging ? 'cursor-move bg-stone-100' : '')
+
 export const SelectedSign = ({ sign }: Props) => {
   const y = useMotionValue(0)
   const boxShadow = useRaisedShadow(y)
@@ -20,12 +22,7 @@ export const SelectedSign = ({ sign }: Props) => {
 
   const { toggleOsmValuePart } = useParamSigns()
 
-  const [moveHover, setMoveHover] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
-  const showMoveHighlight = moveHover || isDragging
-
-  const setMoveHoverOn = () => setMoveHover(true)
-  const setMoveHoverOff = () => setMoveHover(false)
 
   const startDrag = (event: PointerEvent) => {
     setIsDragging(true)
@@ -40,19 +37,6 @@ export const SelectedSign = ({ sign }: Props) => {
     startDrag(event)
   }
 
-  useEffect(() => {
-    if (!isDragging) return
-
-    const endDrag = () => setIsDragging(false)
-    window.addEventListener('pointerup', endDrag)
-    window.addEventListener('pointercancel', endDrag)
-
-    return () => {
-      window.removeEventListener('pointerup', endDrag)
-      window.removeEventListener('pointercancel', endDrag)
-    }
-  }, [isDragging])
-
   return (
     <Reorder.Item
       value={sign.osmValuePart}
@@ -64,19 +48,17 @@ export const SelectedSign = ({ sign }: Props) => {
       className="relative w-full select-none"
       dragListener={false}
       dragControls={controls}
+      onDragEnd={() => setIsDragging(false)}
     >
-      <div className="group/sign flex w-full min-w-0 items-start">
+      <div className="group/sign flex w-full min-w-0 items-start has-[[data-drag-surface]:focus-visible]:**:data-drag-surface:cursor-move has-[[data-drag-surface]:focus-visible]:**:data-drag-surface:bg-stone-100 has-[[data-drag-surface]:hover]:**:data-drag-surface:cursor-move has-[[data-drag-surface]:hover]:**:data-drag-surface:bg-stone-100">
         <div className="flex shrink-0 flex-col">
           <button
             type="button"
+            data-drag-surface
             onPointerDown={startDrag}
-            onMouseOver={setMoveHoverOn}
-            onFocus={setMoveHoverOn}
-            onMouseOut={setMoveHoverOff}
-            onBlur={setMoveHoverOff}
             className={clsx(
               'flex touch-none items-center justify-center py-3 text-stone-400 group-hover/sign:text-stone-900 max-md:px-0 md:px-1',
-              showMoveHighlight ? 'cursor-move bg-stone-100' : '',
+              dragSurfaceHighlight(isDragging),
             )}
           >
             <Bars4Icon className="size-4" />
@@ -94,14 +76,11 @@ export const SelectedSign = ({ sign }: Props) => {
         </div>
 
         <div
+          data-drag-surface
           onPointerDown={startDragFromSignArea}
-          onMouseOver={setMoveHoverOn}
-          onFocus={setMoveHoverOn}
-          onMouseOut={setMoveHoverOff}
-          onBlur={setMoveHoverOff}
           className={clsx(
             'flex min-w-0 flex-1 items-start gap-3 py-2 md:flex-col md:items-center',
-            showMoveHighlight ? 'cursor-move bg-stone-100' : '',
+            dragSurfaceHighlight(isDragging),
           )}
         >
           <figure className="relative flex h-20 w-20 shrink-0 items-center justify-center max-md:pl-3 md:h-auto md:w-full md:max-w-none md:p-0 md:pl-0">

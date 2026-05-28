@@ -17,6 +17,7 @@ import { CommentsMap } from './ResultTagRecommendations/CommentsMap'
 import { ExplicitNoneTaggingNote } from './ResultTagRecommendations/ExplicitNoneTaggingNote'
 import { TagList } from './ResultTagRecommendations/TagList'
 import { tagsToString } from './ResultTagRecommendations/tagsToString'
+import { TrafficSignTagReferenceLinks } from './ResultTagRecommendations/TrafficSignTagReferenceLinks'
 
 export const ResultTagRecommendations = () => {
   const { countryPrefix } = useCountryPrefixWithFallback()
@@ -51,6 +52,14 @@ export const ResultTagRecommendations = () => {
 
       {relevantSections.map(({ geometry, tags, applicable, notApplicable, comments }, index) => {
         const copyAllTags = tagsToString(tags)
+        const trafficSignTagValue = tags.get('traffic_sign')
+        const trafficSignTagString =
+          trafficSignTagValue === undefined
+            ? undefined
+            : Array.isArray(trafficSignTagValue)
+              ? trafficSignTagValue.join(';')
+              : trafficSignTagValue
+
         return (
           <div
             key={geometry}
@@ -77,6 +86,10 @@ export const ResultTagRecommendations = () => {
               </ApplicabilityInfo>
 
               <TagList tags={tags} className="-mx-2" />
+
+              {geometry === 'node' && trafficSignTagString && (
+                <TrafficSignTagReferenceLinks tagValue={trafficSignTagString} />
+              )}
 
               {comments.size > 0 && (
                 <div className="mt-4 opacity-60 transition-opacity group-hover/section:opacity-100 md:mt-6">

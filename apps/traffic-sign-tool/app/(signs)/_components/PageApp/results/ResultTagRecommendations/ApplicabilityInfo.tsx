@@ -49,7 +49,7 @@ export const ApplicabilityInfo = ({
                 ? clsx('inline-flex items-center', stonePillWarningSurface, stonePillFocus)
                 : stonePillButton,
             )}
-            aria-label={m.notes_heading()}
+            aria-label={m.applicability_details()}
             aria-expanded={isExpanded}
           >
             <InformationCircleIcon
