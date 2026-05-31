@@ -7,6 +7,7 @@ import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Link, useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import packageJson from '../../../package.json'
+import { FloatingLanguageSwitcher } from '../i18n/FloatingLanguageSwitcher'
 import { ExternalLink } from '../links/ExternalLink'
 import svgLogo from './assets/logo.svg'
 
@@ -31,35 +32,38 @@ export const Header = () => {
   )
 
   return (
-    <header className="mx-auto mt-5 mb-6 flex w-full max-w-prose flex-col flex-wrap overflow-hidden px-4 sm:px-6 md:mt-10 lg:px-8">
-      <h1>
-        {isHome ? (
-          <span className={titleClassName}>{titleContent}</span>
-        ) : (
-          <Link className={titleClassName} to="/$lang" params={{ lang }}>
-            {titleContent}
-          </Link>
-        )}
-      </h1>
+    <header className="relative mx-auto mb-6 w-full max-w-6xl px-4 pt-4 sm:px-6 lg:px-8">
+      <FloatingLanguageSwitcher />
+      <div className="mx-auto mt-5 flex w-full max-w-prose flex-col flex-wrap overflow-hidden md:mt-10">
+        <h1>
+          {isHome ? (
+            <span className={titleClassName}>{titleContent}</span>
+          ) : (
+            <Link className={titleClassName} to="/$lang" params={{ lang }}>
+              {titleContent}
+            </Link>
+          )}
+        </h1>
 
-      <details
-        open={isAboutOpen}
-        onToggle={(event) => setAboutOpen(event.currentTarget.open)}
-        className="my-5 self-center leading-tight text-stone-300"
-      >
-        <summary className="cursor-pointer text-center underline-offset-2 hover:underline">
-          {m.header_about_summary()}
-        </summary>
-        <p>
-          {m.header_about_body({ trafficSignTag: 'traffic_sign=*' })} <br />
-          <strong>{m.header_about_review()}</strong>
-          <br />
-          <ExternalLink blank href="https://github.com/osmberlin/osm-traffic-sign-tool">
-            {m.header_about_report()}
-          </ExternalLink>
-          .
-        </p>
-      </details>
+        <details
+          open={isAboutOpen}
+          onToggle={(event) => setAboutOpen(event.currentTarget.open)}
+          className="my-5 self-center leading-tight text-stone-300"
+        >
+          <summary className="cursor-pointer text-center underline-offset-2 hover:underline">
+            {m.header_about_summary()}
+          </summary>
+          <p>
+            {m.header_about_body({ trafficSignTag: 'traffic_sign=*' })} <br />
+            <strong>{m.header_about_review()}</strong>
+            <br />
+            <ExternalLink blank href="https://github.com/osmberlin/osm-traffic-sign-tool">
+              {m.header_about_report()}
+            </ExternalLink>
+            .
+          </p>
+        </details>
+      </div>
     </header>
   )
 }

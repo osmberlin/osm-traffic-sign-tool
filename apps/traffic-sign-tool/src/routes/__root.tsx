@@ -1,4 +1,3 @@
-import { FloatingLanguageSwitcher } from '@app/app/_components/i18n/FloatingLanguageSwitcher'
 import { useUiLocale } from '@app/app/_components/i18n/useUiLocale'
 import { Footer } from '@app/app/_components/layout/Footer'
 import { Header } from '@app/app/_components/layout/Header'
@@ -21,7 +20,6 @@ const RootLayout = () => {
         lang={uiLocale}
         className="flex min-h-screen w-full flex-none flex-col items-center bg-stone-800 text-base text-slate-800"
       >
-        <FloatingLanguageSwitcher />
         <Header />
         <main className="w-full min-w-0 overflow-x-hidden">
           <Outlet />
