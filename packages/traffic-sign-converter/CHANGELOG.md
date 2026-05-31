@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add structured **questions** on sign configs (`questionId`, `answerId`, i18n keys, explicit `nil` answer, optional `defaultAnswerId`, `affectsHighway`) and shared question builders (`sidepath`, `surfaceColor`, `guidanceMode`, `highwayClass`, `signDirection`).
+- Add node **Ausrichtung** (`direction=forward|backward`) for DE hazard signs via `signDirection` / `hazardSignNodeQuestions()` (wiki: DE:Key:direction); omit for way-only Schäden Zusatzzeichen.
+- Extend `signsToTags()` with optional answer state to merge question-derived tags; add `signsToOptionalTags()` for recommendation `optionalTags`.
+- Migrate DE bike/path infrastructure signs to questions (sidepath, surface colour, guidance) and convert multi-value `highwayValues` arrays to highway-class questions (default: first former array value).
+- Add `optionalTags` on geometry recommendations for tags that should appear as optional suggestions (e.g. `colour=white`).
 - **BREAKING**: Replace flat `tagRecommendations` with geometry-aware `tagRecommendationsByGeometry` and add `GeometryType` exports (`GEOMETRY_TYPES`).
 - Add geometry-aware recommendation helpers: `signsToApplicability`, `signsToTopLevelComments`, and geometry-parameterized `signsToTags` / `signsToComments`.
 - Migrate DE sign data to geometry-aware recommendation records and keep explicit-none QA semantics via `tagRecommendationsByGeometry: "none"` + `taggingSuggestionsQa: "none"`.
@@ -14,6 +19,8 @@
 - Add reusable reference-link helpers for host apps/editors: `buildSignReferenceLinks`, `buildOsmWikiKeyUrl`, `buildOsmWikiTagUrl`.
 - Add DE catalogue metadata module (`catalogueMetaDE`) and tests for metadata + reference-link URL builders.
 - Normalize `time_restriction` values in two canonical forms for issue #32/wiki alignment: `traffic_sign` keeps plate-style values (`6-18`, `6:30-18:15`) while generated `*:conditional` uses `HH:MM-HH:MM` (`06:00-18:00`, `06:30-18:15`).
+- Move opening-hours validation/parsing helpers from app into converter and export them (`validateConditionalOpeningHours` and related message parsing utilities/types) so all consumers share one implementation.
+- Apply opening-hours-based normalization consistently for signs with opening-hours-like value prompts before `traffic_sign` simplification and `*:conditional` output formatting.
 
 ## 0.4.0
 

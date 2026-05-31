@@ -10,6 +10,12 @@ export { showSignsToTagsWarning } from './signsToTags/showSignsToTagsWarning.js'
 export { signsToApplicability } from './signsToTags/signsToApplicability.js'
 export { signsToComments } from './signsToTags/signsToComments.js'
 export { signsToTags } from './signsToTags/signsToTags.js'
+export {
+  mergeTagMaps,
+  optionalTagsToMap,
+  signsToOptionalTags,
+  signsToOptionalTagsBySign,
+} from './signsToTags/signsToOptionalTags.js'
 export { signsToTopLevelComments } from './signsToTags/signsToTopLevelComments.js'
 
 // Data Definitions
@@ -35,6 +41,7 @@ export {
   thematicFocuses,
 } from './data-definitions/catalogueFocus.js'
 export {
+  QUESTION_NIL_ANSWER_ID,
   focusAreas,
   modifierSignCatalogueCategories,
   signCategories,
@@ -56,12 +63,44 @@ export type {
   CatalogueFocusView,
   FocusArea,
   ModifierSignCatalogueCategory,
+  OptionalTagGuidance,
+  OptionalTagsBySignEntry,
+  OptionalTagsRecommendation,
+  QuestionAnswer,
+  QuestionAnswersBySign,
   SignCategory,
   SignFocusTag,
+  SignQuestion,
+  TagRecommendationTag,
   TaggingSuggestionsQaStatus,
   TrafficSignCatalogueCategory,
   ValuePrompt,
 } from './data-definitions/TrafficSignDataTypes.js'
+export {
+  cycleInfrastructureQuestions,
+  guidanceModeQuestion,
+  hazardSignNodeQuestions,
+  highwayClassQuestion,
+  pathInfrastructureQuestions,
+  sidepathQuestion,
+  signDirectionQuestion,
+  surfaceColorQuestion,
+} from './data-definitions/questionCatalog.js'
+export {
+  getSelectedAnswerId,
+  isExplicitNilSelection,
+  resolveEffectiveAnswerId,
+  resolveQuestionAnswer,
+} from './questions/resolveQuestionAnswer.js'
+export {
+  collectSignQuestionGroups,
+  dedupeEquivalentAnswersForUrl,
+  getQuestionEquivalenceKey,
+  resolveGroupedEffectiveAnswerId,
+  resolveGroupedSelectedAnswerId,
+  syncEquivalentQuestionAnswers,
+} from './questions/groupSignQuestions.js'
+export type { SignQuestionGroup } from './questions/groupSignQuestions.js'
 export type {
   TaggingSuggestionsQaCategory,
   TaggingSuggestionsQaCounts,

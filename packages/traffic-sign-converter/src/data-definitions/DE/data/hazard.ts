@@ -1,6 +1,30 @@
+import { hazardSignNodeQuestions } from '../../questionCatalog.js'
 import type { SignType } from '../../TrafficSignDataTypes.js'
 
-export const _hazard: SignType[] = [
+/** Way-only surface damage Zusatzzeichen — no node `direction` (see DE:Key:traffic_sign). */
+const skipHazardNodeDirection = (sign: SignType): boolean =>
+  sign.osmValuePart.toLowerCase().includes('schäden')
+
+const withHazardNodeTagging = (signs: SignType[]): SignType[] =>
+  signs.map((sign) => {
+    if (sign.tagRecommendationsByGeometry === 'none' || skipHazardNodeDirection(sign)) {
+      return sign
+    }
+
+    const hasNodeRecommendation = sign.tagRecommendationsByGeometry.some((recommendation) =>
+      recommendation.geometries.includes('node'),
+    )
+
+    return {
+      ...sign,
+      tagRecommendationsByGeometry: hasNodeRecommendation
+        ? sign.tagRecommendationsByGeometry
+        : [...sign.tagRecommendationsByGeometry, { geometries: ['node'] }],
+      questions: hazardSignNodeQuestions(),
+    }
+  })
+
+export const _hazard: SignType[] = withHazardNodeTagging([
   {
     osmValuePart: '136-10',
     signId: '136-10',
@@ -635,4 +659,4 @@ export const _hazard: SignType[] = [
       licence: 'Public Domain',
     },
   },
-]
+])

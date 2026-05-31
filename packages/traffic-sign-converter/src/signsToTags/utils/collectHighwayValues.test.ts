@@ -6,6 +6,6 @@ import { collectHighwayValues } from './collectHighwayValues.js'
 test('collectHighwayValues', () => {
   const data = countryDefinitions.DE
 
-  const signs = signsStateByDescriptiveName('DE', data, ['Fahrradstraße', 'Anlieger frei'])
-  expect(collectHighwayValues(signs, 'way')).toMatchObject(['cycleway', 'residential', 'service'])
+  const signs = signsStateByDescriptiveName('DE', data, ['Anlieger frei'])
+  expect(collectHighwayValues(signs, 'way')).toMatchObject(['residential', 'service'])
 })

@@ -1,3 +1,10 @@
+import {
+  cycleInfrastructureQuestions,
+  guidanceModeQuestion,
+  highwayClassQuestion,
+  pathInfrastructureQuestions,
+  sidepathQuestion,
+} from '../../questionCatalog.js'
 import type { SignType } from '../../TrafficSignDataTypes.js'
 import { deEndeHauptzeichenOsmMappingComment } from './sharedComments.js'
 
@@ -14,8 +21,10 @@ export const _infrastructure: SignType[] = [
         geometries: ['way'],
         highwayValues: ['cycleway'],
         uniqueTags: [{ key: 'bicycle', value: 'designated' }],
+        optionalTags: [{ key: 'colour', value: 'white' }],
       },
     ],
+    questions: cycleInfrastructureQuestions(),
     comments: [
       {
         tagReference: null,
@@ -84,21 +93,7 @@ export const _infrastructure: SignType[] = [
         comment: 'Ohne Zusatzzeichen sind diese Wege nicht für Radfahrende zugelassen.',
       },
     ],
-    questions: [
-      {
-        question: 'Führung',
-        answers: [
-          {
-            label: 'Straßenbegleitend',
-            tags: [{ key: 'footway', value: 'sidewalk' }],
-          },
-          {
-            label: 'Selbstständig geführt',
-            tags: [{ key: 'is_sidepath', value: 'no' }],
-          },
-        ],
-      },
-    ],
+    questions: [guidanceModeQuestion()],
     catalogue: {
       focus: { default: 'highlight' },
       signCategory: 'traffic_sign',
@@ -130,8 +125,10 @@ export const _infrastructure: SignType[] = [
           { key: 'foot', value: 'designated' },
           { key: 'segregated', value: 'no' },
         ],
+        optionalTags: [{ key: 'colour', value: 'white' }],
       },
     ],
+    questions: [sidepathQuestion()],
     comments: [
       {
         tagReference: null,
@@ -162,13 +159,19 @@ export const _infrastructure: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        highwayValues: ['path', 'cycleway'],
         uniqueTags: [
           { key: 'bicycle', value: 'designated' },
           { key: 'foot', value: 'designated' },
           { key: 'segregated', value: 'yes' },
         ],
+        optionalTags: [{ key: 'colour', value: 'white' }],
       },
+    ],
+    questions: [
+      highwayClassQuestion(['path', 'cycleway'], undefined, {
+        cyclewayRemovesBicycleDesignated: true,
+      }),
+      ...pathInfrastructureQuestions(),
     ],
     comments: [
       {
@@ -204,13 +207,19 @@ export const _infrastructure: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        highwayValues: ['path', 'cycleway'],
         uniqueTags: [
           { key: 'bicycle', value: 'designated' },
           { key: 'foot', value: 'designated' },
           { key: 'segregated', value: 'yes' },
         ],
+        optionalTags: [{ key: 'colour', value: 'white' }],
       },
+    ],
+    questions: [
+      highwayClassQuestion(['path', 'cycleway'], undefined, {
+        cyclewayRemovesBicycleDesignated: true,
+      }),
+      ...pathInfrastructureQuestions(),
     ],
     comments: [
       {
@@ -300,7 +309,6 @@ export const _infrastructure: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        highwayValues: ['cycleway', 'residential'],
         accessTags: [{ key: 'vehicle', value: 'no' }],
         uniqueTags: [
           { key: 'bicycle', value: 'designated' },
@@ -310,6 +318,7 @@ export const _infrastructure: SignType[] = [
         ],
       },
     ],
+    questions: [highwayClassQuestion(['cycleway', 'residential'])],
     comments: [
       {
         tagReference: 'highway=*',
@@ -497,15 +506,38 @@ export const _infrastructure: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        highwayValues: ['service', 'busway'],
         uniqueTags: [{ key: 'bus', value: 'designated' }],
         conditionalTags: [{ key: 'vehicle', value: 'no' }],
+        optionalTags: {
+          tags: [
+            { key: 'lanes:bus', value: '*' },
+            { key: 'bus:lanes', value: 'yes|yes|designated' },
+          ],
+          guidance: {
+            lang: 'de',
+            comment:
+              'Falls nicht baulich getrennt, sondern Busspur auf der normalen Fahrbahn (`highway=*`). `lanes:bus=*` gibt die Anzahl der Busspuren an; `bus:lanes=*` beschreibt die Zufahrtsberechtigungen pro Spur (Beispiel: `yes|yes|designated`).',
+            link: 'https://wiki.openstreetmap.org/wiki/DE:Busfahrstreifen',
+          },
+        },
+        comments: [
+          {
+            lang: 'de',
+            comment:
+              'Sofern baulich getrennt als Linie. Omnibusse des Linienverkehrs. [`bus=*`](https://wiki.openstreetmap.org/wiki/DE:Key:bus) steht in OSM nur für Busse im Linienverkehr.',
+          },
+        ],
       },
     ],
-    comments: [
-      // TODO: Hier ist die Aufteilung Centerline / Separate Linie essentiell, da in DE meist über das lane-Schema zu taggen.
-      // Siehe auch https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland
-      // tagReference: null,
+    questions: [
+      {
+        ...highwayClassQuestion(['service', 'busway'], 'service', {
+          referenceUrls: {
+            busway: 'https://wiki.openstreetmap.org/wiki/DE:Tag:highway%3Dbusway',
+          },
+        }),
+        geometries: ['way'],
+      },
     ],
     catalogue: {
       signCategory: 'traffic_sign',

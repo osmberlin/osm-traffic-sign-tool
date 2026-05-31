@@ -3,20 +3,21 @@ import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 import { combineSignIdSignValue } from '../utils/combineSignIdSignValue.js'
 import { signsStateByDescriptiveName } from '../utils/signsByDescriptiveName.js'
+import { signsToOptionalTags, signsToOptionalTagsBySign } from './signsToOptionalTags.js'
 import { signsToTags } from './signsToTags.js'
 
 describe('signsToTags()', () => {
   const data = countryDefinitions.DE
 
   describe('highway tag', () => {
-    test('Collects unique values', () => {
+    test('Collects unique values with highway-class defaults', () => {
       const signs = signsStateByDescriptiveName('DE', data, [
         'Gehweg',
         'Gemeinsamer Fuß- und Radweg',
         'Getrennter Rad- und Gehweg',
       ])
       const result = signsToTags(signs, 'DE', 'way')
-      expect(result.get('highway')).toMatchObject(['footway', 'path', 'cycleway'])
+      expect(result.get('highway')).toMatchObject(['footway', 'path'])
     })
 
     test('No empty list', () => {
@@ -37,6 +38,41 @@ describe('signsToTags()', () => {
       const signs = signsStateByDescriptiveName('DE', data, ['Fahrradstraße', 'Anlieger frei'])
       const result = signsToTags(signs, 'DE', 'way')
       expect(result.get('vehicle')).toBe('destination')
+    })
+  })
+
+  describe('DE:245 Bussonderfahrstreifen', () => {
+    test('separate way: highway=service, vehicle=no, bus=designated', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Bussonderfahrstreifen'])
+      const result = signsToTags(signs, 'DE', 'way')
+      expect(result.get('highway')).toStrictEqual(['service'])
+      expect(result.get('vehicle')).toBe('no')
+      expect(result.get('bus')).toBe('designated')
+      expect(result.get('traffic_sign')).toBe('DE:245')
+    })
+
+    test('separate way: highway=busway when selected', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Bussonderfahrstreifen'])
+      const result = signsToTags(signs, 'DE', 'way', { '245': { highwayClass: 'busway' } })
+      expect(result.get('highway')).toStrictEqual(['busway'])
+      expect(result.get('vehicle')).toBe('no')
+      expect(result.get('bus')).toBe('designated')
+    })
+
+    test('separate way: optional lane tags with guidance', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Bussonderfahrstreifen'])
+      const optionalTagsBySign = signsToOptionalTagsBySign(signs, 'way')
+      const entry = optionalTagsBySign.get('245')
+      expect(entry?.tags.get('lanes:bus')).toBe('*')
+      expect(entry?.tags.get('bus:lanes')).toBe('yes|yes|designated')
+      expect(entry?.guidance?.lang).toBe('de')
+      expect(entry?.guidance?.link).toContain('Busfahrstreifen')
+    })
+
+    test('no centerline recommendations', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Bussonderfahrstreifen'])
+      const result = signsToTags(signs, 'DE', 'way_centerline')
+      expect(result.size).toBe(0)
     })
   })
 

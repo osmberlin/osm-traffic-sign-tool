@@ -147,31 +147,53 @@ type SharedTaggingSuggestionsQa = {
 
 type TagRecommendationsNone = 'none'
 
+export type TagRecommendationTag = { key: string; value: string }
+
+export type OptionalTagGuidance = {
+  /** BCP-47 language of the guidance text (e.g. `de`, `en`). */
+  lang?: string
+  comment: string
+  link?: string
+}
+
+/** Optional tags only, or tags plus decision guidance for the UI. */
+export type OptionalTagsRecommendation =
+  | TagRecommendationTag[]
+  | {
+      tags: TagRecommendationTag[]
+      guidance?: OptionalTagGuidance
+    }
+
+export type OptionalTagsBySignEntry = {
+  tags: Map<string, string | string[]>
+  guidance?: OptionalTagGuidance
+}
+
 export type TagRecommendationsTrafficSignObject = {
   geometries: GeometryType[]
   highwayValues?: string[]
-  accessTags?: { key: string; value: string }[]
+  accessTags?: TagRecommendationTag[]
   uniqueTags?: (
-    | { key: string; value: string }
+    | TagRecommendationTag
     | {
         key: string
         /** @description Format: `"FOO:"` will result in `"FOO:30"` for `signValue=30` */
         valueTemplate?: `${string}$` | `$${string}` | `${string}$${string}`
       }
   )[]
-  conditionalTags?: {
-    key: string
-    value: string
-  }[]
+  /** Tags that may apply in some cases; shown separately in the UI (see issue #119). */
+  optionalTags?: OptionalTagsRecommendation
+  conditionalTags?: TagRecommendationTag[]
   comments?: SignComentType[]
 }
 
 export type TagRecommendationsModifierSignObject = {
   geometries: GeometryType[]
   highwayValues?: string[]
-  accessTags?: { key: string; value: string }[]
+  accessTags?: TagRecommendationTag[]
   modifierValue?: string
-  uniqueTags?: { key: string; value: string }[]
+  uniqueTags?: TagRecommendationTag[]
+  optionalTags?: OptionalTagsRecommendation
   modifierValueFromValuePrompt?: boolean
   comments?: SignComentType[]
 }
@@ -209,14 +231,46 @@ export type SignComentType = {
 type SharedComments = {
   comments?: SignComentType[]
 }
+export const QUESTION_NIL_ANSWER_ID = 'nil' as const
+
+export type QuestionAnswerTag = TagRecommendationTag
+
+export type QuestionAnswer = {
+  answerId: string
+  answerI18nKey: string
+  /** OSM tags applied when this answer is selected (omit for nil / highway-only answers). */
+  tags?: QuestionAnswerTag[]
+  /** OSM tags removed when this answer is selected (e.g. implicit on chosen highway class). */
+  removeTags?: QuestionAnswerTag[]
+  /** When set, this answer selects a single `highway=*` value (used by highway-class questions). */
+  highwayValue?: string
+  /** Geometries where this answer applies. Falls back to question, then sign recommendations. */
+  geometries?: GeometryType[]
+  /** Optional external reference (e.g. OSM wiki) shown beside the answer label. */
+  referenceUrl?: string
+}
+
+export type SignQuestion = {
+  questionId: string
+  questionI18nKey: string
+  /** Suggested initial answer for tag output; user can always pick `nil`. */
+  defaultAnswerId?: string | null
+  /** When true, resolved answer replaces `highwayValues` from recommendations. */
+  affectsHighway?: boolean
+  /** Geometries where any answer applies. Falls back to sign recommendations. */
+  geometries?: GeometryType[]
+  answers: QuestionAnswer[]
+}
+
+/** Selected answers keyed by sign `osmValuePart`, then `questionId` → `answerId`. */
+export type QuestionAnswersBySign = Record<string, Record<string, string>>
+
 type SharedQuestions = {
-  questions?: {
-    question: string
-    answers: {
-      label: string
-      tags: { key: string; value: string }[]
-    }[]
-  }[]
+  /**
+   * Discrete tagging choices (sidepath, surface colour, highway class, …).
+   * Use `valuePrompt` for free-form / numeric input instead.
+   */
+  questions?: SignQuestion[]
 }
 type SharedIdentifiyingTags = { identifyingTags?: { key: string; value: string }[] }
 

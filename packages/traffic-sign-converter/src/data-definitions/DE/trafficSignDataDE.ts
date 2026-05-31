@@ -331,13 +331,6 @@ export const trafficSignDataDE: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-    comments: [
-      {
-        important: true,
-        comment:
-          'Bitte [die Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign=DE:267) konsultieren zum Tagging.',
-      },
-    ],
     catalogue: {
       focus: { all: true },
       signCategory: 'traffic_sign',
@@ -441,12 +434,6 @@ export const trafficSignDataDE: SignType[] = [
             value: 'sight',
           },
         ],
-      },
-    ],
-    comments: [
-      {
-        comment:
-          '[Die Wiki-Seite](https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign=DE:386.3) listet weitere übliche Tags auf um den Inhalt der Tafel zu erfassen.',
       },
     ],
     compatibility: { canReceiveModifiers: false },
