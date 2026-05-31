@@ -42,3 +42,9 @@ Glossar:
 Run `bun script-new-data.ts` from the root folder to update the svgs, data and run the app.
 
 Alternatively, the [script lists the separate commands](./script-new-sign.ts)
+
+## LLM Cloud Workflows
+
+- Branch previews are generated with Netlify. [Admin UI](https://app.netlify.com/projects/osm-traffic-sign-preview/overview)
+- [Tagging QA → Cursor automation](./.github/TAGGING_QA_AUTOMATION.md) — issues from `/DE/signs-qa` (`tagging-qa` label)
+- [Sign combination QA → Cursor automation](./.github/COMBINATION_QA_AUTOMATION.md) — issues from `/DE/check-sign-combinations` (`combination-qa` label)
