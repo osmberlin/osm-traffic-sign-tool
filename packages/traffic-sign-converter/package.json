@@ -49,7 +49,6 @@
     }
   },
   "scripts": {
-    "_check": "bun run format && bun run check-exports && bun run lint && bun run type-check && bun run test",
     "bleach": "rm -rf node_modules && rm -rf dist",
     "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:copy-types && bun run build:copy-svgs",
     "build:clean": "rimraf dist",
@@ -57,11 +56,11 @@
     "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
     "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
     "build:transfer-svgs": "copyfiles -u 4 '../internal_svgs/src/data-svgs/**/*' './src/data-svgs'",
-    "build:ts": "tsc",
-    "build:watch": "tsc --watch",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "build:watch": "tsc -p tsconfig.build.json --watch",
     "check": "bun run format && bun run check-exports && bun run lint && bun run type-check && bun run test",
     "check-exports": "attw --pack . --ignore-rules cjs-resolves-to-esm internal-resolution-error no-resolution --profile node16",
-    "dev": "tsc --watch",
+    "dev": "tsc -p tsconfig.build.json --watch",
     "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
     "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
     "lint": "oxlint -c ../../oxlint.config.mjs .",
