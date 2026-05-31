@@ -30,13 +30,13 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version-file: package.json
+          cache: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           # See ./NODE_VERSION.md
           node-version-file: '.nvmrc'
-          cache: 'bun'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

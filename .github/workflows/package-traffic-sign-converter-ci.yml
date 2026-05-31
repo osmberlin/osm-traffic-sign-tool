@@ -24,13 +24,13 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version-file: package.json
+          cache: true
 
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           # See ./NODE_VERSION.md
           node-version-file: '.nvmrc'
-          cache: 'bun'
 
       - name: Install dependencies
         run: bun install --frozen-lockfile
