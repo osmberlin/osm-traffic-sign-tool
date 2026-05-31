@@ -6,7 +6,7 @@ const skipHazardNodeDirection = (sign: SignType): boolean =>
   sign.osmValuePart.toLowerCase().includes('schäden')
 
 const withHazardNodeTagging = (signs: SignType[]): SignType[] =>
-  signs.map((sign) => {
+  signs.map((sign): SignType => {
     if (sign.tagRecommendationsByGeometry === 'none' || skipHazardNodeDirection(sign)) {
       return sign
     }
@@ -21,7 +21,7 @@ const withHazardNodeTagging = (signs: SignType[]): SignType[] =>
         ? sign.tagRecommendationsByGeometry
         : [...sign.tagRecommendationsByGeometry, { geometries: ['node'] }],
       questions: hazardSignNodeQuestions(),
-    }
+    } as SignType
   })
 
 export const _hazard: SignType[] = withHazardNodeTagging([

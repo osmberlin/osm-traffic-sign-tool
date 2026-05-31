@@ -21,8 +21,8 @@ const baseSign = {
     licence: 'Public Domain' as const,
   },
   kind: 'traffic_sign' as const,
-  tagRecommendationsByGeometry: [{ geometries: ['way'] as const }],
-}
+  tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+} satisfies SignType
 
 describe('questionsQa', () => {
   test('signHasQuestions and classifySignQuestionsQa', () => {

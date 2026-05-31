@@ -1,8 +1,5 @@
 import type { GeometryType } from '../../data-definitions/geometryTypes.js'
-import type {
-  QuestionAnswersBySign,
-  SignStateType,
-} from '../../data-definitions/TrafficSignDataTypes.js'
+import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
 import { signHasHighwayQuestion } from './collectQuestionTags.js'
 import { getRecommendations } from './getRecommendations.js'
 import { uniqueArray } from './uniqueArray.js'

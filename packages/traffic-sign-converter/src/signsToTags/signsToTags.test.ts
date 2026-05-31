@@ -3,7 +3,7 @@ import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
 import { combineSignIdSignValue } from '../utils/combineSignIdSignValue.js'
 import { signsStateByDescriptiveName } from '../utils/signsByDescriptiveName.js'
-import { signsToOptionalTags, signsToOptionalTagsBySign } from './signsToOptionalTags.js'
+import { signsToOptionalTagsBySign } from './signsToOptionalTags.js'
 import { signsToTags } from './signsToTags.js'
 
 describe('signsToTags()', () => {

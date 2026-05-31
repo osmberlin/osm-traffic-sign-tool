@@ -102,12 +102,38 @@ export const coerceAnswersSearchParam = (raw: unknown): string | undefined => {
   return undefined
 }
 
-export const parseAnswersParam = (input: string | undefined): QuestionAnswersBySign => {
+const parseAnswersParamString = (input: string): QuestionAnswersBySign => {
+  const trimmed = input.trim()
+  if (!trimmed) {
+    return {}
+  }
+
+  if (trimmed.startsWith('{')) {
+    try {
+      const parsed: unknown = JSON.parse(trimmed)
+      if (typeof parsed === 'object' && parsed !== null && !Array.isArray(parsed)) {
+        return signAnswersFromRecord(parsed as Record<string, unknown>)
+      }
+    } catch {
+      // fall through to compact format
+    }
+  }
+
+  return parseCompactAnswersParam(trimmed)
+}
+
+export const parseAnswersParam = (
+  input: string | QuestionAnswersBySign | undefined,
+): QuestionAnswersBySign => {
   if (!input) {
     return {}
   }
 
-  return parseCompactAnswersParam(input)
+  if (typeof input === 'string') {
+    return parseAnswersParamString(input)
+  }
+
+  return signAnswersFromRecord(input as Record<string, unknown>)
 }
 
 /** Compact string for URL search; avoids `"` which browsers re-encode in the location bar. */

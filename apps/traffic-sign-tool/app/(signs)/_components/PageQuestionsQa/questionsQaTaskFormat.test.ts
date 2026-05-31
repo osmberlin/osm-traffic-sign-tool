@@ -15,7 +15,7 @@ const baseSign = {
   description: null,
   kind: 'traffic_sign' as const,
   tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-  catalogue: { signCategory: 'infrastructure' as const },
+  catalogue: { signCategory: 'traffic_sign' as const },
   image: {
     kind: 'remote' as const,
     sourceUrl: 'https://example.com',

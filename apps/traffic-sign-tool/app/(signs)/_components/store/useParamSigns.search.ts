@@ -1,6 +1,5 @@
 import {
   parseAnswersParam,
-  answersSearchEqual,
   serializeAnswersParam,
 } from '@app/src/features/searchParams/answersParam'
 import {

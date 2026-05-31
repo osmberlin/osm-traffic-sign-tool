@@ -3,10 +3,7 @@ import type {
   SignQuestion,
   SignStateType,
 } from '@osm-traffic-signs/converter'
-import {
-  dedupeEquivalentAnswersForUrl,
-  syncEquivalentQuestionAnswers,
-} from '@osm-traffic-signs/converter'
+import { syncEquivalentQuestionAnswers } from '@osm-traffic-signs/converter'
 
 const STORAGE_VERSION = 1
 const STORAGE_KEY = 'tst:DE:answers'
