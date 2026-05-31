@@ -10,6 +10,7 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Add **Sign questions QA** page at `/$lang/questions-qa` with with/without/all filters, one-sign-at-a-time review of catalogue `questions` and answers, per-sign suggestion tasks, and pre-filled GitHub issues (label `question-qa`) with Cursor automation (see `.github/QUESTION_QA_AUTOMATION.md`, skill `.cursor/skills/update-sign-questions`).
 - Add tagging **questions** for selected signs (sidepath, surface colour, guidance mode, highway class, hazard sign orientation) with translated labels (EN/DE), per-sign editors in the selected-sign column, and an aggregated choices section in the results column.
 - Persist question answers in the URL (`answers` search param) with LocalStorage cache hydration when signs are loaded or changed.
 - Show a sign-grid badge on signs that expose tagging choices; keep the existing value-prompt pencil badge.
@@ -20,7 +21,7 @@ All notable changes to this project will be manually documented in this file.
 - Update QA issue guidance and combination export text for `tagRecommendationsByGeometry`.
 - Add **Tagging QA** page at `/$lang/signs-qa` to review sign tagging suggestions with focus and QA filters, record per-sign tasks, and open pre-filled GitHub issues (label `tagging-qa`).
 - Rework **Sign combinations QA** at `/$lang/check-sign-combinations` to review one primary sign at a time (primary picker, combination filters, per-row feedback) and export tasks via pre-filled GitHub issues (label `combination-qa`).
-- Add GitHub issue templates and Cursor catalogue workflows for both QA pages: submitting an issue runs a GitHub Actions workflow that posts an `@cursor` comment; the Cursor GitHub app reads the issue body, follows `.cursor/skills/add-traffic-sign` or `.cursor/skills/fix-sign-combination`, and opens a PR updating DE sign config in `@osm-traffic-signs/converter` (see `.github/TAGGING_QA_AUTOMATION.md` and `.github/COMBINATION_QA_AUTOMATION.md`).
+- Add GitHub issue templates and Cursor catalogue workflows for tagging, combination, and sign-questions QA: submitting an issue runs a GitHub Actions workflow that posts an `@cursor` comment; the Cursor GitHub app reads the issue body, follows the matching skill, and opens a PR updating DE sign config in `@osm-traffic-signs/converter` (see `.github/TAGGING_QA_AUTOMATION.md`, `.github/COMBINATION_QA_AUTOMATION.md`, and `.github/QUESTION_QA_AUTOMATION.md`).
 - Fix filter URL updates on QA pages to stay on the current route without scroll jumps.
 - Enable TanStack Router route code splitting.
 - Rename all-signs table column to “Raw sign config data”.

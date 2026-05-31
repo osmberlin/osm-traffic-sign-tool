@@ -4,7 +4,9 @@ import {
   type FocusArea,
   SignStateType,
   signsToTrafficSignTagValue,
+  questionsQaFilters,
   taggingSuggestionsQaFilters,
+  type QuestionsQaFilter,
   type TaggingSuggestionsQaFilter,
   trafficSignTagToSigns,
 } from '@osm-traffic-signs/converter'
@@ -21,14 +23,16 @@ export const deSearchSchema = z.object({
   answers: z.preprocess(coerceAnswersSearchParam, z.string().optional()),
   focus: z.string().optional(),
   qa: z.enum(taggingSuggestionsQaFilters).optional(),
+  qqa: z.enum(questionsQaFilters).optional(),
   comb: z.enum(combinationQaFilters).optional(),
-  /** Selected primary sign `osmValuePart` on check-sign-combinations */
+  /** Selected sign `osmValuePart` on check-sign-combinations and questions-qa */
   primary: z.coerce.string().optional(),
   /** Demo delay for `/$lang/pending` loader (ms) */
   hold: z.coerce.number().int().min(0).max(30_000).optional(),
 })
 
 export { taggingSuggestionsQaFilters, type TaggingSuggestionsQaFilter }
+export { questionsQaFilters, type QuestionsQaFilter }
 export { focusAreas, type FocusArea }
 
 const focusAreaSet = new Set<string>(focusAreas)
@@ -76,6 +80,12 @@ export const parseCombinationQaParam = (value?: string) =>
 
 export const serializeCombinationQaParam = (filter: CombinationQaFilter) =>
   serializeEnumParam(filter, 'actionable')
+
+export const parseQuestionsQaParam = (value?: string) =>
+  parseEnumParam(value, questionsQaFilters, 'with')
+
+export const serializeQuestionsQaParam = (filter: QuestionsQaFilter) =>
+  serializeEnumParam(filter, 'with')
 
 export type DeSearchSchema = z.infer<typeof deSearchSchema>
 

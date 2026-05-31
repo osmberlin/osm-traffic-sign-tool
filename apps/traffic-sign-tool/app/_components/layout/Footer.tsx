@@ -35,6 +35,7 @@ export const Footer = () => {
     { name: m.footer_wiki(), to: '/$lang/wiki' as const },
     { name: m.footer_signs_qa(), to: '/$lang/signs-qa' as const },
     { name: m.footer_combinations_qa(), to: '/$lang/check-sign-combinations' as const },
+    { name: m.footer_questions_qa(), to: '/$lang/questions-qa' as const },
     { name: m.footer_all_signs(), to: '/$lang/signs' as const, active: true },
   ] as const
 

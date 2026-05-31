@@ -1,0 +1,132 @@
+# Triggers a Cursor cloud agent when a Sign questions QA issue is opened.
+# Cursor Automations have no native "GitHub issue opened" trigger; webhook + @cursor fallback.
+# See https://cursor.com/docs/cloud-agent and .github/QUESTION_QA_AUTOMATION.md
+name: Cursor Question QA automation
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  issues: write
+
+env:
+  CURSOR_WEBHOOK_URL: ${{ secrets.CURSOR_QUESTION_QA_WEBHOOK_URL }}
+  CURSOR_WEBHOOK_API_KEY: ${{ secrets.CURSOR_QUESTION_QA_WEBHOOK_API_KEY }}
+
+jobs:
+  trigger-cursor:
+    runs-on: ubuntu-latest
+    steps:
+      # GitHub validates workflow files on push; a run with every step skipped fails.
+      - name: Workflow file check (push validation only)
+        if: github.event_name == 'push'
+        run: echo "Question QA automation runs on issues with label question-qa."
+
+      - name: Start Cursor agent via webhook and/or issue comment
+        if: |
+          github.event_name == 'issues' && (
+            (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'question-qa')) ||
+            (github.event.action == 'labeled' && github.event.label.name == 'question-qa')
+          )
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // GHA_ATTRIBUTION: blockquote prefix for workflow-posted comments
+            const GHA_ATTRIBUTION =
+              '> **GitHub Actions (automation)** — This comment only starts the Cursor cloud agent. It is not written by the issue author.\n\n';
+
+            const CURSOR_TRIGGER_MARKER = '@cursor repo=';
+            const WEBHOOK_TRIGGER_MARKER = '<!-- cursor-qa-webhook-v1 -->';
+
+            const issue = context.payload.issue;
+            const { owner, repo } = context.repo;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number: issue.number,
+              per_page: 100,
+            });
+
+            const alreadyTriggered = comments.some(
+              (comment) =>
+                comment.body?.includes(CURSOR_TRIGGER_MARKER) ||
+                comment.body?.includes(WEBHOOK_TRIGGER_MARKER),
+            );
+
+            if (alreadyTriggered) {
+              core.info('Cursor trigger already exists (webhook marker or @cursor comment); skipping.');
+              return;
+            }
+
+            const webhookUrl = process.env.CURSOR_WEBHOOK_URL;
+            const webhookKey = process.env.CURSOR_WEBHOOK_API_KEY;
+            let webhookTriggered = false;
+
+            if (webhookUrl && webhookKey) {
+              const payload = {
+                event: 'github.issue.question-qa',
+                qaType: 'question-qa',
+                repo: `${owner}/${repo}`,
+                branch: 'main',
+                issueNumber: issue.number,
+                issueUrl: issue.html_url,
+                title: issue.title,
+                body: issue.body ?? '',
+              };
+
+              const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                  Authorization: `Bearer ${webhookKey}`,
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+              });
+
+              if (response.ok) {
+                webhookTriggered = true;
+                core.info(`Cursor webhook accepted (${response.status}).`);
+              } else {
+                const text = await response.text();
+                core.warning(
+                  `Cursor webhook failed (${response.status}): ${text.slice(0, 500)}. Falling back to @cursor comment.`,
+                );
+              }
+            } else {
+              core.info('Cursor webhook secrets not set; using @cursor comment only.');
+            }
+
+            if (webhookTriggered) {
+              const body = `${GHA_ATTRIBUTION}${WEBHOOK_TRIGGER_MARKER}\n\nTriggered Cursor **webhook** automation for **Sign questions QA** issue #${issue.number}. The agent should read the issue body and open a PR whose description includes \`Closes #${issue.number}\`.`;
+
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: issue.number,
+                body,
+              });
+              return;
+            }
+
+            const body = `${GHA_ATTRIBUTION}@cursor repo=${owner}/${repo} branch=main
+
+**Sign questions QA** issue #${issue.number} (label \`question-qa\`).
+
+Read the **issue body** (agent instructions + tasks). Follow \`.cursor/skills/update-sign-questions/SKILL.md\`. Update sign config under \`packages/traffic-sign-converter/src/data-definitions/DE/\`, run converter tests, and **open a PR** whose description includes \`Closes #${issue.number}\` (auto-closes this issue on merge). Prefix all GitHub comments and the PR description with \`**[Cursor Agent]**\`.`;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body,
+            });
+
+      - name: No-op for other issue events
+        if: |
+          github.event_name == 'issues' && !(
+            (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'question-qa')) ||
+            (github.event.action == 'labeled' && github.event.label.name == 'question-qa')
+          )
+        run: echo "Issue event ignored (not a question-qa trigger)."

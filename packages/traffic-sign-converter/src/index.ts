@@ -57,6 +57,13 @@ export {
   hasTagRecommendationsContent,
   taggingSuggestionsQaFilters,
 } from './data-definitions/taggingSuggestionsQa.js'
+export {
+  classifySignQuestionsQa,
+  countSignsByQuestionsQa,
+  filterSignsByQuestionsQa,
+  questionsQaFilters,
+  signHasQuestions,
+} from './data-definitions/questionsQa.js'
 export type {
   CatalogueFocus,
   CatalogueFocusLevel,
@@ -106,6 +113,11 @@ export type {
   TaggingSuggestionsQaCounts,
   TaggingSuggestionsQaFilter,
 } from './data-definitions/taggingSuggestionsQa.js'
+export type {
+  QuestionsQaCounts,
+  QuestionsQaFilter,
+  SignQuestionsQaCategory,
+} from './data-definitions/questionsQa.js'
 export {
   getValuePromptInputAttributes,
   isOpeningHoursValuePromptFormat,

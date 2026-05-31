@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add sign questions QA helpers (`signHasQuestions`, `filterSignsByQuestionsQa`, `countSignsByQuestionsQa`) for the questions QA page.
 - Add structured **questions** on sign configs (`questionId`, `answerId`, i18n keys, explicit `nil` answer, optional `defaultAnswerId`, `affectsHighway`) and shared question builders (`sidepath`, `surfaceColor`, `guidanceMode`, `highwayClass`, `signDirection`).
 - Add node **Ausrichtung** (`direction=forward|backward`) for DE hazard signs via `signDirection` / `hazardSignNodeQuestions()` (wiki: DE:Key:direction); omit for way-only Schäden Zusatzzeichen.
 - Extend `signsToTags()` with optional answer state to merge question-derived tags; add `signsToOptionalTags()` for recommendation `optionalTags`.

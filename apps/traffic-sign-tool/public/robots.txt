@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /DE/signs
 Disallow: /DE/signs-qa
 Disallow: /DE/check-sign-combinations
+Disallow: /DE/questions-qa
 Disallow: /DE/wiki
 Disallow: /DE/taginfo
 

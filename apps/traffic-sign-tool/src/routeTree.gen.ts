@@ -8,16 +8,17 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
 import { Route as LangRouteImport } from './routes/$lang'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as LangIndexRouteImport } from './routes/$lang.index'
-import { Route as LangWikiRouteImport } from './routes/$lang.wiki'
-import { Route as LangTaginfoRouteImport } from './routes/$lang.taginfo'
-import { Route as LangSignsQaRouteImport } from './routes/$lang.signs-qa'
-import { Route as LangSignsRouteImport } from './routes/$lang.signs'
-import { Route as LangPendingRouteImport } from './routes/$lang.pending'
 import { Route as LangCheckSignCombinationsRouteImport } from './routes/$lang.check-sign-combinations'
+import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangPendingRouteImport } from './routes/$lang.pending'
+import { Route as LangQuestionsQaRouteImport } from './routes/$lang.questions-qa'
+import { Route as LangSignsRouteImport } from './routes/$lang.signs'
+import { Route as LangSignsQaRouteImport } from './routes/$lang.signs-qa'
+import { Route as LangTaginfoRouteImport } from './routes/$lang.taginfo'
+import { Route as LangWikiRouteImport } from './routes/$lang.wiki'
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
 
 const LangRoute = LangRouteImport.update({
   id: '/$lang',
@@ -54,23 +55,28 @@ const LangSignsRoute = LangSignsRouteImport.update({
   path: '/signs',
   getParentRoute: () => LangRoute,
 } as any)
+const LangQuestionsQaRoute = LangQuestionsQaRouteImport.update({
+  id: '/questions-qa',
+  path: '/questions-qa',
+  getParentRoute: () => LangRoute,
+} as any)
 const LangPendingRoute = LangPendingRouteImport.update({
   id: '/pending',
   path: '/pending',
   getParentRoute: () => LangRoute,
 } as any)
-const LangCheckSignCombinationsRoute =
-  LangCheckSignCombinationsRouteImport.update({
-    id: '/check-sign-combinations',
-    path: '/check-sign-combinations',
-    getParentRoute: () => LangRoute,
-  } as any)
+const LangCheckSignCombinationsRoute = LangCheckSignCombinationsRouteImport.update({
+  id: '/check-sign-combinations',
+  path: '/check-sign-combinations',
+  getParentRoute: () => LangRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$lang': typeof LangRouteWithChildren
   '/$lang/check-sign-combinations': typeof LangCheckSignCombinationsRoute
   '/$lang/pending': typeof LangPendingRoute
+  '/$lang/questions-qa': typeof LangQuestionsQaRoute
   '/$lang/signs': typeof LangSignsRoute
   '/$lang/signs-qa': typeof LangSignsQaRoute
   '/$lang/taginfo': typeof LangTaginfoRoute
@@ -81,6 +87,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$lang/check-sign-combinations': typeof LangCheckSignCombinationsRoute
   '/$lang/pending': typeof LangPendingRoute
+  '/$lang/questions-qa': typeof LangQuestionsQaRoute
   '/$lang/signs': typeof LangSignsRoute
   '/$lang/signs-qa': typeof LangSignsQaRoute
   '/$lang/taginfo': typeof LangTaginfoRoute
@@ -93,6 +100,7 @@ export interface FileRoutesById {
   '/$lang': typeof LangRouteWithChildren
   '/$lang/check-sign-combinations': typeof LangCheckSignCombinationsRoute
   '/$lang/pending': typeof LangPendingRoute
+  '/$lang/questions-qa': typeof LangQuestionsQaRoute
   '/$lang/signs': typeof LangSignsRoute
   '/$lang/signs-qa': typeof LangSignsQaRoute
   '/$lang/taginfo': typeof LangTaginfoRoute
@@ -106,6 +114,7 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/$lang/check-sign-combinations'
     | '/$lang/pending'
+    | '/$lang/questions-qa'
     | '/$lang/signs'
     | '/$lang/signs-qa'
     | '/$lang/taginfo'
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/'
     | '/$lang/check-sign-combinations'
     | '/$lang/pending'
+    | '/$lang/questions-qa'
     | '/$lang/signs'
     | '/$lang/signs-qa'
     | '/$lang/taginfo'
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/$lang'
     | '/$lang/check-sign-combinations'
     | '/$lang/pending'
+    | '/$lang/questions-qa'
     | '/$lang/signs'
     | '/$lang/signs-qa'
     | '/$lang/taginfo'
@@ -190,6 +201,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangSignsRouteImport
       parentRoute: typeof LangRoute
     }
+    '/$lang/questions-qa': {
+      id: '/$lang/questions-qa'
+      path: '/questions-qa'
+      fullPath: '/$lang/questions-qa'
+      preLoaderRoute: typeof LangQuestionsQaRouteImport
+      parentRoute: typeof LangRoute
+    }
     '/$lang/pending': {
       id: '/$lang/pending'
       path: '/pending'
@@ -210,6 +228,7 @@ declare module '@tanstack/react-router' {
 interface LangRouteChildren {
   LangCheckSignCombinationsRoute: typeof LangCheckSignCombinationsRoute
   LangPendingRoute: typeof LangPendingRoute
+  LangQuestionsQaRoute: typeof LangQuestionsQaRoute
   LangSignsRoute: typeof LangSignsRoute
   LangSignsQaRoute: typeof LangSignsQaRoute
   LangTaginfoRoute: typeof LangTaginfoRoute
@@ -220,6 +239,7 @@ interface LangRouteChildren {
 const LangRouteChildren: LangRouteChildren = {
   LangCheckSignCombinationsRoute: LangCheckSignCombinationsRoute,
   LangPendingRoute: LangPendingRoute,
+  LangQuestionsQaRoute: LangQuestionsQaRoute,
   LangSignsRoute: LangSignsRoute,
   LangSignsQaRoute: LangSignsQaRoute,
   LangTaginfoRoute: LangTaginfoRoute,
