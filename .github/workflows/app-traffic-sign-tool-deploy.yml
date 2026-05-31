@@ -45,7 +45,14 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build monorepo (Vite app and packages)
-        run: bun run build
+        env:
+          GITHUB_PAGES: true
+        run: |
+          bun run --cwd packages/internal_svgs build
+          bun run --cwd packages/internal_wiki build
+          bun run --cwd packages/internal_taginfo build
+          bun run --cwd packages/traffic-sign-converter build
+          bun run --cwd apps/traffic-sign-tool build
 
       - name: Add SPA fallback for GitHub Pages
         run: cp dist/index.html dist/404.html

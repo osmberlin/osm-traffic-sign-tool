@@ -36,4 +36,5 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Run Check
-        run: bun run --filter '@osm-traffic-signs/converter' check
+        working-directory: packages/traffic-sign-converter
+        run: bun run check
