@@ -1,9 +1,18 @@
 import { PageApp } from '@app/app/(signs)/_components/PageApp'
 import * as m from '@app/paraglide/messages'
-import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
+import {
+  answersSearchEqual,
+  parseAnswersParam,
+  serializeAnswersParam,
+} from '@app/src/features/searchParams/answersParam'
+import {
+  mergeAnswersFromCache,
+  readAnswersCache,
+} from '@app/src/features/searchParams/answersStorage'
+import { deSearchSchema, parseSignsParam } from '@app/src/features/searchParams/deSearch'
 import { buildPageHead, catalogueHomeUrl, hasDeSearchParams } from '@app/src/features/seo/seoHead'
 import { type CountryPrefixType, countryDefinitions } from '@osm-traffic-signs/converter'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, redirect } from '@tanstack/react-router'
 
 function LangIndexRouteComponent() {
   const trafficSignData = Route.useLoaderData()
@@ -16,6 +25,27 @@ function LangIndexRouteComponent() {
 }
 
 export const Route = createFileRoute('/$lang/')({
+  beforeLoad: ({ search, context }) => {
+    const signs = parseSignsParam(search.signs, context.countryPrefix)
+    if (signs.length === 0) {
+      return
+    }
+
+    const urlAnswers = parseAnswersParam(search.answers)
+    const merged = mergeAnswersFromCache(urlAnswers, signs, readAnswersCache())
+    const serialized = serializeAnswersParam(merged)
+
+    if (!answersSearchEqual(serialized, search.answers)) {
+      throw redirect({
+        to: '.',
+        replace: true,
+        search: {
+          ...search,
+          answers: serialized,
+        },
+      })
+    }
+  },
   loader: ({ context }) => countryDefinitions[context.countryPrefix],
   validateSearch: deSearchSchema,
   head: ({ match }) => {

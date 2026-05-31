@@ -2,7 +2,11 @@ import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPref
 import { WikiLinkify } from '@app/app/(signs)/_components/wiki/WikiLinkify'
 import { CommentTranslateLink } from '@app/app/_components/i18n/CommentTranslateLink'
 import { useUiLocale } from '@app/app/_components/i18n/useUiLocale'
-import { inlineCodeClass, proseLightClass } from '@app/app/_components/layout/proseClasses'
+import {
+  commentWithTranslateInlineClass,
+  inlineCodeClass,
+  proseLightClass,
+} from '@app/app/_components/layout/proseClasses'
 import * as m from '@app/paraglide/messages'
 import {
   signsToComments,
@@ -51,7 +55,7 @@ export const TagComments = ({ value, geometry }: Props) => {
                           <code className={inlineCodeClass}>{tagReference}</code>
                         </p>
                       )}
-                      <span>
+                      <span className={commentWithTranslateInlineClass}>
                         <WikiLinkify text={comment} className={proseLightClass} />
                         <CommentTranslateLink commentText={comment} commentLang={commentLang} />
                       </span>

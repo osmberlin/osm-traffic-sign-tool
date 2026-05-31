@@ -1,9 +1,16 @@
 import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
-import { CheckCircleIcon, PencilSquareIcon, PlusCircleIcon } from '@heroicons/react/20/solid'
+import * as m from '@app/paraglide/messages'
+import {
+  CheckCircleIcon,
+  ChatBubbleLeftEllipsisIcon,
+  PencilSquareIcon,
+  PlusCircleIcon,
+} from '@heroicons/react/20/solid'
 import { SignStateType, SignType } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
+import { hasSignQuestions } from '../selectedSigns/SelectedSignQuestions'
 
 type Props = {
   sign: SignStateType | SignType
@@ -72,6 +79,18 @@ export const Sign = ({ sign }: Props) => {
       {sign.valuePrompt && (
         <div className="absolute right-1 bottom-1 rounded-full bg-stone-800 p-1 text-stone-50">
           <PencilSquareIcon className="size-3" />
+        </div>
+      )}
+
+      {hasSignQuestions(sign) && (
+        <div
+          className={clsx(
+            'absolute bottom-1 rounded-full bg-stone-800 p-1 text-stone-50',
+            sign.valuePrompt ? 'right-7' : 'right-1',
+          )}
+          title={m.question_badge_label()}
+        >
+          <ChatBubbleLeftEllipsisIcon className="size-3" aria-label={m.question_badge_label()} />
         </div>
       )}
     </div>

@@ -1,3 +1,4 @@
+import { ResultDebug } from '@app/app/(signs)/_components/PageApp/results/ResultDebug'
 import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Link } from '@tanstack/react-router'
@@ -90,6 +91,8 @@ export const Footer = () => {
             )
           })}
         </div>
+
+        <ResultDebug linkClassName={footerLinkClassName} />
       </nav>
     </footer>
   )

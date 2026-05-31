@@ -44,10 +44,13 @@ export const ResultComments = () => {
     }
   })
 
+  if (commentsMapWithRedirects.size === 0) {
+    return null
+  }
+
   return (
     <div className="mt-6 space-y-4 opacity-60 transition-opacity group-hover:opacity-100 md:mt-10 md:space-y-6">
       <h3 className="text-lg font-light text-stone-50 uppercase">{m.notes_heading()}</h3>
-      {!commentsMapWithRedirects.size && m.notes_empty()}
       <CommentsMap comments={commentsMapWithRedirects} />
     </div>
   )

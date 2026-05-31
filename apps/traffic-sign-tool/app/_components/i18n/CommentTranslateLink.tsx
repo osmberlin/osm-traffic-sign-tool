@@ -1,17 +1,21 @@
 import { useUiLocale } from '@app/app/_components/i18n/useUiLocale'
+import { stonePillButton } from '@app/app/_components/links/buttonStyles'
+import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
 import {
   buildGoogleTranslateUrl,
   commentLangMatchesUiLocale,
 } from '@app/src/features/i18n/googleTranslateUrl'
 import { LanguageIcon } from '@heroicons/react/16/solid'
+import clsx from 'clsx'
 
 type Props = {
   commentText: string
   commentLang?: string
+  className?: string
 }
 
-export const CommentTranslateLink = ({ commentText, commentLang }: Props) => {
+export const CommentTranslateLink = ({ commentText, commentLang, className }: Props) => {
   const uiLocale = useUiLocale()
 
   if (commentLangMatchesUiLocale(commentLang, uiLocale)) {
@@ -21,15 +25,17 @@ export const CommentTranslateLink = ({ commentText, commentLang }: Props) => {
   const href = buildGoogleTranslateUrl(commentText, uiLocale, commentLang)
 
   return (
-    <a
+    <ExternalLink
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="ml-1.5 inline-flex align-middle text-stone-400 hover:text-violet-300"
+      blank
+      className={clsx(
+        'ml-1.5 inline-flex h-4 shrink-0 items-center px-1 align-baseline',
+        stonePillButton,
+        className,
+      )}
       aria-label={m.translate_comment()}
-      title={m.translate_comment()}
     >
-      <LanguageIcon className="size-4" aria-hidden="true" />
-    </a>
+      <LanguageIcon className="size-3" aria-hidden="true" />
+    </ExternalLink>
   )
 }

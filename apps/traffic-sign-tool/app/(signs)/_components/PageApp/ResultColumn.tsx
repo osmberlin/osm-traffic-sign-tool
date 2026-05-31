@@ -4,7 +4,6 @@ import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
 import { getCountryCatalogueMeta, showSignsToTagsWarning } from '@osm-traffic-signs/converter'
 import { ResultComments } from './results/ResultComments'
-import { ResultDebug } from './results/ResultDebug'
 import { ResultTagRecommendations } from './results/ResultTagRecommendations'
 
 export const ResultColumn = () => {
@@ -52,7 +51,6 @@ export const ResultColumn = () => {
           <ResultComments />
         </>
       )}
-      <ResultDebug />
     </>
   )
 }

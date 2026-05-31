@@ -11,6 +11,14 @@ vi.mock('@app/src/features/routing/useCurrentLang', () => ({
   useCurrentLang: () => 'DE',
 }))
 
+vi.mock('@tanstack/react-router', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@tanstack/react-router')>()
+  return {
+    ...actual,
+    useNavigate: () => vi.fn(),
+  }
+})
+
 const setUiLocale = vi.hoisted(() => vi.fn())
 
 vi.mock('@app/app/_components/i18n/useUiLocale', () => ({

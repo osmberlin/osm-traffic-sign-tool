@@ -4,17 +4,30 @@ import * as m from '@app/paraglide/messages'
 import { uiLocales, type UiLocale } from '@app/src/features/i18n/uiLocale'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { CheckIcon } from '@heroicons/react/20/solid'
 import { LanguageIcon } from '@heroicons/react/24/outline'
-import { countries } from '@osm-traffic-signs/converter'
+import { countries, type CountryPrefixType } from '@osm-traffic-signs/converter'
+import { useNavigate } from '@tanstack/react-router'
 import { clsx } from 'clsx'
+import { LangSwitcherOption } from './LangSwitcherOption'
 
 /** Two independent settings: catalogue country (`/$lang`) vs UI language (Paraglide). */
 export const FloatingLanguageSwitcher = () => {
   const uiLocale = useUiLocale()
   const signConfigLang = useCurrentLang() // catalogue prefix from route, not UI locale
+  const navigate = useNavigate({ from: '/$lang' })
+
+  const handleCatalogueSelect = (countryPrefix: CountryPrefixType, close: () => void) => {
+    if (countryPrefix === signConfigLang) {
+      return
+    }
+    navigate({ to: '/$lang', params: { lang: countryPrefix } })
+    close()
+  }
 
   const handleUiLocaleSelect = (locale: UiLocale, close: () => void) => {
+    if (locale === uiLocale) {
+      return
+    }
     setUiLocale(locale)
     close()
   }
@@ -45,36 +58,19 @@ export const FloatingLanguageSwitcher = () => {
                     {m.lang_switcher_sign_catalogue()}
                   </h3>
                   <ul className="space-y-1">
-                    {countries.map((countryPrefix) => {
-                      const isSelected = signConfigLang === countryPrefix
-                      return (
-                        <li
-                          key={countryPrefix}
-                          className={clsx(
-                            'relative flex items-center gap-x-3 rounded-lg p-3',
-                            isSelected ? 'bg-stone-900/80' : 'opacity-60',
-                          )}
-                          aria-current={isSelected ? 'true' : undefined}
-                        >
-                          <div className="flex size-9 flex-none items-center justify-center rounded-lg bg-stone-800 text-sm font-bold text-stone-200">
-                            {countryPrefix}
-                          </div>
-                          <div className="min-w-0 flex-1">
-                            <p className="font-semibold text-stone-100">
-                              {countryPrefix === 'DE'
-                                ? m.lang_switcher_sign_catalogue_de_name()
-                                : countryPrefix}
-                            </p>
-                          </div>
-                          {isSelected ? (
-                            <CheckIcon
-                              aria-hidden="true"
-                              className="size-5 shrink-0 text-violet-400"
-                            />
-                          ) : null}
-                        </li>
-                      )
-                    })}
+                    {countries.map((countryPrefix) => (
+                      <LangSwitcherOption
+                        key={countryPrefix}
+                        badge={countryPrefix}
+                        label={
+                          countryPrefix === 'DE'
+                            ? m.lang_switcher_sign_catalogue_de_name()
+                            : countryPrefix
+                        }
+                        isSelected={signConfigLang === countryPrefix}
+                        onClick={() => handleCatalogueSelect(countryPrefix, close)}
+                      />
+                    ))}
                   </ul>
                 </section>
 
@@ -86,39 +82,15 @@ export const FloatingLanguageSwitcher = () => {
                     {m.lang_switcher_ui_language()}
                   </h3>
                   <ul className="space-y-1">
-                    {uiLocales.map((locale) => {
-                      const isSelected = uiLocale === locale
-                      const label = locale === 'en' ? m.lang_ui_en() : m.lang_ui_de()
-                      return (
-                        <li key={locale}>
-                          <button
-                            type="button"
-                            onClick={() => handleUiLocaleSelect(locale, close)}
-                            className={clsx(
-                              'group relative flex w-full items-center gap-x-3 rounded-lg p-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500',
-                              isSelected
-                                ? 'bg-stone-900/80'
-                                : 'bg-stone-800/55 ring-1 ring-stone-300/15 ring-inset hover:bg-stone-600/60 hover:ring-stone-300/25',
-                            )}
-                            aria-current={isSelected ? 'true' : undefined}
-                            aria-label={label}
-                          >
-                            <div className="flex size-9 flex-none items-center justify-center rounded-lg bg-stone-800 text-xs font-bold text-stone-200 uppercase group-hover:bg-stone-700">
-                              {locale}
-                            </div>
-                            <div className="min-w-0 flex-1">
-                              <p className="font-semibold text-stone-100">{label}</p>
-                            </div>
-                            {isSelected ? (
-                              <CheckIcon
-                                aria-hidden="true"
-                                className="size-5 shrink-0 text-violet-400"
-                              />
-                            ) : null}
-                          </button>
-                        </li>
-                      )
-                    })}
+                    {uiLocales.map((locale) => (
+                      <LangSwitcherOption
+                        key={locale}
+                        badge={locale}
+                        label={locale === 'en' ? m.lang_ui_en() : m.lang_ui_de()}
+                        isSelected={uiLocale === locale}
+                        onClick={() => handleUiLocaleSelect(locale, close)}
+                      />
+                    ))}
                   </ul>
                 </section>
               </div>

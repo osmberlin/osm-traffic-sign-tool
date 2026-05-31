@@ -9,6 +9,7 @@ import {
   trafficSignTagToSigns,
 } from '@osm-traffic-signs/converter'
 import { z } from 'zod'
+import { coerceAnswersSearchParam } from './answersParam'
 
 export const combinationQaFilters = ['actionable', 'blocked', 'all'] as const
 export type CombinationQaFilter = (typeof combinationQaFilters)[number]
@@ -17,6 +18,7 @@ export const deSearchSchema = z.object({
   // routerSearch uses JSON.parse on param values; bare numbers (e.g. q=241) become number
   q: z.coerce.string().optional(),
   signs: z.string().optional(),
+  answers: z.preprocess(coerceAnswersSearchParam, z.string().optional()),
   focus: z.string().optional(),
   qa: z.enum(taggingSuggestionsQaFilters).optional(),
   comb: z.enum(combinationQaFilters).optional(),

@@ -10,6 +10,11 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Add tagging **questions** for selected signs (sidepath, surface colour, guidance mode, highway class, hazard sign orientation) with translated labels (EN/DE), per-sign editors in the selected-sign column, and an aggregated choices section in the results column.
+- Persist question answers in the URL (`answers` search param) with LocalStorage cache hydration when signs are loaded or changed.
+- Show a sign-grid badge on signs that expose tagging choices; keep the existing value-prompt pencil badge.
+- Render **optional tags** separately from required recommendations (e.g. `colour=white`), based on converter `optionalTags` data.
+- Update QA issue guidance for `questions` and `optionalTags` in sign config.
 - **BREAKING**: Rework result sidebar to show geometry-aware recommendations (nodes, ways, way centerline, areas, relations) with per-geometry copy, applicability details, and split general vs geometry-specific comments.
 - Update Taginfo comparison table to render recommendations/comments by geometry.
 - Update QA issue guidance and combination export text for `tagRecommendationsByGeometry`.
@@ -32,6 +37,8 @@ All notable changes to this project will be manually documented in this file.
 - Tighten country-prefix and locale contracts (no fallback naming/contracts, strict typing for route-derived prefix, `WikiLinkKey` requires `lang`).
 - Update SVG loader flow to use country-specific converter loader entrypoints and exhaustive country-prefix switching (no permissive default branch).
 - Align opening-hours validation message locale with current UI locale while keeping country code from route context.
+- Move conditional opening-hours parsing/validation logic to `@osm-traffic-signs/converter` and consume shared package exports in the app (UI now focuses on rendering feedback only).
+- Remove direct `opening_hours` dependency from the app package now that validation is owned by the converter package.
 
 ## 2.1.9
 
