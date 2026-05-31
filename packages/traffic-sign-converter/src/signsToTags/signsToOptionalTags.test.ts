@@ -6,9 +6,9 @@ import { signsToOptionalTags } from './signsToOptionalTags.js'
 describe('signsToOptionalTags()', () => {
   const data = countryDefinitions.DE
 
-  test('returns optional colour tag for cycleway signs', () => {
-    const signs = signsStateByDescriptiveName('DE', data, ['Radweg'])
+  test('returns optional bus lane tags for bus lane signs', () => {
+    const signs = signsStateByDescriptiveName('DE', data, ['Bussonderfahrstreifen'])
     const result = signsToOptionalTags(signs, 'DE', 'way')
-    expect(result.get('colour')).toBe('white')
+    expect(result.get('lanes:bus')).toBe('*')
   })
 })

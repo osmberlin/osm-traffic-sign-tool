@@ -21,7 +21,6 @@ export const _infrastructure: SignType[] = [
         geometries: ['way'],
         highwayValues: ['cycleway'],
         uniqueTags: [{ key: 'bicycle', value: 'designated' }],
-        optionalTags: [{ key: 'colour', value: 'white' }],
       },
     ],
     questions: cycleInfrastructureQuestions(),
@@ -125,7 +124,6 @@ export const _infrastructure: SignType[] = [
           { key: 'foot', value: 'designated' },
           { key: 'segregated', value: 'no' },
         ],
-        optionalTags: [{ key: 'colour', value: 'white' }],
       },
     ],
     questions: [sidepathQuestion()],
@@ -164,7 +162,6 @@ export const _infrastructure: SignType[] = [
           { key: 'foot', value: 'designated' },
           { key: 'segregated', value: 'yes' },
         ],
-        optionalTags: [{ key: 'colour', value: 'white' }],
       },
     ],
     questions: [
@@ -212,7 +209,6 @@ export const _infrastructure: SignType[] = [
           { key: 'foot', value: 'designated' },
           { key: 'segregated', value: 'yes' },
         ],
-        optionalTags: [{ key: 'colour', value: 'white' }],
       },
     ],
     questions: [
