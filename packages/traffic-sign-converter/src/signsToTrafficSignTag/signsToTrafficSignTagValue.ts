@@ -11,6 +11,28 @@
 import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
 import { namedTrafficSignValues } from '../data-definitions/namedTrafficSignValues.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
+import { isOpeningHoursValuePromptFormat } from '../data-definitions/valuePromptFormats.js'
+import { splitSignIdSignValue } from '../trafficSignTagToSigns/utils/splitSignIdSignValue.js'
+import { normalizePlateTimeRestriction } from '../utils/normalizeTimeRestriction.js'
+
+const normalizeTimeRestrictionOsmValuePart = (sign: SignStateType): string => {
+  if (
+    !sign.recodgnizedSign ||
+    !sign.valuePrompt?.format ||
+    !isOpeningHoursValuePromptFormat(sign.valuePrompt.format)
+  ) {
+    return sign.osmValuePart
+  }
+
+  if (typeof sign.signValue === 'string') {
+    return `${sign.signId}[${normalizePlateTimeRestriction(sign.signValue)}]`
+  }
+
+  const { signId, signValue } = splitSignIdSignValue(sign.osmValuePart)
+  if (signId !== sign.signId || !signValue) return sign.osmValuePart
+
+  return `${sign.signId}[${normalizePlateTimeRestriction(signValue)}]`
+}
 
 export const signsToTrafficSignTagValue = (
   signs: SignStateType[],
@@ -20,8 +42,10 @@ export const signsToTrafficSignTagValue = (
   let countryPrefixSet: boolean = false
 
   const signStrings = signs.map((sign, index) => {
+    const normalizedOsmValuePart = normalizeTimeRestrictionOsmValuePart(sign)
+
     // Handle Contry Prefix with special treatment for named signs
-    const isNamedValue = namedTrafficSignValues.includes(sign.osmValuePart)
+    const isNamedValue = namedTrafficSignValues.includes(normalizedOsmValuePart)
     let countryPrefixString = ''
     if (countryPrefixSet === false && !isNamedValue) {
       countryPrefixString = `${countryPrefix}:`
@@ -32,14 +56,16 @@ export const signsToTrafficSignTagValue = (
     const isFirstSignInList = index === 0
     const isPrevSignNamedValue = isFirstSignInList
       ? false
-      : namedTrafficSignValues.includes(signs[index - 1]?.osmValuePart || '')
+      : namedTrafficSignValues.includes(
+          normalizeTimeRestrictionOsmValuePart(signs[index - 1]!) || '',
+        )
     const separatorPrefix = isFirstSignInList
       ? ''
       : sign.kind === 'traffic_sign' || isPrevSignNamedValue
         ? `;`
         : ','
 
-    return `${separatorPrefix}${countryPrefixString}${sign.osmValuePart}`
+    return `${separatorPrefix}${countryPrefixString}${normalizedOsmValuePart}`
   })
 
   return signStrings.join('')

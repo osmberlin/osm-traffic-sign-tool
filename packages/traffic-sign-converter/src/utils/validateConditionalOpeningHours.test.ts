@@ -1,12 +1,4 @@
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-
-beforeEach(() => {
-  vi.spyOn(console, 'info').mockImplementation(() => {})
-})
-
-afterEach(() => {
-  vi.restoreAllMocks()
-})
 import {
   flattenOpeningHoursMessages,
   normalizeOpeningHoursLocale,
@@ -16,6 +8,14 @@ import {
   splitOpeningHoursFeedbackMessage,
   validateConditionalOpeningHours,
 } from './validateConditionalOpeningHours.js'
+
+beforeEach(() => {
+  vi.spyOn(console, 'info').mockImplementation(() => {})
+})
+
+afterEach(() => {
+  vi.restoreAllMocks()
+})
 
 describe('normalizeOpeningHoursLocale()', () => {
   test('returns de for empty input', () => {
@@ -118,10 +118,10 @@ describe('validateConditionalOpeningHours()', () => {
 
     expect(result.severity).toBe('error')
     expect(result.messages).toHaveLength(2)
-    expect(result.messages[0].reference).toBe('Su 6-22:')
-    expect(result.messages[0].detail).toContain('timesep')
-    expect(result.messages[1].reference).toBe('Su 6-22')
-    expect(result.messages[1].detail).toContain('06:00-22:00')
+    expect(result.messages[0]!.reference).toBe('Su 6-22:')
+    expect(result.messages[0]!.detail).toContain('timesep')
+    expect(result.messages[1]!.reference).toBe('Su 6-22')
+    expect(result.messages[1]!.detail).toContain('06:00-22:00')
   })
 
   test('returns none for valid syntax without warnings', () => {
@@ -137,8 +137,8 @@ describe('validateConditionalOpeningHours()', () => {
 
     expect(result.severity).toBe('warning')
     expect(result.messages.length).toBeGreaterThan(0)
-    expect(result.messages[0].reference).toBe('Di')
-    expect(result.messages[0].detail).toContain('Tu')
+    expect(result.messages[0]!.reference).toBe('Di')
+    expect(result.messages[0]!.detail).toContain('Tu')
   })
 
   test('does not truncate warnings with nested parentheses', () => {
@@ -181,6 +181,6 @@ describe('validateConditionalOpeningHours()', () => {
     const result = validateConditionalOpeningHours('invalid!!!', { requestedLocale: 'de_DE' })
 
     expect(result.severity).toBe('error')
-    expect(result.messages[0].detail.length).toBeGreaterThan(0)
+    expect(result.messages[0]!.detail.length).toBeGreaterThan(0)
   })
 })

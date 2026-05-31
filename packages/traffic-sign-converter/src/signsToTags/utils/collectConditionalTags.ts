@@ -1,5 +1,7 @@
 import type { GeometryType } from '../../data-definitions/geometryTypes.js'
 import { type SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
+import { isOpeningHoursValuePromptFormat } from '../../data-definitions/valuePromptFormats.js'
+import { normalizeConditionalTimeRestriction } from '../../utils/normalizeTimeRestriction.js'
 import { getRecommendations } from './getRecommendations.js'
 
 export const collectConditionalTags = (signs: SignStateType[], geometry: GeometryType) => {
@@ -50,9 +52,14 @@ export const collectConditionalTags = (signs: SignStateType[], geometry: Geometr
 
     if (applyModfier) {
       if (sign.kind === 'condition_modifier') {
+        const modifierRawValue = String(sign.signValue ?? recs.modifierValue)
+        const modifierValue = isOpeningHoursValuePromptFormat(sign.valuePrompt?.format ?? '')
+          ? normalizeConditionalTimeRestriction(modifierRawValue)
+          : modifierRawValue
+
         for (const [mergedKey, mergedTag] of mergedConditionalTags) {
           const key = `${mergedTag.key}:conditional`
-          const value = `${mergedTag.value} @ (${sign.signValue || recs.modifierValue})`
+          const value = `${mergedTag.value} @ (${modifierValue})`
           mergedConditionalTags.set(mergedKey, { key, value })
         }
       }

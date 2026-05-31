@@ -1,9 +1,11 @@
 import { ResultTagRecommendations } from '@app/app/(signs)/_components/PageApp/results/ResultTagRecommendations'
 import { cleanup, render, screen } from '@testing-library/react'
 import type { ReactNode } from 'react'
-import { afterEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeAll, describe, expect, test, vi } from 'vitest'
 
 let mockParamSigns: any[] = []
+let mockSignsToTags = (_signs: any, _countryPrefix: string, geometry: string) =>
+  geometry === 'node' ? new Map([['traffic_sign', 'DE:279-30']]) : new Map()
 
 vi.mock('@app/app/(signs)/_components/store/useParamSigns.search', () => ({
   useParamSigns: () => ({
@@ -11,14 +13,10 @@ vi.mock('@app/app/(signs)/_components/store/useParamSigns.search', () => ({
   }),
 }))
 
-vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', async (importOriginal) => {
-  const actual =
-    await importOriginal<typeof import('@app/app/(signs)/_components/store/CountryPrefixContext')>()
-  return {
-    ...actual,
-    useCountryPrefix: () => ({ countryPrefix: 'DE' as const }),
-  }
-})
+vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', () => ({
+  useCountryPrefix: () => ({ countryPrefix: 'DE' as const }),
+  useCatalogueHtmlLang: () => 'de-DE',
+}))
 
 vi.mock('@app/app/_components/links/CopyButton', () => ({
   CopyButton: ({ children }: { children: ReactNode }) => <button>{children}</button>,
@@ -33,22 +31,40 @@ vi.mock('@app/app/(signs)/_components/PageApp/results/ResultTagRecommendations/T
   TagList: () => <div>Tag list</div>,
 }))
 
-vi.mock('@osm-traffic-signs/converter', () => ({
-  GEOMETRY_TYPES: ['node', 'way'],
-  classifyTaggingSuggestionsQa: (sign: any) =>
-    sign.taggingSuggestionsQa === 'none' || sign.tagRecommendationsByGeometry === 'none'
-      ? 'explicitNoSuggestions'
-      : 'withSuggestions',
-  signsToApplicability: () => ({ applicable: [], notApplicable: [] }),
-  signsToComments: () => new Map(),
-  signsToTags: (_signs: any, _countryPrefix: string, geometry: string) =>
-    geometry === 'node' ? new Map([['traffic_sign', 'DE:279-30']]) : new Map(),
-  toTag: ({ key, value }: { key: string; value: string }) => `${key}=${value}`,
-}))
+vi.mock('@osm-traffic-signs/converter', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@osm-traffic-signs/converter')>()
+  return {
+    ...actual,
+    GEOMETRY_TYPES: ['node', 'way'],
+    classifyTaggingSuggestionsQa: (sign: any) =>
+      sign.taggingSuggestionsQa === 'none' || sign.tagRecommendationsByGeometry === 'none'
+        ? 'explicitNoSuggestions'
+        : 'withSuggestions',
+    signsToApplicability: () => ({ applicable: [], notApplicable: [] }),
+    signsToComments: () => new Map(),
+    signsToTags: (signs: any, countryPrefix: string, geometry: string) =>
+      mockSignsToTags(signs, countryPrefix, geometry),
+    toTag: ({ key, value }: { key: string; value: string }) => `${key}=${value}`,
+  }
+})
 
 afterEach(() => {
   cleanup()
   mockParamSigns = []
+  mockSignsToTags = (_signs: any, _countryPrefix: string, geometry: string) =>
+    geometry === 'node' ? new Map([['traffic_sign', 'DE:279-30']]) : new Map()
+})
+
+beforeAll(() => {
+  Object.defineProperty(globalThis, 'localStorage', {
+    value: {
+      getItem: () => null,
+      setItem: () => undefined,
+      removeItem: () => undefined,
+      clear: () => undefined,
+    },
+    writable: true,
+  })
 })
 
 describe('ResultTagRecommendations', () => {

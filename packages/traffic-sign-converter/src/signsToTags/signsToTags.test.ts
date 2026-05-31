@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
 import type { SignStateType } from '../data-definitions/TrafficSignDataTypes.js'
+import { combineSignIdSignValue } from '../utils/combineSignIdSignValue.js'
 import { signsStateByDescriptiveName } from '../utils/signsByDescriptiveName.js'
 import { signsToTags } from './signsToTags.js'
 
@@ -139,6 +140,54 @@ describe('signsToTags()', () => {
       const result = signsToTags(signs, 'DE', 'way')
       expect(result.get('overtaking')).toBeUndefined()
       expect(result.get('overtaking:conditional')).toBe('no @ (16:00-18:00)')
+    })
+
+    test('uses dual format for traffic_sign and conditional values', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Zulässige Höchstgeschwindigkeit',
+        'Zeitliche Beschräkung',
+      ])
+      const speedSign = signs.find((sign) => sign.recodgnizedSign && sign.kind === 'traffic_sign')!
+      speedSign.signValue = 80
+      speedSign.osmValuePart = combineSignIdSignValue(speedSign.signId, 80)
+      const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1040-30')!
+      timeSign.signValue = '06:00-18:00'
+      timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, '06:00-18:00')
+
+      const result = signsToTags(signs, 'DE', 'way')
+      expect(result.get('maxspeed:conditional')).toBe('80 @ (06:00-18:00)')
+      expect(result.get('traffic_sign')).toBe('DE:274-5[80],1040-30[6-18]')
+    })
+
+    test('normalizes midnight ranges in conditional output', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Zulässige Höchstgeschwindigkeit',
+        'Zeitliche Beschräkung',
+      ])
+      const speedSign = signs.find((sign) => sign.recodgnizedSign && sign.kind === 'traffic_sign')!
+      speedSign.signValue = 80
+      speedSign.osmValuePart = combineSignIdSignValue(speedSign.signId, 80)
+      const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1040-30')!
+      timeSign.signValue = '22-6'
+      timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, '22-6')
+
+      const result = signsToTags(signs, 'DE', 'way')
+      expect(result.get('maxspeed:conditional')).toBe('80 @ (22:00-06:00)')
+      expect(result.get('traffic_sign')).toBe('DE:274-5[80],1040-30[22-6]')
+    })
+
+    test('normalizes opening_hours-like modifier values for both outputs', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Überholverbot für Kraftfahrzeuge aller Art',
+        'Zeitliche Beschräkung: werktags, von-bis',
+      ])
+      const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1042-31')!
+      timeSign.signValue = 'Mo-Sa 1:00-12:30'
+      timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, 'Mo-Sa 1:00-12:30')
+
+      const result = signsToTags(signs, 'DE', 'way')
+      expect(result.get('overtaking:conditional')).toBe('no @ (Mo-Sa 01:00-12:30)')
+      expect(result.get('traffic_sign')).toBe('DE:276,1042-31[Mo-Sa 1-12:30]')
     })
   })
 

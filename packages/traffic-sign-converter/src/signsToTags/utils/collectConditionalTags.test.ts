@@ -32,6 +32,57 @@ describe('collectConditionalTags()', () => {
     ])
   })
 
+  test('Normalizes time restriction prompt in conditional output', () => {
+    const signs = signsStateByDescriptiveName('DE', data, [
+      'Überholverbot für Kraftfahrzeuge aller Art',
+      'Zeitliche Beschräkung',
+    ])
+    const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1040-30')!
+    timeSign.signValue = '16-18'
+    timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, '16-18')
+
+    expect(collectConditionalTags(signs, 'way')).toMatchObject([
+      {
+        key: 'overtaking:conditional',
+        value: 'no @ (16:00-18:00)',
+      },
+    ])
+  })
+
+  test('Normalizes minute precision and leading zeroes for conditional output', () => {
+    const signs = signsStateByDescriptiveName('DE', data, [
+      'Tempo 30-Zone',
+      'Zeitliche Beschräkung',
+    ])
+    const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1040-30')!
+    timeSign.signValue = '6:30-18:15'
+    timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, '6:30-18:15')
+
+    expect(collectConditionalTags(signs, 'way')).toMatchObject([
+      {
+        key: 'maxspeed:conditional',
+        value: '30 @ (06:30-18:15)',
+      },
+    ])
+  })
+
+  test('Normalizes opening_hours prompt values for conditional output', () => {
+    const signs = signsStateByDescriptiveName('DE', data, [
+      'Überholverbot für Kraftfahrzeuge aller Art',
+      'Zeitliche Beschräkung: werktags, von-bis',
+    ])
+    const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1042-31')!
+    timeSign.signValue = 'Mo-Sa 1:00-12:30'
+    timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, 'Mo-Sa 1:00-12:30')
+
+    expect(collectConditionalTags(signs, 'way')).toMatchObject([
+      {
+        key: 'overtaking:conditional',
+        value: 'no @ (Mo-Sa 01:00-12:30)',
+      },
+    ])
+  })
+
   test('Sign group with conditional sign with static value', () => {
     const signs = signsStateByDescriptiveName('DE', data, [
       'Überholverbot für Kraftfahrzeuge aller Art',

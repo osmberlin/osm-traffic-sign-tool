@@ -26,12 +26,10 @@ export const SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES = [
   'Es wurde keine Regel für "PH" (feiertags) angegeben.',
 ] as const
 
-export const shouldSkipOpeningHoursMessage = (detail: string): boolean =>
+export const shouldSkipOpeningHoursMessage = (detail: string) =>
   SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES.some((prefix) => detail.startsWith(prefix))
 
-export const partitionOpeningHoursMessages = (
-  messages: OpeningHoursFeedbackItem[],
-): { displayed: OpeningHoursFeedbackItem[]; skipped: OpeningHoursFeedbackItem[] } => {
+export const partitionOpeningHoursMessages = (messages: OpeningHoursFeedbackItem[]) => {
   const displayed: OpeningHoursFeedbackItem[] = []
   const skipped: OpeningHoursFeedbackItem[] = []
 
@@ -49,7 +47,7 @@ export const partitionOpeningHoursMessages = (
 /** Fatal errors are one string; warnings are string[]. Neither is structured JSON. */
 const OPENING_HOURS_MARKER = '<--- ('
 
-const findBalancedClosingParenIndex = (text: string, openParenIndex: number): number | null => {
+const findBalancedClosingParenIndex = (text: string, openParenIndex: number) => {
   let depth = 0
 
   for (let index = openParenIndex; index < text.length; index++) {
@@ -129,7 +127,7 @@ export const splitOpeningHoursFeedbackMessage = (message: string): string[] =>
     item.reference ? `${item.reference} <--- (${item.detail})` : item.detail,
   )
 
-export const flattenOpeningHoursMessages = (messages: string[]): OpeningHoursFeedbackItem[] =>
+export const flattenOpeningHoursMessages = (messages: string[]) =>
   messages.flatMap(parseOpeningHoursFeedbackMessage)
 
 export const normalizeOpeningHoursLocale = (requestedLocale?: string): string => {

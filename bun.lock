@@ -106,6 +106,9 @@
     "packages/traffic-sign-converter": {
       "name": "@osm-traffic-signs/converter",
       "version": "0.4.0",
+      "dependencies": {
+        "opening_hours": "^3.12.0",
+      },
       "devDependencies": {
         "@arethetypeswrong/cli": "^0.18.2",
         "@total-typescript/ts-reset": "^0.6.1",

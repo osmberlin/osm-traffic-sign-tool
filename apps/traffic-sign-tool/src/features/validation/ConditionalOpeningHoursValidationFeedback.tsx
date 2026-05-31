@@ -4,13 +4,11 @@ import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
 import { ParaglideMessage } from '@inlang/paraglide-js-react'
 import {
+  validateConditionalOpeningHours,
+  type ConditionalValidationResult,
   isOpeningHoursValuePromptFormat,
   type ValuePromptFormat,
 } from '@osm-traffic-signs/converter'
-import {
-  validateConditionalOpeningHours,
-  type ConditionalValidationResult,
-} from './validateConditionalOpeningHours.js'
 
 type Props = {
   format: ValuePromptFormat

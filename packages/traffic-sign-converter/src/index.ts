@@ -83,6 +83,22 @@ export type {
 // Data SVGs
 export { createSvgFilename } from './utils/createSvgFilename.js'
 export { createSvgImportname } from './utils/createSvgImportname.js'
+export {
+  flattenOpeningHoursMessages,
+  normalizeOpeningHoursLocale,
+  parseOpeningHoursFeedbackChunk,
+  parseOpeningHoursFeedbackMessage,
+  partitionOpeningHoursMessages,
+  shouldSkipOpeningHoursMessage,
+  SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES,
+  splitOpeningHoursFeedbackMessage,
+  validateConditionalOpeningHours,
+} from './utils/validateConditionalOpeningHours.js'
+export type {
+  ConditionalValidationResult,
+  OpeningHoursFeedbackItem,
+  ValidateConditionalOpeningHoursOptions,
+} from './utils/validateConditionalOpeningHours.js'
 
 // Country reference links
 export { buildSignReferenceLinks } from './referenceLinks/buildSignReferenceLinks.js'

@@ -72,6 +72,9 @@
     "updatePackages:major": "bunx taze major --includeLocked --write --maturity-period 5 --exclude // && bun run updatePackages:minor && bun install",
     "updatePackages:minor": "bunx taze minor --includeLocked --write --maturity-period 5 && bun install"
   },
+  "dependencies": {
+    "opening_hours": "^3.12.0"
+  },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
     "@total-typescript/ts-reset": "^0.6.1",

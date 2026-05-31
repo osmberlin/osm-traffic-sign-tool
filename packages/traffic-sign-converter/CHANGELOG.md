@@ -13,6 +13,7 @@
 - Add country-level catalogue metadata registry: `countryCatalogueMeta` / `getCountryCatalogueMeta` (locale, wiki overview URL, reference-link templates).
 - Add reusable reference-link helpers for host apps/editors: `buildSignReferenceLinks`, `buildOsmWikiKeyUrl`, `buildOsmWikiTagUrl`.
 - Add DE catalogue metadata module (`catalogueMetaDE`) and tests for metadata + reference-link URL builders.
+- Normalize `time_restriction` values in two canonical forms for issue #32/wiki alignment: `traffic_sign` keeps plate-style values (`6-18`, `6:30-18:15`) while generated `*:conditional` uses `HH:MM-HH:MM` (`06:00-18:00`, `06:30-18:15`).
 
 ## 0.4.0
 
