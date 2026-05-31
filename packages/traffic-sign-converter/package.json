@@ -75,7 +75,7 @@
     "opening_hours": "^3.12.0"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.18.2",
+    "@arethetypeswrong/cli": "^0.18.3",
     "@total-typescript/ts-reset": "^0.6.1",
     "copyfiles": "^2.4.1",
     "rimraf": "^6.1.2",

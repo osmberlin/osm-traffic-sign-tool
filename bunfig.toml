@@ -1,3 +1,5 @@
 [install]
 # Port of pnpm-workspace.yaml minimumReleaseAge: 7200 (minutes) → seconds (5 days).
 minimumReleaseAge = 432000
+# attw 0.18.3 fixes fflate 0.8.3 tarball unpack (https://github.com/arethetypeswrong/arethetypeswrong.github.io/issues/258)
+minimumReleaseAgeExcludes = ["@arethetypeswrong/cli", "@arethetypeswrong/core"]
