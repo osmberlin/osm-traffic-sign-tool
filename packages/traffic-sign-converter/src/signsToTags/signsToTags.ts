@@ -69,10 +69,7 @@ export const signsToTags = (
       tagMap.set(tag.key, tag.value)
     })
 
-    applyQuestionTagRemovals(
-      tagMap,
-      collectQuestionTagRemovals(signGroup, geometry, answers),
-    )
+    applyQuestionTagRemovals(tagMap, collectQuestionTagRemovals(signGroup, geometry, answers))
   }
 
   // Cleanup `highway=[]`

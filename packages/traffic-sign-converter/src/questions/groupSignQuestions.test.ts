@@ -37,16 +37,15 @@ describe('groupSignQuestions', () => {
     const pathQuestion = pathInfrastructureQuestions().find((q) => q.questionId === 'surfaceColor')!
     const cycleQuestion = surfaceColorQuestion()
 
-    expect(getQuestionEquivalenceKey(pathQuestion)).not.toBe(getQuestionEquivalenceKey(cycleQuestion))
+    expect(getQuestionEquivalenceKey(pathQuestion)).not.toBe(
+      getQuestionEquivalenceKey(cycleQuestion),
+    )
   })
 
   test('syncEquivalentQuestionAnswers copies one answer to all signs in a group', () => {
     const signs = signsByOsmValuePart(['241-30', '241-31'])
 
-    const synced = syncEquivalentQuestionAnswers(
-      { '241-30': { highwayClass: 'cycleway' } },
-      signs,
-    )
+    const synced = syncEquivalentQuestionAnswers({ '241-30': { highwayClass: 'cycleway' } }, signs)
 
     expect(synced['241-30']?.highwayClass).toBe('cycleway')
     expect(synced['241-31']?.highwayClass).toBe('cycleway')

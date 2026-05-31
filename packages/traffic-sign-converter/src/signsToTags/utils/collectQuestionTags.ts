@@ -17,7 +17,9 @@ const geometriesFromSignRecommendations = (sign: SignType): GeometryType[] => {
   }
 
   return [
-    ...new Set(sign.tagRecommendationsByGeometry.flatMap((recommendation) => recommendation.geometries)),
+    ...new Set(
+      sign.tagRecommendationsByGeometry.flatMap((recommendation) => recommendation.geometries),
+    ),
   ].filter((geometry) => geometry !== 'node' && geometry !== 'relation')
 }
 
