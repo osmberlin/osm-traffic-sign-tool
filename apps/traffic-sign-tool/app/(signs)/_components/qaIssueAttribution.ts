@@ -1,6 +1,6 @@
-/** Blockquote banner for QA GitHub issues (human vs tool vs agent). */
+/** Blockquote banner for QA GitHub issues (submitter vs tool vs agent). */
 export const QA_ISSUE_ATTRIBUTION_BANNER = [
-  '> **Human (issue submitter):** You opened this issue from the QA tool after reviewing tasks.',
-  '> **Machine-generated:** Sections below were composed by the Traffic Sign Tool from your selections—not hand-written prose.',
-  '> **Cursor agent:** Will implement changes in a separate PR; its comments use the **[Cursor Agent]** prefix and ideally the `cursor` GitHub app account.',
+  '> **You** — submitted feedback from the QA page (see Tasks below).',
+  '> **Traffic Sign Tool** — generated this issue body from your selections.',
+  '> **Cursor agent** — will implement catalogue changes in a separate PR.',
 ].join('\n')

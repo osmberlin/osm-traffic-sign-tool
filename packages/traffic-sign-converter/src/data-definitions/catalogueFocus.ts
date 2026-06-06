@@ -4,6 +4,9 @@ import type {
   FocusArea,
   SignType,
 } from './TrafficSignDataTypes.js'
+import { focusAreas } from './TrafficSignDataTypes.js'
+
+export type FocusFilterCounts = Record<FocusArea, number>
 
 export const focusLevel = (
   sign: SignType,
@@ -46,3 +49,8 @@ export const matchesFocusFilter = (sign: SignType, focuses: FocusArea[]): boolea
 
 export const filterSignsByFocus = (signs: SignType[], focuses: FocusArea[]): SignType[] =>
   signs.filter((sign) => matchesFocusFilter(sign, focuses))
+
+export const countSignsByFocus = (signs: SignType[]): FocusFilterCounts =>
+  Object.fromEntries(
+    focusAreas.map((focus) => [focus, filterSignsByFocus(signs, [focus]).length]),
+  ) as FocusFilterCounts

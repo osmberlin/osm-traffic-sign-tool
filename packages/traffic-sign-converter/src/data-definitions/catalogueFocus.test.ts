@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import {
   activeCatalogueFocusView,
+  countSignsByFocus,
   filterSignsByFocus,
   focusLevel,
   isAlleOnlySign,
@@ -68,6 +69,23 @@ describe('catalogue focus', () => {
     expect(filterSignsByFocus(signs, ['default']).map((s) => s.osmValuePart)).toEqual(['test'])
     expect(filterSignsByFocus(signs, ['highway']).length).toBe(1)
     expect(filterSignsByFocus(signs, ['all']).length).toBe(4)
+  })
+
+  test('countSignsByFocus', () => {
+    const signs = [
+      sign(),
+      sign({ highway: true }),
+      sign({ all: true }),
+      sign({ parking: 'highlight' }),
+    ]
+
+    expect(countSignsByFocus(signs)).toEqual({
+      default: 1,
+      bike_foot: 0,
+      parking: 1,
+      highway: 1,
+      all: 4,
+    })
   })
 
   test('no featured strip on Alle', () => {

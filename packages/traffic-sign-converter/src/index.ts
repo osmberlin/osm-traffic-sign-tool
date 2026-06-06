@@ -39,6 +39,7 @@ export * from './data-definitions/namedTrafficSignValues.js'
 export type * from './data-definitions/TrafficSignDataTypes.js'
 export {
   activeCatalogueFocusView,
+  countSignsByFocus,
   filterSignsByFocus,
   focusLevel,
   isAlleOnlySign,
@@ -49,6 +50,7 @@ export {
   matchesFocusFilter,
   thematicFocuses,
 } from './data-definitions/catalogueFocus.js'
+export type { FocusFilterCounts } from './data-definitions/catalogueFocus.js'
 export {
   QUESTION_NIL_ANSWER_ID,
   focusAreas,

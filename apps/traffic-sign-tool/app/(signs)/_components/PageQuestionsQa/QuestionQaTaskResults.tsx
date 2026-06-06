@@ -11,6 +11,7 @@ import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import clsx from 'clsx'
+import { useEffect, useState } from 'react'
 
 type Props = {
   entries: QuestionTaskEntry[]
@@ -18,9 +19,14 @@ type Props = {
 
 export const QuestionQaTaskResults = ({ entries }: Props) => {
   const countryPrefix = useCurrentLang()
-  const resultText = formatQuestionsQaTaskResults(entries, countryPrefix)
-  const issueUrl = entries.length > 0 ? buildGithubIssueUrl(entries, countryPrefix) : undefined
+  const generatedIssueBody = formatQuestionsQaTaskResults(entries, countryPrefix)
+  const [issueBody, setIssueBody] = useState(generatedIssueBody)
   const hasResults = entries.length > 0
+  const issueUrl = hasResults ? buildGithubIssueUrl(entries, countryPrefix, issueBody) : undefined
+
+  useEffect(() => {
+    setIssueBody(generatedIssueBody)
+  }, [generatedIssueBody])
 
   return (
     <section
@@ -59,14 +65,18 @@ export const QuestionQaTaskResults = ({ entries }: Props) => {
             <ChevronRightIcon className="size-4 shrink-0 text-stone-500 transition-transform group-open:rotate-90" />
             {m.questions_qa_show_issue_description()}
           </summary>
-          <pre
+          <textarea
+            value={issueBody}
+            onChange={(event) => setIssueBody(event.target.value)}
+            rows={16}
+            spellCheck={false}
+            aria-label={m.questions_qa_show_issue_description()}
             className={clsx(
               contentPreClass,
-              'mt-3 max-h-96 overflow-auto rounded-md border border-stone-600/40 bg-stone-100 p-4 text-stone-900',
+              'mt-3 block max-h-96 min-h-48 w-full resize-y overflow-auto rounded-md border border-stone-600/40 bg-stone-100 p-4 text-stone-900',
+              'focus:outline-2 focus:-outline-offset-2 focus:outline-stone-400',
             )}
-          >
-            {resultText}
-          </pre>
+          />
         </details>
       ) : null}
     </section>

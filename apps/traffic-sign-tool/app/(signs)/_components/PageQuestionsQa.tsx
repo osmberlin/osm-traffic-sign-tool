@@ -20,11 +20,12 @@ import { ContentPageWorkflowStepGroup } from '@app/app/_components/layout/Conten
 import * as m from '@app/paraglide/messages'
 import { serializeQuestionsQaParam } from '@app/src/features/searchParams/deSearch'
 import {
+  countSignsByFocus,
   countSignsByQuestionsQa,
   filterSignsByFocus,
   filterSignsByQuestionsQa,
 } from '@osm-traffic-signs/converter'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
 export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
   const { focuses } = useParamFocus()
@@ -33,6 +34,7 @@ export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
   const { replaceSearch } = useReplaceDeSearch()
   const [tasks, setTasks] = useState<Map<string, QuestionTaskState>>(() => new Map())
 
+  const focusCounts = useMemo(() => countSignsByFocus(trafficSignData), [trafficSignData])
   const focusFilteredSigns = filterSignsByFocus(trafficSignData, focuses)
   const qqaCounts = countSignsByQuestionsQa(focusFilteredSigns)
   const filteredSigns = filterSignsByQuestionsQa(focusFilteredSigns, qqaFilter)
@@ -80,7 +82,7 @@ export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
   return (
     <ContentPageLayout intro={<QuestionsQaPageIntro />}>
       <ContentPageWorkflowStepGroup step={1}>
-        <FocusFilterRow />
+        <FocusFilterRow counts={focusCounts} />
         <QuestionQaSignPicker
           nested
           filteredSigns={filteredSigns}

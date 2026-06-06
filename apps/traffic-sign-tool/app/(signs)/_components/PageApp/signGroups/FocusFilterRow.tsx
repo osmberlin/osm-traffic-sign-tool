@@ -2,10 +2,14 @@ import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.
 import * as m from '@app/paraglide/messages'
 import { getFocusLabel } from '@app/src/features/i18n/focusLabels'
 import type { FocusArea } from '@app/src/features/searchParams/deSearch'
-import { focusAreas } from '@osm-traffic-signs/converter'
+import { focusAreas, type FocusFilterCounts } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 
-export const FocusFilterRow = () => {
+type Props = {
+  counts?: FocusFilterCounts
+}
+
+export const FocusFilterRow = ({ counts }: Props) => {
   const { uiFocus, setSingleFocus } = useParamFocus()
 
   const handleClick = (focus: FocusArea) => {
@@ -41,6 +45,7 @@ export const FocusFilterRow = () => {
               )}
             >
               {getFocusLabel(focus)}
+              {counts ? ` (${counts[focus]})` : null}
             </button>
           )
         })}

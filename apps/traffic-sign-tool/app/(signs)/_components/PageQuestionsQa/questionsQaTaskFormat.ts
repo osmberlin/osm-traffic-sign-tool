@@ -1,9 +1,8 @@
 import {
-  formatQuestionAnswerTags,
-  getQuestionAnswerShortLabel,
-  getQuestionPromptShortLabel,
-} from '@app/src/features/i18n/questionLabels'
-import type { SignQuestion, SignType } from '@osm-traffic-signs/converter'
+  getCatalogueDisplayName,
+  type CountryPrefixType,
+  type SignType,
+} from '@osm-traffic-signs/converter'
 import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
 
 export type QuestionTaskState = {
@@ -54,47 +53,26 @@ export const collectQuestionTaskEntries = (
 const formatEntryHeading = (entry: QuestionTaskEntry) =>
   `### \`${entry.osmValuePart}\` (signId \`${entry.signId}\`) – ${entry.descriptiveName}`
 
-const formatQuestionAnswerCatalogue = (question: SignQuestion): string[] => {
-  const lines: string[] = [
-    `- **${getQuestionPromptShortLabel(question.questionI18nKey)}** (\`questionId: ${question.questionId}\`)`,
-  ]
-
-  if (question.defaultAnswerId) {
-    lines.push(`  - default: \`${question.defaultAnswerId}\``)
-  }
-  if (question.affectsHighway) {
-    lines.push(`  - affectsHighway: true`)
-  }
-  if (question.geometries?.length) {
-    lines.push(`  - geometries: ${question.geometries.map((g) => `\`${g}\``).join(', ')}`)
-  }
-
-  for (const answer of question.answers) {
-    const tags = formatQuestionAnswerTags(answer)
-    const tagPart = tags ? ` → ${tags}` : ''
-    lines.push(
-      `  - ${getQuestionAnswerShortLabel(answer.answerI18nKey)} (\`answerId: ${answer.answerId}\`${tagPart ? `, tags: ${tagPart.replace(/^ → /, '')}` : ''})`,
-    )
-  }
-
-  return lines
+const formatCatalogueLabel = (countryPrefix: string) => {
+  const catalogueName = getCatalogueDisplayName(countryPrefix as CountryPrefixType)
+  return `${catalogueName} (\`${countryPrefix}\`)`
 }
 
 const formatAgentBrief = (countryPrefix: string): string[] => [
-  '# Sign questions QA – catalogue config update',
+  `# Sign questions QA – ${formatCatalogueLabel(countryPrefix)}`,
   '',
   QA_ISSUE_ATTRIBUTION_BANNER,
   '',
-  `Created from the [Sign questions QA page](https://trafficsigns.osm-verkehrswende.org/${countryPrefix}/questions-qa).`,
+  `Source: [Sign questions QA](https://trafficsigns.osm-verkehrswende.org/${countryPrefix}/questions-qa) · Config: \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\``,
   '',
-  `Submitting this issue (label \`question-qa\`) triggers a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** in \`@osm-traffic-signs/converter\`—especially \`questions\` arrays and related i18n keys.`,
+  `Submit with label \`question-qa\` to trigger a Cursor cloud agent. It should open a PR updating \`questions\` and related i18n in the **${formatCatalogueLabel(countryPrefix)}** catalogue.`,
   '',
   '## Agent instructions',
   '',
-  '1. Apply every task in the sections below.',
-  `2. Read [\`${QUESTION_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${QUESTION_QA_AGENT_SKILL_PATH}) for \`SignQuestion\` / \`QuestionAnswer\` shape, \`questionCatalog.ts\` factories, and app i18n in \`messages/*.json\` + \`questionLabels.ts\`.`,
-  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Schema: \`packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts\`. Reuse factories from \`questionCatalog.ts\` when possible.`,
-  '4. Run tests in `packages/traffic-sign-converter` (including `signsToTags.questions.test.ts`). Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
+  '1. Apply every task below.',
+  `2. Read [\`${QUESTION_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${QUESTION_QA_AGENT_SKILL_PATH}) for \`SignQuestion\` shape, \`questionCatalog.ts\` factories, and i18n in \`messages/*.json\`.`,
+  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Reuse \`questionCatalog.ts\` factories where possible.`,
+  '4. Run tests in `packages/traffic-sign-converter`. Open a PR with `Closes #<issue-number>` in the description.',
   '',
   '## Tasks',
   '',
@@ -110,9 +88,9 @@ export const formatQuestionsQaTaskResults = (
 
   const lines = [...formatAgentBrief(countryPrefix)]
 
-  lines.push('### Add or update sign questions', '')
+  lines.push('### Sign question updates', '')
   lines.push(
-    'Update `questions` on each sign from the current config and submitter notes. Add new questions where notes request them.',
+    'For each sign, apply **Your feedback** to the `questions` config (and i18n keys where needed).',
     '',
   )
 
@@ -125,16 +103,7 @@ export const formatQuestionsQaTaskResults = (
       lines.push('_None._', '')
     }
 
-    lines.push('#### Questions and answers (catalogue)', '')
-    if (entry.questions?.length) {
-      for (const question of entry.questions) {
-        lines.push(...formatQuestionAnswerCatalogue(question), '')
-      }
-    } else {
-      lines.push('_No questions configured._', '')
-    }
-
-    lines.push('#### Suggestion', '')
+    lines.push('#### Your feedback', '')
     if (entry.suggestionNotes) {
       lines.push('```', entry.suggestionNotes, '```', '')
     } else {
@@ -147,9 +116,12 @@ export const formatQuestionsQaTaskResults = (
   return lines.join('\n').trimEnd()
 }
 
-export const buildGithubIssueUrl = (entries: QuestionTaskEntry[], countryPrefix = 'DE'): string => {
-  const title = `Question QA (${countryPrefix}): ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`
-  const body = formatQuestionsQaTaskResults(entries, countryPrefix)
+export const buildGithubIssueUrl = (
+  entries: QuestionTaskEntry[],
+  countryPrefix = 'DE',
+  body = formatQuestionsQaTaskResults(entries, countryPrefix),
+): string => {
+  const title = `Question QA – ${formatCatalogueLabel(countryPrefix)}: ${entries.length} update${entries.length === 1 ? '' : 's'}`
   const params = new URLSearchParams({
     template: QUESTION_QA_ISSUE_TEMPLATE,
     title,

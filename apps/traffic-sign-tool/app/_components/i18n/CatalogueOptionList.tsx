@@ -3,9 +3,9 @@ import { LangSwitcherOption } from '@app/app/_components/i18n/LangSwitcherOption
 import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
 import { getLocale } from '@app/paraglide/runtime'
+import { getCatalogueLabel } from '@app/src/features/i18n/catalogueLabels'
 import {
   countries,
-  getCatalogueDisplayName,
   getCatalogueMaturity,
   isVisibleMaturity,
   type CountryPrefixType,
@@ -23,11 +23,6 @@ type CatalogueOptionListProps = {
   onNavigate?: (countryPrefix: CountryPrefixType) => void
   badgeMode: 'prefix' | 'iconic'
 }
-
-const getCatalogueLabel = (countryPrefix: CountryPrefixType) =>
-  countryPrefix === 'DE'
-    ? m.lang_switcher_sign_catalogue_de_name()
-    : getCatalogueDisplayName(countryPrefix)
 
 export const CatalogueOptionList = ({
   selectedCountry,

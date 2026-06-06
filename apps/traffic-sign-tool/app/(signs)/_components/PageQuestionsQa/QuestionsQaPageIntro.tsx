@@ -9,12 +9,19 @@ import {
   ContentPageWorkflowStepListItem,
 } from '@app/app/_components/layout/ContentPageWorkflowStep'
 import * as m from '@app/paraglide/messages'
+import { getCatalogueLabel } from '@app/src/features/i18n/catalogueLabels'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { BoltIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
 
 export function QuestionsQaPageIntro() {
+  const countryPrefix = useCurrentLang()
+  const catalogueName = getCatalogueLabel(countryPrefix)
+
   return (
     <ContentPageIntro>
-      <ContentPageIntroTitle>{m.page_questions_qa_title()}</ContentPageIntroTitle>
+      <ContentPageIntroTitle>
+        {m.page_questions_qa_title({ catalogueName, countryPrefix })}
+      </ContentPageIntroTitle>
       <ContentPageIntroRows>
         <ContentPageIntroRow icon={InformationCircleIcon} title={m.page_questions_qa_about_label()}>
           {m.page_questions_qa_about_text()}

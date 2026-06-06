@@ -1,8 +1,9 @@
 import { PageQuestionsQa } from '@app/app/(signs)/_components/PageQuestionsQa'
 import * as m from '@app/paraglide/messages'
+import { getCatalogueLabel } from '@app/src/features/i18n/catalogueLabels'
 import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { buildNoindexPageHead } from '@app/src/features/seo/seoHead'
-import { countryDefinitions } from '@osm-traffic-signs/converter'
+import { countryDefinitions, type CountryPrefixType } from '@osm-traffic-signs/converter'
 import { createFileRoute } from '@tanstack/react-router'
 
 function LangQuestionsQaRouteComponent() {
@@ -11,7 +12,11 @@ function LangQuestionsQaRouteComponent() {
 }
 
 export const Route = createFileRoute('/$lang/questions-qa')({
-  head: () => buildNoindexPageHead(m.page_questions_qa_title()),
+  head: ({ match }) => {
+    const countryPrefix = match.params.lang as CountryPrefixType
+    const catalogueName = getCatalogueLabel(countryPrefix)
+    return buildNoindexPageHead(m.page_questions_qa_title({ catalogueName, countryPrefix }))
+  },
   loader: ({ context }) => countryDefinitions[context.countryPrefix],
   validateSearch: deSearchSchema,
   component: LangQuestionsQaRouteComponent,

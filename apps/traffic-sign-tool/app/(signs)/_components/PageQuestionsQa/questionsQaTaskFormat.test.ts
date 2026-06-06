@@ -53,16 +53,18 @@ describe('questionsQaTaskFormat', () => {
     expect(entries[0]?.osmValuePart).toBe('237')
 
     const text = formatQuestionsQaTaskResults(entries)
-    expect(text).toContain('Human (issue submitter)')
+    expect(text).toContain('**You**')
+    expect(text).toContain('German traffic signs')
     expect(text).toContain('Sign questions QA')
     expect(text).toContain('.cursor/skills/update-sign-questions/SKILL.md')
-    expect(text).toContain('questionId: sidepath')
+    expect(text).toContain('"questionId": "sidepath"')
+    expect(text).not.toContain('Questions & answers')
     expect(text).toContain('Add default for surface colour')
     expect(text).toContain('```json')
   })
 
   test('buildGithubIssueUrl', () => {
-    const url = buildGithubIssueUrl([
+    const entries = [
       {
         osmValuePart: '237',
         signId: '237',
@@ -70,8 +72,13 @@ describe('questionsQaTaskFormat', () => {
         questions: [sidepathQuestion()],
         suggestionNotes: 'Test',
       },
-    ])
+    ]
+    const url = buildGithubIssueUrl(entries)
     expect(url).toContain('github.com/osmberlin/osm-traffic-sign-tool/issues/new')
     expect(url).toContain('template=question-qa-catalogue-update.md')
+
+    const customBody = 'Custom issue body'
+    const customUrl = buildGithubIssueUrl(entries, 'DE', customBody)
+    expect(new URL(customUrl).searchParams.get('body')).toBe(customBody)
   })
 })

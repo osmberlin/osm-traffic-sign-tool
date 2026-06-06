@@ -55,7 +55,7 @@
     "build:clean-svgs": "rimraf ./src/data-svgs",
     "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
     "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
-    "build:transfer-svgs": "copyfiles -u 4 '../internal_svgs/src/data-svgs/**/*' './src/data-svgs'",
+    "build:transfer-svgs": "bun ./scripts/transfer-svgs.ts",
     "build:ts": "tsc -p tsconfig.build.json",
     "build:watch": "tsc -p tsconfig.build.json --watch",
     "check": "bun run format && bun run check-exports && bun run lint && bun run type-check && bun run test",

@@ -8,15 +8,18 @@ import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
 import {
+  countSignsByFocus,
   countSignsByTaggingSuggestionsQa,
   filterSignsByFocus,
   filterSignsByTaggingSuggestionsQa,
 } from '@osm-traffic-signs/converter'
+import { useMemo } from 'react'
 
 export const PageSignsQa = ({ trafficSignData }: CataloguePageProps) => {
   const { focuses } = useParamFocus()
   const { qaFilter } = useParamTaggingQa()
 
+  const focusCounts = useMemo(() => countSignsByFocus(trafficSignData), [trafficSignData])
   const focusFilteredSigns = filterSignsByFocus(trafficSignData, focuses)
   const qaCounts = countSignsByTaggingSuggestionsQa(focusFilteredSigns)
   const displayedSigns = filterSignsByTaggingSuggestionsQa(focusFilteredSigns, qaFilter)
@@ -27,7 +30,7 @@ export const PageSignsQa = ({ trafficSignData }: CataloguePageProps) => {
       <p>{m.page_tagging_qa_description()}</p>
 
       <div className="mt-6 flex flex-col gap-3">
-        <FocusFilterRow />
+        <FocusFilterRow counts={focusCounts} />
         <TaggingQaFilterRow counts={qaCounts} />
       </div>
 

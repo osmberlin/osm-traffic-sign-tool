@@ -1,99 +1,172 @@
 import { PackageSvgTrafficSign } from '@app/app/(signs)/_components/PackageSvgTrafficSign'
+import { FocusFilterRow } from '@app/app/(signs)/_components/PageApp/signGroups/FocusFilterRow'
+import osmWikiLogo from '@app/app/(signs)/_components/PageWikiComparison/assets/osm-wiki-logo.svg'
+import { WikiComparisonFilterRow } from '@app/app/(signs)/_components/PageWikiComparison/WikiComparisonFilterRow'
+import {
+  countWikiRowsByFocus,
+  countWikiRowsByStatus,
+  enrichWikiSigns,
+  filterWikiRowsByFocus,
+  filterWikiRowsByStatus,
+  isWikiRowMissingInCatalogue,
+  type WikiComparisonStatusFilter,
+} from '@app/app/(signs)/_components/PageWikiComparison/wikiComparisonFilters'
+import { buildWikiSignGithubIssueUrl } from '@app/app/(signs)/_components/PageWikiComparison/wikiComparisonIssueFormat'
+import { WikiComparisonPageIntro } from '@app/app/(signs)/_components/PageWikiComparison/WikiComparisonPageIntro'
 import { WikiComparisonTablelize } from '@app/app/(signs)/_components/PageWikiComparison/WikiComparisonTablelize'
+import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
+import { CataloguePageProps } from '@app/app/(signs)/_components/types'
+import appLogo from '@app/app/_components/layout/assets/logo.svg'
 import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
 import {
   ContentTable,
   ContentTableBody,
   ContentTableCell,
-  ContentTableHead,
   ContentTableHeader,
   ContentTableRow,
 } from '@app/app/_components/layout/ContentTable'
+import { buttonStyle } from '@app/app/_components/links/buttonStyles'
+import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
-import { getTrafficSignsWiki, type WikiSign } from '@internal/wiki'
-import { SignStateType, trafficSignTagToSigns } from '@osm-traffic-signs/converter'
+import { getTrafficSignsWiki } from '@internal/wiki'
 import { clsx } from 'clsx'
+import { Fragment, useMemo, useState } from 'react'
 
-export const PageWikiComparison = () => {
+const WikiComparisonColumnHeader = ({ logoSrc, label }: { logoSrc: string; label: string }) => (
+  <span className="inline-flex items-center gap-2">
+    <img src={logoSrc} alt="" width={20} height={20} className="size-5 shrink-0" />
+    <span>{label}</span>
+  </span>
+)
+
+const wikiComparisonBlockHeaderClassName = (rowIndex: number) =>
+  clsx('w-1/2 !border-b !border-stone-400/40 !py-1.5', rowIndex > 0 && '!pt-4')
+
+const wikiComparisonRowCellClassName = (rowIndex: number) =>
+  clsx('relative !border-b-2 !border-stone-500/50 !py-2 !pb-4')
+
+export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {
   const countryPrefix = useCurrentLang()
-  const innerTrafficSignsWiki: (WikiSign & { toolSign?: SignStateType })[] = structuredClone(
-    getTrafficSignsWiki(countryPrefix),
+  const { focuses } = useParamFocus()
+  const [statusFilter, setStatusFilter] = useState<WikiComparisonStatusFilter>('all')
+
+  const wikiRows = useMemo(
+    () => enrichWikiSigns(getTrafficSignsWiki(countryPrefix), countryPrefix),
+    [countryPrefix],
   )
-  let missingSignCount = 0
-  for (const sign of innerTrafficSignsWiki) {
-    const cleanSign = sign.sign.replace('traffic_sign', '')
-    sign.toolSign = trafficSignTagToSigns(cleanSign, countryPrefix).at(0)
-    if (!sign.toolSign) {
-      missingSignCount++
-    }
-  }
+
+  const focusCounts = useMemo(
+    () => countWikiRowsByFocus(wikiRows, trafficSignData),
+    [wikiRows, trafficSignData],
+  )
+
+  const focusFilteredRows = useMemo(
+    () => filterWikiRowsByFocus(wikiRows, trafficSignData, focuses),
+    [wikiRows, trafficSignData, focuses],
+  )
+
+  const statusCounts = useMemo(() => countWikiRowsByStatus(focusFilteredRows), [focusFilteredRows])
+
+  const displayedRows = useMemo(
+    () => filterWikiRowsByStatus(focusFilteredRows, statusFilter),
+    [focusFilteredRows, statusFilter],
+  )
+
+  const missingCount = statusCounts.missing
 
   return (
-    <ContentPageLayout>
-      <h2 className="my-4 text-3xl font-light text-black uppercase">
-        {m.wiki_title_counts({
-          total: String(innerTrafficSignsWiki.length),
-          missing: String(missingSignCount),
-        })}
-      </h2>
-      <p>{m.wiki_page_intro()}</p>
+    <ContentPageLayout intro={<WikiComparisonPageIntro />}>
+      <div className="mt-2 flex flex-col gap-3">
+        <FocusFilterRow counts={focusCounts} />
+        <WikiComparisonFilterRow
+          counts={statusCounts}
+          statusFilter={statusFilter}
+          onStatusFilterChange={setStatusFilter}
+        />
+      </div>
 
-      <ContentTable>
-        <ContentTableHead>
-          <ContentTableRow>
-            <ContentTableHeader className="w-[12%]">Sign key</ContentTableHeader>
-            <ContentTableHeader className="w-[44%]">Wiki Data</ContentTableHeader>
-            <ContentTableHeader className="w-[44%]">Package Data</ContentTableHeader>
-          </ContentTableRow>
-        </ContentTableHead>
+      <p className="mt-4 text-sm text-stone-700">
+        {m.page_wiki_qa_showing({
+          shown: String(displayedRows.length),
+          filtered: String(focusFilteredRows.length),
+          missing: String(missingCount),
+        })}
+      </p>
+
+      <ContentTable className="!mt-6 text-xs leading-tight">
         <ContentTableBody>
-          {innerTrafficSignsWiki.map((sign) => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          {displayedRows.map((sign, rowIndex) => {
             const { toolSign, imageSvg: _, ...restsign } = sign
+            const isMissing = isWikiRowMissingInCatalogue(sign)
+            const blockHeaderClassName = wikiComparisonBlockHeaderClassName(rowIndex)
+            const rowCellClassName = wikiComparisonRowCellClassName(rowIndex)
+            const rowClassName = clsx(isMissing ? 'bg-amber-300' : '')
+
             return (
-              <ContentTableRow
-                key={sign.sign}
-                className={clsx(sign?.toolSign ? '' : 'bg-amber-300')}
-              >
-                <ContentTableHeader className="space-y-3 text-center">
-                  <code>{sign.sign}</code>
-                </ContentTableHeader>
-                <ContentTableCell className="relative">
-                  {restsign ? (
-                    <>
-                      {sign?.imageSvg ? (
-                        <img
-                          height={100}
-                          width={100}
-                          src={sign?.imageSvg}
-                          alt={sign.name}
-                          className="absolute top-1 right-1 size-20"
-                          title="Image from source URL"
-                        />
-                      ) : (
-                        <span className="inline-block text-amber-700">Missing</span>
-                      )}
-                      <WikiComparisonTablelize key={restsign.sign} data={restsign} />
-                    </>
-                  ) : (
-                    <small className="text-amber-700">MISSING</small>
-                  )}
-                </ContentTableCell>
-                <ContentTableCell className="relative">
-                  {toolSign?.recodgnizedSign ? (
-                    <>
-                      <PackageSvgTrafficSign
-                        sign={toolSign}
-                        className="absolute top-1 right-1 size-20"
+              <Fragment key={sign.sign}>
+                <ContentTableRow className={rowClassName}>
+                  <ContentTableHeader className={blockHeaderClassName}>
+                    <div className="flex items-center justify-between gap-2">
+                      <WikiComparisonColumnHeader
+                        logoSrc={appLogo}
+                        label={m.page_wiki_qa_col_tool()}
                       />
-                      <WikiComparisonTablelize key={toolSign.osmValuePart} data={toolSign} />
-                    </>
-                  ) : (
-                    <p className="text-center text-2xl font-semibold text-pink-700">MISSING</p>
-                  )}
-                </ContentTableCell>
-              </ContentTableRow>
+                      <ExternalLink
+                        href={buildWikiSignGithubIssueUrl(sign, toolSign)}
+                        className={clsx(buttonStyle, 'shrink-0')}
+                        blank
+                      >
+                        {m.wiki_open_github_issue()}
+                      </ExternalLink>
+                    </div>
+                  </ContentTableHeader>
+                  <ContentTableHeader className={blockHeaderClassName}>
+                    <WikiComparisonColumnHeader
+                      logoSrc={osmWikiLogo}
+                      label={m.page_wiki_qa_col_wiki()}
+                    />
+                  </ContentTableHeader>
+                </ContentTableRow>
+                <ContentTableRow className={rowClassName}>
+                  <ContentTableCell className={rowCellClassName}>
+                    {toolSign?.recodgnizedSign ? (
+                      <>
+                        <PackageSvgTrafficSign
+                          sign={toolSign}
+                          className="absolute top-1 right-1 h-14 w-14 object-contain"
+                        />
+                        <WikiComparisonTablelize
+                          key={toolSign.osmValuePart}
+                          data={toolSign}
+                          compact
+                        />
+                      </>
+                    ) : (
+                      <p className="text-center text-lg font-semibold text-pink-700">MISSING</p>
+                    )}
+                  </ContentTableCell>
+                  <ContentTableCell className={rowCellClassName}>
+                    {restsign ? (
+                      <>
+                        {sign?.imageSvg ? (
+                          <img
+                            src={sign?.imageSvg}
+                            alt={sign.name}
+                            className="absolute top-1 right-1 h-14 w-14 object-contain"
+                            title="Image from source URL"
+                          />
+                        ) : (
+                          <span className="inline-block text-amber-700">Missing</span>
+                        )}
+                        <WikiComparisonTablelize key={restsign.sign} data={restsign} compact />
+                      </>
+                    ) : (
+                      <small className="text-amber-700">MISSING</small>
+                    )}
+                  </ContentTableCell>
+                </ContentTableRow>
+              </Fragment>
             )
           })}
         </ContentTableBody>

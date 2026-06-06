@@ -60,10 +60,19 @@ export const generateWikiSnapshotForCountry = async (
   return dedupeWikiSigns(allSigns)
 }
 
+const wikiSnapshotMetaPath = (countryPrefix: CountryPrefixType) =>
+  wikiSnapshotPath(countryPrefix).replace(/trafficSignsWiki_/, 'wikiSnapshotMeta_')
+
 export const writeWikiSnapshot = async (countryPrefix: string, signs: WikiSign[]) => {
-  const outputPath = wikiSnapshotPath(countryPrefix as CountryPrefixType)
+  const prefix = countryPrefix as CountryPrefixType
+  const outputPath = wikiSnapshotPath(prefix)
   await Bun.write(outputPath, JSON.stringify(signs, null, 2))
   console.log(`Wrote ${signs.length} signs to ${outputPath}`)
+
+  const metaPath = wikiSnapshotMetaPath(prefix)
+  const meta = { parsedAt: new Date().toISOString() }
+  await Bun.write(metaPath, `${JSON.stringify(meta, null, 2)}\n`)
+  console.log(`Wrote snapshot meta to ${metaPath}`)
 }
 
 const main = async () => {

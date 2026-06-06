@@ -8,3 +8,7 @@
 # Package
 /node_modules
 /dist
+
+# Accidental copies from mis-run copyfiles/cp (wrong cwd or destination)
+/packages
+/apps

@@ -122,14 +122,16 @@ export const QuestionQaSignDetail = ({ sign, task, onTaskChange }: Props) => {
         </ContentTable>
       )}
 
-      <details className="rounded-sm outline -outline-offset-1 outline-stone-400/50">
-        <summary className="cursor-pointer px-2 py-1.5 text-sm font-medium text-stone-700">
-          {m.page_all_signs_raw_config()}
-        </summary>
-        <pre className={contentPreClass} lang={catalogueLang}>
-          {JSON.stringify(sign.questions ?? null, undefined, 2)}
-        </pre>
-      </details>
+      {questions.length > 0 ? (
+        <details className="rounded-sm outline -outline-offset-1 outline-stone-400/50">
+          <summary className="cursor-pointer px-2 py-1.5 text-sm font-medium text-stone-700">
+            {m.page_all_signs_raw_config()}
+          </summary>
+          <pre className={contentPreClass} lang={catalogueLang}>
+            {JSON.stringify(sign.questions, undefined, 2)}
+          </pre>
+        </details>
+      ) : null}
 
       <div className="border-t border-stone-200 pt-4">
         <label className="mb-2 block text-sm font-medium text-stone-700">
