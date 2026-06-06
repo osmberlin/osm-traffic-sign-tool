@@ -5,9 +5,9 @@ import {
 } from '@app/app/(signs)/_components/PageQuestionsQa/QuestionQaSignDetail'
 import { QuestionQaSignPicker } from '@app/app/(signs)/_components/PageQuestionsQa/QuestionQaSignPicker'
 import { QuestionQaTaskResults } from '@app/app/(signs)/_components/PageQuestionsQa/QuestionQaTaskResults'
+import { QuestionsQaPageIntro } from '@app/app/(signs)/_components/PageQuestionsQa/QuestionsQaPageIntro'
 import {
   collectQuestionTaskEntries,
-  emptyQuestionTaskState,
   type QuestionTaskState,
 } from '@app/app/(signs)/_components/PageQuestionsQa/questionsQaTaskFormat'
 import { useParamCombinationPrimary } from '@app/app/(signs)/_components/store/useParamCombinationPrimary.search'
@@ -78,28 +78,8 @@ export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
   }
 
   return (
-    <ContentPageLayout>
-      <h2 className="my-4 text-3xl font-light text-black uppercase">
-        {m.page_questions_qa_title()}
-      </h2>
-      <div className="space-y-4">
-        <div>
-          <h3 className="mb-1 text-sm font-medium text-stone-900">
-            {m.page_questions_qa_about_label()}
-          </h3>
-          <p>{m.page_questions_qa_about_text()}</p>
-        </div>
-        <div>
-          <h3 className="mb-1 text-sm font-medium text-stone-900">
-            {m.page_questions_qa_help_label()}
-          </h3>
-          <p>{m.page_questions_qa_help_text()}</p>
-        </div>
-      </div>
-
-      <div className="mt-6">
-        <FocusFilterRow />
-      </div>
+    <ContentPageLayout intro={<QuestionsQaPageIntro />}>
+      <FocusFilterRow />
 
       <QuestionQaTaskResults entries={taskEntries} />
 
