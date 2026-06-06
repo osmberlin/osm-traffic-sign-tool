@@ -26,18 +26,32 @@ vi.mock('@app/src/features/routing/useCurrentLang', () => ({
   useCurrentLang: () => 'DE',
 }))
 
-const navigate = vi.hoisted(() => vi.fn())
 const writeCataloguePreference = vi.hoisted(() => vi.fn())
 
 vi.mock('@tanstack/react-router', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@tanstack/react-router')>()
   return {
     ...actual,
-    useNavigate: () => navigate,
+    Link: ({
+      to,
+      params,
+      children,
+      onClick,
+      ...rest
+    }: {
+      to: string
+      params?: { lang?: string }
+      children: React.ReactNode
+      onClick?: () => void
+    }) => (
+      <a href={params?.lang ? `/${params.lang}` : to} onClick={onClick} {...rest}>
+        {children}
+      </a>
+    ),
     useRouterState: (options?: {
-      select?: (state: { location: { pathname: string } }) => unknown
+      select?: (state: { location: { pathname: string; search?: unknown } }) => unknown
     }) => {
-      const state = { location: { pathname: pathname() } }
+      const state = { location: { pathname: pathname(), search: undefined } }
       return options?.select ? options.select(state) : state
     },
   }
@@ -74,27 +88,29 @@ describe('FloatingLanguageSwitcher', () => {
     expect(setUiLocale).toHaveBeenCalledWith('de')
   })
 
-  test('selecting catalogue writes preference and navigates', async () => {
+  test('selecting catalogue writes preference and links to the target catalogue', async () => {
     const user = userEvent.setup()
     render(<FloatingLanguageSwitcher />)
 
     await user.click(screen.getAllByRole('button', { name: /change language/i })[0])
-    await user.click(screen.getByRole('button', { name: /belgian traffic signs/i }))
+    const belgianLink = screen.getByRole('link', { name: /belgian traffic signs/i })
+
+    expect(belgianLink.getAttribute('href')).toBe('/BE')
+    await user.click(belgianLink)
 
     expect(writeCataloguePreference).toHaveBeenCalledWith('BE')
-    expect(navigate).toHaveBeenCalledWith({ href: '/BE', search: undefined })
   })
 
-  test('selecting catalogue preserves the current sub-route', async () => {
+  test('catalogue links preserve the current sub-route', async () => {
     pathname.mockReturnValue('/DE/signs-qa')
     const user = userEvent.setup()
     render(<FloatingLanguageSwitcher />)
 
     await user.click(screen.getAllByRole('button', { name: /change language/i })[0])
-    await user.click(screen.getByRole('button', { name: /belgian traffic signs/i }))
 
-    expect(writeCataloguePreference).toHaveBeenCalledWith('BE')
-    expect(navigate).toHaveBeenCalledWith({ href: '/BE/signs-qa', search: undefined })
+    expect(screen.getByRole('link', { name: /belgian traffic signs/i }).getAttribute('href')).toBe(
+      '/BE/signs-qa',
+    )
   })
 
   test('on catalogue picker route no catalogue is pre-selected', async () => {
@@ -107,22 +123,24 @@ describe('FloatingLanguageSwitcher', () => {
     const catalogueHeading = screen.getByRole('heading', { name: /sign catalogue/i })
     const catalogueSection = catalogueHeading.closest('section')
     expect(catalogueSection).toBeTruthy()
-    const selectedCatalogueButtons = within(catalogueSection!)
-      .getAllByRole('button')
-      .filter((button) => button.getAttribute('aria-current') === 'true')
+    const selectedCatalogueItems = within(catalogueSection!)
+      .getAllByRole('link')
+      .filter((link) => link.getAttribute('aria-current') === 'true')
 
-    expect(selectedCatalogueButtons).toHaveLength(0)
+    expect(selectedCatalogueItems).toHaveLength(0)
   })
 
-  test('on catalogue picker route selecting the default catalogue still navigates', async () => {
+  test('on catalogue picker route catalogue links target the selected country', async () => {
     pathname.mockReturnValue('/')
     const user = userEvent.setup()
     render(<FloatingLanguageSwitcher />)
 
     await user.click(screen.getAllByRole('button', { name: /change language/i })[0])
-    await user.click(screen.getByRole('button', { name: /german traffic signs/i }))
+    const germanLink = screen.getByRole('link', { name: /german traffic signs/i })
+
+    expect(germanLink.getAttribute('href')).toBe('/DE')
+    await user.click(germanLink)
 
     expect(writeCataloguePreference).toHaveBeenCalledWith('DE')
-    expect(navigate).toHaveBeenCalledWith({ to: '/$lang', params: { lang: 'DE' } })
   })
 })

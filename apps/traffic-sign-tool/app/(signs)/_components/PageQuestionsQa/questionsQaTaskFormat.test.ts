@@ -39,8 +39,8 @@ const baseSign = {
 describe('questionsQaTaskFormat', () => {
   test('collectQuestionTaskEntries and format', () => {
     const tasks = new Map([
-      ['237', { addSuggestions: true, suggestionNotes: 'Add default for surface colour' }],
-      ['999', { addSuggestions: false, suggestionNotes: '' }],
+      ['237', { suggestionNotes: 'Add default for surface colour' }],
+      ['999', { suggestionNotes: '' }],
     ])
 
     const signs: SignType[] = [

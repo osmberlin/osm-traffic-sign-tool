@@ -53,13 +53,6 @@ export const QuestionQaSignDetail = ({ sign, task, onTaskChange }: Props) => {
   const catalogueLang = useCatalogueHtmlLang()
   const questions = sign.questions ?? []
 
-  const setAddSuggestions = (checked: boolean) => {
-    onTaskChange(sign.osmValuePart, {
-      ...task,
-      addSuggestions: checked,
-    })
-  }
-
   const setNotes = (suggestionNotes: string) => {
     onTaskChange(sign.osmValuePart, { ...task, suggestionNotes })
   }
@@ -138,25 +131,16 @@ export const QuestionQaSignDetail = ({ sign, task, onTaskChange }: Props) => {
       </details>
 
       <div className="border-t border-stone-200 pt-4">
-        <p className="mb-2 text-sm font-medium text-stone-700">{m.questions_qa_table_task()}</p>
-        <label className="flex cursor-pointer items-start gap-2 text-sm">
-          <input
-            type="checkbox"
-            checked={task.addSuggestions}
-            onChange={(event) => setAddSuggestions(event.target.checked)}
-            className="mt-0.5 size-4 shrink-0 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-          />
-          <span>{m.questions_qa_task_add_suggestions()}</span>
+        <label className="mb-2 block text-sm font-medium text-stone-700">
+          {m.questions_qa_table_task()}
         </label>
-        {task.addSuggestions && (
-          <textarea
-            placeholder={m.questions_qa_task_notes_placeholder()}
-            value={task.suggestionNotes}
-            onChange={(event) => setNotes(event.target.value)}
-            rows={4}
-            className="mt-3 block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-          />
-        )}
+        <textarea
+          placeholder={m.questions_qa_task_notes_placeholder()}
+          value={task.suggestionNotes}
+          onChange={(event) => setNotes(event.target.value)}
+          rows={4}
+          className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+        />
       </div>
     </section>
   )

@@ -31,13 +31,14 @@ const iconicSignLoaderMaps = {
 
 describe('countryCatalogueMeta', () => {
   test('contains DE catalogue metadata with full QA', () => {
-    expect(countryCatalogueMeta.DE.maturity).toBe('alpha')
+    expect(countryCatalogueMeta.DE.maturity).toBe('stable')
     expect(countryCatalogueMeta.DE.qaCapabilities.wikiComparison).toBe(true)
     expect(countryCatalogueMeta.DE.qaCapabilities.taginfoComparison).toBe(true)
   })
 
-  test('all sign catalogues are alpha', () => {
+  test('non-DE sign catalogues are alpha', () => {
     for (const prefix of countries) {
+      if (prefix === 'DE') continue
       expect(getCatalogueMaturity(prefix)).toBe('alpha')
       expect(isVisibleMaturity(getCatalogueMaturity(prefix))).toBe(true)
     }

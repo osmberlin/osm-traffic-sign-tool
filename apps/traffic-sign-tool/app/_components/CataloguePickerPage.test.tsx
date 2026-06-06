@@ -16,7 +16,6 @@ beforeAll(() => {
 })
 
 const writeCataloguePreference = vi.hoisted(() => vi.fn())
-const navigate = vi.hoisted(() => vi.fn())
 
 vi.mock('@app/app/_components/i18n/CatalogueIconicSign', () => ({
   CatalogueIconicSign: ({ countryPrefix }: { countryPrefix: string }) => (
@@ -32,7 +31,22 @@ vi.mock('@tanstack/react-router', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@tanstack/react-router')>()
   return {
     ...actual,
-    useNavigate: () => navigate,
+    Link: ({
+      to,
+      params,
+      children,
+      onClick,
+      ...rest
+    }: {
+      to: string
+      params?: { lang?: string }
+      children: React.ReactNode
+      onClick?: () => void
+    }) => (
+      <a href={params?.lang ? `/${params.lang}` : to} onClick={onClick} {...rest}>
+        {children}
+      </a>
+    ),
     useSearch: () => ({}),
   }
 })
@@ -43,24 +57,19 @@ afterEach(() => {
 })
 
 describe('CataloguePickerPage', () => {
-  test('renders catalogue options', () => {
+  test('renders catalogue options as links', () => {
     render(<CataloguePickerPage />)
     expect(screen.getByRole('heading', { name: /choose a sign catalogue/i })).toBeTruthy()
-    expect(screen.getByRole('button', { name: /german traffic signs/i })).toBeTruthy()
-    expect(screen.getByRole('button', { name: /belgian traffic signs/i })).toBeTruthy()
+    expect(screen.getByRole('link', { name: /german traffic signs/i })).toBeTruthy()
+    expect(screen.getByRole('link', { name: /belgian traffic signs/i })).toBeTruthy()
   })
 
-  test('selecting a catalogue writes preference and navigates', async () => {
+  test('selecting a catalogue writes preference', async () => {
     const user = userEvent.setup()
     render(<CataloguePickerPage />)
 
-    await user.click(screen.getByRole('button', { name: /german traffic signs/i }))
+    await user.click(screen.getByRole('link', { name: /german traffic signs/i }))
 
     expect(writeCataloguePreference).toHaveBeenCalledWith('DE')
-    expect(navigate).toHaveBeenCalledWith({
-      to: '/$lang',
-      params: { lang: 'DE' },
-      search: {},
-    })
   })
 })

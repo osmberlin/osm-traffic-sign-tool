@@ -5,7 +5,7 @@ export const catalogueMetaDE = {
   countryPrefix: 'DE',
   iconicSignOsmValuePart: '239',
   catalogueName: 'German traffic signs',
-  maturity: 'alpha',
+  maturity: 'stable',
   osmTrafficSignPrefix: 'DE',
   catalogueLocale: 'de',
   defaultCommentLang: 'de',

@@ -2,6 +2,7 @@ import { CatalogueIconicSign } from '@app/app/_components/i18n/CatalogueIconicSi
 import { LangSwitcherOption } from '@app/app/_components/i18n/LangSwitcherOption'
 import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
+import { getLocale } from '@app/paraglide/runtime'
 import {
   countries,
   getCatalogueDisplayName,
@@ -10,9 +11,16 @@ import {
   type CountryPrefixType,
 } from '@osm-traffic-signs/converter'
 
+export type CatalogueOptionLinkProps = {
+  linkTo: string
+  linkParams?: Record<string, string>
+  linkSearch?: Record<string, unknown>
+}
+
 type CatalogueOptionListProps = {
   selectedCountry?: CountryPrefixType | null
-  onSelect: (countryPrefix: CountryPrefixType) => void
+  getLinkProps: (countryPrefix: CountryPrefixType) => CatalogueOptionLinkProps
+  onNavigate?: (countryPrefix: CountryPrefixType) => void
   badgeMode: 'prefix' | 'iconic'
 }
 
@@ -23,41 +31,53 @@ const getCatalogueLabel = (countryPrefix: CountryPrefixType) =>
 
 export const CatalogueOptionList = ({
   selectedCountry,
-  onSelect,
+  getLinkProps,
+  onNavigate,
   badgeMode,
 }: CatalogueOptionListProps) => {
   return (
     <ul className="space-y-1">
-      {countries.map((countryPrefix) => {
-        const label = getCatalogueLabel(countryPrefix)
-        const catalogueMaturity = getCatalogueMaturity(countryPrefix)
-        return (
-          <LangSwitcherOption
-            key={countryPrefix}
-            badge={
-              badgeMode === 'iconic' ? (
-                <CatalogueIconicSign
-                  countryPrefix={countryPrefix}
-                  className="size-9 object-contain"
-                />
-              ) : (
-                countryPrefix
-              )
-            }
-            ariaLabel={label}
-            label={
-              <span className="flex flex-wrap items-center gap-2">
-                <span>{label}</span>
-                {isVisibleMaturity(catalogueMaturity) ? (
-                  <MaturityLabel maturity={catalogueMaturity} />
-                ) : null}
-              </span>
-            }
-            isSelected={selectedCountry != null && selectedCountry === countryPrefix}
-            onClick={() => onSelect(countryPrefix)}
-          />
+      {[...countries]
+        .sort((a, b) =>
+          getCatalogueLabel(a).localeCompare(getCatalogueLabel(b), getLocale(), {
+            sensitivity: 'base',
+          }),
         )
-      })}
+        .map((countryPrefix) => {
+          const label = getCatalogueLabel(countryPrefix)
+          const catalogueMaturity = getCatalogueMaturity(countryPrefix)
+          const { linkTo, linkParams, linkSearch } = getLinkProps(countryPrefix)
+          return (
+            <LangSwitcherOption
+              key={countryPrefix}
+              badgeVariant={badgeMode === 'iconic' ? 'plain' : 'boxed'}
+              badge={
+                badgeMode === 'iconic' ? (
+                  <CatalogueIconicSign
+                    countryPrefix={countryPrefix}
+                    className="size-9 object-contain"
+                  />
+                ) : (
+                  countryPrefix
+                )
+              }
+              ariaLabel={label}
+              label={
+                <span className="flex w-full items-center justify-between gap-2">
+                  <span>{label}</span>
+                  {isVisibleMaturity(catalogueMaturity) ? (
+                    <MaturityLabel maturity={catalogueMaturity} />
+                  ) : null}
+                </span>
+              }
+              isSelected={selectedCountry != null && selectedCountry === countryPrefix}
+              linkTo={linkTo}
+              linkParams={linkParams}
+              linkSearch={linkSearch}
+              onNavigate={() => onNavigate?.(countryPrefix)}
+            />
+          )
+        })}
     </ul>
   )
 }

@@ -54,7 +54,7 @@ export const Header = () => {
         <details
           open={isAboutOpen}
           onToggle={(event) => setAboutOpen(event.currentTarget.open)}
-          className="my-5 self-center leading-tight text-stone-300"
+          className="my-5 self-center leading-relaxed text-stone-300"
         >
           <summary className="cursor-pointer text-center underline-offset-2 hover:underline">
             {m.header_about_summary()}
@@ -67,7 +67,7 @@ export const Header = () => {
                 <br />
               </>
             ) : null}
-            {m.header_about_body({ trafficSignTag: 'traffic_sign=*' })} <br />
+            {m.header_about_body({ trafficSignTag: 'traffic_sign=*' })}{' '}
             <strong>{m.header_about_review()}</strong>
             <br />
             <ExternalLink blank href="https://github.com/osmberlin/osm-traffic-sign-tool">

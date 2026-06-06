@@ -1,12 +1,14 @@
 import { useParamAnswers } from '@app/app/(signs)/_components/store/useParamAnswers.search'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { MoreLinkButton } from '@app/app/_components/links/MoreLinkButton'
+import { MaturityLinkBadge } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
 import {
   formatQuestionAnswerTags,
   getQuestionAnswerShortLabel,
   getQuestionPromptShortLabel,
 } from '@app/src/features/i18n/questionLabels'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import {
   collectSignQuestionGroups,
   namedTrafficSignValues,
@@ -154,6 +156,7 @@ const QuestionAccordionItem = ({
 )
 
 export const ResultQuestions = () => {
+  const lang = useCurrentLang()
   const { countryPrefix } = useCountryPrefix()
   const { paramSigns } = useParamSigns()
   const { paramAnswers } = useParamAnswers()
@@ -167,7 +170,10 @@ export const ResultQuestions = () => {
 
   return (
     <section className="mb-4 md:mb-6">
-      <h2 className="mb-2.5 text-lg font-light uppercase md:mb-3">{m.questions_heading()}</h2>
+      <h2 className="mb-2.5 flex flex-wrap items-center gap-2 text-lg font-light uppercase md:mb-3">
+        {m.questions_heading()}
+        <MaturityLinkBadge maturity="beta" lang={lang} tooltip={m.questions_beta_tooltip()} />
+      </h2>
       <div className="overflow-hidden rounded-sm border border-stone-500/50">
         {questionGroups.map(({ equivalenceKey, question, signOsmValueParts }) => {
           const effectiveAnswerId = resolveGroupedEffectiveAnswerId(

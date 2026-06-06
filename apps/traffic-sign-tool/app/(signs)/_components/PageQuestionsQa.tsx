@@ -68,7 +68,7 @@ export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
   const handleTaskChange = (osmValuePart: string, task: QuestionTaskState) => {
     setTasks((prev) => {
       const next = new Map(prev)
-      if (!task.addSuggestions && !task.suggestionNotes.trim()) {
+      if (!task.suggestionNotes.trim()) {
         next.delete(osmValuePart)
       } else {
         next.set(osmValuePart, task)
@@ -82,7 +82,20 @@ export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
       <h2 className="my-4 text-3xl font-light text-black uppercase">
         {m.page_questions_qa_title()}
       </h2>
-      <p>{m.page_questions_qa_description()}</p>
+      <div className="space-y-4">
+        <div>
+          <h3 className="mb-1 text-sm font-medium text-stone-900">
+            {m.page_questions_qa_about_label()}
+          </h3>
+          <p>{m.page_questions_qa_about_text()}</p>
+        </div>
+        <div>
+          <h3 className="mb-1 text-sm font-medium text-stone-900">
+            {m.page_questions_qa_help_label()}
+          </h3>
+          <p>{m.page_questions_qa_help_text()}</p>
+        </div>
+      </div>
 
       <div className="mt-6">
         <FocusFilterRow />

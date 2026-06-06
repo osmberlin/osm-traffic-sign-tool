@@ -1,6 +1,9 @@
 import { PageApp } from '@app/app/(signs)/_components/PageApp'
 import * as m from '@app/paraglide/messages'
-import { answersSearchEqual, serializeAnswersParam } from '@app/src/features/searchParams/answersParam'
+import {
+  answersSearchEqual,
+  serializeAnswersParam,
+} from '@app/src/features/searchParams/answersParam'
 import { resolveMergedAnswers } from '@app/src/features/searchParams/answersStorage'
 import { deSearchSchema, parseSignsParam } from '@app/src/features/searchParams/deSearch'
 import { buildPageHead, catalogueHomeUrl, hasDeSearchParams } from '@app/src/features/seo/seoHead'

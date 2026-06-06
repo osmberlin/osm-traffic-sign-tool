@@ -9,8 +9,7 @@ import { isCataloguePickerRoute } from '@app/src/features/routing/isCataloguePic
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { LanguageIcon } from '@heroicons/react/24/outline'
-import { type CountryPrefixType } from '@osm-traffic-signs/converter'
-import { useNavigate, useRouterState } from '@tanstack/react-router'
+import { useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import { LangSwitcherOption } from './LangSwitcherOption'
 
@@ -22,20 +21,6 @@ export const FloatingLanguageSwitcher = () => {
   const search = useRouterState({ select: (state) => state.location.search })
   const onCataloguePicker = isCataloguePickerRoute(pathname)
   const selectedCountry = onCataloguePicker ? null : signConfigLang
-  const navigate = useNavigate({ from: '/$lang' })
-
-  const handleCatalogueSelect = (countryPrefix: CountryPrefixType, close: () => void) => {
-    if (!onCataloguePicker && countryPrefix === signConfigLang) {
-      return
-    }
-    writeCataloguePreference(countryPrefix)
-    if (onCataloguePicker) {
-      navigate({ to: '/$lang', params: { lang: countryPrefix } })
-    } else {
-      navigate({ href: buildCatalogueSwitchPath(signConfigLang, countryPrefix, pathname), search })
-    }
-    close()
-  }
 
   const handleUiLocaleSelect = (locale: UiLocale, close: () => void) => {
     if (locale === uiLocale) {
@@ -72,7 +57,22 @@ export const FloatingLanguageSwitcher = () => {
                   </h3>
                   <CatalogueOptionList
                     selectedCountry={selectedCountry}
-                    onSelect={(countryPrefix) => handleCatalogueSelect(countryPrefix, close)}
+                    getLinkProps={(countryPrefix) =>
+                      onCataloguePicker
+                        ? { linkTo: '/$lang', linkParams: { lang: countryPrefix } }
+                        : {
+                            linkTo: buildCatalogueSwitchPath(
+                              signConfigLang,
+                              countryPrefix,
+                              pathname,
+                            ),
+                            linkSearch: search,
+                          }
+                    }
+                    onNavigate={(countryPrefix) => {
+                      writeCataloguePreference(countryPrefix)
+                      close()
+                    }}
                     badgeMode="prefix"
                   />
                 </section>

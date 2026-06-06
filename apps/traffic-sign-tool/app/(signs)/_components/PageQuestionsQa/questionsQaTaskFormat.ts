@@ -7,12 +7,10 @@ import type { SignQuestion, SignType } from '@osm-traffic-signs/converter'
 import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
 
 export type QuestionTaskState = {
-  addSuggestions: boolean
   suggestionNotes: string
 }
 
 export const emptyQuestionTaskState = (): QuestionTaskState => ({
-  addSuggestions: false,
   suggestionNotes: '',
 })
 
@@ -37,7 +35,7 @@ export const collectQuestionTaskEntries = (
 
   for (const sign of signs) {
     const state = tasks.get(sign.osmValuePart)
-    if (!state?.addSuggestions) {
+    if (!state?.suggestionNotes.trim()) {
       continue
     }
 
