@@ -8,19 +8,18 @@ describe('signImage', () => {
     expect(isSignImageSource('missing')).toBe(false)
   })
 
-  test('normalizes legacy availability flag to missing', () => {
-    const legacy = {
+  test('normalizeSignImage is identity for catalogue images', () => {
+    const remote = {
       kind: 'remote' as const,
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Brasil_A-49a.svg',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Brasil_A-48.svg',
       licence: 'Public Domain' as const,
-      availability: 'missing' as const,
     }
 
-    expect(isSignImageMissing(legacy)).toBe(true)
-    expect(normalizeSignImage(legacy)).toBe('missing')
+    expect(normalizeSignImage(remote)).toBe(remote)
+    expect(normalizeSignImage('missing')).toBe('missing')
   })
 
-  test('transformToSignState strips remote image metadata for missing signs', () => {
+  test('transformToSignState keeps missing image literal', () => {
     const sign = {
       osmValuePart: 'A-49a',
       signId: 'A-49a',

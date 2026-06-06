@@ -21,8 +21,7 @@ export const Route = createFileRoute('/$lang/questions-qa')({
     const catalogueName = getCatalogueLabel(countryPrefix)
     return buildNoindexPageHead(m.page_questions_qa_title({ catalogueName, countryPrefix }))
   },
-  loader: ({ context }): SignType[] =>
-    countryDefinitions[context.countryPrefix as CountryPrefixType],
+  loader: ({ context }) => countryDefinitions[context.countryPrefix as CountryPrefixType],
   validateSearch: deSearchSchema,
   component: LangQuestionsQaRouteComponent,
 })

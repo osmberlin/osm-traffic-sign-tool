@@ -51,9 +51,5 @@ export default defineConfig({
     '**/dist/**',
     '**/coverage/**',
     'apps/traffic-sign-tool/src/routeTree.gen.ts',
-    // oxlint 1.65 react-compiler ICE (Cannot emit the same block twice)
-    '**/PageQuestionsQa.tsx',
-    '**/TagRecommendations.tsx',
-    '**/TaginfoRecommendations.tsx',
   ],
 })

@@ -24,8 +24,7 @@ export const Route = createFileRoute('/$lang/check-sign-combinations')({
     const catalogueName = getCatalogueLabel(countryPrefix)
     return buildNoindexPageHead(m.page_combinations_qa_title({ catalogueName, countryPrefix }))
   },
-  loader: ({ context }): SignType[] =>
-    countryDefinitions[context.countryPrefix as CountryPrefixType],
+  loader: ({ context }) => countryDefinitions[context.countryPrefix as CountryPrefixType],
   validateSearch: deSearchSchema,
   component: LangCheckSignCombinationsRouteComponent,
 })
