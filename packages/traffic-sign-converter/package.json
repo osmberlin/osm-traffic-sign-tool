@@ -64,10 +64,11 @@
     "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
     "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
     "lint": "oxlint -c ../../oxlint.config.mjs .",
+    "pretest": "bun run build:transfer-svgs",
     "release:patch": "npm version patch && bun run build && bun run check && npm run login && npm publish",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
-    "type-check": "tsc --noEmit",
+    "type-check": "bun run build:transfer-svgs && tsc --noEmit",
     "updatePackages:major": "bunx taze major --includeLocked --write --maturity-period 5 --exclude // && bun run updatePackages:minor && bun install",
     "updatePackages:minor": "bunx taze minor --includeLocked --write --maturity-period 5 && bun install"
   },

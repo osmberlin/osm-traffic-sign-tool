@@ -1,11 +1,33 @@
 import { describe, expect, test } from 'vitest'
 import {
+  SvgLoadersAT,
+  SvgLoadersAU,
+  SvgLoadersBE,
+  SvgLoadersBR,
+  SvgLoadersCA,
+  SvgLoadersDE,
+  SvgLoadersFR,
+  SvgLoadersPL,
+} from '../data-svgs/index.js'
+import { createSvgImportname } from '../utils/createSvgImportname.js'
+import {
   countryCatalogueMeta,
   getCatalogueMaturity,
   getCountryCatalogueMeta,
 } from './countryCatalogueMeta.js'
-import { countries } from './countryDefinitions.js'
+import { countries, type CountryPrefixType } from './countryDefinitions.js'
 import { isVisibleMaturity } from './featureMaturities.js'
+
+const iconicSignLoaderMaps = {
+  AT: SvgLoadersAT,
+  AU: SvgLoadersAU,
+  BE: SvgLoadersBE,
+  BR: SvgLoadersBR,
+  CA: SvgLoadersCA,
+  DE: SvgLoadersDE,
+  FR: SvgLoadersFR,
+  PL: SvgLoadersPL,
+} satisfies Record<CountryPrefixType, Record<string, unknown>>
 
 describe('countryCatalogueMeta', () => {
   test('contains DE catalogue metadata with full QA', () => {
@@ -39,5 +61,15 @@ describe('countryCatalogueMeta', () => {
       expect(getCountryCatalogueMeta(prefix).iconicSignOsmValuePart.length).toBeGreaterThan(0)
     }
     expect(getCountryCatalogueMeta('DE').iconicSignOsmValuePart).toBe('239')
+  })
+
+  test('each iconic sign resolves to an existing SVG loader', () => {
+    for (const prefix of countries) {
+      const svgName = createSvgImportname(
+        prefix,
+        getCountryCatalogueMeta(prefix).iconicSignOsmValuePart,
+      )
+      expect(iconicSignLoaderMaps[prefix]).toHaveProperty(svgName)
+    }
   })
 })

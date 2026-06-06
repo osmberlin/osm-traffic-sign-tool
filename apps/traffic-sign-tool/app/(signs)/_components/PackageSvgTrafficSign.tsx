@@ -1,8 +1,7 @@
-import { getCachedSvg, loadSvgForSign } from '@app/app/(signs)/_components/svgLoaders'
+import { useLoadedSvg } from '@app/app/(signs)/_components/useLoadedSvg'
 import { isDev } from '@app/app/_components/utils/isDev'
 import { catalogueHtmlLang } from '@app/src/features/routing/lang'
 import { createSvgImportname, SignStateType, SignType } from '@osm-traffic-signs/converter'
-import { useEffect, useState } from 'react'
 import { useCountryPrefix } from './store/CountryPrefixContext'
 
 type Props = {
@@ -16,42 +15,7 @@ export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
     'svgName' in sign && !!sign.svgName
       ? sign.svgName
       : createSvgImportname(countryPrefix, sign.osmValuePart)
-  const cacheKey = `${countryPrefix}:${filename}`
-  const cachedFile = getCachedSvg(countryPrefix, filename)
-  const [loadedFileState, setLoadedFileState] = useState<{
-    cacheKey: string
-    file?: string
-    loadAttempted: boolean
-  }>({
-    cacheKey,
-    file: cachedFile,
-    loadAttempted: false,
-  })
-
-  useEffect(() => {
-    let isCancelled = false
-
-    if (cachedFile) {
-      return () => {
-        isCancelled = true
-      }
-    }
-
-    void loadSvgForSign(countryPrefix, filename).then((loadedSvg) => {
-      if (!isCancelled) {
-        setLoadedFileState({ cacheKey, file: loadedSvg, loadAttempted: true })
-      }
-    })
-
-    return () => {
-      isCancelled = true
-    }
-  }, [cachedFile, cacheKey, countryPrefix, filename])
-
-  const file =
-    cachedFile ?? (loadedFileState.cacheKey === cacheKey ? loadedFileState.file : undefined)
-  const loadAttempted =
-    loadedFileState.cacheKey === cacheKey ? loadedFileState.loadAttempted : false
+  const { file, loadAttempted } = useLoadedSvg(countryPrefix, filename)
 
   if (!file && loadAttempted) {
     if (isDev) {

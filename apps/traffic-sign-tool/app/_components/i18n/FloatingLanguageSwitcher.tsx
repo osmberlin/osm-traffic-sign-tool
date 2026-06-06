@@ -4,11 +4,12 @@ import { stonePillButton } from '@app/app/_components/links/buttonStyles'
 import * as m from '@app/paraglide/messages'
 import { uiLocales, type UiLocale } from '@app/src/features/i18n/uiLocale'
 import { writeCataloguePreference } from '@app/src/features/routing/cataloguePreference'
+import { isCataloguePickerRoute } from '@app/src/features/routing/isCataloguePickerRoute'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { LanguageIcon } from '@heroicons/react/24/outline'
 import { type CountryPrefixType } from '@osm-traffic-signs/converter'
-import { useNavigate } from '@tanstack/react-router'
+import { useNavigate, useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import { LangSwitcherOption } from './LangSwitcherOption'
 
@@ -16,10 +17,13 @@ import { LangSwitcherOption } from './LangSwitcherOption'
 export const FloatingLanguageSwitcher = () => {
   const uiLocale = useUiLocale()
   const signConfigLang = useCurrentLang() // catalogue prefix from route, not UI locale
+  const pathname = useRouterState({ select: (state) => state.location.pathname })
+  const onCataloguePicker = isCataloguePickerRoute(pathname)
+  const selectedCountry = onCataloguePicker ? null : signConfigLang
   const navigate = useNavigate({ from: '/$lang' })
 
   const handleCatalogueSelect = (countryPrefix: CountryPrefixType, close: () => void) => {
-    if (countryPrefix === signConfigLang) {
+    if (!onCataloguePicker && countryPrefix === signConfigLang) {
       return
     }
     writeCataloguePreference(countryPrefix)
@@ -61,7 +65,7 @@ export const FloatingLanguageSwitcher = () => {
                     {m.lang_switcher_sign_catalogue()}
                   </h3>
                   <CatalogueOptionList
-                    selectedCountry={signConfigLang}
+                    selectedCountry={selectedCountry}
                     onSelect={(countryPrefix) => handleCatalogueSelect(countryPrefix, close)}
                     badgeMode="prefix"
                   />

@@ -25,5 +25,9 @@ export const writeCataloguePreference = (country: CountryPrefixType): void => {
     return
   }
 
-  localStorage.setItem(STORAGE_KEY, country)
+  try {
+    localStorage.setItem(STORAGE_KEY, country)
+  } catch {
+    // Ignore quota errors or blocked storage; navigation can still proceed.
+  }
 }
