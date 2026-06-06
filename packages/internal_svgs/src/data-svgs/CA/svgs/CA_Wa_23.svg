@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1029.596 1029.596" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Wa-23 - Road narrows</title>
+  <g transform="translate(0 732.596)">
+    <rect width="750" height="750" x="143.024" y="-164.989" rx="40" ry="40" style="opacity:1;fill:#fad214;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.58005238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <rect width="725" height="725" x="155.524" y="-152.489" rx="27.5" ry="27.5" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.19404984;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <rect width="700" height="700" x="168.024" y="-139.989" rx="15" ry="15" style="opacity:1;fill:#fad214;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.80804825;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <path d="m392.798-354.573-50 174.373V-4h85.5v-158.744l50-174.368V-484h-85.5zM636.798-354.573l50 174.373V-4h-85.5v-158.744l-50-174.368V-484h85.5z" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:31.10638428;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  </g>
+</svg>

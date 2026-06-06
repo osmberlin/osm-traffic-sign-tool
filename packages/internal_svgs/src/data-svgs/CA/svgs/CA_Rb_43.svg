@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606 606" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Rb-43 - Turn right or left</title>
+  <g transform="translate(0 309)">
+    <rect width="604" height="604" x="1" y="-308" rx="42" ry="42" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:242.42451477;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41400003;stroke-dasharray:none;stroke-opacity:1"/>
+    <rect width="600" height="600" x="3" y="-306" rx="40" ry="40" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:240.81906128;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41400003;stroke-dasharray:none;stroke-opacity:1"/>
+    <rect width="575" height="575" x="15.5" y="-293.5" rx="27.5" ry="27.5" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:230.78494263;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41400003;stroke-dasharray:none;stroke-opacity:1"/>
+    <path d="M421.437-210.999c2.089.033 4.246.663 6.278 2.045L536.5-135 427.715-61.047c-9.288 6.316-21.197-3.056-17.23-13.56l10.216-27.094v-66.6l-10.216-27.093c-3.1-8.206 3.49-15.721 10.952-15.605m-236.873 0c7.46-.116 14.05 7.4 10.952 15.605L185.3-168.3v66.6l10.216 27.093c3.967 10.504-7.942 19.876-17.23 13.56L69.5-135l108.785-73.954c2.032-1.382 4.19-2.012 6.279-2.045M420.7-168.3v66.6c-10.496 1.826-21.953 4.283-31.96 10.244-32.176 16.329-51.833 53.116-52.44 83.554V189h-66.6V-7.902c-.606-30.438-20.264-67.225-52.44-83.554-10.007-5.96-21.464-8.418-31.96-10.245v-66.6c39.633 5.661 81.86 21.266 117.7 65.6 35.84-44.334 78.068-59.939 117.7-65.6" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.01541376"/>
+  </g>
+</svg>

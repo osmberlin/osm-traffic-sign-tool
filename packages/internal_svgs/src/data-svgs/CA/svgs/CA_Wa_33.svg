@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1233.462 1233.462" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Wa-33 - Lane ends</title>
+  <g transform="translate(0 936.462)">
+    <rect width="900" height="900" x="212.178" y="-239.989" rx="50" ry="50" style="opacity:1;fill:#fad214;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:13.89606285;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <rect width="860" height="860" x="232.178" y="-219.989" rx="30" ry="30" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:13.2784586;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <rect width="820" height="820" x="252.178" y="-199.989" rx="10" ry="10" style="opacity:1;fill:#fad214;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:12.66085625;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <path d="M404-599.73h65.8v560H404z" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8.51557827;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <path d="M695.8-459.858 830-358.731v319h-65.8v-280.934L630-421.792v-177.939h65.8z" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:5.55389738;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <path d="M630-131.33h43.3v91.6H630zM630-243.33h43.3v91.6H630zM630-355.33h43.3v91.6H630z" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.39743185;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Rb-23 - Do not enter</title>
+  <defs>
+    <clipPath id="a">
+      <circle r="12.5"/>
+    </clipPath>
+  </defs>
+  <g style="display:inline" transform="translate(-38223.712 7737.133)">
+    <path d="M38785.612-7137.133c20.956 0 38.1-17.145 38.1-38.1v-523.8c0-20.956-17.144-38.1-38.1-38.1h-523.8c-20.952 0-38.1 17.144-38.1 38.1v523.8c0 20.955 17.148 38.1 38.1 38.1z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"/>
+    <path d="M38798.76-7175.216c0 7.234-5.864 13.1-13.1 13.1h-523.8c-7.232 0-13.1-5.867-13.1-13.101v-523.799c0-7.233 5.868-13.1 13.1-13.1h523.8c7.236 0 13.1 5.867 13.1 13.1zm-13.088-551.892h-523.812c-15.512 0-28.092 12.58-28.092 28.094v523.811c0 15.514 12.58 28.094 28.092 28.094h523.812c15.516 0 28.096-12.58 28.096-28.094v-523.811c0-15.514-12.58-28.094-28.096-28.094" style="display:inline;fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.41111"/>
+    <circle cx="38523.715" cy="-7437.133" r="250.938" fill="#a6192e" style="fill:#be141e;fill-opacity:1;stroke-width:17.306"/>
+    <path fill="#fff" d="M13-2.5v5h-26v-5z" clip-path="url(#a)" transform="translate(38523.713 -7437.132)scale(17.30606)"/>
+  </g>
+</svg>

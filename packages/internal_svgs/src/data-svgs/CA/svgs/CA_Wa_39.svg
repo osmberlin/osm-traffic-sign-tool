@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1029.596 1029.596" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Wa-39 - Roundabout</title>
+  <g transform="translate(0 732.596)">
+    <rect width="750" height="750" x="143.024" y="-164.99" rx="40" ry="40" style="opacity:1;fill:#fad214;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.58005238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <rect width="725" height="725" x="155.524" y="-152.49" rx="27.5" ry="27.5" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.19404984;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <rect width="700" height="700" x="168.024" y="-139.99" rx="15" ry="15" style="opacity:1;fill:#fad214;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10.80804825;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <path d="M719.413-369.222c-49.368-67.177-131.56-107.75-220.69-99.956-49.43 4.332-103.399 29.692-142.113 59.66l-35.837-35.839 12.465 124.934 125.026 12.6-38.904-38.71c24.937-17.74 57.645-31.943 87.086-34.522 58.883-5.151 113.07 22.618 144.385 68.045zM283.883-284.367c-11.262 29.27-19.058 111.095 25.684 188.567C334.38-52.804 380.16-14.61 423.688 7.793l-17.333 47.65L514.31-8.665l-41.42-118.64-18.649 51.632c-26.601-15.125-53.304-38.766-68.083-64.352-29.552-51.191-25.438-102.023-15.81-127.975zM565.333 28.05c31.252-2.657 108.251-31.442 158.36-105.548 27.815-41.102 42.142-98.986 43.267-147.93l50.42-5.246-104.85-69.062-88.582 89.13 54.583-5.798c-1.963 30.532-11.548 64.888-28.105 89.365-33.11 48.959-80.626 67.481-108.173 70.18z" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.52803159"/>
+  </g>
+</svg>

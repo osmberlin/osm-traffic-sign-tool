@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 604 754" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Ra-3 - School crossing</title>
+  <g transform="translate(0 1084.667)">
+    <rect width="602" height="752" x="1" y="-1083.667" rx="39" ry="39" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.50805;stroke-linecap:round"/>
+    <rect width="600" height="750" x="2" y="-1082.667" rx="38" ry="38" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:1.50354;stroke-linecap:round"/>
+    <rect width="580" height="730" x="12" y="-1072.667" rx="28" ry="28" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.45843;stroke-linecap:round"/>
+    <rect width="550" height="700" x="27" y="-1057.667" rx="13" ry="13" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:1.39072;stroke-linecap:round"/>
+    <path d="M98-457.667h408v12H98z" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:.571968;stroke-linecap:round"/>
+    <path d="m414.799-763.752 12.224-32.752-27.083-33.64zm3.487 164.659 51.021 112.898-25.053 11.603-57.418-121.437-13.969-69.886-24.47 63.77-7.852 131.466-29.908.712 1.618-138.392 31.785-118.706-14.415-58.085-20.966 15.283-30.575 10.918-1.749 17.91 12.765-2.501L297-703.257l-44.265 10.917 20.105 88.012h-27.954l40.62 117.489-23.585 7.43-46.739-124.919h-19.216L187.4-584.08l12.404 107.332-30.04 2.145-9.655-112.53 6.159-15.884h-14.849l23.977-100.8 5.722-54.696-18.345 32.322-51.54 35.818-10.482-20.087 44.112-34.95 31.886-79.05 18.346-20.093 26.197-8.228 14.863 9.974 32.442 57.188 33.513-17.005 21.45-61.983 23.098-25.375 19.219-6.985 55.034 33.629 37.487 65.384-12.822 28.946 21.199-7.406 18.776 48.478-67.251 28.385z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.76419"/>
+    <circle cx="337.85" cy="-931.917" r="35.65" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:.813192;stroke-linecap:round"/>
+    <circle cx="202.4" cy="-886.967" r="29.5" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:.672907;stroke-linecap:round"/>
+  </g>
+</svg>

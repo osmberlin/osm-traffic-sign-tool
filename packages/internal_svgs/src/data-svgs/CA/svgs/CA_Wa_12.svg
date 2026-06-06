@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 817.464 817.464" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Wa-12 - Concealed road</title>
+  <g transform="translate(0 520.464)">
+    <rect width="600" height="600" x="68.024" y="-89.989" rx="40" ry="40" style="opacity:1;fill:#fad214;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9.2640419;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <rect width="575" height="575" x="80.524" y="-77.489" rx="27.5" ry="27.5" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8.87803936;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <rect width="550" height="550" x="93.024" y="-64.989" rx="15" ry="15" style="opacity:1;fill:#fad214;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8.49203777;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(-45)"/>
+    <path d="M351-331.732v440h70v-440z" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:17.52544594;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <path d="M496.502-219.332 355.081-77.91l49.497 49.497L546-169.834z" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:11.81565285;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  </g>
+</svg>

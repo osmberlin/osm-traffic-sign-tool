@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen Ra-5 - Pedestrian crosswalk (overhead)</title>
+  <g transform="translate(0 1080.667)">
+    <rect width="600" height="750" x="1" y="-1079.667" rx="38" ry="38" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.50354;stroke-linecap:round"/>
+    <rect width="580" height="730" x="11" y="-1069.667" rx="28" ry="28" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:1.45843;stroke-linecap:round"/>
+    <rect width="550" height="700" x="26" y="-1054.667" rx="13" ry="13" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.39072;stroke-linecap:round"/>
+    <path d="M97-455.667h408v12H97z" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:.571968;stroke-linecap:round"/>
+    <path d="M416.429-725.673c-10.596-26.942-16.58-53.888-26.715-84.516l-38.23-12.204L474-488.246l-36.273 13.01-97.868-198.506-52.163 89.925-9.9 112.15-42.718-2.185 7.832-132.187 56.647-109.156-31.547-76.683c-11.398 8.402-22.338 20.952-34.544 29.473l-73.805 39.495L144-746.857l77.055-55.132 57.778-79.704 29.015-11.974 119.635 59.528 18.882 108.466z" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.76417"/>
+    <circle cx="274" cy="-924.667" r="34" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:1.27836;stroke-linecap:round"/>
+  </g>
+</svg>
