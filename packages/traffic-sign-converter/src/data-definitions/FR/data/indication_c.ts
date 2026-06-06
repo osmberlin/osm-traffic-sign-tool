@@ -375,7 +375,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C113',
     signId: 'C113',
     name: 'C113',
-    descriptiveName: "Entrée d'un tunnel / Sortie d'un tunnel",
+    descriptiveName: 'C113',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

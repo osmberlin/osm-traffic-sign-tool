@@ -96,8 +96,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A3a',
     signId: 'A3a',
     name: 'A3a',
-    descriptiveName:
-      "Remarques : Chaussée rétrécie d'un côté. Voir aussi les panneaux B15 30px|link=#Signaux d’indication de type B et C18 30",
+    descriptiveName: "Chaussée rétrécie d'un côté.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -153,8 +152,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A7',
     signId: 'A7',
     name: 'A7',
-    descriptiveName:
-      "Remarques : Proximité d'un passage à niveau avec barrières * À l'emplacement du croisement, dispositif de type G2 (barri",
+    descriptiveName: 'A7',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -177,7 +175,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A8',
     signId: 'A8',
     name: 'A8',
-    descriptiveName: 'A7',
+    descriptiveName:
+      "Passage à niveau sans barrière automatique À l'emplacement du croisement, panneau de type G1 (croix de Saint-André).",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -312,8 +311,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A15b',
     signId: 'A15b',
     name: 'A15b',
-    descriptiveName:
-      "Passage d'animaux sauvages * Vous pouvez ajouter la clé sur la voie pour indiquer le côté concerné par le danger.",
+    descriptiveName: 'A15b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -336,7 +334,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A15c',
     signId: 'A15c',
     name: 'A15c',
-    descriptiveName: 'Passage de cavaliers',
+    descriptiveName:
+      'Passage de cavaliers Vous pouvez ajouter la clé direction=* sur la voie pour indiquer le côté concerné par le danger.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

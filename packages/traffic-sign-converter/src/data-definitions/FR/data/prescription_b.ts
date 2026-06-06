@@ -53,8 +53,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B1j',
     signId: 'B1j',
     name: 'B1j',
-    descriptiveName:
-      "Répétition d'interdiction d'accès à contresens de bretelles de sortie sur les autoroutes et routes à chaussées séparées ",
+    descriptiveName: 'B1j',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedOnewayRecommendation(),
@@ -69,7 +68,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B2a',
     signId: 'B2a',
     name: 'B2a',
-    descriptiveName: 'B1j',
+    descriptiveName:
+      'Interdiction de tourner à gauche à la prochaine intersection Voir Relation:restriction.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -117,7 +117,7 @@ export const _prescription_b: SignType[] = [
     signId: 'B2c',
     name: 'B2c',
     descriptiveName:
-      "Interdiction de faire demi-tour sur la route suivie jusqu'à la prochaine intersection * Voir Relation:restriction.",
+      "Interdiction de faire demi-tour sur la route suivie jusqu'à la prochaine intersection Voir Relation:restriction.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -141,7 +141,7 @@ export const _prescription_b: SignType[] = [
     signId: 'B3',
     name: 'B3',
     descriptiveName:
-      "Interdiction de faire demi-tour sur la route suivie jusqu'à la prochaine intersection Voir Relation:restriction.",
+      'Interdiction de dépasser tous les véhicules à moteur autres que ceux à deux roues sans side- car',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -330,7 +330,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B7b',
     signId: 'B7b',
     name: 'B7b',
-    descriptiveName: "Accès interdit aux véhicules à moteur à l'exception des cyclomoteurs",
+    descriptiveName: 'Accès interdit à tous les véhicules à moteur',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedAccessBanRecommendation('motor_vehicle'),
@@ -460,8 +460,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B9f',
     signId: 'B9f',
     name: 'B9f',
-    descriptiveName:
-      "Accès interdit aux voitures à bras à l'exclusion de celles visées à l'article R.412-34 du code de la route",
+    descriptiveName: 'Accès interdit aux véhicules de transport en commun de personnes',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedAccessBanRecommendation('bus'),
@@ -509,8 +508,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B9i',
     signId: 'B9i',
     name: 'B9i',
-    descriptiveName:
-      "Accès interdit aux motocyclettes et motocyclettes légères au sens de l'article R.311-1 du code de la route",
+    descriptiveName: 'B9i',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -710,8 +708,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B18c',
     signId: 'B18c',
     name: 'B18c',
-    descriptiveName:
-      "Accès interdit aux véhicules transportant des marchandises dangereuses définies par l'arrêté du 29 mai 2009 relatif aux ",
+    descriptiveName: 'B18c',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -728,7 +725,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B19[Interdit',
     signId: 'B19',
     name: 'B19',
-    descriptiveName: 'B18c',
+    descriptiveName:
+      'Autres interdictions dont la nature est indiquée par une inscription sur le panneau',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -1161,8 +1159,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B52',
     signId: 'B52',
     name: 'B52',
-    descriptiveName:
-      "Entrée d'une zone de rencontre Rue ou place ouverte à différents types de véhicules qui doivent rouler à faible vitesse,",
+    descriptiveName: 'B52',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedMaxspeedRecommendation('20'),
@@ -1192,7 +1189,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B54',
     signId: 'B54',
     name: 'B54',
-    descriptiveName: "Entrée d'aire piétonne * Voir aussi le panneau C109",
+    descriptiveName: "Entrée d'aire piétonne",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -1213,8 +1210,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B55',
     signId: 'B55',
     name: 'B55',
-    descriptiveName:
-      "Sortie d'aire piétonne * Voir aussi le panneau C110 <!-- MODÈLE __________________________________________",
+    descriptiveName: "Sortie d'aire piétonne",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],

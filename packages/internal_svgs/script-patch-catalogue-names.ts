@@ -31,34 +31,42 @@ const nameByOsmValuePart = new Map(
 )
 
 const escapeString = (value: string) => value.replace(/\\/g, '\\\\').replace(/'/g, "\\'")
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
-let patched = 0
-let unchanged = 0
+const descriptiveNameValue =
+  "(?:'(?:\\\\'|[^'])*'|\"[^\"]*\"|\\n\\s*'(?:\\\\'|[^'])*'|\\n\\s*\"[^\"]*\")"
 
-const descriptiveNamePattern =
-  /osmValuePart: '([^']+)'([\s\S]*?descriptiveName:\s*)(?:'(?:\\'|[^'])*'|\n\s*'(?:\\'|[^'])*')/g
+let patchedFiles = 0
+let unchangedFiles = 0
+let patchedNames = 0
 
 for await (const filePath of glob('*.ts', { cwd: dataDir })) {
   const absolutePath = path.join(dataDir, filePath)
   let content = await Bun.file(absolutePath).text()
   const original = content
+  let filePatchedNames = 0
 
-  content = content.replace(
-    descriptiveNamePattern,
-    (match, osmValuePart: string, prefix: string) => {
-      const newName = nameByOsmValuePart.get(osmValuePart)
-      if (!newName) return match
-      return `osmValuePart: '${osmValuePart}'${prefix}'${escapeString(newName)}'`
-    },
-  )
+  for (const [osmValuePart, newName] of nameByOsmValuePart) {
+    const pattern = new RegExp(
+      `(osmValuePart: '${escapeRegExp(osmValuePart)}'[\\s\\S]*?descriptiveName:\\s*)${descriptiveNameValue}`,
+    )
+    const next = content.replace(pattern, `$1'${escapeString(newName)}'`)
+    if (next !== content) {
+      filePatchedNames++
+      content = next
+    }
+  }
 
   if (content !== original) {
     await Bun.write(absolutePath, content)
-    patched++
-    console.log(`Patched ${filePath}`)
+    patchedFiles++
+    patchedNames += filePatchedNames
+    console.log(`Patched ${filePath} (${filePatchedNames} names)`)
   } else {
-    unchanged++
+    unchangedFiles++
   }
 }
 
-console.log(`Done: ${patched} files patched, ${unchanged} unchanged`)
+console.log(
+  `Done: ${patchedFiles} files patched (${patchedNames} names), ${unchangedFiles} unchanged`,
+)
