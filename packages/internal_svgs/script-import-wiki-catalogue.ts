@@ -374,6 +374,11 @@ const cleanWikiSignName = (rawName: string): string => {
   return name.trim()
 }
 
+const looksLikeWikiInstructionName = (name: string): boolean => {
+  const trimmed = cleanWikiSignName(name)
+  return trimmed.length > 120 || /on utilise un attibut|voir la page|ajouter un\b/i.test(trimmed)
+}
+
 const isWikiTaggingCell = (text: string): boolean => {
   const trimmed = text.trim()
   return (
@@ -384,6 +389,7 @@ const isWikiTaggingCell = (text: string): boolean => {
     /^Remarques\s*:\s*$/i.test(trimmed) ||
     /^\d+px$/i.test(trimmed) ||
     wikiSignCodeOnly(trimmed) ||
+    looksLikeWikiInstructionName(trimmed) ||
     trimmed.includes('traffic_sign=') ||
     trimmed.includes('traffic_sign =')
   )
@@ -403,9 +409,18 @@ const looksLikeWikiSignNameCell = (text: string): boolean => {
 }
 
 const finalizeWikiSignName = (rawName: string, signId: string): string => {
+  if (looksLikeWikiInstructionName(rawName)) return signId
   const cleaned = cleanWikiSignName(rawName).slice(0, 200)
   if (!cleaned || /^(Remarques|Remarque|\?)$/i.test(cleaned)) return signId
   return cleaned
+}
+
+const wikiSignNameQuality = (name: string, signId: string): number => {
+  const finalized = finalizeWikiSignName(name, signId)
+  if (finalized === signId) return 0
+  if (looksLikeWikiInstructionName(finalized)) return 1
+  if (finalized.length > 80) return 2
+  return 3
 }
 
 const extractNameFromCell = ($: cheerio.CheerioAPI, cell: cheerio.Element): string => {
@@ -457,7 +472,7 @@ const parseUniversalTable = ($: cheerio.CheerioAPI, prefix: string): ParsedSign[
     if (!rowText || /^(sign|znak|placa|image|bild)/i.test(rowTexts[0] ?? '')) return
 
     const signId = extractTrafficSignId(rowText, prefix)
-    if (!signId || signId.length > 40) return
+    if (!signId || signId.length > 40 || /^(image|sign|panneau)$/i.test(signId)) return
 
     const imgHref = $(cells[0]).find('a').attr('href') ?? $(cells[1]).find('a').attr('href')
     const imageUrl = imgHref?.startsWith('http')
@@ -469,8 +484,13 @@ const parseUniversalTable = ($: cheerio.CheerioAPI, prefix: string): ParsedSign[
     const name = pickWikiRowName($, cells, rowTexts, signId)
     const isNa = /^(n\/a|na|n\/a\.?)$/i.test(tagsText) || /N\/A/i.test(tagsText)
 
-    if (!signMap.has(signId)) {
-      signMap.set(signId, { signId, name, imageUrl, tagsText, isNa })
+    const entry: ParsedSign = { signId, name, imageUrl, tagsText, isNa }
+    const existing = signMap.get(signId)
+    if (
+      !existing ||
+      wikiSignNameQuality(name, signId) > wikiSignNameQuality(existing.name, signId)
+    ) {
+      signMap.set(signId, entry)
     }
   })
   return [...signMap.values()]
