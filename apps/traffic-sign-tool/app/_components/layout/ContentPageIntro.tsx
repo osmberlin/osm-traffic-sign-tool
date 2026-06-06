@@ -1,4 +1,4 @@
-import type { ComponentType, ReactNode, SVGProps } from 'react'
+import { Children, isValidElement, type ComponentType, type ReactNode, type SVGProps } from 'react'
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>
 
@@ -40,6 +40,22 @@ type ContentPageIntroRowProps = {
   children: ReactNode
 }
 
+const introBodyClassName = 'text-sm leading-snug text-stone-800'
+
+function renderIntroRowBody(children: ReactNode) {
+  return Children.map(children, (child) => {
+    if (typeof child === 'string' || typeof child === 'number') {
+      return <p className={introBodyClassName}>{child}</p>
+    }
+
+    if (isValidElement(child)) {
+      return child
+    }
+
+    return null
+  })
+}
+
 export function ContentPageIntroRow({ icon: Icon, title, children }: ContentPageIntroRowProps) {
   return (
     <div className="flex gap-x-4">
@@ -47,8 +63,8 @@ export function ContentPageIntroRow({ icon: Icon, title, children }: ContentPage
         <Icon aria-hidden="true" className="size-5 text-stone-200" />
       </div>
       <div className="min-w-0">
-        <h3 className="text-sm font-semibold text-zinc-950">{title}</h3>
-        <p className="mt-1 text-sm leading-relaxed text-stone-800">{children}</p>
+        <h3 className="text-sm leading-snug font-semibold text-zinc-950">{title}</h3>
+        <div className="mt-0.5 flex flex-col gap-2">{renderIntroRowBody(children)}</div>
       </div>
     </div>
   )

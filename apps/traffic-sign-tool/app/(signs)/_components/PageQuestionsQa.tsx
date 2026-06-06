@@ -16,7 +16,7 @@ import { useParamQuestionsQa } from '@app/app/(signs)/_components/store/useParam
 import { useReplaceDeSearch } from '@app/app/(signs)/_components/store/useReplaceDeSearch'
 import { CataloguePageProps } from '@app/app/(signs)/_components/types'
 import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
-import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import { ContentPageWorkflowStepGroup } from '@app/app/_components/layout/ContentPageWorkflowStep'
 import * as m from '@app/paraglide/messages'
 import { serializeQuestionsQaParam } from '@app/src/features/searchParams/deSearch'
 import {
@@ -79,27 +79,16 @@ export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
 
   return (
     <ContentPageLayout intro={<QuestionsQaPageIntro />}>
-      <FocusFilterRow />
-
-      <QuestionQaTaskResults entries={taskEntries} />
-
-      <QuestionQaSignPicker
-        filteredSigns={filteredSigns}
-        counts={qqaCounts}
-        primaryOsmValuePart={primaryOsmValuePart}
-        onPrimarySelect={handlePrimarySelect}
-      />
-
-      <p className="mt-4 text-sm text-stone-700">
-        {m.page_questions_qa_showing({
-          shown: String(filteredSigns.length),
-          filtered: String(focusFilteredSigns.length),
-          total: String(trafficSignData.length),
-        })}{' '}
-        <ExternalLink href="https://www.npmjs.com/package/@osm-traffic-signs/converter">
-          {m.converter_package()}
-        </ExternalLink>
-      </p>
+      <ContentPageWorkflowStepGroup step={1}>
+        <FocusFilterRow />
+        <QuestionQaSignPicker
+          nested
+          filteredSigns={filteredSigns}
+          counts={qqaCounts}
+          primaryOsmValuePart={primaryOsmValuePart}
+          onPrimarySelect={handlePrimarySelect}
+        />
+      </ContentPageWorkflowStepGroup>
 
       {selectedSign ? (
         <QuestionQaSignDetail
@@ -110,6 +99,8 @@ export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
       ) : (
         <p className="mt-6 text-sm text-stone-600">{m.questions_qa_select_sign_hint()}</p>
       )}
+
+      <QuestionQaTaskResults entries={taskEntries} />
     </ContentPageLayout>
   )
 }

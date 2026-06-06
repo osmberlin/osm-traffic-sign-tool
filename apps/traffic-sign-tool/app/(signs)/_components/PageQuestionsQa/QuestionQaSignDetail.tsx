@@ -4,6 +4,7 @@ import {
   type QuestionTaskState,
 } from '@app/app/(signs)/_components/PageQuestionsQa/questionsQaTaskFormat'
 import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
+import { ContentPageWorkflowStepLabel } from '@app/app/_components/layout/ContentPageWorkflowStep'
 import {
   ContentTable,
   ContentTableBody,
@@ -132,7 +133,9 @@ export const QuestionQaSignDetail = ({ sign, task, onTaskChange }: Props) => {
 
       <div className="border-t border-stone-200 pt-4">
         <label className="mb-2 block text-sm font-medium text-stone-700">
-          {m.questions_qa_table_task()}
+          <ContentPageWorkflowStepLabel step={2}>
+            {m.questions_qa_table_task()}
+          </ContentPageWorkflowStepLabel>
         </label>
         <textarea
           placeholder={m.questions_qa_task_notes_placeholder()}

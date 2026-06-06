@@ -11,6 +11,7 @@ type Props = {
   counts: QuestionsQaCounts
   primaryOsmValuePart?: string
   onPrimarySelect: (osmValuePart: string) => void
+  nested?: boolean
 }
 
 export const QuestionQaSignPicker = ({
@@ -18,6 +19,7 @@ export const QuestionQaSignPicker = ({
   counts,
   primaryOsmValuePart,
   onPrimarySelect,
+  nested = false,
 }: Props) => {
   const catalogueLang = useCatalogueHtmlLang()
   const selectedSign = filteredSigns.find((sign) => sign.osmValuePart === primaryOsmValuePart)
@@ -25,7 +27,10 @@ export const QuestionQaSignPicker = ({
 
   return (
     <details
-      className="group mt-6 w-full rounded-sm outline -outline-offset-1 outline-stone-500/50"
+      className={clsx(
+        'group w-full rounded-sm outline -outline-offset-1 outline-stone-500/50',
+        !nested && 'mt-6',
+      )}
       open={!selectedInList}
     >
       <summary
