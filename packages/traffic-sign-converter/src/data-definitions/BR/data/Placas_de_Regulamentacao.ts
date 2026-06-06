@@ -457,11 +457,7 @@ export const _Placas_de_Regulamentacao: SignType[] = [
     catalogue: {
       signCategory: 'traffic_sign',
     },
-    image: {
-      kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Red41.gif',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'R-20',

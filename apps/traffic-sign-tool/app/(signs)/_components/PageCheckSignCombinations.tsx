@@ -1,3 +1,4 @@
+import { MissingSvgNotice } from '@app/app/(signs)/_components/MissingSvgNotice'
 import { PackageSvgTrafficSign } from '@app/app/(signs)/_components/PackageSvgTrafficSign'
 import { CheckCombinationTable } from '@app/app/(signs)/_components/PageCheckSignCombinations/CheckCombinationTable'
 import {
@@ -140,6 +141,8 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
               </p>
             </div>
           </div>
+
+          <MissingSvgNotice sign={selectedPrimarySign} className="mb-4" variant="compact" />
 
           <CheckCombinationTable
             key={selectedPrimarySign.osmValuePart}

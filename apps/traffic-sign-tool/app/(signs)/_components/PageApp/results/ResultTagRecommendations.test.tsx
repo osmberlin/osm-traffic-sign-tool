@@ -24,6 +24,10 @@ vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', () => ({
   useCatalogueHtmlLang: () => 'de-DE',
 }))
 
+vi.mock('@app/src/features/routing/useCurrentLang', () => ({
+  useCurrentLang: () => 'DE',
+}))
+
 vi.mock('@app/app/_components/links/CopyButton', () => ({
   CopyButton: ({ children }: { children: ReactNode }) => <button>{children}</button>,
 }))

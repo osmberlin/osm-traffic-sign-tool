@@ -14,6 +14,10 @@ All notable changes to this project will be manually documented in this file.
 
 _2026-06-06_
 
+- Show missing-SVG placeholder (Tabler photo-off icon) in the sign grid and wherever sign graphics render when the catalogue marks `image: 'missing'` or no bundled SVG loader exists.
+- Show unified missing-SVG callout on the home recommended-tags column and on maintainer QA pages (tagging QA, combinations QA, questions QA, wiki comparison, taginfo comparison); wiki-upload messaging vs no-preview messaging for non-SVG wiki sources; wiki deeplink via TanStack Router with inactive styling on the target row/page.
+- Wiki comparison: corner placeholders for missing tool/wiki images, per-row hash anchors (`#wiki-qa-BR-A-49a`), scroll-on-load highlight, and `missing_svg` filter.
+
 - **Major release**: Rework all maintainer QA pages (tagging, sign combinations, sign questions, wiki comparison, taginfo comparison) with shared navigation, per-sign review flows, country-aware filters, and Cursor-automated GitHub issue export.
 - Add **beta traffic sign catalogues** for Belgium (`BE`), Canada (`CA`), Poland (`PL`), Austria (`AT`), France (`FR`), Australia (`AU`), and Brazil (`BR`), imported from their OSM Wiki pages.
 - Add catalogue metadata flags: `isBeta`, `catalogueName`, `osmTrafficSignPrefix`, and per-country `qaCapabilities`.

@@ -6,6 +6,11 @@
 
 _2026-06-06_
 
+- Use `image: 'missing'` on sign configs when the wiki SVG file does not exist (no bundled loader expected); runtime state normalizes legacy `availability: 'missing'` objects to the literal.
+- Export `isSignSvgMissing()`, `isSignSvgUnavailable()`, `hasBundledSvg()`, `normalizeSignImage()`, and related sign-image helpers.
+- Flag BR `A-49a`, `A-49b`, `A-50a`, `A-50b` as `image: 'missing'` (wiki file absent).
+- SVG download pipeline: classify `wiki_file_missing` errors, skip catalogue-missing signs on download, and `apply-missing-svg-flags.ts` to patch source data from `downloadErrors_*.json`.
+
 - Add beta country catalogues: `BE`, `CA`, `PL`, `AT`, `FR`, `AU`, `BR` (OSM Wiki import via `packages/internal_svgs/script-import-wiki-catalogue.ts`).
 - Extend `CountryCatalogueMeta` with `catalogueName`, `isBeta`, `osmTrafficSignPrefix`, and `qaCapabilities` (`fullQaCapabilities` / `betaQaCapabilities`).
 - Add shared recommendation presets (`sharedRecommendationPresets.ts`) for cross-country semantic equivalents.

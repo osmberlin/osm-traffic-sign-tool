@@ -1,16 +1,29 @@
+import { MissingSvgPlaceholder } from '@app/app/(signs)/_components/MissingSvgPlaceholder'
 import { useLoadedSvg } from '@app/app/(signs)/_components/useLoadedSvg'
 import { isDev } from '@app/app/_components/utils/isDev'
 import { catalogueHtmlLang } from '@app/src/features/routing/lang'
-import { createSvgImportname, SignStateType, SignType } from '@osm-traffic-signs/converter'
+import {
+  createSvgImportname,
+  hasBundledSvg,
+  isSignSvgMissing,
+  SignStateType,
+  SignType,
+} from '@osm-traffic-signs/converter'
 import { useCountryPrefix } from './store/CountryPrefixContext'
 
 type Props = {
   sign: SignType | SignStateType
   className?: string
+  showSignKey?: boolean
 }
 
-export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
+export const PackageSvgTrafficSign = ({ sign, className, showSignKey }: Props) => {
   const { countryPrefix } = useCountryPrefix()
+
+  if (isSignSvgMissing(sign) || !hasBundledSvg(countryPrefix, sign)) {
+    return <MissingSvgPlaceholder sign={sign} className={className} showSignKey={showSignKey} />
+  }
+
   const filename =
     'svgName' in sign && !!sign.svgName
       ? sign.svgName
@@ -21,7 +34,7 @@ export const PackageSvgTrafficSign = ({ sign, className }: Props) => {
     if (isDev) {
       console.warn('SVG MISSING', countryPrefix, sign)
     }
-    return null
+    return <MissingSvgPlaceholder sign={sign} className={className} showSignKey={showSignKey} />
   }
 
   if (!file) {

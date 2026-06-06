@@ -2,6 +2,7 @@ import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/Country
 import * as m from '@app/paraglide/messages'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import clsx from 'clsx'
+import { MissingSvgNotice } from '../../MissingSvgNotice'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
 
 type Props = { sign: SignStateType; compact?: boolean }
@@ -36,11 +37,16 @@ export const SelectedSignGraphic = ({ sign, compact = false }: Props) => {
   }
 
   return (
-    <div className={clsx('relative mx-auto', compact ? 'h-full w-full' : 'max-w-24')}>
+    <div
+      className={clsx(
+        'relative mx-auto',
+        compact ? 'h-full w-full' : 'aspect-square w-full max-w-24',
+      )}
+    >
       <PackageSvgTrafficSign
         sign={sign}
         className={clsx(
-          'pointer-events-none inline h-auto w-full',
+          'pointer-events-none block h-full w-full',
           compact ? 'max-h-full max-w-full' : 'max-h-24 max-w-24',
         )}
       />
@@ -85,6 +91,7 @@ export const SelectedSignImage = ({ sign }: Pick<Props, 'sign'>) => {
       <SelectedSignGraphic sign={sign} />
       <div className="mt-1 w-full text-center leading-tight">
         <SelectedSignLabels sign={sign} />
+        <MissingSvgNotice sign={sign} className="mt-1" variant="compact" />
       </div>
     </div>
   )

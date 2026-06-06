@@ -90,11 +90,7 @@ export const _indication_c: SignType[] = [
       { geometries: ['way'], uniqueTags: [{ key: 'recommended_speed', value: '70' }] },
     ],
     catalogue: { signCategory: 'signpost' },
-    image: {
-      kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Fr-C4a_ex2-Vitesse_conseillee.gif',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'C5',
@@ -312,11 +308,7 @@ export const _indication_c: SignType[] = [
       },
     ],
     catalogue: { signCategory: 'signpost' },
-    image: {
-      kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Fr-C65a.gif',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'C107',

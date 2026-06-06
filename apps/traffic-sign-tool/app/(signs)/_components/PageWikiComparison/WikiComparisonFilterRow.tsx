@@ -9,6 +9,7 @@ const statusFilterLabels: Record<WikiComparisonStatusFilter, () => string> = {
   all: m.page_wiki_qa_filter_all,
   missing: m.page_wiki_qa_filter_missing,
   matched: m.page_wiki_qa_filter_matched,
+  missing_svg: m.page_wiki_qa_filter_missing_svg,
 }
 
 type Props = {

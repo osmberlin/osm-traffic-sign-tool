@@ -1,3 +1,4 @@
+import { MissingSvgNotice } from '@app/app/(signs)/_components/MissingSvgNotice'
 import { PackageSvgTrafficSign } from '@app/app/(signs)/_components/PackageSvgTrafficSign'
 import {
   emptyQuestionTaskState,
@@ -71,6 +72,8 @@ export const QuestionQaSignDetail = ({ sign, task, onTaskChange }: Props) => {
           </p>
         </div>
       </div>
+
+      <MissingSvgNotice sign={sign} variant="compact" />
 
       {questions.length === 0 ? (
         <p className="text-sm text-stone-700">{m.questions_qa_no_questions()}</p>

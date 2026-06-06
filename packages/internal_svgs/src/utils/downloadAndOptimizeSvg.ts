@@ -3,6 +3,7 @@ import path from 'node:path'
 import {
   createSvgFilename,
   createSvgImportname,
+  isSignImageSource,
   type CountryPrefixType,
   type SignType,
 } from '@osm-traffic-signs/converter'
@@ -24,6 +25,17 @@ export const downloadAndOptimizeSvg = async (
   // Skip if file exists and skipExisting is true
   if (skipExisting && (await Bun.file(filePath).exists())) {
     return { success: true, fileName, importName, skipped: true } as const
+  }
+
+  if (!isSignImageSource(sign.image)) {
+    return {
+      success: false,
+      error: {
+        message: 'Sign image marked missing in catalogue',
+        reason: 'catalogue_image_missing',
+      },
+      sign,
+    } as const
   }
 
   let rawSvg: string
@@ -52,7 +64,7 @@ export const downloadAndOptimizeSvg = async (
     const downloadUrlResp = await getFileUrlFromWikiApi(sourceUrl)
 
     if (downloadUrlResp.success === false) {
-      return downloadUrlResp
+      return { ...downloadUrlResp, sign }
     }
 
     // Step 1: Fetch raw SVG

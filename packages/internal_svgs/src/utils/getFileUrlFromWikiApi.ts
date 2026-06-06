@@ -124,6 +124,19 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
   }
 
   const page = extractFirstPage(data)
+  if (page?.missing !== undefined) {
+    return {
+      success: false,
+      error: {
+        message: 'Wiki file does not exist',
+        reason: 'wiki_file_missing' as const,
+        detail: JSON.stringify(data, undefined, 2),
+        createdAt: errorDate(),
+      },
+      data: { apiUrl: apiUrl.toString(), sourceUrl },
+    } as const
+  }
+
   const imageInfo = Array.isArray(page?.imageinfo) ? page.imageinfo[0] : undefined
 
   if (!isRecord(imageInfo) || typeof imageInfo.url !== 'string') {

@@ -2,6 +2,7 @@ import { unlink } from 'node:fs/promises'
 import path from 'node:path'
 import {
   countryDefinitionMap,
+  isSignSvgMissing,
   type CountryPrefixType,
   type SignType,
 } from '@osm-traffic-signs/converter'
@@ -58,8 +59,10 @@ async function downloadAllSvgs(
   // ERROR FILE
   const errorsFile = path.join(__dirname, 'download-errors', `downloadErrors_${countryPrefix}.json`)
 
+  const downloadableSigns = data.filter((sign) => !isSignSvgMissing(sign))
+
   // DOWNLOAD FILES: Filter out existing files in incremental mode
-  let filesToDownload = data
+  let filesToDownload = downloadableSigns
   const skipExisting = mode === 'incremental'
 
   if (skipExisting) {
@@ -68,7 +71,7 @@ async function downloadAllSvgs(
 
     // Filter to only include files that don't exist yet
     const existingChecks = await Promise.all(
-      data.map(async (sign) => {
+      downloadableSigns.map(async (sign) => {
         const { createSvgFilename } = await import('@osm-traffic-signs/converter')
         const fileName = createSvgFilename(countryPrefix, sign)
         const filePath = path.join(svgsDirectory, fileName)
@@ -78,7 +81,7 @@ async function downloadAllSvgs(
     )
 
     filesToDownload = existingChecks.filter(({ exists }) => !exists).map(({ sign }) => sign)
-    const skippedCount = data.length - filesToDownload.length
+    const skippedCount = downloadableSigns.length - filesToDownload.length
 
     if (skippedCount > 0) {
       console.log(`-- INCREMENTAL MODE: Skipping ${skippedCount} existing files`)
@@ -100,7 +103,7 @@ async function downloadAllSvgs(
   // In incremental mode, also add skipped files to results for type generation
   if (skipExisting) {
     const { createSvgFilename, createSvgImportname } = await import('@osm-traffic-signs/converter')
-    const skippedResults = data
+    const skippedResults = downloadableSigns
       .filter((sign) => !filesToDownload.includes(sign))
       .map((sign) => ({
         success: true as const,

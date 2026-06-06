@@ -21,8 +21,9 @@ import * as m from '@app/paraglide/messages'
 import { getLocale } from '@app/paraglide/runtime'
 import { catalogueHtmlLang } from '@app/src/features/routing/lang'
 import { ParaglideMessage } from '@inlang/paraglide-js-react'
-import type { SignStateType } from '@osm-traffic-signs/converter'
+import { isSignSvgUnavailable, type SignStateType } from '@osm-traffic-signs/converter'
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import { MissingSvgNotice } from '../MissingSvgNotice'
 import { PackageSvgTrafficSign } from '../PackageSvgTrafficSign'
 import { useCountryPrefix } from '../store/CountryPrefixContext'
 
@@ -188,11 +189,15 @@ export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Prop
               </ContentTableHeader>
               <ContentTableCell>
                 {recognizedSigns.map((sign) => (
-                  <PackageSvgTrafficSign
-                    key={sign.osmValuePart}
-                    sign={sign}
-                    className="h-auto max-h-13 w-full max-w-13 object-contain"
-                  />
+                  <div key={sign.osmValuePart} className="space-y-1">
+                    <PackageSvgTrafficSign
+                      sign={sign}
+                      className="h-auto max-h-13 w-full max-w-13 object-contain"
+                    />
+                    {isSignSvgUnavailable(countryPrefix, sign) ? (
+                      <MissingSvgNotice sign={sign} variant="compact" />
+                    ) : null}
+                  </div>
                 ))}
               </ContentTableCell>
               <ContentTableCell>

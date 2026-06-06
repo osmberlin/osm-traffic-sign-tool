@@ -14,6 +14,9 @@ console.log(colors.bgBlue.white('\n\n2. Download new signs (incremental mode)'),
 await $`cd ${cdPath} && bun run updateSvgs:incremental`
 // updateSvgs:incremental runs download/optimize pipeline + formatting
 
+console.log(colors.bgBlue.white('\n\n2b. Apply missing SVG flags to catalogue data'), cdPath)
+await $`cd ${cdPath} && bun ./scripts/apply-missing-svg-flags.ts`
+
 cdPath = path.join(basePath, 'packages/traffic-sign-converter')
 console.log(
   colors.bgBlue.white('\n\n3. Build the traffic sign data (copy SVGs to converter dist)'),

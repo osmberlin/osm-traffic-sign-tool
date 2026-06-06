@@ -191,8 +191,8 @@ Do not use `visibility` on new signs.
 
 ### Step 6: Process and Build
 
-1. **Build**: Run `bun script-new-svg.ts` from root (incremental download/optimize + copies SVGs into `@osm-traffic-signs/converter` dist).
-2. **Verify Errors**: Read `packages/internal_svgs/src/download-errors/downloadErrors_DE.json`.
+1. **Build**: Run `bun script-new-svg.ts` from root (incremental download/optimize + copies SVGs into `@osm-traffic-signs/converter` dist). This also runs `apply-missing-svg-flags.ts` to set `image: 'missing'` on signs whose wiki SVG file does not exist.
+2. **Verify Errors**: Read `packages/internal_svgs/src/download-errors/downloadErrors_DE.json` (and check catalogue flags for `wiki_file_missing` entries).
 3. **Lint**: Use the `read_lints` tool to check for TypeScript errors in the modified file.
 
 **Note**:

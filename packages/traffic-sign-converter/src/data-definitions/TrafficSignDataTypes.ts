@@ -279,18 +279,21 @@ type SharedIdentifiyingTags = { identifyingTags?: { key: string; value: string }
 
 type SharedImageLicence = 'Public Domain' | 'CC-0'
 
-type SharedImageSourceRemote = {
+export type SignImageSourceRemote = {
   kind: 'remote'
   sourceUrl: string
   licence: SharedImageLicence
 }
 
-type SharedImageSourceLocal = {
+export type SignImageSourceLocal = {
   kind: 'local'
   sourceLocalPath: string
   licence: SharedImageLicence
 }
 
+/** Wiki SVG unavailable; no bundled asset expected. */
+export type SignImage = SignImageSourceRemote | SignImageSourceLocal | 'missing'
+
 type SharedImage = {
-  image: SharedImageSourceRemote | SharedImageSourceLocal
+  image: SignImage
 }

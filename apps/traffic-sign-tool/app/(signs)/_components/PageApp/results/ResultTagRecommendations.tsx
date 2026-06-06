@@ -1,3 +1,4 @@
+import { MissingSvgNotice } from '@app/app/(signs)/_components/MissingSvgNotice'
 import { useParamAnswers } from '@app/app/(signs)/_components/store/useParamAnswers.search'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
@@ -8,6 +9,7 @@ import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import {
   GEOMETRY_TYPES,
   geometryTagRecommendationsMaturity,
+  isSignSvgUnavailable,
   isVisibleMaturity,
   signsToApplicability,
   signsToComments,
@@ -54,7 +56,11 @@ export const ResultTagRecommendations = () => {
     (sign) => sign.recodgnizedSign && (sign.questions?.length ?? 0) > 0,
   )
 
-  if (relevantSections.length === 0 && !hasQuestions) {
+  const signsWithoutSvgPreview = paramSigns.filter(
+    (sign) => sign.recodgnizedSign && isSignSvgUnavailable(countryPrefix, sign),
+  )
+
+  if (relevantSections.length === 0 && !hasQuestions && signsWithoutSvgPreview.length === 0) {
     return null
   }
 
@@ -138,6 +144,20 @@ export const ResultTagRecommendations = () => {
             </div>
           )
         },
+      )}
+
+      {signsWithoutSvgPreview.length > 0 && (
+        <div
+          className={
+            relevantSections.length > 0
+              ? 'mt-4 flex flex-col gap-3 border-t border-stone-500/50 pt-4 md:mt-6 md:pt-6'
+              : 'flex flex-col gap-3'
+          }
+        >
+          {signsWithoutSvgPreview.map((sign) => (
+            <MissingSvgNotice key={sign.osmValuePart} sign={sign} variant="compact" />
+          ))}
+        </div>
       )}
     </>
   )

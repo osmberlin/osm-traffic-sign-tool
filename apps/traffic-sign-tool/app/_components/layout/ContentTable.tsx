@@ -31,8 +31,13 @@ export function ContentTableBody({ children, className }: TableProps) {
 export function ContentTableRow({
   children,
   className,
+  ...props
 }: ComponentPropsWithoutRef<'tr'> & { children: ReactNode }) {
-  return <tr className={className}>{children}</tr>
+  return (
+    <tr className={className} {...props}>
+      {children}
+    </tr>
+  )
 }
 
 export function ContentTableHeader({

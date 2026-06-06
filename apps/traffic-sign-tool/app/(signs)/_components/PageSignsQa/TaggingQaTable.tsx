@@ -1,3 +1,4 @@
+import { MissingSvgNotice } from '@app/app/(signs)/_components/MissingSvgNotice'
 import { PackageSvgTrafficSign } from '@app/app/(signs)/_components/PackageSvgTrafficSign'
 import {
   emptySignTaskState,
@@ -98,6 +99,7 @@ export const TaggingQaTable = ({ signs, tasks, onTasksChange }: Props) => {
                     sign={sign}
                     className="inline-block max-h-[110px] w-auto max-w-20 object-contain"
                   />
+                  <MissingSvgNotice sign={sign} className="mt-2" variant="compact" />
                 </ContentTableHeader>
                 <ContentTableCell className="!py-5 align-top text-sm leading-snug">
                   <p className="mb-3 font-medium text-stone-700">

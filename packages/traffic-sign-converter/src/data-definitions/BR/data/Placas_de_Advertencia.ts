@@ -1334,11 +1334,7 @@ export const _Placas_de_Advertencia: SignType[] = [
     catalogue: {
       signCategory: 'hazard_sign',
     },
-    image: {
-      kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Brasil_A-49a.svg',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'A-49b',
@@ -1352,11 +1348,7 @@ export const _Placas_de_Advertencia: SignType[] = [
     catalogue: {
       signCategory: 'hazard_sign',
     },
-    image: {
-      kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Brasil_A-49b.svg',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'A-50a',
@@ -1370,11 +1362,7 @@ export const _Placas_de_Advertencia: SignType[] = [
     catalogue: {
       signCategory: 'hazard_sign',
     },
-    image: {
-      kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Brasil_A-50a.svg',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'A-50b',
@@ -1388,10 +1376,6 @@ export const _Placas_de_Advertencia: SignType[] = [
     catalogue: {
       signCategory: 'hazard_sign',
     },
-    image: {
-      kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Brasil_A-50b.svg',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
 ]

@@ -1,6 +1,9 @@
+import { MissingSvgNotice } from '@app/app/(signs)/_components/MissingSvgNotice'
+import { MissingSvgPlaceholder } from '@app/app/(signs)/_components/MissingSvgPlaceholder'
 import { PackageSvgTrafficSign } from '@app/app/(signs)/_components/PackageSvgTrafficSign'
 import { FocusFilterRow } from '@app/app/(signs)/_components/PageApp/signGroups/FocusFilterRow'
 import osmWikiLogo from '@app/app/(signs)/_components/PageWikiComparison/assets/osm-wiki-logo.svg'
+import { useWikiComparisonHashScroll } from '@app/app/(signs)/_components/PageWikiComparison/useWikiComparisonHashScroll'
 import { WikiComparisonFilterRow } from '@app/app/(signs)/_components/PageWikiComparison/WikiComparisonFilterRow'
 import {
   countWikiRowsByFocus,
@@ -8,10 +11,14 @@ import {
   enrichWikiSigns,
   filterWikiRowsByFocus,
   filterWikiRowsByStatus,
+  getWikiRowPlaceholderSign,
   isWikiRowMissingInCatalogue,
+  isWikiSignImageMissing,
+  isWikiRowWikiSvgMissing,
   type WikiComparisonStatusFilter,
 } from '@app/app/(signs)/_components/PageWikiComparison/wikiComparisonFilters'
 import { buildWikiSignGithubIssueUrl } from '@app/app/(signs)/_components/PageWikiComparison/wikiComparisonIssueFormat'
+import { buildWikiComparisonRowId } from '@app/app/(signs)/_components/PageWikiComparison/wikiComparisonLinks'
 import { WikiComparisonPageIntro } from '@app/app/(signs)/_components/PageWikiComparison/WikiComparisonPageIntro'
 import { WikiComparisonTablelize } from '@app/app/(signs)/_components/PageWikiComparison/WikiComparisonTablelize'
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
@@ -50,6 +57,7 @@ export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {
   const countryPrefix = useCurrentLang()
   const { focuses } = useParamFocus()
   const [statusFilter, setStatusFilter] = useState<WikiComparisonStatusFilter>('all')
+  const highlightedRowId = useWikiComparisonHashScroll()
 
   const wikiRows = useMemo(
     () => enrichWikiSigns(getTrafficSignsWiki(countryPrefix), countryPrefix),
@@ -66,11 +74,14 @@ export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {
     [wikiRows, trafficSignData, focuses],
   )
 
-  const statusCounts = useMemo(() => countWikiRowsByStatus(focusFilteredRows), [focusFilteredRows])
+  const statusCounts = useMemo(
+    () => countWikiRowsByStatus(focusFilteredRows, countryPrefix),
+    [focusFilteredRows, countryPrefix],
+  )
 
   const displayedRows = useMemo(
-    () => filterWikiRowsByStatus(focusFilteredRows, statusFilter),
-    [focusFilteredRows, statusFilter],
+    () => filterWikiRowsByStatus(focusFilteredRows, statusFilter, countryPrefix),
+    [focusFilteredRows, statusFilter, countryPrefix],
   )
 
   const missingCount = statusCounts.missing
@@ -99,13 +110,19 @@ export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {
           {displayedRows.map((sign, rowIndex) => {
             const { toolSign, imageSvg: _, ...restsign } = sign
             const isMissing = isWikiRowMissingInCatalogue(sign)
+            const rowId = buildWikiComparisonRowId(sign.sign)
+            const isHighlighted = highlightedRowId === rowId
             const blockHeaderClassName = wikiComparisonBlockHeaderClassName(rowIndex)
             const rowCellClassName = wikiComparisonRowCellClassName(rowIndex)
-            const rowClassName = clsx(isMissing ? 'bg-amber-300' : '')
+            const rowClassName = clsx(
+              isMissing ? 'bg-amber-300' : '',
+              isHighlighted && 'ring-2 ring-stone-900 ring-inset',
+              'scroll-mt-24',
+            )
 
             return (
               <Fragment key={sign.sign}>
-                <ContentTableRow className={rowClassName}>
+                <ContentTableRow id={rowId} className={rowClassName}>
                   <ContentTableHeader className={blockHeaderClassName}>
                     <div className="flex items-center justify-between gap-2">
                       <WikiComparisonColumnHeader
@@ -135,12 +152,21 @@ export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {
                         <PackageSvgTrafficSign
                           sign={toolSign}
                           className="absolute top-1 right-1 h-14 w-14 object-contain"
+                          showSignKey={false}
                         />
                         <WikiComparisonTablelize
                           key={toolSign.osmValuePart}
                           data={toolSign}
                           compact
                         />
+                        {isWikiRowWikiSvgMissing(sign) ? (
+                          <MissingSvgNotice
+                            sign={toolSign}
+                            className="mt-2"
+                            variant="compact"
+                            showWikiLink={false}
+                          />
+                        ) : null}
                       </>
                     ) : (
                       <p className="text-center text-lg font-semibold text-pink-700">MISSING</p>
@@ -149,15 +175,19 @@ export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {
                   <ContentTableCell className={rowCellClassName}>
                     {restsign ? (
                       <>
-                        {sign?.imageSvg ? (
+                        {sign?.imageSvg && !isWikiSignImageMissing(sign) ? (
                           <img
-                            src={sign?.imageSvg}
+                            src={sign.imageSvg}
                             alt={sign.name}
                             className="absolute top-1 right-1 h-14 w-14 object-contain"
                             title="Image from source URL"
                           />
                         ) : (
-                          <span className="inline-block text-amber-700">Missing</span>
+                          <MissingSvgPlaceholder
+                            sign={getWikiRowPlaceholderSign(sign)}
+                            className="absolute top-1 right-1 h-14 w-14 object-contain"
+                            showSignKey={false}
+                          />
                         )}
                         <WikiComparisonTablelize key={restsign.sign} data={restsign} compact />
                       </>
