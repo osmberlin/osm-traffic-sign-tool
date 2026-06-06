@@ -5,12 +5,13 @@ import { useCountryPrefix } from '../store/CountryPrefixContext'
 type Props = {
   osmKey: string
   osmValue: string | string[]
+  linkLabel?: string
 }
 
 export const wikiLinkClasses =
   'underline decoration-transparent underline-offset-4 hover:decoration-stone-400 hover:decoration-1'
 
-export const WikiLinkValue = ({ osmKey, osmValue }: Props) => {
+export const WikiLinkValue = ({ osmKey, osmValue, linkLabel }: Props) => {
   const { countryPrefix } = useCountryPrefix()
 
   function prepareLinks(values: string[] | undefined) {
@@ -33,7 +34,7 @@ export const WikiLinkValue = ({ osmKey, osmValue }: Props) => {
       {orLinks.map(({ link, valuePart }, index) => (
         <span key={index}>
           <ExternalLink href={link} className={wikiLinkClasses} blank>
-            {valuePart}
+            {linkLabel ?? valuePart}
           </ExternalLink>
           {index < orLinks.length - 1 && (
             <>
@@ -46,7 +47,7 @@ export const WikiLinkValue = ({ osmKey, osmValue }: Props) => {
       {semiLinks.map(({ link, valuePart }, index) => (
         <span key={index}>
           <ExternalLink href={link} className={wikiLinkClasses} blank>
-            {valuePart}
+            {linkLabel ?? valuePart}
           </ExternalLink>
           {index < semiLinks.length - 1 && ';'}
         </span>

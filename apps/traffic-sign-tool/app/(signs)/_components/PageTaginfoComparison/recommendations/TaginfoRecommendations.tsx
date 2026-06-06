@@ -7,7 +7,7 @@ type Props = {
   geometry: GeometryType
 }
 
-export const TagRecommendations = ({ value, geometry }: Props) => {
+export const TaginfoRecommendations = ({ value, geometry }: Props) => {
   const { countryPrefix } = useCountryPrefix()
   const signs = trafficSignTagToSigns(value, countryPrefix)
   const geometries: GeometryType[] = geometry === 'way' ? ['way', 'way_centerline'] : [geometry]
@@ -25,11 +25,11 @@ export const TagRecommendations = ({ value, geometry }: Props) => {
   }
 
   return (
-    <ul>
-      {Array.from(aggregatedTagsMap).map(([key, value]) => {
+    <ul className="list-disc space-y-1 pl-5">
+      {Array.from(aggregatedTagsMap).map(([key, tagValue]) => {
         return (
-          <li key={key} className="rounded-sm px-2 py-0.5 leading-tight hover:bg-zinc-950/5">
-            <Tag tagKey={key} tagValue={value} />
+          <li key={key} className="leading-snug">
+            <Tag tagKey={key} tagValue={tagValue} />
           </li>
         )
       })}

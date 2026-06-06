@@ -1,34 +1,30 @@
-import {
-  namedTrafficSignValues,
-  splitIntoSignValueParts,
-  splitSignIdSignValue,
-} from '@osm-traffic-signs/converter'
+import { getTrafficSignWikiLinkParts } from '@app/app/(signs)/_components/wiki/wikiLinkTrafficSignParts'
+import { WikiLinkTrafficSignValueItem } from '@app/app/(signs)/_components/wiki/WikiLinkTrafficSignValueItem'
 import { useCountryPrefix } from '../store/CountryPrefixContext'
-import { WikiLinkValue } from '../wiki/WikiLinkValue'
 
-type Props = { value: string; inline?: boolean }
+type Props = {
+  value: string
+  inline?: boolean
+  linkLabel?: string
+}
 
-export const WikiLinkListTrafficSignValues = ({ value, inline }: Props) => {
+export const WikiLinkListTrafficSignValues = ({ value, inline, linkLabel }: Props) => {
   const { countryPrefix } = useCountryPrefix()
-  const splitTrafficSignValue = splitIntoSignValueParts(value)
-  const signValues = splitTrafficSignValue.map((part) => splitSignIdSignValue(part).signId)
 
   if (!countryPrefix) return null
 
+  const parts = getTrafficSignWikiLinkParts(value, countryPrefix)
+
   return (
     <ul className={inline ? 'inline space-x-2' : ''}>
-      {signValues.map((part) => {
-        const prefix = namedTrafficSignValues.includes(part) ? '' : `${countryPrefix}:`
-
-        return (
-          <li key={part} className={inline ? 'inline' : ''}>
-            <WikiLinkValue
-              osmKey="traffic_sign"
-              osmValue={part.startsWith(countryPrefix) ? part : `${prefix}${part}`}
-            />
-          </li>
-        )
-      })}
+      {parts.map(({ key, osmValue }) => (
+        <WikiLinkTrafficSignValueItem
+          key={key}
+          osmValue={osmValue}
+          inline={inline}
+          linkLabel={linkLabel}
+        />
+      ))}
     </ul>
   )
 }

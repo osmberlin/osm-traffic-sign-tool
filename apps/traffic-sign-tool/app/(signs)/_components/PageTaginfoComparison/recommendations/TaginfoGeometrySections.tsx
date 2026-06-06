@@ -8,8 +8,8 @@ import {
   type CountryPrefixType,
   type GeometryType,
 } from '@osm-traffic-signs/converter'
-import { TagComments } from './TagComments'
-import { TagRecommendations } from './TagRecommendations'
+import { TaginfoComments } from './TaginfoComments'
+import { TaginfoRecommendations } from './TaginfoRecommendations'
 
 type Props = {
   value: string
@@ -31,7 +31,7 @@ const geometryHasContent = (
   return hasTags || hasComments
 }
 
-export const TagGeometrySections = ({ value }: Props) => {
+export const TaginfoGeometrySections = ({ value }: Props) => {
   const { countryPrefix } = useCountryPrefix()
   const relevantGeometries = GEOMETRY_TYPES.filter((geometry) =>
     geometryHasContent(value, geometry, countryPrefix),
@@ -42,17 +42,23 @@ export const TagGeometrySections = ({ value }: Props) => {
   }
 
   return (
-    <>
+    <div className="space-y-4">
       {relevantGeometries.map((geometry, index) => {
         return (
-          <div key={geometry}>
-            {index > 0 && <hr className="my-5" />}
-            <h4 className="mb-2 font-light uppercase">{getGeometryLabel(geometry)}</h4>
-            <TagRecommendations value={value} geometry={geometry} />
-            <TagComments value={value} geometry={geometry} />
+          <div
+            key={geometry}
+            className={index > 0 ? 'border-t border-stone-400/50 pt-4' : undefined}
+          >
+            <h4 className="mb-2 text-xs font-semibold tracking-wide text-stone-600 uppercase">
+              {getGeometryLabel(geometry)}
+            </h4>
+            <div className="space-y-3">
+              <TaginfoRecommendations value={value} geometry={geometry} />
+              <TaginfoComments value={value} geometry={geometry} />
+            </div>
           </div>
         )
       })}
-    </>
+    </div>
   )
 }

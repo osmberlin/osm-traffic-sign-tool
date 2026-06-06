@@ -21,7 +21,7 @@ type Props = {
   geometry: GeometryType
 }
 
-export const TagComments = ({ value, geometry }: Props) => {
+export const TaginfoComments = ({ value, geometry }: Props) => {
   const { countryPrefix } = useCountryPrefix()
   const uiLocale = useUiLocale()
   const signs = trafficSignTagToSigns(value, countryPrefix)
@@ -32,14 +32,14 @@ export const TagComments = ({ value, geometry }: Props) => {
   }
 
   return (
-    <div className="break-all">
+    <div className="space-y-3 break-all">
       {Array.from(signsCommentsMap).map(([signKey, signComments]) => {
         return (
-          <div key={signKey} className={clsx('gap-2 px-2 font-serif', proseLightClass)}>
-            <h3 className="font-bold">
-              {m.tag_comments_sign()} <code className={inlineCodeClass}>{signKey}</code>:
+          <div key={signKey} className={clsx('font-serif', proseLightClass)}>
+            <h3 className="mb-1 text-sm font-semibold text-stone-800">
+              {m.tag_comments_sign()} <code className={inlineCodeClass}>{signKey}</code>
             </h3>
-            <ul className="space-y-2">
+            <ul className="list-disc space-y-2 pl-5">
               {(signComments as (SignComentType & { lang?: string })[]).map(
                 ({ tagReference, important, comment, lang }, index) => {
                   const commentLang = lang ?? 'de'

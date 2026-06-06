@@ -1,3 +1,5 @@
 export { getTaginfoTrafficSignData, taginfoTrafficSignData } from './getTaginfoTrafficSignData.js'
+export { getTaginfoSnapshotMeta, type TaginfoSnapshotMeta } from './getTaginfoSnapshotMeta.js'
 export type { TaginfoEntry } from './taginfoTypes.js'
 export { countryTaginfoConfigs, taginfoSnapshotCountryPrefixes } from './countryTaginfoConfigs.js'
+export { getTaginfoTrafficSignKeyUrl } from './taginfoReferenceUrl.js'

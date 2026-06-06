@@ -1,6 +1,6 @@
-import { WikiLinkListTrafficSignValues } from '@app/app/(signs)/_components/wiki/WikiLinkListTrafficSignValues'
-import { TagGeometrySections } from '@app/app/(signs)/DE/taginfo/_components/TagGeometrySections'
-import { TagSignImages } from '@app/app/(signs)/DE/taginfo/_components/TagSignImages'
+import { TaginfoRowActions } from '@app/app/(signs)/_components/PageTaginfoComparison/row/TaginfoRowActions'
+import { TaginfoRowRecommendations } from '@app/app/(signs)/_components/PageTaginfoComparison/row/TaginfoRowRecommendations'
+import { TaginfoSignImages } from '@app/app/(signs)/_components/PageTaginfoComparison/row/TaginfoSignImages'
 import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
 import {
   ContentTable,
@@ -10,52 +10,64 @@ import {
   ContentTableHeader,
   ContentTableRow,
 } from '@app/app/_components/layout/ContentTable'
-import { inlineCodeClass, proseLightClass } from '@app/app/_components/layout/proseClasses'
-import { ExternalLink } from '@app/app/_components/links/ExternalLink'
-import { linkStyle } from '@app/app/_components/links/linkStyles'
-import { osmtoolsUrl } from '@app/app/_components/links/osmtoolsUrl'
+import { inlineCodeClass } from '@app/app/_components/layout/proseClasses'
 import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { getTaginfoTrafficSignData } from '@internal/taginfo'
-import { getCatalogueDisplayName } from '@osm-traffic-signs/converter'
-import { Link } from '@tanstack/react-router'
 import { z } from 'zod'
+import { TaginfoComparisonPageIntro } from './TaginfoComparisonPageIntro'
 
 const Schema = z.array(z.tuple([z.string(), z.number()]))
+
+const TaginfoTableColumnHeader = ({
+  source,
+  label,
+}: {
+  source?: 'taginfo' | 'tool'
+  label: string
+}) => (
+  <span className="block leading-tight">
+    {source ? (
+      <span className="block text-xs font-normal text-stone-500">
+        {source === 'taginfo'
+          ? m.page_taginfo_qa_source_taginfo()
+          : m.page_taginfo_qa_source_tool()}
+      </span>
+    ) : null}
+    <span>{label}</span>
+  </span>
+)
 
 export const PageTaginfoComparison = () => {
   const countryPrefix = useCurrentLang()
   const data = Schema.parse(getTaginfoTrafficSignData(countryPrefix))
-  const catalogueName = getCatalogueDisplayName(countryPrefix)
 
   return (
-    <ContentPageLayout>
-      <h2 className="my-4 text-3xl font-light text-black uppercase">
-        {m.taginfo_title_count({ count: String(data.length) })}
-      </h2>
-      <div className={proseLightClass}>
-        <p>
-          {m.taginfo_page_intro({
-            catalogueName,
-            countryPrefix,
-          })}{' '}
-          <ExternalLink
-            href="https://github.com/osmberlin/osm-traffic-sign-tool/tree/main/packages/internal_taginfo"
-            blank
-          >
-            {m.taginfo_page_script_link()}
-          </ExternalLink>
-        </p>
-      </div>
-
+    <ContentPageLayout intro={<TaginfoComparisonPageIntro />}>
       <ContentTable>
         <ContentTableHead>
           <ContentTableRow>
-            <ContentTableHeader className="w-[14%]">Sign key</ContentTableHeader>
-            <ContentTableHeader className="w-[8%]">Usage</ContentTableHeader>
-            <ContentTableHeader className="w-[14%]">Signs</ContentTableHeader>
-            <ContentTableHeader className="w-[12%]">Links</ContentTableHeader>
-            <ContentTableHeader>Tag recommendations, comments</ContentTableHeader>
+            <ContentTableHeader className="w-[14%]">
+              <TaginfoTableColumnHeader
+                source="taginfo"
+                label={m.page_taginfo_qa_col_sign_value()}
+              />
+            </ContentTableHeader>
+            <ContentTableHeader className="w-[8%]">
+              <TaginfoTableColumnHeader source="taginfo" label={m.page_taginfo_qa_col_usage()} />
+            </ContentTableHeader>
+            <ContentTableHeader className="w-[14%]">
+              <TaginfoTableColumnHeader source="tool" label={m.page_taginfo_qa_col_signs()} />
+            </ContentTableHeader>
+            <ContentTableHeader>
+              <TaginfoTableColumnHeader
+                source="tool"
+                label={m.page_taginfo_qa_col_recommendations()}
+              />
+            </ContentTableHeader>
+            <ContentTableHeader className="w-[20%] min-w-44">
+              <TaginfoTableColumnHeader label={m.page_taginfo_qa_col_actions()} />
+            </ContentTableHeader>
           </ContentTableRow>
         </ContentTableHead>
         <ContentTableBody>
@@ -69,26 +81,17 @@ export const PageTaginfoComparison = () => {
                   {usageCount.toLocaleString()} &times;
                 </ContentTableCell>
                 <ContentTableCell className="text-sm">
-                  <TagSignImages value={value} />
+                  <TaginfoSignImages value={value} />
                 </ContentTableCell>
                 <ContentTableCell className="text-sm">
-                  <Link
-                    to="/$lang"
-                    params={{ lang: countryPrefix }}
-                    search={{ signs: value }}
-                    target="_blank"
-                    className={linkStyle}
-                  >
-                    {m.taginfo_this_tool_link()}
-                  </Link>
-                  <br />
-                  <ExternalLink href={osmtoolsUrl(value, countryPrefix)} blank>
-                    osmtools.de
-                  </ExternalLink>
-                  <WikiLinkListTrafficSignValues value={value} inline={false} />
+                  <TaginfoRowRecommendations value={value} />
                 </ContentTableCell>
-                <ContentTableCell className="text-sm">
-                  <TagGeometrySections value={value} />
+                <ContentTableCell className="min-w-44 text-sm">
+                  <TaginfoRowActions
+                    value={value}
+                    usageCount={usageCount}
+                    countryPrefix={countryPrefix}
+                  />
                 </ContentTableCell>
               </ContentTableRow>
             )

@@ -4,15 +4,15 @@ import { trafficSignTagToSigns } from '@osm-traffic-signs/converter'
 
 type Props = { value: string }
 
-export const TagSignImages = ({ value }: Props) => {
+export const TaginfoSignImages = ({ value }: Props) => {
   const { countryPrefix } = useCountryPrefix()
   const signs = trafficSignTagToSigns(value, countryPrefix)
 
   return (
-    <ul>
+    <ul className="list-none space-y-2">
       {signs.map((sign) => {
         return (
-          <li key={sign.osmValuePart} className="py-1 leading-tight">
+          <li key={sign.osmValuePart} className="leading-tight">
             <SelectedSignImage sign={sign} />
           </li>
         )

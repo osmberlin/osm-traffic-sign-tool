@@ -4,7 +4,7 @@ import {
   taginfoSnapshotCountryPrefixes,
   type CountryTaginfoConfig,
 } from './countryTaginfoConfigs.js'
-import { taginfoSnapshotPath } from './taginfoSnapshotPaths.js'
+import { taginfoSnapshotMetaPath, taginfoSnapshotPath } from './taginfoSnapshotPaths.js'
 
 const numResults = 100
 
@@ -56,6 +56,11 @@ export const writeTaginfoSnapshot = async (
   const outputPath = taginfoSnapshotPath(countryPrefix)
   await Bun.write(outputPath, JSON.stringify(entries, undefined, 2))
   console.log(`Wrote ${entries.length} values to ${outputPath}`)
+
+  const metaPath = taginfoSnapshotMetaPath(countryPrefix)
+  const meta = { parsedAt: new Date().toISOString() }
+  await Bun.write(metaPath, `${JSON.stringify(meta, null, 2)}\n`)
+  console.log(`Wrote snapshot meta to ${metaPath}`)
 }
 
 const main = async () => {
