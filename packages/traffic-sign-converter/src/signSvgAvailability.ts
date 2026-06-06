@@ -34,7 +34,9 @@ export const hasBundledSvg = (
   countryPrefix: CountryPrefixType,
   signOrOsmValuePart: SignWithImage | string,
 ): boolean => {
-  const svgName = createSvgImportname(countryPrefix, signOrOsmValuePart)
+  const osmValuePart =
+    typeof signOrOsmValuePart === 'string' ? signOrOsmValuePart : signOrOsmValuePart.osmValuePart
+  const svgName = createSvgImportname(countryPrefix, osmValuePart)
   return svgName in svgLoaderMaps[countryPrefix]
 }
 

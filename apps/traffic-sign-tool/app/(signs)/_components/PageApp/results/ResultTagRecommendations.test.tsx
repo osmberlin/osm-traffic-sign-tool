@@ -28,6 +28,18 @@ vi.mock('@app/src/features/routing/useCurrentLang', () => ({
   useCurrentLang: () => 'DE',
 }))
 
+vi.mock('@tanstack/react-router', () => ({
+  Link: ({
+    children,
+    to,
+    params,
+  }: {
+    children: ReactNode
+    to: string
+    params?: { lang?: string }
+  }) => <a href={params?.lang ? to.replace('$lang', params.lang) : to}>{children}</a>,
+}))
+
 vi.mock('@app/app/_components/links/CopyButton', () => ({
   CopyButton: ({ children }: { children: ReactNode }) => <button>{children}</button>,
 }))

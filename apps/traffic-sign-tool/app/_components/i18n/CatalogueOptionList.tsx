@@ -1,7 +1,6 @@
 import { CatalogueIconicSign } from '@app/app/_components/i18n/CatalogueIconicSign'
 import { LangSwitcherOption } from '@app/app/_components/i18n/LangSwitcherOption'
 import { MaturityLabel } from '@app/app/_components/MaturityLabel'
-import * as m from '@app/paraglide/messages'
 import { getLocale } from '@app/paraglide/runtime'
 import { getCatalogueLabel } from '@app/src/features/i18n/catalogueLabels'
 import {

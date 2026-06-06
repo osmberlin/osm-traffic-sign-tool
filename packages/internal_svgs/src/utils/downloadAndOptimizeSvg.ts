@@ -103,7 +103,7 @@ export const downloadAndOptimizeSvg = async (
     optimized = optimizeSvg({
       svgString: rawSvg,
       signId: sign.osmValuePart,
-      signTitle: sign.descriptiveName,
+      signTitle: sign.descriptiveName ?? sign.name,
     })
   } catch (error) {
     // Save raw content for debugging

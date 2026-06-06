@@ -36,7 +36,7 @@ type Props = {
 type FeedbackKey = 'OK' | 'NOTOK' | 'INVALID'
 
 const feedbackMarkup = {
-  strong: ({ children }: { children: ReactNode }) => <strong>{children}</strong>,
+  strong: ({ children }: { children?: ReactNode }) => <strong>{children}</strong>,
 }
 
 const formatConfirmationDateLabel = (isoDate: string, locale: string): string => {

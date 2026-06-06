@@ -10,7 +10,14 @@ type CatalogueSignImage = SignImage | LegacyMissingRemote | LegacyMissingLocal
 
 export const isSignImageMissing = (image: CatalogueSignImage | undefined): boolean => {
   if (image === 'missing') return true
-  if (image && typeof image === 'object' && image.availability === 'missing') return true
+  if (
+    image &&
+    typeof image === 'object' &&
+    'availability' in image &&
+    image.availability === 'missing'
+  ) {
+    return true
+  }
   return false
 }
 

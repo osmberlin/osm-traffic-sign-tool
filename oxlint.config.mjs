@@ -54,5 +54,6 @@ export default defineConfig({
     // oxlint 1.65 react-compiler ICE (Cannot emit the same block twice)
     '**/PageQuestionsQa.tsx',
     '**/TagRecommendations.tsx',
+    '**/TaginfoRecommendations.tsx',
   ],
 })

@@ -50,7 +50,7 @@ const WikiComparisonColumnHeader = ({ logoSrc, label }: { logoSrc: string; label
 const wikiComparisonBlockHeaderClassName = (rowIndex: number) =>
   clsx('w-1/2 !border-b !border-stone-400/40 !py-1.5', rowIndex > 0 && '!pt-4')
 
-const wikiComparisonRowCellClassName = (rowIndex: number) =>
+const wikiComparisonRowCellClassName = (_rowIndex: number) =>
   clsx('relative !border-b-2 !border-stone-500/50 !py-2 !pb-4')
 
 export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {

@@ -37,7 +37,7 @@ export const collectSignTaskEntries = (
     entries.push({
       osmValuePart: sign.osmValuePart,
       signId: sign.signId,
-      descriptiveName: sign.descriptiveName,
+      descriptiveName: sign.descriptiveName ?? sign.name,
       task: state.taskType,
       suggestionNotes: state.suggestionNotes.trim() || undefined,
     })

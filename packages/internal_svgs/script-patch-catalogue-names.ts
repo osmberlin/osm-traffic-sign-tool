@@ -31,10 +31,6 @@ const nameByOsmValuePart = new Map(
 )
 
 const escapeString = (value: string) => value.replace(/\\/g, '\\\\').replace(/'/g, "\\'")
-const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-
-const descriptiveNameValue =
-  "(?:'(?:\\\\'|[^'])*'|\"[^\"]*\"|\\n\\s*'(?:\\\\'|[^'])*'|\\n\\s*\"[^\"]*\")"
 
 let patchedFiles = 0
 let unchangedFiles = 0

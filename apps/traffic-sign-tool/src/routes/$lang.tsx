@@ -1,5 +1,6 @@
 import { isSupportedLang } from '@app/src/features/routing/lang'
 import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
+import type { CountryPrefixType } from '@osm-traffic-signs/converter'
 import { createFileRoute, notFound, Outlet, redirect } from '@tanstack/react-router'
 
 /**
@@ -23,7 +24,7 @@ export const Route = createFileRoute('/$lang')({
       })
     }
 
-    return { countryPrefix: params.lang }
+    return { countryPrefix: params.lang as CountryPrefixType }
   },
   validateSearch: deSearchSchema,
   component: Outlet,

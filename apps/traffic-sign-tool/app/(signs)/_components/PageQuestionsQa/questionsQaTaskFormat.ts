@@ -41,7 +41,7 @@ export const collectQuestionTaskEntries = (
     entries.push({
       osmValuePart: sign.osmValuePart,
       signId: sign.signId,
-      descriptiveName: sign.descriptiveName,
+      descriptiveName: sign.descriptiveName ?? sign.name,
       questions: sign.questions,
       suggestionNotes: state.suggestionNotes.trim(),
     })
