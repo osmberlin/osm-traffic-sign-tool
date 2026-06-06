@@ -17,6 +17,18 @@ export type CombinationRow = {
   modifierSign?: SignStateType & { recodgnizedSign: true }
   allowFeedback: boolean
   blockReason?: CombinationBlockReason
+  lastConfirmedAt?: string
+}
+
+export const getCombinationConfirmationDate = (
+  primarySign: Pick<SignType, 'compatibility'> | undefined,
+  modifierSignId: string | undefined,
+): string | undefined => {
+  if (!modifierSignId) {
+    return undefined
+  }
+
+  return primarySign?.compatibility?.confirmedModifiers?.[modifierSignId]
 }
 
 export type CombinationQaCounts = Record<CombinationQaFilter, number>
@@ -113,15 +125,29 @@ const classifyCombinationRow = (
     !primarySign?.compatibility?.incompatibleModifiers?.includes(modifierSign.signId)
   const allowFeedback = Boolean(canReceiveModifiers && canReceiveThisModifier)
 
+  const lastConfirmedAt = getCombinationConfirmationDate(primarySign, modifierSign?.signId)
+
   if (!canReceiveModifiers) {
-    return { primarySign, modifierSign, allowFeedback, blockReason: 'no_modifiers' }
+    return {
+      primarySign,
+      modifierSign,
+      allowFeedback,
+      blockReason: 'no_modifiers',
+      lastConfirmedAt,
+    }
   }
 
   if (!canReceiveThisModifier) {
-    return { primarySign, modifierSign, allowFeedback, blockReason: 'incompatible_modifier' }
+    return {
+      primarySign,
+      modifierSign,
+      allowFeedback,
+      blockReason: 'incompatible_modifier',
+      lastConfirmedAt,
+    }
   }
 
-  return { primarySign, modifierSign, allowFeedback }
+  return { primarySign, modifierSign, allowFeedback, lastConfirmedAt }
 }
 
 export const buildCombinationRowsForPrimary = (

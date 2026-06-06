@@ -7,12 +7,14 @@ This skill teaches the agent how to resolve feedback from the Sign combinations 
 - GitHub issue labeled `combination-qa`.
 - User reports wrong OSM tags for a primary + modifier combination.
 - User reports a combination that should be blocked but is currently allowed.
-- Keywords: "combination QA", "incompatibleModifiers", "canReceiveModifiers", "Not OK", "Invalid combination".
+- User confirms a combination is allowed and tagging is correct (OK task).
+- Keywords: "combination QA", "incompatibleModifiers", "canReceiveModifiers", "confirmedModifiers", "Not OK", "Invalid combination", "OK".
 
 ## Issue task types
 
 | Reviewer status | Meaning | Typical fix |
 |-----------------|---------|-------------|
+| **OK** | Combination is allowed and tag output verified | Add or update `compatibility.confirmedModifiers[<modifierSignId>]` on the primary sign with the confirmation date |
 | **Not OK** | Combination is allowed but tag output is wrong | Update `tagRecommendations` on primary/modifier and/or add `signsToTags` test |
 | **Invalid combination** | Combination should not be allowed | Update primary `compatibility` (`incompatibleModifiers` or `canReceiveModifiers: false`) |
 
@@ -21,7 +23,7 @@ Each issue task includes:
 - Combined tag value (e.g. `DE:237,DE:1020-12`)
 - Primary and modifier sign IDs / descriptive names (and `osmValuePart` when shown)
 - Current converter tag output
-- Reviewer notes
+- Reviewer notes (Not OK / Invalid) or confirmation date (OK)
 
 ## Instructions
 
@@ -53,7 +55,25 @@ test('Combined tags for specific primary + modifier', () => {
 
 5. Run converter tests: `cd packages/traffic-sign-converter && bun test`.
 
-### Step 3: Fix **Invalid combination** tasks (should be blocked)
+### Step 3: Apply **OK** tasks (record QA confirmation)
+
+1. Find the **primary** traffic sign config entry.
+2. Add or update `compatibility.confirmedModifiers` with the modifier `signId` from the task as key and the **confirmation date** from the issue as value (`YYYY-MM-DD`).
+3. Preserve existing `incompatibleModifiers` and `canReceiveModifiers` — only add/update the confirmation entry.
+4. No tag-output change is expected unless the current converter tags in the task look wrong (treat as **Not OK** instead).
+
+Example:
+
+```typescript
+compatibility: {
+  incompatibleModifiers: ['1020-12'], // keep existing entries
+  confirmedModifiers: {
+    '1010-12': '2026-06-06',
+  },
+},
+```
+
+### Step 4: Fix **Invalid combination** tasks (should be blocked)
 
 1. Find the **primary** traffic sign config entry (first sign in the combination).
 2. Choose the narrowest compatibility change:
@@ -70,7 +90,7 @@ compatibility: {
 },
 ```
 
-### Step 4: Verify (no app required)
+### Step 5: Verify (no app required)
 
 1. **Tags (Not OK tasks)** — re-run the combination tag helper; output should match reviewer expectation.
 2. **Compatibility (Invalid tasks)** — re-run the compatibility helper; `blocked` should be `true` with the expected reason.
@@ -78,7 +98,7 @@ compatibility: {
 
 Optional: if you added a focused test in Step 2, that test is the long-term guard — you do not need manual CLI checks for that case again.
 
-### Step 5: Open PR
+### Step 6: Open PR
 
 - Start the PR description with `**[Cursor Agent]**`, include `Closes #<issue-number>` (auto-closes the source issue on merge), then `Automated catalogue update for #<issue-number>.`
 - Summarize which sign config files changed and why.

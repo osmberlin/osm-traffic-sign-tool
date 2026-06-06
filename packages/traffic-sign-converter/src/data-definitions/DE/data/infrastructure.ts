@@ -32,7 +32,13 @@ export const _infrastructure: SignType[] = [
           'Auch beachten: [Straßenbegleitende Wege](https://wiki.openstreetmap.org/wiki/DE:Bicycle/Radverkehrsanlagen_kartieren#Stra.C3.9Fenbegleitende_Wege).',
       },
     ],
-    compatibility: { incompatibleModifiers: ['1020-12', '1022-10'] },
+    compatibility: {
+      incompatibleModifiers: ['1020-12', '1022-10', '1000-32', '1000-33'],
+      confirmedModifiers: {
+        '1000-30': '2026-06-06',
+        '1000-31': '2026-06-06',
+      },
+    },
     catalogue: {
       focus: { default: 'highlight' },
       signCategory: 'traffic_sign',

@@ -86,6 +86,8 @@ type SharedCompatibility = {
     canReceiveModifiers?: boolean
     /** @desc Value of `signId` */
     incompatibleModifiers?: string[]
+    /** Modifier `signId` → ISO date `YYYY-MM-DD` when combination QA marked OK */
+    confirmedModifiers?: Record<string, string>
   }
 }
 export const trafficSignCatalogueCategories = [

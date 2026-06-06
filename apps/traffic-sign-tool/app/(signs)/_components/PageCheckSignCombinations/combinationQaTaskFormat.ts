@@ -11,6 +11,7 @@ export type CombinationFeedbackStatus = 'OK' | 'NOTOK' | 'INVALID'
 export type CombinationFeedbackState = {
   status: CombinationFeedbackStatus
   comment?: string
+  confirmedAt?: string
 }
 
 export type CombinationTaskEntry = {
@@ -24,12 +25,16 @@ export type CombinationTaskEntry = {
   status: CombinationFeedbackStatus
   currentTags: string
   comment?: string
+  confirmedAt?: string
 }
 
 export const COMBINATION_QA_AGENT_SKILL_PATH = '.cursor/skills/fix-sign-combination/SKILL.md'
 export const COMBINATION_QA_ISSUE_TEMPLATE = 'sign-combination-qa-update.md'
 
 const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
+
+export const getCombinationQaConfirmationDate = (date = new Date()): string =>
+  date.toISOString().slice(0, 10)
 
 const tagValueToSignPart = (tagValue: string, countryPrefix: CountryPrefixType) => {
   const prefix = `${countryPrefix}:`
@@ -39,6 +44,38 @@ const tagValueToSignPart = (tagValue: string, countryPrefix: CountryPrefixType) 
 const getRecognizedSigns = (signs: SignStateType[]) =>
   signs.filter((sign): sign is SignStateType & { recodgnizedSign: true } => sign.recodgnizedSign)
 
+const buildTaskEntry = (
+  tagValue: string,
+  state: CombinationFeedbackState,
+  countryPrefix: CountryPrefixType,
+): CombinationTaskEntry => {
+  const signs = trafficSignTagToSigns(tagValueToSignPart(tagValue, countryPrefix), countryPrefix)
+  const recognized = getRecognizedSigns(signs)
+  const primarySign = recognized.at(0)
+  const modifierSign = recognized.at(1)
+
+  const tags = signsToTags(signs, countryPrefix, 'way')
+  const currentTags = [...tags.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([key, value]) => `${key}=${value}`)
+    .join('\n')
+
+  return {
+    tagValue,
+    primaryOsmValuePart: primarySign?.osmValuePart,
+    primarySignId: primarySign?.signId ?? undefined,
+    primaryDescriptiveName: primarySign?.descriptiveName,
+    modifierOsmValuePart: modifierSign?.osmValuePart,
+    modifierSignId: modifierSign?.signId ?? undefined,
+    modifierDescriptiveName: modifierSign?.descriptiveName,
+    status: state.status,
+    currentTags: currentTags || '_No tags produced._',
+    comment: state.status === 'OK' ? undefined : state.comment?.trim() || undefined,
+    confirmedAt:
+      state.status === 'OK' ? (state.confirmedAt ?? getCombinationQaConfirmationDate()) : undefined,
+  }
+}
+
 export const collectCombinationTaskEntries = (
   feedback: Map<string, CombinationFeedbackState>,
   countryPrefix: CountryPrefixType,
@@ -46,33 +83,11 @@ export const collectCombinationTaskEntries = (
   const entries: CombinationTaskEntry[] = []
 
   for (const [tagValue, state] of feedback) {
-    if (!state || state.status === 'OK') {
+    if (!state) {
       continue
     }
 
-    const signs = trafficSignTagToSigns(tagValueToSignPart(tagValue, countryPrefix), countryPrefix)
-    const recognized = getRecognizedSigns(signs)
-    const primarySign = recognized.at(0)
-    const modifierSign = recognized.at(1)
-
-    const tags = signsToTags(signs, countryPrefix, 'way')
-    const currentTags = [...tags.entries()]
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([key, value]) => `${key}=${value}`)
-      .join('\n')
-
-    entries.push({
-      tagValue,
-      primaryOsmValuePart: primarySign?.osmValuePart,
-      primarySignId: primarySign?.signId ?? undefined,
-      primaryDescriptiveName: primarySign?.descriptiveName,
-      modifierOsmValuePart: modifierSign?.osmValuePart,
-      modifierSignId: modifierSign?.signId ?? undefined,
-      modifierDescriptiveName: modifierSign?.descriptiveName,
-      status: state.status,
-      currentTags: currentTags || '_No tags produced._',
-      comment: state.comment?.trim() || undefined,
-    })
+    entries.push(buildTaskEntry(tagValue, state, countryPrefix))
   }
 
   return entries
@@ -80,6 +95,22 @@ export const collectCombinationTaskEntries = (
 
 const formatEntryHeading = (entry: CombinationTaskEntry) =>
   `### \`${entry.tagValue}\`${entry.primarySignId ? ` (primary \`${entry.primarySignId}\`)` : ''}${entry.modifierSignId ? ` + modifier \`${entry.modifierSignId}\`` : ''}`
+
+const appendEntrySignLines = (lines: string[], entry: CombinationTaskEntry) => {
+  if (!entry.primaryDescriptiveName && !entry.modifierDescriptiveName) {
+    return
+  }
+
+  lines.push(
+    `- Primary: \`${entry.primaryOsmValuePart ?? 'unknown'}\` – ${entry.primaryDescriptiveName ?? 'unknown'}`,
+  )
+  if (entry.modifierOsmValuePart) {
+    lines.push(
+      `- Modifier: \`${entry.modifierOsmValuePart}\` – ${entry.modifierDescriptiveName ?? 'unknown'}`,
+    )
+  }
+  lines.push('')
+}
 
 const formatTaskSection = (
   lines: string[],
@@ -95,23 +126,35 @@ const formatTaskSection = (
 
   for (const entry of entries) {
     lines.push(formatEntryHeading(entry), '')
-    if (entry.primaryDescriptiveName || entry.modifierDescriptiveName) {
-      lines.push(
-        `- Primary: \`${entry.primaryOsmValuePart ?? 'unknown'}\` – ${entry.primaryDescriptiveName ?? 'unknown'}`,
-      )
-      if (entry.modifierOsmValuePart) {
-        lines.push(
-          `- Modifier: \`${entry.modifierOsmValuePart}\` – ${entry.modifierDescriptiveName ?? 'unknown'}`,
-        )
-      }
-      lines.push('')
-    }
+    appendEntrySignLines(lines, entry)
     lines.push('Current converter tags:', '```', entry.currentTags, '```', '')
     if (entry.comment) {
       lines.push('Reviewer notes:', '```', entry.comment, '```', '')
     } else {
       lines.push('_No reviewer notes provided._', '')
     }
+  }
+
+  lines.push('')
+}
+
+const formatOkTaskSection = (
+  lines: string[],
+  entries: CombinationTaskEntry[],
+  heading: string,
+  intro: string,
+) => {
+  if (entries.length === 0) {
+    return
+  }
+
+  lines.push(heading, '', intro, '')
+
+  for (const entry of entries) {
+    lines.push(formatEntryHeading(entry), '')
+    appendEntrySignLines(lines, entry)
+    lines.push(`- Confirmation date: \`${entry.confirmedAt ?? 'unknown'}\``, '')
+    lines.push('Current converter tags:', '```', entry.currentTags, '```', '')
   }
 
   lines.push('')
@@ -130,10 +173,11 @@ const formatAgentBrief = (countryPrefix: string): string[] => [
   '',
   '1. Apply every task in the sections below.',
   `2. Read [\`${COMBINATION_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${COMBINATION_QA_AGENT_SKILL_PATH}) for compatibility fields, tag output fixes, and test expectations.`,
-  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Schema: \`packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts\` (\`compatibility.canReceiveModifiers\`, \`compatibility.incompatibleModifiers\`, \`tagRecommendationsByGeometry\`).`,
+  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Schema: \`packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts\` (\`compatibility.canReceiveModifiers\`, \`compatibility.incompatibleModifiers\`, \`compatibility.confirmedModifiers\`, \`tagRecommendationsByGeometry\`).`,
   '4. For **Not OK** tasks: fix the combined tag output (usually `tagRecommendationsByGeometry` on primary/modifier and/or `signsToTags` interaction tests).',
   '5. For **Invalid combination** tasks: update compatibility so the converter blocks the pair (add `incompatibleModifiers` on the primary sign or set `canReceiveModifiers: false` when the primary must never take modifiers).',
-  '6. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
+  '6. For **OK** tasks: add or update `compatibility.confirmedModifiers[<modifierSignId>]` on the primary sign with the confirmation date from the task.',
+  '7. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
   '',
   '## Tasks',
   '',
@@ -147,11 +191,18 @@ export const formatCombinationQaTaskResults = (
     return ''
   }
 
+  const ok = entries.filter((entry) => entry.status === 'OK')
   const notOk = entries.filter((entry) => entry.status === 'NOTOK')
   const invalid = entries.filter((entry) => entry.status === 'INVALID')
 
   const lines = [...formatAgentBrief(countryPrefix)]
 
+  formatOkTaskSection(
+    lines,
+    ok,
+    '### OK – record combination QA confirmation',
+    'The combination is allowed and the produced OSM tags were verified. Add or update the primary sign `compatibility.confirmedModifiers` entry for this modifier using the confirmation date below.',
+  )
   formatTaskSection(
     lines,
     notOk,

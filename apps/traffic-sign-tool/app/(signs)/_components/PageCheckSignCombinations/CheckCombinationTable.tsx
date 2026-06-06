@@ -1,8 +1,13 @@
-import type { CombinationRow } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaFilters'
+import type {
+  CombinationBlockReason,
+  CombinationRow,
+} from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaFilters'
 import {
   feedbackCommentPlaceholder,
+  getCombinationQaConfirmationDate,
   type CombinationFeedbackState,
 } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaTaskFormat'
+import { SignTagRecommendationsPanel } from '@app/app/(signs)/_components/SignTagRecommendations/SignTagRecommendationsPanel'
 import { ContentPageWorkflowStepLabel } from '@app/app/_components/layout/ContentPageWorkflowStep'
 import {
   ContentTable,
@@ -12,10 +17,10 @@ import {
   ContentTableHeader,
   ContentTableRow,
 } from '@app/app/_components/layout/ContentTable'
-import { SignTagRecommendationsPanel } from '@app/app/(signs)/_components/SignTagRecommendations/SignTagRecommendationsPanel'
-import { ParaglideMessage } from '@inlang/paraglide-js-react'
 import * as m from '@app/paraglide/messages'
+import { getLocale } from '@app/paraglide/runtime'
 import { catalogueHtmlLang } from '@app/src/features/routing/lang'
+import { ParaglideMessage } from '@inlang/paraglide-js-react'
 import type { SignStateType } from '@osm-traffic-signs/converter'
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
 import { PackageSvgTrafficSign } from '../PackageSvgTrafficSign'
@@ -33,16 +38,47 @@ const feedbackMarkup = {
   strong: ({ children }: { children: ReactNode }) => <strong>{children}</strong>,
 }
 
-const feedbackOptions: ReadonlyArray<{ key: FeedbackKey; label: () => ReactNode }> = [
-  { key: 'OK', label: () => m.combinations_feedback_ok() },
-  {
-    key: 'NOTOK',
-    label: () => (
-      <ParaglideMessage message={m.combinations_feedback_not_ok} markup={feedbackMarkup} />
-    ),
-  },
-  { key: 'INVALID', label: () => m.combinations_feedback_invalid() },
-]
+const formatConfirmationDateLabel = (isoDate: string, locale: string): string => {
+  const date = new Date(`${isoDate}T12:00:00`)
+  if (Number.isNaN(date.getTime())) {
+    return isoDate
+  }
+
+  return new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(date)
+}
+
+const getOkConfirmationDateIso = (
+  currentData: CombinationFeedbackState | undefined,
+  lastConfirmedAt: string | undefined,
+): string | undefined => {
+  if (currentData?.status === 'OK') {
+    return currentData.confirmedAt ?? getCombinationQaConfirmationDate()
+  }
+
+  return lastConfirmedAt
+}
+
+const isFeedbackOptionChecked = (
+  optionKey: FeedbackKey,
+  currentData: CombinationFeedbackState | undefined,
+  lastConfirmedAt: string | undefined,
+  blockReason: CombinationBlockReason | undefined,
+): boolean => {
+  if (currentData) {
+    return currentData.status === optionKey
+  }
+
+  if (optionKey === 'OK' && lastConfirmedAt) {
+    return true
+  }
+
+  return optionKey === 'INVALID' && blockReason === 'incompatible_modifier'
+}
+
+const showsFeedbackOptions = (
+  allowFeedback: boolean,
+  blockReason: CombinationBlockReason | undefined,
+) => allowFeedback || blockReason === 'incompatible_modifier'
 
 const radioClassName =
   'relative size-4 shrink-0 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white not-checked:before:hidden checked:border-indigo-600 checked:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden'
@@ -50,12 +86,17 @@ const radioClassName =
 export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Props) => {
   const { countryPrefix } = useCountryPrefix()
   const catalogueLangAttr = catalogueHtmlLang(countryPrefix)
+  const locale = getLocale()
 
   const handleStatusChange = (tagValue: string, status: FeedbackKey) => {
     onFeedbackChange((prev) => {
       const next = new Map(prev)
       if (status === 'OK') {
-        next.set(tagValue, { status, comment: undefined })
+        next.set(tagValue, {
+          status,
+          confirmedAt: getCombinationQaConfirmationDate(),
+          comment: undefined,
+        })
       } else {
         const current = next.get(tagValue)
         next.set(tagValue, { status, comment: current?.comment })
@@ -73,6 +114,44 @@ export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Prop
       }
       return next
     })
+  }
+
+  const renderFeedbackLabel = (
+    optionKey: FeedbackKey,
+    okConfirmationDateIso: string | undefined,
+    blockReason: CombinationBlockReason | undefined,
+  ): ReactNode => {
+    if (optionKey === 'OK') {
+      const formattedDate = okConfirmationDateIso
+        ? formatConfirmationDateLabel(okConfirmationDateIso, locale)
+        : undefined
+
+      return (
+        <span className="flex flex-col">
+          <span>{m.combinations_feedback_ok()}</span>
+          {formattedDate ? (
+            <span className="text-xs font-normal text-stone-500">
+              {m.combinations_feedback_ok_last_confirmed({ date: formattedDate })}
+            </span>
+          ) : null}
+        </span>
+      )
+    }
+
+    if (optionKey === 'NOTOK') {
+      return <ParaglideMessage message={m.combinations_feedback_not_ok} markup={feedbackMarkup} />
+    }
+
+    return (
+      <span className="flex flex-col">
+        <span>{m.combinations_feedback_invalid()}</span>
+        {blockReason === 'incompatible_modifier' ? (
+          <span className="text-xs font-normal text-stone-500">
+            {m.combinations_feedback_invalid_in_data()}
+          </span>
+        ) : null}
+      </span>
+    )
   }
 
   return (
@@ -95,11 +174,12 @@ export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Prop
       </ContentTableHead>
       <ContentTableBody>
         {rows.map((row) => {
-          const { signs, tagValue, allowFeedback, blockReason } = row
+          const { signs, tagValue, allowFeedback, blockReason, lastConfirmedAt } = row
           const recognizedSigns = signs.filter(
             (sign): sign is SignStateType & { recodgnizedSign: true } => sign.recodgnizedSign,
           )
           const currentData = feedback.get(tagValue)
+          const okConfirmationDateIso = getOkConfirmationDateIso(currentData, lastConfirmedAt)
 
           return (
             <ContentTableRow key={tagValue} className="[&>td]:py-5 [&>th]:py-5">
@@ -119,27 +199,38 @@ export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Prop
                 <SignTagRecommendationsPanel value={tagValue} />
               </ContentTableCell>
               <ContentTableCell className="text-sm leading-snug">
-                {allowFeedback && (
+                {showsFeedbackOptions(allowFeedback, blockReason) && (
                   <>
                     <ul className="flex flex-col gap-0.5 leading-tight">
-                      {feedbackOptions.map((option) => {
-                        const id = `${tagValue}-${option.key}`
+                      {(['OK', 'NOTOK', 'INVALID'] as const).map((optionKey) => {
+                        const id = `${tagValue}-${optionKey}`
 
                         return (
-                          <li key={option.key}>
+                          <li key={optionKey}>
                             <label
                               htmlFor={id}
                               className="flex cursor-pointer items-center gap-2 py-0.5"
                             >
                               <input
                                 id={id}
-                                onChange={() => handleStatusChange(tagValue, option.key)}
+                                onChange={() => handleStatusChange(tagValue, optionKey)}
                                 name={`feedback-${tagValue}`}
                                 type="radio"
-                                checked={currentData?.status === option.key}
+                                checked={isFeedbackOptionChecked(
+                                  optionKey,
+                                  currentData,
+                                  lastConfirmedAt,
+                                  blockReason,
+                                )}
                                 className={radioClassName}
                               />
-                              <span className="text-sm leading-tight">{option.label()}</span>
+                              <span className="text-sm leading-tight">
+                                {renderFeedbackLabel(
+                                  optionKey,
+                                  optionKey === 'OK' ? okConfirmationDateIso : undefined,
+                                  blockReason,
+                                )}
+                              </span>
                             </label>
                           </li>
                         )
@@ -159,11 +250,6 @@ export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Prop
                 {blockReason === 'no_modifiers' && (
                   <p>
                     <small>Sign cannot be combined with modifier signs</small>
-                  </p>
-                )}
-                {blockReason === 'incompatible_modifier' && (
-                  <p>
-                    <small>Sign cannot be combined with this modifier sign</small>
                   </p>
                 )}
               </ContentTableCell>
