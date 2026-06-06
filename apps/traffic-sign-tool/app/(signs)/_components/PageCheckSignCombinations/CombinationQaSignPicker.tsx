@@ -14,6 +14,7 @@ type Props = {
   primaryOsmValuePart?: string
   onPrimarySelect: (osmValuePart: string) => void
   onFilterChange: (filter: CombinationQaFilter) => void
+  nested?: boolean
 }
 
 export const CombinationQaSignPicker = ({
@@ -23,6 +24,7 @@ export const CombinationQaSignPicker = ({
   primaryOsmValuePart,
   onPrimarySelect,
   onFilterChange,
+  nested = false,
 }: Props) => {
   const catalogueLang = useCatalogueHtmlLang()
   const selectedSign = filteredPrimarySigns.find(
@@ -32,7 +34,10 @@ export const CombinationQaSignPicker = ({
 
   return (
     <details
-      className="group mt-6 w-full rounded-sm outline -outline-offset-1 outline-stone-500/50"
+      className={clsx(
+        'group w-full rounded-sm outline -outline-offset-1 outline-stone-500/50',
+        !nested && 'mt-6',
+      )}
       open={!selectedInList}
     >
       <summary
@@ -65,8 +70,7 @@ export const CombinationQaSignPicker = ({
         <CombinationQaFilterRow counts={counts} onFilterChange={onFilterChange} />
 
         <p className="text-sm text-stone-600">
-          {filteredPrimarySigns.length} primary sign{filteredPrimarySigns.length === 1 ? '' : 's'}{' '}
-          match this filter. Choose one to review all modifier combinations.
+          {m.combinations_primary_filter_hint({ count: String(filteredPrimarySigns.length) })}
         </p>
 
         <ul className="max-h-72 space-y-1 overflow-y-auto">
@@ -102,7 +106,7 @@ export const CombinationQaSignPicker = ({
                       isSelected ? 'text-stone-400' : 'text-stone-500',
                     )}
                   >
-                    {combinationCount} comb.
+                    {m.combinations_combination_count({ count: String(combinationCount) })}
                   </span>
                 </button>
               </li>

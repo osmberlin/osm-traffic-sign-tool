@@ -1,5 +1,10 @@
 import { describe, expect, test } from 'vitest'
-import { buildWikiSignGithubIssueUrl, formatWikiSignIssueBody } from './wikiComparisonIssueFormat'
+import {
+  buildWikiSignGithubIssueUrl,
+  formatWikiSignIssueBody,
+  WIKI_QA_AGENT_SKILL_PATH,
+  WIKI_QA_ISSUE_TEMPLATE,
+} from './wikiComparisonIssueFormat'
 
 describe('wikiComparisonIssueFormat', () => {
   const wikiSign = {
@@ -12,6 +17,12 @@ describe('wikiComparisonIssueFormat', () => {
   test('formatWikiSignIssueBody', () => {
     const body = formatWikiSignIssueBody(wikiSign)
 
+    expect(body).toContain('# Wiki comparison – catalogue update')
+    expect(body).toContain('> **You** — submitted feedback from the QA page')
+    expect(body).toContain('label `cursor-qa`')
+    expect(body).toContain(WIKI_QA_AGENT_SKILL_PATH)
+    expect(body).toContain('## Agent instructions')
+    expect(body).toContain('/BR/wiki')
     expect(body).toContain('## My feedback for Sign BR:R-1')
     expect(body).toContain('WRITE HERE')
     expect(body).toContain('## Current Config')
@@ -36,6 +47,7 @@ describe('wikiComparisonIssueFormat', () => {
     const url = buildWikiSignGithubIssueUrl(wikiSign)
 
     expect(url).toContain('github.com/osmberlin/osm-traffic-sign-tool/issues/new')
+    expect(url).toContain(`template=${WIKI_QA_ISSUE_TEMPLATE}`)
     expect(url).toContain('title=Wiki+comparison+feedback%3A+BR%3AR-1')
   })
 })

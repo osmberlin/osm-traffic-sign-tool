@@ -171,9 +171,9 @@ export const formatCombinationQaTaskResults = (
 export const buildGithubIssueUrl = (
   entries: CombinationTaskEntry[],
   countryPrefix = 'DE',
+  body = formatCombinationQaTaskResults(entries, countryPrefix),
 ): string => {
   const title = `Combination QA (${countryPrefix}): ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`
-  const body = formatCombinationQaTaskResults(entries, countryPrefix)
   const params = new URLSearchParams({
     template: COMBINATION_QA_ISSUE_TEMPLATE,
     title,

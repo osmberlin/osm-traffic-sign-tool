@@ -6,6 +6,7 @@ import {
   filterPrimarySigns,
   getPrimaryCombinationMeta,
 } from '@app/app/(signs)/_components/PageCheckSignCombinations/combinationQaFilters'
+import { CombinationQaPageIntro } from '@app/app/(signs)/_components/PageCheckSignCombinations/CombinationQaPageIntro'
 import { CombinationQaSignPicker } from '@app/app/(signs)/_components/PageCheckSignCombinations/CombinationQaSignPicker'
 import {
   collectCombinationTaskEntries,
@@ -17,7 +18,7 @@ import { useParamCombinationQa } from '@app/app/(signs)/_components/store/usePar
 import { useReplaceDeSearch } from '@app/app/(signs)/_components/store/useReplaceDeSearch'
 import { PageProps } from '@app/app/(signs)/_components/types'
 import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
-import { ExternalLink } from '@app/app/_components/links/ExternalLink'
+import { ContentPageWorkflowStepGroup } from '@app/app/_components/layout/ContentPageWorkflowStep'
 import * as m from '@app/paraglide/messages'
 import { catalogueHtmlLang } from '@app/src/features/routing/lang'
 import {
@@ -93,25 +94,21 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
   }
 
   return (
-    <ContentPageLayout qaPagesNav>
-      <h2 className="my-4 text-3xl font-light text-black uppercase">
-        {m.page_combinations_qa_title()}
-      </h2>
-      <p>{m.combinations_intro()}</p>
-
-      <CombinationQaTaskResults entries={taskEntries} />
-
-      <CombinationQaSignPicker
-        filteredPrimarySigns={filteredPrimarySigns}
-        combinationCountByOsm={combinationCountByOsm}
-        counts={signFilterCounts}
-        primaryOsmValuePart={primaryOsmValuePart}
-        onPrimarySelect={handlePrimarySelect}
-        onFilterChange={handleFilterChange}
-      />
+    <ContentPageLayout intro={<CombinationQaPageIntro />} qaPagesNav>
+      <ContentPageWorkflowStepGroup step={1}>
+        <CombinationQaSignPicker
+          nested
+          filteredPrimarySigns={filteredPrimarySigns}
+          combinationCountByOsm={combinationCountByOsm}
+          counts={signFilterCounts}
+          primaryOsmValuePart={primaryOsmValuePart}
+          onPrimarySelect={handlePrimarySelect}
+          onFilterChange={handleFilterChange}
+        />
+      </ContentPageWorkflowStepGroup>
 
       {primaryOsmValuePart && !selectedPrimarySign && (
-        <p className="mt-8 text-sm text-stone-600">
+        <p className="mt-6 text-sm text-stone-600">
           <code lang={catalogueLangAttr}>{primaryOsmValuePart}</code> is not in the current filter.{' '}
           <button
             type="button"
@@ -124,7 +121,7 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
       )}
 
       {selectedPrimarySign ? (
-        <section className="mt-8">
+        <section className="mt-6">
           <div className="mb-4 flex items-center gap-4">
             <PackageSvgTrafficSign sign={selectedPrimarySign} className="h-auto w-16 shrink-0" />
             <div>
@@ -135,15 +132,11 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
                 </span>
               </h3>
               <p className="mt-1 text-sm text-stone-700">
-                {selectedCombinationRows.length === 1
-                  ? m.combinations_showing({ count: String(selectedCombinationRows.length) })
-                  : m.combinations_showing_plural({
-                      count: String(selectedCombinationRows.length),
-                    })}{' '}
-                · {modifierSigns.length} modifier signs in catalogue.{' '}
-                <ExternalLink href="https://www.npmjs.com/package/@osm-traffic-signs/converter">
-                  {m.converter_package()}
-                </ExternalLink>
+                {selectedPrimarySign.compatibility?.canReceiveModifiers === false
+                  ? m.combinations_primary_no_modifiers()
+                  : m.combinations_primary_modifier_pairs({
+                      count: String(modifierSigns.length),
+                    })}
               </p>
             </div>
           </div>
@@ -157,9 +150,11 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
         </section>
       ) : (
         !primaryOsmValuePart && (
-          <p className="mt-8 text-sm text-stone-600">{m.combinations_select_primary_hint()}</p>
+          <p className="mt-6 text-sm text-stone-600">{m.combinations_select_primary_hint()}</p>
         )
       )}
+
+      <CombinationQaTaskResults entries={taskEntries} />
     </ContentPageLayout>
   )
 }

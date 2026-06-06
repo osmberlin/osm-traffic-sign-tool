@@ -6,8 +6,11 @@ import {
   type CountryPrefixType,
   type SignComentType,
 } from '@osm-traffic-signs/converter'
+import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
 
 const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
+export const TAGINFO_QA_AGENT_SKILL_PATH = '.cursor/skills/add-traffic-sign/SKILL.md'
+export const TAGINFO_QA_ISSUE_TEMPLATE = 'taginfo-qa-catalogue-update.md'
 
 export const buildTaginfoToolRecommendations = (
   value: string,
@@ -38,6 +41,24 @@ export const buildTaginfoToolRecommendations = (
   return byGeometry
 }
 
+const formatAgentBrief = (countryPrefix: CountryPrefixType): string[] => [
+  '# Taginfo comparison – catalogue update',
+  '',
+  QA_ISSUE_ATTRIBUTION_BANNER,
+  '',
+  `Created from the [Taginfo comparison page](https://trafficsigns.osm-verkehrswende.org/${countryPrefix}/taginfo).`,
+  '',
+  'Submit with label `cursor-qa` to trigger a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates sign config in `@osm-traffic-signs/converter`.',
+  '',
+  '## Agent instructions',
+  '',
+  '1. Apply the feedback in **My feedback** below using taginfo usage and tool recommendations as context.',
+  `2. Read [\`${TAGINFO_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${TAGINFO_QA_AGENT_SKILL_PATH}) for \`tagRecommendationsByGeometry\` shape and OSM wiki tagging research.`,
+  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`.`,
+  '4. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
+  '',
+]
+
 export const formatTaginfoSignIssueBody = (
   value: string,
   usageCount: number,
@@ -46,6 +67,7 @@ export const formatTaginfoSignIssueBody = (
   const recommendations = buildTaginfoToolRecommendations(value, countryPrefix)
 
   return [
+    ...formatAgentBrief(countryPrefix),
     `## My feedback for traffic_sign value ${value}`,
     '',
     'WRITE HERE',
@@ -72,7 +94,11 @@ export const buildTaginfoSignGithubIssueUrl = (
 ): string => {
   const title = `Taginfo comparison feedback: ${value}`
   const body = formatTaginfoSignIssueBody(value, usageCount, countryPrefix)
-  const params = new URLSearchParams({ title, body })
+  const params = new URLSearchParams({
+    template: TAGINFO_QA_ISSUE_TEMPLATE,
+    title,
+    body,
+  })
 
   return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`
 }
