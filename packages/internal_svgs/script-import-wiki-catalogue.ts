@@ -379,6 +379,11 @@ const looksLikeWikiInstructionName = (name: string): boolean => {
   return trimmed.length > 120 || /on utilise un attibut|voir la page|ajouter un\b/i.test(trimmed)
 }
 
+const looksLikeWikiTagOnlyCell = (text: string): boolean => {
+  const trimmed = text.trim()
+  return /^[a-z][a-z0-9:_-]*=[^=]+$/i.test(trimmed) && !trimmed.includes(' ')
+}
+
 const isWikiTaggingCell = (text: string): boolean => {
   const trimmed = text.trim()
   return (
@@ -386,12 +391,15 @@ const isWikiTaggingCell = (text: string): boolean => {
     /^Sur un (node|way|le)\b/i.test(trimmed) ||
     /^Sur une\b/i.test(trimmed) ||
     /^Ajouter un\b/i.test(trimmed) ||
+    /^Na (linii|węźle|obszarze)\b/i.test(trimmed) ||
     /^Remarques\s*:\s*$/i.test(trimmed) ||
     /^\d+px$/i.test(trimmed) ||
     wikiSignCodeOnly(trimmed) ||
+    looksLikeWikiTagOnlyCell(trimmed) ||
     looksLikeWikiInstructionName(trimmed) ||
     trimmed.includes('traffic_sign=') ||
-    trimmed.includes('traffic_sign =')
+    trimmed.includes('traffic_sign =') ||
+    /:hazard=/i.test(trimmed)
   )
 }
 

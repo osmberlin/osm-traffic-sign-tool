@@ -82,6 +82,17 @@ const frC1aRowHtml = `
   </tbody>
 </table>`
 
+const plA1RowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:PL_road_sign_A-1.svg"><img src="/thumb/PL_road_sign_A-1.svg"></a></td>
+      <td>Na linii na odcinku drogi obejmującym niebezpieczny zakręt:hazard=curve</td>
+      <td>A-1: niebezpieczny zakręt w prawo</td>
+    </tr>
+  </tbody>
+</table>`
+
 const frSu1RowHtml = `
 <table class="wikitable">
   <tbody>
@@ -160,6 +171,12 @@ describe('parseUniversalTable', () => {
     const $ = cheerio.load(frSu1RowHtml)
     const [row] = parseUniversalTable($, 'FR')
     expect(row?.name).toBe('Symbole de déviation')
+  })
+
+  test('uses the Polish sign name column instead of tagging text', () => {
+    const $ = cheerio.load(plA1RowHtml)
+    const [row] = parseUniversalTable($, 'PL')
+    expect(row?.name).toBe('A-1: niebezpieczny zakręt w prawo')
   })
 })
 
