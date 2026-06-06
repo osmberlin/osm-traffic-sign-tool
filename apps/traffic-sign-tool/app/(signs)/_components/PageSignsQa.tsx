@@ -25,7 +25,7 @@ export const PageSignsQa = ({ trafficSignData }: CataloguePageProps) => {
   const displayedSigns = filterSignsByTaggingSuggestionsQa(focusFilteredSigns, qaFilter)
 
   return (
-    <ContentPageLayout>
+    <ContentPageLayout qaPagesNav>
       <h2 className="my-4 text-3xl font-light text-black uppercase">{m.page_tagging_qa_title()}</h2>
       <p>{m.page_tagging_qa_description()}</p>
 

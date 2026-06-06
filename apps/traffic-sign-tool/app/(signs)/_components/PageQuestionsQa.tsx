@@ -80,7 +80,7 @@ export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
   }
 
   return (
-    <ContentPageLayout intro={<QuestionsQaPageIntro />}>
+    <ContentPageLayout intro={<QuestionsQaPageIntro />} qaPagesNav>
       <ContentPageWorkflowStepGroup step={1}>
         <FocusFilterRow counts={focusCounts} />
         <QuestionQaSignPicker

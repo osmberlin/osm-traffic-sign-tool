@@ -43,7 +43,7 @@ export const PageTaginfoComparison = () => {
   const data = Schema.parse(getTaginfoTrafficSignData(countryPrefix))
 
   return (
-    <ContentPageLayout intro={<TaginfoComparisonPageIntro />}>
+    <ContentPageLayout intro={<TaginfoComparisonPageIntro />} qaPagesNav>
       <ContentTable>
         <ContentTableHead>
           <ContentTableRow>

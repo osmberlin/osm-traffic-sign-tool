@@ -93,7 +93,7 @@ export const PageCheckSignCombinations = ({ countryPrefix, trafficSignData }: Pa
   }
 
   return (
-    <ContentPageLayout>
+    <ContentPageLayout qaPagesNav>
       <h2 className="my-4 text-3xl font-light text-black uppercase">
         {m.page_combinations_qa_title()}
       </h2>

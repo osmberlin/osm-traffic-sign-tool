@@ -76,7 +76,7 @@ export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {
   const missingCount = statusCounts.missing
 
   return (
-    <ContentPageLayout intro={<WikiComparisonPageIntro />}>
+    <ContentPageLayout intro={<WikiComparisonPageIntro />} qaPagesNav>
       <div className="mt-2 flex flex-col gap-3">
         <FocusFilterRow counts={focusCounts} />
         <WikiComparisonFilterRow
