@@ -10,6 +10,11 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+## 3.0.0
+
+_2026-06-06_
+
+- **Major release**: Rework all maintainer QA pages (tagging, sign combinations, sign questions, wiki comparison, taginfo comparison) with shared navigation, per-sign review flows, country-aware filters, and Cursor-automated GitHub issue export.
 - Add **beta traffic sign catalogues** for Belgium (`BE`), Canada (`CA`), Poland (`PL`), Austria (`AT`), France (`FR`), Australia (`AU`), and Brazil (`BR`), imported from their OSM Wiki pages.
 - Add catalogue metadata flags: `isBeta`, `catalogueName`, `osmTrafficSignPrefix`, and per-country `qaCapabilities`.
 - Add shared cross-country recommendation presets for semantically equivalent signs (cycle/foot paths, access bans, speed, parking).
@@ -48,6 +53,7 @@ All notable changes to this project will be manually documented in this file.
 - Align opening-hours validation message locale with current UI locale while keeping country code from route context.
 - Move conditional opening-hours parsing/validation logic to `@osm-traffic-signs/converter` and consume shared package exports in the app (UI now focuses on rendering feedback only).
 - Remove direct `opening_hours` dependency from the app package now that validation is owned by the converter package.
+- Update bundled converter package release to `0.5.0`.
 
 ## 2.1.9
 

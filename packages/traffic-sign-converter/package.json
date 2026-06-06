@@ -1,6 +1,6 @@
 {
   "name": "@osm-traffic-signs/converter",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Convert traffic sign IDs to OSM tags; suggest a traffic_sign-tag based on OSM tags.",
   "keywords": [
     "openstreetmap"

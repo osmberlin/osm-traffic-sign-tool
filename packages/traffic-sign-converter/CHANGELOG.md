@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.5.0
+
+_2026-06-06_
+
 - Add beta country catalogues: `BE`, `CA`, `PL`, `AT`, `FR`, `AU`, `BR` (OSM Wiki import via `packages/internal_svgs/script-import-wiki-catalogue.ts`).
 - Extend `CountryCatalogueMeta` with `catalogueName`, `isBeta`, `osmTrafficSignPrefix`, and `qaCapabilities` (`fullQaCapabilities` / `betaQaCapabilities`).
 - Add shared recommendation presets (`sharedRecommendationPresets.ts`) for cross-country semantic equivalents.
@@ -17,6 +21,7 @@
 - Add geometry-aware recommendation helpers: `signsToApplicability`, `signsToTopLevelComments`, and geometry-parameterized `signsToTags` / `signsToComments`.
 - Migrate DE sign data to geometry-aware recommendation records and keep explicit-none QA semantics via `tagRecommendationsByGeometry: "none"` + `taggingSuggestionsQa: "none"`.
 - Add tagging QA helpers and `tagRecommendations: "none"` marker on sign configs to distinguish intentional empty recommendations from missing work.
+- Add `compatibility.confirmedModifiers` on sign configs (modifier `signId` → ISO date `YYYY-MM-DD`) to record combination QA sign-offs — FYI metadata for QA workflows only; does not affect tag conversion output.
 - Add many missing DE traffic signs (83 new SVGs); most entries are catalogue-only and do not yet define OSM tagging.
 - Replace catalogue `visibility` flags (`search_only`, `highlight`) with per-view `catalogue.focus` records to support thematic sign sets (Standard, bike/foot, parking, highway, Alle-only).
 - Export catalogue focus helpers and value-prompt format utilities from the package entry point.
