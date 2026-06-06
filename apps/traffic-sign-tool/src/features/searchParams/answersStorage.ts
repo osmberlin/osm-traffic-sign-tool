@@ -1,12 +1,16 @@
 import type {
+  CountryPrefixType,
   QuestionAnswersBySign,
   SignQuestion,
   SignStateType,
 } from '@osm-traffic-signs/converter'
 import { syncEquivalentQuestionAnswers } from '@osm-traffic-signs/converter'
+import { parseAnswersParam } from './answersParam'
 
 const STORAGE_VERSION = 1
-const STORAGE_KEY = 'tst:DE:answers'
+
+export const answersStorageKey = (countryPrefix: CountryPrefixType) =>
+  `tst:${countryPrefix}:answers`
 
 type StoredAnswers = {
   version: number
@@ -20,13 +24,13 @@ const isStoredAnswers = (value: unknown): value is StoredAnswers =>
   'answers' in value &&
   typeof (value as StoredAnswers).answers === 'object'
 
-export const readAnswersCache = (): QuestionAnswersBySign => {
+export const readAnswersCache = (countryPrefix: CountryPrefixType): QuestionAnswersBySign => {
   if (typeof localStorage === 'undefined') {
     return {}
   }
 
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
+    const raw = localStorage.getItem(answersStorageKey(countryPrefix))
     if (!raw) {
       return {}
     }
@@ -42,7 +46,10 @@ export const readAnswersCache = (): QuestionAnswersBySign => {
   }
 }
 
-export const writeAnswersCache = (answers: QuestionAnswersBySign) => {
+export const writeAnswersCache = (
+  countryPrefix: CountryPrefixType,
+  answers: QuestionAnswersBySign,
+) => {
   if (typeof localStorage === 'undefined') {
     return
   }
@@ -52,7 +59,7 @@ export const writeAnswersCache = (answers: QuestionAnswersBySign) => {
     answers,
   }
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+  localStorage.setItem(answersStorageKey(countryPrefix), JSON.stringify(payload))
 }
 
 const signHasQuestion = (sign: SignStateType, questionId: string): boolean =>
@@ -115,7 +122,12 @@ export const mergeAnswersFromCache = (
   return pruneAnswersForSigns(syncEquivalentQuestionAnswers(merged, signs), signs)
 }
 
-export const answersNeedUrlUpdate = (
-  urlAnswers: QuestionAnswersBySign,
-  mergedAnswers: QuestionAnswersBySign,
-): boolean => JSON.stringify(urlAnswers) !== JSON.stringify(mergedAnswers)
+/** URL answers merged with country-scoped localStorage cache for the active sign selection. */
+export const resolveMergedAnswers = (
+  countryPrefix: CountryPrefixType,
+  signs: SignStateType[],
+  rawAnswers: string | QuestionAnswersBySign | undefined,
+): QuestionAnswersBySign => {
+  const urlAnswers = parseAnswersParam(rawAnswers)
+  return mergeAnswersFromCache(urlAnswers, signs, readAnswersCache(countryPrefix))
+}

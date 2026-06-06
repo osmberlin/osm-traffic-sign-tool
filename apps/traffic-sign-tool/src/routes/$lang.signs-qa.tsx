@@ -7,8 +7,7 @@ import { createFileRoute } from '@tanstack/react-router'
 
 function LangSignsQaRouteComponent() {
   const trafficSignData = Route.useLoaderData()
-  const { countryPrefix } = Route.useRouteContext()
-  return <PageSignsQa countryPrefix={countryPrefix} trafficSignData={trafficSignData} />
+  return <PageSignsQa trafficSignData={trafficSignData} />
 }
 
 export const Route = createFileRoute('/$lang/signs-qa')({

@@ -3,12 +3,12 @@ import { ResultColumn } from './PageApp/ResultColumn'
 import { SelectedSignsColumn } from './PageApp/SelectedSignsColumn'
 import { FocusFilterRow } from './PageApp/signGroups/FocusFilterRow'
 import { SignSelectionColumn } from './PageApp/SignSelectionColumn'
-import { PageProps } from './types'
+import { CataloguePageProps } from './types'
 
 const columnSectionPadding = 'px-4 py-4 md:px-3'
 const resultSectionPadding = 'px-4 py-3 md:px-3 md:py-4'
 
-export const PageApp = ({ trafficSignData }: PageProps) => {
+export const PageApp = ({ trafficSignData }: CataloguePageProps) => {
   return (
     <div className="flex w-full flex-col gap-4">
       <FocusFilterRow />

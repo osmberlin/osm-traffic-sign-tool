@@ -1,15 +1,12 @@
+import { serializeAnswersParam } from '@app/src/features/searchParams/answersParam'
 import {
-  parseAnswersParam,
-  serializeAnswersParam,
-} from '@app/src/features/searchParams/answersParam'
-import {
-  mergeAnswersFromCache,
-  readAnswersCache,
+  resolveMergedAnswers,
   writeAnswersCache,
 } from '@app/src/features/searchParams/answersStorage'
 import { parseSignsParam, serializeSignsParam } from '@app/src/features/searchParams/deSearch'
 import {
   combineSignIdSignValue,
+  type CountryPrefixType,
   QuestionAnswersBySign,
   SignStateType,
   splitSignIdSignValue,
@@ -22,15 +19,14 @@ import { useCountryPrefix } from './CountryPrefixContext'
 const DEFAULT_SIGN_VALUE_DEBOUNCE_MS = 2000
 
 const normalizeSearchAnswers = (
+  countryPrefix: CountryPrefixType,
   signs: SignStateType[],
   rawAnswers: string | QuestionAnswersBySign | undefined,
 ): { answers: QuestionAnswersBySign; serialized?: string } => {
-  const urlAnswers = parseAnswersParam(rawAnswers)
-  const cache = readAnswersCache()
-  const merged = mergeAnswersFromCache(urlAnswers, signs, cache)
+  const merged = resolveMergedAnswers(countryPrefix, signs, rawAnswers)
 
   if (Object.keys(merged).length > 0) {
-    writeAnswersCache(merged)
+    writeAnswersCache(countryPrefix, merged)
   }
 
   const serialized = serializeAnswersParam(merged)
@@ -54,7 +50,11 @@ export const useParamSigns = () => {
       search: (prev) => {
         const prevSigns = parseSignsParam(prev.signs, countryPrefix)
         const nextValue = typeof value === 'function' ? value(prevSigns) : value
-        const { serialized: nextAnswers } = normalizeSearchAnswers(nextValue, prev.answers)
+        const { serialized: nextAnswers } = normalizeSearchAnswers(
+          countryPrefix,
+          nextValue,
+          prev.answers,
+        )
 
         return {
           ...prev,

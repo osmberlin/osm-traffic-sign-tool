@@ -14,7 +14,7 @@ import { useParamCombinationPrimary } from '@app/app/(signs)/_components/store/u
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
 import { useParamQuestionsQa } from '@app/app/(signs)/_components/store/useParamQuestionsQa.search'
 import { useReplaceDeSearch } from '@app/app/(signs)/_components/store/useReplaceDeSearch'
-import { PageProps } from '@app/app/(signs)/_components/types'
+import { CataloguePageProps } from '@app/app/(signs)/_components/types'
 import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
@@ -26,7 +26,7 @@ import {
 } from '@osm-traffic-signs/converter'
 import { useState } from 'react'
 
-export const PageQuestionsQa = ({ trafficSignData }: PageProps) => {
+export const PageQuestionsQa = ({ trafficSignData }: CataloguePageProps) => {
   const { focuses } = useParamFocus()
   const { qqaFilter } = useParamQuestionsQa()
   const { primaryOsmValuePart } = useParamCombinationPrimary()

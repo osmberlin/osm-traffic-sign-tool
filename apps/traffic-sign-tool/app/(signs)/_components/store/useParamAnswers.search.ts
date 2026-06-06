@@ -1,11 +1,7 @@
-import {
-  answersSearchEqual,
-  parseAnswersParam,
-  serializeAnswersParam,
-} from '@app/src/features/searchParams/answersParam'
+import { serializeAnswersParam } from '@app/src/features/searchParams/answersParam'
 import {
   mergeAnswersFromCache,
-  readAnswersCache,
+  resolveMergedAnswers,
   writeAnswersCache,
 } from '@app/src/features/searchParams/answersStorage'
 import { parseSignsParam } from '@app/src/features/searchParams/deSearch'
@@ -22,10 +18,7 @@ export const useParamAnswers = () => {
   const navigate = useNavigate({ from: '/$lang' })
   const search = useSearch({ from: '/$lang' })
   const paramSigns = parseSignsParam(search.signs, countryPrefix)
-
-  const urlAnswers = parseAnswersParam(search.answers)
-  const cache = readAnswersCache()
-  const paramAnswers = mergeAnswersFromCache(urlAnswers, paramSigns, cache)
+  const paramAnswers = resolveMergedAnswers(countryPrefix, paramSigns, search.answers)
 
   const setParamAnswers = (
     value: QuestionAnswersBySign | ((prevValue: QuestionAnswersBySign) => QuestionAnswersBySign),
@@ -35,7 +28,7 @@ export const useParamAnswers = () => {
       resetScroll: false,
       search: (prev) => {
         const prevSigns = parseSignsParam(prev.signs, countryPrefix)
-        const prevAnswers = mergeAnswersFromCache(parseAnswersParam(prev.answers), prevSigns, cache)
+        const prevAnswers = resolveMergedAnswers(countryPrefix, prevSigns, prev.answers)
         const nextAnswers = typeof value === 'function' ? value(prevAnswers) : value
         const synced = syncEquivalentQuestionAnswers(nextAnswers, prevSigns)
         const pruned = dedupeEquivalentAnswersForUrl(
@@ -43,7 +36,7 @@ export const useParamAnswers = () => {
           prevSigns,
         )
 
-        writeAnswersCache(pruned)
+        writeAnswersCache(countryPrefix, pruned)
 
         return {
           ...prev,
@@ -74,26 +67,9 @@ export const useParamAnswers = () => {
     })
   }
 
-  const hydrateAnswersFromCache = () => {
-    const merged = mergeAnswersFromCache(urlAnswers, paramSigns, cache)
-    const serialized = serializeAnswersParam(merged)
-
-    if (!answersSearchEqual(serialized, search.answers)) {
-      void navigate({
-        replace: true,
-        resetScroll: false,
-        search: (prev) => ({
-          ...prev,
-          answers: serialized,
-        }),
-      })
-    }
-  }
-
   return {
     paramAnswers,
     setParamAnswers,
     updateAnswer,
-    hydrateAnswersFromCache,
   }
 }

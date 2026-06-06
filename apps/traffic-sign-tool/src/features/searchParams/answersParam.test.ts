@@ -1,6 +1,12 @@
 import { describe, expect, test } from 'vitest'
 import { parseAnswersParam, serializeAnswersParam } from './answersParam'
-import { mergeAnswersFromCache, pruneAnswersForSigns } from './answersStorage'
+import {
+  answersStorageKey,
+  mergeAnswersFromCache,
+  pruneAnswersForSigns,
+  readAnswersCache,
+  writeAnswersCache,
+} from './answersStorage'
 
 describe('answersParam', () => {
   test('roundtrips answer map as compact search string', () => {
@@ -27,6 +33,13 @@ describe('answersParam', () => {
 
     expect(parseAnswersParam(answers)).toEqual(answers)
     expect(serializeAnswersParam(answers)).toBe('240.sidepath.yes')
+  })
+
+  test('skips malformed compact entries without discarding valid ones', () => {
+    expect(parseAnswersParam('240.sidepath.yes,bad-entry,237.surfaceColor.red')).toEqual({
+      '240': { sidepath: 'yes' },
+      '237': { surfaceColor: 'red' },
+    })
   })
 })
 
@@ -66,5 +79,29 @@ describe('answersStorage', () => {
         signs,
       ),
     ).toEqual({ '237': { sidepath: 'yes' } })
+  })
+
+  test('scopes localStorage cache by country prefix', () => {
+    const store = new Map<string, string>()
+    Object.defineProperty(globalThis, 'localStorage', {
+      value: {
+        getItem: (key: string) => store.get(key) ?? null,
+        setItem: (key: string, value: string) => {
+          store.set(key, value)
+        },
+        removeItem: (key: string) => {
+          store.delete(key)
+        },
+        clear: () => {
+          store.clear()
+        },
+      },
+      writable: true,
+    })
+
+    expect(answersStorageKey('DE')).toBe('tst:DE:answers')
+    writeAnswersCache('DE', { '237': { sidepath: 'yes' } })
+    expect(readAnswersCache('DE')).toEqual({ '237': { sidepath: 'yes' } })
+    expect(readAnswersCache('AT')).toEqual({})
   })
 })

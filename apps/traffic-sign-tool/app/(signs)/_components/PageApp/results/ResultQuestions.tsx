@@ -109,7 +109,7 @@ const QuestionChoices = ({
 
 const QuestionAccordionItem = ({
   isOpen,
-  onToggle,
+  onOpenChange,
   signOsmValueParts,
   question,
   effectiveAnswerId,
@@ -118,7 +118,7 @@ const QuestionAccordionItem = ({
   countryPrefix,
 }: {
   isOpen: boolean
-  onToggle: () => void
+  onOpenChange: (open: boolean) => void
   signOsmValueParts: readonly string[]
   question: SignQuestion
   effectiveAnswerId: string
@@ -126,14 +126,12 @@ const QuestionAccordionItem = ({
   shortAnswer: string
   countryPrefix: string
 }) => (
-  <details open={isOpen} className="group border-b border-stone-500/50 last:border-b-0">
-    <summary
-      className="cursor-pointer list-none px-3 py-2 transition-colors group-open:bg-stone-700/60 group-open:pb-0 group-open:text-stone-100 hover:bg-stone-700/60 hover:text-stone-100 [&::-webkit-details-marker]:hidden"
-      onClick={(event) => {
-        event.preventDefault()
-        onToggle()
-      }}
-    >
+  <details
+    open={isOpen}
+    onToggle={(event) => onOpenChange(event.currentTarget.open)}
+    className="group border-b border-stone-500/50 last:border-b-0"
+  >
+    <summary className="cursor-pointer list-none px-3 py-2 transition-colors group-open:bg-stone-700/60 group-open:pb-0 group-open:text-stone-100 hover:bg-stone-700/60 hover:text-stone-100 [&::-webkit-details-marker]:hidden">
       <span className="block text-sm text-stone-100">
         {shortTitle}:{' '}
         <span className={clsx(effectiveAnswerId === QUESTION_NIL_ANSWER_ID && 'text-amber-500')}>
@@ -181,7 +179,9 @@ export const ResultQuestions = () => {
             (answer) => answer.answerId === effectiveAnswerId,
           )
           const shortTitle = getQuestionPromptShortLabel(question.questionI18nKey)
-          const nilAnswer = question.answers.find((answer) => answer.answerId === 'nil')
+          const nilAnswer = question.answers.find(
+            (answer) => answer.answerId === QUESTION_NIL_ANSWER_ID,
+          )
           const shortAnswer = getQuestionAnswerShortLabel(
             (effectiveAnswer ?? nilAnswer)?.answerI18nKey ?? `${question.questionId}.answer.nil`,
           )
@@ -190,7 +190,7 @@ export const ResultQuestions = () => {
             <QuestionAccordionItem
               key={equivalenceKey}
               isOpen={openKey === equivalenceKey}
-              onToggle={() => setOpenKey(openKey === equivalenceKey ? null : equivalenceKey)}
+              onOpenChange={(open) => setOpenKey(open ? equivalenceKey : null)}
               signOsmValueParts={signOsmValueParts}
               question={question}
               effectiveAnswerId={effectiveAnswerId}

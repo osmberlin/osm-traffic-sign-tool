@@ -3,7 +3,7 @@ import { TaggingQaFilterRow } from '@app/app/(signs)/_components/PageSignsQa/Tag
 import { TaggingQaTable } from '@app/app/(signs)/_components/PageSignsQa/TaggingQaTable'
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
 import { useParamTaggingQa } from '@app/app/(signs)/_components/store/useParamTaggingQa.search'
-import { PageProps } from '@app/app/(signs)/_components/types'
+import { CataloguePageProps } from '@app/app/(signs)/_components/types'
 import { ContentPageLayout } from '@app/app/_components/layout/ContentPageLayout'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
@@ -13,7 +13,7 @@ import {
   filterSignsByTaggingSuggestionsQa,
 } from '@osm-traffic-signs/converter'
 
-export const PageSignsQa = ({ trafficSignData }: PageProps) => {
+export const PageSignsQa = ({ trafficSignData }: CataloguePageProps) => {
   const { focuses } = useParamFocus()
   const { qaFilter } = useParamTaggingQa()
 

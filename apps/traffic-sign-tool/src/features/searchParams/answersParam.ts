@@ -47,7 +47,7 @@ const parseCompactAnswersParam = (input: string): QuestionAnswersBySign => {
     const lastDot = segment.lastIndexOf('.')
     const secondLastDot = segment.lastIndexOf('.', lastDot - 1)
     if (lastDot <= 0 || secondLastDot <= 0) {
-      return {}
+      continue
     }
 
     const signKey = segment.slice(0, secondLastDot)
@@ -55,7 +55,7 @@ const parseCompactAnswersParam = (input: string): QuestionAnswersBySign => {
     const answerId = segment.slice(lastDot + 1)
 
     if (!signKey || !questionId || !answerId) {
-      return {}
+      continue
     }
 
     answers[signKey] ??= {}
