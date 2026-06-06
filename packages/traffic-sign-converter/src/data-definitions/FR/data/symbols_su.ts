@@ -5,7 +5,7 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU1',
     signId: 'SU1',
     name: 'SU1',
-    descriptiveName: '50px',
+    descriptiveName: 'À déterminer',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -20,7 +20,7 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU2',
     signId: 'SU2',
     name: 'SU2',
-    descriptiveName: '50px',
+    descriptiveName: 'destination:symbol=detour_route[2]',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -37,7 +37,7 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU3',
     signId: 'SU3',
     name: 'SU3',
-    descriptiveName: '50px',
+    descriptiveName: 'destination:ref:to=A 55',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -54,7 +54,7 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU4',
     signId: 'SU4',
     name: 'SU4',
-    descriptiveName: '50px',
+    descriptiveName: 'destination:symbol=ring_road[3]',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -71,7 +71,7 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU5',
     signId: 'SU5',
     name: 'SU5',
-    descriptiveName: '50px',
+    descriptiveName: 'destination:symbol=toll[4]',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

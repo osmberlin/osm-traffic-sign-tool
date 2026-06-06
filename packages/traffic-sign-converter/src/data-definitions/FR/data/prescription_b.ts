@@ -11,7 +11,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B0',
     signId: 'B0',
     name: 'B0',
-    descriptiveName: 'Circulation interdite à tout véhicule dans les deux sens',
+    descriptiveName:
+      'Circulation interdite à tout véhicule dans les deux sens Voir access=* pour les autres restrictions d’accès.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -36,7 +37,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B1',
     signId: 'B1',
     name: 'B1',
-    descriptiveName: 'Sens interdit à tout véhicule',
+    descriptiveName:
+      'Sens interdit à tout véhicule Le sens du way détermine le sens de circulation autorisé.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedOnewayRecommendation(),
@@ -67,7 +69,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B2a',
     signId: 'B2a',
     name: 'B2a',
-    descriptiveName: 'Interdiction de tourner à gauche à la prochaine intersection',
+    descriptiveName: 'B1j',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -90,7 +92,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B2b',
     signId: 'B2b',
     name: 'B2b',
-    descriptiveName: 'Interdiction de tourner à droite à la prochaine intersection',
+    descriptiveName:
+      'Interdiction de tourner à droite à la prochaine intersection Voir Relation:restriction.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -138,7 +141,7 @@ export const _prescription_b: SignType[] = [
     signId: 'B3',
     name: 'B3',
     descriptiveName:
-      'Interdiction de dépasser tous les véhicules à moteur autres que ceux à deux roues sans side- car',
+      "Interdiction de faire demi-tour sur la route suivie jusqu'à la prochaine intersection Voir Relation:restriction.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -153,8 +156,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B3a',
     signId: 'B3a',
     name: 'B3a',
-    descriptiveName:
-      'Interdiction aux véhicules automobiles, véhicules articulés, trains doubles ou ensemble de véhicules, affectés au transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé est supérieur à 3.5 tonnes de dépasser tous les véhicules à moteur autres que ceux à deux roues sans side-car.',
+    descriptiveName: 'B3a',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -218,7 +220,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B5c',
     signId: 'B5c',
     name: 'B5c',
-    descriptiveName: 'Arrêt au poste de péage',
+    descriptiveName: 'B5c',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -289,7 +291,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B6d',
     signId: 'B6d',
     name: 'B6d',
-    descriptiveName: 'Arrêt et stationnement interdits',
+    descriptiveName: 'B6d',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -328,7 +330,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B7b',
     signId: 'B7b',
     name: 'B7b',
-    descriptiveName: 'Accès interdit à tous les véhicules à moteur',
+    descriptiveName: "Accès interdit aux véhicules à moteur à l'exception des cyclomoteurs",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedAccessBanRecommendation('motor_vehicle'),
@@ -343,7 +345,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B8',
     signId: 'B8',
     name: 'B8',
-    descriptiveName: 'Accès interdit aux véhicules affectés au transport de marchandises',
+    descriptiveName: 'B8 + M4f',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -458,7 +460,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B9f',
     signId: 'B9f',
     name: 'B9f',
-    descriptiveName: 'Accès interdit aux véhicules de transport en commun de personnes',
+    descriptiveName:
+      "Accès interdit aux voitures à bras à l'exclusion de celles visées à l'article R.412-34 du code de la route",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedAccessBanRecommendation('bus'),
@@ -507,7 +510,7 @@ export const _prescription_b: SignType[] = [
     signId: 'B9i',
     name: 'B9i',
     descriptiveName:
-      'Accès interdit aux véhicules tractant une caravane ou une remorque de plus de 250 kg, tel que le poids total roulant autorisé, véhicule et caravane ou remorque, ne dépasse pas 3,5 t',
+      "Accès interdit aux motocyclettes et motocyclettes légères au sens de l'article R.311-1 du code de la route",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -524,8 +527,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B10a',
     signId: 'B10a',
     name: 'B10a',
-    descriptiveName:
-      'Accès interdit aux véhicules, véhicules articulés, trains doubles ou ensemble de véhicules dont la longueur est supérieure au nombre indiqué',
+    descriptiveName: 'B10a',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -542,8 +544,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B11',
     signId: 'B11',
     name: 'B11',
-    descriptiveName:
-      'Accès interdit aux véhicules dont la largeur, chargement compris, est supérieure au nombre indiqué',
+    descriptiveName: 'B11',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -560,8 +561,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B12',
     signId: 'B12',
     name: 'B12',
-    descriptiveName:
-      'Accès interdit aux véhicules dont la hauteur, chargement compris, est supérieure au nombre indiqué',
+    descriptiveName: 'B12',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -578,8 +578,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B13',
     signId: 'B13',
     name: 'B13',
-    descriptiveName:
-      'Accès interdit aux véhicules, véhicules articulés, trains doubles ou ensemble de véhicules dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
+    descriptiveName: 'B13',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -596,7 +595,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B13a',
     signId: 'B13a',
     name: 'B13a',
-    descriptiveName: 'Accès interdit aux véhicules pesant sur un essieu plus que le nombre indiqué',
+    descriptiveName:
+      'Accès interdit aux véhicules pesant sur un essieu plus que le nombre indiqué L’unité par défaut est la tonne.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -613,8 +613,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B14[50]',
     signId: 'B14',
     name: 'B14',
-    descriptiveName:
-      'Limitation de vitesse. Ce panneau notifie l’interdiction de dépasser la vitesse indiquée',
+    descriptiveName: 'B14[50]',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedMaxspeedRecommendation('50'),
@@ -630,7 +629,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B15',
     signId: 'B15',
     name: 'B15',
-    descriptiveName: 'Cédez le passage à la circulation venant en sens inverse',
+    descriptiveName:
+      'Cédez le passage à la circulation venant en sens inverse Valeur suivant le sens de la voie (way) tracée.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -676,8 +676,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B18a',
     signId: 'B18a',
     name: 'B18a',
-    descriptiveName:
-      'Accès interdit aux véhicules transportant des marchandises explosives ou facilement inflammables, de nature et en quanti',
+    descriptiveName: 'B18a',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -694,8 +693,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B18b',
     signId: 'B18b',
     name: 'B18b',
-    descriptiveName:
-      'Accès interdit aux véhicules transportant des marchandises susceptibles de polluer les eaux, de nature et en quantité dé',
+    descriptiveName: 'B18b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -730,8 +728,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B19[Interdit',
     signId: 'B19',
     name: 'B19',
-    descriptiveName:
-      'Autres interdictions dont la nature est indiquée par une inscription sur le panneau',
+    descriptiveName: 'B18c',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -746,7 +743,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B21-1',
     signId: 'B21-1',
     name: 'B21-1',
-    descriptiveName: 'Obligation de tourner à droite avant le panneau',
+    descriptiveName:
+      'Interdiction aux véhicules de circuler sans maintenir entre eux un intervalle au moins égal au nombre indiqué',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -1016,8 +1014,7 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B27a',
     signId: 'B27a',
     name: 'B27a',
-    descriptiveName:
-      'Voie réservée aux véhicules routiers de transports en commun des lignes régulières dûment autorisées par l’autorité détentrice du pouvoir de police de la circulation',
+    descriptiveName: 'B27a',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

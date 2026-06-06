@@ -5,7 +5,7 @@ export const _indication_eb: SignType[] = [
     osmValuePart: 'EB10',
     signId: 'EB10',
     name: 'EB10',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'EB10',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -22,7 +22,8 @@ export const _indication_eb: SignType[] = [
     osmValuePart: 'EB20',
     signId: 'EB20',
     name: 'EB20',
-    descriptiveName: 'Remarques :',
+    descriptiveName:
+      "Sortie d'agglomération Le noeud doit être placé sur le way de la route associée",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

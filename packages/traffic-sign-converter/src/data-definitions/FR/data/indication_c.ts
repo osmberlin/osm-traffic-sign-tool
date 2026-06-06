@@ -6,8 +6,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C1a',
     signId: 'C1a',
     name: 'C1a',
-    descriptiveName:
-      'Sur un node ou une aire fermée par un way (ou plusieurs inclus dans une relation) avec : *',
+    descriptiveName: 'Parking.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -22,7 +21,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C1b',
     signId: 'C1b',
     name: 'C1b',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C1b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -46,7 +45,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C1c',
     signId: 'C1c',
     name: 'C1c',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Parking à stationnement payant.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -69,7 +68,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C3',
     signId: 'C3',
     name: 'C3',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Attention au feu',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -84,7 +83,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'Image',
     signId: 'Image',
     name: 'Image',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Image',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -101,7 +100,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C5',
     signId: 'C5',
     name: 'C5',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C5',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -118,7 +117,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C6',
     signId: 'C6',
     name: 'C6',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Arrêt de bus.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -135,7 +134,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C8',
     signId: 'C8',
     name: 'C8',
-    descriptiveName: 'Remarques :',
+    descriptiveName: "Arrêt d'urgence sur voie de circulation rapide.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -152,7 +151,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C12',
     signId: 'C12',
     name: 'C12',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C12',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedOnewayRecommendation(),
@@ -167,7 +166,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C13a',
     signId: 'C13a',
     name: 'C13a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C13a',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -184,7 +183,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C18',
     signId: 'C18',
     name: 'C18',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Priorité par rapport à la circulation venant en sens inverse',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -199,7 +198,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C20a',
     signId: 'C20a',
     name: 'C20a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Voir aussi le panneau A13b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -216,7 +215,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C24a',
     signId: 'C24a',
     name: 'C24a',
-    descriptiveName: 'Remarques :',
+    descriptiveName:
+      'Il n’y a pas encore de consensus pour les attributs concernant ce cas de figure.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedOnewayRecommendation(),
@@ -231,7 +231,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C27',
     signId: 'C27',
     name: 'C27',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Dos d’âne ou cassis',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -254,7 +254,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C28',
     signId: 'C28',
     name: 'C28',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C28',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -278,7 +278,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C64a',
     signId: 'C64a',
     name: 'C64a',
-    descriptiveName: 'Remarques :',
+    descriptiveName:
+      'Voir aussi le panneau B5c Poste de péage, à placer sur un nœud à l’emplacement du péage.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -295,7 +296,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C65a',
     signId: 'C65a',
     name: 'C65a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C65a C65b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -318,7 +319,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C107',
     signId: 'C107',
     name: 'C107',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C107',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -335,7 +336,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C109',
     signId: 'C109',
     name: 'C109',
-    descriptiveName: 'Remarques :',
+    descriptiveName:
+      'Si les voitures sont autorisées, peut être accompagné de la mention « Priorité aux piétons, roulez au pas ».',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -373,7 +375,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C113',
     signId: 'C113',
     name: 'C113',
-    descriptiveName: 'Remarques :',
+    descriptiveName: "Entrée d'un tunnel / Sortie d'un tunnel",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -390,7 +392,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C115',
     signId: 'C115',
     name: 'C115',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Voir fr:Bicycle pour les voies vertes.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -413,7 +415,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C116',
     signId: 'C116',
     name: 'C116',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Voir fr:Bicycle pour les voies vertes.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -428,7 +430,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C207',
     signId: 'C207',
     name: 'C207',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C207',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedOnewayRecommendation(),
@@ -443,7 +445,7 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C26b',
     signId: 'C26b',
     name: 'C26b',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'C26b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

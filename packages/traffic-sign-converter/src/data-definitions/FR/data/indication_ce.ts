@@ -5,7 +5,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE1',
     signId: 'CE1',
     name: 'CE1',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Poste de secours.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -22,7 +22,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE2a',
     signId: 'CE2a',
     name: 'CE2a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Poste d’appel d’urgence.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -39,7 +39,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE2b',
     signId: 'CE2b',
     name: 'CE2b',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Cabine téléphonique.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -56,7 +56,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE3a',
     signId: 'CE3a',
     name: 'CE3a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Point d’information pour le tourisme ou les services.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -73,7 +73,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE4a',
     signId: 'CE4a',
     name: 'CE4a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Camping pour tentes.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -90,7 +90,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE4b',
     signId: 'CE4b',
     name: 'CE4b',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Camping pour caravanes.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -107,7 +107,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE4c',
     signId: 'CE4c',
     name: 'CE4c',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Camping pour tentes et caravanes.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -130,7 +130,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE5a',
     signId: 'CE5a',
     name: 'CE5a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Auberge de jeunesse.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -147,7 +147,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE5b',
     signId: 'CE5b',
     name: 'CE5b',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Chambre d’hôtes ou gîte.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -170,7 +170,8 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE6a',
     signId: 'CE6a',
     name: 'CE6a',
-    descriptiveName: 'Remarques :',
+    descriptiveName:
+      'Itinéraire pédestre. Préférez highway=track pour les chemins qui sont ouverts aux véhicules agricoles.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -194,7 +195,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE6b',
     signId: 'CE6b',
     name: 'CE6b',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Circuit de ski de fond.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -211,7 +212,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE7',
     signId: 'CE7',
     name: 'CE7',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Emplacement pour pique-nique.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -228,7 +229,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE8',
     signId: 'CE8',
     name: 'CE8',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Gare auto/train.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -245,7 +246,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE10',
     signId: 'CE10',
     name: 'CE10',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Embarcadère.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -262,7 +263,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE12',
     signId: 'CE12',
     name: 'CE12',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Toilettes.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -279,7 +280,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE14',
     signId: 'CE14',
     name: 'CE14',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'CE14',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -294,7 +295,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE15a',
     signId: 'CE15a',
     name: 'CE15a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'CE15a',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -317,7 +318,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE15c',
     signId: 'CE15c',
     name: 'CE15c',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'CE15c',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -341,7 +342,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE16',
     signId: 'CE16',
     name: 'CE16',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Restaurant ouvert 24 heures sur 24, 7 jours sur 7.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -364,7 +365,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE17',
     signId: 'CE17',
     name: 'CE17',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Hôtel ou motel ouvert 24h/24, 7j/7.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -387,7 +388,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE18',
     signId: 'CE18',
     name: 'CE18',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'CE18',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -410,7 +411,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE20a',
     signId: 'CE20a',
     name: 'CE20a',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Gare de téléphérique.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -427,7 +428,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE20b',
     signId: 'CE20b',
     name: 'CE20b',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Soit l’un soit l’autre',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -450,7 +451,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE21',
     signId: 'CE21',
     name: 'CE21',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Point de vue touristique.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -467,7 +468,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE23',
     signId: 'CE23',
     name: 'CE23',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Aire de jeux pour enfants.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -484,7 +485,8 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE24',
     signId: 'CE24',
     name: 'CE24',
-    descriptiveName: 'Remarques :',
+    descriptiveName:
+      'Station de vidange des eaux usées et des déchets pour caravanes, camping-car.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -507,7 +509,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE25',
     signId: 'CE25',
     name: 'CE25',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Distributeur automatique de billets.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -524,7 +526,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE26',
     signId: 'CE26',
     name: 'CE26',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Station de gonflage gratuit.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -548,7 +550,7 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE52',
     signId: 'CE52',
     name: 'CE52',
-    descriptiveName: 'Remarques :',
+    descriptiveName: 'Aire de covoiturage.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

@@ -5,7 +5,7 @@ export const _level_crossing_g: SignType[] = [
     osmValuePart: 'G1',
     signId: 'G1',
     name: 'G1',
-    descriptiveName: 'Remarques : Passage à niveau sans barrière ni demi-barrière',
+    descriptiveName: 'G1 G1b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

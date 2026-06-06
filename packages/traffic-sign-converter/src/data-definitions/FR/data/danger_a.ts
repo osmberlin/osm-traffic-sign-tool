@@ -5,7 +5,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A1a',
     signId: 'A1a',
     name: 'A1a',
-    descriptiveName: 'Remarques : Annonce de virage',
+    descriptiveName: 'A1a A1b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -30,7 +30,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A1c',
     signId: 'A1c',
     name: 'A1c',
-    descriptiveName: 'Remarques : Annonce de succession de virages',
+    descriptiveName: 'A1c A1d',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -79,7 +79,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A3',
     signId: 'A3',
     name: 'A3',
-    descriptiveName: 'Remarques : Chaussée rétrécie de chaque côté',
+    descriptiveName: 'Chaussée rétrécie de chaque côté.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -112,7 +112,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A4+M9z',
     signId: 'A4+M9z',
     name: 'A4+M9z',
-    descriptiveName: 'Remarques : Chaussée glissante',
+    descriptiveName: "Chaussée rétrécie d'un côté.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -136,7 +136,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A6',
     signId: 'A6',
     name: 'A6',
-    descriptiveName: 'Remarques : Pont mobile',
+    descriptiveName: 'A6',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -177,7 +177,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A8',
     signId: 'A8',
     name: 'A8',
-    descriptiveName: 'Passage à niveau sans barrière automatique',
+    descriptiveName: 'A7',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -216,7 +216,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A9b',
     signId: 'A9b',
     name: 'A9b',
-    descriptiveName: 'Traversées de voies de tramways',
+    descriptiveName: "Sur le node d'intersection avec chaque voie ferrée :",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -231,7 +231,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A13a',
     signId: 'A13a',
     name: 'A13a',
-    descriptiveName: 'Zone fréquenté par des enfants',
+    descriptiveName:
+      'Zone fréquenté par des enfants Indique la proximité d’un endroit fréquenté par les enfants.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -254,7 +255,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A13b',
     signId: 'A13b',
     name: 'A13b',
-    descriptiveName: 'Passage piéton',
+    descriptiveName: 'Passage piéton Voir Key:crossing pour plus de détails.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -271,7 +272,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A14',
     signId: 'A14',
     name: 'A14',
-    descriptiveName: 'Danger quelconque',
+    descriptiveName:
+      'Danger quelconque Voir Key:hazard pour trouver la bonne valeur à ajouter à la clé hazard=*.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -381,7 +383,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A17',
     signId: 'A17',
     name: 'A17',
-    descriptiveName: 'Feu tricolore',
+    descriptiveName: 'A17',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -398,7 +400,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A18',
     signId: 'A18',
     name: 'A18',
-    descriptiveName: 'Voie à double-sens',
+    descriptiveName:
+      'Sur un highway=* avec : oneway=yes avant ce panneau Pas de oneway=* ou oneway=no après',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -421,7 +424,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A19',
     signId: 'A19',
     name: 'A19',
-    descriptiveName: 'Chute de pierres',
+    descriptiveName: 'A19',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
