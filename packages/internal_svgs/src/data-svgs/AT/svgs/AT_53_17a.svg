@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 1500 1000" role="img" aria-labelledby="title">
-  <title id="title">Verkehrszeichen 53.17a - 17a: Ortstafel Ab hier maxspeed=50 und source:maxspeed=AT:urban oder maxspeed:type=AT:urban Wenn zusammen mit 10a: Geschwindigkeitsbeschränkung, dann maxspeed=* und source:maxspeed=AT:city_limit* oder</title>
+  <title id="title">Verkehrszeichen 53.17a - 17a: Ortstafel</title>
   <g fill-rule="evenodd" clip-rule="evenodd">
     <path fill="#009fe3" d="M5 961.121V36.783C5 24.01 15.292 13.621 28.137 13.621h1441.716c12.773 0 23.209 10.389 23.209 23.162v924.338c0 12.799-10.436 23.183-23.209 23.183H28.137C15.292 984.304 5 973.92 5 961.121"/>
     <path fill="#fff" d="M51.975 60.541h1394.146v876.822H51.975z"/>

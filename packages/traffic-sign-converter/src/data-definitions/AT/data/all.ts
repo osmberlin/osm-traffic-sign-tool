@@ -8,9 +8,10 @@ export const _all: SignType[] = [
     descriptiveName: '1: Querrinne oder Aufwölbung',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'bump' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_1.svg',
@@ -24,9 +25,16 @@ export const _all: SignType[] = [
     descriptiveName: '2a: Gefährliche Kurve (Rechtskurve)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'hazard', value: 'curve' },
+          { key: 'hazard', value: 'turn' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2a.svg',
@@ -40,9 +48,16 @@ export const _all: SignType[] = [
     descriptiveName: '2b: Gefährliche Kurve (Linkskurve)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'hazard', value: 'curve' },
+          { key: 'hazard', value: 'turn' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2b.svg',
@@ -56,9 +71,10 @@ export const _all: SignType[] = [
     descriptiveName: '2c: Gefährliche Kurven (Doppelkurve rechts beginnend)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'turns' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2c.svg',
@@ -72,9 +88,10 @@ export const _all: SignType[] = [
     descriptiveName: '2d: Gefährliche Kurven (Doppelkurve links beginnend)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'turns' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2d.svg',
@@ -88,9 +105,10 @@ export const _all: SignType[] = [
     descriptiveName: '3: Kreuzung',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'dangerous_junction' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_3.svg',
@@ -104,9 +122,16 @@ export const _all: SignType[] = [
     descriptiveName: '3a: Kreuzung mit Kreisverkehr',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'hazard', value: 'roundabout' },
+          { key: 'junction', value: 'roundabout' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_3a.svg',
@@ -120,9 +145,10 @@ export const _all: SignType[] = [
     descriptiveName: '4: Kreuzung mit Straße ohne Vorrang',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'dangerous_junction' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_4.svg',
@@ -133,12 +159,18 @@ export const _all: SignType[] = [
     osmValuePart: '50.6a',
     signId: '50.6a',
     name: '50.6a',
-    descriptiveName:
-      '6a: Bahnübergang mit Schranken Hinweis: Dieses Zeichen kündigt einen durch Schranken gesicherten Eisenbahnübergang an.',
+    descriptiveName: '6a: Bahnübergang mit Schranken',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['node'],
+        uniqueTags: [
+          { key: 'railway', value: 'level_crossing' },
+          { key: 'railway', value: 'crossing' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -150,12 +182,19 @@ export const _all: SignType[] = [
     osmValuePart: '50.6b',
     signId: '50.6b',
     name: '50.6b',
-    descriptiveName:
-      '6b: Bahnübergang ohne Schranken Hinweis: Dieses Zeichen kündigt einen nicht durch Schranken gesicherten Eisenbahnübergang an.',
+    descriptiveName: '6b: Bahnübergang ohne Schranken',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['node'],
+        uniqueTags: [
+          { key: 'railway', value: 'level_crossing' },
+          { key: 'railway', value: 'crossing' },
+          { key: 'crossing:barrier', value: 'no' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -263,12 +302,18 @@ export const _all: SignType[] = [
     osmValuePart: '6d',
     signId: '6d',
     name: '6d',
-    descriptiveName:
-      'Als Punkt mit railway=level_crossing (bei Kreuzungen mit Straßen) railway=crossing (bei Übergängen für Fußgänger)',
+    descriptiveName: '6d: Andreaskreuz (6 Schilder)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['node'],
+        uniqueTags: [
+          { key: 'railway', value: 'level_crossing' },
+          { key: 'railway', value: 'crossing' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -280,12 +325,19 @@ export const _all: SignType[] = [
     osmValuePart: '50.7[10]',
     signId: '50.7[10]',
     name: '50.7[10]',
-    descriptiveName:
-      '7: Gefährliches Gefälle ACHTUNG: Das Vorzeichen bei incline=* bezieht sich auf die Zeichenrichtung der Linie in OSM. Positive Werte stehen für einen Anstieg in Zeichenrichtung, negative für ein Gefäll',
+    descriptiveName: '7: Gefährliches Gefälle',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'traffic_sign:forward', value: 'AT:50.7[10]' },
+          { key: 'traffic_sign:backward', value: 'AT:50.7[10]' },
+          { key: 'incline', value: '(-)10%' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -297,12 +349,19 @@ export const _all: SignType[] = [
     osmValuePart: '50.7a[10]',
     signId: '50.7a[10]',
     name: '50.7a[10]',
-    descriptiveName:
-      '7a: Starke Steigung ACHTUNG: Das Vorzeichen bei incline=* bezieht sich auf die Zeichenrichtung der Linie in OSM. Positive Werte stehen für einen Anstieg in Zeichenrichtung, negative für ein Gefälle in',
+    descriptiveName: '7a: Starke Steigung',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'traffic_sign:forward', value: 'AT:50.7a[10]' },
+          { key: 'traffic_sign:backward', value: 'AT:50.7a[10]' },
+          { key: 'incline', value: '(-)10%' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -317,8 +376,9 @@ export const _all: SignType[] = [
     descriptiveName: '8a: Fahrbahnverengung (beidseitig)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'traffic_calming', value: 'choker' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -333,9 +393,10 @@ export const _all: SignType[] = [
     descriptiveName: '8b: Fahrbahnverengung (linksseitig)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: '?' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_8b.svg',
@@ -349,9 +410,10 @@ export const _all: SignType[] = [
     descriptiveName: '8c: Fahrbahnverengung (rechtsseitig)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: '?' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_8c.svg',
@@ -362,12 +424,16 @@ export const _all: SignType[] = [
     osmValuePart: '50.9',
     signId: '50.9',
     name: '50.9',
-    descriptiveName:
-      '9: Baustelle Key:construction wird als (noch) nicht für den Verkehr nutzbar betrachtet und gestrichelt gerendert. Eine Baustelle, die den Verkehr nicht völlig blockiert, ist damit nicht gemeint.',
+    descriptiveName: '9: Baustelle',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['construction'],
+        uniqueTags: [{ key: 'construction', value: 'value' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -382,9 +448,10 @@ export const _all: SignType[] = [
     descriptiveName: '10: Schleudergefahr',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'slippery' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_10.svg',
@@ -398,9 +465,10 @@ export const _all: SignType[] = [
     descriptiveName: '10a: Seitenwind',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'side_winds' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_10a.svg',
@@ -414,9 +482,10 @@ export const _all: SignType[] = [
     descriptiveName: '10b: Steinschlag',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_10b.svg',
@@ -430,9 +499,10 @@ export const _all: SignType[] = [
     descriptiveName: '10c: Flugbetrieb',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'low_flying_aircraft' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_10c.svg',
@@ -446,9 +516,10 @@ export const _all: SignType[] = [
     descriptiveName: '11: Fußgängerübergang',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'pedestrians' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_11.svg',
@@ -462,9 +533,10 @@ export const _all: SignType[] = [
     descriptiveName: '11a: Radfahrerüberfahrt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'cyclists' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_11a.svg',
@@ -478,9 +550,10 @@ export const _all: SignType[] = [
     descriptiveName: '12: Kinder',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'children' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_12.svg',
@@ -494,9 +567,10 @@ export const _all: SignType[] = [
     descriptiveName: '13a: Achtung Tiere',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'animal_crossing' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_13a.svg',
@@ -510,9 +584,10 @@ export const _all: SignType[] = [
     descriptiveName: '13b: Achtung Wildwechsel',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'animal_crossing' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_13b.svg',
@@ -526,9 +601,10 @@ export const _all: SignType[] = [
     descriptiveName: '14: Achtung Gegenverkehr',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'two_way_traffic' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_14.svg',
@@ -539,7 +615,7 @@ export const _all: SignType[] = [
     osmValuePart: '14a',
     signId: '14a',
     name: '14a',
-    descriptiveName: '14a: Achtung Falschfahrer Notiz: Nur temporär?',
+    descriptiveName: '14a: Achtung Falschfahrer',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -555,13 +631,13 @@ export const _all: SignType[] = [
     osmValuePart: '50.15',
     signId: '50.15',
     name: '50.15',
-    descriptiveName:
-      '15: Vorankündigung eines Lichtzeichens Hinweis: Es ist nur dann anzubringen, wenn mit einer Lichtsignalanlage üblicherweise nicht gerechnet werden muss oder wenn eine solche Anlage schlecht wahrnehmba',
+    descriptiveName: '15: Vorankündigung eines Lichtzeichens',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'traffic_signals' }] },
+    ],
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_15.svg',
@@ -572,8 +648,7 @@ export const _all: SignType[] = [
     osmValuePart: '50.16',
     signId: '50.16',
     name: '50.16',
-    descriptiveName:
-      '16: Andere Gefahren Anmerkungen: hazard=yes in Ordnung? Hinweis: Auf einer Zusatztafel unter dem Zeichen kann die Gefahr näher bezeichnet werden, wie etwa Bankett nicht befahrbar, Holzbringung, Lawine',
+    descriptiveName: '16: Andere Gefahren',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -593,8 +668,9 @@ export const _all: SignType[] = [
     descriptiveName: '1: Fahrverbot (in beiden Richtungen)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'vehicle', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -609,8 +685,15 @@ export const _all: SignType[] = [
     descriptiveName: '2: Einfahrt verboten',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'no_entry' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -625,8 +708,15 @@ export const _all: SignType[] = [
     descriptiveName: '3a: Einbiegen nach links verboten',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'no_left_turn' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -641,8 +731,15 @@ export const _all: SignType[] = [
     descriptiveName: '3b: Einbiegen nach rechts verboten',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'no_right_turn' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -657,8 +754,15 @@ export const _all: SignType[] = [
     descriptiveName: '3c: Umkehren verboten',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'no_u_turn' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -670,18 +774,11 @@ export const _all: SignType[] = [
     osmValuePart: '52.4a',
     signId: '52.4a',
     name: '52.4a',
-    descriptiveName:
-      '4a: Überholen von mehrspurigen KFZ verboten Bei einseitiger Wirkung: overtaking:backward=yes oder overtaking:forward=yes',
+    descriptiveName: '4a: Überholen von mehrspurigen KFZ verboten',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [
-          { key: 'overtaking:backward', value: 'yes' },
-          { key: 'overtaking:forward', value: 'yes' },
-        ],
-      },
+      { geometries: ['way'], uniqueTags: [{ key: 'overtaking', value: 'no' }] },
     ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -697,8 +794,9 @@ export const _all: SignType[] = [
     descriptiveName: '4b: Ende des Überholverbotes',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'overtaking', value: 'yes' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -713,8 +811,9 @@ export const _all: SignType[] = [
     descriptiveName: '4c: Überholen für Lastkraftfahrzeuge verboten',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'overtaking:hgv', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -729,8 +828,9 @@ export const _all: SignType[] = [
     descriptiveName: '4d: Ende des Überholverbotes für Lastkraftfahrzeuge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'overtaking:hgv', value: 'yes' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -745,8 +845,15 @@ export const _all: SignType[] = [
     descriptiveName: '5: Wartepflicht bei Gegenverkehr',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'priority', value: 'forward' },
+          { key: 'priority', value: 'backward' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -761,8 +868,9 @@ export const _all: SignType[] = [
     descriptiveName: '6a: Fahrverbot für alle Kraftfahrzeuge außer einspurigen Motorrädern',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'motorcar', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -777,8 +885,9 @@ export const _all: SignType[] = [
     descriptiveName: '6b: Fahrverbot für Motorräder',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'motorcycle', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -793,8 +902,9 @@ export const _all: SignType[] = [
     descriptiveName: '6c: Fahrverbot für alle Kraftfahrzeuge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'motor_vehicle', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -809,8 +919,9 @@ export const _all: SignType[] = [
     descriptiveName: '6d: Fahrverbot für Kraftfahrzeuge mit Anhänger',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'trailer', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -823,11 +934,12 @@ export const _all: SignType[] = [
     signId: '52.6d-2[2.4]',
     name: '52.6d-2[2.4]',
     descriptiveName:
-      '6d: Fahrverbot für Kraftfahrzeuge mit Anhänger, wenn höchstens zulässiges Gesamtgewicht des Anhängers … Tonnen überschreitet Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Tonnen" wird ',
+      '6d: Fahrverbot für Kraftfahrzeuge mit Anhänger, wenn höchstens zulässiges Gesamtgewicht des Anhängers … Tonnen überschreitet',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'maxweightrating:trailer', value: '2.4' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -841,11 +953,12 @@ export const _all: SignType[] = [
     signId: '52.6d-3[10]',
     name: '52.6d-3[10]',
     descriptiveName:
-      '6d: Fahrverbot für Kraftfahrzeuge mit Anhänger, wenn Länge des Anhängers … Meter überschreitet Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Meter" wird nicht angegeben.',
+      '6d: Fahrverbot für Kraftfahrzeuge mit Anhänger, wenn Länge des Anhängers … Meter überschreitet',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'maxlength:trailer', value: '10' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -861,8 +974,9 @@ export const _all: SignType[] = [
     descriptiveName: '7a: Fahrverbot für Lastkraftfahrzeuge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'hgv', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -875,11 +989,12 @@ export const _all: SignType[] = [
     signId: '52.7a-2[5.5]',
     name: '52.7a-2[5.5]',
     descriptiveName:
-      '7a: Fahrverbot für Last­kraftfahrzeuge bzw. Anhänger mit mehr als ... Tonnen höchst­zu­lässigem Gesamtgewicht Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Tonnen" wird nicht angegeben',
+      '7a: Fahrverbot für Last­kraftfahrzeuge bzw. Anhänger mit mehr als ... Tonnen höchst­zu­lässigem Gesamtgewicht',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'maxweightrating:hgv', value: '5.5' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -893,11 +1008,12 @@ export const _all: SignType[] = [
     signId: '52.7a-3[10]',
     name: '52.7a-3[10]',
     descriptiveName:
-      '7a: Fahrverbot für Lastkraftfahrzeuge (bzw. inklusive Anhänger) über ... Meter Gesamtlänge Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Meter" wird nicht angegeben.',
+      '7a: Fahrverbot für Lastkraftfahrzeuge (bzw. inklusive Anhänger) über ... Meter Gesamtlänge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'maxlength:hgv', value: '10' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -910,12 +1026,12 @@ export const _all: SignType[] = [
     osmValuePart: '52.7b',
     signId: '52.7b',
     name: '52.7b',
-    descriptiveName:
-      '7b: Fahrverbot für Lastkraftfahrzeuge mit Anhänger Hinweis: Dieses Zeichen zeigt an, dass das Fahren mit Lastkraftfahrzeugen mit Anhänger verboten ist.',
+    descriptiveName: '7b: Fahrverbot für Lastkraftfahrzeuge mit Anhänger',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hgv:trailer', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -930,8 +1046,9 @@ export const _all: SignType[] = [
     descriptiveName: '7c: Fahrverbot für Fuhrwerke',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'carriage', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -946,8 +1063,9 @@ export const _all: SignType[] = [
     descriptiveName: '7e: Fahrverbot für Kraftfahrzeuge mit gefährlichen Gütern',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazmat', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -962,8 +1080,9 @@ export const _all: SignType[] = [
     descriptiveName: '7d: Fahrverbot für Tankkraftfahrzeuge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'hazmat', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -978,8 +1097,13 @@ export const _all: SignType[] = [
     descriptiveName: '7f: Fahrverbot für Omnibusse',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        accessTags: [{ key: 'bus', value: 'no' }],
+        uniqueTags: [{ key: 'tourist_bus', value: 'no' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -992,11 +1116,18 @@ export const _all: SignType[] = [
     signId: '52.7f-2[7.5]',
     name: '52.7f-2[7.5]',
     descriptiveName:
-      '7f: Fahrverbot für Omnibusse mit mehr als ... Tonnen höchst­zu­lässigem Gesamtgewicht Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Tonnen" wird nicht angegeben.',
+      '7f: Fahrverbot für Omnibusse mit mehr als ... Tonnen höchst­zu­lässigem Gesamtgewicht',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'maxweightrating:bus', value: '7.5' },
+          { key: 'maxweightrating:tourist_bus', value: '7.5' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1009,12 +1140,18 @@ export const _all: SignType[] = [
     osmValuePart: '52.7f-3[10]',
     signId: '52.7f-3[10]',
     name: '52.7f-3[10]',
-    descriptiveName:
-      '7f: Fahrverbot für Omnibusse über ... Meter Gesamtlänge Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Meter" wird nicht angegeben.',
+    descriptiveName: '7f: Fahrverbot für Omnibusse über ... Meter Gesamtlänge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'maxlength:bus', value: '10' },
+          { key: 'maxlength:tourist_bus', value: '10' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1030,8 +1167,13 @@ export const _all: SignType[] = [
     descriptiveName: '8a: Fahrverbot für Fahrräder und Motorfahrräder',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        accessTags: [{ key: 'bicycle', value: 'no' }],
+        uniqueTags: [{ key: 'moped', value: 'no' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1046,8 +1188,9 @@ export const _all: SignType[] = [
     descriptiveName: '8b: Fahrverbot für Motorfahrräder',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'moped', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1062,8 +1205,9 @@ export const _all: SignType[] = [
     descriptiveName: '8c: Fahrverbot für Fahrräder',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'bicycle', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1075,12 +1219,12 @@ export const _all: SignType[] = [
     osmValuePart: '52.9a[2]',
     signId: '52.9a[2]',
     name: '52.9a[2]',
-    descriptiveName:
-      '9a: Fahrverbot für über ... Meter breite Fahrzeuge Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Meter" wird nicht angegeben.',
+    descriptiveName: '9a: Fahrverbot für über ... Meter breite Fahrzeuge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'maxwidth', value: '2' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1092,12 +1236,12 @@ export const _all: SignType[] = [
     osmValuePart: '52.9b[2.9]',
     signId: '52.9b[2.9]',
     name: '52.9b[2.9]',
-    descriptiveName:
-      '9b: Fahrverbot für über ... Meter hohe Fahrzeuge Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Meter" wird nicht angegeben.',
+    descriptiveName: '9b: Fahrverbot für über ... Meter hohe Fahrzeuge',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'maxheight', value: '2.9' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1109,12 +1253,12 @@ export const _all: SignType[] = [
     osmValuePart: '52.9c[5.5]',
     signId: '52.9c[5.5]',
     name: '52.9c[5.5]',
-    descriptiveName:
-      '9c: Fahrverbot für Fahrzeuge mit über ... Tonnen Gesamtgewicht Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Tonnen" wird nicht angegeben.',
+    descriptiveName: '9c: Fahrverbot für Fahrzeuge mit über ... Tonnen Gesamtgewicht',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'maxweight', value: '5.5' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1126,12 +1270,12 @@ export const _all: SignType[] = [
     osmValuePart: '52.9d[2.4]',
     signId: '52.9d[2.4]',
     name: '52.9d[2.4]',
-    descriptiveName:
-      '9d: Fahrverbot für alle Fahrzeuge mit über ... Tonnen Achslast Als Dezimaltrennzeichen wird Punkt verwendet. Die Maßeinheit "Tonnen" wird nicht angegeben.',
+    descriptiveName: '9d: Fahrverbot für alle Fahrzeuge mit über ... Tonnen Achslast',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'maxaxleload', value: '2.4' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1146,9 +1290,17 @@ export const _all: SignType[] = [
     descriptiveName: '10a: Geschwindigkeitsbeschränkung (erlaubte Höchstgeschwindigkeit)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'maxspeed', value: '30' },
+          { key: 'source:maxspeed', value: 'sign' },
+          { key: 'maxspeed:type', value: 'sign' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'speed' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_10a_(2010).svg',
@@ -1194,9 +1346,17 @@ export const _all: SignType[] = [
     descriptiveName: '52.11a[...]',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'maxspeed', value: '30' },
+          { key: 'source:maxspeed', value: 'AT:zone30' },
+          { key: 'maxspeed:type', value: 'AT:zone30' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'speed' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_11a_(2010).svg',
@@ -1226,8 +1386,9 @@ export const _all: SignType[] = [
     descriptiveName: '12: Halt Zoll',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'barrier', value: 'border_control' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1239,7 +1400,7 @@ export const _all: SignType[] = [
     osmValuePart: '52.13a',
     signId: '52.13a',
     name: '52.13a',
-    descriptiveName: '13a: Parken verboten Siehe: DE:Key:parking:lane',
+    descriptiveName: '13a: Parken verboten',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1303,7 +1464,7 @@ export const _all: SignType[] = [
     osmValuePart: '52.13d',
     signId: '52.13d',
     name: '52.13d',
-    descriptiveName: '13d: Beginn einer Kurzparkzone Siehe: Key:fee:conditional',
+    descriptiveName: '13d: Beginn einer Kurzparkzone',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1335,7 +1496,7 @@ export const _all: SignType[] = [
     osmValuePart: '52.14',
     signId: '52.14',
     name: '52.14',
-    descriptiveName: '14: Hupverbot Notiz: horn=no hat nur drei Verwendungen (Stand März 2022)',
+    descriptiveName: '14: Hupverbot',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -1355,8 +1516,9 @@ export const _all: SignType[] = [
     descriptiveName: '14a: Reitverbot',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'horse', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1371,8 +1533,9 @@ export const _all: SignType[] = [
     descriptiveName: '14b: Verbot für Fußgänger',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'foot', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1384,11 +1547,19 @@ export const _all: SignType[] = [
     osmValuePart: '15a',
     signId: '15a',
     name: '15a',
-    descriptiveName: 'Als Relation mit type=restriction restriction:hazmat=only_right_turn',
+    descriptiveName:
+      '15a: Vorgeschriebene Fahrtrichtung für Kraftfahrzeuge mit gefährlichen Gütern',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction:hazmat', value: 'only_right_turn' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1400,12 +1571,17 @@ export const _all: SignType[] = [
     osmValuePart: '52.16',
     signId: '52.16',
     name: '52.16',
-    descriptiveName:
-      '16: Radweg Hinweis: Dieses Zeichen zeigt an, dass Lenker von einspurigen Fahrrädern nur den Radweg benützen dürfen.',
+    descriptiveName: '16: Radweg',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway'],
+        accessTags: [{ key: 'bicycle', value: 'use_sidepath' }],
+        uniqueTags: [{ key: 'cycleway:bicycle', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1436,8 +1612,7 @@ export const _all: SignType[] = [
     descriptiveName: '17: Gehweg',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['footway'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1468,8 +1643,17 @@ export const _all: SignType[] = [
     descriptiveName: '17a/a: Geh- und Radweg (gemeinsam geführter Weg)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway', 'path'],
+        accessTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'foot', value: 'designated' },
+        ],
+        uniqueTags: [{ key: 'segregated', value: 'no' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1500,8 +1684,17 @@ export const _all: SignType[] = [
     descriptiveName: '17a/b: Geh- und Radweg (getrennt geführter Weg)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway', 'path'],
+        accessTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'foot', value: 'designated' },
+        ],
+        uniqueTags: [{ key: 'segregated', value: 'yes' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1532,8 +1725,7 @@ export const _all: SignType[] = [
     descriptiveName: '17b: Reitweg',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['bridleway'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1545,19 +1737,10 @@ export const _all: SignType[] = [
     osmValuePart: '52.18',
     signId: '52.18',
     name: '52.18',
-    descriptiveName:
-      '18: Unterführung Anmerkungen: bei Über-/Unterführung entsprechend bridge=yes bzw. tunnel=yes und entsprechende Ebene Hinweis: Dieses Zeichen zeigt an, dass Fußgänger die Unterführung benützen müssen u',
+    descriptiveName: '18: Unterführung',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [
-          { key: 'bridge', value: 'yes' },
-          { key: 'tunnel', value: 'yes' },
-        ],
-      },
-    ],
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['steps'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1569,11 +1752,12 @@ export const _all: SignType[] = [
     osmValuePart: '52.19[30]',
     signId: '52.19[30]',
     name: '52.19[30]',
-    descriptiveName: '19: Vorgeschriebene Mindestgeschwindigkeit Siehe: DE:Key:minspeed',
+    descriptiveName: '19: Vorgeschriebene Mindestgeschwindigkeit',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'minspeed', value: '30' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1601,12 +1785,18 @@ export const _all: SignType[] = [
     osmValuePart: '52.21',
     signId: '52.21',
     name: '52.21',
-    descriptiveName:
-      '21: Umkehrgebot Hinweis: Dieses Zeichen zeigt an, dass die Lenker von Fahrzeugen an der betreffenden Straßenstelle umzukehren haben.',
+    descriptiveName: '21: Umkehrgebot',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'only_u_turn' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1618,8 +1808,7 @@ export const _all: SignType[] = [
     osmValuePart: '52.22',
     signId: '52.22',
     name: '52.22',
-    descriptiveName:
-      '22: Schneeketten vorgeschrieben Hinweis: Dieses Zeichen zeigt an, dass Kraftwagen, die auf der Straße fahren, an deren Beginn das Zeichen angebracht ist, auf mindestens zwei Antriebsrädern Schneekette',
+    descriptiveName: '22: Schneeketten vorgeschrieben',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1654,8 +1843,7 @@ export const _all: SignType[] = [
     descriptiveName: '23: Vorrang geben',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [{ geometries: ['node'], highwayValues: ['give_way'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1670,8 +1858,7 @@ export const _all: SignType[] = [
     descriptiveName: '24: Halt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [{ geometries: ['node'], highwayValues: ['stop'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1686,8 +1873,9 @@ export const _all: SignType[] = [
     descriptiveName: '25a: Beginn der Vorrangstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'priority_road', value: 'designated' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1699,11 +1887,12 @@ export const _all: SignType[] = [
     osmValuePart: '52.25b',
     signId: '52.25b',
     name: '52.25b',
-    descriptiveName: '25b: Ende der Vorrangstraße Notiz: Als Linie oder als Punkt?',
+    descriptiveName: '25b: Ende der Vorrangstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'priority_road', value: 'end' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1715,11 +1904,18 @@ export const _all: SignType[] = [
     osmValuePart: '53.1a',
     signId: '53.1a',
     name: '53.1a',
-    descriptiveName: '1a: Parken Siehe: DE:Tag:amenity=parking',
+    descriptiveName: '1a: Parken',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'DE:Tag:amenity', value: 'parking' }] },
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'amenity', value: 'parking' },
+          { key: 'parking', value: 'surface/multi-storey/underground/...' },
+          { key: 'fee', value: 'yes/no' },
+        ],
+      },
     ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -1748,11 +1944,10 @@ export const _all: SignType[] = [
     osmValuePart: '1c',
     signId: '1c',
     name: '1c',
-    descriptiveName: 'Als Punkt/Linie/Fläche // mit highway=emergency_bay',
+    descriptiveName: '1c: Pannenbucht',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['emergency_bay'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1764,11 +1959,11 @@ export const _all: SignType[] = [
     osmValuePart: '53.2a',
     signId: '53.2a',
     name: '53.2a',
-    descriptiveName: '2a: Kennzeichnung eines Schutzweges Siehe: DE:Tag:footway=crossing',
+    descriptiveName: '2a: Kennzeichnung eines Schutzweges',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'DE:Tag:footway', value: 'crossing' }] },
+      { geometries: ['way'], uniqueTags: [{ key: 'footway', value: 'crossing' }] },
     ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -1784,8 +1979,9 @@ export const _all: SignType[] = [
     descriptiveName: '2b: Kennzeichnung einer Radfahrerüberfahrt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'cycleway', value: 'crossing' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1797,11 +1993,18 @@ export const _all: SignType[] = [
     osmValuePart: '53.2c',
     signId: '53.2c',
     name: '53.2c',
-    descriptiveName: 'fixme: replace with StVO pictogram',
+    descriptiveName: '2c: Kennzeichnung eines Schutzweges und einer Radfahrerüberfahrt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'cycleway', value: 'crossing' },
+          { key: 'footway', value: 'crossing' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1813,7 +2016,7 @@ export const _all: SignType[] = [
     osmValuePart: '3a',
     signId: '3a',
     name: '3a',
-    descriptiveName: '3a: Gottesdienste Siehe: DE:Tag:amenity=place of worship',
+    descriptiveName: '3a: Gottesdienste',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -1846,11 +2049,12 @@ export const _all: SignType[] = [
     osmValuePart: '6a',
     signId: '6a',
     name: '6a',
-    descriptiveName: 'Als Punkt/Fläche / mit amenity=taxi',
+    descriptiveName: '6a: Taxistandplatz',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'taxi' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1865,8 +2069,15 @@ export const _all: SignType[] = [
     descriptiveName: '7a: Wartepflicht für Gegenverkehr',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'priority', value: 'forward' },
+          { key: 'priority', value: 'backward' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1878,13 +2089,21 @@ export const _all: SignType[] = [
     osmValuePart: '8a',
     signId: '8a',
     name: '8a',
-    descriptiveName:
-      'Als Linie mit highway=motorway highway=motorway_link maxspeed=130 source:maxspeed=AT:motorway oder maxspeed:type=AT:motorway',
+    descriptiveName: '8a: Autobahn',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['motorway', 'motorway_link'],
+        uniqueTags: [
+          { key: 'maxspeed', value: '130' },
+          { key: 'source:maxspeed', value: 'AT:motorway' },
+          { key: 'maxspeed:type', value: 'AT:motorway' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'speed' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_8a.svg',
@@ -1895,7 +2114,7 @@ export const _all: SignType[] = [
     osmValuePart: '8b',
     signId: '8b',
     name: '8b',
-    descriptiveName: 'Als Linie mit',
+    descriptiveName: '8b: Ende der Autobahn',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1911,13 +2130,21 @@ export const _all: SignType[] = [
     osmValuePart: '8c',
     signId: '8c',
     name: '8c',
-    descriptiveName:
-      'Als Linie mit motorroad=yes maxspeed=100 source:maxspeed=AT:trunk oder maxspeed:type=AT:trunk',
+    descriptiveName: '8c: Autostraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'motorroad', value: 'yes' },
+          { key: 'maxspeed', value: '100' },
+          { key: 'source:maxspeed', value: 'AT:trunk' },
+          { key: 'maxspeed:type', value: 'AT:trunk' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'speed' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_8c.svg',
@@ -1928,11 +2155,12 @@ export const _all: SignType[] = [
     osmValuePart: '8d',
     signId: '8d',
     name: '8d',
-    descriptiveName: 'Als Linie mit ohne motorroad=* oder motorroad=no',
+    descriptiveName: '8d: Ende der Autostraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'motorroad', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1944,11 +2172,10 @@ export const _all: SignType[] = [
     osmValuePart: '53.9a',
     signId: '53.9a',
     name: '53.9a',
-    descriptiveName: '9a: Fußgängerzone Höchstgeschwindigkeit: Schrittgeschwindigkeit (implizit).',
+    descriptiveName: '9a: Fußgängerzone',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['pedestrian'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1976,13 +2203,10 @@ export const _all: SignType[] = [
     osmValuePart: '53.9c',
     signId: '53.9c',
     name: '53.9c',
-    descriptiveName:
-      '9c: Wohnstraße Siehe: DE:Tag:highway=living street#Wohnstra.C3.9Fen Wikipedia: Wohnstraße Grundsätzlich nur Fußgängern vorbehalten, erlaubter Fahrzeugverkehr mit Fahrrädern, Kommunalfahrzeuge, Einsatz',
+    descriptiveName: '9c: Wohnstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'DE:Tag:highway', value: 'living' }] },
-    ],
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['living_street'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2010,14 +2234,22 @@ export const _all: SignType[] = [
     osmValuePart: '53.9e[20]',
     signId: '53.9e[20]',
     name: '53.9e[20]',
-    descriptiveName:
-      '9e: Begegnungszone Siehe: DE:Tag:highway=living street#Begegnungszonen und OSM tags for routing/Maxspeed#Austria Wikipedia: Begegnungszone Gleichberechtigte Nutzung von Fußgängern und Fahrzeugen, die ',
+    descriptiveName: '9e: Begegnungszone',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'DE:Tag:highway', value: 'living' }] },
+      {
+        geometries: ['way'],
+        highwayValues: ['living_street'],
+        accessTags: [{ key: 'vehicle', value: 'yes' }],
+        uniqueTags: [
+          { key: 'maxspeed', value: '20' },
+          { key: 'source:maxspeed', value: 'AT:shared_zone20' },
+          { key: 'maxspeed:type', value: 'AT:shared_zone20' },
+        ],
+      },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'speed' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_9e_new.svg',
@@ -2044,12 +2276,19 @@ export const _all: SignType[] = [
     osmValuePart: '9g',
     signId: '9g',
     name: '9g',
-    descriptiveName:
-      'Als Linie mit tunnel=yes layer=-1 length=2148 (Länge in Meter ohne Maßeinheit) name=*',
+    descriptiveName: '9g: Tunnel',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'tunnel', value: 'yes' },
+          { key: 'layer', value: '-1' },
+          { key: 'length', value: '2148' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2077,8 +2316,7 @@ export const _all: SignType[] = [
     osmValuePart: '53.11',
     signId: '53.11',
     name: '53.11',
-    descriptiveName:
-      '11: Sackgasse Anmerkungen: Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet ',
+    descriptiveName: '11: Sackgasse',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -2094,13 +2332,10 @@ export const _all: SignType[] = [
     osmValuePart: '53.12',
     signId: '53.12',
     name: '53.12',
-    descriptiveName:
-      '12: Laternen, die nicht die ganze Nacht über leuchten Anmerkungen: Die "Öffnungszeiten" bzw. Beleuchtungszeiten werden mehrheitlich mit light:lit=* angegeben. Deutlich weniger genutzt wird opening_hou',
+    descriptiveName: '12: Laternen, die nicht die ganze Nacht über leuchten',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'DE:Tag:highway', value: 'street' }] },
-    ],
+    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['street_lamp'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2131,8 +2366,16 @@ export const _all: SignType[] = [
     descriptiveName: '13b: Wegweiser',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'destination:forward', value: 'Wien' },
+          { key: 'destination:ref:lanes', value: '60' },
+          { key: 'turn:lanes', value: 'through' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2209,23 +2452,12 @@ export const _all: SignType[] = [
     osmValuePart: '53.17a',
     signId: '53.17a',
     name: '53.17a',
-    descriptiveName:
-      '17a: Ortstafel Ab hier maxspeed=50 und source:maxspeed=AT:urban oder maxspeed:type=AT:urban Wenn zusammen mit 10a: Geschwindigkeitsbeschränkung, dann maxspeed=* und source:maxspeed=AT:city_limit* oder',
+    descriptiveName: '17a: Ortstafel',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [
-          { key: 'maxspeed', value: '50' },
-          { key: 'source:maxspeed', value: 'AT:urban' },
-          { key: 'maxspeed:type', value: 'AT:urban' },
-          { key: 'source:maxspeed', value: 'AT:city_limit*' },
-          { key: 'maxspeed:type', value: 'AT:city_limit*' },
-        ],
-      },
-    ],
-    catalogue: { signCategory: 'speed' },
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Austria,_Hinweiszeichen_17a_(2010).svg',
@@ -2252,12 +2484,20 @@ export const _all: SignType[] = [
     osmValuePart: '53.18',
     signId: '53.18',
     name: '53.18',
-    descriptiveName:
-      '18: Internationaler Hauptverkehrsweg Siehe: WikiProject Europe/E-road network Zwischen dem Buchstaben E und der Zahl ein Leerzeichen. Die Relationen ergänzen die Erfassung mit int_ref=E * an der Linie',
+    descriptiveName: '18: Internationaler Hauptverkehrsweg',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'int_ref', value: 'E' }] },
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'int_ref', value: 'E' },
+          { key: 'type', value: 'route' },
+          { key: 'route', value: 'road' },
+          { key: 'network', value: 'e-road' },
+          { key: 'ref', value: 'E' },
+        ],
+      },
     ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -2273,8 +2513,17 @@ export const _all: SignType[] = [
     descriptiveName: '24: Straße für Omnibusse',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['service'],
+        accessTags: [
+          { key: 'vehicle', value: 'no' },
+          { key: 'bus', value: 'designated' },
+        ],
+        uniqueTags: [{ key: 'taxi', value: 'yes' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2302,12 +2551,25 @@ export const _all: SignType[] = [
     osmValuePart: '53.26',
     signId: '53.26',
     name: '53.26',
-    descriptiveName: '26: Fahrradstraße Siehe: DE:Key:bicycle_road',
+    descriptiveName: '26: Fahrradstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        accessTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'vehicle', value: 'destination' },
+        ],
+        uniqueTags: [
+          { key: 'bicycle_road', value: 'yes' },
+          { key: 'maxspeed', value: '30' },
+          { key: 'source:maxspeed', value: 'AT:bicycle_road' },
+          { key: 'maxspeed:type', value: 'AT:bicycle_road' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'speed' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_26.svg',
@@ -2321,9 +2583,17 @@ export const _all: SignType[] = [
     descriptiveName: '26a: Schulstraße',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        accessTags: [{ key: 'motor_vehicle', value: 'private)' }],
+        uniqueTags: [
+          { key: 'maxspeed', value: 'walk)' },
+          { key: 'DE:Tag:traffic_sign', value: 'AT:53.26a' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'speed' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Schulstra%C3%9Fe.svg',
@@ -2337,8 +2607,13 @@ export const _all: SignType[] = [
     descriptiveName: '27: Radweg ohne Benützungspflicht',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway'],
+        uniqueTags: [{ key: 'cycleway:bicycle', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2353,8 +2628,17 @@ export const _all: SignType[] = [
     descriptiveName: '28a: Geh- und Radweg ohne Benützungspflicht (gemeinsam)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway', 'path'],
+        accessTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'foot', value: 'designated' },
+        ],
+        uniqueTags: [{ key: 'segregated', value: 'no' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2369,8 +2653,17 @@ export const _all: SignType[] = [
     descriptiveName: '28b: Geh- und Radweg ohne Benützungspflicht (getrennt)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['cycleway', 'path'],
+        accessTags: [
+          { key: 'bicycle', value: 'designated' },
+          { key: 'foot', value: 'designated' },
+        ],
+        uniqueTags: [{ key: 'segregated', value: 'yes' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2481,20 +2774,12 @@ export const _all: SignType[] = [
     osmValuePart: '54f',
     signId: '54f',
     name: '54f',
-    descriptiveName:
-      'f: bei Schneelage oder Eisbildung Anmerkung: Die bedingte Beschränkung wird zusätzlich zum bereits bestehenden Tag gesetzt. Beispiel: + maxspeed=50 maxspeed:conditional=30 @ snow Bei kombinierter Zusa',
+    descriptiveName: 'f: bei Schneelage oder Eisbildung',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [
-          { key: 'maxspeed', value: '50' },
-          { key: 'maxspeed:conditional', value: '30' },
-        ],
-      },
-    ],
-    catalogue: { signCategory: 'speed' },
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zusatztafel_f.svg',
@@ -2505,20 +2790,12 @@ export const _all: SignType[] = [
     osmValuePart: '54g',
     signId: '54g',
     name: '54g',
-    descriptiveName:
-      'g: bei nasser Fahrbahn Anmerkung: Die bedingte Beschränkung wird zusätzlich zum bereits bestehenden Tag gesetzt. Beispiel: + maxspeed=50 maxspeed:conditional=30 @ wet Bei kombinierter Zusatztafel f un',
+    descriptiveName: 'g: bei nasser Fahrbahn',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [
-          { key: 'maxspeed', value: '50' },
-          { key: 'maxspeed:conditional', value: '30' },
-        ],
-      },
-    ],
-    catalogue: { signCategory: 'speed' },
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Zusatztafel_g.svg',
@@ -2532,8 +2809,9 @@ export const _all: SignType[] = [
     descriptiveName: 'h: außer nach StVO § 29b Abs. 4 gekennzeichnete Fahrzeuge (hier: Behinderte)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'disabled', value: 'yes' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2615,8 +2893,9 @@ export const _all: SignType[] = [
       'm: ausgenommen Elektrofahrzeuge während des Ladevorgangs Auch als "Z 111" bekannt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'restriction', value: 'charging_only' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2628,11 +2907,16 @@ export const _all: SignType[] = [
     osmValuePart: '54n-1',
     signId: '54n-1',
     name: '54n-1',
-    descriptiveName: 'fixme: replace with StVO pictogram',
+    descriptiveName: 'n: Radfahrer dürfen trotz rotem Lichtzeichen rechts abbiegen (Grünpfeil)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['node'],
+        highwayValues: ['traffic_signals'],
+        uniqueTags: [{ key: 'red_turn:right:bicycle', value: 'yes' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2644,11 +2928,17 @@ export const _all: SignType[] = [
     osmValuePart: '54n-2',
     signId: '54n-2',
     name: '54n-2',
-    descriptiveName: 'fixme: replace with StVO pictogram',
+    descriptiveName:
+      'n: Radfahrer dürfen trotz rotem Lichtzeichen geradeaus fahren (Grünpfeil bei T-Kreuzungen)',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['node'],
+        highwayValues: ['traffic_signals'],
+        uniqueTags: [{ key: 'red_turn:straight:bicycle', value: 'yes' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2663,8 +2953,9 @@ export const _all: SignType[] = [
     descriptiveName: '1.2: Forstliches Sperrgebiet',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'access', value: 'forestry' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2679,8 +2970,9 @@ export const _all: SignType[] = [
     descriptiveName: '1.3: Befristetes forstliches Sperrgebiet',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'access:conditional', value: 'forestry' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2697,8 +2989,9 @@ export const _all: SignType[] = [
       '1.8: Explizite Zulässigkeit der allgemeinen Benützung von Forststraßen oder sonstigen Wegen im Wald durch Radfahrer',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'bicycle', value: 'yes' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2714,7 +3007,15 @@ export const _all: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'source:access', value: 'forestry_law' }] },
+      {
+        geometries: ['way'],
+        accessTags: [
+          { key: 'vehicle', value: 'forestry' },
+          { key: 'horse', value: 'no' },
+          { key: 'bicycle', value: 'no' },
+        ],
+        uniqueTags: [{ key: 'ski', value: 'yes' }],
+      },
     ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -2730,8 +3031,22 @@ export const _all: SignType[] = [
     descriptiveName: 'F.1: Beginn eines Treppelweges',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: ['track', 'path)'],
+        accessTags: [
+          { key: 'motor_vehicle', value: 'private' },
+          { key: 'bicycle', value: 'yes' },
+        ],
+        uniqueTags: [
+          { key: 'tracktype', value: 'grade1)' },
+          { key: 'inline_skates', value: 'no' },
+          { key: 'description', value: 'Treppelweg' },
+          { key: 'DE:Tag:traffic_sign', value: 'AT:WVO_F.1' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2746,8 +3061,9 @@ export const _all: SignType[] = [
     descriptiveName: 'F.3.1: Radfahren erlaubt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'bicycle', value: 'designated' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2762,8 +3078,9 @@ export const _all: SignType[] = [
     descriptiveName: 'F.3.2: Radfahren verboten',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], accessTags: [{ key: 'bicycle', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2778,8 +3095,9 @@ export const _all: SignType[] = [
     descriptiveName: 'F.4.1: Rollschuhfahren bzw. Inline-Skaten erlaubt',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'inline_skates', value: 'yes' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2794,8 +3112,9 @@ export const _all: SignType[] = [
     descriptiveName: 'F.4.2: Rollschuhfahren bzw. Inline-Skaten verboten',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'inline_skates', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',

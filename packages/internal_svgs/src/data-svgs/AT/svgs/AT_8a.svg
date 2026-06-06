@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-labelledby="title">
-  <title id="title">Verkehrszeichen 8a - Als Linie mit highway=motorway highway=motorway_link maxspeed=130 source:maxspeed=AT:motorway oder maxspeed:type=AT:motorway</title>
+  <title id="title">Verkehrszeichen 8a - 8a: Autobahn</title>
   <path d="M935.595 1200c6.518 0 12.645-2.523 17.255-7.122 4.61-4.587 7.15-10.7 7.15-17.19V24.323c0-6.502-2.54-12.603-7.15-17.201A24.3 24.3 0 0 0 935.595 0H24.404C10.945 0 0 10.906 0 24.323v1151.365c0 6.49 2.54 12.603 7.15 17.19 4.61 4.599 10.737 7.122 17.256 7.122z" style="fill:#000;fill-rule:nonzero;stroke:none"/>
   <path d="M24.406 1191.984a16.3 16.3 0 0 1-11.565-4.77c-3.093-3.086-4.794-7.18-4.794-11.526V24.323c0-4.357 1.701-8.451 4.794-11.525 3.092-3.085 7.196-4.77 11.565-4.77h911.189c4.368 0 8.472 1.685 11.564 4.77a16.14 16.14 0 0 1 4.794 11.525v1151.365c0 8.98-7.334 16.296-16.358 16.296z" style="fill:#fff;fill-rule:nonzero;stroke:none"/>
   <path d="M37.58 1162.328h884.725v-1125H37.58z" style="fill:#176fc1;fill-rule:nonzero;stroke:none"/>

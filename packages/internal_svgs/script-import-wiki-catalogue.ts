@@ -347,6 +347,79 @@ const parseBelgiumTable = ($: cheerio.CheerioAPI): ParsedSign[] => {
   return signs
 }
 
+const cleanWikiSignName = (rawName: string): string => {
+  let name = rawName.replace(/\s+/g, ' ').trim()
+  const cutPatterns = [
+    /\s+Siehe:.*/i,
+    /\s+Notiz:.*/i,
+    /\s+Anmerkungen:.*/i,
+    /\s+Hinweis:.*/i,
+    /\s+Ab hier\b.*/i,
+    /\s+Wikipedia:.*/i,
+    /\s+Höchstgeschwindigkeit:.*/i,
+  ]
+  for (const pattern of cutPatterns) {
+    name = name.replace(pattern, '')
+  }
+  return name.trim()
+}
+
+const isWikiTaggingCell = (text: string): boolean => {
+  const trimmed = text.trim()
+  return (
+    /^Als\s/i.test(trimmed) ||
+    trimmed.includes('traffic_sign=') ||
+    trimmed.includes('traffic_sign =')
+  )
+}
+
+const looksLikeWikiSignNameCell = (text: string): boolean => {
+  const trimmed = text.trim()
+  if (!trimmed || isWikiTaggingCell(trimmed) || /^fixme:/i.test(trimmed)) return false
+  return /^(?:\d+[a-z]?(?:[./][a-z]+)*(?:\[[^\]]*\])?|\d+\.\d+[a-z]?(?:\[[^\]]*\])?|[A-Za-z]{1,3}_[\w.]+|[a-z])(?:\s+groß)?:\s/.test(
+    trimmed,
+  )
+}
+
+const extractNameFromCell = ($: cheerio.CheerioAPI, cell: cheerio.Element): string => {
+  const $cell = $(cell)
+  const bold = $cell.find('b').first().text().replace(/\s+/g, ' ').trim()
+  return cleanWikiSignName((bold || $cell.text()).replace(/\s+/g, ' ').trim())
+}
+
+const pickWikiRowName = (
+  $: cheerio.CheerioAPI,
+  cells: cheerio.Cheerio<cheerio.Element>,
+  rowTexts: string[],
+  signId: string,
+): string => {
+  const nameCellIndex = [...rowTexts]
+    .map((text, index) => ({ text, index }))
+    .reverse()
+    .find(({ text }) => looksLikeWikiSignNameCell(text))?.index
+
+  if (nameCellIndex !== undefined) {
+    const cell = cells.get(nameCellIndex)
+    if (cell) return extractNameFromCell($, cell).slice(0, 200)
+  }
+
+  const fallback =
+    rowTexts.find(
+      (text) =>
+        text.length > 3 &&
+        text !== signId &&
+        !isWikiTaggingCell(text) &&
+        !text.includes('traffic_sign'),
+    ) ?? signId
+
+  return cleanWikiSignName(fallback).slice(0, 200)
+}
+
+const pickWikiRowTagsText = (rowTexts: string[]): string => {
+  const taggingCell = rowTexts.find((text) => isWikiTaggingCell(text))
+  return taggingCell ?? rowTexts[rowTexts.length - 1] ?? ''
+}
+
 const parseUniversalTable = ($: cheerio.CheerioAPI, prefix: string): ParsedSign[] => {
   const signMap = new Map<string, ParsedSign>()
   $('table.wikitable tbody tr').each((_, row) => {
@@ -365,13 +438,12 @@ const parseUniversalTable = ($: cheerio.CheerioAPI, prefix: string): ParsedSign[
       : imgHref
         ? `https://wiki.openstreetmap.org${imgHref}`
         : undefined
-    const tagsText = rowTexts[rowTexts.length - 1] ?? ''
-    const name =
-      rowTexts.find((t) => t.length > 3 && t !== signId && !t.includes('traffic_sign')) ?? signId
+    const tagsText = pickWikiRowTagsText(rowTexts)
+    const name = pickWikiRowName($, cells, rowTexts, signId)
     const isNa = /^(n\/a|na|n\/a\.?)$/i.test(tagsText) || /N\/A/i.test(tagsText)
 
     if (!signMap.has(signId)) {
-      signMap.set(signId, { signId, name: name.slice(0, 200), imageUrl, tagsText, isNa })
+      signMap.set(signId, { signId, name, imageUrl, tagsText, isNa })
     }
   })
   return [...signMap.values()]

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-labelledby="title">
-  <title id="title">Verkehrszeichen 8c - Als Linie mit motorroad=yes maxspeed=100 source:maxspeed=AT:trunk oder maxspeed:type=AT:trunk</title>
+  <title id="title">Verkehrszeichen 8c - 8c: Autostraße</title>
   <path d="M935.595 1200c6.518 0 12.645-2.533 17.255-7.128 4.61-4.583 7.15-10.691 7.15-17.188V24.316c0-6.497-2.54-12.605-7.15-17.188C948.24 2.532 942.113 0 935.595 0H24.404C10.945 0 0 10.91 0 24.316v1151.368c0 6.497 2.53 12.605 7.15 17.188 4.61 4.595 10.737 7.128 17.256 7.128z" style="fill:#000;fill-rule:nonzero;stroke:none"/>
   <path d="M24.406 1191.979a16.27 16.27 0 0 1-11.565-4.779 16.12 16.12 0 0 1-4.794-11.516V24.316A16.14 16.14 0 0 1 12.841 12.8 16.27 16.27 0 0 1 24.406 8.02h911.189a16.27 16.27 0 0 1 11.564 4.779 16.14 16.14 0 0 1 4.794 11.516v1151.368c0 8.984-7.334 16.295-16.358 16.295z" style="fill:#fff;fill-rule:nonzero;stroke:none"/>
   <path d="M37.58 1162.322h884.725v-1125H37.58z" style="fill:#176fc1;fill-rule:nonzero;stroke:none"/>
