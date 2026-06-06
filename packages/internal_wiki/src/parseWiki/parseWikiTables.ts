@@ -179,7 +179,9 @@ const pickWikiRowName = (
 }
 
 const pickWikiRowTagsText = (rowTexts: string[]): string => {
-  const taggingCell = rowTexts.find((text) => isWikiTaggingCell(text))
+  const taggingCell = [...rowTexts]
+    .reverse()
+    .find((text) => isWikiTaggingCell(text) && !wikiSignCodeOnly(text))
   return taggingCell ?? rowTexts[rowTexts.length - 1] ?? ''
 }
 

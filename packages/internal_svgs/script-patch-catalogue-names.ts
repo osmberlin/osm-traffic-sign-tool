@@ -46,16 +46,25 @@ for await (const filePath of glob('*.ts', { cwd: dataDir })) {
   const original = content
   let filePatchedNames = 0
 
-  for (const [osmValuePart, newName] of nameByOsmValuePart) {
-    const pattern = new RegExp(
-      `(osmValuePart: '${escapeRegExp(osmValuePart)}'[\\s\\S]*?descriptiveName:\\s*)${descriptiveNameValue}`,
+  const signBlockPattern = /\n  \{[\s\S]*?\n  \},?/g
+  content = content.replace(signBlockPattern, (block) => {
+    const idMatch = block.match(/osmValuePart: '([^']+)'/)
+    if (!idMatch) return block
+    const newName = nameByOsmValuePart.get(idMatch[1]!)
+    if (!newName) return block
+
+    const descriptiveNameMatches = block.match(/descriptiveName:/g)
+    if (!descriptiveNameMatches) return block
+
+    let updated = block.replace(
+      /descriptiveName:\s*(?:'(?:\\'|[^'])*'|"[^"]*"|\n\s*'(?:\\'|[^'])*'|\n\s*"[^"]*")/,
+      `descriptiveName: '${escapeString(newName)}'`,
     )
-    const next = content.replace(pattern, `$1'${escapeString(newName)}'`)
-    if (next !== content) {
-      filePatchedNames++
-      content = next
-    }
-  }
+    updated = updated.replace(/\n\s*descriptiveName:\s*[^\n]+/g, '')
+    if (updated === block) return block
+    filePatchedNames++
+    return updated
+  })
 
   if (content !== original) {
     await Bun.write(absolutePath, content)

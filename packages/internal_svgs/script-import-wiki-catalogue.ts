@@ -466,7 +466,9 @@ const pickWikiRowName = (
 }
 
 const pickWikiRowTagsText = (rowTexts: string[]): string => {
-  const taggingCell = rowTexts.find((text) => isWikiTaggingCell(text))
+  const taggingCell = [...rowTexts]
+    .reverse()
+    .find((text) => isWikiTaggingCell(text) && !wikiSignCodeOnly(text))
   return taggingCell ?? rowTexts[rowTexts.length - 1] ?? ''
 }
 
@@ -596,8 +598,57 @@ const importCountry = async (config: CountryWikiConfig) => {
   return total
 }
 
+const emitSymbolCatalogueFile = async (
+  config: CountryWikiConfig,
+  signs: ParsedSign[],
+  filter: (signId: string) => boolean,
+  exportName: string,
+  fileName: string,
+) => {
+  const filtered = signs.filter((sign) => filter(sign.signId))
+  const outDir = path.join(
+    import.meta.dir,
+    '../traffic-sign-converter/src/data-definitions',
+    config.prefix,
+    'data',
+  )
+  const content = `import type { SignType } from '../../TrafficSignDataTypes.js'\n\nexport const ${exportName}: SignType[] = [\n${filtered
+    .map((sign) => emitSignObject(sign, 'signpost', config.overviewUrl))
+    .join(',\n')}\n]\n`
+  await Bun.write(path.join(outDir, fileName), content)
+  console.log(`  ${filtered.length} signs -> ${fileName}`)
+  return filtered.length
+}
+
+const importFrSymbolsOnly = async (config: CountryWikiConfig) => {
+  const page = config.pages[0]
+  if (!page) throw new Error(`No wiki pages configured for ${config.prefix}`)
+  console.log(`[${config.prefix}] Fetching ${page.slug} (symbols only)...`)
+  const html = await fetchPage(page.slug)
+  const $ = cheerio.load(html)
+  const signs = parseUniversalTable($, config.prefix)
+  let total = 0
+  total += await emitSymbolCatalogueFile(
+    config,
+    signs,
+    (signId) => /^(SI|SC)/.test(signId),
+    '_symbols_si_sc',
+    'symbols_si_sc.ts',
+  )
+  total += await emitSymbolCatalogueFile(
+    config,
+    signs,
+    (signId) => /^SU/.test(signId),
+    '_symbols_su',
+    'symbols_su.ts',
+  )
+  console.log(`[${config.prefix}] Total ${total} symbol signs`)
+  return total
+}
+
 const main = async () => {
   const countryArg = process.argv[2] ?? 'ALL'
+  const symbolsOnly = process.argv.includes('--symbols-only')
   const targets =
     countryArg === 'ALL' ? Object.keys(countryConfigs) : countryArg.split(',').map((s) => s.trim())
 
@@ -607,6 +658,14 @@ const main = async () => {
     if (!config) {
       console.error(`No config for ${key}`)
       process.exit(1)
+    }
+    if (symbolsOnly) {
+      if (key !== 'FR') {
+        console.error('--symbols-only is only supported for FR')
+        process.exit(1)
+      }
+      grandTotal += await importFrSymbolsOnly(config)
+      continue
     }
     grandTotal += await importCountry(config)
   }

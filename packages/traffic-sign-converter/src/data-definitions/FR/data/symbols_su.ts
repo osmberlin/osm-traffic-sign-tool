@@ -8,7 +8,8 @@ export const _symbols_su: SignType[] = [
     descriptiveName: 'À déterminer',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -24,7 +25,10 @@ export const _symbols_su: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'destination:symbol', value: 'detour_route' }] },
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:symbol', value: 'detour_route[2]' }],
+      },
     ],
     catalogue: { signCategory: 'signpost' },
     image: {
@@ -41,7 +45,7 @@ export const _symbols_su: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'destination:ref:to', value: 'A 55' }] },
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:ref:to', value: 'A' }] },
     ],
     catalogue: { signCategory: 'signpost' },
     image: {
@@ -58,7 +62,7 @@ export const _symbols_su: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'destination:symbol', value: 'ring_road' }] },
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:symbol', value: 'ring_road[3]' }] },
     ],
     catalogue: { signCategory: 'signpost' },
     image: {
@@ -76,7 +80,7 @@ export const _symbols_su: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'destination:symbol', value: 'toll' }] },
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:symbol', value: 'toll[4]' }] },
     ],
     catalogue: { signCategory: 'signpost' },
     image: {

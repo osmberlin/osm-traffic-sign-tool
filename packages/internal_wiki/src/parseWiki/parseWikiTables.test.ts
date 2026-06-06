@@ -207,6 +207,19 @@ describe('parseUniversalTable', () => {
     expect(row?.name).toBe(
       'Direction interdite aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
     )
+    expect(row?.tagsText).toBe('destination:access:maxweightrating:goods=5.5')
+  })
+
+  test('picks destination modelling tags for French SI rows', () => {
+    const $ = cheerio.load(`
+<table class="wikitable"><tbody><tr>
+  <td>SI3</td>
+  <td>Direction interdite aux véhicules de transport en commun de personnes</td>
+  <td>destination:access:bus=no</td>
+</tr></tbody></table>`)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(row?.name).toBe('Direction interdite aux véhicules de transport en commun de personnes')
+    expect(row?.tagsText).toBe('destination:access:bus=no')
   })
 
   test('uses French SC sign names instead of conditional destination tags', () => {

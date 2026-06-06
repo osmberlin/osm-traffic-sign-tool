@@ -8,7 +8,9 @@ export const _symbols_si_sc: SignType[] = [
     descriptiveName: 'Direction interdite aux véhicules affectés au transport de marchandises',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:goods', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -24,7 +26,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction interdite aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:maxweightrating:goods', value: '5.5' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -39,7 +46,9 @@ export const _symbols_si_sc: SignType[] = [
     descriptiveName: 'Direction interdite aux cycles',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:bicycle', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -54,7 +63,9 @@ export const _symbols_si_sc: SignType[] = [
     descriptiveName: 'Direction interdite aux véhicules de transport en commun de personnes',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:bus', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -69,7 +80,9 @@ export const _symbols_si_sc: SignType[] = [
     descriptiveName: 'Direction interdite aux cyclomoteurs',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:moped', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -85,7 +98,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction interdite aux véhicules affectés au transport de marchandises dont la longueur est supérieure au nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:maxlength:goods', value: '10' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -101,7 +119,9 @@ export const _symbols_si_sc: SignType[] = [
       'Direction interdite aux véhicules dont la largeur, chargement compris, est supérieure au nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:maxwidth', value: '2.5' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -117,7 +137,9 @@ export const _symbols_si_sc: SignType[] = [
       'Direction interdite aux véhicules dont la hauteur, chargement compris, est supérieure au nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:maxheight', value: '3.5' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -133,7 +155,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction interdite aux véhicules, véhicules articulés, trains doubles ou ensemble de véhicules dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:maxweightrating', value: '5.5' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -149,7 +176,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction interdite aux véhicules pesant sur un essieu plus que le nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:maxaxleload', value: '2.5' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -165,7 +197,12 @@ export const _symbols_si_sc: SignType[] = [
       "Direction interdite aux véhicules transportant des marchandises explosives ou facilement inflammables, de nature et en quantité définies par l'arrêté du 1er juin 2001 relatif au transport des marchand",
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:hazmat:explosive', value: 'no' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -181,7 +218,12 @@ export const _symbols_si_sc: SignType[] = [
       "Direction interdite aux véhicules transportant des marchandises de nature à polluer les eaux, de nature et en quantité définies par l'arrêté du 1er juin 2001 relatif au transport des marchandises dang",
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:hazmat:water', value: 'no' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -197,7 +239,9 @@ export const _symbols_si_sc: SignType[] = [
       "Direction interdite aux véhicules transportant des marchandises dangereuses définies par l'arrêté du 1er juin 2001 relatif au transport des marchandises dangereuses par route, et signalés comme tels",
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:hazmat', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -213,7 +257,9 @@ export const _symbols_si_sc: SignType[] = [
       'Direction interdite aux motocyclettes et motocyclettes légères, au sens de l’article R.311-1 du code de la route',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:motorcycle', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -229,7 +275,9 @@ export const _symbols_si_sc: SignType[] = [
       'Direction interdite aux véhicules tractant une caravane ou remorque de plus de 250 kg tel que le poids total roulant autorisé, véhicule plus caravane ou remorque ne dépasse pas 3,5 t',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:caravan', value: 'no' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -244,7 +292,12 @@ export const _symbols_si_sc: SignType[] = [
     descriptiveName: 'Direction conseillée aux véhicules affectés au transport de marchandises',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:goods', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -260,7 +313,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:goods:conditional', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -275,7 +333,12 @@ export const _symbols_si_sc: SignType[] = [
     descriptiveName: 'Direction conseillée aux cycles',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:bicycle', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -290,7 +353,9 @@ export const _symbols_si_sc: SignType[] = [
     descriptiveName: 'Direction conseillée aux véhicules de transport en commun de personnes',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:access:bus', value: 'designated' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -305,7 +370,12 @@ export const _symbols_si_sc: SignType[] = [
     descriptiveName: 'Direction conseillée aux cyclomoteurs',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:moped', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -321,7 +391,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux véhicules affectés au transport de marchandises dont la longueur est supérieure au nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:goods:conditional', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -337,7 +412,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux véhicules dont la largeur, chargement compris, est supérieure au nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:conditional', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -353,7 +433,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux véhicules dont la hauteur, chargement compris, est supérieure au nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:conditional', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -369,7 +454,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux véhicules, véhicules articulés, trains doubles ou ensemble de véhicules dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:conditional', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -385,7 +475,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux véhicules pesant sur un essieu plus que le nombre indiqué',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:conditional', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -401,7 +496,12 @@ export const _symbols_si_sc: SignType[] = [
       "Direction conseillée aux véhicules transportant des marchandises explosives ou facilement inflammables, de nature et en quantité définies par l'arrêté du 1erjuin 2001 relatif au transport des marchand",
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:hazmat:explosive', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -417,7 +517,12 @@ export const _symbols_si_sc: SignType[] = [
       "Direction conseillée aux véhicules transportant des marchandises susceptibles de polluer les eaux, de nature et en quantité définies par l'arrêté du 1er juin 2001 relatif au transport des marchandises",
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:hazmat:water', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -433,7 +538,12 @@ export const _symbols_si_sc: SignType[] = [
       "Direction conseillée aux véhicules transportant des marchandises dangereuses définies par l'arrêté du 1er juin 2001 relatif au transport des marchandises dangereuses par route, et signalés comme tels",
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:hazmat', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -449,7 +559,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux motocyclettes et motocyclettes légères, au sens de l’article R.311-1 du code de la route',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:motorcycle', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -465,7 +580,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux véhicules tractant une caravane ou remorque de plus de 250 kg tel que le poids total roulant autorisé, véhicule plus caravane ou remorque ne dépasse pas 3,5 t',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:caravan', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -481,7 +601,12 @@ export const _symbols_si_sc: SignType[] = [
       'Direction conseillée aux véhicules dont le poids total roulant autorisé est inférieur à 3,5 t',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'destination:access:motorcar', value: 'designated' }],
+      },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -497,11 +622,13 @@ export const _symbols_si_sc: SignType[] = [
       "Indique le caractère autoroutier d'une partie de l'itinéraire permettant de rejoindre les directions indiquées[6]",
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'destination:symbol', value: 'motorway[7]' }] },
+    ],
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC17.svg',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:SC17.svg',
       licence: 'Public Domain',
     },
   },
