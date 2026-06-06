@@ -56,9 +56,13 @@ const imageSvgFromThumbSrc = (src: string | undefined) => {
   return `${src.split('.svg')[0]?.replace('thumb/', '')}.svg`
 }
 
+const wikiSignCodeOnly = (text: string) => /^[A-Z]{1,2}\d[\w.+-]*$/i.test(text.trim())
+
 /** Strip OSM wiki cross-references and notes that get flattened into name cells. */
 export const cleanWikiSignName = (rawName: string): string => {
   let name = rawName.replace(/\s+/g, ' ').trim()
+  name = name.replace(/^\|\s*/, '')
+  name = name.replace(/^Remarques\s*:\s*/i, '')
   const cutPatterns = [
     /\s+Siehe:.*/i,
     /\s+Notiz:.*/i,
@@ -67,6 +71,12 @@ export const cleanWikiSignName = (rawName: string): string => {
     /\s+Ab hier\b.*/i,
     /\s+Wikipedia:.*/i,
     /\s+Höchstgeschwindigkeit:.*/i,
+    /\s+Voir aussi.*/i,
+    /\s+Note\s*:.*/i,
+    /\s+Même remarque.*/i,
+    /\s+\|\s*rowspan.*/i,
+    /\s+\d+px.*/i,
+    /\s+\*.*/,
   ]
   for (const pattern of cutPatterns) {
     name = name.replace(pattern, '')
@@ -78,17 +88,34 @@ export const isWikiTaggingCell = (text: string): boolean => {
   const trimmed = text.trim()
   return (
     /^Als\s/i.test(trimmed) ||
+    /^Sur un (node|way|le)\b/i.test(trimmed) ||
+    /^Sur une\b/i.test(trimmed) ||
+    /^Ajouter un\b/i.test(trimmed) ||
+    /^Remarques\s*:\s*$/i.test(trimmed) ||
+    /^\d+px$/i.test(trimmed) ||
+    wikiSignCodeOnly(trimmed) ||
     trimmed.includes('traffic_sign=') ||
     trimmed.includes('traffic_sign =')
   )
 }
 
 export const looksLikeWikiSignNameCell = (text: string): boolean => {
-  const trimmed = text.trim()
+  const trimmed = text.trim().replace(/^\|\s*/, '')
   if (!trimmed || isWikiTaggingCell(trimmed) || /^fixme:/i.test(trimmed)) return false
-  return /^(?:\d+[a-z]?(?:[./][a-z]+)*(?:\[[^\]]*\])?|\d+\.\d+[a-z]?(?:\[[^\]]*\])?|[A-Za-z]{1,3}_[\w.]+|[a-z])(?:\s+groß)?:\s/.test(
-    trimmed,
-  )
+  if (
+    /^(?:\d+[a-z]?(?:[./][a-z]+)*(?:\[[^\]]*\])?|\d+\.\d+[a-z]?(?:\[[^\]]*\])?|[A-Za-z]{1,3}_[\w.]+|[a-z])(?:\s+groß)?:\s/.test(
+      trimmed,
+    )
+  ) {
+    return true
+  }
+  return /^[A-Z]{1,2}\d[\w.+-]*\s*:\s/.test(trimmed)
+}
+
+export const finalizeWikiSignName = (rawName: string, signId: string): string => {
+  const cleaned = cleanWikiSignName(rawName).slice(0, 200)
+  if (!cleaned || /^(Remarques|Remarque|\?)$/i.test(cleaned)) return signId
+  return cleaned
 }
 
 const extractNameFromCell = (
@@ -113,19 +140,19 @@ const pickWikiRowName = (
 
   if (nameCellIndex !== undefined) {
     const cell = cells.get(nameCellIndex)
-    if (cell) return extractNameFromCell($, cell).slice(0, 200)
+    if (cell) return finalizeWikiSignName(extractNameFromCell($, cell), signId)
   }
 
-  const fallback =
-    rowTexts.find(
-      (text) =>
-        text.length > 3 &&
-        text !== signId &&
-        !isWikiTaggingCell(text) &&
-        !text.includes('traffic_sign'),
-    ) ?? signId
+  const fallbackCandidates = rowTexts.filter(
+    (text) =>
+      text.length > 3 &&
+      text !== signId &&
+      !isWikiTaggingCell(text) &&
+      !text.includes('traffic_sign'),
+  )
+  const fallback = fallbackCandidates[fallbackCandidates.length - 1] ?? signId
 
-  return cleanWikiSignName(fallback).slice(0, 200)
+  return finalizeWikiSignName(fallback, signId)
 }
 
 const pickWikiRowTagsText = (rowTexts: string[]): string => {

@@ -48,6 +48,52 @@ const atPannenbuchtRowHtml = `
   </tbody>
 </table>`
 
+const frM4bRowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:France_road_sign_M4b.svg"><img src="/thumb/50px-France_road_sign_M4b.svg"></a></td>
+      <td>M4b</td>
+      <td>bus=*</td>
+      <td>| Véhicules de transport en commun</td>
+    </tr>
+  </tbody>
+</table>`
+
+const frA1aRowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:France_road_sign_A1a.svg"><img src="/thumb/France_road_sign_A1a.svg"></a></td>
+      <td>traffic_sign=FR:A1a hazard=turn</td>
+      <td>Remarques : Annonce de virage</td>
+    </tr>
+  </tbody>
+</table>`
+
+const frC1aRowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:France_road_sign_C1a.svg"><img src="/thumb/France_road_sign_C1a.svg"></a></td>
+      <td>Sur un node ou une aire fermée par un way (ou plusieurs inclus dans une relation) avec : *</td>
+      <td>C1a</td>
+    </tr>
+  </tbody>
+</table>`
+
+const frSu1RowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:France_road_sign_SU1.svg"><img src="/thumb/50px-France_road_sign_SU1.svg"></a></td>
+      <td>50px</td>
+      <td>traffic_sign=FR:SU1</td>
+      <td>Symbole de déviation</td>
+    </tr>
+  </tbody>
+</table>`
+
 describe('cleanWikiSignName', () => {
   test('removes Siehe references', () => {
     expect(cleanWikiSignName('26: Fahrradstraße Siehe: DE:Key:bicycle_road')).toBe(
@@ -65,6 +111,18 @@ describe('cleanWikiSignName', () => {
       ),
     ).toBe('16: Radweg')
   })
+
+  test('strips French Remarques prefix and Voir aussi suffixes', () => {
+    expect(cleanWikiSignName('Remarques : Annonce de virage')).toBe('Annonce de virage')
+    expect(
+      cleanWikiSignName(
+        "Remarques : Chaussée rétrécie d'un côté. Voir aussi les panneaux B15 et C18",
+      ),
+    ).toBe("Chaussée rétrécie d'un côté.")
+    expect(
+      cleanWikiSignName('| Véhicules de marchandises | rowspan = 3 | Même remarque que M4a'),
+    ).toBe('Véhicules de marchandises')
+  })
 })
 
 describe('parseUniversalTable', () => {
@@ -78,6 +136,30 @@ describe('parseUniversalTable', () => {
     const $ = cheerio.load(atPannenbuchtRowHtml)
     const [row] = parseUniversalTable($, 'AT')
     expect(row?.name).toBe('1c: Pannenbucht')
+  })
+
+  test('uses the French M-panel name column', () => {
+    const $ = cheerio.load(frM4bRowHtml)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(row?.name).toBe('Véhicules de transport en commun')
+  })
+
+  test('strips Remarques prefix from French danger sign names', () => {
+    const $ = cheerio.load(frA1aRowHtml)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(row?.name).toBe('Annonce de virage')
+  })
+
+  test('falls back to sign id when French wiki row has no name cell', () => {
+    const $ = cheerio.load(frC1aRowHtml)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(row?.name).toBe('C1a')
+  })
+
+  test('does not use image dimension text as the sign name', () => {
+    const $ = cheerio.load(frSu1RowHtml)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(row?.name).toBe('Symbole de déviation')
   })
 })
 
