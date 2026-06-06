@@ -35,6 +35,8 @@
   "copied": "copied",
   "page_selected_signs": "Selected Signs",
   "page_selected_signs_short": "Selected",
+  "page_catalogue_picker_title": "Choose a sign catalogue",
+  "page_catalogue_picker_intro": "Pick the country whose traffic signs you want to tag. Your choice is remembered for next time.",
   "page_choose_signs": "Choose Signs",
   "page_recommended_tags": "Recommended Tags",
   "page_select_sign_hint": "Select a traffic sign to display recommended tags …",

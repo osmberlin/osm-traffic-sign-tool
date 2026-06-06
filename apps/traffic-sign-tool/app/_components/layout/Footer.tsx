@@ -1,8 +1,9 @@
 import { ResultDebug } from '@app/app/(signs)/_components/PageApp/results/ResultDebug'
 import * as m from '@app/paraglide/messages'
+import { isCataloguePickerRoute } from '@app/src/features/routing/isCataloguePickerRoute'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { hasQaCapability } from '@osm-traffic-signs/converter'
-import { Link } from '@tanstack/react-router'
+import { Link, useRouterState } from '@tanstack/react-router'
 import { ExternalLink } from '../links/ExternalLink'
 
 const footerLinkClassName =
@@ -15,6 +16,8 @@ const footerLinkActiveProps = {
 
 export const Footer = () => {
   const lang = useCurrentLang()
+  const pathname = useRouterState({ select: (state) => state.location.pathname })
+  const onCataloguePicker = isCataloguePickerRoute(pathname)
 
   const navigation = [
     {
@@ -93,32 +96,36 @@ export const Footer = () => {
           })}
         </div>
 
-        <div className="-mx-5 -my-2 flex flex-wrap justify-center">
-          {internalNavigation.map((item) => {
-            return (
-              <div key={item.to} className="px-5 py-2">
-                {'active' in item && item.active ? (
-                  <Link
-                    to={item.to}
-                    params={{ lang }}
-                    activeOptions={{ exact: true }}
-                    activeProps={footerLinkActiveProps}
-                    className={footerLinkClassName}
-                  >
-                    {item.name}
-                  </Link>
-                ) : (
-                  <Link to={item.to} params={{ lang }} className={footerLinkClassName}>
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            )
-          })}
-        </div>
+        {!onCataloguePicker ? (
+          <>
+            <div className="-mx-5 -my-2 flex flex-wrap justify-center">
+              {internalNavigation.map((item) => {
+                return (
+                  <div key={item.to} className="px-5 py-2">
+                    {'active' in item && item.active ? (
+                      <Link
+                        to={item.to}
+                        params={{ lang }}
+                        activeOptions={{ exact: true }}
+                        activeProps={footerLinkActiveProps}
+                        className={footerLinkClassName}
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <Link to={item.to} params={{ lang }} className={footerLinkClassName}>
+                        {item.name}
+                      </Link>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
 
-        {hasQaCapability(lang, 'debugInfo') ? (
-          <ResultDebug linkClassName={footerLinkClassName} />
+            {hasQaCapability(lang, 'debugInfo') ? (
+              <ResultDebug linkClassName={footerLinkClassName} />
+            ) : null}
+          </>
         ) : null}
       </nav>
     </footer>

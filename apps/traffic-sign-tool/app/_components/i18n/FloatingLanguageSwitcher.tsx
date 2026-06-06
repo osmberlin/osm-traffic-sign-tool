@@ -1,17 +1,13 @@
+import { CatalogueOptionList } from '@app/app/_components/i18n/CatalogueOptionList'
 import { setUiLocale, useUiLocale } from '@app/app/_components/i18n/useUiLocale'
 import { stonePillButton } from '@app/app/_components/links/buttonStyles'
-import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
 import { uiLocales, type UiLocale } from '@app/src/features/i18n/uiLocale'
+import { writeCataloguePreference } from '@app/src/features/routing/cataloguePreference'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { LanguageIcon } from '@heroicons/react/24/outline'
-import {
-  countries,
-  getCatalogueMaturity,
-  isVisibleMaturity,
-  type CountryPrefixType,
-} from '@osm-traffic-signs/converter'
+import { type CountryPrefixType } from '@osm-traffic-signs/converter'
 import { useNavigate } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import { LangSwitcherOption } from './LangSwitcherOption'
@@ -26,6 +22,7 @@ export const FloatingLanguageSwitcher = () => {
     if (countryPrefix === signConfigLang) {
       return
     }
+    writeCataloguePreference(countryPrefix)
     navigate({ to: '/$lang', params: { lang: countryPrefix } })
     close()
   }
@@ -63,31 +60,11 @@ export const FloatingLanguageSwitcher = () => {
                   >
                     {m.lang_switcher_sign_catalogue()}
                   </h3>
-                  <ul className="space-y-1">
-                    {countries.map((countryPrefix) => {
-                      const catalogueMaturity = getCatalogueMaturity(countryPrefix)
-                      return (
-                        <LangSwitcherOption
-                          key={countryPrefix}
-                          badge={countryPrefix}
-                          label={
-                            <span className="flex flex-wrap items-center gap-2">
-                              <span>
-                                {countryPrefix === 'DE'
-                                  ? m.lang_switcher_sign_catalogue_de_name()
-                                  : countryPrefix}
-                              </span>
-                              {isVisibleMaturity(catalogueMaturity) ? (
-                                <MaturityLabel maturity={catalogueMaturity} />
-                              ) : null}
-                            </span>
-                          }
-                          isSelected={signConfigLang === countryPrefix}
-                          onClick={() => handleCatalogueSelect(countryPrefix, close)}
-                        />
-                      )
-                    })}
-                  </ul>
+                  <CatalogueOptionList
+                    selectedCountry={signConfigLang}
+                    onSelect={(countryPrefix) => handleCatalogueSelect(countryPrefix, close)}
+                    badgeMode="prefix"
+                  />
                 </section>
 
                 <section aria-labelledby="lang-switcher-ui-language">
@@ -102,6 +79,7 @@ export const FloatingLanguageSwitcher = () => {
                       <LangSwitcherOption
                         key={locale}
                         badge={locale}
+                        ariaLabel={locale === 'en' ? m.lang_ui_en() : m.lang_ui_de()}
                         label={locale === 'en' ? m.lang_ui_en() : m.lang_ui_de()}
                         isSelected={uiLocale === locale}
                         onClick={() => handleUiLocaleSelect(locale, close)}

@@ -15,6 +15,7 @@ export type BetaCountryCatalogueMeta = Omit<
 
 type BetaCatalogueMetaInput = {
   countryPrefix: CatalogueCountryPrefix
+  iconicSignOsmValuePart: string
   catalogueName: string
   catalogueLocale: string
   defaultCommentLang: string
@@ -27,6 +28,7 @@ export const createBetaCatalogueMeta = (
   input: BetaCatalogueMetaInput,
 ): BetaCountryCatalogueMeta => ({
   countryPrefix: input.countryPrefix,
+  iconicSignOsmValuePart: input.iconicSignOsmValuePart,
   catalogueName: input.catalogueName,
   maturity: 'alpha',
   osmTrafficSignPrefix: input.osmTrafficSignPrefix ?? input.countryPrefix,

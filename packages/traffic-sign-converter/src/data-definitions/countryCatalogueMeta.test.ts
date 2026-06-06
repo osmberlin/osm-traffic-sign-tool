@@ -33,4 +33,11 @@ describe('countryCatalogueMeta', () => {
   test('returns metadata by country prefix', () => {
     expect(getCountryCatalogueMeta('BE').catalogueName).toBe('Belgian traffic signs')
   })
+
+  test('each catalogue has a pedestrian path iconic sign', () => {
+    for (const prefix of countries) {
+      expect(getCountryCatalogueMeta(prefix).iconicSignOsmValuePart.length).toBeGreaterThan(0)
+    }
+    expect(getCountryCatalogueMeta('DE').iconicSignOsmValuePart).toBe('239')
+  })
 })

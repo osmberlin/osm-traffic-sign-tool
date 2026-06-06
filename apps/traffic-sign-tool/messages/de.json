@@ -35,6 +35,8 @@
   "copied": "kopiert",
   "page_selected_signs": "Ausgewählte Zeichen",
   "page_selected_signs_short": "Ausgewählt",
+  "page_catalogue_picker_title": "Zeichenkatalog wählen",
+  "page_catalogue_picker_intro": "Wähle das Land, dessen Verkehrszeichen du taggen möchtest. Deine Auswahl wird für das nächste Mal gespeichert.",
   "page_choose_signs": "Zeichen wählen",
   "page_recommended_tags": "Empfohlene Tags",
   "page_select_sign_hint": "Wähle ein Verkehrszeichen, um empfohlene Tags anzuzeigen …",

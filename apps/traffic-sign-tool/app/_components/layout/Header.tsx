@@ -4,6 +4,7 @@ import {
   useAboutToolOpenActions,
 } from '@app/app/_components/store/useAboutToolOpen.zustand'
 import * as m from '@app/paraglide/messages'
+import { isCataloguePickerRoute } from '@app/src/features/routing/isCataloguePickerRoute'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { getCatalogueMaturity, isVisibleMaturity } from '@osm-traffic-signs/converter'
 import { Link, useRouterState } from '@tanstack/react-router'
@@ -20,7 +21,8 @@ export const Header = () => {
   const catalogueMaturity = getCatalogueMaturity(lang)
   const showCatalogueMaturityNotice = isVisibleMaturity(catalogueMaturity)
   const pathname = useRouterState({ select: (state) => state.location.pathname })
-  const isHome = pathname === `/${lang}`
+  const onCataloguePicker = isCataloguePickerRoute(pathname)
+  const isHome = onCataloguePicker || pathname === `/${lang}`
   const version = packageJson?.version || 'unknown'
   const titleClassName = clsx(
     'mb-3 flex items-center gap-3 text-xl leading-tight font-light text-stone-400 md:text-3xl',
@@ -58,7 +60,7 @@ export const Header = () => {
             {m.header_about_summary()}
           </summary>
           <p>
-            {showCatalogueMaturityNotice ? (
+            {!onCataloguePicker && showCatalogueMaturityNotice ? (
               <>
                 <MaturityLabel maturity={catalogueMaturity} className="mr-1 align-middle" />{' '}
                 {m.catalogue_maturity_notice()}

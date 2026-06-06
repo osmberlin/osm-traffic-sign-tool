@@ -17,19 +17,27 @@ beforeAll(() => {
 
 afterEach(() => {
   cleanup()
+  vi.clearAllMocks()
 })
 
 vi.mock('@app/src/features/routing/useCurrentLang', () => ({
   useCurrentLang: () => 'DE',
 }))
 
+const navigate = vi.hoisted(() => vi.fn())
+const writeCataloguePreference = vi.hoisted(() => vi.fn())
+
 vi.mock('@tanstack/react-router', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@tanstack/react-router')>()
   return {
     ...actual,
-    useNavigate: () => vi.fn(),
+    useNavigate: () => navigate,
   }
 })
+
+vi.mock('@app/src/features/routing/cataloguePreference', () => ({
+  writeCataloguePreference,
+}))
 
 const setUiLocale = vi.hoisted(() => vi.fn())
 
@@ -52,5 +60,16 @@ describe('FloatingLanguageSwitcher', () => {
     await user.click(screen.getByRole('button', { name: /deutsch/i }))
 
     expect(setUiLocale).toHaveBeenCalledWith('de')
+  })
+
+  test('selecting catalogue writes preference and navigates', async () => {
+    const user = userEvent.setup()
+    render(<FloatingLanguageSwitcher />)
+
+    await user.click(screen.getAllByRole('button', { name: /change language/i })[0])
+    await user.click(screen.getByRole('button', { name: /belgian traffic signs/i }))
+
+    expect(writeCataloguePreference).toHaveBeenCalledWith('BE')
+    expect(navigate).toHaveBeenCalledWith({ to: '/$lang', params: { lang: 'BE' } })
   })
 })

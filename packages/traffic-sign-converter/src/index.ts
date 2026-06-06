@@ -23,10 +23,11 @@ export * from './data-definitions/countryDefinitions.js'
 export type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
 export {
   countryCatalogueMeta,
-  getCountryCatalogueMeta,
   getCatalogueDisplayName,
-  hasQaCapability,
+  getCatalogueIconicSignOsmValuePart,
   getCatalogueMaturity,
+  getCountryCatalogueMeta,
+  hasQaCapability,
 } from './data-definitions/countryCatalogueMeta.js'
 export {
   geometryTagRecommendationsMaturity,

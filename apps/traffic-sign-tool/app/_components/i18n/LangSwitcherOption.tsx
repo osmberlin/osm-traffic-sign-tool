@@ -2,8 +2,9 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 import { clsx } from 'clsx'
 
 type LangSwitcherOptionProps = {
-  badge: string
+  badge: React.ReactNode
   label: React.ReactNode
+  ariaLabel: string
   isSelected: boolean
   onClick: () => void
 }
@@ -11,6 +12,7 @@ type LangSwitcherOptionProps = {
 export const LangSwitcherOption = ({
   badge,
   label,
+  ariaLabel,
   isSelected,
   onClick,
 }: LangSwitcherOptionProps) => {
@@ -26,7 +28,7 @@ export const LangSwitcherOption = ({
             : 'cursor-pointer bg-stone-800/55 ring-1 ring-stone-300/15 ring-inset hover:bg-stone-600/60 hover:ring-stone-300/25',
         )}
         aria-current={isSelected ? 'true' : undefined}
-        aria-label={label}
+        aria-label={ariaLabel}
       >
         <div
           className={clsx(

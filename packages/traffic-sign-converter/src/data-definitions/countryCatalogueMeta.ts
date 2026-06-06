@@ -25,6 +25,9 @@ export const countryCatalogueMeta = {
 export const getCountryCatalogueMeta = (countryPrefix: CountryPrefixType) =>
   countryCatalogueMeta[countryPrefix]
 
+export const getCatalogueIconicSignOsmValuePart = (countryPrefix: CountryPrefixType) =>
+  getCountryCatalogueMeta(countryPrefix).iconicSignOsmValuePart
+
 export const getCatalogueDisplayName = (countryPrefix: CountryPrefixType) =>
   getCountryCatalogueMeta(countryPrefix).catalogueName
 

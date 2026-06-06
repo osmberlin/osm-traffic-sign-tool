@@ -3,6 +3,7 @@ import { createBetaCatalogueMeta } from '../catalogueMetaHelpers.js'
 
 export const catalogueMetaBR = createBetaCatalogueMeta({
   countryPrefix: 'BR' as CountryCatalogueMeta['countryPrefix'],
+  iconicSignOsmValuePart: 'R-30',
   catalogueName: 'Brazilian traffic signs',
   catalogueLocale: 'pt',
   defaultCommentLang: 'pt',

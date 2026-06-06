@@ -53,6 +53,8 @@ export type MaturityKey = 'alpha' | 'beta' | 'stable'
 
 export type CountryCatalogueMeta = {
   countryPrefix: CountryPrefixType
+  /** Round blue pedestrian/sidewalk path sign for catalogue picker thumbnail (osmValuePart only). */
+  iconicSignOsmValuePart: string
   /** English display name for catalogue switcher (not translated per UI locale). */
   catalogueName: string
   /** Release stage; `alpha` and `beta` show a label in the UI. */
