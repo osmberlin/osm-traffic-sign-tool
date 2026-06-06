@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 8b - Als Linie mit</title>
+  <path d="M935.6 1200c6.52 0 12.65-2.523 17.257-7.122a24.1 24.1 0 0 0 7.143-17.19V24.323c0-6.502-2.534-12.603-7.143-17.201C948.25 2.534 942.12 0 935.6 0H24.4C10.944 0 0 10.906 0 24.323v1151.365c0 6.49 2.535 12.603 7.143 17.19C11.75 1197.477 17.88 1200 24.4 1200z" style="fill:#000;fill-rule:nonzero;stroke:none"/>
+  <path d="M24.4 1191.984a16.32 16.32 0 0 1-11.566-4.77 16.19 16.19 0 0 1-4.781-11.526V24.323c0-4.357 1.693-8.451 4.78-11.525A16.27 16.27 0 0 1 24.4 8.028h911.2c4.366 0 8.467 1.685 11.566 4.77 3.088 3.074 4.781 7.168 4.781 11.525v1151.365c0 8.98-7.327 16.296-16.347 16.296z" style="fill:#fff;fill-rule:nonzero;stroke:none"/>
+  <path d="M37.58 1162.328h884.725v-1125H37.58z" style="fill:#176fc1;fill-rule:nonzero;stroke:none"/>
+  <path d="M444.413 424.14V97.489h-54.641l-52.418 326.64zM321.709 521.583l-90.125 561.582h212.83V521.56zM638.164 521.583l90.125 561.582H515.472V521.56zM515.472 424.14V97.489h54.641l52.418 326.64z" style="fill:#fff;fill-rule:nonzero;stroke:none"/>
+  <path d="M882.398 447.064v40.115h-43.144v134.667h-94.906V487.18H215.536v134.667H120.62V487.18H77.487v-40.115z" style="fill:#fff;fill-rule:nonzero;stroke:none"/>
+  <path d="M37.58 1062.328v100h77.532L922.305 135.906v-98.59h-78.639z" style="fill:#f03120;fill-rule:nonzero;stroke:none"/>
+</svg>

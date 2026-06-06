@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 960 960" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 53.11 - 11: Sackgasse Anmerkungen: Eine Sackgasse muss für Router nicht speziell gekennzeichnet werden. Um auf die Existenz des Zeichens hinzuweisen, sollte ein spezieller Punkt (neben) dem Weg eingezeichnet </title>
+  <g fill-rule="evenodd" clip-rule="evenodd">
+    <path d="M1 919.2c0 22.548 18.256 40.804 40.83 40.804h878.108c22.508 0 40.816-18.256 40.816-40.804V41.79c0-22.501-18.309-40.79-40.816-40.79H41.83C19.256 1 1 19.289 1 41.79z"/>
+    <path fill="#009fe3" d="M11.174 919.2V41.79c0-16.887 13.689-30.629 30.655-30.629h878.108c16.9 0 30.655 13.742 30.655 30.629V919.2c0 16.967-13.755 30.643-30.655 30.643H41.83c-16.967 0-30.656-13.676-30.656-30.643"/>
+    <path fill="#fff" d="M11.017 780.089V572.572h367.188l-.935-387.366h204.371l1.079 387.366h367.149v207.517z"/>
+  </g>
+</svg>

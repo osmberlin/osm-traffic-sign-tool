@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 959.999" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 52.3c - 3c: Umkehren verboten</title>
+  <defs>
+    <clipPath id="a">
+      <path d="M440.78 628.72h71.1V557.8h-71.1z"/>
+    </clipPath>
+  </defs>
+  <path d="M82.857 419.999a260 348.571 0 1 1-520 0 260 348.571 0 1 1 520 0" style="opacity:1;fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="matrix(1.73077 0 0 1.29098 786.593 -62.213)"/>
+  <path d="M-305.091-697.071c-121.726 0-220.404 98.68-220.404 220.409v179.66h-57.633l108.763 144.587 108.999-144.586h-57.273v-179.661c0-64.922 52.638-117.555 117.548-117.555 64.923 0 117.562 52.633 117.562 117.555v316.896h102.856v-316.896c0-121.73-98.679-220.409-220.418-220.409" style="fill:#000;fill-rule:nonzero;stroke:none" transform="translate(788.984 893.028)"/>
+  <g clip-path="url(#a)" transform="matrix(13.83405 0 0 -13.86916 -6107.837 8709.75)">
+    <path d="M500.739 617.857c-13.549 13.516-35.519 13.516-49.069 0s-13.55-35.429 0-48.945 35.519-13.515 49.069 0 13.55 35.43 0 48.945m-42.726-42.618c-9.511 9.486-10.017 24.55-1.523 34.633l36.244-36.153c-10.109-8.472-25.211-7.967-34.721 1.52m37.907 1.659-36.244 36.152c10.108 8.472 25.211 7.967 34.721-1.519s10.017-24.551 1.523-34.633" style="fill:#ee1c23;fill-rule:nonzero;stroke:none"/>
+  </g>
+</svg>
