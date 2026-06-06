@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B-3a - B-3a: zakaz wjazdu autobusów</title>
+  <circle cx="400" cy="400" r="400" fill="#d40000"/>
+  <circle cx="400" cy="400" r="320" fill="#fff"/>
+  <path fill-rule="evenodd" d="M665 320H115.52L110 380v100l130 10c0 22.09 17.91 40 40 40s40-17.91 40-40h160c0 22.09 17.91 40 40 40s40-17.91 40-40h122.19l7.81-10v-60zm-465 85-5 5h-65l-5-5 4.86-60 5.14-5h60l5 5zm20 5-10-5v-60l10-5h80l10 5v60l-10 5zm190-5-10 5h-70l-10-5v-60l10-5h70l10 5zm40 5h-20v-70h20zm30 0h-20v-70h20zm120-5-10 5h-90l-10-5v-60l10-5h90l10 5zm60 35h-40l-10-10v-85l10-5h39.69l20.06 80.25z"/>
+</svg>

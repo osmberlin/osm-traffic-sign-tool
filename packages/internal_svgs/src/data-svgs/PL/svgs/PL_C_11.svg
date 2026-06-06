@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 802 802" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen C-11 - C-11: nakaz jazdy z prawej lub lewej strony znaku</title>
+  <circle cx="401" cy="401" r="400" fill="#fff"/>
+  <circle cx="401" cy="401" r="400.5" fill="none" stroke="#000"/>
+  <circle cx="401" cy="401" r="392" fill="#039"/>
+  <path fill="#fff" d="m73.39 560.61 52.6-275.02 70.35 70.35 113.81-113.81 81.71 81.71-113.81 113.81L348.4 508 73.38 560.6m336.76-236.74 113.81 113.81-70.35 70.35 275.02 52.6-52.6-275.02-70.35 70.35-113.81-113.81-81.71 81.71Z"/>
+</svg>

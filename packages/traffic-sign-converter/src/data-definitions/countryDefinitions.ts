@@ -2,6 +2,7 @@ import { trafficSignDataDE } from './DE/trafficSignDataDE.js'
 import { trafficSignDataBE } from './BE/trafficSignDataBE.js'
 import { trafficSignDataAT } from './AT/trafficSignDataAT.js'
 import { trafficSignDataCA } from './CA/trafficSignDataCA.js'
+import { trafficSignDataPL } from './PL/trafficSignDataPL.js'
 import type { SignType } from './TrafficSignDataTypes.js'
 
 // Data Definitions per Country
@@ -10,6 +11,7 @@ export const countryDefinitions = {
   BE: trafficSignDataBE,
   AT: trafficSignDataAT,
   CA: trafficSignDataCA,
+  PL: trafficSignDataPL,
 } as const
 
 export type CountryPrefixType = keyof typeof countryDefinitions

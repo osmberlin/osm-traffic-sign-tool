@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 823.675 823.675" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-1 - D-1: droga z pierwszeństwem</title>
+  <g transform="rotate(-45 411.838 411.838)">
+    <rect width="600" height="600" x="111.838" y="111.838" rx="30" ry="30"/>
+    <rect width="576" height="576" x="123.838" y="123.838" fill="#fff" rx="18" ry="18"/>
+  </g>
+  <path d="m157.28 411.838 254.558-254.559 254.559 254.559-254.559 254.558z"/>
+  <path fill="#febe0b" d="m165.765 411.838 246.073-246.073 246.073 246.073L411.838 657.91z"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-10 - D-10: koniec autostrady</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" stroke-miterlimit="1" rx="30.5" ry="30.5"/>
+  <path fill="#039" d="M519.37 7 7 647.46V31C7 17.77 17.77 7 31 7zM571 745c13.23 0 24-10.77 24-24V104.54L82.63 745z"/>
+  <g fill="#fff">
+    <path d="M171.33 391h91.86L256 739H121zM226 13l-39.48 273h78.84L271 13zm150 0h-45l5.64 273h78.84zm54.67 378h-91.86L346 739h135zM13 301h576v15h-78l15 75h-60l15-75H121l15 75H76l15-75H13z"/>
+  </g>
+  <path fill="#d40000" d="M595 31v65.55L76.23 745H31c-13.23 0-24-10.77-24-24v-65.54L525.77 7H571c13.23 0 24 10.77 24 24"/>
+</svg>

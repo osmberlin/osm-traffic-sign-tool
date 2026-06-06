@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 882.143 1098.572" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-45 - D-45: koniec strefy parkowania</title>
+  <g transform="translate(-1087.214 -44.862)">
+    <rect width="877.143" height="1093.572" x="1089.714" y="47.362" rx="48.868" ry="48.868" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <rect width="636.429" height="635" x="1209" y="167.362" rx="31.368" ry="31.368" style="fill:#a7a7a7;fill-opacity:1;stroke:#a7a7a7;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M1458.211 720.856h-91.94V244.29h265.605c48.525 5.838 76.28 57.546 76.28 86.968v172.695c-8.317 38.771-35.163 77.914-90.059 77.914h-159.886zm-1.071-387.363v159.99h154.174l7.183-8.408V347.212l-12.234-13.719z" style="fill:#fff;fill-rule:evenodd;stroke:none"/>
+    <path d="M1830.489 67.516h71.551c27.073 0 44.118 17.045 44.118 44.118l-.25 102.978L1227 1119.116h-80.261c-19.573 0-35.868-5.295-35.868-32.367 0 21.61.25-90.827.25-113.5z" style="fill:#fff;fill-opacity:1;stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+    <path d="m1838.989 67.516 71.301-.5c25.073 0 36.368 14.67 36.368 39.243l-.75 100.353-725.533 912.754h-77.386c-19.573 0-32.618-5.545-32.618-32.617 0 26.842.25-85.577.25-108.25z" style="fill:#d40000;fill-opacity:1;stroke:#d40000;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+    <rect width="850" height="1066.429" x="1103.286" y="60.219" rx="38.868" ry="38.868" style="fill:none;stroke:#000;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+  </g>
+</svg>

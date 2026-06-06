@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 302" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-20 - D-20: koniec postoju taksówek</title>
+  <rect width="600" height="300" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="301" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <path fill="#039" d="M502.74 11 11 256.87V31c0-11.05 8.95-20 20-20zM99.26 291H571c11.05 0 20-8.95 20-20V45.13z"/>
+  <g fill="#fff">
+    <path d="M165.38 46v35h-52.5v175h-35V81h-52.5V46zM257.25 46h-35L161 256h35l10.21-35h67.08l10.21 35h35zm-40.83 140 23.33-80 23.33 80zM426 151l55 105h-40l-35-66.82L371 256h-40l55-105-55-105h40l35 66.82L441 46h40zM519.75 46h35v210h-35z"/>
+  </g>
+  <path fill="#d40000" d="M591 31v8.54L88.08 291H31c-11.05 0-20-8.95-20-20v-8.54L513.92 11H571c11.05 0 20 8.95 20 20"/>
+</svg>

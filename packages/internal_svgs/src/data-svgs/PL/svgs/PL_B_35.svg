@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B-35 - B-35: zakaz postoju</title>
+  <circle cx="400" cy="400" r="400" fill="#d40000"/>
+  <circle cx="400" cy="400" r="320" fill="#fff"/>
+  <path fill="#039" d="m154.03 205.89 440.08 440.08C540.74 688.16 473.3 713.33 400 713.33 226.95 713.33 86.67 573.05 86.67 400c0-73.3 25.17-140.74 67.36-194.11M400 86.67c-73.3 0-140.74 25.17-194.11 67.36l440.08 440.08c42.19-53.37 67.36-120.81 67.36-194.11 0-173.05-140.28-313.33-313.33-313.33"/>
+  <path fill="none" stroke="#d40000" stroke-miterlimit="10" stroke-width="60" d="M654.56 654.56 145.44 145.44"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 262 262" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B-T-3 - BT-3: blokada zwrotnicy</title>
+  <title>Znak BT-3</title>
+  <g transform="translate(-58.893 -305.1)">
+    <rect width="262" height="261.105" x="58.893" y="305.996" rx="0" ry="0" style="fill:#d40000;fill-opacity:1;stroke:none"/>
+    <rect width="209.669" height="208.911" x="85.059" y="332.574" rx="0" ry="0" style="fill:#fff;fill-opacity:1;stroke:none"/>
+    <path d="M355.394 277.006H281.72v-70.693h73.675q6.358 7.094 9.907 16.1t3.606 19.246q-.057 10.24-3.606 19.246-3.55 9.007-9.907 16.101m29.06 164.965q19.897-13.806 31.504-35.194 11.605-21.389 11.86-47.295-.108-19.4-6.851-36.459-6.745-17.058-18.82-30.473 6.658-11.228 10.253-24.074 3.596-12.845 3.636-26.817-.255-25.9-11.855-47.283t-31.49-35.192H234.59V441.97zM281.719 324.135h85.46q6.357 7.094 9.905 16.101t3.606 19.246q-.058 10.238-3.606 19.245t-9.906 16.102h-85.46z" style="font-size:377.03036499px;font-style:normal;font-variant:normal;font-weight:700;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000;fill-opacity:1;stroke:none;font-family:Drogowskaz;-inkscape-font-specification:Drogowskaz Bold" transform="translate(29.74 286.369)scale(.49503)"/>
+  </g>
+</svg>

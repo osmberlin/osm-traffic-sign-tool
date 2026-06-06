@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 802 802" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen C-8 - C-8: nakaz skrętu w lewo lub w prawo</title>
+  <circle cx="401" cy="401" r="400" fill="#fff"/>
+  <circle cx="401" cy="401" r="400.5" fill="none" stroke="#000"/>
+  <circle cx="401" cy="401" r="392" fill="#039"/>
+  <path fill="#fff" d="M241 305.5V201L41 361l200 160v-84.72c11-9.84 25.24-15.28 40-15.28 33.14 0 60 26.86 60 60v260h120V481c0-14.76 5.44-29 15.28-40 22.09-24.7 60.02-26.81 84.72-4.72V521l200-160-200-160v104.5c-56.88-12.96-116.52 2.44-160 41.34-43.48-38.89-103.12-54.3-160-41.34"/>
+</svg>

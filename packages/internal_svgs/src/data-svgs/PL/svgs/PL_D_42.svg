@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1202 532" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-42 - D-42: obszar zabudowany</title>
+  <rect width="1200" height="530" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="1201" height="531" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <path d="M1171 11H31c-11.05 0-20 8.95-20 20v470c0 11.05 8.95 20 20 20h1140c11.05 0 20-8.95 20-20V31c0-11.05-8.95-20-20-20m10 490c0 5.51-4.49 10-10 10H31c-5.51 0-10-4.49-10-10V31c0-5.51 4.49-10 10-10h1140c5.51 0 10 4.49 10 10z"/>
+  <path d="m81 291 80-32 80 32v48h32v-32l64-224 64 224v32h32v-16l48-48h80v-16h80v16h80l48 48v16h32v-48l80-48 80 48v48h32V179l64-16 64 16v272H81z"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-32 - D-32: pole biwakowe</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="738" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M81 81h440v440H81z"/>
+  <path d="M479.75 452.25V466h-357.5v-13.75h75.63v-55h-27.5V383.5h82.5v13.75h-27.5v55h143.06l-3.26-68.47-77.93 34.1 16.56-54.66 20.79-68.62-38.3 25.75 46.31-184.03L419 287.5l-19.99-4.44 73.87 100.44-82.09-9.85 14.97 78.6z"/>
+</svg>

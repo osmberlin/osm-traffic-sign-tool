@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 557.625 743.594" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen C-17 - C-17: nakazany kierunek jazdy dla pojazdów z towarami niebezpiecznymi</title>
+  <g transform="translate(28.375 120.094)">
+    <rect width="554.622" height="740.592" x="-26.874" y="-118.59" rx="20" ry="20" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:#000;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"/>
+    <rect width="536.712" height="720.68" x="-17.92" y="-108.635" rx="10" ry="10" style="fill:none;stroke:#000;stroke-width:9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"/>
+    <path d="M390.424 244.341a140.711 122.875 0 1 1-281.422 0 140.711 122.875 0 1 1 281.422 0" style="fill:#039;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="matrix(.87323 0 0 1 32.379 180.687)"/>
+    <g style="fill:#fff;fill-opacity:1">
+      <path d="M313.719 103.156v72.313l-75.5.625c-62.893 0-113.938 51.045-113.938 113.937v148.147h75.344V290.03c0-21.31 17.283-38.625 38.594-38.625h75.5v73.75l150.281-112z" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(125.257 299.444)scale(.50153)"/>
+    </g>
+    <path d="M172.401-41.203c-23.37 0-30.642 9.188-30.642 30.773v166.607l215.357-.418V-10.848c0-21.585-7.272-30.355-30.642-30.355z" style="fill:#ff9600;fill-opacity:1;fill-rule:nonzero;stroke:#000;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" transform="translate(1 1.713)"/>
+    <path d="M152.25 165.656c-5.108.008-10.255.977-15.437 2.875v85.5c9.385 6.018 21.23 6.088 30.656 0v-20.75h5.625V221.47h64.187c2.81 3.64 7.206 6 12.156 6s9.347-2.36 12.157-6h64.187v11.812h5.625v20.75c9.426 6.088 21.271 6.018 30.656 0v-85.5c-10.364-3.797-20.57-3.858-30.656 0v20.75h-5.625v13.844h-63.906c-2.792-3.851-7.32-6.375-12.437-6.375-5.118 0-9.646 2.524-12.438 6.375h-63.907v-13.844h-5.624v-20.75c-5.043-1.929-10.111-2.882-15.219-2.875" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(1 1.713)"/>
+  </g>
+</svg>

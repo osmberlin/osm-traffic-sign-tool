@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-33 - D-33: schronisko młodzieżowe</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="738" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M81 81h440v440H81z"/>
+  <path d="M445.38 452.25v-165H466l-110-137.5-110 137.5h20.62v165h-49.88l-11.18-88.97 49.31 24.66-46.99-104.44-.17-.37.45.21L246 301l-41.25-82.5-20.63-82.5-20.62 82.5-51.28 119.66 51.28-29.3-43.61 99.67 71.2-42.28 7.59 86h-76.43V466h357.5v-13.75zm-61.88 0h-55V356h55z"/>
+</svg>

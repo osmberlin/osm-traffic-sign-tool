@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 602" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-18 - D-18: parking</title>
+  <rect width="600" height="600" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="601" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="588" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M387.25 76H151v445h82.5V391h153.75c45.56 0 82.5-36.94 82.5-82.5v-150c0-45.56-36.94-82.5-82.5-82.5m0 225.47L381 308.5H233.5v-150H376l11.25 13.13z"/>
+</svg>

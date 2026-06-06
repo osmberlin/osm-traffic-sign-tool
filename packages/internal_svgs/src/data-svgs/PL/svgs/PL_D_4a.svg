@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 602" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-4a - D-4a: droga bez przejazdu</title>
+  <rect width="600" height="600" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="601" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="588" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M486 116v100H376v370H226V216H116V116z"/>
+  <path fill="#d40000" d="M121 121h360v90H121z"/>
+</svg>

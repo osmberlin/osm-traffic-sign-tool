@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-29 - D-29: hotel (motel)</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="738" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M81 81h440v440H81z"/>
+  <path d="M452.25 356h-16.04L287.25 218.5h-110c-9.43 0-17.97 3.8-24.18 9.95L136 170.38h136.81l14.44 48.12v-55c0-15.19-12.31-27.5-27.5-27.5h-110c-15.19 0-27.5 12.31-27.5 27.5V301H136v-25.39L301 466v27.5h13.75V466H466v27.5h13.75v-110c0-15.19-12.31-27.5-27.5-27.5m-123.75 0c-15.19 0-27.5 12.31-27.5 27.5V411L163.5 262.92v-3.17c0-15.19 12.31-27.5 27.5-27.5h96.25L356 295.27 400.02 356z"/>
+</svg>

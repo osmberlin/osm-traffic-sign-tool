@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B-22 - B-22: zakaz skrętu w prawo</title>
+  <circle cx="400" cy="400" r="400" fill="#d40000"/>
+  <circle cx="400" cy="400" r="320" fill="#fff"/>
+  <path d="M220 400v240h80V440c0-22.09 17.91-40 40-40h200v40l120-80-120-80v40H300c-44.18 0-80 35.82-80 80"/>
+  <path fill="none" stroke="#d40000" stroke-width="60" d="m145.44 145.44 509.12 509.12"/>
+</svg>

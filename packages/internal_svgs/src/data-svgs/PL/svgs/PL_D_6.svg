@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 602" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-6 - D-6: przejście dla pieszych</title>
+  <rect width="600" height="600" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="601" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="588" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M301 11 11 511h580z"/>
+  <circle cx="301" cy="121" r="24"/>
+  <path fill-rule="evenodd" d="m301.91 150.19-38.17 84.5-54.37 54.98 12.66 24.41 70.01-69.29 9.49 63.92-46.6 65.63-30.97 92.7-32.88 6.45.04 9.68 60.17 10.88 32.36-100.21 39.62-47.14 73.72 123.12-20.94 16.69v9.46h20.01l37.63-21.64-74.94-154.44 2.73-8.84-9.29-59.94-.38-32.87 24.6 29.57v86.01l24.32-14v-86.44l-51.47-67.13-47.36-16.08v.02Z"/>
+  <path fill-rule="evenodd" d="m89.2 409.25-12.61 21.72h148.95l7.18-21.72zm198.64 0-6.95 21.72h79.83l-12.88-21.72h-60.01zm125.38 0 11 21.72H525.4l-12.04-21.72H413.21Z"/>
+</svg>

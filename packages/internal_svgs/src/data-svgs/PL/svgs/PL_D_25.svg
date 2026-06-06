@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-25 - D-25: poczta</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="738" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M81 81h440v440H81z"/>
+  <path d="M136 191v220h330V191zm316.8 11-110.21 91.84L334 301l-33 27.5-33-27.5-8.59-7.16L149.2 202zM147 214.49 250.82 301 147 387.51zM149.2 400l110.21-91.84L301 342.82l41.59-34.66L452.8 400zM455 387.51 351.18 301 455 214.49z"/>
+</svg>

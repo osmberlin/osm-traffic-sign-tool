@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 602" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-21 - D-21: szpital</title>
+  <rect width="600" height="600" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="601" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="588" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M356 116v70h60v60h70v-60h60v-70h-60V56h-70v60z"/>
+  <path fill="#d40000" fill-rule="evenodd" d="M361 121v60h60v60h60v-60h60v-60h-60V61h-60v60z"/>
+  <path fill="#fff" d="M541 361H430l-109-51.9V301l-80-45v-60l-15-15H56l-15 15v210h20v-92.5L341 453v103h20V456h175v100h20V376zM221 256H61v-55h160zm320 157.86L461.5 376H541z"/>
+  <path d="M361 451v5h175v100h5V451zM536 381v40H366v-40zm-175-5v50h180v-50z"/>
+  <path d="M419.5 356h-60.57L341 373.93v42.99L123.38 308.5H321V301H121l-75-45v-57.93L63.07 181H56l-15 15v210h5v-99.97L341 453v103h5V376l15-15h69zM46 264.75l51.11 30.66L46 269.95zm295 182.66L46 300.44v-24.9l295 146.97z"/>
+  <path d="M226 196v60h-5v-55H61v-5z"/>
+</svg>

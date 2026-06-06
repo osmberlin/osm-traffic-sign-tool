@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-50 - D-50: zatoka</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="570" height="720" x="16" y="16" fill="#039" rx="15" ry="15"/>
+  <g fill="#fff">
+    <path d="M158.5 61h60v120h-60zM158.5 226h60v120h-60zM158.5 391h60v135h-60zM158.5 571h60v120h-60zM503.5 226v300l-180 75v90h-60V556l180-75V271l-180-75V61h60v90z"/>
+  </g>
+</svg>

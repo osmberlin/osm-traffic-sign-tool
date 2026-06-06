@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-31 - D-31: obozowisko (kemping) wyposażone w podłączenia elektryczne do przyczep</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="738" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M81 81h440v440H81z"/>
+  <path d="m403.91 259.75-96.75-122.8 19.05-25.4-7.45-4.96L301 129.13l-17.76-22.54-7.45 4.96 19.05 25.4-96.75 122.8H163.5v13.75h275v-13.75zm-148.29 0 46.21-81.58 45.11 81.58zM356 465.91v-34.29l41.25-27.5V356L356 328.5H246l-41.25 20.62V411L246 431.62V466h-82.5v13.75h275V466zM301 356h55v27.5h-55zm-48.12 0h34.37v68.75h-3.44v-65.31h-27.5v65.31h-3.43zm96.24 110h-96.24v-34.38h40.97c4.08-10.07 13.97-17.18 25.48-17.18s21.41 7.11 25.49 17.18h4.3z"/>
+  <circle cx="319.33" cy="441.94" r="24.06"/>
+</svg>

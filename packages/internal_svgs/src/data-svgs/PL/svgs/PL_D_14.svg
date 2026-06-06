@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-14 - D-14: koniec pasa ruchu powolnego</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="738" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M473.5 601.01v97.49h-45V601c.01-26.17-9.69-51.25-27.31-70.63L173.5 280.97V698.5h-45v-555H91L151 46l60 97.5h-37.5v30c0 26.19 9.7 51.27 27.31 70.63l1.12 1.23 232.53 254.7c25.2 27.72 39.05 63.56 39.04 100.95"/>
+  <g fill="#fff">
+    <path d="M293.5 526h15v60h-15zM293.5 646h15v60h-15z"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 752" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen D-27 - D-27: bufet lub kawiarnia</title>
+  <rect width="600" height="750" x="1" y="1" fill="#fff" rx="30" ry="30"/>
+  <rect width="601" height="751" x=".5" y=".5" fill="none" stroke="#000" rx="30.5" ry="30.5"/>
+  <rect width="588" height="738" x="7" y="7" fill="#039" rx="24" ry="24"/>
+  <path fill="#fff" d="M81 81h440v440H81z"/>
+  <path d="M382.31 356a313 313 0 0 0 15.95-40.19c39.21-13.31 68.49-48.14 73.77-90.43.56-4.51.85-9.1.85-13.76 0-2.31-.07-4.6-.22-6.87H177.55c-2.3 52.19 8.52 104.42 31.16 151.25H108.5c12 23.84 31.56 43.22 55.52 55h260.21c23.96-11.78 43.52-31.16 55.52-55zm21.15-58.15c6.1-23.7 9.44-48.02 9.96-72.47h44.71c-4.7 32.76-25.96 60.24-54.99 73.66.11-.39.22-.79.32-1.19"/>
+</svg>
