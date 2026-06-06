@@ -22,20 +22,27 @@ type CountrySvgLoaderMap = Record<string, SvgLoader>
 
 const countrySvgLoaderCache = new Map<CountryPrefixType, Promise<CountrySvgLoaderMap | undefined>>()
 
+const countrySvgLoaderImports: Record<
+  CountryPrefixType,
+  () => Promise<{ default: CountrySvgLoaderMap }>
+> = {
+  DE: () =>
+    import('@osm-traffic-signs/converter/data-svgs/DE/loaders').then((module) => ({
+      default: module.SvgLoadersDE as CountrySvgLoaderMap,
+    })),
+  BE: () =>
+    import('@osm-traffic-signs/converter/data-svgs/BE/loaders').then((module) => ({
+      default: module.SvgLoadersBE as CountrySvgLoaderMap,
+    })),
+}
 const loadCountrySvgLoaders = (
   countryPrefix: CountryPrefixType,
 ): Promise<CountrySvgLoaderMap | undefined> => {
   const activeLoad = countrySvgLoaderCache.get(countryPrefix)
   if (activeLoad) return activeLoad
 
-  let loadPromise: Promise<CountrySvgLoaderMap | undefined>
-  switch (countryPrefix) {
-    case 'DE':
-      loadPromise = import('@osm-traffic-signs/converter/data-svgs/DE/loaders').then(
-        (module) => module.SvgLoadersDE as CountrySvgLoaderMap,
-      )
-      break
-  }
+  const importLoader = countrySvgLoaderImports[countryPrefix]
+  const loadPromise = importLoader().then((module) => module.default)
 
   countrySvgLoaderCache.set(countryPrefix, loadPromise)
   return loadPromise

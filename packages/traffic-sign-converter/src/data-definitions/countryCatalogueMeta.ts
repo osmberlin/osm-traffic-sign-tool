@@ -1,11 +1,13 @@
 import type { CountryCatalogueMeta, CountryQaCapabilities } from '../referenceLinks/types.js'
-import type { CountryPrefixType } from './countryDefinitions.js'
 import { catalogueMetaDE } from './DE/catalogueMetaDE.js'
+import { catalogueMetaBE } from './BE/catalogueMetaBE.js'
+import type { CountryPrefixType } from './countryDefinitions.js'
 
 export type { CountryQaCapabilities }
 
 export const countryCatalogueMeta = {
   DE: catalogueMetaDE,
+  BE: catalogueMetaBE as CountryCatalogueMeta,
 } as const satisfies Record<CountryPrefixType, CountryCatalogueMeta>
 
 export const getCountryCatalogueMeta = (countryPrefix: CountryPrefixType) =>

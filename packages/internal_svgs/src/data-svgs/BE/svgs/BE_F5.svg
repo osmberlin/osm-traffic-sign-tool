@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 68.68 102.721" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen F5 - Start of motorway</title>
+  <path fill="#0071b3" d="m68.6 94.887-.039-87.333A7.506 7.506 0 0 0 61.045.04L7.555 0C3.358 0 0 3.357 0 7.514v87.693c0 4.155 3.358 7.514 7.555 7.514h53.61a7.506 7.506 0 0 0 7.515-7.514z"/>
+  <path fill="#fff" d="M2.079 7.714c0-3.118 2.518-5.636 5.676-5.636h53.25a5.63 5.63 0 0 1 5.638 5.636v87.293a5.63 5.63 0 0 1-5.638 5.635H7.675c-3.158 0-5.676-2.518-5.676-5.635V7.714"/>
+  <path fill="#0071b3" d="M64.923 94.967V7.754c0-2.198-1.521-4.077-3.718-4.077H7.675a3.94 3.94 0 0 0-3.957 3.957v87.413a3.94 3.94 0 0 0 3.957 3.957h53.53c2.197 0 3.718-1.838 3.718-4.037"/>
+  <path fill="#fff" d="m32.581 7.474-.56 26.02h-7.315l3.438-26.02z"/>
+  <path fill="none" stroke="#fff" stroke-miterlimit="3.863" stroke-width=".2" d="m32.581 7.474-.56 26.02h-7.315l3.438-26.02z"/>
+  <path fill="#fff" d="m17.27 95.526 13.512-.04.88-49.641h-8.116z"/>
+  <path fill="none" stroke="#fff" stroke-miterlimit="3.863" stroke-width=".2" d="m17.27 95.526 13.512-.04.88-49.641h-8.116z"/>
+  <path fill="#fff" d="m35.459 7.474.561 25.98h6.916l-2.998-25.98z"/>
+  <path fill="none" stroke="#fff" stroke-miterlimit="3.863" stroke-width=".2" d="m35.459 7.474.561 25.98h6.916l-2.998-25.98z"/>
+  <path fill="#fff" d="M51.57 95.526H38.338L37.02 45.885h8.114z"/>
+  <path fill="none" stroke="#fff" stroke-miterlimit="3.863" stroke-width=".2" d="M51.57 95.526H38.338L37.02 45.885h8.114z"/>
+  <path fill="#fff" d="M51.25 59.234h9.355l-2.08-16.587h3.559v-6.715H6.396v6.715h3.598L8.035 58.875h9.195l-1.479-16.428h37.538L51.41 59.035z"/>
+  <path fill="none" stroke="#fff" stroke-miterlimit="3.863" stroke-width=".2" d="M51.25 59.234h9.355l-2.08-16.587h3.559v-6.715H6.396v6.715h3.598L8.035 58.875h9.195l-1.479-16.428h37.538L51.41 59.035z"/>
+</svg>

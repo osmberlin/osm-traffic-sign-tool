@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 68.213 102.194" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen F97 - Indicates lane decrease</title>
+  <path fill="#0071b3" d="M0 4.989v92.096a5.11 5.11 0 0 0 5.13 5.109h57.974a5.11 5.11 0 0 0 5.109-5.129V5.109A5.104 5.104 0 0 0 63.104 0L5.13.1C2.345.1 0 2.004 0 4.989"/>
+  <path fill="none" stroke="#fff" stroke-miterlimit="3.863" stroke-width="1.603" d="M2.866 7.393v87.168c0 1.342-.04 2.424.802 3.285.841.901 2.585 1.563 3.887 1.563h53.584c1.424 0 2.927-.08 3.789-1.102.721-.861.42-2.545.42-3.767V7.513c0-1.322.16-3.306-.641-4.167-.861-.922-2.705-.681-4.049-.681l-53.104.1c-1.262 0-3.246.02-4.108.821-.861.822-.58 2.384-.58 3.807z"/>
+  <path fill="#fff" d="M7.235 69.037h9.078v26.146H7.235z"/>
+  <path fill="#fff" fill-rule="evenodd" d="m7.215 69.078 7.635 6.17 33.265-18.752-1.323-9.716zM34.79 27.327h26.15L47.854 6.912z" clip-rule="evenodd"/>
+  <path fill="#fff" d="M43.406 27.347h9.078v68.175h-9.078z"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="25075 18500 2851 2502" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B15 - Priority at next intersection</title>
+  <g class="Page">
+    <g class="com.sun.star.drawing.PolyPolygonShape">
+      <path fill="none" d="M25075 18500h2851v2502h-2851z" class="BoundingBox"/>
+      <path fill="red" d="m26392 18561-1301 2254-3 7-4 7-3 8-2 8-2 7-1 8-1 9v16l1 8 1 8 2 8 2 7 3 8 4 7 3 8 5 6 4 7 6 6 5 6 6 6 6 5 7 5 7 4 7 4 7 3 8 3 8 2 8 2 8 2h8l8 1h2602l8-1h8l8-2 8-2 8-2 8-3 7-3 7-4 7-4 7-5 6-5 6-6 5-6 6-6 4-7 5-6 3-8 4-7 3-8 2-7 2-8 1-8 1-8v-16l-1-9-1-8-2-7-2-8-3-8-4-7-3-7-1302-2254-4-6-5-7-5-6-6-6-6-6-6-5-7-5-6-4-8-4-7-3-8-3-7-2-8-2-8-1-8-1h-17l-8 1-8 1-8 2-7 2-8 3-7 3-8 4-6 4-7 5-6 5-6 6-6 6-5 6-5 7z"/>
+    </g>
+    <g class="com.sun.star.drawing.PolyPolygonShape">
+      <path fill="none" d="M25509 18982h1983v1717h-1983z" class="BoundingBox"/>
+      <path fill="#fff" d="m27491 20698-991-1716-991 1716z"/>
+    </g>
+    <g class="com.sun.star.drawing.PolyPolygonShape">
+      <path fill="none" d="M25993 19433h1015v1196h-1015z" class="BoundingBox"/>
+      <path d="M26246 19737v303h-253v151h253v437l254-203 253 203v-437h254v-151h-254v-303l-253-304z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,172 @@
+import {
+  sharedBridlewayRecommendation,
+  sharedCyclewayRecommendation,
+  sharedFootwayRecommendation,
+} from '../../sharedRecommendationPresets.js'
+import type { SignType } from '../../TrafficSignDataTypes.js'
+
+export const _mandatory: SignType[] = [
+  {
+    osmValuePart: 'D1',
+    signId: 'D1',
+    name: 'Sign D1',
+    descriptiveName: 'Mandatory to follow the direction indicated by the arrow',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D01c.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'D3',
+    signId: 'D3',
+    name: 'Sign D3',
+    descriptiveName: 'Mandatory to follow one of the directions indicated the arrows',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D03.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'D4',
+    signId: 'D4',
+    name: 'Sign D4',
+    descriptiveName:
+      'Mandatory for vehicles with dangerous goods to follow the direction indicated by the arrow',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D04.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'D5',
+    signId: 'D5',
+    name: 'Sign D5',
+    descriptiveName: 'Roundabout',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'junction', value: 'roundabout' }] },
+    ],
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D05.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'D7',
+    signId: 'D7',
+    name: 'Sign D7',
+    descriptiveName:
+      'Mandatory cycleway (cyclists and mofas must use it. Pedestrians are allowed to use it if there is no sidewalk or verge. Mopeds are allowed to use it where speed limit is below 50 km/h. Mopeds must use it where speed limit is above 50 km/h. Speed pedelecs follow the same rules as mopeds. Other road users cannot use it)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        accessTags: [{ key: 'moped', value: 'yes' }],
+        uniqueTags: [
+          { key: 'cycleway', value: 'track' },
+          { key: 'cycleway', value: 'lane' },
+          { key: 'highway', value: 'cycleway' },
+          { key: 'foot', value: 'yes/no' },
+          { key: 'bicycle', value: 'designated' },
+          { key: 'mofa', value: 'designated' },
+          { key: 'speed_pedelec', value: 'yes' },
+          { key: 'bicycle', value: 'use_sidepath' },
+          { key: 'mofa', value: 'use_sidepath' },
+          { key: 'moped', value: 'use_sidepath' },
+          { key: 'speed_pedelec', value: 'use_sidepath' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D07.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'D9',
+    signId: 'D9',
+    name: 'Sign D9',
+    descriptiveName:
+      'Part of the road reserved for pedestrians, cyclists and mofas (also mandatory to use it)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: sharedCyclewayRecommendation(),
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D09.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'D10',
+    signId: 'D10',
+    name: 'Sign D10',
+    descriptiveName:
+      'Part of the road reserved for cyclists and pedestrians (also mandatory to use it)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: sharedCyclewayRecommendation(),
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D10.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'D11',
+    signId: 'D11',
+    name: 'Sign D11',
+    descriptiveName: 'Mandatory footway (pedestrians must use it, no other road user allowed)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: sharedFootwayRecommendation(),
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D11.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'D13',
+    signId: 'D13',
+    name: 'Sign D13',
+    descriptiveName:
+      'Mandatory part of the road for horse riders (horse riders must use it, no other road user allowed)',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: sharedBridlewayRecommendation(),
+    catalogue: { signCategory: 'traffic_sign' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D13.svg',
+      licence: 'Public Domain',
+    },
+  },
+]

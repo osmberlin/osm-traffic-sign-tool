@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 107.926 96.362" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen F85 - Temporary road works sign indicating two-way traffic on road which is usually one-way only</title>
+  <path fill="#f89646" fill-rule="evenodd" d="M4.617 96.302C1.02 96.302.06 94.19.06 92.315V3.807C.06.618 2.099.06 4.257.06h100.051c3.317 0 3.558 1.874 3.558 3.787v88.748c0 2.152-.2 3.667-4.117 3.667z" clip-rule="evenodd"/>
+  <path fill="none" stroke="#f89646" stroke-miterlimit="3.863" stroke-width=".12" d="M4.617 96.302C1.02 96.302.06 94.19.06 92.315V3.807C.06.618 2.099.06 4.257.06h100.051c3.317 0 3.558 1.874 3.558 3.787v88.748c0 2.152-.2 3.667-4.117 3.667z"/>
+  <path fill="none" stroke="#120c0e" stroke-miterlimit="3.863" stroke-width=".798" d="M3.658 95.226c-1.239 0-2.518-.798-2.518-2.272V3.25C1.14 1.975 2.299.978 3.738.978h100.611c1.439 0 2.518.997 2.518 2.272v89.664c0 1.276-1.078 2.313-2.518 2.313H3.658z"/>
+  <path fill="#120c0e" d="M70.892 19.636v70.806h-5.676V19.636h-5.637l8.475-14.154 8.513 14.154z"/>
+  <path fill="none" stroke="#120c0e" stroke-miterlimit="3.863" stroke-width=".12" d="M70.892 19.635v70.807h-5.676V19.635h-5.637l8.475-14.153 8.513 14.153z"/>
+  <path fill="#120c0e" d="M94.675 19.636v70.806h-5.637V19.636h-5.675l8.515-14.154 8.474 14.154z"/>
+  <path fill="none" stroke="#120c0e" stroke-miterlimit="3.863" stroke-width=".12" d="M94.675 19.635v70.807h-5.637V19.635h-5.675l8.515-14.153 8.474 14.153z"/>
+  <path fill="#120c0e" d="M18.688 75.531h5.316L15.53 89.645 7.016 75.531h5.715v-42.38h5.637v42.38z"/>
+  <path fill="none" stroke="#120c0e" stroke-miterlimit="3.863" stroke-width=".12" d="M18.688 75.531h5.316L15.53 89.645 7.016 75.531h5.715v-42.38h5.637v42.38z"/>
+  <path fill="#120c0e" d="M42.991 75.531h5.356l-8.514 14.114-8.474-14.114h5.676v-42.38h5.676v42.38z"/>
+  <path fill="none" stroke="#120c0e" stroke-miterlimit="3.863" stroke-width=".12" d="M42.991 75.531h5.356l-8.514 14.114-8.474-14.114h5.676v-42.38h5.676v42.38z"/>
+</svg>
