@@ -8,3 +8,6 @@ export const countryCatalogueMeta = {
 
 export const getCountryCatalogueMeta = (countryPrefix: CountryPrefixType) =>
   countryCatalogueMeta[countryPrefix]
+
+export const getCatalogueMaturity = (countryPrefix: CountryPrefixType) =>
+  getCountryCatalogueMeta(countryPrefix).maturity

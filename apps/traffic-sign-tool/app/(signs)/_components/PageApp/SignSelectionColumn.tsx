@@ -1,10 +1,14 @@
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
+import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
 import { signCategoryEntries } from '@app/src/features/i18n/signCategoryLabels'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import {
   activeCatalogueFocusView,
   filterSignsByFocus,
+  getCatalogueMaturity,
   isHighlightedInView,
+  isVisibleMaturity,
   SignType,
 } from '@osm-traffic-signs/converter'
 import { SearchSignInput } from './signGroups/SearchSignInput'
@@ -14,6 +18,8 @@ import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
 type Props = { trafficSignData: SignType[] }
 
 export const SignSelectionColumn = ({ trafficSignData }: Props) => {
+  const lang = useCurrentLang()
+  const catalogueMaturity = getCatalogueMaturity(lang)
   const { focuses } = useParamFocus()
 
   const displaySigns = filterSignsByFocus(trafficSignData, focuses)
@@ -35,9 +41,14 @@ export const SignSelectionColumn = ({ trafficSignData }: Props) => {
   return (
     <>
       <div className="mb-4 flex w-full flex-col gap-3 @sm/sign-selection:flex-row @sm/sign-selection:items-start @sm/sign-selection:justify-between">
-        <h2 className="shrink-0 text-lg font-light text-black uppercase">
-          {m.page_choose_signs()}
-        </h2>
+        <div className="flex shrink-0 flex-col gap-1">
+          <h2 className="flex flex-wrap items-center gap-2 text-lg font-light text-black uppercase">
+            {m.page_choose_signs()}
+            {isVisibleMaturity(catalogueMaturity) ? (
+              <MaturityLabel maturity={catalogueMaturity} />
+            ) : null}
+          </h2>
+        </div>
         <div className="w-full @sm/sign-selection:w-auto">
           <SearchSignInput />
         </div>

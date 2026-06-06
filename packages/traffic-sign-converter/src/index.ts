@@ -23,8 +23,14 @@ export * from './data-definitions/countryDefinitions.js'
 export type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
 export {
   countryCatalogueMeta,
+  getCatalogueMaturity,
   getCountryCatalogueMeta,
 } from './data-definitions/countryCatalogueMeta.js'
+export {
+  geometryTagRecommendationsMaturity,
+  isVisibleMaturity,
+} from './data-definitions/featureMaturities.js'
+export type { MaturityKey } from './referenceLinks/types.js'
 export * from './data-definitions/geometryTypes.js'
 export * from './data-definitions/namedTrafficSignValues.js'
 export type * from './data-definitions/TrafficSignDataTypes.js'

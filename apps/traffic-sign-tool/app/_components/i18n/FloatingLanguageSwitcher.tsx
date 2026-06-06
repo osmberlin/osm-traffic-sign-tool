@@ -1,3 +1,4 @@
+import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import { setUiLocale, useUiLocale } from '@app/app/_components/i18n/useUiLocale'
 import { stonePillButton } from '@app/app/_components/links/buttonStyles'
 import * as m from '@app/paraglide/messages'
@@ -5,7 +6,12 @@ import { uiLocales, type UiLocale } from '@app/src/features/i18n/uiLocale'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { LanguageIcon } from '@heroicons/react/24/outline'
-import { countries, type CountryPrefixType } from '@osm-traffic-signs/converter'
+import {
+  countries,
+  getCatalogueMaturity,
+  isVisibleMaturity,
+  type CountryPrefixType,
+} from '@osm-traffic-signs/converter'
 import { useNavigate } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import { LangSwitcherOption } from './LangSwitcherOption'
@@ -58,19 +64,29 @@ export const FloatingLanguageSwitcher = () => {
                     {m.lang_switcher_sign_catalogue()}
                   </h3>
                   <ul className="space-y-1">
-                    {countries.map((countryPrefix) => (
-                      <LangSwitcherOption
-                        key={countryPrefix}
-                        badge={countryPrefix}
-                        label={
-                          countryPrefix === 'DE'
-                            ? m.lang_switcher_sign_catalogue_de_name()
-                            : countryPrefix
-                        }
-                        isSelected={signConfigLang === countryPrefix}
-                        onClick={() => handleCatalogueSelect(countryPrefix, close)}
-                      />
-                    ))}
+                    {countries.map((countryPrefix) => {
+                      const catalogueMaturity = getCatalogueMaturity(countryPrefix)
+                      return (
+                        <LangSwitcherOption
+                          key={countryPrefix}
+                          badge={countryPrefix}
+                          label={
+                            <span className="flex flex-wrap items-center gap-2">
+                              <span>
+                                {countryPrefix === 'DE'
+                                  ? m.lang_switcher_sign_catalogue_de_name()
+                                  : countryPrefix}
+                              </span>
+                              {isVisibleMaturity(catalogueMaturity) ? (
+                                <MaturityLabel maturity={catalogueMaturity} />
+                              ) : null}
+                            </span>
+                          }
+                          isSelected={signConfigLang === countryPrefix}
+                          onClick={() => handleCatalogueSelect(countryPrefix, close)}
+                        />
+                      )
+                    })}
                   </ul>
                 </section>
 

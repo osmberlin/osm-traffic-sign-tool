@@ -1,9 +1,11 @@
+import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import {
   useAboutToolOpen,
   useAboutToolOpenActions,
 } from '@app/app/_components/store/useAboutToolOpen.zustand'
 import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
+import { getCatalogueMaturity, isVisibleMaturity } from '@osm-traffic-signs/converter'
 import { Link, useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import packageJson from '../../../package.json'
@@ -15,6 +17,8 @@ export const Header = () => {
   const isAboutOpen = useAboutToolOpen()
   const { setIsOpen: setAboutOpen } = useAboutToolOpenActions()
   const lang = useCurrentLang()
+  const catalogueMaturity = getCatalogueMaturity(lang)
+  const showCatalogueMaturityNotice = isVisibleMaturity(catalogueMaturity)
   const pathname = useRouterState({ select: (state) => state.location.pathname })
   const isHome = pathname === `/${lang}`
   const version = packageJson?.version || 'unknown'
@@ -54,6 +58,13 @@ export const Header = () => {
             {m.header_about_summary()}
           </summary>
           <p>
+            {showCatalogueMaturityNotice ? (
+              <>
+                <MaturityLabel maturity={catalogueMaturity} className="mr-1 align-middle" />{' '}
+                {m.catalogue_maturity_notice()}
+                <br />
+              </>
+            ) : null}
             {m.header_about_body({ trafficSignTag: 'traffic_sign=*' })} <br />
             <strong>{m.header_about_review()}</strong>
             <br />

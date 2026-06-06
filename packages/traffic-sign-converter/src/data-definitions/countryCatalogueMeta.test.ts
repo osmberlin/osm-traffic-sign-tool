@@ -1,5 +1,10 @@
 import { describe, expect, test } from 'vitest'
-import { countryCatalogueMeta, getCountryCatalogueMeta } from './countryCatalogueMeta.js'
+import {
+  countryCatalogueMeta,
+  getCatalogueMaturity,
+  getCountryCatalogueMeta,
+} from './countryCatalogueMeta.js'
+import { isVisibleMaturity } from './featureMaturities.js'
 
 describe('countryCatalogueMeta', () => {
   test('contains DE catalogue metadata', () => {
@@ -8,6 +13,7 @@ describe('countryCatalogueMeta', () => {
         "catalogueLocale": "de",
         "countryPrefix": "DE",
         "defaultCommentLang": "de",
+        "maturity": "alpha",
         "osmWikiOverviewUrl": "https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland",
         "referenceLinks": {
           "hashPrefixes": {
@@ -23,6 +29,11 @@ describe('countryCatalogueMeta', () => {
         },
       }
     `)
+  })
+
+  test('DE catalogue is alpha', () => {
+    expect(getCatalogueMaturity('DE')).toBe('alpha')
+    expect(isVisibleMaturity(getCatalogueMaturity('DE'))).toBe(true)
   })
 
   test('returns metadata by country prefix', () => {

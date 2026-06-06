@@ -15,8 +15,13 @@ export type CountryReferenceLinkConfig = {
   }
 }
 
+/** Catalogue or feature release stage shown in the UI when not `stable`. */
+export type MaturityKey = 'alpha' | 'beta' | 'stable'
+
 export type CountryCatalogueMeta = {
   countryPrefix: CountryPrefixType
+  /** Release stage; `alpha` and `beta` show a label in the UI. */
+  maturity: MaturityKey
   /** BCP 47 locale for catalogue rendering/sorting. */
   catalogueLocale: string
   /** Fallback language for catalogue comments without explicit lang tags. */

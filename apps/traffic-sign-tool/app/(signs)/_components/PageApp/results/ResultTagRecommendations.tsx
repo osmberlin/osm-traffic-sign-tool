@@ -1,11 +1,14 @@
 import { useParamAnswers } from '@app/app/(signs)/_components/store/useParamAnswers.search'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
+import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
 import * as m from '@app/paraglide/messages'
 import { getGeometryLabel } from '@app/src/features/i18n/geometryLabels'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import {
   GEOMETRY_TYPES,
+  geometryTagRecommendationsMaturity,
+  isVisibleMaturity,
   signsToApplicability,
   signsToComments,
   signsToOptionalTagsBySign,
@@ -108,6 +111,9 @@ export const ResultTagRecommendations = () => {
                   <h3 className="flex items-center gap-2 text-lg font-light uppercase">
                     <GeometryIcon geometry={geometry} />
                     {geometryLabel(geometry)}
+                    {isVisibleMaturity(geometryTagRecommendationsMaturity) ? (
+                      <MaturityLabel maturity={geometryTagRecommendationsMaturity} />
+                    ) : null}
                   </h3>
                 </ApplicabilityInfo>
 

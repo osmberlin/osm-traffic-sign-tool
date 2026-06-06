@@ -2,6 +2,7 @@ import type { CountryCatalogueMeta } from '../../referenceLinks/types.js'
 
 export const catalogueMetaDE = {
   countryPrefix: 'DE',
+  maturity: 'alpha',
   catalogueLocale: 'de',
   defaultCommentLang: 'de',
   osmWikiOverviewUrl: 'https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland',
