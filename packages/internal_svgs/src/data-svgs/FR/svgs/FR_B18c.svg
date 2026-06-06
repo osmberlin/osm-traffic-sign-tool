@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.943 -.943 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B18c - Accès interdit aux véhicules transportant des marchandises dangereuses définies par l&apos;arrêté du 29 mai 2009 relatif aux </title>
+  <circle cx="287.057" cy="287.057" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="287.057" cy="287.057" r="273.982" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="287.057" cy="287.057" r="192.438" fill="#fff" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="m212.728 351.661 3.657-5.813h15.297l4.322 4.843.332 6.3 7.316.484v11.144l33.918-1.937 7.315-3.877 8.646 3.39 34.583 2.424v-11.144l6.982-.484v-5.815l4.989-5.815h14.298l4.988 5.815v42.153l-4.655 5.814-14.631.484-4.657-5.329-.332-6.299h-6.982v-11.628l-34.583 1.938-7.648 3.877-8.646-3.393-33.917-2.907v12.113h-7.316v5.814l-3.657 4.846-16.626.484-3.325-5.33z"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M203.417 326.951h167.925v4.845H203.417z"/>
+  <path fill="none" stroke="#ff0" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="M234.724 299.831V189.119h106.669v109.495z"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="7" d="m212.223 313.213 12.501-137.477H350.56l12.501 138.694z"/>
+  <path fill="#ffd01f" d="M231.057 184.057h112v121h-112z"/>
+</svg>

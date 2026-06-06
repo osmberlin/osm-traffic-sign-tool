@@ -4,6 +4,7 @@ import { catalogueMetaBE } from './BE/catalogueMetaBE.js'
 import { catalogueMetaAT } from './AT/catalogueMetaAT.js'
 import { catalogueMetaCA } from './CA/catalogueMetaCA.js'
 import { catalogueMetaPL } from './PL/catalogueMetaPL.js'
+import { catalogueMetaFR } from './FR/catalogueMetaFR.js'
 import type { CountryPrefixType } from './countryDefinitions.js'
 
 export type { CountryQaCapabilities }
@@ -14,6 +15,7 @@ export const countryCatalogueMeta = {
   AT: catalogueMetaAT as CountryCatalogueMeta,
   CA: catalogueMetaCA as CountryCatalogueMeta,
   PL: catalogueMetaPL as CountryCatalogueMeta,
+  FR: catalogueMetaFR as CountryCatalogueMeta,
 } as const satisfies Record<CountryPrefixType, CountryCatalogueMeta>
 
 export const getCountryCatalogueMeta = (countryPrefix: CountryPrefixType) =>

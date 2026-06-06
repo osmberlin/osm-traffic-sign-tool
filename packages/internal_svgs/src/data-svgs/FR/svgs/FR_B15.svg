@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.531 -.531 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B15 - Cédez le passage à la circulation venant en sens inverse</title>
+  <circle cx="287.469" cy="287.469" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="287.469" cy="287.469" r="273.982" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="287.469" cy="287.469" r="192.438" fill="#fff" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <path fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="M314.792 252.183h24.005v162.053h33.006V252.183h22.504L353.8 171.156z"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="M188.77 173.346h51.009v122.635h33.006l-55.51 116.066-63.012-113.876h36.007z"/>
+</svg>

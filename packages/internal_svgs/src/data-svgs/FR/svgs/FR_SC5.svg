@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12521 12523" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SC5 - SC5</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21001v29703H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-4152 -7266)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="#fefefe" d="M4161 7275v12505h12503V7275Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="18" d="M4161 7275v12505h12503V7275Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4468 7579h11897v11899H4468z" class="BoundingBox"/>
+            <path fill="#00f" d="M4468 7579v11898h11896V7579Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M5701 8278h9420v5779H5701z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M7625 12070c546 0 991 445 991 991s-445 991-991 991-991-445-991-991 445-991 991-991m5607 3c546 0 991 445 991 991 0 545-445 991-991 991s-991-446-991-991c0-546 445-991 991-991m-4454 944c3-616-528-1114-1158-1114-633 0-1155 487-1155 1120l-764-3 2-444h162l-3-1139c0-210 121-314 334-316l135-1303c35-248 91-278 350-278h1125V8504c0-121 127-228 248-226h6829c153 0 237 64 237 226v4521h-714c-3-630-544-1125-1174-1125s-1182 482-1185 1114zm-971-3215H6804c-178-7-203 19-216 228l-105 1095h1322z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M14552 15466h1454v3112h-1454z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M14552 18577v-3111l1452 1550z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4818 15466h1454v3112H4818z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M6270 18577v-3111l-1452 1550Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M7139 15455h6554v3150H7139z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M7139 16532v-519l170-79 150-103 131-131 107-146 52-88v-11h515v3123h-499v-2359l-8 12-183 127-202 99-210 71-20 4zm5720 1234v810h-332v-810c0-405-496-423-496 0v810h-335v-1428h335v102c193-145 508-204 723 143 161-374 938-423 938 373v810h-335l3-810c0-408-501-408-501 0m-3382-1470-47 377-7 381 11 377 43 342v4l35 101 58 97 86 70 97 46 108 20h78l109-16 101-43 81-70 66-93 35-101v-11l4-4 43-381 15-378-15-380-43-338-4-4-31-105-62-93-81-74-98-46-112-20h-74l-109 16-101 46-85 70-62 90-35 104-4 12zm-482-78 43-159 70-151 93-132 121-113 136-89 155-62 159-35 101-8h66l163 15 159 47 144 74 136 101 105 120 89 140 58 155 24 97v4l50 400 16 396-16 397-42 400-8 35v4l-43 163-70 148-93 136-120 109-136 93-156 62-159 31-101 8h-66l-167-16-155-43-148-73-132-105-109-117-85-143-62-152-20-101-3-4-47-396-12-396 12-401 43-396 4-39z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

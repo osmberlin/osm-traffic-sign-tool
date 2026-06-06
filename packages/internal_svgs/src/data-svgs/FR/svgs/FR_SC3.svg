@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12521 12524" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SC3 - SC3</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21001v29703H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-4152 -7266)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline">
+            <path fill="#fefefe" d="M4161 7276v12505h12503V7276Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="18" d="M4161 7276v12505h12503V7276Z"/>
+          </g>
+          <path fill="none" stroke="#1b1918" stroke-width="18" d="M4161 7275v12505h12503V7275Z" class="com.sun.star.drawing.PolyPolygonShape" style="display:inline"/>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4468 7579h11897v11899H4468z" class="BoundingBox"/>
+            <path fill="#00f" d="M4468 7579v11898h11896V7579Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M5384 11730h10064v3151H5384z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M5798 11730h9388c136 0 261 103 261 239v2911h-1647l-3-181c0-482-388-870-869-870-482 0-870 388-870 870v181H8636v-181c0-482-388-870-869-870-482 0-870 388-870 870v181H5721c-178 0-335-139-335-301l-2-878c2-172 140-271 265-308l280-1126h-131z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M7137 14062h1263v1264H7137z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M7768 14062c111 0 220 29 315 85 96 55 176 135 231 230 56 96 85 205 85 316s-29 220-85 316c-55 95-135 175-230 230-96 56-205 85-316 85s-220-29-315-85c-96-55-176-135-231-230-56-96-85-205-85-316s29-220 85-315c55-96 135-176 230-231 96-56 205-85 316-85"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M12294 14062h1263v1264h-1263z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M12925 14062c111 0 220 29 315 85 96 55 176 135 231 230 56 96 85 205 85 316s-29 220-85 316c-55 95-135 175-230 230-96 56-205 85-316 85s-220-29-315-85c-96-55-176-135-231-230-56-96-85-205-85-316s29-220 85-315c55-96 135-176 230-231 96-56 205-85 316-85"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M6898 12267h1938v1103H6898z" class="BoundingBox"/>
+            <path fill="#00f" d="M6898 12370v895c0 69 34 104 103 104h1730c69 0 104-35 104-104v-895c0-69-35-103-104-103H7001c-69 0-103 34-103 103"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M9028 12267h1938v1103H9028z" class="BoundingBox"/>
+            <path fill="#00f" d="M9028 12370v895c0 69 34 104 103 104h1730c69 0 104-35 104-104v-895c0-69-35-103-104-103H9131c-69 0-103 34-103 103"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M11143 12267h1938v1103h-1938z" class="BoundingBox"/>
+            <path fill="#00f" d="M11143 12370v895c0 69 34 104 103 104h1730c69 0 104-35 104-104v-895c0-69-35-103-104-103h-1730c-69 0-103 34-103 103"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M13284 12267h1939v1103h-1939z" class="BoundingBox"/>
+            <path fill="#00f" d="M13284 12370v895c0 69 34 104 103 104h1730c69 0 104-35 104-104v-895c0-69-35-103-104-103h-1730c-69 0-103 34-103 103"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M5789 12267h922v1102h-922z" class="BoundingBox"/>
+            <path fill="#00f" d="m5790 13290 245-968c11-37 35-53 77-55h488c64 0 112 42 109 101v890c0 61-43 112-104 109h-748c-56 0-74-32-67-77"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

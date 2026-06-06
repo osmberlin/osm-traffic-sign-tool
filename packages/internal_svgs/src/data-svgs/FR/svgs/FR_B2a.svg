@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.943 -.943 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B2a - Interdiction de tourner à gauche à la prochaine intersection</title>
+  <circle cx="287.057" cy="287.057" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="287.057" cy="287.057" r="273.982" fill="#ea190e" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="287.057" cy="287.869" r="191.459" style="opacity:1;fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  <path d="m156.032 206.023-38.01 40.836 38.01 40.834a259 259 0 0 1-2.568-21.377h139.423c25.184.35 37.792 19.847 37.895 32.26V443.39h39.275V300.572c.504-24.032-24.747-72.28-77.17-73.17H153.448c.55-7.03 1.4-14.154 2.584-21.38" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  <path d="m153.85 143.581-27.798 31.704L420.09 432.31l28.106-32.049z" style="opacity:1;fill:#ea190e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+</svg>

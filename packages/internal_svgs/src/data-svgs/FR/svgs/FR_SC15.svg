@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12521 12523" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SC15 - SC15</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21000v29700H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-3739 -7539)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="#fefefe" d="M3748 7548v12505h12503V7548Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="18" d="M3748 7548v12505h12503V7548Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4055 7853h11897v11899H4055z" class="BoundingBox"/>
+            <path fill="#00f" d="M4055 7853v11898h11896V7853Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M4994 11967h10037v3649H4994z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M6626 14033c-435 0-791 355-791 791s356 791 791 791c436 0 791-355 791-791s-355-791-791-791m6921 0c-435 0-791 355-791 791s356 791 791 791c436 0 791-355 791-791s-355-791-791-791m-7866 748c-7-519 456-906 945-906 491 6 912 390 930 891l5057 11c0-465 449-910 953-886 506 30 902 429 926 879l537-5v-1005c1-205-34-309-252-313l-353-6-1440-1467-3835-7-1518 1540-2377 247c-186 25-267 129-260 247l2 608c-1 83 116 173 229 172zm5172-2481H9247l-878 892c-113 98-118 252 102 262l2376-2zm1688 5-1383-8-2 1154 1958 1c272-3 260-245 147-382z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

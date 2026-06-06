@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12521 12523" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SC4 - SC4</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21001v29703H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-4152 -7266)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="#fefefe" d="M4161 7275v12505h12503V7275Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="18" d="M4161 7275v12505h12503V7275Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4468 7579h11897v11899H4468z" class="BoundingBox"/>
+            <path fill="#00f" d="M4468 7579v11898h11896V7579Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M5032 10095h10771v6865H5032z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M13738 16959c-911 0-1675-646-1863-1506l-1387-58c-550-55-686-614-681-1199l-1885-1289-153 397c646 342 1089 1016 1089 1789 0 343-87 664-238 948l-211-69c-310 553-899 926-1574 926-993 0-1803-808-1803-1805 0-596 292-1132 744-1456l-99-200c327-232 730-365 1158-365 200 0 394 32 577 87l263-680h-851l3-934h1208l55-165-197-440c-115-197-52-365 148-492l759-353 156 341-730 348 273 602-232 623 1581 1083c356 1008 1419 1014 1749 0l197-564-684-287v-379h1903c363 0 337 582-3 591l-701 31-119 339 2880-3v359h-446c640 304 1103 927 1178 1657l-168 46c6 55 12 113 12 168 0 1052-857 1909-1908 1909m-6604-1993 425-1112c430 246 714 712 714 1239 0 795-647 1440-1438 1440-790 0-1436-645-1436-1440 0-793 646-1439 1436-1439 128 0 258 20 371 47l-417 1077c-153 23-272 156-272 315 0 178 142 320 318 320 177 0 319-142 319-320 0-46-6-89-20-127m5439-643h1165c399-3 729 324 729 727s-330 731-729 731c-244 0-461-122-594-313l-713-12c176 559 696 964 1307 964 753 0 1369-613 1369-1370 0-756-616-1370-1369-1370-481 0-919 261-1165 643"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.031 -.031 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B9h - Accès interdit aux motocyclettes et motocyclettes légères au sens de l&apos;article R.311-1 du code de la route</title>
+  <circle cx="287.969" cy="287.969" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <circle cx="287.969" cy="287.969" r="273.982" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="287.969" cy="287.969" r="192.438" fill="#fff" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <path stroke="#000" d="M168.719 268.969c-29.961 0-54.25 23.617-54.25 52.75s24.289 52.75 54.25 52.75 54.25-23.617 54.25-52.75-24.289-52.75-54.25-52.75zm0 89c-20.297 0-36.75-16.175-36.75-36.13 0-19.954 16.453-36.13 36.75-36.13s36.75 16.176 36.75 36.13-16.453 36.13-36.75 36.13z"/>
+  <path d="M398.719 269.969c-29.961 0-54.25 23.617-54.25 52.75s24.289 52.75 54.25 52.75 54.25-23.617 54.25-52.75-24.289-52.75-54.25-52.75m0 89c-20.297 0-36.75-16.175-36.75-36.13 0-19.954 16.453-36.13 36.75-36.13s36.75 16.176 36.75 36.13-16.453 36.13-36.75 36.13"/>
+  <ellipse cx="169.219" cy="321.469" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" rx="18.75" ry="18"/>
+  <ellipse cx="397.969" cy="321.969" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" rx="18.75" ry="18"/>
+  <path d="m167.469 311.969 10.5 6.5 57-76-17.5-7.5z"/>
+  <path d="M265.654 329.965c3.17 1.29 19.07.916 22.788-.996h60.027l59.5-91h-129.5v43.116a28 28 0 0 0-2.5-.116c-14.636 0-26.5 11.417-26.5 25.5 0 10.562 6.674 19.625 16.185 23.496" opacity=".99"/>
+  <path d="M356.969 316.969h104v13.5h-104zM375.969 281.969l13.5 28.5 12-3-11.5-32.5zM309.969 244.969l-44.5 46-9.5-3.5-.5-7.5-6-1-7.5-.5-7.5-3-5.5-5-7-12-4.5-6.5-5-2.5-14 .5-4.5-5.5-2-6.5v-6.5l.5-5.5 2-6.5 4-3.5 11.5.5 8 4 6.5 5.5 3.5-4.5 5-12 4-5 4-1.5 6-1.5 6.5-1 11-2 3.5 2.5 1.5 4-26.5 7-4.5 7.5 11.5 5 27 2 9.5 1 8.5 3 9 5.5z"/>
+  <path d="m399.219 239.469 8-1.5 5.5 25 10.5 3.5 7 4 6.5 4.5 7 7 4.5 6 4.5 10.5 1 5.5-14.5 2-36.5-28-24 1.5-11.5-31zM272.469 272.469h19.5v15h-19.5zM268.719 317.469h95v12.75h-95z"/>
+</svg>

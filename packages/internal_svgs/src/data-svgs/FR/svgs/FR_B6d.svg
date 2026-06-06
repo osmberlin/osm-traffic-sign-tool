@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" overflow="visible" style="fill-rule:evenodd;stroke-width:.50099999;stroke-linejoin:bevel;overflow:visible" viewBox="0 0 1186.187 1186.187" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B6d - Arrêt et stationnement interdits</title>
+  <g font-size="16" style="font-size:16px;fill:none;stroke:#000;font-family:Times New Roman">
+    <g transform="matrix(1 0 0 -1 .21 1186.061)">
+      <circle r="588.794" stroke-miterlimit="79.84" style="fill:#fff;stroke:#000;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:79.84031677;stroke-opacity:1;stroke-dasharray:none" transform="rotate(108.56 83.24 509.656)"/>
+      <circle r="557.502" stroke="none" style="fill:#039;fill-opacity:1;stroke:none" transform="rotate(108.56 83.24 509.656)"/>
+      <path stroke-miterlimit="79.84" d="M60.704 414.285c-98.631 293.76 59.733 612.235 353.497 710.865 293.76 98.63 612.229-59.73 710.859-353.499 98.63-293.76-59.73-612.233-353.493-710.862-293.76-98.631-612.232 59.733-710.863 353.496m667.377-223.977c222.271 74.626 342.099 315.589 267.463 537.857-74.626 222.271-315.589 342.095-537.857 267.463-222.271-74.626-342.094-315.589-267.463-537.857C264.85 235.5 505.813 115.677 728.081 190.308" style="fill:#d40000;fill-opacity:1;stroke:none;stroke-width:7.54099989;marker-start:none;marker-end:none"/>
+      <path d="M940.632 245.22 245.134 940.718M245.134 245.22l695.498 695.498" style="fill:none;stroke:#d40000;stroke-width:102.81700134;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"/>
+    </g>
+  </g>
+</svg>

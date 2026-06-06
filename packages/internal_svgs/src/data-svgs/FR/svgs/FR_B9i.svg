@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.031 -.031 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B9i - Accès interdit aux véhicules tractant une caravane ou une remorque de plus de 250 kg, tel que le poids total roulant autorisé, véhicule et caravane ou remorque, ne dépasse pas 3,5 t</title>
+  <circle cx="287.969" cy="287.969" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" opacity=".99"/>
+  <circle cx="287.969" cy="287.969" r="273.982" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="286.969" cy="286.469" r="192.438" fill="#fff" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" opacity=".99"/>
+  <path d="M451.636 263.635c0-37.371-49.1-67.667-109.667-67.667s-109.667 30.295-109.667 67.667c0 .223.01.444.014.667h-.013v72.667h84.358c.536-13.343 11.732-24 25.476-24 13.741 0 24.938 10.657 25.474 24h84.025v-72.667h-.014c.004-.222.014-.444.014-.667m-126.334 13.082v.085h-54v-.214c-9.042-1.309-16-9.134-16-18.62s6.958-17.311 16-18.62v-.214h54v.085c9.527.852 17.001 8.915 17.001 18.749s-7.474 17.898-17.001 18.749m102.667 30.419c0 9.572-8.581 17.333-19.166 17.333-10.523 0-19.059-7.672-19.158-17.167h-.009v-53.333c0-9.573 8.581-17.333 19.167-17.333 10.585 0 19.166 7.76 19.166 17.333 0 .736-.067 1.458-.166 2.169v48.827c.098.714.166 1.434.166 2.171"/>
+  <ellipse cx="408.803" cy="256.469" rx="14" ry="13.667"/>
+  <ellipse cx="342.219" cy="338.969" rx="22.875" ry="23"/>
+  <ellipse cx="164.969" cy="335.969" rx="23.563" ry="23.5"/>
+  <path d="m210.969 298.469-1-2-1.5-2-2-1h-15l-39.867-46h-24.633v12.758l8.5-.258 19.5 22.5 2.5 3.5v8l-30.5 1.144v40.856h10.506c0-.084-.006-.166-.006-.25 0-15.051 12.425-27.25 27.75-27.25s27.75 12.199 27.75 27.25c0 .084-.006.166-.006.25h19.506v-35.625z"/>
+  <path d="M209.469 325.469h30v10h-30z"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 160" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen M4x - ou | Caravanes ou remorques</title>
+  <g transform="translate(0 -892.362)">
+    <rect width="428.54" height="158.54" x=".73" y="893.092" ry="28.215" style="fill:#fff;stroke:#000;stroke-width:1.46000993;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <g transform="translate(228.638 270.886)scale(.73972)">
+      <path d="M251.937 931.64c0-37.372-49.1-67.668-109.667-67.668S32.603 894.267 32.603 931.64c0 .223.01.444.014.667h-.013v72.667h84.358c.536-13.343 11.732-24 25.476-24 13.74 0 24.938 10.657 25.474 24h84.025v-72.667h-.014c.004-.222.014-.444.014-.667M125.603 944.72v.085h-54v-.214c-9.042-1.309-16-9.134-16-18.62s6.958-17.31 16-18.62v-.214h54v.085c9.527.852 17 8.915 17 18.75 0 9.833-7.473 17.897-17 18.748m102.667 30.42c0 9.571-8.581 17.332-19.166 17.332-10.523 0-19.06-7.672-19.158-17.167h-.01v-53.333c0-9.573 8.582-17.333 19.168-17.333s19.166 7.76 19.166 17.333c0 .736-.067 1.458-.166 2.17v48.826c.098.714.166 1.434.166 2.171"/>
+      <ellipse cx="209.104" cy="924.473" rx="14" ry="13.667"/>
+      <ellipse cx="142.52" cy="1006.973" rx="22.875" ry="23"/>
+      <path d="M9.77 994.973h30v10h-30z"/>
+      <path d="M-282.336 1004.601c-2.977-.185-5.807-.628-6.11-5.517v-17.227c.307-4.927 4.014-7.757 8.08-8.065l70.804-6.385 46.27-46.27h115.458l44.059 44.059h11.95c4.094.147 5.532 1.491 6.105 6.105v33.33h-280.66z" style="fill:#000;stroke:#000;stroke-width:.72752553px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+      <circle cx="-238.983" cy="1005.093" r="26.5" style="fill:#fff;stroke:none;stroke-width:2.18300009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+      <circle cx="-30.73" cy="1006.134" r="26.5" style="fill:#fff;stroke:none;stroke-width:2.18300009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+      <circle cx="-238.983" cy="1005.093" r="23.5" style="fill:#000;stroke:none;stroke-width:2.18300009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+      <circle cx="-30.73" cy="1006.134" r="23.5" style="fill:#000;stroke:none;stroke-width:2.18300009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+      <path d="M-112.146 964.836h-70.948c-3.883-.167-4.7-2.39-3.265-4.882l28.315-28.314h45.898zM-102.991 964.836h62.275c3.408-.167 4.126-5.822 2.866-8.315l-24.854-24.881h-40.287z" style="fill:#fff;stroke:none"/>
+    </g>
+  </g>
+</svg>

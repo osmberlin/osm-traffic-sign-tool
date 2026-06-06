@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 739 300" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen M4b - | Véhicules de transport en commun</title>
+  <g transform="translate(0 -752.362)">
+    <rect width="738.5" height="298.87" x=".5" y="752.993" ry="53.189" style="fill:#fff;stroke:#000;stroke-width:1.2618043400000001;stroke-opacity:1"/>
+    <path d="M65.006 994.172c-13.36-1.705-27.614-6.098-26.665-26.641v-52.433c2.117-15.551 12.575-17.836 19.573-20.406l18.005-67.136c.504-1.756-1.052-2.91-4.994-2.88h-5.919v-39.102h609.357c16.27 1.27 15.117 11.166 15.295 15.282v193.316z" style="fill:#000;stroke:none"/>
+    <rect width="124.959" height="70.855" x="137.769" y="823.836" ry="6.168" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <rect width="124.959" height="70.855" x="275.422" y="823.836" ry="6.168" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <rect width="124.959" height="70.855" x="411.586" y="823.836" ry="6.168" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <rect width="124.959" height="70.855" x="548.033" y="823.836" ry="6.168" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <path d="M86.584 823.549h33.267c3.869-.183 5.42 1.553 5.286 5.384v58.586c-.077 4.918-3.248 6.66-6.747 6.872H72.9c-4.581-.107-6.502-.602-6.051-6.163 6.702-21.64 17.089-63.463 19.735-64.68" style="fill:#fff;stroke:none"/>
+    <path d="M186.547 371.663c0 16.41-13.304 29.714-29.714 29.714-16.411 0-29.714-13.303-29.714-29.714s13.303-29.714 29.714-29.714 29.714 13.304 29.714 29.714z" style="fill:#000;stroke:#fff;stroke-width:2.53846169;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" transform="matrix(1.79403 0 0 1.79243 -87.488 316.327)"/>
+    <path d="M186.547 371.663c0 16.41-13.304 29.714-29.714 29.714-16.411 0-29.714-13.303-29.714-29.714s13.303-29.714 29.714-29.714 29.714 13.304 29.714 29.714z" style="fill:#000;stroke:#fff;stroke-width:2.53846169;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" transform="matrix(1.79403 0 0 1.79243 244.331 314.052)"/>
+  </g>
+</svg>

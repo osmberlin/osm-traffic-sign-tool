@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.531 -.531 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B18a - Accès interdit aux véhicules transportant des marchandises explosives ou facilement inflammables, de nature et en quanti</title>
+  <circle cx="287.469" cy="287.469" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="287.469" cy="287.469" r="273.982" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="287.469" cy="287.469" r="192.438" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="m214.323 312.755-16.465 17.39-.351 37.334 12.612 11.253.35 29.153h18.218l.35-28.13 111.057-.512v29.153h18.567l-.349-29.664 14.012-11.763-.7-36.314-9.46-17.388-28.026 4.602 5.605 9.718-35.384-2.046.351 18.412-13.314-11.252-5.604 11.252-9.46-10.74-5.255 6.138-8.758-14.832-37.135 3.58.35-13.298z"/>
+  <circle cx="226.329" cy="349.524" r="6.369" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="343.273" cy="349.524" r="6.628" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <path fill="red" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m213.077 312.354-43.758-5.109 39.383-8.942-10.502-11.497 12.252-7.664-6.126-14.053 14.002-1.277-33.256-34.491 40.258 8.942-26.255-52.376 35.006 14.052-1.75-8.942 15.753 7.665 1.75-33.214 13.127 21.717 20.129-49.821 18.378 56.208 9.627-6.387 7.001 8.941 28.006-29.38-7.001 33.213 42.881-10.219-26.253 28.104 7.875 3.832-14.877 16.607 39.382-1.278-28.005 21.717 21.878-2.556-35.88 39.602 52.509 10.219-64.762 11.498 6.127 10.22-35.007-2.556v19.162l-13.127-11.497-6.127 11.497-8.751-11.497-6.127 6.388-8.751-14.053-36.756 2.556V314.91z"/>
+  <path fill="#ffe15f" stroke="#fff" stroke-width="4" d="m258.469 306.469-7 7 17-6 5.373 15.325 6.627-7.325 7 15 2-19 12 8 1-10 25 12-11.62-14.004 23.62-1.996-15-7 13-15-16-9 19-16h-20l4-22-25 7-13-52-12 50-33-11 12 28-27-5 31 29-26 3 16.871 10.229-11.871 8.771z"/>
+</svg>

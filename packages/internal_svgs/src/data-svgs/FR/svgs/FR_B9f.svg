@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.031 -.031 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B9f - Accès interdit aux véhicules de transport en commun de personnes</title>
+  <circle cx="287.969" cy="287.969" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <circle cx="287.969" cy="287.969" r="274.775" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="287.969" cy="287.969" r="192.438" fill="#fff" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="355.161" cy="324.79" r="19.186" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="205.213" cy="324.79" r="19.186" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="m149.453 237.329 4.08 1.27-8.63 28.798-4.904 2.466-2.943 3.658-.844 49.394 6.462 4.805h38.101a24.61 24.61 0 0 1 10.831-23.438 24.612 24.612 0 0 1 38.189 21.786H330.58a24.613 24.613 0 1 1 49.163-.02h53.366V224.734l-.762-1.24-.588-.572-.686-.286-1.042-.001H152.918l-1.284-.076-.481.118-.562.703-.161.936-.094 1.054-.814 11.027"/>
+  <path fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="M157.384 242.401h18.088v27.047h-25.113zM178.738 242.401h54.831v27.047h-54.831zM236.835 242.401h60.254v27.047h-60.254zM300.357 242.401h62.018v27.047h-62.018zM365.642 242.401h57.015v27.047h-57.015z"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12521 12523" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SC1a - SC1a</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21000v29700H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-3670 -7573)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="#fefefe" d="M3679 7582v12505h12503V7582Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="18" d="M3679 7582v12505h12503V7582Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M3986 7887h11897v11899H3986z" class="BoundingBox"/>
+            <path fill="#00f" d="M3986 7887v11898h11896V7887Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M5227 10948h9420v5779H5227z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M7151 14740c546 0 991 445 991 991s-445 991-991 991-991-445-991-991 445-991 991-991m5607 3c546 0 991 445 991 991 0 545-445 991-991 991s-991-446-991-991c0-546 445-991 991-991m-4454 944c3-616-528-1114-1158-1114-633 0-1155 487-1155 1120l-764-3 2-444h162l-3-1139c0-210 121-314 334-316l135-1303c35-248 91-278 350-278h1125v-1036c0-121 126-228 248-226h6829c153 0 237 64 237 226v4521h-714c-3-630-544-1125-1174-1125s-1182 482-1185 1114zm-971-3215H6330c-178-7-203 19-216 228l-105 1095h1322z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.943 -.943 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B18b - Accès interdit aux véhicules transportant des marchandises susceptibles de polluer les eaux, de nature et en quantité dé</title>
+  <circle cx="287.057" cy="287.057" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="287.057" cy="287.057" r="273.982" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <circle cx="287.057" cy="287.057" r="192.438" fill="#fff" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M185.715 298.497H388.61"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="M189.01 250.514v42.314l4.422 4.84 13.264.807 3.317-4.034.552-15.329 63.562.807 1.106 4.84 3.316 3.228 3.317 2.42 5.527.807 3.868-.807 2.765-2.42 2.764-3.228 1.104-4.84h63.563l.552 13.715 4.421 4.034 11.055.807 4.975-3.226v-44.375l-3.317-4.034-12.713-.807-4.973 4.033v12.91H210.565l-.258-3.211-.013-9.366-3.991-3.769-12.6-.114z"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="9" d="M137.608 321.873c13.761-4.229 24.897-6.152 39.22-4.843 11.284 1.023 20.013 8.604 29.772 12.991 22.849 10.256 47.574-7.805 70.225-10.562 25.686-3.117 44.813 16.128 69.65 16.128 13.608 0 25.453-6.441 38.155-10.725 13.308-4.479 26.928-.239 39.835 2.656M137.608 344.463c12.991-3.992 25.562-7.223 39.243-4.841 12.651 2.203 21.474 11.099 33.163 14.522 23.689 6.938 50.165-10.475 73.874-12.783 24.77-2.412 44.354 22.289 69.849 16.564 11.54-2.592 22.538-9.708 34.168-11.252 13.149-1.747 23.865.883 36.563 3.438"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="M246.057 255.057h80v11h-80z"/>
+  <ellipse cx="284.557" cy="212.057" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" rx="94.5" ry="51"/>
+</svg>

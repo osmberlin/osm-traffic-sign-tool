@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12504 12506" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SU2 - 50px</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21001v29703H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-4162 -7275)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4160 7273h12509v12511H4160z" class="BoundingBox"/>
+            <path d="M4162 7275h12504v12506H4162Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="3" d="M4162 7275h12504v12506H4162Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M5388 10399h10044v6255H5388z" class="BoundingBox"/>
+            <path fill="#ff0" d="M7152 12952h883l223-41 218-89 165-147 123-182 77-194h-12l59-236v-247l-12-35-53-165-100-123-153-83-135-29-983 12zm-535 2725h912l300-42 271-100 235-135-6-6 165-218 106-241 53-264v-283l-59-218-112-188-12-12-176-82-189-35h-23l-1100 6-365 1823zm-1229 976 1164-6254 2277 11 288 30 277 100 94 47h-6l182 159 147 200h6l130 276 53 312v306l-24 176-94 336-153 311-100 159-12 6-206 206-264 177-277 111-82 24 265 82 247 125 53 41 170 206 118 235 59 235v12l29 365-23 371-95 358-141 336-153 241h6l-188 218-224 194-164 94-353 123-371 71h-123zm7537-1441-877-12-6 312 59 294 29 106 100 212 153 188 200 147 47 23v6l330 106 347 47 129 12 6-12 336-23 317-77 306-135 277-200v-6l194-229 141-277 88-276 30-312-18-177-94-270-159-236-194-211-41-30 6-6-459-276-106-53h6l-324-182-100-71 12 6-118-101-76-147-6-153v-6l65-159 117-135 159-94 159-24v-6l182 6 171 71 76 70v6l89 165 23 188-23 130h941l-12-6 24-289-36-288-82-229h12l-147-194-183-142-123-64h-12l-341-94-347-36-365 36-347 88-130 53-241 147-217 182-153 236-112 252-41 289 17 277 71 247 135 236 177 200 100 70v6l382 230 12 11 494 283 135 123 89 153 23 171-29 176-83 118v12l-176 141-188 88-224 30-82-6v6l-165-47-153-95v-5l-112-177-53-182v-206zm-1889-3813 183-1000 994 11-189 989-1000 5zm-960 5254 825-4378 971-6-806 4378z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

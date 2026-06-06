@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12507 12507" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SU4 - 50px</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21000v29700H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-4162 -7273)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4162 7273h12507v12507H4162z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4162 7273v12506h12506V7273Z"/>
+          </g>
+          <g class="Group">
+            <g class="com.sun.star.drawing.PolyPolygonShape">
+              <path fill="none" d="M4663 7774h11502v11502H4663z" class="BoundingBox"/>
+              <path d="M4663 7774v11501h11501V7774Z"/>
+            </g>
+            <g class="Group">
+              <g class="com.sun.star.drawing.ClosedBezierShape">
+                <path fill="none" d="M5115 9136h10523v8677H5115z" class="BoundingBox"/>
+                <path fill="#fefefe" d="M12238 16554c395-255 780-528 1144-832 331-294 643-606 938-940 259-317 494-647 707-1005 183-328 338-671 451-1034 94-340 151-662 158-1017-4-204-26-394-64-590-87-340-207-597-396-881-252-314-520-538-866-726-1425-702-3123-358-4530 211-955 420-1828 963-2620 1674-439 410-842 855-1189 1358-130 198-255 401-367 613-353 722-558 1420-468 2239 62 342 158 610 326 912 266 404 566 662 971 888 799 394 1670 443 2534 343 791-108 1520-345 2254-667 345-165 686-351 1017-546"/>
+              </g>
+              <g class="com.sun.star.drawing.ClosedBezierShape">
+                <path fill="none" d="M5773 9885h9221v7226H5773z" class="BoundingBox"/>
+                <path d="M14979 11616c-70-520-321-980-763-1262-720-483-1630-527-2457-423-1403 187-2698 834-3832 1697-164 138-333 277-490 425-732 713-1400 1557-1617 2607-63 355-75 747 44 1090 33 87 67 177 109 260 226 452 672 748 1120 911 656 214 1330 226 2009 134 317-49 661-126 970-226 1015-304 1953-829 2800-1485 347-285 670-603 973-936 434-521 843-1127 1032-1793 72-270 134-601 111-875 0-37-7-88-9-124"/>
+              </g>
+              <g class="com.sun.star.drawing.ClosedBezierShape">
+                <path fill="none" d="M6263 10455h8103v6190H6263z" class="BoundingBox"/>
+                <path fill="#fefefe" d="M11609 15592c185-114 372-236 549-362 803-581 1544-1298 1983-2226 171-418 270-814 201-1271-134-603-517-941-1058-1138-1065-339-2280-7-3283 406-533 234-1055 533-1533 868-946 707-1985 1683-2191 2945-56 498 49 897 375 1267 732 717 1922 620 2825 406 758-185 1450-508 2132-895"/>
+              </g>
+              <g class="com.sun.star.drawing.ClosedBezierShape">
+                <path fill="none" d="M6981 11163h6716v4791H6981z" class="BoundingBox"/>
+                <path d="M13147 13494c147-205 304-435 401-671 87-230 147-444 147-695-19-553-464-825-945-918-690-126-1367 20-2027 225-395 149-802 292-1163 511-736 392-1433 946-1973 1597-324 415-648 972-602 1528 28 216 140 439 317 569 242 187 531 265 827 303 1006 69 1979-252 2872-714 525-249 1018-623 1460-999 248-230 481-466 686-736"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

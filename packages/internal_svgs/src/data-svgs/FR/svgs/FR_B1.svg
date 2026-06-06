@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485.336 485.336" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B1 - Sens interdit à tout véhicule</title>
+  <g style="display:inline">
+    <path d="M540 300c0 132.548-107.452 240-240 240S60 432.548 60 300 167.452 60 300 60s240 107.452 240 240z" style="color:#000;fill:#fff;fill-opacity:1;stroke:#000;stroke-width:2.5;marker:none;visibility:visible;display:inline;overflow:visible" transform="translate(-59.095 -59.095)scale(1.00588)"/>
+    <path d="M349.5 214.75c0 24.715-20.035 44.75-44.75 44.75S260 239.465 260 214.75 280.035 170 304.75 170s44.75 20.035 44.75 44.75" style="color:#000;fill:red;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.5;marker:none;visibility:visible;display:inline;overflow:visible" transform="translate(-1322.662 -860.383)scale(5.13644)"/>
+    <path d="M127.5 259.7h345v80.6h-345z" style="color:#000;fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.5;marker:none;visibility:visible;display:inline;overflow:visible" transform="translate(-57.332 -57.332)"/>
+  </g>
+</svg>

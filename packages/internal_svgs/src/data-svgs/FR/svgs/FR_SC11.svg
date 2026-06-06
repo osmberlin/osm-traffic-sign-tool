@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12521 12523" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SC11 - SC11</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21000v29700H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-3704 -7539)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="#fefefe" d="M3713 7548v12505h12503V7548Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="18" d="M3713 7548v12505h12503V7548Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4021 7853h11897v11899H4021z" class="BoundingBox"/>
+            <path fill="#00f" d="M4021 7853v11898h11896V7853Z"/>
+          </g>
+          <g class="Group">
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <path fill="none" d="M6053 13011h7799v2099H6053z" class="BoundingBox"/>
+              <path fill="#fefefe" d="M6053 15109v-180l423-3c-67 0-122-40-122-125v-1675c-3-58 61-115 122-115h479c58 6 125 64 122 118v534h1189v-320c592 170 1110 237 1686 237s1112-27 1685-237v320h1190v-534c-3-54 64-112 122-118h479c61 0 125 57 122 115v1675c0 85-55 125-122 125l423 3v180z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <path fill="none" d="M6956 14266h5994v660H6956z" class="BoundingBox"/>
+              <path fill="#00f" d="M6956 14925c57 0 121-46 121-119v-540h2381c64 161 305 307 495 307 189 0 429-146 493-307h2381v540c0 73 64 119 122 119z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <path fill="none" d="M6353 9484h7194v4099H6353z" class="BoundingBox"/>
+              <path fill="red" d="M9948 9484h2c631 0 1251 95 1798 275 546 179 1001 438 1316 749 316 312 482 665 482 1025s-166 713-482 1024c-315 312-770 571-1316 750-547 180-1167 275-1798 275-632 0-1252-95-1799-275-546-179-1001-438-1316-750-316-311-482-664-482-1024s166-713 482-1025c315-311 770-570 1316-749 547-180 1167-275 1797-275"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <path fill="none" d="M4445 16100h11054v843H4445z" class="BoundingBox"/>
+              <path fill="#fefefe" d="M4445 16167c201-43 408-67 615-67 793 0 1494 420 2381 420s1569-420 2380-420c812 0 1540 420 2427 420s1726-420 2637-420c204 0 424 15 613 67v421c-189-52-409-68-613-68-911 0-1750 422-2637 422s-1615-422-2427-422c-811 0-1493 422-2380 422s-1588-422-2381-422c-207 0-414 26-615 68z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <path fill="none" d="M4445 17276h11054v843H4445z" class="BoundingBox"/>
+              <path fill="#fefefe" d="M4445 17343c201-43 408-67 615-67 793 0 1494 420 2381 420s1569-420 2380-420c812 0 1540 420 2427 420s1726-420 2637-420c204 0 424 15 613 67v421c-189-52-409-68-613-68-911 0-1750 422-2637 422s-1615-422-2427-422c-811 0-1493 422-2380 422s-1588-422-2381-422c-207 0-414 26-615 68z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12521 12523" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SC14 - SC14</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21000v29700H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-3704 -7539)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="#fefefe" d="M3713 7548v12505h12503V7548Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="18" d="M3713 7548v12505h12503V7548Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4015 7853h11897v11899H4015z" class="BoundingBox"/>
+            <path fill="#00f" d="M4015 7853v11898h11896V7853Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <path fill="none" d="M4526 11059h10874v6216H4526z" class="BoundingBox"/>
+            <path fill="#fefefe" d="M15378 17272h20zm-9577-2327c-454 0-825 370-825 826 0 454 371 825 825 825s825-371 825-825c0-456-371-826-825-826m5945 129c416 0 756 340 756 757 0 416-340 755-756 755s-755-339-755-755c0-417 339-757 755-757m-7216-2278h680l1502 1533 368 9c230 2 266 110 266 323v768h771v-2611c0-816 1801-1755 3607-1757 1827 0 3667 928 3667 1743v2906l-2755-5c-53-442-434-785-887-785-459 0-831 346-887 790l-4078 6c-25-472-439-884-967-923-524-22-991 445-988 923h-301l2-1373h818c284-3 271-260 155-400l-757-802-216 3zm6537-380H9500c-369 0-671 303-671 672s302 671 671 671h1567c369 0 670-302 670-671s-301-672-670-672m3592 2343v-1680c0-369-301-672-670-672s-671 303-671 672v1680c0 369 302 671 671 671s670-302 670-671m-670-2115c-247 0-449 201-449 449 0 247 202 449 449 449 248 0 449-202 449-449 0-248-201-449-449-449"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M15378 17272h20zM5801 14945c-454 0-825 370-825 826 0 454 371 825 825 825s825-371 825-825c0-456-371-826-825-826zM11746 15074c416 0 756 340 756 757 0 416-340 755-756 755s-755-339-755-755c0-417 339-757 755-757z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M4530 12796h680l1502 1533 368 9c230 2 266 110 266 323v768h771v-2611c0-816 1801-1755 3607-1757 1827 0 3667 928 3667 1743v2906l-2755-5c-53-442-434-785-887-785-459 0-831 346-887 790l-4078 6c-25-472-439-884-967-923-524-22-991 445-988 923h-301l2-1373h818c284-3 271-260 155-400l-757-802-216 3z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M11067 12416H9500c-369 0-671 303-671 672s302 671 671 671h1567c369 0 670-302 670-671s-301-672-670-672zM14659 14759v-1680c0-369-301-672-670-672s-671 303-671 672v1680c0 369 302 671 671 671s670-302 670-671z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M13989 12644c-247 0-449 201-449 449 0 247 202 449 449 449 248 0 449-202 449-449 0-248-201-449-449-449z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

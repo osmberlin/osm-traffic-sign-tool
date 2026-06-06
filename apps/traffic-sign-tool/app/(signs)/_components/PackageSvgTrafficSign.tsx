@@ -46,6 +46,10 @@ const countrySvgLoaderImports: Record<
     import('@osm-traffic-signs/converter/data-svgs/PL/loaders').then((module) => ({
       default: module.SvgLoadersPL as CountrySvgLoaderMap,
     })),
+  FR: () =>
+    import('@osm-traffic-signs/converter/data-svgs/FR/loaders').then((module) => ({
+      default: module.SvgLoadersFR as CountrySvgLoaderMap,
+    })),
 }
 const loadCountrySvgLoaders = (
   countryPrefix: CountryPrefixType,

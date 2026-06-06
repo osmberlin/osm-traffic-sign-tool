@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 12521 12523" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen SC17 - Ce symbole était déjà standardisé par avant que la proposition approuvée en février 2026 ne voie le jour. De plus, ce sy</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h21000v29700H0z"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-3704 -7539)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="#fefefe" d="M3713 7548v12505h12503V7548Z"/>
+            <path fill="none" stroke="#1b1918" stroke-width="18" d="M3713 7548v12505h12503V7548Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <path fill="none" d="M4021 7853h11897v11899H4021z" class="BoundingBox"/>
+            <path fill="#00f" d="M4021 7853v11898h11896V7853Z"/>
+          </g>
+          <g class="Group">
+            <g class="Group">
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <path fill="none" d="M10619 13278h2750v5700h-2750z" class="BoundingBox"/>
+                <path fill="#fefefe" d="m13368 18976-944-5698h-1805l114 5698z"/>
+              </g>
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <path fill="none" d="M10533 8628h1582v2748h-1582z" class="BoundingBox"/>
+                <path fill="#fefefe" d="m12114 11375-449-2746h-1132l53 2746z"/>
+              </g>
+            </g>
+            <g class="Group">
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <path fill="none" d="M6561 13278h2750v5700H6561z" class="BoundingBox"/>
+                <path fill="#fefefe" d="m6561 18976 944-5698h1805l-115 5698z"/>
+              </g>
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <path fill="none" d="M7815 8628h1583v2748H7815z" class="BoundingBox"/>
+                <path fill="#fefefe" d="m7815 11375 449-2746h1132l-54 2746z"/>
+              </g>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <path fill="none" d="M4725 12069h10488v2170H4725z" class="BoundingBox"/>
+              <path fill="#fefefe" d="M9968 12791h2792c210 2 466 135 503 354l124 1093h782v-1088c-6-217 82-359 454-362l589 3v-722H4725v722l589-3c372 3 460 145 453 362v1088h782l125-1093c36-219 292-352 503-354z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

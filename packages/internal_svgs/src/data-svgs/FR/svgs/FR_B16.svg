@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="-.943 -.943 576 576" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen B16 - Signaux sonores interdits</title>
+  <circle cx="287.057" cy="287.057" r="286.969" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="287.057" cy="287.057" r="273.982" fill="red" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176"/>
+  <path fill="#fff" stroke="red" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="M444.894 397.146c56.203-80.578 42.686-190.557-31.359-255.126s-184.839-62.997-257.021 3.649l283.008 246.793zM417.433 428.6c-72.261 66.562-183.058 68.002-257.025 3.346-73.968-64.657-87.355-174.651-31.057-255.164L412.066 423.91z"/>
+  <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".176" d="m278.746 307.371-79.186-69.164-17.778-8.888-14.73-13.331v142.944l16.254-14.813 43.682-21.478zM334.357 300.421l-35.555-30.366 41.143 5.184h16.254l23.872-2.221 21.841-5.926 7.619-5.925 2.031-9.628h19.302v67.399h-19.81l-2.54-5.926-7.11-5.925-22.35-5.925-22.855-1.482z"/>
+</svg>
