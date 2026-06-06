@@ -47,14 +47,10 @@ export default defineConfig({
   ],
   ignorePatterns: [
     '**/node_modules/**',
-    '**/.next/**',
     '**/.turbo/**',
     '**/dist/**',
-    '**/out/**',
-    '**/build/**',
     '**/coverage/**',
     'apps/traffic-sign-tool/src/routeTree.gen.ts',
-    'apps/traffic-sign-tool/app/_components/catalyst/_unused/**',
     // oxlint 1.65 react-compiler ICE (Cannot emit the same block twice)
     '**/PageQuestionsQa.tsx',
     '**/TagRecommendations.tsx',

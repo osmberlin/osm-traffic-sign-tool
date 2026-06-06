@@ -6,7 +6,7 @@
   "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {
-    "bleach": "rm -rf node_modules && rm -rf .next/",
+    "bleach": "rm -rf node_modules && rm -rf dist/",
     "build": "bun run build:paraglide && bun run build:vite",
     "build:gh-pages": "bun run build && cp dist/index.html dist/404.html",
     "build:paraglide": "paraglide-js compile --project ./project.inlang --outdir ./paraglide --strategy localStorage baseLocale",

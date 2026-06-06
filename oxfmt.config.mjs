@@ -17,11 +17,8 @@ export default defineConfig({
   },
   ignorePatterns: [
     '**/node_modules/**',
-    '**/.next/**',
     '**/.turbo/**',
     '**/dist/**',
-    '**/out/**',
-    '**/build/**',
     '**/coverage/**',
   ],
 })

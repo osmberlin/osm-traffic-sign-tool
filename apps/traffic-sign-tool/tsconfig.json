@@ -29,5 +29,5 @@
     "paraglide/**/*.js",
     "**/*.test.ts"
   ],
-  "exclude": ["node_modules", "app/_components/catalyst/_unused/**"]
+  "exclude": ["node_modules"]
 }
