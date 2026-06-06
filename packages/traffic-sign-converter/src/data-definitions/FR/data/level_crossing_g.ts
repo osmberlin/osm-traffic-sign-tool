@@ -5,7 +5,8 @@ export const _level_crossing_g: SignType[] = [
     osmValuePart: 'G1',
     signId: 'G1',
     name: 'G1',
-    descriptiveName: 'G1 G1b',
+    descriptiveName:
+      'Passage à niveau sans barrière ni demi-barrière Panneau de type G (croix de Saint-André) : G1, G1a, G1b, G1c. Présignalé par un panneau A8.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

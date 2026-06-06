@@ -5,7 +5,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A1a',
     signId: 'A1a',
     name: 'A1a',
-    descriptiveName: 'A1a A1b',
+    descriptiveName:
+      'Annonce de virage Si le way est à double sens, il y a probablement un panneau symétrique à taguer en sens inverse, de l’autre côté de la section dangereuse. Sur la section dangereuse, rechercher la pr',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -30,7 +31,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A1c',
     signId: 'A1c',
     name: 'A1c',
-    descriptiveName: 'A1c A1d',
+    descriptiveName:
+      'Annonce de succession de virages Si le way est à double sens, il y a probablement un panneau (symétrique si le nombre de virages est impair) à taguer en sens inverse, de l’autre côté de la section dan',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -152,7 +154,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A7',
     signId: 'A7',
     name: 'A7',
-    descriptiveName: 'A7',
+    descriptiveName:
+      "Proximité d'un passage à niveau avec barrières À l'emplacement du croisement, dispositif de type G2 (barrières et signalisation automatique).",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -215,7 +218,7 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A9b',
     signId: 'A9b',
     name: 'A9b',
-    descriptiveName: "Sur le node d'intersection avec chaque voie ferrée :",
+    descriptiveName: 'A9b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -311,7 +314,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A15b',
     signId: 'A15b',
     name: 'A15b',
-    descriptiveName: 'A15b',
+    descriptiveName:
+      "Passage d'animaux sauvages Vous pouvez ajouter la clé direction=* sur la voie pour indiquer le côté concerné par le danger.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -382,7 +386,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A17',
     signId: 'A17',
     name: 'A17',
-    descriptiveName: 'A17',
+    descriptiveName:
+      "Feu tricolore Pour les intersections avec voies séparées, on place l'attribut sur chaque intersection. Pour les intersections plus complexes, on peut envisager l’utilisation d’une relation (à compléte",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -400,7 +405,7 @@ export const _danger_a: SignType[] = [
     signId: 'A18',
     name: 'A18',
     descriptiveName:
-      'Sur un highway=* avec : oneway=yes avant ce panneau Pas de oneway=* ou oneway=no après',
+      'Voie à double-sens La route est a double sens à partir du panneau. Contrairement aux autres panneaux de danger, celui-ci prend effet immédiatement.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -423,7 +428,8 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A19',
     signId: 'A19',
     name: 'A19',
-    descriptiveName: 'A19',
+    descriptiveName:
+      "Chute de pierres Vous pouvez ajouter la clé direction=* sur la voie pour indiquer le sur quel cote de la voie le danger s'applique si ce n'est que sur un coté.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

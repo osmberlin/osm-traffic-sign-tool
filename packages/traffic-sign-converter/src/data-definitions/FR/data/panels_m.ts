@@ -86,7 +86,7 @@ export const _panels_m: SignType[] = [
     osmValuePart: 'M4a',
     signId: 'M4a',
     name: 'M4a',
-    descriptiveName: 'Tous véhicules à moteur',
+    descriptiveName: 'M4a',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
@@ -417,7 +417,8 @@ export const _panels_m: SignType[] = [
     osmValuePart: 'M10a',
     signId: 'M10a',
     name: 'M10a',
-    descriptiveName: 'ref=N 79numéro national int_ref=E 6numéro européen',
+    descriptiveName:
+      'Les références (ref=*) s’écrivent sous la forme : “A(espace)(chiffres)” pour les autoroutes, “N(espace)(chiffres)” pour les routes nationales, “D(espace)(chiffres)” pour les routes départementales, “M',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -433,7 +434,8 @@ export const _panels_m: SignType[] = [
     osmValuePart: 'M10b',
     signId: 'M10b',
     name: 'M10b',
-    descriptiveName: 'Sortie',
+    descriptiveName:
+      "N'indiquez pas de nom si la sortie n'a pas de nom officiel (marqué en italique sur les panneaux de sortie à la droite du symbole).",
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],

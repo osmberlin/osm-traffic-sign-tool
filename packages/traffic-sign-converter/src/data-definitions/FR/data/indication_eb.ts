@@ -5,7 +5,8 @@ export const _indication_eb: SignType[] = [
     osmValuePart: 'EB10',
     signId: 'EB10',
     name: 'EB10',
-    descriptiveName: 'EB10',
+    descriptiveName:
+      'Entrée d\'agglomération Le noeud doit être placé sur le way de la route associée Ce panneau indique l\'entrée dans une zone (polygone) particulière nommée "agglomération". Cette zone permet de différenc',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

@@ -69,7 +69,8 @@ export const _priority_ab: SignType[] = [
     osmValuePart: 'AB6',
     signId: 'AB6',
     name: 'AB6',
-    descriptiveName: 'Sur la ligne de la route avec : priority_road=yes_unposted',
+    descriptiveName:
+      'Route à caractère prioritaire Les usagers de la route sur laquelle est implantée ce panneau sont prioritaires à toutes les intersections.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

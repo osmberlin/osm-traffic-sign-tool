@@ -21,7 +21,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C1b',
     signId: 'C1b',
     name: 'C1b',
-    descriptiveName: 'C1b',
+    descriptiveName:
+      'Parking à stationnement à durée limitée (parfois appelée zone bleue). La durée de stationnement est à indiquer avec une unité en anglais (ex : 30 minutes, 2 hours, 3 days, etc.).',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -151,7 +152,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C12',
     signId: 'C12',
     name: 'C12',
-    descriptiveName: 'C12',
+    descriptiveName:
+      'Le sens du way détermine le sens de circulation. Si, pour une raison ou une autre, le sens du way ne peut pas être orienté dans le sens de circulation, mettre oneway=-1.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedOnewayRecommendation(),
@@ -166,7 +168,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C13a',
     signId: 'C13a',
     name: 'C13a',
-    descriptiveName: 'C13a',
+    descriptiveName:
+      'Le panneau indique à l’entrée d’une rue que celle-ci est en impasse et imposera un demi-tour pour en resortir au même endroit. L’impasse peut souvent comporter des embranchements au delà du point où e',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -254,7 +257,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C28',
     signId: 'C28',
     name: 'C28',
-    descriptiveName: 'C28',
+    descriptiveName:
+      'La version anglaise de turn=* mentionne l\'utilisation de "merge_to_right" avec "turn:lanes" (mais la page française pas encore)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -296,7 +300,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C65a',
     signId: 'C65a',
     name: 'C65a',
-    descriptiveName: 'C65a C65b',
+    descriptiveName:
+      'Le panneau bleu FR:D46a se trouve sur les autoroutes, le panneau blanc FR:D46b sur les autres routes nationales ou départementales protégées et à chaussées séparées (de type trunk). Pensez si possible',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -319,7 +324,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C107',
     signId: 'C107',
     name: 'C107',
-    descriptiveName: 'C107',
+    descriptiveName:
+      'Route à accès réglementé, appelé aussi route pour automobiles. À ne pas confondre avec voie rapide. Pour plus de détails, consultez cette page.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -430,7 +436,8 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C207',
     signId: 'C207',
     name: 'C207',
-    descriptiveName: 'C207',
+    descriptiveName:
+      'Les autoroutes sont toujours deux ways séparés Pour les bretelles d’entrée/sortie, on utilise highway=motorway_link (et oneway=yes sauf sur les parties bidirectionnelles). La limite avec les autres ca',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedOnewayRecommendation(),

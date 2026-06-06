@@ -20,7 +20,7 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU2',
     signId: 'SU2',
     name: 'SU2',
-    descriptiveName: 'destination:symbol=detour_route[2]',
+    descriptiveName: 'Permet de caractériser un itinéraire « Bis ».',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -37,7 +37,7 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU3',
     signId: 'SU3',
     name: 'SU3',
-    descriptiveName: 'destination:ref:to=A 55',
+    descriptiveName: 'Permet d’identifier un itinéraire autoroutier.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -54,7 +54,7 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU4',
     signId: 'SU4',
     name: 'SU4',
-    descriptiveName: 'destination:symbol=ring_road[3]',
+    descriptiveName: 'Permet de caractériser une rocade.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -71,7 +71,8 @@ export const _symbols_su: SignType[] = [
     osmValuePart: 'SU5',
     signId: 'SU5',
     name: 'SU5',
-    descriptiveName: 'destination:symbol=toll[4]',
+    descriptiveName:
+      'Permet d’identifier le caractère payant de certaines autoroutes ou de certains ouvrages.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

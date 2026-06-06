@@ -53,7 +53,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B1j',
     signId: 'B1j',
     name: 'B1j',
-    descriptiveName: 'B1j',
+    descriptiveName:
+      "Répétition d'interdiction d'accès à contresens de bretelles de sortie sur les autoroutes et routes à chaussées séparées sans accès riverain. Le sens du way détermine le sens de circulation autorisé.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedOnewayRecommendation(),
@@ -156,7 +157,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B3a',
     signId: 'B3a',
     name: 'B3a',
-    descriptiveName: 'B3a',
+    descriptiveName:
+      'Interdiction aux véhicules automobiles, véhicules articulés, trains doubles ou ensemble de véhicules, affectés au transport de marchandises dont le poids total autorisé en charge ou le poids total rou',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -220,7 +222,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B5c',
     signId: 'B5c',
     name: 'B5c',
-    descriptiveName: 'B5c',
+    descriptiveName:
+      'Arrêt au poste de péage Arrêt obligatoire ou passage lent pour les véhicules munis d’un boitier électronique de télépaiement.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -291,7 +294,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B6d',
     signId: 'B6d',
     name: 'B6d',
-    descriptiveName: 'B6d',
+    descriptiveName:
+      "Arrêt et stationnement interdits Cette interdiction s'applique sur la chaussée et ses dépendances (trottoir, accotements...) à tous les véhicules. Elle s'applique du côté de la route où ce panneau est",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -345,7 +349,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B8',
     signId: 'B8',
     name: 'B8',
-    descriptiveName: 'B8 + M4f',
+    descriptiveName:
+      "Accès interdit aux véhicules affectés au transport de marchandises En Europe, hgv=no ne s'applique qu'aux véhicules de type N2 (de 3.5 t à 12 t) ou N3 (> 12 t) ; goods=no implique également les véhicu",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -508,7 +513,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B9i',
     signId: 'B9i',
     name: 'B9i',
-    descriptiveName: 'B9i',
+    descriptiveName:
+      'Accès interdit aux véhicules tractant une caravane ou une remorque de plus de 250 kg, tel que le poids total roulant autorisé, véhicule et caravane ou remorque, ne dépasse pas 3,5 t',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -525,7 +531,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B10a',
     signId: 'B10a',
     name: 'B10a',
-    descriptiveName: 'B10a',
+    descriptiveName:
+      'Accès interdit aux véhicules, véhicules articulés, trains doubles ou ensemble de véhicules dont la longueur est supérieure au nombre indiqué L’unité par défaut est le mètre.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -542,7 +549,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B11',
     signId: 'B11',
     name: 'B11',
-    descriptiveName: 'B11',
+    descriptiveName:
+      'Accès interdit aux véhicules dont la largeur, chargement compris, est supérieure au nombre indiqué L’unité par défaut est le mètre.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -559,7 +567,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B12',
     signId: 'B12',
     name: 'B12',
-    descriptiveName: 'B12',
+    descriptiveName:
+      'Accès interdit aux véhicules dont la hauteur, chargement compris, est supérieure au nombre indiqué L’unité par défaut est le mètre.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -576,7 +585,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B13',
     signId: 'B13',
     name: 'B13',
-    descriptiveName: 'B13',
+    descriptiveName:
+      'Accès interdit aux véhicules, véhicules articulés, trains doubles ou ensemble de véhicules dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué L’unité pa',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -611,7 +621,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B14[50]',
     signId: 'B14',
     name: 'B14',
-    descriptiveName: 'B14[50]',
+    descriptiveName:
+      'Limitation de vitesse. Ce panneau notifie l’interdiction de dépasser la vitesse indiquée L’unité par défaut est en France le kilomètre par heure (aux USA par exemple c’est le mile par heure ; au Canad',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedMaxspeedRecommendation('50'),
@@ -674,7 +685,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B18a',
     signId: 'B18a',
     name: 'B18a',
-    descriptiveName: 'B18a',
+    descriptiveName:
+      "Accès interdit aux véhicules transportant des marchandises explosives ou facilement inflammables, de nature et en quantité définies par l'arrêté du 29 mai 2009 relatif aux transports de marchandises d",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -691,7 +703,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B18b',
     signId: 'B18b',
     name: 'B18b',
-    descriptiveName: 'B18b',
+    descriptiveName:
+      "Accès interdit aux véhicules transportant des marchandises susceptibles de polluer les eaux, de nature et en quantité définies par l'arrêté du 29 mai 2009 relatif aux transports de marchandises danger",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -708,7 +721,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B18c',
     signId: 'B18c',
     name: 'B18c',
-    descriptiveName: 'B18c',
+    descriptiveName:
+      "Accès interdit aux véhicules transportant des marchandises dangereuses définies par l'arrêté du 29 mai 2009 relatif aux transports de marchandises dangereuses par voies terrestres (dit « arrêté TMD »)",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -1012,7 +1026,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B27a',
     signId: 'B27a',
     name: 'B27a',
-    descriptiveName: 'B27a',
+    descriptiveName:
+      'Voie réservée aux véhicules routiers de transports en commun des lignes régulières dûment autorisées par l’autorité détentrice du pouvoir de police de la circulationCf voies de bus pour des voies de b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -1159,7 +1174,8 @@ export const _prescription_b: SignType[] = [
     osmValuePart: 'B52',
     signId: 'B52',
     name: 'B52',
-    descriptiveName: 'B52',
+    descriptiveName:
+      "Entrée d'une zone de rencontre Rue ou place ouverte à différents types de véhicules qui doivent rouler à faible vitesse, voire au pas, et doivent laisser le passage aux piétons (qui restent prioritair",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedMaxspeedRecommendation('20'),

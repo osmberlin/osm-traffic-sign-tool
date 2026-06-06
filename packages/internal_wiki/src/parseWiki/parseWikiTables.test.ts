@@ -82,6 +82,28 @@ const frC1aRowHtml = `
   </tbody>
 </table>`
 
+const frSi1bRowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td>SI1b</td>
+      <td>Direction interdite aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué</td>
+      <td>destination:access:maxweightrating:goods=5.5</td>
+    </tr>
+  </tbody>
+</table>`
+
+const frSc1bRowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td>SC1b</td>
+      <td>Direction conseillée aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué</td>
+      <td>destination:access:goods:conditional=designated @ (weightrating > 5.5)</td>
+    </tr>
+  </tbody>
+</table>`
+
 const plA1RowHtml = `
 <table class="wikitable">
   <tbody>
@@ -177,6 +199,22 @@ describe('parseUniversalTable', () => {
     const $ = cheerio.load(plA1RowHtml)
     const [row] = parseUniversalTable($, 'PL')
     expect(row?.name).toBe('A-1: niebezpieczny zakręt w prawo')
+  })
+
+  test('uses long French SI sign names instead of destination tags', () => {
+    const $ = cheerio.load(frSi1bRowHtml)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(row?.name).toBe(
+      'Direction interdite aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
+    )
+  })
+
+  test('uses French SC sign names instead of conditional destination tags', () => {
+    const $ = cheerio.load(frSc1bRowHtml)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(row?.name).toBe(
+      'Direction conseillée aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
+    )
   })
 })
 

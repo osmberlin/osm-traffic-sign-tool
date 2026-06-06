@@ -376,11 +376,12 @@ const cleanWikiSignName = (rawName: string): string => {
 
 const looksLikeWikiInstructionName = (name: string): boolean => {
   const trimmed = cleanWikiSignName(name)
-  return trimmed.length > 120 || /on utilise un attibut|voir la page|ajouter un\b/i.test(trimmed)
+  return /on utilise un attibut|voir la page|ajouter un\b/i.test(trimmed)
 }
 
 const looksLikeWikiTagOnlyCell = (text: string): boolean => {
   const trimmed = text.trim()
+  if (/^destination:/i.test(trimmed) && /=/.test(trimmed)) return true
   return /^[a-z][a-z0-9:_-]*=[^=]+$/i.test(trimmed) && !trimmed.includes(' ')
 }
 
@@ -396,7 +397,6 @@ const isWikiTaggingCell = (text: string): boolean => {
     /^\d+px$/i.test(trimmed) ||
     wikiSignCodeOnly(trimmed) ||
     looksLikeWikiTagOnlyCell(trimmed) ||
-    looksLikeWikiInstructionName(trimmed) ||
     trimmed.includes('traffic_sign=') ||
     trimmed.includes('traffic_sign =') ||
     /:hazard=/i.test(trimmed)

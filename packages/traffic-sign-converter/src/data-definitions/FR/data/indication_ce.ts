@@ -280,7 +280,8 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE14',
     signId: 'CE14',
     name: 'CE14',
-    descriptiveName: 'CE14',
+    descriptiveName:
+      "Le panneau indique une installation accessible par les personnes handicapés ou à mobilité réduite. Ajouter wheelchair=yes sur l'objet utilisant ce signe.",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -295,7 +296,8 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE15a',
     signId: 'CE15a',
     name: 'CE15a',
-    descriptiveName: 'CE15a',
+    descriptiveName:
+      'Station essence ouverte 24 sur 24, 7 jours sur 7 (nécessite souvent un paiement automatique par carte si la station n’a pas de personnel de caisse à toute heure).',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -318,7 +320,8 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE15c',
     signId: 'CE15c',
     name: 'CE15c',
-    descriptiveName: 'CE15c',
+    descriptiveName:
+      'Rajouter les autres carburants distribués. Station essence ouverte 24 heures sur 24, 7 jours sur 7 (nécessite souvent un paiement automatique par carte si la station n’a pas de personnel de caisse à t',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -388,7 +391,8 @@ export const _indication_ce: SignType[] = [
     osmValuePart: 'CE18',
     signId: 'CE18',
     name: 'CE18',
-    descriptiveName: 'CE18',
+    descriptiveName:
+      'Débit de boissons ouvert 24h/24, 7j/7. La réglementation peut imposer des limitations sur la vente d’alcool à certaines heures.',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
