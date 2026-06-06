@@ -1,0 +1,34 @@
+[
+  {
+    "sign": "CA:M511",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/CA-ON_road_sign_M-511.svg",
+    "imageUrl": "https://otc.org/wp-content/uploads/2023/01/OTM-Book-18-Cycling-Facilities.pdf.pdf#page=354",
+    "name": "Bicycle route marker sign",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "CA:Rb-84",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Ontario_Rb-84.svg",
+    "imageUrl": "https://otc.org/wp-content/uploads/2023/01/OTM-Book-18-Cycling-Facilities.pdf.pdf#page=38",
+    "name": "Reserved Bicycle Lane Sign (bicycle lane immediately adjacent to the curb)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "CA:Rb-84A",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Ontario_Rb-84A.svg",
+    "imageUrl": "https://otc.org/wp-content/uploads/2023/01/OTM-Book-18-Cycling-Facilities.pdf.pdf#page=38",
+    "name": "Reserved Bicycle Lane Sign (bicycle lane is not adjacent to the curb, such as when parking lane present)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "CA:Rb-84t",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f2/CA-ON_road_sign_Rb-084t_%28E%29.svg",
+    "imageUrl": "https://otc.org/wp-content/uploads/2023/01/OTM-Book-18-Cycling-Facilities.pdf.pdf#page=38",
+    "name": "Reserved Overhead and Ground-Mounted Bicycle Lane Signs. Should be combined with CA-ON:Rb-84 or CA-ON:Rb-84A",
+    "osmTags": [],
+    "comments": ""
+  }
+]

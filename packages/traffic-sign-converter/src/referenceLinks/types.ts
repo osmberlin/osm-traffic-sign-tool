@@ -37,14 +37,14 @@ export const fullQaCapabilities = {
   debugInfo: true,
 } as const satisfies CountryQaCapabilities
 
-/** Beta catalogue: package-data QA only until wiki/taginfo snapshots exist per country. */
+/** Beta catalogue: package-data QA plus wiki/taginfo when snapshots exist per country. */
 export const betaQaCapabilities = {
   taggingQa: true,
   questionsQa: true,
   combinationsQa: true,
   allSigns: true,
-  wikiComparison: false,
-  taginfoComparison: false,
+  wikiComparison: true,
+  taginfoComparison: true,
   debugInfo: true,
 } as const satisfies CountryQaCapabilities
 

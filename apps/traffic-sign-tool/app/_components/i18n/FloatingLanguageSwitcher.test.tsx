@@ -82,7 +82,19 @@ describe('FloatingLanguageSwitcher', () => {
     await user.click(screen.getByRole('button', { name: /belgian traffic signs/i }))
 
     expect(writeCataloguePreference).toHaveBeenCalledWith('BE')
-    expect(navigate).toHaveBeenCalledWith({ to: '/$lang', params: { lang: 'BE' } })
+    expect(navigate).toHaveBeenCalledWith({ href: '/BE', search: undefined })
+  })
+
+  test('selecting catalogue preserves the current sub-route', async () => {
+    pathname.mockReturnValue('/DE/signs-qa')
+    const user = userEvent.setup()
+    render(<FloatingLanguageSwitcher />)
+
+    await user.click(screen.getAllByRole('button', { name: /change language/i })[0])
+    await user.click(screen.getByRole('button', { name: /belgian traffic signs/i }))
+
+    expect(writeCataloguePreference).toHaveBeenCalledWith('BE')
+    expect(navigate).toHaveBeenCalledWith({ href: '/BE/signs-qa', search: undefined })
   })
 
   test('on catalogue picker route no catalogue is pre-selected', async () => {

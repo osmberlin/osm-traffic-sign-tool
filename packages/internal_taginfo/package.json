@@ -14,13 +14,15 @@
     "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
     "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
     "lint": "oxlint -c ../../oxlint.config.mjs .",
-    "taginfo": "bun run taginfo:fetch",
-    "taginfo:fetch": "bun run ./src/fetch.ts && oxfmt --config ../../oxfmt.config.mjs --write ./data",
+    "taginfo": "bun run taginfo:generate",
+    "taginfo:fetch": "bun run taginfo:generate",
+    "taginfo:generate": "bun run ./src/generateTaginfoSnapshots.ts && oxfmt --config ../../oxfmt.config.mjs --write ./src/data",
     "test": "echo No tests configured",
     "test:watch": "echo No tests configured",
     "type-check": "tsc --skipLibCheck --noEmit"
   },
   "devDependencies": {
+    "@osm-traffic-signs/converter": "workspace:*",
     "cheerio": "^1.1.2",
     "zod": "^4.2.1"
   },

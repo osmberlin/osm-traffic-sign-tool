@@ -1,0 +1,294 @@
+[
+  {
+    "sign": "AU:R1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Australia_road_sign_R1-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R1-1.svg",
+    "name": "R1-1",
+    "osmTags": ["highway=stop"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Australia_road_sign_R2-2-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-2-L.svg",
+    "name": "R2-2",
+    "osmTags": ["oneway=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Australia_road_sign_R3-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R3-1.svg",
+    "name": "R3-1",
+    "osmTags": ["highway=crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/11/Australia_road_sign_R4-1_%2810%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-1_(10).svg",
+    "name": "R4-1",
+    "osmTags": ["maxspeed=10"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/Australia_R5-1_%28vertical_-_one_time%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-1_(vertical_-_one_time).svg",
+    "name": "R5-1",
+    "osmTags": ["maxstay:conditional=1"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Australia_road_sign_R6-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-1.svg",
+    "name": "R6-1",
+    "osmTags": ["overtaking=no"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/67/Australia_road_sign_R7-1-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-1-1.svg",
+    "name": "R7-1-1",
+    "osmTags": ["bus:lanes=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Australia_road_sign_R8-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R8-1.svg",
+    "name": "R8-1",
+    "osmTags": ["access=no", "bicycle=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Australia_road_sign_R9-1-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-1-1.svg",
+    "name": "R9-1-1",
+    "osmTags": ["restriction:conditional=restriction-value"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Australia_road_sign_W1-1-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-1-L.svg",
+    "name": "W1-1",
+    "osmTags": ["hazard=curve"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/53/AU_road_sign_W2-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W2-1.svg",
+    "name": "W2-1",
+    "osmTags": ["hazard=dangerous_junction"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/AU_road_sign_W3-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W3-1.svg",
+    "name": "W3-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Australia_road_sign_W4-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-1.svg",
+    "name": "W4-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/AU_road_sign_W5-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-1.svg",
+    "name": "W5-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:TC9866",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/AU-QLD_road_sign_TC9866.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_TC9866.svg",
+    "name": "QLD-TC9866",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/90/AU_road_sign_W6-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W6-1.svg",
+    "name": "W6-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/97/Australia_road_sign_W7-2-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W7-2-1.svg",
+    "name": "W7-2",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/57/Australia_road_sign_W8-2-60.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-2-60.svg",
+    "name": "W8-2",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Australia_road_sign_W9-1-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W9-1-L.svg",
+    "name": "W9-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G2",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G2-5_Major_Intersection_Direction_-_narrow_format_-road_name_%26_destination_%26_route_marker.gif",
+    "name": "G2-5",
+    "osmTags": [
+      "type=destination_sign",
+      "destination:ref=A6",
+      "destination=Ermington",
+      "destination:street=Stewart",
+      "colour:arrow=white",
+      "colour:back=green",
+      "colour:text=white"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G3",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G3-3_Minor_Intersection_Direction_Fingerboard_Sign.gif",
+    "name": "G3-3",
+    "osmTags": [
+      "type=destination_sign",
+      "destination:ref=A39",
+      "destination=Narrabri",
+      "distance=18",
+      "colour:back=green",
+      "colour:text=white"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G4-1",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G4-1_Reassurance_Direction_Sign.gif",
+    "name": "Reassurance Direction Sign",
+    "osmTags": [
+      "type=destination_sign",
+      "destination:ref=A31",
+      "destination:street=Hume",
+      "destination=Goulburn",
+      "distance=21",
+      "colour:back=green",
+      "colour:text=white"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4c/AU-NSW_road_sign_G6-254.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-254.svg",
+    "name": "G6-254",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:P2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/05/AU-VIC_road_sign_P2-V100.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_P2-V100.svg",
+    "name": "P2-V100",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Australia_G9-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G9-9.svg",
+    "name": "G9-9",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:GE2-",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/48/Australia_GE2-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE2-3.svg",
+    "name": "GE2-3",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:GE6-",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/99/Australia_GE6-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE6-9.svg",
+    "name": "GE6-9",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:GE9-",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Australia_GE9-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE9-3.svg",
+    "name": "GE9-3",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/91/Australia_D4-1-1_%28L%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_D4-1-1_(L).svg",
+    "name": "D4-1-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Australia_T1-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T1-1.svg",
+    "name": "T1-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Australia_T2-6-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T2-6-1.svg",
+    "name": "T2-6-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Australia_T3-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T3-3.svg",
+    "name": "T3-3",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b7/AU-NSW_road_sign_T4-216N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_T4-216N.svg",
+    "name": "T4-216N",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/87/Australia_T7-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T7-1.svg",
+    "name": "T7-1",
+    "osmTags": [],
+    "comments": ""
+  }
+]

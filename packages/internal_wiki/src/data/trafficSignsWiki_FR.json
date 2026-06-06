@@ -1,0 +1,2228 @@
+[
+  {
+    "sign": "FR:M1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_M1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M1.svg",
+    "name": "Distance",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fd/France_road_sign_M2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M2.svg",
+    "name": "Étendue",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M3b",
+    "name": "M3b",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M3d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/France_road_sign_M3d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M3d.svg",
+    "name": "M3d",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cd/France_road_sign_M4a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4a.svg",
+    "name": "motor_vehicle=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/32/France_road_sign_M4b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4b.svg",
+    "name": "bus=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4c.svg",
+    "name": "motorcycle=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4e",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/80/France_road_sign_M4e.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4e.svg",
+    "name": "Remorques et semi-remorques",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4g",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4c/France_road_sign_M4g.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4g.svg",
+    "name": "goods=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4i",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ea/France_road_sign_M4i.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4i.svg",
+    "name": "agricultural=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4k",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8a/France_road_sign_M4k.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4k.svg",
+    "name": "Véhicule transportant des explosifs, marchandises explosives ou inflammables",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4l",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/63/France_road_sign_M4l.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4l.svg",
+    "name": "hazmat:water=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4m",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fd/France_road_sign_M4m.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4m.svg",
+    "name": "hazmat=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4n",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ed/France_road_sign_M4n.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4n.svg",
+    "name": "disabled=* ouwheelchair=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4p",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/France_road_sign_M4p.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4p.svg",
+    "name": "foot=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4s",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b3/France_road_sign_M4s.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4s.svg",
+    "name": "carriage=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4t",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/France_road_sign_M4t.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4t.svg",
+    "name": "hand_cart=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4w",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/96/France_road_sign_M4w.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4w.svg",
+    "name": "trailer=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4x",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d0/France_road_sign_M4x.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4x.svg",
+    "name": "trailer=* oucaravan=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M4y",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/95/France_road_sign_M4y.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M4y.svg",
+    "name": "horse=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/33/France_road_sign_M5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M5.svg",
+    "name": "highway=stop",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M6a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/16/France_road_sign_M6a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M6a.svg",
+    "name": "Stationnement ou arrêt gênant ou très gênant",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M9z",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/France_road_sign_M9z-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M9z-2.svg",
+    "name": "*:conditional=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M10a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8a/France_road_sign_M10a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M10a.svg",
+    "name": "ref=N 79numéro national int_ref=E 6numéro européen",
+    "osmTags": ["ref=*)", "int_ref=*)"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:M10b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/France_road_sign_M10b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_M10b.svg",
+    "name": "Sur le nœud de jonction : highway=motorway_junction name=nom_de_la_sortie ref=numéro_de_sortie",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A1a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c1/France_road_sign_A1a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A1a.svg",
+    "name": "A1a A1b",
+    "osmTags": ["hazard=curve", "curve=hairpin)", "hazard=turn", "turn=hairpin)."],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A1c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a2/France_road_sign_A1c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A1c.svg",
+    "name": "A1c A1d",
+    "osmTags": ["hazard=turns", "turns=serpentine", "turns=extended"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C27",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/France_road_sign_A2a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A2a.svg",
+    "name": "A2aA2b",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f7/France_road_sign_A3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A3.svg",
+    "name": "Sur un way avec : traffic_calming=choker si le rétrécissement est volontaire et destiné à faire ralentir les véhicules.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A3a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/15/France_road_sign_A3a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A3a.svg",
+    "name": "A3a A3b",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/69/France_road_sign_A4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A4.svg",
+    "name": "A4 A4+M9z",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/93/France_road_sign_A6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A6.svg",
+    "name": "Sur un way avec : highway=* pour le type de route bridge=movable",
+    "osmTags": ["barrier=lift_gate", "highway=traffic_signals)"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f7/France_road_sign_A7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A7.svg",
+    "name": "Sur le node d'intersection avec chaque voie ferrée : railway=level_crossing (route) / railway=crossing (chemin uniquement piéton) crossing:barrier=* crossing:bell=* crossing:light=* crossing:on_demand",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/France_road_sign_A8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A8.svg",
+    "name": "Sur le node d'intersection avec chaque voie ferrée : railway=level_crossing (route) / railway=crossing (chemin uniquement piéton) crossing:barrier=no crossing:saltire=* crossing:bell=* crossing:light=",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A9a",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_Road_Sign_A9a.png",
+    "name": "Sur le node d'intersection :",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A9b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f2/France_road_sign_A9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A9.svg",
+    "name": "Sur le node d'intersection avec chaque voie ferrée :",
+    "osmTags": ["railway=tram_level_crossing", "railway=level_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A13a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/France_road_sign_A13a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A13a.svg",
+    "name": "Sur un way avec : hazard=school_zone à proximité d'une école hazard=children par ailleurs",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A13b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/France_road_sign_A13b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A13b.svg",
+    "name": "Sur un node avec : highway=crossing",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/France_road_sign_A14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A14.svg",
+    "name": "Sur un node avec : hazard=*",
+    "osmTags": ["hazard=*."],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A15b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/France_road_sign_A15b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A15b.svg",
+    "name": "Sur un node ou un way avec : hazard=animal_crossing hazard:animal=wild_animal",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A15c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3f/France_road_sign_A15c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A15c.svg",
+    "name": "Sur un node ou un way avec : hazard=horse_riders",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A16[10%]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5a/France_road_sign_A16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A16.svg",
+    "name": "Descente dangereuse",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/France_road_sign_A17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A17.svg",
+    "name": "Feu tricolore Pour les intersections avec voies séparées, on place l'attribut sur chaque intersection. Pour les intersections plus complexes, on peut envisager l’utilisation d’une relation (à compléte",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c5/France_road_sign_A18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A18.svg",
+    "name": "Sur un highway=* avec : oneway=yes avant ce panneau Pas de oneway=* ou oneway=no après",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/France_road_sign_A19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A19.svg",
+    "name": "Sur un node ou un way avec : hazard=falling_rocks ou hazard=rock_slide",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bd/France_road_sign_A20.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A20.svg",
+    "name": "Sur un node ou un way avec :",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/France_road_sign_A21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A21.svg",
+    "name": "Sur un node ou un way avec : hazard=cyclists",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/03/France_road_sign_A23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A23.svg",
+    "name": "Sur un node ou un way avec : hazard=low_flying_aircraft",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A24",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b2/France_road_sign_A24.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_A24.svg",
+    "name": "Sur un node ou un way avec : hazard=side_winds",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:AB1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f7/France_road_sign_AB1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_AB1.svg",
+    "name": "Priorité à droite En cas de présence d'un panonceau « Carefour dangereux », voir hazard=dangerous_junction.",
+    "osmTags": ["hazard=dangerous_junction."],
+    "comments": ""
+  },
+  {
+    "sign": "FR:AB2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9c/France_road_sign_AB2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_AB2.svg",
+    "name": "Priorité ponctuelle Panneau de signalisation d'une priorité ponctuelle. Elément wikidata Q3362280.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:AB3a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fb/France_road_sign_AB3a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_AB3a.svg",
+    "name": "Sur un node avec : highway=give_way",
+    "osmTags": ["fr:Tag:highway=give_way"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:AB4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bd/France_road_sign_AB4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_AB4.svg",
+    "name": "Sur un node avec : highway=stop",
+    "osmTags": ["fr:Tag:highway=stop."],
+    "comments": ""
+  },
+  {
+    "sign": "FR:AB6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bd/France_road_sign_AB6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_AB6.svg",
+    "name": "Sur la ligne de la route avec : priority_road=yes_unposted",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:AB7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e9/France_road_sign_AB7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_AB7.svg",
+    "name": "Fin de route à caractère prioritaire Ce panneau indique la fin du caractère prioritaire de la route en question.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:AB25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e7/France_road_sign_AB25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_AB25.svg",
+    "name": "Sur un way avec : junction=roundabout",
+    "osmTags": ["oneway=yes", "oneway=*)", "fr:Tag:junction=roundabout"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B0",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/47/France_road_sign_B0.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B0.svg",
+    "name": "Sur un way avec : access=no foot=yes (si le passage n’est pas privé) access=private pour les passages privés. access=destination pour « interdit sauf riverains ».",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c1/France_road_sign_B1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B1.svg",
+    "name": "Sur un way avec : oneway=yes Si panonceau ajouter aussi oneway:bicycle=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B1j",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/France_road_sign_B1j.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B1j.svg",
+    "name": "Sur un way avec : oneway=yes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B2a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e4/France_road_sign_B2a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B2a.svg",
+    "name": "Avec une relation de type : type=restriction restriction=no_left_turn",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B2b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0f/France_road_sign_B2b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B2b.svg",
+    "name": "Avec une relation de type : type=restriction restriction=no_right_turn",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B2c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/France_road_sign_B2c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B2c.svg",
+    "name": "Avec une relation de type : type=restriction restriction=no_u_turn",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/44/France_road_sign_B3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B3.svg",
+    "name": "Sur un way avec : overtaking=*",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B3a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7a/France_road_sign_B3a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B3a.svg",
+    "name": "Sur un way avec : overtaking:hgv=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/50/France_road_sign_B4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B4.svg",
+    "name": "Sur un node représentant le poste de douane avec : amenity=customs",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B5a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a9/France_road_sign_B5a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B5a.svg",
+    "name": "Arrêt au poste de gendarmerie",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B5b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/36/France_road_sign_B5b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B5b.svg",
+    "name": "Arrêt au poste de police",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B5c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/France_road_sign_B5c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B5c.svg",
+    "name": "Sur un node avec : barrier=toll_booth",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B6d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1b/France_road_sign_B6d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B6d.svg",
+    "name": "Sur un way avec : parking:both:restriction=no_stopping ou parking:left:restriction=no_stopping ou parking:right:restriction=no_stopping suivant le côté de la voie ou s'applique la restriction et le se",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B7a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/France_road_sign_B7a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B7a.svg",
+    "name": "Accès interdit aux véhicules à moteur à l'exception des cyclomoteurs",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B7b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/France_road_sign_B7b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B7b.svg",
+    "name": "Accès interdit à tous les véhicules à moteur",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b6/France_road_sign_B8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B8.svg",
+    "name": "Accès interdit aux véhicules affectés au transport de marchandises En Europe, hgv=no ne s'applique qu'aux véhicules de type N2 (de 3.5 t à 12 t) ou N3 (> 12 t) ; goods=no implique également les véhicu",
+    "osmTags": ["hgv=no", "goods=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/France_road_sign_B9a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9a.svg",
+    "name": "Sur un way avec : foot=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/France_road_sign_B9b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9b.svg",
+    "name": "Sur un way avec : bicycle=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/14/France_road_sign_B9c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9c.svg",
+    "name": "Sur un way avec : carriage=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3d/France_road_sign_B9d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9d.svg",
+    "name": "Sur un way avec : agricultural=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9e",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fa/France_road_sign_B9e.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9e.svg",
+    "name": "Accès interdit aux voitures à bras à l'exclusion de celles visées à l'article R.412-34 du code de la route",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9f",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3f/France_road_sign_B9f.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9f.svg",
+    "name": "Sur un way avec : bus=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9g",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b2/France_road_sign_B9g.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9g.svg",
+    "name": "Sur un way avec : moped=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9h",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/France_road_sign_B9h.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9h.svg",
+    "name": "Sur un way avec : motorcycle=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B9i",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/France_road_sign_B9i.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B9i.svg",
+    "name": "Sur un way avec : caravan=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B10a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/76/France_road_sign_B10a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B10a.svg",
+    "name": "Sur un way avec : maxlength=10",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d9/France_road_sign_B11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B11.svg",
+    "name": "Sur un way avec : maxwidth=2.5",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c9/France_road_sign_B12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B12.svg",
+    "name": "Sur un way avec : maxheight=3.5",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/France_road_sign_B13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B13.svg",
+    "name": "Sur un way avec : maxweightrating=5.5",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B13a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/42/France_road_sign_B13a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B13a.svg",
+    "name": "Sur un way avec : maxaxleload=2.5",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B14[50]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e2/France_road_sign_B14_%2850%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B14_(50).svg",
+    "name": "Limitation de vitesse. Ce panneau notifie l’interdiction de dépasser la vitesse indiquée L’unité par défaut est en France le kilomètre par heure (aux USA par exemple c’est le mile par heure ; au Canad",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6c/France_road_sign_B15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B15.svg",
+    "name": "Cédez le passage à la circulation venant en sens inverse Valeur suivant le sens de la voie (way) tracée. Voir aussi le panneau C18 .",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/09/France_road_sign_B16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B16.svg",
+    "name": "Signaux sonores interdits",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B17[70",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7f/France_road_sign_B17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B17.svg",
+    "name": "Interdiction aux véhicules de circuler sans maintenir entre eux un intervalle au moins égal au nombre indiqué",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B18a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4f/France_road_sign_B18a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B18a.svg",
+    "name": "Sur un way avec : hazmat:explosive=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B18b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/90/France_road_sign_B18b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B18b.svg",
+    "name": "Sur un way avec : hazmat:water=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B18c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/France_road_sign_B18c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B18c.svg",
+    "name": "Sur un way avec : hazmat=no",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B19[Interdit",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/33/France_road_sign_B19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B19.svg",
+    "name": "Autres interdictions dont la nature est indiquée par une inscription sur le panneau",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9c/France_road_sign_B21-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B21-1.svg",
+    "name": "B21-1",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B21b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/France_road_sign_B21b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B21b.svg",
+    "name": "Direction obligatoire à la prochaine intersection : tout droit",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B21e",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/41/France_road_sign_B21e.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B21e.svg",
+    "name": "Directions obligatoires à la prochaine intersection : à droite ou à gauche",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B22a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/82/France_road_sign_B22a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B22a.svg",
+    "name": "Sur un way avec : highway=cycleway ou highway=path et bicycle=designated si combiné (voir ci-dessous).",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B22b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b0/France_road_sign_B22b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B22b.svg",
+    "name": "Sur un way avec : highway=footway ou highway=path et foot=designated si combiné (voir ci-dessous).",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B22c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fb/France_road_sign_B22c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B22c.svg",
+    "name": "Sur un way avec : highway=bridleway",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d4/France_road_sign_B25_%2830%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B25_(30).svg",
+    "name": "Sur un way avec : minspeed=30",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B26",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0a/France_road_sign_B26.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B26.svg",
+    "name": "Chaînes à neige obligatoires sur au moins deux roues motrices",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B27a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/04/France_road_sign_B27a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B27a.svg",
+    "name": "Sur un way avec : access=* à adapter selon l'accès aux autres véhicules bus=designated bicycle=designated si la circulation des vélos est clairement autorisée.",
+    "osmTags": ["highway=busway"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B27b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/France_road_sign_B27b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B27b.svg",
+    "name": "Voie réservée aux tramways",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B29[Allumez",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/France_road_sign_B29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B29.svg",
+    "name": "Autres obligations dont la nature est mentionnée par une inscription sur le panneau",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B30[30]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/France_road_sign_B30_%2830%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B30_(30).svg",
+    "name": "Entrée d'une zone à vitesse limitée à 30 km/h",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/France_road_sign_B31.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B31.svg",
+    "name": "Fin de toutes les interdictions précédemment signalées, imposées aux véhicules en mouvement",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B33[50]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/47/France_road_sign_B33_%2850%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B33_(50).svg",
+    "name": "Fin de limitation de vitesse",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B34",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0f/France_road_sign_B34.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B34.svg",
+    "name": "Fin d'interdiction de dépassement",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B51",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/59/France_road_sign_B51_%2830%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B51_(30).svg",
+    "name": "Sortie d'une zone à vitesse limitée à 30 km/h",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B52",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/14/France_road_sign_B52.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B52.svg",
+    "name": "Entrée d'une zone de rencontre Rue ou place ouverte à différents types de véhicules qui doivent rouler à faible vitesse, voire au pas, et doivent laisser le passage aux piétons (qui restent prioritair",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B53",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1d/France_road_sign_B53.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B53.svg",
+    "name": "Sortie d'une zone de rencontre",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B54",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/81/France_road_sign_B54.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B54.svg",
+    "name": "Entrée d'aire piétonne Voir aussi le panneau C109",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B55",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ee/France_road_sign_B55.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B55.svg",
+    "name": "Sortie d'aire piétonne Voir aussi le panneau C110",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C1a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/aa/France_road_sign_C1a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C1a.svg",
+    "name": "Sur un node ou une aire fermée par un way (ou plusieurs inclus dans une relation) avec : amenity=parking",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C1b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/France_road_sign_C1b-ancien.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C1b-ancien.svg",
+    "name": "Sur un node avec : amenity=parking fee=no maxstay=2 hours pour la durée de stationnement maximum.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C1c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/France_road_sign_C1c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C1c.svg",
+    "name": "Sur un node/area avec : amenity=parking fee=yes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/France_road_sign_C3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C3.svg",
+    "name": "Remarques : Attention au feu",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C4a",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Fr-C4a_ex2-Vitesse_conseillee.gif",
+    "name": "C4a ex2",
+    "osmTags": ["recommended_speed=70", "maxspeed:advisory=*."],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/96/France_road_sign_C5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C5.svg",
+    "name": "Sur un node avec : amenity=taxi",
+    "osmTags": ["Tag:amenity=taxi"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/79/France_road_sign_C6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C6.svg",
+    "name": "Sur un node avec : highway=bus_stop",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ec/France_road_sign_C8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C8.svg",
+    "name": "Sur un node avec : highway=emergency_bay",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/France_road_sign_C12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C12.svg",
+    "name": "Sur un way avec : oneway=yes",
+    "osmTags": ["oneway=-1."],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C13a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f5/France_road_sign_C13a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C13a.svg",
+    "name": "Sur un way avec : rien ou noexit=yes",
+    "osmTags": ["noexit=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4b/France_road_sign_C18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C18.svg",
+    "name": "Sur un way avec : priority=forward",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C20a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b0/France_road_sign_C20a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C20a.svg",
+    "name": "Sur un node avec : highway=crossing",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C24a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/France_road_sign_C24a-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C24a-2.svg",
+    "name": "C24a ex3",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C28",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e9/France_road_sign_C28-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C28-3.svg",
+    "name": "Sur un way d'une route à chaussées séparées, sur le tronçon de fusion de la voie de gauche dans sa voisine à droite : c'est à dire entre le panneau de présignalisation de C28 avec panonceau de distanc",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C64a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/France_road_sign_C64a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C64a.svg",
+    "name": "Sur un node avec : barrier=toll_booth",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C65a",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Fr-C65a.gif",
+    "name": "C65a C65b",
+    "osmTags": ["highway=service", "amenity=toilets...)."],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C107",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b1/France_road_sign_C107.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C107.svg",
+    "name": "Sur un way avec : motorroad=yes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C109",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/France_road_sign_C109.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C109.svg",
+    "name": "Sur un way avec : rue piétonne highway=pedestrian + bicycle=yes si les vélos sont autorisés. pour les zones de rencontre : voir le panneau B52",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C111",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2a/France_road_sign_C111.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C111.svg",
+    "name": "C111 C112",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C113",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/88/France_road_sign_C113.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C113.svg",
+    "name": "Sur un way avec : highway=cycleway pour une chaussée exclusive aux vélos. cycleway=* pour une bande cyclable, c’est à dire une bande tracée sur la chaussée d’une route.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C115",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/France_road_sign_C115.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C115.svg",
+    "name": "Remarques : Voir fr:Bicycle pour les voies vertes.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C116",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/France_road_sign_C116.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C116.svg",
+    "name": "Remarques : Voir fr:Bicycle pour les voies vertes.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C207",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f3/France_road_sign_C207.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C207.svg",
+    "name": "Sur un way avec : highway=motorway oneway=yes",
+    "osmTags": ["highway=motorway_link", "oneway=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:C26a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c4/France_road_sign_C26a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_C26a.svg",
+    "name": "C26a et C26b",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3c/France_road_sign_CE1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE1.svg",
+    "name": "Sur un node avec : amenity=hospital pour un hôpital ou une clinique",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE2a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/France_road_sign_CE2a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE2a.svg",
+    "name": "Sur un node avec : emergency=phone",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE2b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/df/France_road_sign_CE2b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE2b.svg",
+    "name": "Sur un node avec : amenity=telephone",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE3a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/ce/France_road_sign_CE3a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE3a.svg",
+    "name": "Sur un node avec : tourism=information",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE4a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/76/France_road_sign_CE4a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE4a.svg",
+    "name": "Sur un node avec : tourism=camp_site",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE4b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f3/France_road_sign_CE4b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE4b.svg",
+    "name": "Sur un node avec : tourism=caravan_site",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE4c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9c/France_road_sign_CE4c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE4c.svg",
+    "name": "Sur un node ou area avec : tourism=camp_site caravan=yes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE5a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/14/France_road_sign_CE5a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE5a.svg",
+    "name": "Sur un node avec : tourism=hostel",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE5b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/France_road_sign_CE5b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE5b.svg",
+    "name": "Sur un node avec : tourism=bed_and_breakfast pour un gîte. tourism=guest_house pour une chambre d’hôtes.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE6a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Signal-CE6a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Signal-CE6a.svg",
+    "name": "Sur un node avec : highway=path avec foot=yes ou highway=track",
+    "osmTags": ["highway=track"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE6b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c5/France_road_sign_CE6b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE6b.svg",
+    "name": "Sur un node avec : piste:type=nordic",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/24/France_road_sign_CE7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE7.svg",
+    "name": "Sur un node avec : tourism=picnic_site",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b9/France_road_sign_CE8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE8.svg",
+    "name": "Sur un node avec : KEY=VALUE",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2a/France_road_sign_CE10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE10.svg",
+    "name": "Sur un node avec : amenity=ferry_terminal",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/ca/France_road_sign_CE12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE12.svg",
+    "name": "Sur un node avec : amenity=toilets",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/34/France_road_sign_CE14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE14.svg",
+    "name": "Sur un node ou way avec : rien ou wheelchair=*",
+    "osmTags": ["wheelchair=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE15a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a1/France_road_sign_CE15a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE15a.svg",
+    "name": "Sur un node avec : amenity=fuel pour l’essence et le diesel. opening_hours=24/7 pour les heures d’ouverture.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE15c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4d/France_road_sign_CE15c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE15c.svg",
+    "name": "Sur un node avec : amenity=fuel pour l’essence et le diesel. fuel:lpg=yes pour le GPL. opening_hours=24/7 pour les heures d’ouverture.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/France_road_sign_CE16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE16.svg",
+    "name": "Sur un node avec : amenity=restaurant opening_hours=24/7 pour les heures d’ouverture.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/France_road_sign_CE17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE17.svg",
+    "name": "Sur un node avec : tourism=hotel opening_hours=24/7 pour les heures d’ouverture.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/53/France_road_sign_CE18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE18.svg",
+    "name": "Sur un node avec : amenity=cafe opening_hours=24/7",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE20a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f3/France_road_sign_CE20a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE20a.svg",
+    "name": "Sur un node avec : aerialway=cable_car",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE20b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a3/France_road_sign_CE20b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE20b.svg",
+    "name": "Sur un node avec : aerialway=chair_lift pour un télésiège. aerialway=gondola pour une télécabine.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f7/France_road_sign_CE21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE21.svg",
+    "name": "Sur un node avec : tourism=viewpoint",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0a/France_road_sign_CE23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE23.svg",
+    "name": "Sur un node ou un area avec : leisure=playground",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE24",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/94/France_road_sign_CE24.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE24.svg",
+    "name": "Sur un node avec : amenity=sanitary_dump_station pour une station isolé ou sanitary_dump_station=yes pour une station dans l'enceinte d'un camping",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cd/France_road_sign_CE25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE25.svg",
+    "name": "CE25 euro",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE26",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e0/France_road_sign_CE26.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE26.svg",
+    "name": "Sur un node avec : amenity=compressed_air fee=no compressed_air:opening_hours=24/7",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:CE52",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9c/France_road_sign_CE52.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_CE52.svg",
+    "name": "Sur un node ou area avec : amenity=car_pooling pour une aire dédiée amenity=parking + carpool=designated pour un parking autorisant le covoiturage",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:E36a",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:%C3%8Acritchieau_frontchi%C3%A9the_Manche.jpg",
+    "name": "Entrée d’un département",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:E36b",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:FR-03-Border2.JPG",
+    "name": "Entrée d’une région",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:E31",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Mortefontaine_(Aisne)_city_limit_sign_Pouy.JPG",
+    "name": "Lieu sans panneau spécifique (lieu-dit, forêt, quartier, réserve naturelle, col…)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:EB10",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Panneau_d%27entree_d%27agglomeration.jpg",
+    "name": "Remarques : Entrée d'agglomération Le noeud doit être placé sur le way de la route associée Ce panneau indique l'entrée dans une zone (polygone) particulière nommée \"agglomération\". Cette zone permet ",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:EB20",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Panneau_de_sortie_d%27agglomeration.jpg",
+    "name": "Remarques : Sortie d'agglomération Le noeud doit être placé sur le way de la route associée Note : Dans certains cas, les deux panneaux d'entrée et de sortie d'agglomératon sont au même endroit (posés",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID01a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1e/France_road_sign_ID1a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID1a.svg",
+    "name": "Parc de stationnement",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID01b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/France_road_sign_ID1b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID1b.svg",
+    "name": "Parc relais : parc de stationnement assurant la liaison vers différents réseaux de transport en commun",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID01c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1d/France_road_sign_ID1c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID1c.svg",
+    "name": "Parc de stationnement sous vidéosurveillance",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID02",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/11/France_road_sign_ID2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID2.svg",
+    "name": "Aéroport",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID03",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/99/France_road_sign_ID3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID3.svg",
+    "name": "Hôpital ou clinique assurant les urgences",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID04",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/94/France_road_sign_ID4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID4.svg",
+    "name": "Hôpital ou clinique n'assurant pas les urgences",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID05a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/42/France_road_sign_ID5a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID5a.svg",
+    "name": "Poste d'appel d'urgence",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID05b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/25/France_road_sign_ID5b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID5b.svg",
+    "name": "Poste d'appel téléphonique",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID06",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d4/France_road_sign_ID6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID6.svg",
+    "name": "Relais d'information service",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID07",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/France_road_sign_ID7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID7.svg",
+    "name": "Installation accessible aux personnes handicapées à mobilité réduite",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID08",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/03/France_road_sign_ID8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID8.svg",
+    "name": "Terrain de camping pour tentes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID09",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8c/France_road_sign_ID9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID9.svg",
+    "name": "Terrain de camping pour caravanes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c4/France_road_sign_ID10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID10.svg",
+    "name": "Auberge de jeunesse",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/34/France_road_sign_ID11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID11.svg",
+    "name": "Emplacement pour pique-nique",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID12a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_ID12a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID12a.svg",
+    "name": "Gare ferroviaire",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID12b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a9/France_road_sign_ID12b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID12b.svg",
+    "name": "Gare de trains autos",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID13a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/11/France_road_sign_ID13a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID13a.svg",
+    "name": "Embarcadère pour bac ou car-ferry",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID13b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/10/France_road_sign_ID13b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID13b.svg",
+    "name": "Port de commerce dont le trafic annuel de marchandise est supérieur à 20 000 tonnes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID14a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b6/France_road_sign_ID14a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID14a.svg",
+    "name": "Station-service",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID14b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b7/France_road_sign_ID14b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID14b.svg",
+    "name": "Station-service assurant également le ravitaillement en gaz de pétrole liquéfié (GPL)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID14c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/84/France_road_sign_ID14c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID14c.svg",
+    "name": "Garage ou poste de dépannage",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID14d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1d/France_road_sign_ID14d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID14d.svg",
+    "name": "Poste de recharge de véhicules électriques",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID14e",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/df/France_road_sign_ID14e.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID14e.svg",
+    "name": "Poste de recharge de véhicules électriques assurant également le ravitaillement en gaz de pétrole liquéfié (GPL)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID15b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/France_road_sign_ID15b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID15b.svg",
+    "name": "Parc national",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID15c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/30/France_road_sign_ID15c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID15c.svg",
+    "name": "Réserve naturelle",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID15d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c7/France_road_sign_ID15d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID15d.svg",
+    "name": "Terrain du conservatoire du littoral et des rivages lacustres",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID15e",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/France_road_sign_ID15e.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID15e.svg",
+    "name": "Point d'accueil du public dans un espace naturel sensible",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID15f",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fd/France_road_sign_ID15f.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID15f.svg",
+    "name": "Site ayant reçu le « Label Grand Site de France »",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID16a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/34/France_road_sign_ID16a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID16a.svg",
+    "name": "Monument historique",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID16b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c6/France_road_sign_ID16b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID16b.svg",
+    "name": "Site classé",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID16c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8d/France_road_sign_ID16c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID16c.svg",
+    "name": "Site inscrit sur la liste du patrimoine mondial de l’Unesco",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID16d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/55/France_road_sign_ID16d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID16d.svg",
+    "name": "Musée ayant reçu l'appellation « musée de France »",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID16e",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/84/France_road_sign_ID16e.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID16e.svg",
+    "name": "Parc ou jardin ayant reçu le label « jardin remarquable »",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/90/France_road_sign_ID17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID17.svg",
+    "name": "Point d'accueil jeunes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/France_road_sign_ID18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID18.svg",
+    "name": "Chambre d'hôtes ou gîte",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1d/France_road_sign_ID19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID19.svg",
+    "name": "Point de vue",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID20a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/France_road_sign_ID20a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID20a.svg",
+    "name": "Base de loisirs",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID20b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/France_road_sign_ID20b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID20b.svg",
+    "name": "Centre ou promenade équestre, ranch, poney-club",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID20c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/55/France_road_sign_ID20c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID20c.svg",
+    "name": "Piscine ou centre aquatique",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID20d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/France_road_sign_ID20d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID20d.svg",
+    "name": "Plage",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID20e",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/France_road_sign_ID20e.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID20e.svg",
+    "name": "Point de mise à l'eau d'embarcations légères",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID21a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/32/France_road_sign_ID21a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID21a.svg",
+    "name": "Point de départ d'un circuit de ski de fond",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID21b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/France_road_sign_ID21b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID21b.svg",
+    "name": "Station de ski de descente",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID22",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_ID22.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID22.svg",
+    "name": "Cimetière militaire",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/23/France_road_sign_ID23_%282011%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID23_(2011).svg",
+    "name": "2011 2002 :",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID24",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/France_road_sign_ID24.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID24.svg",
+    "name": "Déchèterie",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/France_road_sign_ID25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID25.svg",
+    "name": "Hôtel",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID26a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/58/France_road_sign_ID26a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID26a.svg",
+    "name": "Restaurant",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID26b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/France_road_sign_ID26b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID26b.svg",
+    "name": "Débit de boissons ou établissement proposant des collations sommaires",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID27",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f6/France_road_sign_ID27.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID27.svg",
+    "name": "Maison de pays",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID28",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/28/France_road_sign_ID28.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID28.svg",
+    "name": "Village étape, utilisable pour les villages ayant reçu le label « village étape » décerné par le ministère chargé des routes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID29",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6d/France_road_sign_ID29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID29.svg",
+    "name": "Point d'eau potable",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID30",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4d/France_road_sign_ID30.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID30.svg",
+    "name": "Équipement concernant les autocaravanes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/55/France_road_sign_ID31.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID31.svg",
+    "name": "Toilettes",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID32",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/94/France_road_sign_ID32.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID32.svg",
+    "name": "Distributeur automatique de billets de banque",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID33a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/45/France_road_sign_ID33a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID33a.svg",
+    "name": "Produits du terroir",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID33b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/France_road_sign_ID33b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID33b.svg",
+    "name": "Produits vinicoles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID34a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1a/France_road_sign_ID34a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID34a.svg",
+    "name": "Itinéraire piétonnier",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID34b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2d/France_road_sign_ID34b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID34b.svg",
+    "name": "Itinéraire piétonnier difficilement accessible pour les personnes à mobilité réduite",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID35",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/France_road_sign_ID35.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID35.svg",
+    "name": "Zone industrielle ou parc d'activités",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID36",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/95/France_road_sign_ID36.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID36.svg",
+    "name": "Centre commercial",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID37",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/69/France_road_sign_ID37.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID37.svg",
+    "name": "Station pour les véhicules bénéficiant du label « autopartage »",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID38",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2f/France_road_sign_ID38.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID38.svg",
+    "name": "Point du réseau de distribution « écotaxe »",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:ID39",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/12/France_road_sign_ID39.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_ID39.svg",
+    "name": "Covoiturage",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SR3a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/France_road_sign_SR3a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SR3a.svg",
+    "name": "SR3a ou SR3b",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SU1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/97/France_road_sign_SU1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SU1.svg",
+    "name": "Permet d’identifier un itinéraire de substitution, dit itinéraire « S ».",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SU2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/16/France_road_sign_SU2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SU2.svg",
+    "name": "Permet de caractériser un itinéraire « Bis ».",
+    "osmTags": ["destination:symbol=detour_route[2]"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SU3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b4/France_road_sign_SU3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SU3.svg",
+    "name": "Permet d’identifier un itinéraire autoroutier.",
+    "osmTags": ["destination:ref:to=A"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SU4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/France_road_sign_SU4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SU4.svg",
+    "name": "Permet de caractériser une rocade.",
+    "osmTags": ["destination:symbol=ring_road[3]"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SU5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/85/France_road_sign_SU5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SU5.svg",
+    "name": "Permet d’identifier le caractère payant de certaines autoroutes ou de certains ouvrages.",
+    "osmTags": ["destination:symbol=toll[4]"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI1a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e1/France_road_sign_SI1a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI1a.svg",
+    "name": "Direction interdite aux véhicules affectés au transport de marchandises",
+    "osmTags": ["destination:access:goods=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI1b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7b/France_road_sign_SI1b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI1b.svg",
+    "name": "Direction interdite aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué",
+    "osmTags": ["destination:access:maxweightrating:goods=5.5"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/56/France_road_sign_SI2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI2.svg",
+    "name": "Direction interdite aux cycles",
+    "osmTags": ["destination:access:bicycle=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c1/France_road_sign_SI3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI3.svg",
+    "name": "Direction interdite aux véhicules de transport en commun de personnes",
+    "osmTags": ["destination:access:bus=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/65/France_road_sign_SI4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI4.svg",
+    "name": "Direction interdite aux cyclomoteurs",
+    "osmTags": ["destination:access:moped=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/France_road_sign_SI5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI5.svg",
+    "name": "Direction interdite aux véhicules affectés au transport de marchandises dont la longueur est supérieure au nombre indiqué",
+    "osmTags": ["destination:access:maxlength:goods=10"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/00/France_road_sign_SI6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI6.svg",
+    "name": "Direction interdite aux véhicules dont la largeur, chargement compris, est supérieure au nombre indiqué",
+    "osmTags": ["destination:access:maxwidth=2.5"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/France_road_sign_SI7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI7.svg",
+    "name": "Direction interdite aux véhicules dont la hauteur, chargement compris, est supérieure au nombre indiqué",
+    "osmTags": ["destination:access:maxheight=3.5"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f2/France_road_sign_SI8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI8.svg",
+    "name": "Direction interdite aux véhicules, véhicules articulés, trains doubles ou ensemble de véhicules dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué",
+    "osmTags": ["destination:access:maxweightrating=5.5"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f9/France_road_sign_SI9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI9.svg",
+    "name": "Direction interdite aux véhicules pesant sur un essieu plus que le nombre indiqué",
+    "osmTags": ["destination:access:maxaxleload=2.5"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ab/France_road_sign_SI10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI10.svg",
+    "name": "Direction interdite aux véhicules transportant des marchandises explosives ou facilement inflammables, de nature et en quantité définies par l'arrêté du 1er juin 2001 relatif au transport des marchand",
+    "osmTags": ["destination:access:hazmat:explosive=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/France_road_sign_SI11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI11.svg",
+    "name": "Direction interdite aux véhicules transportant des marchandises de nature à polluer les eaux, de nature et en quantité définies par l'arrêté du 1er juin 2001 relatif au transport des marchandises dang",
+    "osmTags": ["destination:access:hazmat:water=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/France_road_sign_SI12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI12.svg",
+    "name": "Direction interdite aux véhicules transportant des marchandises dangereuses définies par l'arrêté du 1er juin 2001 relatif au transport des marchandises dangereuses par route, et signalés comme tels",
+    "osmTags": ["destination:access:hazmat=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6f/France_road_sign_SI13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI13.svg",
+    "name": "Direction interdite aux motocyclettes et motocyclettes légères, au sens de l’article R.311-1 du code de la route",
+    "osmTags": ["destination:access:motorcycle=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SI14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2f/France_road_sign_SI14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SI14.svg",
+    "name": "Direction interdite aux véhicules tractant une caravane ou remorque de plus de 250 kg tel que le poids total roulant autorisé, véhicule plus caravane ou remorque ne dépasse pas 3,5 t",
+    "osmTags": ["destination:access:caravan=no"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC1a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/35/France_road_sign_SC1a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC1a.svg",
+    "name": "Direction conseillée aux véhicules affectés au transport de marchandises",
+    "osmTags": ["destination:access:goods=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC1b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1e/France_road_sign_SC1b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC1b.svg",
+    "name": "Direction conseillée aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué",
+    "osmTags": ["destination:access:goods:conditional=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/41/France_road_sign_SC2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC2.svg",
+    "name": "Direction conseillée aux cycles",
+    "osmTags": ["destination:access:bicycle=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b7/France_road_sign_SC3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC3.svg",
+    "name": "Direction conseillée aux véhicules de transport en commun de personnes",
+    "osmTags": ["destination:access:bus=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/France_road_sign_SC4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC4.svg",
+    "name": "Direction conseillée aux cyclomoteurs",
+    "osmTags": ["destination:access:moped=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/61/France_road_sign_SC5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC5.svg",
+    "name": "Direction conseillée aux véhicules affectés au transport de marchandises dont la longueur est supérieure au nombre indiqué",
+    "osmTags": ["destination:access:goods:conditional=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/France_road_sign_SC6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC6.svg",
+    "name": "Direction conseillée aux véhicules dont la largeur, chargement compris, est supérieure au nombre indiqué",
+    "osmTags": ["destination:access:conditional=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_SC7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC7.svg",
+    "name": "Direction conseillée aux véhicules dont la hauteur, chargement compris, est supérieure au nombre indiqué",
+    "osmTags": ["destination:access:conditional=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/France_road_sign_SC8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC8.svg",
+    "name": "Direction conseillée aux véhicules, véhicules articulés, trains doubles ou ensemble de véhicules dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué",
+    "osmTags": ["destination:access:conditional=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/89/France_road_sign_SC9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC9.svg",
+    "name": "Direction conseillée aux véhicules pesant sur un essieu plus que le nombre indiqué",
+    "osmTags": ["destination:access:conditional=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c5/France_road_sign_SC10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC10.svg",
+    "name": "Direction conseillée aux véhicules transportant des marchandises explosives ou facilement inflammables, de nature et en quantité définies par l'arrêté du 1erjuin 2001 relatif au transport des marchand",
+    "osmTags": ["destination:access:hazmat:explosive=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bf/France_road_sign_SC11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC11.svg",
+    "name": "Direction conseillée aux véhicules transportant des marchandises susceptibles de polluer les eaux, de nature et en quantité définies par l'arrêté du 1er juin 2001 relatif au transport des marchandises",
+    "osmTags": ["destination:access:hazmat:water=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/55/France_road_sign_SC12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC12.svg",
+    "name": "Direction conseillée aux véhicules transportant des marchandises dangereuses définies par l'arrêté du 1er juin 2001 relatif au transport des marchandises dangereuses par route, et signalés comme tels",
+    "osmTags": ["destination:access:hazmat=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1a/France_road_sign_SC13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC13.svg",
+    "name": "Direction conseillée aux motocyclettes et motocyclettes légères, au sens de l’article R.311-1 du code de la route",
+    "osmTags": ["destination:access:motorcycle=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/05/France_road_sign_SC14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC14.svg",
+    "name": "Direction conseillée aux véhicules tractant une caravane ou remorque de plus de 250 kg tel que le poids total roulant autorisé, véhicule plus caravane ou remorque ne dépasse pas 3,5 t",
+    "osmTags": ["destination:access:caravan=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/France_road_sign_SC15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_SC15.svg",
+    "name": "Direction conseillée aux véhicules dont le poids total roulant autorisé est inférieur à 3,5 t",
+    "osmTags": ["destination:access:motorcar=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:SC17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ec/SC17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:SC17.svg",
+    "name": "Indique le caractère autoroutier d'une partie de l'itinéraire permettant de rejoindre les directions indiquées[6]",
+    "osmTags": ["destination:symbol=motorway[7]"],
+    "comments": ""
+  },
+  {
+    "sign": "FR:G1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b2/FR_road_sign_G1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:FR_road_sign_G1.svg",
+    "name": "G1 G1b",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:A16[14%]",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/FR:Key:traffic_sign",
+    "name": "A16[14%]",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B14[70]",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/46/France_road_sign_B14_%2870%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B14_(70).svg",
+    "name": "B14[70]",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B19[Accès",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/FR:Key:traffic_sign",
+    "name": "B19[Accès",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B19[Dépôts",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/FR:Key:traffic_sign",
+    "name": "B19[Dépôts",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B19[Pelouses",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/FR:Key:traffic_sign",
+    "name": "B19[Pelouses",
+    "osmTags": [],
+    "comments": ""
+  }
+]

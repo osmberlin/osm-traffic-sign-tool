@@ -43,11 +43,10 @@ describe('countryCatalogueMeta', () => {
     }
   })
 
-  test('non-DE countries expose package-data QA only', () => {
+  test('all countries expose full maintainer QA including wiki and taginfo', () => {
     for (const prefix of countries) {
-      if (prefix === 'DE') continue
-      expect(getCountryCatalogueMeta(prefix).qaCapabilities.wikiComparison).toBe(false)
-      expect(getCountryCatalogueMeta(prefix).qaCapabilities.taginfoComparison).toBe(false)
+      expect(getCountryCatalogueMeta(prefix).qaCapabilities.wikiComparison).toBe(true)
+      expect(getCountryCatalogueMeta(prefix).qaCapabilities.taginfoComparison).toBe(true)
       expect(getCountryCatalogueMeta(prefix).qaCapabilities.taggingQa).toBe(true)
     }
   })

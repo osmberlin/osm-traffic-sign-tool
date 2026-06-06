@@ -1,0 +1,2047 @@
+[
+  {
+    "sign": "BE:A1a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/83/Belgian_road_sign_A1a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A1a.svg",
+    "name": "Dangerous left curve (about 150m after the sign)",
+    "osmTags": ["hazard=curve"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A1b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Belgian_road_sign_A1b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A1b.svg",
+    "name": "Dangerous right curve (about 150m after the sign)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A1c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Belgian_road_sign_A1c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A1c.svg",
+    "name": "Series of curves, first one to the left (about 150m after the sign)\nIt is possible to have multiple curves to the left and none to the right",
+    "osmTags": ["hazard=curves", "curves=serpentine*"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A1d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/Belgian_road_sign_A1d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A1d.svg",
+    "name": "Series of curves, first one to the left (about 150m after the sign)\nIt is possible to have multiple curves to the right and none to the left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Belgian_road_sign_A3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A3.svg",
+    "name": "Steep descent (about 150m after the sign)",
+    "osmTags": ["incline=-10%"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/73/Belgian_road_sign_A5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A5.svg",
+    "name": "Steep ascent (about 150m after the sign)",
+    "osmTags": ["incline=10%"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A7a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Belgian_road_sign_A7a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A7a.svg",
+    "name": "Road narrows (about 150m after the sign)",
+    "osmTags": ["traffic_calming=chicane", "traffic_calming=choker"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/47/Belgian_road_sign_A9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A9.svg",
+    "name": "Moveable bridge (about 150m after the sign)",
+    "osmTags": ["bridge=movable"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Belgian_road_sign_A11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A11.svg",
+    "name": "Quay or river bank ahead (about 150m after the sign)",
+    "osmTags": ["man_made=quay", "natural=water+water=river"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Belgian_road_sign_A13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A13.svg",
+    "name": "Bumpy road (about 150m after the sign)",
+    "osmTags": ["hazard=bump"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/10/Belgian_road_sign_A14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A14.svg",
+    "name": "Speed bump (about 150m after the sign)",
+    "osmTags": [
+      "traffic_calming=bump",
+      "traffic_calming=hump",
+      "traffic_calming=table",
+      "traffic_calming=cushion."
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Belgian_road_sign_A15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A15.svg",
+    "name": "Slippery road (about 150m after the sign)",
+    "osmTags": ["hazard=slippery"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Belgian_road_sign_A17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A17.svg",
+    "name": "Loose chippings (about 150m after the sign)",
+    "osmTags": ["hazard=loose_gravel"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Belgian_road_sign_A19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A19.svg",
+    "name": "Falling rocks (about 150m after the sign)",
+    "osmTags": ["hazard=falling_rocks"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Belgian_road_sign_A21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A21.svg",
+    "name": "Pedestrian crossing (about 150m after the sign)",
+    "osmTags": ["hazard=pedestrians", "highway=crossing", "crossing_ref=zebra"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/22/Belgian_road_sign_A23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A23.svg",
+    "name": "Place where a lot of children come (about 150m after the sign)",
+    "osmTags": ["hazard=children", "hazard=school_zone"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Belgian_road_sign_A25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A25.svg",
+    "name": "Bicycle and moped crossing or place where bicyclists and mopeds exit the cycleway and enter the road (about 150m after the sign)",
+    "osmTags": ["hazard=cyclists"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A27",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/81/Belgian_road_sign_A27.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A27.svg",
+    "name": "Wild animal crossing (about 150m after the sign)",
+    "osmTags": ["hazard=animal_crossing", "hazard:animal=wild_animals"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A29",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Belgian_road_sign_A29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A29.svg",
+    "name": "Cattle crossing (about 150m after the sign)",
+    "osmTags": ["hazard=animal_crossing", "hazard:animal=livestock"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Belgian_road_sign_A31.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A31.svg",
+    "name": "Construction (about 150m after the sign)",
+    "osmTags": ["hazard=roadworks"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A33",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/94/Belgian_road_sign_A33.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A33.svg",
+    "name": "Traffic lights (about 150m after the sign)",
+    "osmTags": ["highway=traffic_signals"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A35",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/Belgian_road_sign_A35.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A35.svg",
+    "name": "Low flying aircraft (about 150m after the sign)",
+    "osmTags": ["hazard=low_flying_aircraft"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A37",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Belgian_road_sign_A37.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A37.svg",
+    "name": "Side wind (about 150m after the sign)",
+    "osmTags": ["hazard=side_winds"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A39",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Belgian_road_sign_A39.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A39.svg",
+    "name": "Two-way traffic after part with one-way traffic",
+    "osmTags": ["oneway=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A41",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Belgian_road_sign_A41.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A41.svg",
+    "name": "Railway crossing with gates (about 150m after the sign)",
+    "osmTags": ["railway=level_crossing", "crossing:barrier=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A43",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/81/Belgian_road_sign_A43.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A43.svg",
+    "name": "Railway crossing without gates (about 150m after the sign)",
+    "osmTags": ["railway=level_crossing", "crossing:barrier=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A45",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/Belgian_road_sign_A45.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A45.svg",
+    "name": "Railway with single track crossing",
+    "osmTags": ["railway=level_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A47",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Belgian_road_sign_A47.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A47.svg",
+    "name": "Railway with two or more tracks crossing",
+    "osmTags": ["railway=level_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A49",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Belgian_road_sign_A49.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A49.svg",
+    "name": "Tram crossing (about 150m after the sign)",
+    "osmTags": ["railway=level_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A50",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/58/Belgian_road_sign_A50.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A50.svg",
+    "name": "Queues are likely (mostly used on dynamic signs)",
+    "osmTags": ["hazard=queues_likely"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:A51",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Belgian_road_sign_A51.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_A51.svg",
+    "name": "Caution sign. A sign under it details the danger",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/15/Belgian_road_sign_B1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B1.svg",
+    "name": "Give way",
+    "osmTags": ["highway=give_way"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B1+M1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/15/Belgian_road_sign_B1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B1.svg",
+    "name": "Give way, only applies to cyclists",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B1+M8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/15/Belgian_road_sign_B1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B1.svg",
+    "name": "Give way, only applies to bicycles and motorcycles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/15/Belgian_road_sign_B1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B1.svg",
+    "name": "B1 sign ahead at given distance",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Belgian_road_sign_B5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B5.svg",
+    "name": "Stop and give way",
+    "osmTags": ["highway=stop"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B5+M1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Belgian_road_sign_B5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B5.svg",
+    "name": "Stop and give way, only applies to cyclists",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B5+M8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Belgian_road_sign_B5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B5.svg",
+    "name": "Stop and give way, only applies to cyclists and motorcycles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/15/Belgian_road_sign_B1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B1.svg",
+    "name": "B5 sign ahead at given distance",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Belgian_road_sign_B9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B9.svg",
+    "name": "Priority road. Not allowed to park along this road.",
+    "osmTags": ["priority_road=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/66/Belgian_road_sign_B11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B11.svg",
+    "name": "End of priority road",
+    "osmTags": ["priority_road=end"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/66/Belgian_road_sign_B11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B11.svg",
+    "name": "B11 sign ahead at given distance",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/24/Belgian_traffic_sign_B15a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_B15a.svg",
+    "name": "Priority at next intersection",
+    "osmTags": ["priority_road=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/65/Belgian_road_sign_B17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B17.svg",
+    "name": "Intersection with priority to the right",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Belgian_road_sign_B19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B19.svg",
+    "name": "Narrow passage, give way to traffic from opposite side",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Belgian_road_sign_B21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B21.svg",
+    "name": "Narrow passage, priority over traffic from opposite side",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B22",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Belgian_road_sign_B22.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B22.svg",
+    "name": "Cyclists can cross the traffic lights to turn right when the traffic lights are red or amber, if they give way.",
+    "osmTags": ["red_turn:right:bicycle=yes", "red_turn:right:speed_pedelec=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:B23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/59/Belgian_road_sign_B23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_B23.svg",
+    "name": "Cyclists can cross the traffic lights to go straight on when the traffic lights are red or amber, if they give way. In rare cases, B22 and B23 can occur together",
+    "osmTags": ["red_turn:straight:bicycle=yes", "red_turn:straight:speed_pedelec=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Belgian_traffic_sign_C1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_C1.svg",
+    "name": "Forbidden direction for all drivers.",
+    "osmTags": ["oneway=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/Belgian_road_sign_C3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C3.svg",
+    "name": "No entry, in both directions, for all drivers.",
+    "osmTags": ["vehicle=no", "horse=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Belgian_road_sign_C5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C5.svg",
+    "name": "No entry for drivers of motor vehicles with more than two wheels and motorcycles with side-car",
+    "osmTags": ["motor_vehicle=no", "motorcycle=yes", "mofa=yes", "moped=yes", "speed_pedelec=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/88/Belgian_road_sign_C6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C6.svg",
+    "name": "No entry for drivers of motor vehicles with four wheels, constructed for unpaved surfaces, with an open body work, handlebars like a motorcycle and a seat. (For example ATVs...)",
+    "osmTags": ["atv=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Belgian_road_sign_C7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C7.svg",
+    "name": "No entry for drivers motorcycles",
+    "osmTags": ["motorcycle=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Belgian_road_sign_C9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C9.svg",
+    "name": "No entry for drivers of mopeds (and mofas)",
+    "osmTags": ["mofa=no", "moped=no", "speed_pedelec=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Belgian_road_sign_C11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C11.svg",
+    "name": "No entry for drivers of 'rijwielen'/'cycles'. (For example bicycles, tricycles ...)",
+    "osmTags": ["bicycle=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Belgian_road_sign_C13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C13.svg",
+    "name": "No entry for drivers of carriages",
+    "osmTags": ["carriage=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/80/Belgian_road_sign_C15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C15.svg",
+    "name": "No entry for horse riders",
+    "osmTags": ["horse=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Belgian_road_sign_C17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C17.svg",
+    "name": "No entry for drivers of hand-carts",
+    "osmTags": ["hand_cart=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Belgian_road_sign_C19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C19.svg",
+    "name": "No entry for pedestrians",
+    "osmTags": ["foot=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/59/Belgian_road_sign_C21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C21.svg",
+    "name": "No entry for drivers of vehicles with more mass than indicated",
+    "osmTags": ["maxweight=5.5"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C22",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Belgian_road_sign_C22.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C22.svg",
+    "name": "No entry for drivers of coaches (fr: autocars) (this sign doesn't prohibit buses used as public transport)",
+    "osmTags": ["tourist_bus=no", "coach=no", "bus=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Belgian_road_sign_C23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C23.svg",
+    "name": "No entry for drivers of motor vehicles and combination vehicles designed and constructed for the transport of goods.",
+    "osmTags": ["goods=no", "hgv=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C24a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/37/Belgian_road_sign_C24a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C24a.svg",
+    "name": "No entry for drivers of vehicles transporting hazardous substances",
+    "osmTags": ["hazmat=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C24b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/55/Belgian_road_sign_C24b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C24b.svg",
+    "name": "No entry for drivers of vehicles transporting inflammable or explosive substances",
+    "osmTags": ["hazmat:explosive=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C24c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Belgian_road_sign_C24c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C24c.svg",
+    "name": "No entry for drivers of vehicles transporting polluting substances",
+    "osmTags": ["hazmat:water=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Belgian_road_sign_C25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C25.svg",
+    "name": "No entry for drivers of vehicles or combination vehicles which are longer than indicated (including the cargo)",
+    "osmTags": ["maxlength=10"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C27",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Belgian_road_sign_C27.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C27.svg",
+    "name": "No entry for drivers of vehicles which are wider than indicated (including the cargo)",
+    "osmTags": ["maxwidth=2.5"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C29",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Belgian_road_sign_C29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C29.svg",
+    "name": "No entry for drivers of vehicles which are higher than indicated (including the cargo)",
+    "osmTags": ["maxheight=3.5"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/52/Belgian_road_sign_C31g.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C31g.svg",
+    "name": "No turn allowed in the direction inicated by the arrow at the next intersection",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C33",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Belgian_road_sign_C33.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C33.svg",
+    "name": "No u-turn allowed until and including the next intersection",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C35",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Belgian_road_sign_C35.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C35.svg",
+    "name": "No overtaking of carriages and vehicles with more than two wheels until the next intersection",
+    "osmTags": ["overtaking=no", "overtaking=forward", "overtaking=backward"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C37",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Belgian_road_sign_C37.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C37.svg",
+    "name": "End of overtaking prohibition from sign C35",
+    "osmTags": ["overtaking=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C39",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Belgian_road_sign_C39.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C39.svg",
+    "name": "No overtaking of carriages or vehicles with more than two wheels by drivers of vehicles or combination vehicles used for goods transport with maximum allowed mass over 3500kg until the next intersection",
+    "osmTags": ["overtaking:hgv=no", "overtaking:hgv=forward", "overtaking:hgv=backward"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C41",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/65/Belgian_road_sign_C41.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C41.svg",
+    "name": "End of overtaking prohibition from sign C39",
+    "osmTags": ["overtaking=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C43",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Belgian_traffic_sign_C43_70.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_C43_70.svg",
+    "name": "Maximum speed is as indicated until the next intersection, or until another (zonal) C43 sign, or until the sign that indicates the start or end of a built up area, living street or pedestrian zone.\nWhen the sign C43 indicates \"30\" and is put above a F1 sign, the maximum speed applies to the entire built-up area.",
+    "osmTags": ["maxspeed=70"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C45",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Belgian_traffic_sign_C45_50.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_C45_50.svg",
+    "name": "End of speed limit from sign C43",
+    "osmTags": ["maxspeed=50", "maxspeed=30", "maxspeed=70", "maxspeed=90", "maxspeed=120"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C46",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/88/Belgian_road_sign_C46.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C46.svg",
+    "name": "End of all prohibitions imposed by other signs to all moving vehicles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C47",
+    "imageSvg": "/w/images/5/55/Belgium-trafficsign-c47.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-c47.svg",
+    "name": "Toll booths. No driving through without stopping",
+    "osmTags": ["barrier=toll_booth"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C48",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/83/Belgian_road_sign_C48.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C48.svg",
+    "name": "Not allowed to use cruise control until the next intersection\nA sign with a maximum mass can be added so it only applies to vehicles with maximum allowed mass higher than indicated",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C49",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Belgian_road_sign_C49.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_C49.svg",
+    "name": "End of prohibition imposed by sign C48",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C5 + C7",
+    "imageSvg": "/w/images/8/88/Belgium-trafficsign-C5-C7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-C5-C7.svg",
+    "name": "No entry for vehicles with more than two wheels and motorcycles",
+    "osmTags": ["motor_vehicle=no", "mofa=yes", "moped=yes", "speed_pedelec=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C5 + C7 + C9",
+    "imageSvg": "/w/images/6/69/Belgium-trafficsign-C5-C7-C9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-C5-C7-C9.svg",
+    "name": "No entry for vehicles with more than two wheels, motorcycles and mopeds (class A, B and P)",
+    "osmTags": ["motor_vehicle=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:C11 + C9",
+    "imageSvg": "/w/images/a/a4/Belgium-trafficsign-C11-C9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-C11-C9.svg",
+    "name": "No entry for 'rijwielen'/'cycles' and mopeds (class A, B and P)",
+    "osmTags": ["bicycle=no", "mofa=no", "moped=no", "speed_pedelec=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Belgian_road_sign_D01c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D01c.svg",
+    "name": "Mandatory to follow the direction indicated by the arrow",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Belgian_road_sign_D03.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D03.svg",
+    "name": "Mandatory to follow one of the directions indicated the arrows",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Belgian_road_sign_D04.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D04.svg",
+    "name": "Mandatory for vehicles with dangerous goods to follow the direction indicated by the arrow",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/87/Belgian_road_sign_D05.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D05.svg",
+    "name": "Roundabout",
+    "osmTags": ["junction=roundabout"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Belgian_road_sign_D07.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D07.svg",
+    "name": "Mandatory cycleway (cyclists and mofas must use it. Pedestrians are allowed to use it if there is no sidewalk or verge. Mopeds are allowed to use it where speed limit is below 50 km/h. Mopeds must use it where speed limit is above 50 km/h. Speed pedelecs follow the same rules as mopeds. Other road users cannot use it)",
+    "osmTags": [
+      "cycleway=track.",
+      "cycleway=lane.)",
+      "highway=cycleway",
+      "foot=yes/no",
+      "bicycle=designated",
+      "mofa=designated",
+      "moped=yes",
+      "speed_pedelec=yes.",
+      "bicycle=use_sidepath",
+      "mofa=use_sidepath",
+      "moped=use_sidepath",
+      "speed_pedelec=use_sidepath",
+      "cycleway=track",
+      "highway=cycleway\""
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/86/Belgian_road_sign_D09.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D09.svg",
+    "name": "Part of the road reserved for pedestrians, cyclists and mofas (also mandatory to use it)",
+    "osmTags": [
+      "cycleway=track",
+      "cycleway:foot=designated",
+      "cycleway:segregated=yes",
+      "highway=cycleway",
+      "foot=designated",
+      "bicycle=designated",
+      "mofa=designated",
+      "speed_pedelec=yes",
+      "moped=no",
+      "segregated=yes",
+      "segregated=no",
+      "highway=cycleway\""
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Belgian_road_sign_D10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D10.svg",
+    "name": "Part of the road reserved for cyclists and pedestrians (also mandatory to use it)",
+    "osmTags": [
+      "cycleway=track",
+      "cycleway:foot=designated",
+      "cycleway:mofa=no",
+      "cycleway:moped=no",
+      "cycleway:speed_pedelec=no",
+      "segregated=no.",
+      "highway=cycleway",
+      "foot=designated",
+      "bicycle=designated",
+      "mofa=no",
+      "moped=no",
+      "speed_pedelec=no",
+      "segregated=no",
+      "highway=cycleway\""
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Belgian_road_sign_D11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D11.svg",
+    "name": "Mandatory footway (pedestrians must use it, no other road user allowed)",
+    "osmTags": ["highway=footway", "foot=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:D13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Belgian_road_sign_D13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_D13.svg",
+    "name": "Mandatory part of the road for horse riders (horse riders must use it, no other road user allowed)",
+    "osmTags": ["highway=bridleway", "horse=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Belgian_traffic_sign_E1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E1.svg",
+    "name": "No parking allowed. An extra sign can indicate when the prohibition is in force.",
+    "osmTags": ["parking:side:restriction=no_parking", "parking:both:restriction=no_parking"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Belgian_traffic_sign_E3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E3.svg",
+    "name": "No parking or standing still allowed. An extra sign can indicate when the prohibition is in force.",
+    "osmTags": ["parking:side:restriction=no_stopping", "parking:left:restriction=no_stopping"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/60/Belgian_traffic_sign_E5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E5.svg",
+    "name": "No parking allowed on this side of the road from 1st day of the month until the 15th",
+    "osmTags": ["parking:side:restriction:conditional=no_parking"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/Belgian_traffic_sign_E7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E7.svg",
+    "name": "No parking allowed on this side of the road from the 16th day of the month until the last",
+    "osmTags": ["parking:side:restriction:conditional=no_parking"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/93/Belgian_traffic_sign_E9a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9a.svg",
+    "name": "Parking allowed",
+    "osmTags": ["amenity=parking", "parking:side=separate"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Belgian_traffic_sign_E9b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9b.svg",
+    "name": "Parking exclusively for motorcycles, motorcars and minibuses",
+    "osmTags": [
+      "amenity=parking",
+      "access=no",
+      "motorcycle=yes",
+      "motorcar=yes",
+      "parking:side=separate",
+      "parking:side:access=no",
+      "parking:side:motorcycle=yes",
+      "parking:side:motorcar=yes"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Belgian_traffic_sign_E9c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9c.svg",
+    "name": "Parking exclusively for lorries",
+    "osmTags": [
+      "amenity=parking",
+      "access=no",
+      "goods=yes",
+      "hgv=yes",
+      "parking:side=separate",
+      "parking:side:access=no",
+      "parking:side:goods=yes",
+      "parking:side:hgv=yes"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/Belgian_traffic_sign_E9d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9d.svg",
+    "name": "Parking exclusively for coaches and tourist buses (NL: autocars)",
+    "osmTags": [
+      "amenity=parking",
+      "access=no",
+      "tourist_bus=yes",
+      "parking:side=separate",
+      "parking:side:access=no",
+      "parking:side:tourist_bus=yes"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9e",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/37/Belgian_traffic_sign_E9e.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9e.svg",
+    "name": "Parking mandatory on pavement or verge",
+    "osmTags": [
+      "parking:side:orientation=parallel",
+      "parking:side=on_kerb",
+      "amenity=parking",
+      "parking=on_kerb",
+      "orientation=parallel",
+      "parking:side=separate"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9f",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Belgian_traffic_sign_E9f.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9f.svg",
+    "name": "Parking mandatory partly on pavement or verge",
+    "osmTags": [
+      "parking:side:orientation=parallel",
+      "parking:side=half_on_kerb",
+      "amenity=parking",
+      "parking=half_on_kerb",
+      "orientation=parallel",
+      "parking:side=separate"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9g",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/19/Belgian_traffic_sign_E9g.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9g.svg",
+    "name": "Parking mandatory on the roadway",
+    "osmTags": [
+      "parking:side:orientation=parallel",
+      "parking:side=lane",
+      "amenity=parking",
+      "parking=lane",
+      "orientation=parallel",
+      "parking:side=separate"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9h",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/86/Belgian_traffic_sign_E9h.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9h.svg",
+    "name": "Parking exclusively for motorhomes",
+    "osmTags": [
+      "parking:side:access=no",
+      "parking:side:motorhome=yes",
+      "amenity=parking",
+      "access=no",
+      "motorhome=yes",
+      "parking:side=separate"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9i",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/Belgian_traffic_sign_E9i.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9i.svg",
+    "name": "Parking exclusively for motorcycles",
+    "osmTags": [
+      "parking:side:access=no",
+      "parking:side:motorcycle=yes",
+      "amenity=parking",
+      "access=no",
+      "motorcycle=yes",
+      "parking:side=separate",
+      "amenity=motorcycle_parking"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E9j",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Belgian_traffic_sign_E9j.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E9j.svg",
+    "name": "parking alternates over time between different vehicle classes",
+    "osmTags": [
+      "parking:side:access=no",
+      ":conditional=designated",
+      "parking:side:bicycle:conditional=designated",
+      "parking:side:motorcar:conditional=designated",
+      "amenity=parking",
+      "access=no",
+      "bicycle:conditional=designated",
+      "motorcar:conditional=designated",
+      "parking:side=separate"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:E11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/76/Belgian_traffic_sign_E11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_E11.svg",
+    "name": "Is put above an F1* sign. Within the whole built-up area, parking only allowed on the side of the road with odd-numbered houses between days 1 and 15 of the month, even numbers otherwise.",
+    "osmTags": ["parking:side:restriction:reason=BE:E11"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Belgian_road_sign_F1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F1.svg",
+    "name": "Start of built-up area\n\n\nF1 is an old type of sign, no longer in use since 2015\nSigns F1a and F1b may have the name of the built-up area on them",
+    "osmTags": [
+      "maxspeed=50",
+      "source:maxspeed=BE-VLG:urban",
+      "source:maxspeed=BE-WAL:urban",
+      "maxspeed=30",
+      "source:maxspeed=BE-BRU:urban"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Belgian_road_sign_F3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F3.svg",
+    "name": "End of built-up area\n\n\nF3 is an old type of sign, no longer in use since 2015\nSigns F3a and F3b may have the name of the built-up area on them",
+    "osmTags": [
+      "maxspeed=70",
+      "source:maxspeed=BE-VLG:rural",
+      "maxspeed:type=BE-VLG:rural)Outside",
+      "maxspeed=90",
+      "source:maxspeed=BE-WAL:rural",
+      "maxspeed:type=BE-WAL:rural)Outside"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F4a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Belgian_traffic_sign_F4a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_F4a.svg",
+    "name": "Start of zone with speed limit 30km/h\nIf used to indicate a school zone, sign A23 is added above.",
+    "osmTags": ["maxspeed=30"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F4b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/34/Belgian_traffic_sign_F4b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_F4b.svg",
+    "name": "End of zone with speed limit 30km/h",
+    "osmTags": [
+      "maxspeed=50",
+      "source:maxspeed=BE-VLG:urban",
+      "source:maxspeed=BE-WAL:urban",
+      "maxspeed=70",
+      "source:maxspeed=BE-VLG:rural",
+      "maxspeed=90",
+      "source:maxspeed=BE-WAL:rural"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/be/Belgian_road_sign_F5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F5.svg",
+    "name": "Start of motorway",
+    "osmTags": ["highway=motorway", "highway=motorway_link", "maxspeed=120", "minspeed=70"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Belgian_road_sign_F7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F7.svg",
+    "name": "End of motorway",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Belgian_road_sign_F8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F8.svg",
+    "name": "Tunnel",
+    "osmTags": ["tunnel=yes", "layer=-1"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Belgian_road_sign_F9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F9.svg",
+    "name": "Start of \"autoweg\"/\"route pour automobiles\"",
+    "osmTags": ["motorroad=yes."],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Belgian_road_sign_F11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F11.svg",
+    "name": "End of \"autoweg\"/\"route pour automobiles\"",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F12a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/34/Belgian_road_sign_F12a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F12a.svg",
+    "name": "Start of \"woonerf\"/\"zone résidentielle\" or \"erf\"/\"zone de rencontre\"",
+    "osmTags": [
+      "highway=living_street",
+      "foot=designated",
+      "maxspeed=20",
+      "source:maxspeed=BE:living_street",
+      "maxspeed:type=BE:living_street)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F12b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Belgian_road_sign_F12b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F12b.svg",
+    "name": "End of \"woonerf\"/\"zone résidentielle\" or \"erf\"/\"zone de rencontre\"",
+    "osmTags": [
+      "maxspeed=50",
+      "source:maxspeed=BE-VLG:urban",
+      "source:maxspeed=BE-WAL:urban",
+      "maxspeed=30",
+      "source:maxspeed=BE-BRU:urban",
+      "maxspeed=70",
+      "source:maxspeed=BE-VLG:rural",
+      "maxspeed=90",
+      "source:maxspeed=BE-WAL:rural"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Belgian_road_sign_F13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F13.svg",
+    "name": "Indicates choice of direction for different lanes at intersection",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/Belgian_road_sign_F14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F14.svg",
+    "name": "Area where cyclists and drivers of mopeds can wait at an intersection with traffic lights",
+    "osmTags": ["cycleway=asl"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/44/Belgian_road_sign_F15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F15.svg",
+    "name": "Indicating the direction you're heading to if you follow the lanes below the arrows",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F17",
+    "imageSvg": "/w/images/8/89/Belgium-trafficsign-f17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-f17.svg",
+    "name": "Traffic signs lose their meaning F17 (text) Replaced by F17(symbol) on 01/01/2027 wegcode.be\nIndicating a lane reserved for buses",
+    "osmTags": ["psv:lanes=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/58/Belgian_road_sign_F18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F18.svg",
+    "name": "Traffic signs lose their meaning F17 (text) Replaced by F17(symbol) on 01/01/2027 wegcode.be\nIndicating lanes reserved for public transport vehicles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Belgian_road_sign_F19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F19.svg",
+    "name": "Road with one-way traffic",
+    "osmTags": ["oneway=yes", "oneway=yes.", "oneway=-1"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Belgian_road_sign_F21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F21.svg",
+    "name": "Allowed to pass the sign left or right",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F23a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Belgian_road_sign_F23a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F23a.svg",
+    "name": "N-road number sign (national road)",
+    "osmTags": ["ref=N3", "nat_ref=N3"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F23b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/Belgian_road_sign_F23b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F23b.svg",
+    "name": "A-road number sign (motorway)",
+    "osmTags": ["ref=A54", "nat_ref=A54"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F23c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Belgian_road_sign_F23c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F23c.svg",
+    "name": "E-road number sign (European motorway)",
+    "osmTags": ["ref=E40", "int_ref=E"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F23d",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Belgian_road_sign_F23d.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F23d.svg",
+    "name": "R-road number (ring road)",
+    "osmTags": ["ref=R0", "nat_ref=R0"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Belgian_road_sign_F25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F25.svg",
+    "name": "Sign showing possible directions",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F27",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/41/Belgian_road_sign_F27.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F27.svg",
+    "name": "Sign showing possible directions",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F29",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Belgian_road_sign_F29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F29.svg",
+    "name": "Arrow indicating direction of a place (village, city...)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Belgian_road_sign_F31.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F31.svg",
+    "name": "Arrow indicating direction of a place. You'll have to follow a motorway.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F33a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/14/Belgian_road_sign_F33a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F33a.svg",
+    "name": "Arrow indicating direction of a place (airport, port, industrial area...)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F33b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/19/Belgian_road_sign_F33b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F33b.svg",
+    "name": "Arrow indicating direction of a touristic valley or waterway",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F33c",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/87/Belgian_road_sign_F33c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F33c.svg",
+    "name": "Arrow indicating direction of a place (touristic location, sport centre...)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F34a",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-f34a.jpg",
+    "name": "Arrow indicating direction of a place (station, police, cemetery, post office...)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F34b1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Belgian_road_sign_F34b1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F34b1.svg",
+    "name": "Arrow indicating direction of a place for indicated categories of vehicles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F34c1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Belgian_road_sign_F34c1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F34c1.svg",
+    "name": "Arrow indicating direction of a touristic location for indicated categories of vehicles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F34c2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Belgian_road_sign_F34c2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F34c2.svg",
+    "name": "Arrow indicating direction of a touristic location for indicated categories of vehicles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F35",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Belgian_road_sign_F35.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F35.svg",
+    "name": "Arrow indicating direction of a touristic location",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F37",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Belgian_road_sign_F37.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F37.svg",
+    "name": "Arrow indicating direction of a hotel, motel, youth hostel, camping terrain, restaurant...",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F39",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/Belgian_road_sign_F39.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F39.svg",
+    "name": "Sign announcing diversion",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F41",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Belgian_road_sign_F41.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F41.svg",
+    "name": "Arrow indicating direction to follow for the diversion",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F43",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/57/Belgian_road_sign_F43.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F43.svg",
+    "name": "Municipality border",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F45",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Belgian_road_sign_F45.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F45.svg",
+    "name": "No exit",
+    "osmTags": ["noexit=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F45b",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Belgian_road_sign_F45b.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F45b.svg",
+    "name": "No exit, except pedestrians and bicycles",
+    "osmTags": ["noexit=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F47",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Belgian_road_sign_F47.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F47.svg",
+    "name": "End of road works",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F49",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Belgian_road_sign_F49.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F49.svg",
+    "name": "Pedestrian crossing",
+    "osmTags": ["highway=crossing", "crossing_ref=zebra"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F50",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Belgian_road_sign_F50.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F50.svg",
+    "name": "Bicycle and moped crossing",
+    "osmTags": ["highway=crossing", "bicycle=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F50bis",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Belgian_road_sign_F50bis.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F50bis.svg",
+    "name": "Vehicles that turn right cross a bicycle and moped crossing",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F51a",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/Belgian_road_sign_F51.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F51.svg",
+    "name": "Underground pedestrian crossing",
+    "osmTags": ["highway=steps"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F51b",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium_traffic_sign_F51b.png",
+    "name": "Elevated pedestrian crossing",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F52",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Belgian_road_sign_F52.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F52.svg",
+    "name": "Emergency exit in tunnels",
+    "osmTags": ["entrance=emergency", "exit=emergency"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F52bis",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Belgian_road_sign_F52bis.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F52bis.svg",
+    "name": "Announcing nearest emergency exit in tunnels",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F53",
+    "imageSvg": "/w/images/3/35/Belgium-trafficsign-f53.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-f53.svg",
+    "name": "Nursing-home, hospital",
+    "osmTags": ["amenity=hospital"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F55",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/Belgian_road_sign_F55.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F55.svg",
+    "name": "Aid post",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F56",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/Belgian_road_sign_F56.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F56.svg",
+    "name": "Fire extinguisher",
+    "osmTags": ["emergency=fire_extinguisher"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F57",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/05/Belgian_road_sign_F57.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F57.svg",
+    "name": "Waterway",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F59",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Belgian_road_sign_F59.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F59.svg",
+    "name": "Indicating parking",
+    "osmTags": ["amenity=parking"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F60",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Belgian_road_sign_F60.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F60.svg",
+    "name": "Indicating roofed over parking",
+    "osmTags": ["amenity=parking", "parking=multi-storey", "parking=underground"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F61",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Belgian_road_sign_F61.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F61.svg",
+    "name": "Telephone",
+    "osmTags": ["amenity=telephone"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F62",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Belgian_road_sign_F62.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F62.svg",
+    "name": "Emergency telephone",
+    "osmTags": ["emergency=phone"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F63",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Belgian_road_sign_F63.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F63.svg",
+    "name": "Fuel",
+    "osmTags": ["amenity=fuel"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F65",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/41/Belgian_road_sign_F65.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F65.svg",
+    "name": "Hotel or motel",
+    "osmTags": ["tourism=hotel", "tourism=motel"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F67",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Belgian_road_sign_F67.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F67.svg",
+    "name": "Restaurant",
+    "osmTags": ["amenity=restaurant"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F69",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/05/Belgian_road_sign_F69.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F69.svg",
+    "name": "Place where you can drink something",
+    "osmTags": ["amenity=cafe", "amenity=pub!)"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F71",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/60/Belgian_road_sign_F71.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F71.svg",
+    "name": "Camp site",
+    "osmTags": ["tourism=camp_site"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F73",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Belgian_road_sign_F73.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F73.svg",
+    "name": "Caravan site",
+    "osmTags": ["tourism=caravan_site"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F75",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/07/Belgian_road_sign_F75.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F75.svg",
+    "name": "Youth hostel",
+    "osmTags": ["tourism=hostel"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F77",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/58/Belgian_road_sign_F77.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F77.svg",
+    "name": "Touristic information",
+    "osmTags": ["tourism=information"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F79",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Belgian_road_sign_F79.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F79.svg",
+    "name": "Temporary road works sign indicating lane decrease",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F81",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Belgian_road_sign_F81.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F81.svg",
+    "name": "Temporary road works sign indicating lane deviation",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F83",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Belgian_road_sign_F83.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F83.svg",
+    "name": "Temporary road works sign indicating crossing of median on dual carriageway",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F85",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Belgian_road_sign_F85.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F85.svg",
+    "name": "Temporary road works sign indicating two-way traffic on road which is usually one-way only",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F87",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/81/Belgian_road_sign_F87.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F87.svg",
+    "name": "Speed bump",
+    "osmTags": [
+      "traffic_calming=bump",
+      "traffic_calming=hump",
+      "traffic_calming=table",
+      "traffic_calming=cushion."
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F89",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Belgian_road_sign_F89.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F89.svg",
+    "name": "Announces rules or dangers on specific lanes only",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F91",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Belgian_road_sign_F91.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F91.svg",
+    "name": "Indicates rules or dangers on specific lanes only",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F93",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Belgian_road_sign_F93.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F93.svg",
+    "name": "Indicates radio broadcasting service that gives traffic information",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F95",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/56/Belgian_road_sign_F95.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F95.svg",
+    "name": "\"Noodstopstrook\"/\"Piste de détresse\": emergency stop strip (where you can stop when brakes don't work during a descent)",
+    "osmTags": ["highway=escape"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F97",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Belgian_road_sign_F97.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F97.svg",
+    "name": "Indicates lane decrease",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F98",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Belgian_road_sign_F98.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F98.svg",
+    "name": "\"Vluchthaven\"/\"Garage\": where you can stop along the road in case of emergency",
+    "osmTags": ["highway=emergency_bay"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F99a\n(wet 1, 2, loi 1, 2)",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/96/Belgian_traffic_sign_F99a.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_F99a.svg",
+    "name": "Road reserved for pedestrians, speed pedelecs, bicycles, and horses (vehicles only have access by exception: emergency vehicles and vehicles with written permission)",
+    "osmTags": [
+      "vehicle=no",
+      "foot=yes",
+      "speed_pedelec=yes",
+      "bicycle=yes",
+      "horse=yes",
+      "emergency=yes",
+      "maxspeed=30",
+      "access:conditional=yes"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F99b\n(wet 1, 2, loi 1, 2)",
+    "imageSvg": "/w/images/3/32/Belgium-trafficsign-f99b_foot_bicycle.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-f99b_foot_bicycle.svg",
+    "name": "Road reserved for pedestrian and bicycles on indicated part of the road (vehicles only have access by exception: emergency vehicles and vehicles with written permission)\nCan be adapted according to different categories",
+    "osmTags": [
+      "vehicle=no",
+      "horse=no",
+      "foot=yes",
+      "bicycle=yes",
+      "emergency=yes",
+      "segregated=yes",
+      "maxspeed=30",
+      "access:conditional=yes"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F99c\n(wet 1, 2, loi 1, 2)",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Belgian_road_sign_F99c_1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F99c_1.svg",
+    "name": "Road reserved for agriculture vehicles, speed pedelecs, pedestrians, horses and bicycles (emergency vehicles and local traffic allowed). Can be adapted according to different categories.",
+    "osmTags": [
+      "motor_vehicle=destination",
+      "agricultural=yes",
+      "speed_pedelec=yes",
+      "foot=yes",
+      "horse=yes",
+      "bicycle=yes",
+      "emergency=yes",
+      "maxspeed=30"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F101a\n(wet 1, 2, loi 1, 2)",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Belgian_traffic_sign_F101c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_F101c.svg",
+    "name": "End of road reserved for pedestrians, bicycles and horses\nCan be adapted according to different categories",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F101b\n(wet 1, 2, loi 1, 2)",
+    "imageSvg": "/w/images/0/08/Belgium-trafficsign-f101b_foot_bicycle.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgium-trafficsign-f101b_foot_bicycle.svg",
+    "name": "End of road reserved for pedestrian and bicycles on indicated part of the road.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F101c\n(wet 1, 2, loi 1, 2)",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Belgian_road_sign_F101c.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F101c.svg",
+    "name": "End of road reserved for agriculture vehicles, speed pedelecs, pedestrians, bicycles and horses.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F103",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/99/Belgian_road_sign_F103.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F103.svg",
+    "name": "Pedestrian area.\nOnly pedestrians are allowed. If there is a bicycle on the sign, bicycles are also allowed. Permit holders are also allowed. Delivery vehicles and taxis may also be allowed when mentioned on the sign. Access to delivery vehicles, taxis and bicyclists may be restricted to certain time periods and days, as mentioned on the sign.",
+    "osmTags": [
+      "highway=pedestrian",
+      "vehicle=permit",
+      "foot=designated",
+      "emergency=yes",
+      "bus=yes",
+      "bicycle=yes",
+      "vehicle:conditional=yes",
+      "vehicle:conditional=delivery",
+      "taxi=destination",
+      "taxi:conditional=destination"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F105",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Belgian_road_sign_F105.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F105.svg",
+    "name": "End of pedestrian area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F107",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Belgian_road_sign_F107.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F107.svg",
+    "name": "Doesn't exist anymore",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F109",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/42/Belgian_road_sign_F109.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F109.svg",
+    "name": "Doesn't exist anymore",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F111\nR17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/Belgian_road_sign_F111_fr.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F111_fr.svg",
+    "name": "Start of road dedicated to bicycle traffic untill sign F113 or until the next junction.\nThis sign was removed from the Wegcode on 1 April 2023. \nThe signs have to be replaced by the ones below by 1 January 2035.",
+    "osmTags": [
+      "bicycle=designated",
+      "overtaking:motor_vehicle=no",
+      "maxspeed=30",
+      "cyclestreet=yes"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:ZF111",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/04/Belgian_traffic_sign_ZF111.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_ZF111.svg",
+    "name": "Traffic signs lose their meaning ZF111 with \"Zone\" validity or stating \"Fietsstraat\" Replaced by R17  on 01/01/2035 wegcode.be\nStart of zone dedicated to bicycle traffic until sign F111/.\nThis sign was removed from the Wegcode on 1 April 2023. \nThe signs can still be kept untill 1 January 2032.",
+    "osmTags": [
+      "bicycle=designated",
+      "overtaking:motor_vehicle=no",
+      "maxspeed=30",
+      "cyclestreet=yes"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:ZF111/",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/61/Belgian_traffic_sign_ZF111_end.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_ZF111_end.svg",
+    "name": "Traffic signs lose their meaning ZF111 with \"Zone\" validity or stating \"Fietsstraat\" Replaced by R17  on 01/01/2035 wegcode.be\nEnd of zone dedicated to bicycle traffic.\nThis sign was removed from the Wegcode on 1 April 2023. \nThe signs can still be kept untill 1 January 2032.",
+    "osmTags": [
+      "maxspeed=50",
+      "source:maxspeed=BE-VLG:urban",
+      "source:maxspeed=BE-WAL:urban",
+      "maxspeed=30",
+      "source:maxspeed=BE-BRU:urban",
+      "maxspeed=70",
+      "source:maxspeed=BE-VLG:rural",
+      "maxspeed=90",
+      "source:maxspeed=BE-WAL:rural"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F113\nR19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Belgian_road_sign_F113_fr.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_road_sign_F113_fr.svg",
+    "name": "End of road dedicated to bicycle traffic\nThis sign was removed from the Wegcode on 1 August 2021, but got reintroduced on 1 October 2022. The sign was then removed again on 1 April 2023.\nThe signs have to be replaced by the ones below by 1 January 2035.",
+    "osmTags": [
+      "maxspeed=50",
+      "source:maxspeed=BE-VLG:urban",
+      "source:maxspeed=BE-WAL:urban",
+      "maxspeed=30",
+      "source:maxspeed=BE-BRU:urban",
+      "maxspeed=70",
+      "source:maxspeed=BE-VLG:rural",
+      "maxspeed=90",
+      "source:maxspeed=BE-WAL:rural"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F117",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/84/Belgian_traffic_sign_F117.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_F117.svg",
+    "name": "Start of a Low Emission Zone (LEZ).",
+    "osmTags": ["boundary=low_emission_zone."],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F118",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/05/Belgian_traffic_sign_F118.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_F118.svg",
+    "name": "End of a Low Emission Zone (LEZ).",
+    "osmTags": ["boundary=low_emission_zone."],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F119",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_F119.png",
+    "name": "Start of an airport area.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:F120",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_F120.png",
+    "name": "End of an airport area.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Belgian_traffic_sign_M1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M1.svg",
+    "name": "Placed under sign B1, B5 or E9a when that sign only applies to bicycles.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Belgian_traffic_sign_M2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M2.svg",
+    "name": "(French text \"EXCEPTÉ\") (German text \"AUSSER\")\nPlaced under sign C1, C3, C31, D1 or D3 when that sign doesn't apply to bicycles.",
+    "osmTags": ["oneway:bicycle=no", "bicycle=yes", "except=bicycle"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Belgian_traffic_sign_M3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M3.svg",
+    "name": "(French text \"EXCEPTÉ\") (German text \"AUSSER\")\nPlaced under sign C1, C3, C31, D1 or D3 when that sign doesn't apply to bicycles and mopeds class A.",
+    "osmTags": ["oneway:bicycle=no", "oneway:mofa=no", "bicycle=yes", "mofa=yes", "except=bicycle"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M3bis",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Belgian_traffic_sign_M3bis.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M3bis.svg",
+    "name": "(French text \"EXCEPTÉ\") (German text \"AUSSER\")\nPlaced under sign C1, C3, C31, D1 or D3 when that sign doesn't apply to bicycles and all mopeds (classes A, B and P).",
+    "osmTags": [
+      "oneway:bicycle=no",
+      "oneway:mofa=no",
+      "oneway:moped=no",
+      "oneway:speed_pedelec=no",
+      "bicycle=yes",
+      "mofa=yes",
+      "moped=yes",
+      "speed_pedelec=yes",
+      "except=bicycle"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Belgian_traffic_sign_M4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M4.svg",
+    "name": "Placed under sign F19 when cyclists are allowed to drive in both directions on a one-way road",
+    "osmTags": ["oneway:bicycle=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/53/Belgian_traffic_sign_M5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M5.svg",
+    "name": "Placed under sign F19 when cyclists and mopeds class A are allowed to drive in both directions on a one-way road",
+    "osmTags": ["oneway:bicycle=no", "oneway:mofa=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Belgian_traffic_sign_M6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M6.svg",
+    "name": "(French text \"OBLIGATOIRE\")\nPlaced under sign D7 when mopeds class B have to drive on the cycleway.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/be/Belgian_traffic_sign_M7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M7.svg",
+    "name": "(French text \"INTERDIT\")\nPlaced under sign D7 when mopeds class B are not allowed to drive on the cycleway.",
+    "osmTags": ["moped=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Belgian_traffic_sign_M8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M8.svg",
+    "name": "Placed under sign B1, B5 or E9a when that sign only applies to bicycles and mopeds.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Belgian_traffic_sign_M9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M9.svg",
+    "name": "Placed under sign B1, B5 or B17 when bicycles can come from both directions at the intersection. \n(For example when crossing a two-way cycle lane when entering the intersection, or when bicycles are allowed to drive in both directions on a one-way road.)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Belgian_traffic_sign_M10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M10.svg",
+    "name": "Placed under sign B1, B5 or B17 when bicycles, mopeds and/or speed pedelecs can come from both directions at the intersection.\n(For example when crossing a two-way cycle lane when entering the intersection, or when bicycles, mopeds and/or speed pedelecs are allowed to drive in both directions on a one-way road.)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/67/Belgian_traffic_sign_M11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M11.svg",
+    "name": "(French text \"EXCEPTÉ\") (German text \"AUSSER\")\nPlaced under sign C1, C3, C31 or D1 when that sign doesn't apply to bicycles and speed pedelecs.",
+    "osmTags": [
+      "oneway:bicycle=no",
+      "oneway:speed_pedelec=no",
+      "bicycle=yes",
+      "speed_pedelec=yesunder",
+      "except=bicycle"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Belgian_traffic_sign_M12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M12.svg",
+    "name": "(French text \"EXCEPTÉ\") (German text \"AUSSER\")\nPlaced under sign C1, C3, C31 or D1 when that sign doesn't apply to bicycles, mopeds class A and speed pedelecs.",
+    "osmTags": [
+      "oneway:bicycle=no",
+      "oneway:mofa=no",
+      "oneway:speed_pedelec=no",
+      "bicycle=yes",
+      "mofa=yes",
+      "speed_pedelec=yes",
+      "except=bicycle"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Belgian_traffic_sign_M13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M13.svg",
+    "name": "(French text \"OBLIGATOIRE\")\nPlaced under sign D7 when speed pedelecs have to drive on the cycleway.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/Belgian_traffic_sign_M14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M14.svg",
+    "name": "(French text \"OBLIGATOIRE\")\nPlaced under sign D7 when mopeds class B and speed pedelecs have to drive on the cycleway.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Belgian_traffic_sign_M15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M15.svg",
+    "name": "(French text \"INTERDIT\")\nPlaced under sign D7 when speed pedelecs are not allowed to drive on the cycleway.",
+    "osmTags": ["speed_pedelec=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Belgian_traffic_sign_M16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M16.svg",
+    "name": "(French text \"INTERDIT\")\nPlaced under sign D7 when mopeds class B and speed pedelecs are not allowed to drive on the cycleway.",
+    "osmTags": ["moped=no", "speed_pedelec=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/87/Belgian_traffic_sign_M17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M17.svg",
+    "name": "Placed under sign F19 when cyclists and speed pedelecs are allowed to drive in both directions on a one-way road.",
+    "osmTags": ["oneway:bicycle=no", "oneway:speed_pedelec=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Belgian_traffic_sign_M18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M18.svg",
+    "name": "Placed under sign F19 when cyclists, mopeds class A and speed pedelecs are allowed to drive in both directions on a one-way road.",
+    "osmTags": ["oneway:bicycle=no", "oneway:mofa=no", "oneway:speed_pedelec=no"],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Belgian_traffic_sign_M19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M19.svg",
+    "name": "Placed under sign B1, B5 or E9a when that sign only applies to speed pedelecs.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Belgian_traffic_sign_M20.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M20.svg",
+    "name": "Placed under sign B1, B5 or E9a when that sign only applies to bicycles and speed pedelecs.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M21",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M21.png",
+    "name": "Placed under sign E9a when that sign only applies to (non-)motorised personal transporters ('voortbewegingstoestellen'/'engins de déplacement').",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M22",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M22.png",
+    "name": "Placed under sign E9a when that sign only applies to shared (non-)motorised personal transporters ('deelvoortbewegingstoestellen'/'engins de déplacement en libre-partage').",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M23",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M23.png",
+    "name": "Placed under sign E9a when that sign only applies to bike-share bicycles ('deelfietsen'/'bicyclettes en libre-partage').",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "BE:M24",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Belgian_traffic_sign_M24.png",
+    "name": "Placed under sign E9a when that sign only applies to bike-share bicycles and (non-)motorised personal transporters ('deelfietsen en deelvoortbewegingstoestellen'/'bicyclettes et engins de déplacement en libre-partage').",
+    "osmTags": [],
+    "comments": ""
+  }
+]

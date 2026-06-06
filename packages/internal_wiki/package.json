@@ -16,11 +16,12 @@
     "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
     "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
     "lint": "oxlint -c ../../oxlint.config.mjs .",
-    "test": "echo No tests configured",
-    "test:watch": "echo No tests configured",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "type-check": "tsc --skipLibCheck --noEmit",
-    "wiki": "bun run wiki:downloadWiki && bun run wiki:parseWiki",
+    "wiki": "bun run wiki:generate",
     "wiki:downloadWiki": "bun ./src/downloadWiki/downloadWiki.ts && oxfmt --config ../../oxfmt.config.mjs --write ./",
+    "wiki:generate": "bun ./src/generateWikiSnapshots.ts && oxfmt --config ../../oxfmt.config.mjs --write ./src/data",
     "wiki:parseWiki": "bun ./src/parseWiki/parseWiki.ts && oxfmt --config ../../oxfmt.config.mjs --write ./"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "cheerio": "^1.1.2",
     "rimraf": "^6.1.2",
     "typescript": "^5.9.3",
+    "vitest": "^4.1.7",
     "zod": "^4.2.1"
   }
 }

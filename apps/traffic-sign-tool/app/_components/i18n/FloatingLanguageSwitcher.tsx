@@ -4,6 +4,7 @@ import { stonePillButton } from '@app/app/_components/links/buttonStyles'
 import * as m from '@app/paraglide/messages'
 import { uiLocales, type UiLocale } from '@app/src/features/i18n/uiLocale'
 import { writeCataloguePreference } from '@app/src/features/routing/cataloguePreference'
+import { buildCatalogueSwitchPath } from '@app/src/features/routing/catalogueSwitchNavigation'
 import { isCataloguePickerRoute } from '@app/src/features/routing/isCataloguePickerRoute'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
@@ -18,6 +19,7 @@ export const FloatingLanguageSwitcher = () => {
   const uiLocale = useUiLocale()
   const signConfigLang = useCurrentLang() // catalogue prefix from route, not UI locale
   const pathname = useRouterState({ select: (state) => state.location.pathname })
+  const search = useRouterState({ select: (state) => state.location.search })
   const onCataloguePicker = isCataloguePickerRoute(pathname)
   const selectedCountry = onCataloguePicker ? null : signConfigLang
   const navigate = useNavigate({ from: '/$lang' })
@@ -27,7 +29,11 @@ export const FloatingLanguageSwitcher = () => {
       return
     }
     writeCataloguePreference(countryPrefix)
-    navigate({ to: '/$lang', params: { lang: countryPrefix } })
+    if (onCataloguePicker) {
+      navigate({ to: '/$lang', params: { lang: countryPrefix } })
+    } else {
+      navigate({ href: buildCatalogueSwitchPath(signConfigLang, countryPrefix, pathname), search })
+    }
     close()
   }
 

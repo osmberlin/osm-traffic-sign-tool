@@ -84,6 +84,7 @@
     "packages/internal_taginfo": {
       "name": "@internal/taginfo",
       "devDependencies": {
+        "@osm-traffic-signs/converter": "workspace:*",
         "cheerio": "^1.1.2",
         "zod": "^4.2.1",
       },
@@ -99,6 +100,7 @@
         "cheerio": "^1.1.2",
         "rimraf": "^6.1.2",
         "typescript": "^5.9.3",
+        "vitest": "^4.1.7",
         "zod": "^4.2.1",
       },
     },
