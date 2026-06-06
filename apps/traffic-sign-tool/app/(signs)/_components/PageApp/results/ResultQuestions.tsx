@@ -172,7 +172,12 @@ export const ResultQuestions = () => {
     <section className="mb-4 md:mb-6">
       <h2 className="mb-2.5 flex flex-wrap items-center gap-2 text-lg font-light uppercase md:mb-3">
         {m.questions_heading()}
-        <MaturityLinkBadge maturity="beta" lang={lang} tooltip={m.questions_beta_tooltip()} />
+        <MaturityLinkBadge
+          maturity="beta"
+          lang={lang}
+          to="/$lang/questions-qa"
+          tooltip={m.questions_beta_tooltip()}
+        />
       </h2>
       <div className="overflow-hidden rounded-sm border border-stone-500/50">
         {questionGroups.map(({ equivalenceKey, question, signOsmValueParts }) => {

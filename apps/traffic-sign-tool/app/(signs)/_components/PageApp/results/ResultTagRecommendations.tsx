@@ -2,13 +2,15 @@ import { MissingSvgNotice } from '@app/app/(signs)/_components/MissingSvgNotice'
 import { useParamAnswers } from '@app/app/(signs)/_components/store/useParamAnswers.search'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
-import { MaturityLabel } from '@app/app/_components/MaturityLabel'
+import { MaturityInfoBadge, MaturityLinkBadge } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
 import { getGeometryLabel } from '@app/src/features/i18n/geometryLabels'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'
 import {
   GEOMETRY_TYPES,
   geometryTagRecommendationsMaturity,
+  hasQaCapability,
   isSignSvgUnavailable,
   isVisibleMaturity,
   signsToApplicability,
@@ -29,7 +31,9 @@ import { tagsToString } from './ResultTagRecommendations/tagsToString'
 import { TrafficSignTagReferenceLinks } from './ResultTagRecommendations/TrafficSignTagReferenceLinks'
 
 export const ResultTagRecommendations = () => {
+  const lang = useCurrentLang()
   const { countryPrefix } = useCountryPrefix()
+  const showTaggingQaLink = hasQaCapability(countryPrefix, 'taggingQa')
   const { paramSigns } = useParamSigns()
   const { paramAnswers } = useParamAnswers()
 
@@ -118,7 +122,16 @@ export const ResultTagRecommendations = () => {
                     <GeometryIcon geometry={geometry} />
                     {geometryLabel(geometry)}
                     {isVisibleMaturity(geometryTagRecommendationsMaturity) ? (
-                      <MaturityLabel maturity={geometryTagRecommendationsMaturity} />
+                      showTaggingQaLink ? (
+                        <MaturityLinkBadge
+                          maturity={geometryTagRecommendationsMaturity}
+                          lang={lang}
+                          to="/$lang/signs-qa"
+                          tooltip={m.tagging_qa_maturity_tooltip()}
+                        />
+                      ) : (
+                        <MaturityInfoBadge maturity={geometryTagRecommendationsMaturity} />
+                      )
                     ) : null}
                   </h3>
                 </ApplicabilityInfo>

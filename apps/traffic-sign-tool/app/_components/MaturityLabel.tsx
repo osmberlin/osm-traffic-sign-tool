@@ -42,18 +42,21 @@ export const MaturityInfoBadge = ({ maturity, className }: InfoProps) => (
 /** @deprecated Use `MaturityInfoBadge`. */
 export const MaturityLabel = MaturityInfoBadge
 
+type MaturityLinkTo = '/$lang/questions-qa' | '/$lang/signs-qa'
+
 type LinkProps = {
   maturity: Maturity
   lang: string
+  to: MaturityLinkTo
   tooltip: string
   className?: string
 }
 
 /** Rounded link badge with full color and hover tooltip. */
-export const MaturityLinkBadge = ({ maturity, lang, tooltip, className }: LinkProps) => (
+export const MaturityLinkBadge = ({ maturity, lang, to, tooltip, className }: LinkProps) => (
   <HoverTooltip content={tooltip}>
     <Link
-      to="/$lang/questions-qa"
+      to={to}
       params={{ lang }}
       className={clsx(
         'inline-flex shrink-0 items-center gap-x-0.5 rounded-full px-2 py-0.5 text-xs leading-tight font-medium normal-case transition-colors',

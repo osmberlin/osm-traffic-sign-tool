@@ -1,4 +1,4 @@
-import { MaturityLabel } from '@app/app/_components/MaturityLabel'
+import { MaturityInfoBadge } from '@app/app/_components/MaturityLabel'
 import {
   useAboutToolOpen,
   useAboutToolOpenActions,
@@ -6,12 +6,18 @@ import {
 import * as m from '@app/paraglide/messages'
 import { isCataloguePickerRoute } from '@app/src/features/routing/isCataloguePickerRoute'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
-import { getCatalogueMaturity, isVisibleMaturity } from '@osm-traffic-signs/converter'
+import {
+  geometryTagRecommendationsMaturity,
+  getCatalogueMaturity,
+  hasQaCapability,
+  isVisibleMaturity,
+} from '@osm-traffic-signs/converter'
 import { Link, useRouterState } from '@tanstack/react-router'
 import { clsx } from 'clsx'
 import packageJson from '../../../package.json'
 import { FloatingLanguageSwitcher } from '../i18n/FloatingLanguageSwitcher'
 import { ExternalLink } from '../links/ExternalLink'
+import { linkStyle } from '../links/linkStyles'
 import svgLogo from './assets/logo.svg'
 
 export const Header = () => {
@@ -19,10 +25,17 @@ export const Header = () => {
   const { setIsOpen: setAboutOpen } = useAboutToolOpenActions()
   const lang = useCurrentLang()
   const catalogueMaturity = getCatalogueMaturity(lang)
-  const showCatalogueMaturityNotice = isVisibleMaturity(catalogueMaturity)
   const pathname = useRouterState({ select: (state) => state.location.pathname })
   const onCataloguePicker = isCataloguePickerRoute(pathname)
-  const isHome = onCataloguePicker || pathname === `/${lang}`
+  const onMainSignApp = pathname === `/${lang}` || pathname === `/${lang}/`
+  const showChooseSignsMaturityBadge = onMainSignApp && isVisibleMaturity(catalogueMaturity)
+  const showCatalogueMaturityNotice = !onCataloguePicker && showChooseSignsMaturityBadge
+  const showGeometryMaturityNotice =
+    !onCataloguePicker &&
+    !showChooseSignsMaturityBadge &&
+    isVisibleMaturity(geometryTagRecommendationsMaturity)
+  const showTaggingQaLink = hasQaCapability(lang, 'taggingQa')
+  const isHome = onCataloguePicker || onMainSignApp
   const version = packageJson?.version || 'unknown'
   const titleClassName = clsx(
     'mb-3 flex items-center gap-3 text-xl leading-tight font-light text-stone-400 md:text-3xl',
@@ -60,13 +73,6 @@ export const Header = () => {
             {m.header_about_summary()}
           </summary>
           <p>
-            {!onCataloguePicker && showCatalogueMaturityNotice ? (
-              <>
-                <MaturityLabel maturity={catalogueMaturity} className="mr-1 align-middle" />{' '}
-                {m.catalogue_maturity_notice()}
-                <br />
-              </>
-            ) : null}
             {m.header_about_body({ trafficSignTag: 'traffic_sign=*' })}{' '}
             <strong>{m.header_about_review()}</strong>
             <br />
@@ -75,6 +81,31 @@ export const Header = () => {
             </ExternalLink>
             .
           </p>
+          {showCatalogueMaturityNotice ? (
+            <p className="mt-4">
+              <MaturityInfoBadge maturity={catalogueMaturity} className="mr-1 align-middle" />{' '}
+              <strong>{m.header_catalogue_maturity_title()}:</strong>{' '}
+              {m.header_catalogue_maturity_body()}
+            </p>
+          ) : null}
+          {showGeometryMaturityNotice ? (
+            <p className="mt-4">
+              <MaturityInfoBadge
+                maturity={geometryTagRecommendationsMaturity}
+                className="mr-1 align-middle"
+              />{' '}
+              <strong>{m.header_geometry_maturity_title()}:</strong>{' '}
+              {m.header_geometry_maturity_body_before()}
+              {showTaggingQaLink ? (
+                <Link to="/$lang/signs-qa" params={{ lang }} className={linkStyle}>
+                  {m.header_geometry_maturity_qa_link()}
+                </Link>
+              ) : (
+                m.header_geometry_maturity_qa_link()
+              )}
+              {m.header_geometry_maturity_body_after()}
+            </p>
+          ) : null}
         </details>
       </div>
     </header>
