@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50.492 50.493" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen A-6a - Cruzamento de Vias</title>
+  <path d="M49.383 22.548 27.807 1.095c-1.422-1.413-3.838-1.308-5.37.234L1.312 22.575c-1.533 1.54-1.624 3.958-.203 5.37L22.686 49.4c1.421 1.412 3.837 1.308 5.371-.233L49.18 27.919c1.533-1.542 1.623-3.96.203-5.371" clip-rule="evenodd" style="fill:gold;fill-rule:evenodd;stroke:none;fill-opacity:1"/>
+  <path d="M47.991 23.465 26.897 2.492c-.92-.913-2.484-.846-3.475.15l-20.79 20.91c-.991.998-1.051 2.562-.131 3.476l21.094 20.975c.92.914 2.483.845 3.476-.152L47.86 26.94c.992-.997 1.051-2.562.131-3.476" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path stroke-miterlimit="2.613" d="M47.991 23.465 26.897 2.492c-.92-.913-2.484-.846-3.475.15l-20.79 20.91c-.991.998-1.051 2.562-.131 3.476l21.094 20.975c.92.914 2.483.845 3.476-.152L47.86 26.94c.992-.997 1.051-2.562.131-3.476z" style="fill:none;stroke:#000;stroke-width:1.63;stroke-miterlimit:2.61299992"/>
+  <path d="M23.371 10.925h3.339v11.494h11.494v3.339H26.71v11.496h-3.339V25.758H11.876v-3.339h11.495z" clip-rule="evenodd" style="fill-rule:evenodd" transform="translate(.099 .1)"/>
+  <path stroke-miterlimit="2.613" d="M11.876 25.758v-3.339h11.495V10.925h3.339v11.494h11.494v3.339H26.71v11.496h-3.339V25.758z" style="fill:none;stroke:#000;stroke-width:.71899998;stroke-miterlimit:2.61299992" transform="translate(.099 .1)"/>
+</svg>

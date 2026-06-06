@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50.195 50.195" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen A-23 - Ponte Móvel</title>
+  <path d="M49.092 22.414 27.642 1.088c-1.412-1.404-3.815-1.3-5.338.233l-21 21.12c-1.523 1.533-1.614 3.935-.202 5.34l21.45 21.325c1.412 1.404 3.815 1.3 5.338-.232l20.998-21.12c1.526-1.532 1.616-3.936.204-5.34" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path d="M47.707 23.327 26.738 2.477c-.914-.909-2.469-.84-3.455.15L2.617 23.413c-.986.991-1.045 2.546-.13 3.455l20.97 20.85c.913.908 2.466.84 3.453-.15l20.668-20.787c.984-.99 1.043-2.547.13-3.454" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path stroke-miterlimit="2.613" d="M47.707 23.327 26.738 2.477c-.914-.909-2.469-.84-3.455.15L2.617 23.413c-.986.991-1.045 2.546-.13 3.455l20.97 20.85c.913.908 2.466.84 3.453-.15l20.668-20.787c.984-.99 1.043-2.547.13-3.454z" style="fill:none;stroke:#000;stroke-width:1.63;stroke-miterlimit:2.61299992"/>
+  <path d="M9.883 28.608h8.256v-5.127h-5.673z" clip-rule="evenodd" style="fill-rule:evenodd" transform="translate(.114 .1)"/>
+  <path stroke-miterlimit="2.613" d="M18.139 28.608v-5.127h-5.673l-2.583 5.127z" style="fill:none;stroke:#000;stroke-width:.155;stroke-miterlimit:2.61299992" transform="translate(.114 .1)"/>
+  <path d="M17.631 22.549h1.707v1.588l3.322-3.527-1.525-1.526z" clip-rule="evenodd" style="fill-rule:evenodd" transform="translate(.114 .1)"/>
+  <path stroke-miterlimit="2.613" d="M19.338 22.549v1.588l3.322-3.527-1.525-1.526-3.504 3.465z" style="fill:none;stroke:#000;stroke-width:.155;stroke-miterlimit:2.61299992" transform="translate(.114 .1)"/>
+  <path d="M40.009 28.608h-8.256v-5.127h5.672z" clip-rule="evenodd" style="fill-rule:evenodd" transform="translate(.114 .1)"/>
+  <path stroke-miterlimit="2.613" d="M31.753 28.608v-5.127h5.672l2.584 5.127z" style="fill:none;stroke:#000;stroke-width:.155;stroke-miterlimit:2.61299992" transform="translate(.114 .1)"/>
+  <path d="M32.259 22.549h-1.705v1.588l-3.323-3.527 1.524-1.526z" clip-rule="evenodd" style="fill-rule:evenodd" transform="translate(.114 .1)"/>
+  <path stroke-miterlimit="2.613" d="M30.554 22.549v1.588l-3.323-3.527 1.524-1.526 3.504 3.465z" style="fill:none;stroke:#000;stroke-width:.155;stroke-miterlimit:2.61299992" transform="translate(.114 .1)"/>
+  <path d="M31.691 30.587q-.808.855-1.543 0c-1.188-1.758-2.346-1.568-3.482-.047-.85 1.283-2.724 1.092-3.342.004-1.313-2.06-2.453-1.504-3.53 0-.367.46-.875.414-1.427-.008v.461c.542.33 1.151.383 1.537.016 1.267-1.738 2.003-1.959 3.082-.229.643 1.27 3.124 1.51 4.014.072 1.146-1.725 1.994-1.203 3.143.254.617.5 1.402.197 1.555-.004z" clip-rule="evenodd" style="fill-rule:evenodd"/>
+  <path d="M31.691 32.546q-.808.852-1.543 0c-1.188-1.758-2.346-1.57-3.482-.049-.85 1.285-2.724 1.094-3.342.006-1.313-2.063-2.453-1.504-3.53 0-.367.46-.875.414-1.427-.008v.461c.542.328 1.151.383 1.537.014 1.267-1.738 2.003-1.959 3.082-.227.643 1.27 3.124 1.51 4.014.072 1.146-1.725 1.994-1.205 3.143.254.617.5 1.402.197 1.555-.004z" clip-rule="evenodd" style="fill-rule:evenodd"/>
+  <path d="M31.691 34.46q-.808.852-1.543 0c-1.188-1.758-2.346-1.57-3.482-.049-.85 1.283-2.724 1.094-3.342.006-1.313-2.063-2.453-1.504-3.53 0-.367.46-.875.412-1.427-.008v.461c.542.328 1.151.381 1.537.014 1.267-1.738 2.003-1.959 3.082-.229.643 1.27 3.124 1.51 4.014.074 1.146-1.725 1.994-1.205 3.143.252.617.502 1.402.197 1.555-.002z" clip-rule="evenodd" style="fill-rule:evenodd"/>
+</svg>

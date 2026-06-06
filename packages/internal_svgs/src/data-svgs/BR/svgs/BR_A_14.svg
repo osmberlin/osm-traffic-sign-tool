@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50.492 50.493" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen A-14 - Semáforo a Frente</title>
+  <path d="M49.383 22.547 27.806 1.094c-1.42-1.412-3.836-1.307-5.37.234L1.313 22.575c-1.532 1.541-1.624 3.957-.203 5.37l21.577 21.453c1.42 1.413 3.837 1.309 5.37-.234L49.18 27.918c1.533-1.541 1.624-3.958.203-5.371" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path d="M47.992 23.465 26.897 2.491c-.92-.914-2.482-.845-3.475.152L2.632 23.552c-.991.997-1.05 2.561-.131 3.475l21.095 20.975c.919.914 2.483.846 3.474-.151l20.79-20.91c.992-.998 1.052-2.562.132-3.476" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path stroke-miterlimit="2.613" d="M47.992 23.465 26.897 2.491c-.92-.914-2.482-.845-3.475.152L2.632 23.552c-.991.997-1.05 2.561-.131 3.475l21.095 20.975c.919.914 2.483.846 3.474-.151l20.79-20.91c.992-.998 1.052-2.562.132-3.476z" style="fill:none;stroke:#000;stroke-width:1.55599999;stroke-miterlimit:2.61299992;stroke-dasharray:none"/>
+  <path d="M20.296 11.694h10.027v27.058H20.296z" style="fill:#000;stroke:none"/>
+  <path d="M25.269 12.847a3.727 3.727 0 0 1 3.727 3.726 3.727 3.727 0 0 1-7.453 0 3.726 3.726 0 0 1 3.726-3.726" clip-rule="evenodd" style="fill:#be0027;fill-rule:evenodd;stroke:none"/>
+  <path d="M25.269 21.458a3.727 3.727 0 1 1 0 7.453 3.727 3.727 0 0 1 0-7.453" clip-rule="evenodd" style="fill:gold;fill-rule:evenodd;stroke:none;fill-opacity:1"/>
+  <path d="M25.269 30.069a3.727 3.727 0 1 1 0 7.453 3.727 3.727 0 0 1 0-7.453" clip-rule="evenodd" style="fill:#239d46;fill-rule:evenodd;stroke:none"/>
+</svg>

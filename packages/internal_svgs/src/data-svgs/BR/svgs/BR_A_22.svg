@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50.195 50.91" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen A-22 - Ponte Estreita</title>
+  <path d="M49.093 22.733 27.64 1.103c-1.412-1.425-3.813-1.319-5.336.235l-21 21.422c-1.524 1.554-1.614 3.991-.202 5.415l21.45 21.632c1.412 1.424 3.813 1.317 5.336-.236l21-21.423c1.526-1.554 1.616-3.99.204-5.415" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path d="M47.708 23.658 26.737 2.511c-.913-.922-2.468-.853-3.453.153L2.618 23.746c-.986 1.006-1.045 2.582-.131 3.503l20.97 21.148c.914.922 2.467.852 3.454-.152l20.666-21.084c.986-1.004 1.045-2.58.13-3.503" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path stroke-miterlimit="2.613" d="M47.708 23.657 26.737 2.511c-.914-.92-2.467-.853-3.454.153L2.618 23.746c-.986 1.006-1.045 2.582-.131 3.505l20.97 21.146c.915.922 2.468.853 3.455-.152l20.666-21.084c.985-1.003 1.044-2.58.13-3.504z" style="fill:none;stroke:#000;stroke-width:1.64100003;stroke-miterlimit:2.61299992"/>
+  <path d="M22.823 17.221v14.91l-2.136 5.055-3.33-1.831 1.679-3.214V17.242l-1.679-3.145 3.329-1.802z" clip-rule="evenodd" style="fill-rule:evenodd" transform="translate(.115 .1)"/>
+  <path stroke-miterlimit="2.613" d="m20.688 37.185-3.331-1.83 1.679-3.214V17.242l-1.679-3.144 3.329-1.803 2.137 4.927v14.909z" style="fill:none;stroke:#000;stroke-width:.156;stroke-miterlimit:2.61299992" transform="translate(.115 .1)"/>
+  <path d="M27.583 17.221v14.91l2.135 5.055 3.332-1.831-1.68-3.214V17.242l1.68-3.145-3.33-1.802z" clip-rule="evenodd" style="fill-rule:evenodd" transform="translate(.115 .1)"/>
+  <path stroke-miterlimit="2.613" d="m29.718 37.185 3.332-1.83-1.68-3.214V17.242l1.68-3.144-3.33-1.803-2.137 4.927v14.909z" style="fill:none;stroke:#000;stroke-width:.156;stroke-miterlimit:2.61299992" transform="translate(.115 .1)"/>
+</svg>

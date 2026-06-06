@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50.492 50.492" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen A-13a - Confluência à Direita</title>
+  <path d="M1.108 22.547 22.686 1.094c1.42-1.413 3.836-1.307 5.37.234L49.18 22.575c1.53 1.54 1.623 3.958.203 5.37L27.806 49.398c-1.42 1.412-3.836 1.307-5.37-.234L1.31 27.917c-1.531-1.54-1.623-3.957-.203-5.37" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path d="M2.5 23.464 23.597 2.492c.92-.914 2.484-.847 3.474.151l20.789 20.908c.992 1 1.05 2.562.133 3.476L26.896 48.001c-.918.914-2.482.846-3.474-.152L2.632 26.941c-.991-.998-1.051-2.563-.131-3.477" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path stroke-miterlimit="2.613" d="M2.5 23.464 23.597 2.492c.92-.914 2.484-.847 3.474.151l20.789 20.908c.992 1 1.05 2.562.133 3.476L26.896 48.001c-.918.914-2.482.846-3.474-.152L2.632 26.941c-.991-.998-1.051-2.563-.131-3.477z" style="fill:none;stroke:#000;stroke-width:1.63;stroke-miterlimit:2.61299992"/>
+  <path d="m12.635 30.941 3.059 3.204 9.621-9.933v16.704h4.622V9.541h-4.622v8.406z" clip-rule="evenodd" style="fill:#ecd21c;fill-rule:evenodd" transform="translate(.1 .1)"/>
+  <path d="m12.635 30.941 3.059 3.204 9.621-9.933v16.704h4.622V9.541h-4.622v8.406z" clip-rule="evenodd" style="fill-rule:evenodd;fill:#000;stroke:none" transform="translate(.1 .1)"/>
+</svg>

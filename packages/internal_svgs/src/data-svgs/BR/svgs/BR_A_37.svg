@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 50.491 50.492" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen A-37 - Altura Limitada</title>
+  <path d="m1.11 22.546 21.576-21.45c1.421-1.414 3.837-1.31 5.37.231L49.18 22.574c1.532 1.541 1.623 3.957.203 5.37L27.806 49.398c-1.42 1.412-3.837 1.307-5.369-.235L1.311 27.917c-1.532-1.542-1.623-3.958-.202-5.37" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path d="M2.501 23.464 23.595 2.491c.92-.915 2.484-.846 3.475.151L47.86 23.55c.992.997 1.051 2.562.131 3.477L26.896 48c-.919.914-2.482.847-3.475-.15L2.632 26.94c-.99-.998-1.05-2.562-.13-3.476" clip-rule="evenodd" style="fill:gold;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path stroke-miterlimit="2.613" d="M2.501 23.464 23.595 2.491c.92-.915 2.484-.846 3.475.151L47.86 23.55c.992.997 1.051 2.562.131 3.477L26.896 48c-.919.914-2.482.847-3.475-.15L2.632 26.94c-.99-.998-1.05-2.562-.13-3.476z" style="fill:none;stroke:#000;stroke-width:1.63;stroke-miterlimit:2.61299992"/>
+  <path d="m19.317 40.675 6.27-6.313c.041-.044.1-.044.143 0q2.878 3.151 5.758 6.301c.07.066.021.16-.053.166H19.38c-.086-.01-.109-.11-.063-.154M19.317 10.418l6.27 6.313c.041.044.1.044.143 0l5.758-6.302c.07-.065.021-.158-.053-.165H19.38c-.086.01-.109.11-.063.154" clip-rule="evenodd" style="fill-rule:evenodd"/>
+  <path d="M19.883 32.781c-.116.284-.432.22-.396-.097l.011-2.585c.405-1.053 1.866-.529 1.673.45z" clip-rule="evenodd" style="fill:#000;fill-rule:evenodd"/>
+  <path d="m15.672 20.75-5.352 6.337v1.344h5.352v2.401h1.807v-2.4h.764V26.83h-.764v-6.08zm0 2.763v3.317h-2.765Z" style="opacity:1;fill:#000;stroke-width:.459998"/>
+  <g aria-label="5" style="font-style:normal;font-weight:400;font-size:12.3857px;line-height:1.25;font-family:sans-serif;fill:#000;fill-opacity:1;stroke:none;stroke-width:.309644">
+    <path d="M26.167 30.832q-2.18 0-4.001-.78l.805-1.796q1.325.582 3.196.582 1.102 0 1.721-.595.496-.495.496-1.214 0-.656-.607-1.028-.558-.346-1.412-.346-.954 0-2.118.408l-1.771-.284.26-5.03h6.812v1.97h-5.016l-.05 1.214q.805-.248 1.833-.248 1.92 0 3.084 1.14.892.892.892 2.254t-.793 2.366q-1.09 1.387-3.331 1.387" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-family:BywayEMod;-inkscape-font-specification:BywayEMod;fill:#000;stroke-width:.309644"/>
+  </g>
+  <g aria-label="m" style="font-style:normal;font-weight:400;font-size:10.7238px;line-height:1.25;font-family:sans-serif;fill:#000;fill-opacity:1;stroke:none;stroke-width:.268099">
+    <path d="M39.557 30.826v-3.914q0-.429-.247-.675-.236-.247-.664-.247-.45 0-.73.247-.268.235-.268.632v3.957h-1.651v-3.914q0-.407-.28-.665-.267-.257-.707-.257t-.686.236q-.247.236-.247.654v3.946h-1.662V24.5h1.662v.236q.526-.364 1.437-.364.558 0 .922.118.365.118.697.45.622-.568 1.77-.568 1.083 0 1.726.61.612.59.612 1.513v4.332z" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-family:BywayEMod;-inkscape-font-specification:BywayEMod;fill:#000;stroke-width:.268099"/>
+  </g>
+</svg>
