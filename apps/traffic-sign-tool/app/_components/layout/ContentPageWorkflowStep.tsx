@@ -3,13 +3,31 @@ import type { ReactNode } from 'react'
 
 export type ContentPageWorkflowStepVariant = 'intro' | 'content'
 
+export type ContentPageWorkflowLetter = 'A' | 'B' | 'C'
+
 const badgeVariantClassName: Record<ContentPageWorkflowStepVariant, string> = {
   intro: 'bg-stone-800 text-stone-200',
   content: 'bg-blue-600 text-white',
 }
 
-const badgeBaseClassName =
-  'flex size-6 shrink-0 items-center justify-center rounded-md text-xs font-semibold tabular-nums'
+const letterBadgeVariantClassName = {
+  intro: 'bg-stone-800 text-stone-200 group-hover:bg-purple-600 group-hover:text-white',
+  content: 'bg-purple-600 text-white',
+} as const
+
+const hoverColorTransitionClassName = 'transition-colors duration-200 ease-in-out'
+
+const introHoverStepBadgeClassName = clsx(
+  'bg-stone-800 text-stone-200 group-hover:bg-blue-600 group-hover:text-white',
+  hoverColorTransitionClassName,
+)
+
+export type ContentPageWorkflowLetterVariant = keyof typeof letterBadgeVariantClassName
+
+const badgeBaseClassName = clsx(
+  'flex size-6 shrink-0 items-center justify-center rounded-md text-xs font-semibold tabular-nums',
+  hoverColorTransitionClassName,
+)
 
 type ContentPageWorkflowStepBadgeProps = {
   step: number
@@ -68,15 +86,21 @@ export function ContentPageWorkflowStepList({
 type ContentPageWorkflowStepListItemProps = {
   step: number
   children: ReactNode
+  highlightBadgeOnHover?: boolean
 }
 
 export function ContentPageWorkflowStepListItem({
   step,
   children,
+  highlightBadgeOnHover = false,
 }: ContentPageWorkflowStepListItemProps) {
   return (
     <li className="flex items-start gap-3">
-      <ContentPageWorkflowStepBadge step={step} variant="intro" />
+      <ContentPageWorkflowStepBadge
+        step={step}
+        variant="intro"
+        className={highlightBadgeOnHover ? introHoverStepBadgeClassName : undefined}
+      />
       <span className="min-w-0 pt-0.5 text-sm leading-snug text-stone-800">{children}</span>
     </li>
   )
@@ -102,5 +126,78 @@ export function ContentPageWorkflowStepGroup({
         <div className="min-w-0 flex-1 space-y-3">{children}</div>
       </div>
     </section>
+  )
+}
+
+type ContentPageWorkflowLetterBadgeProps = {
+  letter: ContentPageWorkflowLetter
+  className?: string
+  variant?: ContentPageWorkflowLetterVariant
+}
+
+export function ContentPageWorkflowLetterBadge({
+  letter,
+  className,
+  variant = 'intro',
+}: ContentPageWorkflowLetterBadgeProps) {
+  return (
+    <span
+      aria-hidden="true"
+      className={clsx(badgeBaseClassName, letterBadgeVariantClassName[variant], className)}
+    >
+      {letter}
+    </span>
+  )
+}
+
+type ContentPageWorkflowLetterListProps = {
+  children: ReactNode
+  className?: string
+}
+
+export function ContentPageWorkflowLetterList({
+  children,
+  className,
+}: ContentPageWorkflowLetterListProps) {
+  return <ul className={clsx('space-y-1.5', className)}>{children}</ul>
+}
+
+type ContentPageWorkflowLetterListItemProps = {
+  letter: ContentPageWorkflowLetter
+  children: ReactNode
+  variant?: ContentPageWorkflowLetterVariant
+}
+
+export function ContentPageWorkflowLetterListItem({
+  letter,
+  children,
+  variant = 'intro',
+}: ContentPageWorkflowLetterListItemProps) {
+  return (
+    <li className="flex items-start gap-3">
+      <ContentPageWorkflowLetterBadge letter={letter} variant={variant} />
+      <span className="min-w-0 pt-0.5 text-sm leading-snug text-stone-800">{children}</span>
+    </li>
+  )
+}
+
+type ContentPageWorkflowLetterLabelProps = {
+  letter: ContentPageWorkflowLetter
+  children: ReactNode
+  className?: string
+  variant?: ContentPageWorkflowLetterVariant
+}
+
+export function ContentPageWorkflowLetterLabel({
+  letter,
+  children,
+  className,
+  variant = 'content',
+}: ContentPageWorkflowLetterLabelProps) {
+  return (
+    <span className={clsx('inline-flex items-center gap-2', className)}>
+      <ContentPageWorkflowLetterBadge letter={letter} variant={variant} />
+      <span>{children}</span>
+    </span>
   )
 }

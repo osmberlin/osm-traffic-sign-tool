@@ -3,6 +3,7 @@ import {
   formatTaggingQaTaskResults,
   type SignTaskEntry,
 } from '@app/app/(signs)/_components/PageSignsQa/taggingQaTaskFormat'
+import { ContentPageWorkflowStepBadge } from '@app/app/_components/layout/ContentPageWorkflowStep'
 import { contentPreClass } from '@app/app/_components/layout/ContentTable'
 import { buttonStyle } from '@app/app/_components/links/buttonStyles'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
@@ -10,7 +11,7 @@ import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import clsx from 'clsx'
-import { useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Props = {
   entries: SignTaskEntry[]
@@ -18,78 +19,66 @@ type Props = {
 
 export const TaggingQaTaskResults = ({ entries }: Props) => {
   const countryPrefix = useCurrentLang()
-  const [copied, setCopied] = useState(false)
-  const copyFeedbackGenerationRef = useRef(0)
-  const resultText = formatTaggingQaTaskResults(entries, countryPrefix)
-  const issueUrl = entries.length > 0 ? buildGithubIssueUrl(entries, countryPrefix) : undefined
+  const generatedIssueBody = formatTaggingQaTaskResults(entries, countryPrefix)
+  const [issueBody, setIssueBody] = useState(generatedIssueBody)
   const hasResults = entries.length > 0
+  const issueUrl = hasResults ? buildGithubIssueUrl(entries, countryPrefix, issueBody) : undefined
 
-  const handleCopy = async () => {
-    if (!resultText) {
-      return
-    }
-
-    await navigator.clipboard.writeText(resultText)
-    const generation = ++copyFeedbackGenerationRef.current
-    setCopied(true)
-
-    window.setTimeout(() => {
-      if (copyFeedbackGenerationRef.current === generation) {
-        setCopied(false)
-      }
-    }, 2000)
-  }
+  useEffect(() => {
+    setIssueBody(generatedIssueBody)
+  }, [generatedIssueBody])
 
   return (
-    <details
+    <section
       className={clsx(
-        'group mt-6 w-full rounded-sm outline -outline-offset-1 transition-colors',
+        'mt-6 w-full rounded-sm px-2 py-3 outline -outline-offset-1 transition-colors',
         hasResults ? 'bg-stone-900 shadow-sm outline-stone-900' : 'outline-stone-500/50',
       )}
     >
-      <summary
-        className={clsx(
-          'flex cursor-pointer list-none items-center gap-2 px-2 py-1.5 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-300 focus-visible:ring-offset-2',
-          hasResults
-            ? 'text-stone-50 focus-visible:ring-offset-stone-900'
-            : 'text-stone-700 focus-visible:ring-offset-stone-300',
-          '[&::-webkit-details-marker]:hidden',
-        )}
-      >
-        <ChevronRightIcon
-          className={clsx(
-            'size-4 shrink-0 transition-transform group-open:rotate-90',
-            hasResults ? 'text-stone-400' : 'text-stone-500',
+      <div className="space-y-2">
+        <div className="flex flex-wrap items-center gap-3">
+          <ContentPageWorkflowStepBadge step={3} variant="content" />
+          {hasResults ? (
+            <ExternalLink href={issueUrl} className={buttonStyle} blank>
+              {m.tagging_qa_open_issue()}
+            </ExternalLink>
+          ) : (
+            <button type="button" className={buttonStyle} disabled>
+              {m.tagging_qa_open_issue()}
+            </button>
           )}
-        />
-        <span>{m.qa_task_results_summary({ count: String(entries.length) })}</span>
-      </summary>
-
-      <div className={clsx('space-y-4 px-2 pb-3', hasResults && 'border-t border-stone-700 pt-3')}>
-        {!hasResults ? (
-          <p className="text-sm text-stone-600">{m.qa_task_results_empty()}</p>
-        ) : (
-          <>
-            <div className="flex flex-wrap gap-3">
-              <ExternalLink href={issueUrl} className={buttonStyle} blank>
-                {m.qa_open_tagging_issue()}
-              </ExternalLink>
-              <button type="button" className={buttonStyle} onClick={() => void handleCopy()}>
-                {copied ? m.qa_copied() : m.qa_copy_clipboard()}
-              </button>
-            </div>
-
-            <pre
-              className={clsx(
-                contentPreClass,
-                'max-h-96 overflow-auto rounded-md border border-stone-600/40 bg-stone-100 p-4 text-stone-900',
-              )}
-            >
-              {resultText}
-            </pre>
-          </>
-        )}
+        </div>
+        <p className={clsx('pl-9 text-sm', hasResults ? 'text-stone-400' : 'text-stone-600')}>
+          {m.tagging_qa_issue_multi_sign_hint()}
+        </p>
       </div>
-    </details>
+
+      {hasResults ? (
+        <details className="group mt-4 border-t border-stone-700 pt-3">
+          <summary
+            className={clsx(
+              'flex cursor-pointer list-none items-center gap-2 py-1 text-sm font-medium text-stone-300',
+              'focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-300 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900',
+              '[&::-webkit-details-marker]:hidden',
+            )}
+          >
+            <ChevronRightIcon className="size-4 shrink-0 text-stone-500 transition-transform group-open:rotate-90" />
+            {m.tagging_qa_show_issue_description()}
+          </summary>
+          <textarea
+            value={issueBody}
+            onChange={(event) => setIssueBody(event.target.value)}
+            rows={16}
+            spellCheck={false}
+            aria-label={m.tagging_qa_show_issue_description()}
+            className={clsx(
+              contentPreClass,
+              'mt-3 block max-h-96 min-h-48 w-full resize-y overflow-auto rounded-md border border-stone-600/40 bg-stone-100 p-4 text-stone-900',
+              'focus:outline-2 focus:-outline-offset-2 focus:outline-stone-400',
+            )}
+          />
+        </details>
+      ) : null}
+    </section>
   )
 }

@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { Children, isValidElement, type ComponentType, type ReactNode, type SVGProps } from 'react'
 
 type IconComponent = ComponentType<SVGProps<SVGSVGElement>>
@@ -31,13 +32,14 @@ type ContentPageIntroRowsProps = {
 }
 
 export function ContentPageIntroRows({ children }: ContentPageIntroRowsProps) {
-  return <div className="mx-auto mt-8 max-w-lg space-y-8">{children}</div>
+  return <div className="mx-auto mt-6 max-w-lg space-y-5">{children}</div>
 }
 
 type ContentPageIntroRowProps = {
   icon: IconComponent
   title: string
   children: ReactNode
+  highlightOnHover?: boolean
 }
 
 const introBodyClassName = 'text-sm leading-snug text-stone-800'
@@ -56,9 +58,14 @@ function renderIntroRowBody(children: ReactNode) {
   })
 }
 
-export function ContentPageIntroRow({ icon: Icon, title, children }: ContentPageIntroRowProps) {
+export function ContentPageIntroRow({
+  icon: Icon,
+  title,
+  children,
+  highlightOnHover = false,
+}: ContentPageIntroRowProps) {
   return (
-    <div className="flex gap-x-4">
+    <div className={clsx('flex gap-x-4', highlightOnHover && 'group -mx-2 rounded-sm px-2 py-2')}>
       <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-stone-800">
         <Icon aria-hidden="true" className="size-5 text-stone-200" />
       </div>

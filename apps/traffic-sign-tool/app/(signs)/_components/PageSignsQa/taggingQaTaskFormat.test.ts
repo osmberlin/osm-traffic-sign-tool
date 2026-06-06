@@ -58,17 +58,22 @@ describe('taggingQaTaskFormat', () => {
   })
 
   test('buildGithubIssueUrl', () => {
-    const url = buildGithubIssueUrl([
+    const entries = [
       {
         osmValuePart: '274',
         signId: '274',
         descriptiveName: 'Höchstgeschwindigkeit',
-        task: 'explicit_none',
+        task: 'explicit_none' as const,
       },
-    ])
+    ]
+    const url = buildGithubIssueUrl(entries)
     expect(url).toContain('github.com/osmberlin/osm-traffic-sign-tool/issues/new')
     expect(url).toContain('template=tagging-qa-catalogue-update.md')
     expect(url).toContain('title=')
     expect(url).toContain('body=')
+
+    const customBody = 'Custom issue body'
+    const customUrl = buildGithubIssueUrl(entries, 'DE', customBody)
+    expect(customUrl).toContain('body=Custom+issue+body')
   })
 })

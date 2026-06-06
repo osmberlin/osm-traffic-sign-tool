@@ -135,9 +135,12 @@ export const formatTaggingQaTaskResults = (
 const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
 export const TAGGING_QA_ISSUE_TEMPLATE = 'tagging-qa-catalogue-update.md'
 
-export const buildGithubIssueUrl = (entries: SignTaskEntry[], countryPrefix = 'DE'): string => {
+export const buildGithubIssueUrl = (
+  entries: SignTaskEntry[],
+  countryPrefix = 'DE',
+  body = formatTaggingQaTaskResults(entries, countryPrefix),
+): string => {
   const title = `Tagging QA (${countryPrefix}): ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`
-  const body = formatTaggingQaTaskResults(entries, countryPrefix)
   const params = new URLSearchParams({
     template: TAGGING_QA_ISSUE_TEMPLATE,
     title,
