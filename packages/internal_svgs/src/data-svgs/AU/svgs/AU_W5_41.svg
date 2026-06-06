@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815.864 815.864" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W5-41 - Tram Crossing</title>
+  <g transform="translate(-1077.196 1658.06)">
+    <rect width="600" height="600" x="-133.831" y="-2234.118" rx="40" ry="40" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="584" height="584" x="-125.831" y="-2226.118" rx="32" ry="32" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="552" height="552" x="-109.831" y="-2210.118" rx="16" ry="16" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <path d="M1569.128-1321.128v-24h-5.14l91.88-41.292v-7.078h-25.112l-107.628 48.37h-12v24h-242l-28 19v24h10.3v44h-10.3v40h-16v22.4h173.1l7.9 19.6h158l7.9-19.6h173.1v-22.4h-16v-40h-10.3v-44h10.3v-24l-28-19z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M1436.728-1287.329h35.48v106.4h-35.48z" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M-1281.728-1287.329h17.8v70.4h-17.8z" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="scale(-1 1)"/>
+    <path d="M1298.728-1287.329h52v52h-52zM1367.728-1287.329h52v52h-52z" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="1646.428" cy="-1398.429" r="16.7" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="1300.428" cy="-1156.429" r="18.3" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="1368.227" cy="-1156.429" r="18.3" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="1669.828" cy="-1156.429" r="18.3" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="1602.027" cy="-1156.429" r="18.3" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M1498.047-1287.329h35.48v106.4h-35.48z" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M-1706.328-1287.329h17.8v70.4h-17.8z" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="scale(-1 1)"/>
+    <path d="M1619.527-1287.329h52v52h-52zM1550.527-1287.329h52v52h-52z" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  </g>
+</svg>

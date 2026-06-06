@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W2-V112-1 - T-junction at dual carriageway (used in VIC)</title>
+  <g transform="translate(0 724.33)">
+    <rect width="750" height="750" x="137.178" y="-164.989" rx="50" ry="50" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.994494" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="147.178" y="-154.989" rx="40" ry="40" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.967974" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="167.178" y="-134.989" rx="20" ry="20" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.914934" transform="rotate(-45)"/>
+    <path d="M275.665-343.665v60h210v140h-66.001l15.44-44.202-14.283-12.047-140 77.501v17.496l140 77.501 14.284-12.047-15.441-44.202h66.001v180h50v-180h210v-60h-210v-140h66l-15.44 44.203 14.284 12.046 139.999-77.5v-17.496l-139.999-77.502-14.284 12.047 15.44 44.202z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.264583"/>
+    <circle cx="425.664" cy="-36.165" r="10" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0290817"/>
+    <circle cx="425.664" cy="-191.165" r="10" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0290817"/>
+    <circle cx="285.665" cy="-113.665" r="10" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0290817"/>
+    <circle cx="595.666" cy="-236.165" r="10" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0290817"/>
+    <circle cx="595.666" cy="-391.165" r="10" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0290817"/>
+    <circle cx="735.665" cy="-313.665" r="10" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.0290817"/>
+  </g>
+</svg>

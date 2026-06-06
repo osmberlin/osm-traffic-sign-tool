@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W4-11 - Two-way Traffic ahead</title>
+  <g transform="translate(0 724.33)">
+    <rect width="750" height="750" x="137.179" y="-164.989" rx="50" ry="50" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.994494" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="147.179" y="-154.989" rx="40" ry="40" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.967974" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="167.179" y="-134.989" rx="20" ry="20" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.914934" transform="rotate(-45)"/>
+    <path d="M368.162-442.48h-20.994l-97.5 175.995 14.046 17.284 62.95-19.464-9.999 290h82l-10-290 62.951 19.464 14.046-17.284z" style="fill:#000;stroke:none;stroke-width:.264583"/>
+    <circle cx="260.168" cy="-260.668" r="12.003" style="fill:#000;stroke:none;stroke-width:.0471241"/>
+    <circle cx="357.665" cy="-436.665" r="12" style="fill:#000;stroke:none;stroke-width:.0471123"/>
+    <circle cx="455.162" cy="-260.668" r="12.003" style="fill:#000;stroke:none;stroke-width:.0471241"/>
+    <path d="M674.162 15.15h-20.994l-97.5-175.995 14.046-17.284 62.95 19.464-9.999-290h82l-10 290 62.951-19.464 14.046 17.284z" style="fill:#000;stroke:none;stroke-width:.264583"/>
+    <circle cx="566.168" cy="166.662" r="12.003" style="fill:#000;stroke:none;stroke-width:.0471241" transform="scale(1 -1)"/>
+    <circle cx="663.665" cy="-9.335" r="12" style="fill:#000;stroke:none;stroke-width:.0471123" transform="scale(1 -1)"/>
+    <circle cx="761.162" cy="166.662" r="12.003" style="fill:#000;stroke:none;stroke-width:.0471241" transform="scale(1 -1)"/>
+  </g>
+</svg>

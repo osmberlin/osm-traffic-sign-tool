@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W5-14 - Gate</title>
+  <g transform="translate(0 442.66)">
+    <rect width="750" height="750" x="-61.992" y="34.181" rx="50" ry="50" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.67811;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="-51.992" y="44.181" rx="40" ry="40" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:5.52669;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="-31.992" y="64.181" rx="20" ry="20" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.22386;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <path d="M335.784 108.304q0 27.462-17.91 45.373t-45.373 17.91q-42.09 0-59.702-36.418-13.134-28.06-13.134-66.865 0-24.18 5.97-46.269 6.269-22.09 16.418-34.925 17.612-22.388 51.343-22.388 22.985 0 37.612 10.447 14.627 10.15 24.776 33.732l-30.149 11.94q-6.567-13.433-13.731-18.507-7.165-5.374-18.508-5.374-23.88 0-33.731 24.478-7.761 19.104-7.761 46.866 0 36.119 9.85 54.925 8.359 16.12 27.165 16.12 15.522 0 25.373-8.657 9.85-8.657 9.85-22.388v-8.359h-36.417V68.304h68.06zM530.777 168.005h-33.433l-19.702-56.12h-62.387l-19.702 56.12h-33.731l68.656-200h31.642zm-64.478-88.358-19.701-56.12-20.299 56.12ZM667.564-3.935h-46.268v171.94h-31.642V-3.935h-45.672v-28.06h123.582zM821.665 168.005H697.487v-200h117.91V-.353h-86.269v49.254h58.21v32.238h-58.21v54.627h92.537z" style="font-size:298.507px;line-height:1.25;font-family:&quot;Roadgeek 2000 Series D&quot;;-inkscape-font-specification:&quot;Roadgeek 2000 Series D&quot;;text-align:center;letter-spacing:.37px;text-anchor:middle;fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.55472"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815.864 815.863" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W5-226 - Wind Gusts (used in NSW)</title>
+  <g transform="translate(1743.152 3663.193)">
+    <rect width="600" height="600" x="1057.674" y="2945.961" rx="40" ry="40" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(-45)scale(1 -1)"/>
+    <rect width="584" height="584" x="1065.674" y="2953.961" rx="32" ry="32" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(-45)scale(1 -1)"/>
+    <rect width="552" height="552" x="1081.674" y="2969.961" rx="16" ry="16" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(-45)scale(1 -1)"/>
+    <path d="M-1483.57-3350.7v7.84l37.127 16.132-5.824 6.496-6.273 12.77-7.84 42.341 1.344 60.488 11.425 35.172-29.959 13.89v6.497l34.664-16.578 8.512 3.808 40.774-21.955 28.675-8.513 44.358-4.928 41.67 7.392 51.078 13.442 48.838.672 47.718-11.424 38.084-19.268 24.645-13.888 4.48-5.602 2.464-7.393-4.481-9.857-9.856-5.824-14.787 1.79-16.803 3.585-35.843 1.568-33.828-4.703-39.653-15.234-28.9-16.131-43.686-29.123-21.955-11.201-46.597-15.01-36.74-1.793-29.797 2.912-8.961 2.912zm51.018 23.972 19.715 23.523 12.32 24.643 4.705 28.45-3.36 15.01-6.497 19.268-23.075 28.899-15.681 11.65-10.082-31.14-1.12-57.8 7.169-39.876 5.152-10.083z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M-1502.57-3382.762h20v300h-20z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32,4;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="-1492.57" cy="-3382.961" r="23" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32,4;stroke-dashoffset:0;stroke-opacity:1"/>
+  </g>
+</svg>

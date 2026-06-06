@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W7-9-L - Railway Level Crossing on Road ahead (skewed) (left)</title>
+  <g transform="translate(0 724.33)">
+    <rect width="750" height="750" x="137.179" y="-164.989" rx="50" ry="50" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.994494" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="147.179" y="-154.989" rx="40" ry="40" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.967974" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="167.179" y="-134.989" rx="20" ry="20" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.914934" transform="rotate(-45)"/>
+    <path d="M448.165-604.165h125v781h-125z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.372321"/>
+    <path d="M-840.679 100.011h657v220h-657z" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.0974929" transform="rotate(135)scale(1 -1)"/>
+    <path d="M-839.679 253.011h655v11.5h-655zM-839.679 155.511h655v11.5h-655z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.154523" transform="rotate(135)scale(1 -1)"/>
+    <path d="M-823.679 136.011h31v148h-31zM-749.679 136.011h31v148h-31zM-675.678 136.011h31v148h-31zM-601.679 136.011h31v148h-31zM-527.679 136.011h31v148h-31zM-453.678 136.011h31v148h-31zM-379.678 136.011h31v148h-31zM-305.678 136.011h31v148h-31zM-231.678 136.011h31v148h-31z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.186985" transform="rotate(135)scale(1 -1)"/>
+  </g>
+</svg>

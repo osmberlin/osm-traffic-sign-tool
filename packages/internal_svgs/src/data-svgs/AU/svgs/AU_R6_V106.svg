@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 -.321 608.8 608.8" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen R6-V106 - Truck restriction ends (used in VIC)</title>
+  <path d="M608.4 544.079c0 35.342-28.658 64-64 64h-480c-35.356 0-64-28.658-64-64v-480c0-35.342 28.644-64 64-64h480c35.342 0 64 28.658 64 64z" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.00000095;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  <path d="M604.4 544.079c0 33.133-26.867 60-60 60h-480c-33.147 0-60-26.867-60-60v-480c0-33.133 26.853-60 60-60h480c33.133 0 60 26.867 60 60z" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:4.00000095;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  <circle cx="304.4" cy="304.079" r="294" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  <circle cx="304.4" cy="304.079" r="244" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  <path d="M94.4 355.772c.25-28.181 0-58.403 0-87.084 0-4.83 8.36-4.83 13.682-8.886 6.104-16.015 17.04-38.617 21.586-52.058 4.34-12.95 51.317-11.675 79.748-10.685 26.915 7.12 29.731 19.82 33.012 36.077v64.506h22.852v-82.52H514.4v129.75h-282l-88 17.53H99.97zm49.5-137.17h51.3l4.3 40.2h-70.82z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <circle cx="189.8" cy="355.479" r="53" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  <circle cx="189.8" cy="355.479" r="41" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  <circle cx="416.9" cy="355.479" r="55.3" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  <circle cx="416.9" cy="355.479" r="41" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+  <rect width="70" height="468" x="395.26" y="-234.227" ry="0" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:.138;stroke-linejoin:miter;stroke-miterlimit:11.47399998;stroke-dasharray:.69250909,.69250909;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+  <path d="M405.26-292.227h50v584h-50z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+</svg>

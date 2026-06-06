@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W4-1 - Narrow Bridge</title>
+  <g transform="translate(0 724.33)">
+    <rect width="750" height="750" x="137.179" y="-164.989" rx="50" ry="50" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.994494" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="147.179" y="-154.989" rx="40" ry="40" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.967974" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="167.179" y="-134.989" rx="20" ry="20" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.914934" transform="rotate(-45)"/>
+    <path d="m325.891-464.844 77.322-32.82 49.452 116.499v335l-49.452 116.5-77.322-32.821 42.774-100.77v-300.82ZM695.439-464.844l-77.323-32.82-49.451 116.499v335l49.451 116.5 77.323-32.821-42.774-100.77v-300.82Z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.144085"/>
+  </g>
+</svg>

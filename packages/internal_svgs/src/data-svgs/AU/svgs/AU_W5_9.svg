@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W5-9 - Dip</title>
+  <g transform="translate(0 442.66)">
+    <rect width="750" height="750" x="-61.992" y="34.181" rx="50" ry="50" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.67811;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="-51.992" y="44.181" rx="40" ry="40" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:5.52669;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="-31.992" y="64.181" rx="20" ry="20" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.22386;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <path d="M424.665 67.632q0 76.866-60.448 110.448-27.239 14.925-58.955 14.925h-80.597v-250h80.597q32.09 0 59.701 16.045 59.702 33.955 59.702 108.582m-44.776 0q0-49.627-36.94-70.15-17.165-9.7-37.687-9.7h-35.075v160.447h35.075q18.284 0 35.82-9.702 38.807-20.895 38.807-70.895M529.131 193.005h-44.776v-250h44.776zM796.665 19.498q0 19.776-10.448 38.06-10.448 17.91-27.985 27.611t-45.15 9.702h-70.895v98.134h-45.522v-250h116.418q26.12 0 44.776 10.448 38.806 21.642 38.806 66.045m-44.776 0q0-14.553-10.075-23.135t-26.866-8.582h-72.76v62.314h72.76q16.418 0 26.493-8.21 10.448-8.581 10.448-22.387" style="font-size:373.134px;line-height:1.25;font-family:&quot;Roadgeek 2000 Series E&quot;;-inkscape-font-specification:&quot;Roadgeek 2000 Series E&quot;;text-align:center;letter-spacing:2.6px;text-anchor:middle;fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.94341"/>
+  </g>
+</svg>

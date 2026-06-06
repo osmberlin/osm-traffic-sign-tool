@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752 252" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W8-19 - Blind</title>
+  <g transform="translate(0 -1096)">
+    <rect width="750" height="250" x="1" y="1097" rx="50" ry="50" style="fill:#beff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.197742;stroke-linecap:round;stroke-linejoin:round"/>
+    <rect width="730" height="230" x="11" y="1107" rx="40" ry="40" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.187122;stroke-linecap:round;stroke-linejoin:round"/>
+    <rect width="690" height="190" x="31" y="1127" rx="20" ry="20" style="fill:#beff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.165348;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="M211.246 1247.746q0 9.515-5.224 18.284-5.037 8.582-13.62 13.246-9.514 5.224-19.215 5.224H110.5v-125h58.209q13.806 0 21.642 4.478 16.977 9.515 16.977 28.544 0 15.485-12.313 25.747 16.231 11.753 16.231 29.477m-26.306-53.544q0-5.597-4.29-8.956-4.292-3.358-11.941-3.358H133.26v25h35.448q7.276 0 11.754-3.545t4.477-9.141m4.105 52.238q0-7.276-5.97-12.126-5.784-5.038-14.366-5.038H133.26v32.836h35.448q8.955 0 14.552-4.291 5.784-4.478 5.784-11.38M330.1 1284.5h-93.284v-125h22.388v105.784H330.1zM374.7 1284.5H352.31v-125H374.7zM508.478 1284.5h-19.216l-59.702-86.007v86.007h-21.828v-125h21.828l57.463 82.463V1159.5h21.455zM641.5 1221.814q0 38.432-30.224 55.223-13.62 7.463-29.478 7.463H541.5v-125h40.298q16.045 0 29.851 8.022 29.85 16.978 29.85 54.292m-22.388 0q0-24.814-18.47-35.075-8.582-4.85-18.844-4.85h-17.537v80.223h17.537q9.142 0 17.91-4.85 19.404-10.448 19.404-35.448" style="font-size:186.567px;line-height:1.25;font-family:&quot;Roadgeek 2000 Series E&quot;;-inkscape-font-specification:&quot;Roadgeek 2000 Series E&quot;;text-align:center;letter-spacing:.57px;text-anchor:middle;fill:#000;fill-rule:evenodd;stroke:none;stroke-width:.971704"/>
+  </g>
+</svg>

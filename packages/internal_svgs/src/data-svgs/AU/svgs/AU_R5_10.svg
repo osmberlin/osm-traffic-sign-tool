@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.813 124.625" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen R5-10 - Parking Permitted: No Limit</title>
+  <path d="M5.943.505h50.923c2.993 0 5.442 2.449 5.442 5.441v112.73c0 2.994-2.45 5.441-5.442 5.441H5.943c-2.993 0-5.442-2.447-5.442-5.44V5.946C.501 2.953 2.95.504 5.943.504z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2.61299992;stroke-opacity:1;stroke-dasharray:none"/>
+  <path d="M25.635 27.975v6.109h7.786c1.899 0 3.715-1.02 3.715-2.89 0-2.118-1.65-3.22-3.631-3.22zm-5.504-5.53h13.732c3.797 0 8.832 2.806 8.832 8.915 0 3.796-3.935 8.199-8.035 8.199h-9.025v10.4h-5.504zM4.939 75.99h1.279l3.69 6.307V75.99h1.542v9.689h-1.309l-3.691-6.26v6.26H4.939zM16.585 85.865c-2.015 0-3.42-1.474-3.42-5.04 0-3.498 1.289-5.028 3.42-5.028 2.209 0 3.391 2.21 3.391 5.028 0 2.422-.64 5.04-3.391 5.04m0-1.533c1.221 0 1.811-1.007 1.811-3.507 0-2.286-.581-3.459-1.811-3.459-1.25 0-1.899.96-1.899 3.459 0 2.394.688 3.507 1.899 3.507M27.901 75.99h1.483v8.265h4.427v1.424h-5.91z" style="fill:#006330;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path d="M35.351 85.679h1.522V75.99H35.35z" style="fill:#006330;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  <path d="M39.11 75.99h1.463l2.326 5.6 2.16-5.6h1.56v9.689h-1.503v-5.62l-2.198 5.62-2.258-5.62v5.62h-1.55z" style="fill:#006330;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path d="M48.856 85.679h1.522V75.99h-1.522z" style="fill:#006330;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  <path d="M51.958 75.99h5.91v1.424h-2.22v8.265h-1.462v-8.265h-2.228zM10.156 116.27l5.484-4.386h6.031l-3.426 2.74h26.319l-3.426-2.74h6.03l5.485 4.386-5.484 4.386h-6.031l3.426-2.741H18.245l3.426 2.741H15.64z" style="fill:#006330;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815.864 815.864" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen MR-WDAD-21-WA - Trucks Prohibited Entry (used in WA)</title>
+  <g transform="translate(277.987 -603.503)">
+    <rect width="600" height="600" x="507.077" y="323.307" rx="40" ry="40" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="584" height="584" x="515.077" y="331.307" rx="32" ry="32" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="552" height="552" x="531.077" y="347.307" rx="16" ry="16" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <circle cx="129.945" cy="1011.434" r="220" style="fill:#c0111e;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="129.945" cy="1011.434" r="182.4" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M-26.855 1049.573c.186-21.042 0-43.608 0-65.023 0-3.606 6.243-3.606 10.216-6.634 4.558-11.958 12.723-28.834 16.117-38.87 3.24-9.67 38.317-8.718 59.546-7.978 20.097 5.316 22.2 14.8 24.649 26.937v48.168h17.063v-61.62h186.01v96.88h-213.6l-63 13.09h-32.85zm36.96-102.42H48.41l3.21 30.016H-1.259z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <circle cx="44.38" cy="1048.019" r="39.575" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="44.38" cy="1048.019" r="30.615" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="213.935" cy="1048.019" r="41.29" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="213.935" cy="1048.019" r="30.615" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M788.277 423.307h37.6v400h-37.6z" style="fill:#c0111e;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+  </g>
+</svg>

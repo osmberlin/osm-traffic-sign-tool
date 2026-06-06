@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815.864 815.864" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W7-7-R - Railway Level Crossing ahead (right)</title>
+  <g transform="translate(-1335.195 1844.23)">
+    <rect width="600" height="600" x="-83.039" y="-2548.193" rx="40" ry="40" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="584" height="584" x="-75.039" y="-2540.193" rx="32" ry="32" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="552" height="552" x="-59.039" y="-2524.193" rx="16" ry="16" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <path d="M1579.203-1560.218c21.845-25.4 46.736-38.612 62.991-50.802 45.721-3.05 36.07-11.685 63.501-29.97 23.88 1.52 54.866-14.226 61.47-33.53 7.111-20.83 8.13-24.386 3.05-38.101-5.59-14.73-15.75-23.37-34.04-24.385-37.59-3.046-45.72 18.29-51.306 37.595-26.925-3.05-51.816 13.205-65.535 36.066-6.6 10.16-8.126 19.304-8.126 30.99-27.94 14.73-50.294 33.527-47.245 72.137zm375.924 206.75v-90.4c-36.575-12.7-37.085-53.864 0-75.2v-40.14h-85.8v39.64l-99.102 1.002c-15.24-33.02-63.51-40.131-81.8 0h-94.897v-32.9h-56v35.5h-16.8l-5.6 125.92-20 9.68v26.9z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <circle cx="-1862.928" cy="-1327.298" r="50" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="scale(-1 1)"/>
+    <circle cx="-1746.627" cy="-1327.298" r="50" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="scale(-1 1)"/>
+    <circle cx="-1632.127" cy="-1312.298" r="35" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="scale(-1 1)"/>
+    <circle cx="-1548.327" cy="-1312.298" r="35" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="scale(-1 1)"/>
+  </g>
+</svg>

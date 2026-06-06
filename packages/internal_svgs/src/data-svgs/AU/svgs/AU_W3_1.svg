@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W3-1 - Stop Sign ahead</title>
+  <g transform="translate(0 442.66)">
+    <rect width="750" height="750" x="-61.992" y="34.181" rx="50" ry="50" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.67811;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="-51.992" y="44.181" rx="40" ry="40" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:5.52669;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="-31.992" y="64.181" rx="20" ry="20" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.22386;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <circle cx="393.665" cy="-184.995" r="8" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.82845;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="627.665" cy="-184.995" r="8" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.82845;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="M510.665-301.996 388.288-190.92l7.032 13.75 74.845-15.826v110h81v-110l74.845 15.827 7.032-13.75z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8.3;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="M588.33 380.005H433L323.165 270.17V114.84L433 5.005h155.33L698.165 114.84v155.33z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.375"/>
+    <path d="M686.165 119.81V265.2L583.36 368.004H437.971L335.165 265.199V119.81L437.971 17.005h145.388z" style="fill:#ed1c24;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.351"/>
+  </g>
+</svg>

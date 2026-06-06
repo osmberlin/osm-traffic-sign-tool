@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815.864 815.864" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W9-2-R - Modified T-junction (right)</title>
+  <g transform="translate(-2682.57 2099.414)">
+    <rect width="600" height="600" x="689.256" y="-3681.373" rx="40" ry="40" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="584" height="584" x="697.256" y="-3673.373" rx="32" ry="32" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="552" height="552" x="713.256" y="-3657.373" rx="16" ry="16" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <path d="M2978.5-1455.482h80v-146l70-70h130v-80h-440v48h160z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:1.20000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <rect width="150" height="150" x="-3208.5" y="-1671.482" rx="40" ry="40" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:1.20000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="scale(-1 1)"/>
+    <path d="m3358.5-1711.482-167.033-113.252a15.94 15.94 0 0 0-8.966-2.748c-8.837 0-16 7.164-16 16 0 .829.067 1.647.185 2.441l15.815 97.559-15.815 97.558a16.6 16.6 0 0 0-.185 2.442c0 8.835 7.163 16 16 16 3.322 0 6.409-1.017 8.966-2.749z" style="fill:#000;stroke:none;stroke-width:.70874995;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:22.9260006;stroke-dasharray:none;stroke-opacity:1"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501.082 500.99" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen AUS_Metroad_1 - Metroad marker (used in Brisbane, Queensland)</title>
+  <path d="m0 0-85.004 42.538v85.003L0 170.007l85.004-42.466V42.538L0 0" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:.34001401;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="matrix(2.94106 0 0 -2.94106 250.541 500.53)"/>
+  <g style="fill:#174f90;fill-opacity:1">
+    <path d="m0 0 78.238 39.083v76.654L0 154.82l-78.238-39.083V39.083z" style="fill:#174f90;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(2.94106 0 0 -2.94106 250.541 478.09)"/>
+  </g>
+  <path d="M991.998 438.904V238.016L781.795 133.02 571.592 238.016v200.888L781.795 543.9z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="translate(-531.254 -88.035)"/>
+  <g style="font-size:298.50747681px;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0;word-spacing:0;writing-mode:lr-tb;text-anchor:middle;fill:#174f90;fill-opacity:1;stroke:none;font-family:Roadgeek 2005 Series C;-inkscape-font-specification:Roadgeek 2005 Series C">
+    <path d="M774.78 438.566v-162.09h-18.209v-25.373h2.09q6.268 0 12.537-3.284 6.269-3.282 10.448-9.253h25.373v200z" style="fill:#174f90;font-family:Roadgeek 2005 Series D;-inkscape-font-specification:Roadgeek 2005 Series D" transform="translate(-531.254 -88.035)"/>
+  </g>
+</svg>

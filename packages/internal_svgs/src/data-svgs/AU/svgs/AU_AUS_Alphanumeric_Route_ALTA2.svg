@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 210" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen AUS_Alphanumeric_Route_ALTA2 - Alternative alphanumeric route shield (used in QLD)</title>
+  <g transform="translate(1334.744 328.523)">
+    <rect width="200" height="190" x="10" y="-50" ry="11.621" style="fill:#195f35;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(-1334.744 -268.523)"/>
+    <g style="font-size:130px;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#ffa709;fill-opacity:1;stroke:none;font-family:Roadgeek 2005 Series E;-inkscape-font-specification:Roadgeek 2005 Series E">
+      <path d="m-1220.343-149.193-36.4-87.1h-15.86l-36.66 87.1h17.16l8.45-20.54h37.96l8.58 20.54zm-32.11-36.01h-24.44l12.22-29.38zM-1140.226-149.193v-15.6h-51.35c2.99-5.85 5.46-9.1 9.49-12.48 5.2-4.68 8.45-6.11 20.15-9.49 6.11-1.82 10.01-4.03 12.87-6.11 5.72-4.94 8.84-11.7 8.84-18.98 0-15.86-13.13-26-33.67-26-14.04 0-26.52 4.68-36.66 13.52l10.66 11.83c7.41-6.63 15.6-9.49 26.91-9.49 11.05 0 17.16 3.77 17.16 10.14 0 5.2-3.38 8.32-13.13 11.05-15.99 4.29-26.91 12.22-34.58 24.96-4.94 8.58-7.02 16.25-7.02 26.65z"/>
+    </g>
+    <g style="font-size:56px;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#ffa709;fill-opacity:1;stroke:none;font-family:Roadgeek 2005 Series E;-inkscape-font-specification:Roadgeek 2005 Series E">
+      <path d="m-1238.423-263.573-15.68-37.52h-6.832l-15.792 37.52h7.392l3.64-8.848h16.352l3.696 8.848zm-13.832-15.512h-10.528l5.264-12.656zM-1203.91-263.573v-5.768h-21.337v-31.752h-6.72v37.52zM-1172.762-294.485v-6.608h-28.168v6.608h10.808v30.912h6.552v-30.912z"/>
+    </g>
+  </g>
+</svg>

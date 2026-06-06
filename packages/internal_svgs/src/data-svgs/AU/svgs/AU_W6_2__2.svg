@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1171.466 1171.466" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W6-2__2 - Pedestrian Crossing Ahead (with target board) (used in QLD)</title>
+  <g transform="translate(0 742.932)">
+    <rect width="900" height="900" x="75.332" y="-146.981" rx="125" ry="125" style="fill:#f04c05;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.327659;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="750" height="750" x="150.332" y="-71.981" rx="50" ry="50" style="fill:#beff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.273049;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="160.332" y="-61.981" rx="40" ry="40" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.265768;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="180.332" y="-41.98" rx="20" ry="20" style="fill:#beff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.251205;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <circle cx="468.733" cy="-416.199" r="8" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.82845;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="702.733" cy="-416.199" r="8" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.82845;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="M585.733-533.2 463.356-422.123l7.032 13.75 74.845-15.826v110h81v-110l74.845 15.827 7.032-13.751z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8.3;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="585.733" cy="-55.199" r="225" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:.407224;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="585.733" cy="-55.199" r="207" style="fill:#beff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.374646;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="M508.62-190.199h37.41l24.038 46.858L498.34 11.706l-66.827-31.443M441.197 37.765l3.348-6.216c8.487 3.944 11.356 6.096 17.572 14.107 5.62 7.292 17.931 12.672 26.9 15.54 23.31 7.411 25.94-11.716 18.647-15.78-14.228-7.891-27.975-23.19-28.931-36.222-19.724 0-35.024-10.16-43.512-20.44-13.032 4.54-15.544 14.464-16.14 28.568l-3.348 8.487M705.345 53.382l-2.508-6.6c8.54-3.832 12.044-4.59 22.168-4.047 9.19.53 21.319-5.256 29.355-10.156 20.864-12.763 8.128-27.276.282-24.422-15.275 5.584-35.842 5.958-46.316-1.852-12.915 14.908-30.611 19.822-43.939 19.508-5.098 12.82.758 21.215 11.028 30.902l4.223 8.086M560.733-190.199h78.787l85.595 177.874-66.824 32.158" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.52775"/>
+  </g>
+</svg>

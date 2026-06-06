@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W3-3 - Traffic Lights ahead</title>
+  <g transform="translate(0 442.66)">
+    <rect width="750" height="750" x="-61.992" y="34.181" rx="50" ry="50" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.67811;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="-51.992" y="44.181" rx="40" ry="40" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:5.52669;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="-31.992" y="64.181" rx="20" ry="20" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.22386;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <path d="M495.665-236.995c-6.925 0-12.5 5.575-12.5 12.5s5.575 12.5 12.5 12.5l-55 5v45l-140 10 25.582 89.138 12.217 10.7 102.201 15.162v40l-140 10 25.582 89.138 12.217 10.7 102.201 15.162v40l-140 10 25.582 89.138 12.217 10.7 102.201 15.162v55h35v87h70v-87h35v-55l102.201-15.162 12.217-10.7 25.582-89.138-140-10v-40l102.201-15.162 12.217-10.7 25.582-89.138-140-10v-40l102.201-15.162 12.217-10.7 25.582-89.138-140-10v-45l-55-5c6.925 0 12.5-5.575 12.5-12.5s-5.575-12.5-12.5-12.5z" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:7.35219;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="340.665" cy="-66.995" r="15" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.84344;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="680.665" cy="-66.995" r="15" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.84344;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="340.665" cy="98.005" r="15" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.84344;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="680.665" cy="98.005" r="15" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.84344;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="340.665" cy="263.005" r="15" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.84344;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="680.665" cy="263.005" r="15" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:1.84344;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="510.665" cy="-96.995" r="60" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.37376;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="510.665" cy="68.005" r="60" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.37376;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="510.665" cy="233.005" r="60" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:7.37376;stroke-linecap:round;stroke-linejoin:round"/>
+  </g>
+</svg>

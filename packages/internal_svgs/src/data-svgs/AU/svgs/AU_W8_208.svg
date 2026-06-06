@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000.4 350.4" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W8-208 - Limited Width Warning (used in NSW)</title>
+  <g transform="translate(-920.315 2836.807)">
+    <rect width="1000" height="350" x="920.515" y="-2836.607" rx="60" ry="60" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:1.20000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <rect width="976" height="326" x="932.515" y="-2824.607" rx="48" ry="48" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:1.20000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <rect width="928" height="278" x="956.515" y="-2800.607" rx="24" ry="24" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:1.20000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="m1135.515-2661.607-120 70v-140zM1705.515-2661.607l120 70v-140z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:1.20000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M1535.515-2591.607v-90h22.287v5.741c4.78-3.573 15.535-5.568 21.104-5.568 9.955 0 17.52 2.784 23.088 10.349 3.585-6.37 20.698-11.544 27.868-10.35 14.328 1.59 30.653 14.33 30.653 28.263v61.565h-22.694v-55.195c0-7.565-6.37-13.934-15.13-13.934-10.742 0-14.328 4.78-14.328 15.523v53.606h-20.303v-53.606c0-7.959-5.975-17.112-15.523-17.112-9.154 0-14.735 6.369-14.735 15.523v55.195" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <circle cx="1334.015" cy="-2604.107" r="12.5" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:1.20000005;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M1372.515-2729.607h113v136h-113zM1182.515-2729.607h113v136h-113z" style="fill:none;fill-opacity:1;stroke:#000;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32,4;stroke-dashoffset:0;stroke-opacity:1"/>
+  </g>
+</svg>

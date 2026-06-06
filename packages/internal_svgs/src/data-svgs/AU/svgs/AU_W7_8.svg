@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W7-8 - Railway Level Crossing on Road ahead</title>
+  <g transform="translate(0 724.33)">
+    <rect width="750" height="750" x="137.179" y="-164.989" rx="50" ry="50" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.994494" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="147.179" y="-154.989" rx="40" ry="40" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.967974" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="167.179" y="-134.989" rx="20" ry="20" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.914934" transform="rotate(-45)"/>
+    <path d="M448.165-588.665h125v750h-125z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.364857"/>
+    <path d="M126.165-306.665h769v186h-769z" style="fill:#ffe112;fill-opacity:1;stroke:none;stroke-width:.0969838"/>
+    <path d="M127.165-170.665h767v11.5h-767zM127.165-268.165h767v11.5h-767z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.167213"/>
+    <path d="M162.165-287.665h31v148h-31zM236.165-287.665h31v148h-31zM310.165-287.665h31v148h-31zM384.165-287.665h31v148h-31zM458.165-287.665h31v148h-31zM532.165-287.665h31v148h-31zM606.165-287.665h31v148h-31zM680.165-287.665h31v148h-31zM754.165-287.665h31v148h-31zM828.165-287.665h31v148h-31z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.186985"/>
+  </g>
+</svg>

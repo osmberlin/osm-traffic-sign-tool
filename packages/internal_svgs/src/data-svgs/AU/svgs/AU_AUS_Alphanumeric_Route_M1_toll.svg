@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen AUS_Alphanumeric_Route_M1_toll - Alphanumeric route shield (toll road)</title>
+  <g transform="translate(1334.744 268.523)">
+    <rect width="200" height="130" x="10" y="11" ry="11.621" style="fill:#174f90;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(-1334.744 -269.523)"/>
+    <g style="font-size:130px;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;line-height:125%;letter-spacing:0;word-spacing:0;fill:#ffa709;fill-opacity:1;stroke:none;font-family:Roadgeek 2005 Series E;-inkscape-font-specification:Roadgeek 2005 Series E">
+      <path d="M-1207.047-149.973v-87.1h-15.34l-25.61 51.61-25.35-51.61h-15.34v87.1h15.34v-53.17l25.35 53.17 25.61-53.17v53.17zM-1160.802-149.973v-87.1h-12.48c-3.38 5.46-7.02 7.93-13.78 9.49l.26 12.48h11.05v65.13z"/>
+    </g>
+  </g>
+</svg>

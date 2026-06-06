@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606 806" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen R4-2 - Speed De-restriction</title>
+  <g transform="translate(0 509)">
+    <rect width="604" height="804" x="1" y="-508" rx="52" ry="52" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:133.10438538;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <rect width="600" height="800" x="3" y="-506" rx="50" ry="50" style="opacity:1;fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:132.33248901;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <circle cx="303" cy="-106" r="297" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:84.1103363;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <circle cx="303" cy="-106" r="237" style="opacity:1;fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:67.11834717;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <g aria-label="20" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:345.82131958px;line-height:1.25;font-family:&quot;Roadgeek 2005 Series D&quot;;-inkscape-font-specification:&quot;Roadgeek 2005 Series D&quot;;letter-spacing:0;word-spacing:0;fill:#ff7f2a;fill-opacity:1;stroke:none;stroke-width:8.64553261">
+      <path d="M-1475.684 380.402h34.886v158.674h-34.886z" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:21.56617737;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(45 -339.613 7386.55)scale(3.55445)"/>
+    </g>
+  </g>
+</svg>

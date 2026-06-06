@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 -.321 229.8 454.8" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen R5-35 - No Stopping</title>
+  <rect width="229" height="454" x=".4" y=".079" rx="27" ry="27" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32,4;stroke-dashoffset:0;stroke-opacity:1"/>
+  <rect width="225" height="450" x="2.4" y="2.079" rx="25" ry="25" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32,4;stroke-dashoffset:0;stroke-opacity:1"/>
+  <path d="m37.4 423.079 20-16h22l-12.5 10h96l-12.5-10h22l20 16-20 16h-22l12.5-10h-96l12.5 10h-22z" style="fill:#c0111e;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <circle cx="114.9" cy="97.079" r="70" style="fill:#c0111e;fill-opacity:1;stroke:none;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32,4;stroke-dashoffset:0;stroke-opacity:1"/>
+  <circle cx="114.9" cy="97.079" r="58" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32,4;stroke-dashoffset:0;stroke-opacity:1"/>
+  <path d="m77.3 127.816 13.14-9.592c7.003 7.483 14.004 11.99 24.842 11.99 6.042 0 21.58-2.205 21.58-12.852 0-10.551-14.579-10.551-21.58-12.948-16.4-5.373-33.858-8.632-33.858-29.925 0-18.32 17.936-27.24 33.667-27.24 11.413 0 25.992 6.042 33.762 14.961l-11.991 11.32c-7-7.098-12.372-9.306-21.77-9.306-5.757 0-17.266 3.07-17.457 10.265 0 9.782 10.836 10.358 22.346 13.812 13.237 3.93 33.761 7.481 33.761 28.102 0 21.005-21.867 30.516-39.418 30.516-11.606 0-31.46-8.649-37.024-19.103" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <path d="M142.046-39.377h12v132h-12z" style="fill:#c0111e;fill-opacity:1;stroke:none;stroke-width:4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:32,4;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(30)"/>
+</svg>

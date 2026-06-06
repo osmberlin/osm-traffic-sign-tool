@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606 606" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen R2-5 - No U-turn (excluding the ACT, NSW and NT)</title>
+  <g transform="translate(0 309)">
+    <rect width="604" height="604" x="1" y="-308" rx="62" ry="62" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:115.36732483;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <rect width="600" height="600" x="3" y="-306" rx="60" ry="60" style="opacity:1;fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:114.60329437;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <circle cx="303" cy="-6" r="294" style="opacity:1;fill:#be121e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:105.62014008;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <circle cx="303" cy="-6" r="244" style="opacity:1;fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:87.65753174;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <path d="M171 179V-59c0-73.128 58.872-132 132-132s132 58.872 132 132V68l-37 37-37-37V-59c0-32.132-25.868-58-58-58s-58 25.868-58 58v238Z" style="opacity:1;fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:65.63919067;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+    <path d="M185.011-508.496h50v580h-50z" style="opacity:1;fill:#be121e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:78.96569824;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(45)"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W2-3 - T-junction</title>
+  <g transform="translate(0 442.66)">
+    <rect width="750" height="750" x="-61.992" y="34.181" rx="50" ry="50" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.67811;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="-51.992" y="44.181" rx="40" ry="40" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:5.52669;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="-31.992" y="64.181" rx="20" ry="20" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.22386;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <path d="M447.665 380.005v-312h-250v-126h626v126h-250v312Z" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:6.00309;stroke-linecap:round;stroke-linejoin:round"/>
+  </g>
+</svg>

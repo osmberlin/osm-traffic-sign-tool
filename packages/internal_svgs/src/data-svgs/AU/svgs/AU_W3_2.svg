@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.33 1021.33" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen W3-2 - Give Way Sign ahead</title>
+  <g transform="translate(0 442.66)">
+    <rect width="750" height="750" x="-61.992" y="34.181" rx="50" ry="50" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.67811;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="730" height="730" x="-51.992" y="44.181" rx="40" ry="40" style="fill:#000;fill-rule:evenodd;stroke:none;stroke-width:5.52669;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <rect width="690" height="690" x="-31.992" y="64.181" rx="20" ry="20" style="fill:#fddc04;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.22386;stroke-linecap:round;stroke-linejoin:round" transform="rotate(-45)"/>
+    <circle cx="393.665" cy="-204.995" r="8" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.82845;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="627.665" cy="-204.995" r="8" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.82845;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="M510.665-321.996 388.288-210.92l7.032 13.75 74.845-15.826v110h81v-110l74.845 15.827 7.032-13.75z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8.3;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="283.665" cy="10.005" r="25" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:2.4307;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="737.665" cy="10.005" r="25" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:2.4307;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="510.665" cy="403.181" r="25" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:2.4307;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="m532.316 415.681 227-393.176-21.65-37.5H283.664l-21.65 37.5 227 393.176z" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:8.3;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="283.665" cy="10.005" r="13" style="fill:#ed1c24;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.26396;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="737.665" cy="10.005" r="13" style="fill:#ed1c24;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.26396;stroke-linecap:round;stroke-linejoin:round"/>
+    <circle cx="510.665" cy="403.181" r="13" style="fill:#ed1c24;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.26396;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="M499.407 409.681h22.516l227-393.176-11.258-19.5h-454l-11.258 19.5z" style="fill:#ed1c24;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8.3;stroke-linecap:round;stroke-linejoin:round"/>
+    <path d="m384.124 68.005 126.54 219.176L637.207 68.005Z" style="fill:#fff;fill-rule:evenodd;stroke:none;stroke-width:8.3;stroke-linecap:round;stroke-linejoin:round"/>
+  </g>
+</svg>

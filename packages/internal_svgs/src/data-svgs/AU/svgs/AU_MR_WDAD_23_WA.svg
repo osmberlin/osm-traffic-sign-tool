@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815.864 815.864" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen MR-WDAD-23-WA - Trucks Prohibited Entry Ahead (used in WA)</title>
+  <g transform="translate(-1648.976 -459.038)">
+    <rect width="600" height="600" x="1767.494" y="-1141.414" rx="40" ry="40" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="584" height="584" x="1775.494" y="-1133.413" rx="32" ry="32" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <rect width="552" height="552" x="1791.494" y="-1117.413" rx="16" ry="16" style="fill:#fee011;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+    <path d="m2056.908 566.701-98.031 89.555a6 6 0 0 0 4.83 10.394l60.701-12.949v88h65v-88l60.701 12.95q.39.05.8.05a6 6 0 0 0 4.03-10.445z" style="fill:#000;stroke:none;stroke-width:.70874995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:22.9260006;stroke-dasharray:none;stroke-opacity:1"/>
+    <circle cx="2056.908" cy="948.702" r="180" style="fill:#c0111e;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="2056.908" cy="948.702" r="149.6" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M1928.908 979.984c.152-17.177 0-35.598 0-53.08 0-2.944 5.096-2.944 8.34-5.416 3.72-9.762 10.386-23.538 13.157-31.73 2.645-7.894 31.279-7.117 48.608-6.513 16.406 4.34 18.122 12.081 20.122 21.99v39.32h13.929v-50.301h151.844v79.086h-174.367l-51.428 10.685h-26.817zm30.172-83.608h31.269l2.62 24.502h-43.166z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <circle cx="1987.059" cy="978.715" r="32.306" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="1987.059" cy="978.715" r="24.992" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="2125.471" cy="978.715" r="33.706" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <circle cx="2125.471" cy="978.715" r="24.992" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    <path d="M2110.087-953.62h30.4v340h-30.4z" style="fill:#c0111e;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" transform="rotate(45)"/>
+  </g>
+</svg>

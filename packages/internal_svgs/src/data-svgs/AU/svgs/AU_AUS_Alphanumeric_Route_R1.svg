@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen AUS_Alphanumeric_Route_R1 - Alphanumeric ring road route shield (used in Adelaide, South Australia)</title>
+  <g transform="translate(1334.744 268.523)">
+    <rect width="200" height="130" x="10" y="11" ry="11.621" style="fill:#195f35;fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(-1334.744 -269.523)"/>
+    <g style="font-size:130px;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0;word-spacing:0;text-anchor:middle;fill:#ffa709;fill-opacity:1;stroke:none;font-family:Roadgeek 2005 Series E;-inkscape-font-specification:Roadgeek 2005 Series E">
+      <path d="m-1210.106-149.973-15.99-37.31q6.773-3.689 10.449-9.717t3.721-13.423q-.065-7.494-3.64-13.503-3.574-6.008-9.88-9.506-3.323-2.019-6.792-2.844-3.47-.825-8.157-.796h-40.04v87.099h15.6v-34.19h23.27l14.04 34.19zm-17.42-60.45q-.07 4.847-3.428 7.72-3.36 2.871-9.181 2.94h-24.7v-21.71h24.7q5.82.058 9.18 2.99 3.36 2.934 3.43 8.06M-1169.054-149.973v-87.1h-12.48q-2.445 4.032-5.622 6.208-3.177 2.178-8.157 3.283l.26 12.48h11.05v65.129z"/>
+    </g>
+  </g>
+</svg>
