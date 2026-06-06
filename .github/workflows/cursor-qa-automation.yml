@@ -5,6 +5,11 @@ name: Cursor QA automation
 on:
   issues:
     types: [opened, labeled]
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/cursor-qa-automation.yml'
 
 permissions:
   issues: write
