@@ -70,7 +70,6 @@ export const _panels_m: SignType[] = [
     osmValuePart: 'M3d',
     signId: 'M3d',
     name: 'M3d',
-    descriptiveName: 'M3d',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
@@ -86,7 +85,6 @@ export const _panels_m: SignType[] = [
     osmValuePart: 'M4a',
     signId: 'M4a',
     name: 'M4a',
-    descriptiveName: 'M4a',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [

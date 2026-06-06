@@ -4,7 +4,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b3/PL_road_sign_A-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-1.svg",
     "name": "A-1: niebezpieczny zakręt w prawo",
-    "osmTags": [],
+    "osmTags": ["hazard=curve"],
     "comments": ""
   },
   {
@@ -12,7 +12,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/PL_road_sign_A-2.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-2.svg",
     "name": "A-2: niebezpieczny zakręt w lewo",
-    "osmTags": [],
+    "osmTags": ["hazard=curve"],
     "comments": ""
   },
   {
@@ -20,7 +20,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/ff/PL_road_sign_A-3.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-3.svg",
     "name": "A-3: dwa niebezpieczne zakręty, pierwszy w prawo",
-    "osmTags": [],
+    "osmTags": ["hazard=curves", "curves=serpentine"],
     "comments": ""
   },
   {
@@ -28,7 +28,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/PL_road_sign_A-4.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-4.svg",
     "name": "A-4: dwa niebezpieczne zakręty, pierwszy w lewo",
-    "osmTags": [],
+    "osmTags": ["hazard=curves", "curves=serpentine"],
     "comments": ""
   },
   {
@@ -36,7 +36,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/02/PL_road_sign_A-5.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-5.svg",
     "name": "A-5: skrzyżowanie dróg",
-    "osmTags": [],
+    "osmTags": ["hazard=crossing_equal"],
     "comments": ""
   },
   {
@@ -44,7 +44,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e4/PL_road_sign_A-6a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-6a.svg",
     "name": "A-6a: skrzyżowanie z drogą podporządkowaną występującą po obu stronach",
-    "osmTags": [],
+    "osmTags": ["hazard=crossing_minor"],
     "comments": ""
   },
   {
@@ -52,7 +52,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/96/PL_road_sign_A-6b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-6b.svg",
     "name": "A-6b: skrzyżowanie z drogą podporządkowaną występującą z prawej strony",
-    "osmTags": [],
+    "osmTags": ["hazard=crossing_minor_right"],
     "comments": ""
   },
   {
@@ -60,7 +60,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/PL_road_sign_A-6c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-6c.svg",
     "name": "A-6c: skrzyżowanie z drogą podporządkowaną występującą z lewej strony",
-    "osmTags": [],
+    "osmTags": ["hazard=crossing_minor_left"],
     "comments": ""
   },
   {
@@ -84,7 +84,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/74/PL_road_sign_A-7.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-7.svg",
     "name": "A-7: ustąp pierwszeństwa przejazdu",
-    "osmTags": [],
+    "osmTags": ["highway=give_way"],
     "comments": ""
   },
   {
@@ -92,7 +92,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/PL_road_sign_A-8.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-8.svg",
     "name": "A-8: skrzyżowanie o ruchu okrężnym",
-    "osmTags": [],
+    "osmTags": ["hazard=roundabout"],
     "comments": ""
   },
   {
@@ -100,7 +100,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e5/PL_road_sign_A-9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-9.svg",
     "name": "A-9: przejazd kolejowy z zaporami",
-    "osmTags": [],
+    "osmTags": ["railway=level_crossing", "barrier=yes"],
     "comments": ""
   },
   {
@@ -108,7 +108,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/PL_road_sign_A-10.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-10.svg",
     "name": "A-10: przejazd kolejowy bez zapór",
-    "osmTags": [],
+    "osmTags": ["railway=level_crossing", "barrier=no"],
     "comments": ""
   },
   {
@@ -116,14 +116,14 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b9/PL_road_sign_A-11.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-11.svg",
     "name": "A-11: nierówna droga",
-    "osmTags": [],
+    "osmTags": ["hazard=damaged_road"],
     "comments": ""
   },
   {
     "sign": "PL:A-11a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/PL_road_sign_A-11a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-11a.svg",
-    "name": "A-11a: próg zwalniający",
+    "name": "W miejscu progu na węźle na drodze lub na linii na odcinku drogi, zależnie od zasad dla danego typu progu:traffic_calming=* – wartość zależy od typu progu przed którym dany znak ostrzega",
     "osmTags": [],
     "comments": ""
   },
@@ -132,7 +132,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/PL_road_sign_A-12a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-12a.svg",
     "name": "A-12a: zwężenie jezdni dwustronne",
-    "osmTags": [],
+    "osmTags": ["hazard=road_narrows"],
     "comments": ""
   },
   {
@@ -140,7 +140,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/PL_road_sign_A-12b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-12b.svg",
     "name": "A-12b: zwężenie jezdni prawostronne",
-    "osmTags": [],
+    "osmTags": ["hazard=road_narrows"],
     "comments": ""
   },
   {
@@ -148,7 +148,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/PL_road_sign_A-12c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-12c.svg",
     "name": "A-12c: zwężenie jezdni lewostronne",
-    "osmTags": [],
+    "osmTags": ["hazard=road_narrows"],
     "comments": ""
   },
   {
@@ -164,7 +164,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cd/PL_road_sign_A-14.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-14.svg",
     "name": "A-14: roboty na drodze",
-    "osmTags": [],
+    "osmTags": ["hazard=roadworks"],
     "comments": ""
   },
   {
@@ -172,7 +172,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/PL_road_sign_A-15.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-15.svg",
     "name": "A-15: śliska jezdnia",
-    "osmTags": [],
+    "osmTags": ["hazard=slippery"],
     "comments": ""
   },
   {
@@ -180,7 +180,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/88/PL_road_sign_A-16.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-16.svg",
     "name": "A-16: przejście dla pieszych",
-    "osmTags": [],
+    "osmTags": ["hazard=pedestrian_crossing"],
     "comments": ""
   },
   {
@@ -188,7 +188,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/PL_road_sign_A-17.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-17.svg",
     "name": "A-17: dzieci",
-    "osmTags": [],
+    "osmTags": ["hazard=children"],
     "comments": ""
   },
   {
@@ -196,7 +196,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c3/PL_road_sign_A-18a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-18a.svg",
     "name": "A-18a: zwierzęta gospodarskie",
-    "osmTags": [],
+    "osmTags": ["hazard=animal_crossing", "animal=livestock"],
     "comments": ""
   },
   {
@@ -204,7 +204,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0f/PL_road_sign_A-18b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-18b.svg",
     "name": "A-18b: zwierzęta dzikie",
-    "osmTags": [],
+    "osmTags": ["hazard=animal_crossing", "animal=wild_animal"],
     "comments": ""
   },
   {
@@ -212,7 +212,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/46/PL_road_sign_A-19.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-19.svg",
     "name": "A-19: boczny wiatr",
-    "osmTags": [],
+    "osmTags": ["hazard=side_winds"],
     "comments": ""
   },
   {
@@ -220,7 +220,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/PL_road_sign_A-20.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-20.svg",
     "name": "A-20: odcinek jezdni o ruchu dwukierunkowym",
-    "osmTags": [],
+    "osmTags": ["oneway=no"],
     "comments": ""
   },
   {
@@ -228,7 +228,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dd/PL_road_sign_A-21.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-21.svg",
     "name": "A-21: tramwaj",
-    "osmTags": [],
+    "osmTags": ["hazard=tram"],
     "comments": ""
   },
   {
@@ -236,7 +236,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f3/PL_road_sign_A-22.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-22.svg",
     "name": "A-22: niebezpieczny zjazd",
-    "osmTags": [],
+    "osmTags": ["incline=down", "incline=-xx%"],
     "comments": ""
   },
   {
@@ -244,7 +244,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/PL_road_sign_A-23.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-23.svg",
     "name": "A-23: stromy podjazd",
-    "osmTags": [],
+    "osmTags": ["incline=up", "incline=xx%"],
     "comments": ""
   },
   {
@@ -252,7 +252,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/PL_road_sign_A-24.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-24.svg",
     "name": "A-24: rowerzyści",
-    "osmTags": [],
+    "osmTags": ["hazard=cyclists"],
     "comments": ""
   },
   {
@@ -260,7 +260,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/PL_road_sign_A-25.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-25.svg",
     "name": "A-25: spadające odłamki skalne",
-    "osmTags": [],
+    "osmTags": ["hazard=falling_rocks"],
     "comments": ""
   },
   {
@@ -268,7 +268,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4b/PL_road_sign_A-26.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-26.svg",
     "name": "A-26: lotnisko",
-    "osmTags": [],
+    "osmTags": ["hazard=low_flying_aircraft"],
     "comments": ""
   },
   {
@@ -276,7 +276,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5a/PL_road_sign_A-27.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-27.svg",
     "name": "A-27: nabrzeże lub brzeg rzeki",
-    "osmTags": [],
+    "osmTags": ["hazard=water_bank"],
     "comments": ""
   },
   {
@@ -284,7 +284,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/PL_road_sign_A-28.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-28.svg",
     "name": "A-28: sypka nawierzchnia",
-    "osmTags": [],
+    "osmTags": ["hazard=loose_gravel"],
     "comments": ""
   },
   {
@@ -292,7 +292,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/PL_road_sign_A-29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-29.svg",
     "name": "A-29: sygnały świetlne",
-    "osmTags": [],
+    "osmTags": ["hazard=traffic_signals"],
     "comments": ""
   },
   {
@@ -308,7 +308,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/PL_road_sign_A-31.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-31.svg",
     "name": "A-31: niebezpieczne pobocze",
-    "osmTags": [],
+    "osmTags": ["hazard=loose_gravel"],
     "comments": ""
   },
   {
@@ -316,7 +316,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/PL_road_sign_A-32.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-32.svg",
     "name": "A-32: oszronienie jezdni",
-    "osmTags": [],
+    "osmTags": ["hazard=ice"],
     "comments": ""
   },
   {
@@ -324,14 +324,14 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/PL_road_sign_A-33.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-33.svg",
     "name": "A-33: zator drogowy",
-    "osmTags": [],
+    "osmTags": ["hazard=queues_likely"],
     "comments": ""
   },
   {
     "sign": "PL:A-34",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/71/PL_road_sign_A-34.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_A-34.svg",
-    "name": "A-34: wypadek drogowy",
+    "name": "niestosowany w OSM z uwagi na tymczasową naturę znaku (vide: Dobre praktyki § Nie mapuj tymczasowych wydarzeń i tymczasowych obiektów)",
     "osmTags": [],
     "comments": ""
   },
@@ -340,7 +340,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/af/PL_road_sign_B-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-1.svg",
     "name": "B-1: zakaz ruchu w obu kierunkach",
-    "osmTags": [],
+    "osmTags": ["vehicle=no", "horse=no[1]"],
     "comments": ""
   },
   {
@@ -356,7 +356,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/ba/PL_road_sign_B-3.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-3.svg",
     "name": "B-3: zakaz wjazdu pojazdów silnikowych z wyjątkiem motocykli jednośladowych",
-    "osmTags": [],
+    "osmTags": ["motor_vehicle=no", "motorcycle=yes", "moped=yes", "mofa=yes"],
     "comments": ""
   },
   {
@@ -364,7 +364,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/PL_road_sign_B-3a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-3a.svg",
     "name": "B-3a: zakaz wjazdu autobusów",
-    "osmTags": [],
+    "osmTags": ["bus=no", "tourist_bus=no"],
     "comments": ""
   },
   {
@@ -372,7 +372,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/PL_road_sign_B-4.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-4.svg",
     "name": "B-4: zakaz wjazdu motocykli",
-    "osmTags": [],
+    "osmTags": ["motorcycle=no"],
     "comments": ""
   },
   {
@@ -380,7 +380,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/79/PL_road_sign_B-3-4.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-3-4.svg",
     "name": "B-3/4: zakaz wjazdu pojazdów silnikowych",
-    "osmTags": [],
+    "osmTags": ["motor_vehicle=no", "motorcycle=no", "moped=yes", "mofa=yes"],
     "comments": ""
   },
   {
@@ -388,7 +388,12 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0d/PL_road_sign_B-5.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-5.svg",
     "name": "B-5: zakaz wjazdu pojazdów ciężarowych o dopuszczalnej masie całkowitej większej, niż 3,5 t",
-    "osmTags": [],
+    "osmTags": [
+      "hgv=no",
+      "hgv=PL:sign_B-5",
+      "agricultural=no[2] Opcjonalnie",
+      "conditional=* maxgvweightrating:hgv=* ma też pewne użycie"
+    ],
     "comments": ""
   },
   {
@@ -396,7 +401,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/af/PL_road_sign_B-6.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-6.svg",
     "name": "B-6: zakaz wjazdu ciągników rolniczych oraz pojazdów wolnobieżnych",
-    "osmTags": [],
+    "osmTags": ["agricultural=no"],
     "comments": ""
   },
   {
@@ -404,7 +409,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/45/PL_road_sign_B-7.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-7.svg",
     "name": "B-7: zakaz wjazdu pojazdów silnikowych z przyczepą",
-    "osmTags": [],
+    "osmTags": ["trailer=no"],
     "comments": ""
   },
   {
@@ -412,7 +417,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0e/PL_road_sign_B-8.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-8.svg",
     "name": "B-8: zakaz wjazdu pojazdów zaprzęgowych",
-    "osmTags": [],
+    "osmTags": ["carriage=no", "horse=no[3][4]"],
     "comments": ""
   },
   {
@@ -420,7 +425,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7b/PL_road_sign_B-6-8.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-6-8.svg",
     "name": "B-6/8: zakaz wjazdu ciągników rolniczych i pojazdów zaprzęgowych",
-    "osmTags": [],
+    "osmTags": ["agricultural=no", "carriage=no", "horse=no[3][4]"],
     "comments": ""
   },
   {
@@ -428,7 +433,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/89/PL_road_sign_B-9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-9.svg",
     "name": "B-9: zakaz wjazdu rowerów",
-    "osmTags": [],
+    "osmTags": ["bicycle=no"],
     "comments": ""
   },
   {
@@ -436,7 +441,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/PL_road_sign_B-6-8-9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-6-8-9.svg",
     "name": "B-6/8/9: zakaz wjazdu pojazdów innych niż samochodowe",
-    "osmTags": [],
+    "osmTags": ["motorroad=yes", "agricultural=no", "carriage=no", "horse=no[3][4]", "bicycle=no"],
     "comments": ""
   },
   {
@@ -444,7 +449,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dd/PL_road_sign_B-10.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-10.svg",
     "name": "B-10: zakaz wjazdu motorowerów",
-    "osmTags": [],
+    "osmTags": ["moped=no", "mofa=no"],
     "comments": ""
   },
   {
@@ -452,7 +457,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/PL_road_sign_B-3-4-10.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-3-4-10.svg",
     "name": "B-3/4/10: zakaz wjazdu pojazdów silnikowych i motorowerów",
-    "osmTags": [],
+    "osmTags": ["motor_vehicle=no", "motorcycle=no", "moped=no", "mofa=no"],
     "comments": ""
   },
   {
@@ -460,7 +465,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/01/PL_road_sign_B-11.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-11.svg",
     "name": "B-11: zakaz wjazdu wózków rowerowych",
-    "osmTags": [],
+    "osmTags": ["cycle_rickshaw=no"],
     "comments": ""
   },
   {
@@ -468,7 +473,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/71/PL_road_sign_B-12.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-12.svg",
     "name": "B-12: zakaz wjazdu z wózkami ręcznymi",
-    "osmTags": [],
+    "osmTags": ["hand_cart=no"],
     "comments": ""
   },
   {
@@ -476,7 +481,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d9/PL_road_sign_B-9-12.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-9-12.svg",
     "name": "B-9/12: zakaz wjazdu rowerów i wózków ręcznych",
-    "osmTags": [],
+    "osmTags": ["bicycle=no", "hand_cart=no"],
     "comments": ""
   },
   {
@@ -484,7 +489,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b9/PL_road_sign_B-13.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-13.svg",
     "name": "B-13: zakaz wjazdu pojazdów z towarami wybuchowymi lub łatwo zapalnymi",
-    "osmTags": [],
+    "osmTags": ["explosive=no"],
     "comments": ""
   },
   {
@@ -492,7 +497,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/56/PL_road_sign_B-13a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-13a.svg",
     "name": "B-13a: zakaz wjazdu pojazdów z towarami niebezpiecznymi",
-    "osmTags": [],
+    "osmTags": ["hazmat=no"],
     "comments": ""
   },
   {
@@ -500,7 +505,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b1/PL_road_sign_B-14.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-14.svg",
     "name": "B-14: zakaz wjazdu pojazdów z towarami, które mogą skazić wodę",
-    "osmTags": [],
+    "osmTags": ["water=no"],
     "comments": ""
   },
   {
@@ -508,7 +513,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/PL_road_sign_B-13-14.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-13-14.svg",
     "name": "B-13/14: zakaz wjazdu pojazdów z towarami wybuchowymi lub zapalnymi oraz towarami mogącymi skazić wodę",
-    "osmTags": [],
+    "osmTags": ["explosive=no", "water=no"],
     "comments": ""
   },
   {
@@ -516,7 +521,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b5/PL_road_sign_B-15-2.0m.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-15-2.0m.svg",
     "name": "B-15: zakaz wjazdu pojazdów szerszych, niż określono na znaku (tu: 2 m)",
-    "osmTags": [],
+    "osmTags": ["maxwidth=2"],
     "comments": ""
   },
   {
@@ -524,7 +529,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a0/PL_road_sign_B-16-3.5m.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-16-3.5m.svg",
     "name": "B-16: zakaz wjazdu pojazdów wyższych, niż określono na znaku (tu: 3,5 m)",
-    "osmTags": [],
+    "osmTags": ["maxheight=3.5"],
     "comments": ""
   },
   {
@@ -532,7 +537,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/36/PL_road_sign_B-17-6m.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-17-6m.svg",
     "name": "B-17: zakaz wjazdu pojazdów dłuższych, niż określono na znaku (tu: 6 m)",
-    "osmTags": [],
+    "osmTags": ["maxlength=6"],
     "comments": ""
   },
   {
@@ -540,7 +545,11 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/16/PL_road_sign_B-18-7t.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-18-7t.svg",
     "name": "B-18: zakaz wjazdu pojazdów o rzeczywistej masie całkowitej większej niż określono na znaku (tu: 7 t)",
-    "osmTags": [],
+    "osmTags": [
+      "maxweight=X",
+      "maxweight=PL:sign_B-18 Opcjonalnie",
+      "conditional=* maxgcweight=* ma też pewne użycie"
+    ],
     "comments": ""
   },
   {
@@ -548,7 +557,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/PL_road_sign_B-19-10t.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-19-10t.svg",
     "name": "B-19: zakaz wjazdu pojazdów o nacisku osi większym niż określono na znaku (tu: 10 t)",
-    "osmTags": [],
+    "osmTags": ["maxaxleload=10"],
     "comments": ""
   },
   {
@@ -556,14 +565,14 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/PL_road_sign_B-20.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-20.svg",
     "name": "B-20: bezwzględny nakaz zatrzymania się",
-    "osmTags": [],
+    "osmTags": ["highway=stop"],
     "comments": ""
   },
   {
     "sign": "PL:B-21",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/79/PL_road_sign_B-21.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-21.svg",
-    "name": "B-21: zakaz skrętu w lewo",
+    "name": "Na relacji restrykcji (pamiętając także o zawarciu w niej odpowiednich członów i opisaniu ich roli):type=restriction + restriction=no_left_turn",
     "osmTags": [],
     "comments": ""
   },
@@ -571,7 +580,7 @@
     "sign": "PL:B-22",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/PL_road_sign_B-22.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-22.svg",
-    "name": "B-22: zakaz skrętu w prawo",
+    "name": "Na relacji restrykcji (pamiętając także o zawarciu w niej odpowiednich członów i opisaniu ich roli):type=restriction + restriction=no_right_turn",
     "osmTags": [],
     "comments": ""
   },
@@ -579,7 +588,7 @@
     "sign": "PL:B-23",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/99/PL_road_sign_B-23.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-23.svg",
-    "name": "B-23: zakaz zawracania",
+    "name": "Jeśli zakaz dotyczy skrzyżowania:Na relacji restrykcji (pamiętając także o zawarciu w niej odpowiednich członów i opisaniu ich roli):type=restriction + restriction=no_u_turn Jeśli zakaz dotyczy jezdni",
     "osmTags": [],
     "comments": ""
   },
@@ -596,7 +605,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/PL_road_sign_B-25.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-25.svg",
     "name": "B-25: zakaz wyprzedzania",
-    "osmTags": [],
+    "osmTags": ["overtaking=no"],
     "comments": ""
   },
   {
@@ -604,7 +613,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/PL_road_sign_B-26.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-26.svg",
     "name": "B-26: zakaz wyprzedzania przez samochody ciężarowe",
-    "osmTags": [],
+    "osmTags": ["hgv=no"],
     "comments": ""
   },
   {
@@ -628,7 +637,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/PL_road_sign_B-29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-29.svg",
     "name": "B-29: zakaz używania sygnałów dźwiękowych",
-    "osmTags": [],
+    "osmTags": ["honking=no"],
     "comments": ""
   },
   {
@@ -700,7 +709,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/52/PL_road_sign_B-33-50.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-33-50.svg",
     "name": "B-33: ograniczenie prędkości (tu: 50 km/h)",
-    "osmTags": [],
+    "osmTags": ["maxspeed=50", "maxspeed=sign"],
     "comments": ""
   },
   {
@@ -715,7 +724,7 @@
     "sign": "PL:B-35",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/PL_road_sign_B-35.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-35.svg",
-    "name": "B-35: zakaz postoju",
+    "name": "parking:right=no + parking:right:restriction=no_parking(lub parking:left=* / parking:both=*, zależnie od kierunku linii w OSM oraz strony drogi po której ustawiony jest znak)",
     "osmTags": [],
     "comments": ""
   },
@@ -723,7 +732,7 @@
     "sign": "PL:B-36",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/PL_road_sign_B-36.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-36.svg",
-    "name": "B-36: zakaz zatrzymywania się",
+    "name": "parking:right=no + parking:right:restriction=no_stopping(lub parking:left=* / parking:both=*, zależnie od kierunku linii w OSM oraz strony drogi po której ustawiony jest znak) Jeśli z tabliczką „nie d",
     "osmTags": [],
     "comments": ""
   },
@@ -731,7 +740,7 @@
     "sign": "PL:B-37",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2f/PL_road_sign_B-37.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-37.svg",
-    "name": "B-37: zakaz postoju w dni nieparzyste",
+    "name": "parking:right=no + parking:right:restriction:conditional=no_parking @ (\"Odd days of each month\")[5](lub parking:left=* / parking:both=*, zależnie od kierunku linii w OSM oraz strony drogi po której us",
     "osmTags": [],
     "comments": ""
   },
@@ -756,7 +765,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2d/PL_road_sign_B-41.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_B-41.svg",
     "name": "B-41: zakaz ruchu pieszych",
-    "osmTags": [],
+    "osmTags": ["foot=no"],
     "comments": ""
   },
   {
@@ -884,7 +893,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/30/PL_road_sign_C-13.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_C-13.svg",
     "name": "C-13: droga dla rowerów",
-    "osmTags": [],
+    "osmTags": ["highway=cycleway"],
     "comments": ""
   },
   {
@@ -900,7 +909,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/46/PL_road_sign_C-14-30.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_C-14-30.svg",
     "name": "C-14: nakaz utrzymywania prędkości minimalnej 30 km/h",
-    "osmTags": [],
+    "osmTags": ["minspeed=30"],
     "comments": ""
   },
   {
@@ -956,7 +965,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d5/PL_road_sign_C-18.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_C-18.svg",
     "name": "C-18: nakaz stosowania łańcuchów przeciwśniegowych",
-    "osmTags": [],
+    "osmTags": ["snow_chains=required"],
     "comments": ""
   },
   {
@@ -980,7 +989,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1f/PL_road_sign_D-2.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-2.svg",
     "name": "D-2: koniec drogi z pierwszeństwem",
-    "osmTags": [],
+    "osmTags": ["priority_road=end"],
     "comments": ""
   },
   {
@@ -996,7 +1005,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/PL_road_sign_D-4a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-4a.svg",
     "name": "D-4a: droga bez przejazdu",
-    "osmTags": [],
+    "osmTags": ["noexit=yes"],
     "comments": ""
   },
   {
@@ -1043,7 +1052,7 @@
     "sign": "PL:D-7",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/PL_road_sign_D-7.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-7.svg",
-    "name": "D-7: droga ekspresowa",
+    "name": "dla dróg bezkolizyjnych, dwujezdniowych, o co najmniej dwóch pasach ruchu w każdą stronę: highway=motorway lub highway=motorway_link dla niespełniających wymagań: highway=trunk lub highway=trunk_link",
     "osmTags": [],
     "comments": ""
   },
@@ -1092,7 +1101,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/PL_road_sign_D-13.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-13.svg",
     "name": "D-13: początek pasa ruchu powolnego",
-    "osmTags": [],
+    "osmTags": ["minspeed:lanes=30|"],
     "comments": ""
   },
   {
@@ -1132,7 +1141,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/PL_road_sign_D-18.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-18.svg",
     "name": "D-18: parking",
-    "osmTags": [],
+    "osmTags": ["amenity=parking"],
     "comments": ""
   },
   {
@@ -1156,7 +1165,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/PL_road_sign_D-19.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-19.svg",
     "name": "D-19: postój taksówek",
-    "osmTags": [],
+    "osmTags": ["amenity=taxi"],
     "comments": ""
   },
   {
@@ -1172,7 +1181,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/47/PL_road_sign_D-21.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-21.svg",
     "name": "D-21: szpital",
-    "osmTags": [],
+    "osmTags": ["amenity=hospital"],
     "comments": ""
   },
   {
@@ -1180,7 +1189,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/PL_road_sign_D-21a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-21a.svg",
     "name": "D-21a: policja",
-    "osmTags": [],
+    "osmTags": ["amenity=police"],
     "comments": ""
   },
   {
@@ -1196,7 +1205,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0c/PL_road_sign_D-23.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-23.svg",
     "name": "D-23: stacja paliwowa",
-    "osmTags": [],
+    "osmTags": ["amenity=fuel"],
     "comments": ""
   },
   {
@@ -1212,7 +1221,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/46/PL_road_sign_D-24.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-24.svg",
     "name": "D-24: telefon",
-    "osmTags": [],
+    "osmTags": ["amenity=telephone"],
     "comments": ""
   },
   {
@@ -1220,7 +1229,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/PL_road_sign_D-25.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-25.svg",
     "name": "D-25: poczta",
-    "osmTags": [],
+    "osmTags": ["amenity=post_office"],
     "comments": ""
   },
   {
@@ -1228,7 +1237,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/ff/PL_road_sign_D-26.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-26.svg",
     "name": "D-26: warsztat samochodowy",
-    "osmTags": [],
+    "osmTags": ["shop=car_repair"],
     "comments": ""
   },
   {
@@ -1236,7 +1245,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/73/Znak_D-26a_%281993%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Znak_D-26a_(1993).svg",
     "name": "D-26a: warsztat wulkanizacyjny",
-    "osmTags": [],
+    "osmTags": ["shop=tyres"],
     "comments": ""
   },
   {
@@ -1244,7 +1253,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f1/PL_road_sign_D-26b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-26b.svg",
     "name": "D-26b: myjnia",
-    "osmTags": [],
+    "osmTags": ["amenity=car_wash"],
     "comments": ""
   },
   {
@@ -1252,7 +1261,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9c/PL_road_sign_D-26c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-26c.svg",
     "name": "D-26c: toaleta publiczna",
-    "osmTags": [],
+    "osmTags": ["amenity=toilets"],
     "comments": ""
   },
   {
@@ -1260,7 +1269,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e3/PL_road_sign_D-26d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-26d.svg",
     "name": "D-26d: natrysk",
-    "osmTags": [],
+    "osmTags": ["amenity=shower"],
     "comments": ""
   },
   {
@@ -1276,7 +1285,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/df/PL_road_sign_D-28.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-28.svg",
     "name": "D-28: restauracja",
-    "osmTags": [],
+    "osmTags": ["amenity=restaurant"],
     "comments": ""
   },
   {
@@ -1292,7 +1301,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9a/PL_road_sign_D-30.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-30.svg",
     "name": "D-30: obozowisko (kemping)",
-    "osmTags": [],
+    "osmTags": ["tourism=camp_site"],
     "comments": ""
   },
   {
@@ -1308,7 +1317,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/PL_road_sign_D-32.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-32.svg",
     "name": "D-32: pole biwakowe",
-    "osmTags": [],
+    "osmTags": ["tourism=picnic_site"],
     "comments": ""
   },
   {
@@ -1316,7 +1325,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/96/PL_road_sign_D-33.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-33.svg",
     "name": "D-33: schronisko młodzieżowe",
-    "osmTags": [],
+    "osmTags": ["tourism=hostel"],
     "comments": ""
   },
   {
@@ -1324,7 +1333,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/09/PL_road_sign_D-34.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-34.svg",
     "name": "D-34: punkt informacji turystycznej",
-    "osmTags": [],
+    "osmTags": ["tourism=information"],
     "comments": ""
   },
   {
@@ -1444,7 +1453,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/61/PL_road_sign_D-45.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-45.svg",
     "name": "D-45: koniec strefy parkowania",
-    "osmTags": [],
+    "osmTags": ["zone=parking"],
     "comments": ""
   },
   {
@@ -1476,7 +1485,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7d/PL_road_sign_D-49.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-49.svg",
     "name": "D-49: pobór opłat",
-    "osmTags": [],
+    "osmTags": ["barrier=toll_booth"],
     "comments": ""
   },
   {
@@ -1484,7 +1493,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/af/PL_road_sign_D-50.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-50.svg",
     "name": "D-50: zatoka",
-    "osmTags": [],
+    "osmTags": ["highway=emergency_bay"],
     "comments": ""
   },
   {
@@ -1492,7 +1501,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/ba/PL_road_sign_D-51.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_D-51.svg",
     "name": "D-51: automatyczna kontrola prędkości",
-    "osmTags": [],
+    "osmTags": ["highway=speed_camera"],
     "comments": ""
   },
   {
@@ -1548,7 +1557,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/88/PL_road_sign_T-16.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_T-16.svg",
     "name": "T-16: miejsce wyjazdu pojazdów uprzywilejowanych straży pożarnej",
-    "osmTags": [],
+    "osmTags": ["hazard=emergency_vehicles"],
     "comments": ""
   },
   {
@@ -1556,7 +1565,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e4/PL_road_sign_T-16a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:PL_road_sign_T-16a.svg",
     "name": "T-16: miejsce wyjazdu pojazdów uprzywilejowanych pogotowia ratunkowego",
-    "osmTags": [],
+    "osmTags": ["hazard=emergency_vehicles"],
     "comments": ""
   },
   {

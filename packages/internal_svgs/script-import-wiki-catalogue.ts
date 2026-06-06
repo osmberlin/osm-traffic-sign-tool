@@ -206,8 +206,40 @@ type ParsedSign = {
   isNa: boolean
 }
 
+const isPolishGeometryTaggingCell = (tagsText: string) =>
+  /^Na (?:linii|węźle|obszarze)\b/i.test(tagsText.trim())
+
+const usesPolishDescriptionBeforeTag = (tagsText: string) =>
+  isPolishGeometryTaggingCell(tagsText) ||
+  (/^Jeśli\b/i.test(tagsText.trim()) && /:na linii\b/i.test(tagsText))
+
+const parsePolishDescriptionTagCell = (tagsText: string): { key: string; value: string }[] => {
+  const normalized = tagsText.replace(/\s+/g, ' ').replace(/\s+lub\s+/gi, ' + ')
+  const tags: { key: string; value: string }[] = []
+  for (const match of normalized.matchAll(
+    /(?<=[:\s+;,]|^)([a-z][a-z0-9_-]*)\s*=\s*([^+;,]+?)(?=\s+Jeśli|\s*\+|,|;|$)/gi,
+  )) {
+    const key = match[1]!
+    const value = match[2]!
+      .replace(/\s*\(.*$/, '')
+      .replace(/`/g, '')
+      .trim()
+    if (key === 'traffic_sign' || !value || value === '*' || value === '=*') continue
+    if (!tags.some((t) => t.key === key && t.value === value)) {
+      tags.push({ key, value })
+    }
+  }
+  return tags
+}
+
 const parseWikiTags = (tagsText: string): { key: string; value: string }[] => {
   if (!tagsText || /^(n\/a|na|–|-|\*|= \*)$/i.test(tagsText.trim())) return []
+
+  if (usesPolishDescriptionBeforeTag(tagsText)) {
+    const polishTags = parsePolishDescriptionTagCell(tagsText)
+    if (polishTags.length > 0) return polishTags
+  }
+
   const tags: { key: string; value: string }[] = []
   const normalized = tagsText.replace(/\s+/g, ' ')
   const tagPatterns = [
@@ -514,12 +546,14 @@ const emitSignObject = (sign: ParsedSign, defaultCategory: string, overviewUrl: 
     ? `image: {\n      kind: 'remote',\n      sourceUrl: '${escapeString(sign.imageUrl)}',\n      licence: 'Public Domain',\n    },`
     : `image: {\n      kind: 'remote',\n      sourceUrl: '${escapeString(overviewUrl)}',\n      licence: 'Public Domain',\n    },`
 
+  const descriptiveNameLine =
+    sign.name !== sign.signId ? `    descriptiveName: '${escapeString(sign.name)}',\n` : ''
+
   return `  {
     osmValuePart: '${escapeString(sign.signId)}',
     signId: '${escapeString(sign.signId)}',
     name: '${escapeString(sign.signId)}',
-    descriptiveName: '${escapeString(sign.name)}',
-    description: null,
+${descriptiveNameLine}    description: null,
     kind: '${kind}',
     ${buildRecommendations(tags, sign.isNa)}
     catalogue: { signCategory: '${category}' },

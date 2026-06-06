@@ -5,7 +5,6 @@ export const _indication_sr3: SignType[] = [
     osmValuePart: 'SR3b',
     signId: 'SR3b',
     name: 'SR3b',
-    descriptiveName: 'SR3b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

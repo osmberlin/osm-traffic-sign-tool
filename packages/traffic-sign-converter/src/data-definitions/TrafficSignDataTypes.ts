@@ -77,7 +77,8 @@ type SharedId = {
 }
 type SharedContent = {
   name: string
-  descriptiveName: string
+  /** Human-readable label; omit when it would duplicate `name` or `signId`. */
+  descriptiveName?: string
   description: string | null
 }
 type SharedCompatibility = {

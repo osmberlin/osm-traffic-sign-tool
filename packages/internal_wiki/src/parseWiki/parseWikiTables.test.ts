@@ -199,6 +199,18 @@ describe('parseUniversalTable', () => {
     const $ = cheerio.load(plA1RowHtml)
     const [row] = parseUniversalTable($, 'PL')
     expect(row?.name).toBe('A-1: niebezpieczny zakręt w prawo')
+    expect(toWikiSign('PL', row!)?.osmTags).toEqual(['hazard=curve'])
+  })
+
+  test('parses Polish geometry cell tags after the description colon', () => {
+    const $ = cheerio.load(`
+<table class="wikitable"><tbody><tr>
+  <td><a href="/wiki/File:PL_road_sign_A-3.svg"><img src="/thumb/PL_road_sign_A-3.svg"></a></td>
+  <td>Na linii na odcinku drogi obejmującym niebezpieczne zakręty:hazard=curves + curves=serpentine</td>
+  <td>A-3: dwa niebezpieczne zakręty, pierwszy w prawo</td>
+</tr></tbody></table>`)
+    const [row] = parseUniversalTable($, 'PL')
+    expect(toWikiSign('PL', row!)?.osmTags).toEqual(['hazard=curves', 'curves=serpentine'])
   })
 
   test('uses long French SI sign names instead of destination tags', () => {

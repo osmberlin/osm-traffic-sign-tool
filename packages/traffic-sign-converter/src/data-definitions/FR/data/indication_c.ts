@@ -84,7 +84,6 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'Image',
     signId: 'Image',
     name: 'Image',
-    descriptiveName: 'Image',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -101,7 +100,6 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C5',
     signId: 'C5',
     name: 'C5',
-    descriptiveName: 'C5',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -381,7 +379,6 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C113',
     signId: 'C113',
     name: 'C113',
-    descriptiveName: 'C113',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -452,7 +449,6 @@ export const _indication_c: SignType[] = [
     osmValuePart: 'C26b',
     signId: 'C26b',
     name: 'C26b',
-    descriptiveName: 'C26b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

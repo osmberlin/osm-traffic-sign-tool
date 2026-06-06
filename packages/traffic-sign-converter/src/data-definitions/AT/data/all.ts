@@ -1343,7 +1343,6 @@ export const _all: SignType[] = [
     osmValuePart: '52.11a[...]',
     signId: '52.11a[...]',
     name: '52.11a[...]',
-    descriptiveName: '52.11a[...]',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -1367,7 +1366,6 @@ export const _all: SignType[] = [
     osmValuePart: '52.11b[...]',
     signId: '52.11b[...]',
     name: '52.11b[...]',
-    descriptiveName: '52.11b[...]',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -3003,7 +3001,6 @@ export const _all: SignType[] = [
     osmValuePart: 'FKV_1.9',
     signId: 'FKV_1.9',
     name: 'FKV_1.9',
-    descriptiveName: 'FKV_1.9',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

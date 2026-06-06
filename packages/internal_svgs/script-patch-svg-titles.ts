@@ -37,7 +37,7 @@ for (const sign of signs) {
   }
 
   const content = await Bun.file(filePath).text()
-  const titleText = `Verkehrszeichen ${sign.osmValuePart} - ${sign.descriptiveName}`
+  const titleText = `Verkehrszeichen ${sign.osmValuePart} - ${sign.descriptiveName ?? sign.name}`
   const updated = content.replace(
     /<title id="title">[^<]*<\/title>/,
     `<title id="title">${titleText}</title>`,

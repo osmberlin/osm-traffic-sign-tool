@@ -137,7 +137,6 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A6',
     signId: 'A6',
     name: 'A6',
-    descriptiveName: 'A6',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -218,7 +217,6 @@ export const _danger_a: SignType[] = [
     osmValuePart: 'A9b',
     signId: 'A9b',
     name: 'A9b',
-    descriptiveName: 'A9b',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],

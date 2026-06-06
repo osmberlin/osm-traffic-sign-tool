@@ -50,8 +50,23 @@ for await (const filePath of glob('*.ts', { cwd: dataDir })) {
   content = content.replace(signBlockPattern, (block) => {
     const idMatch = block.match(/osmValuePart: '([^']+)'/)
     if (!idMatch) return block
-    const newName = nameByOsmValuePart.get(idMatch[1]!)
+    const osmValuePart = idMatch[1]!
+    const newName = nameByOsmValuePart.get(osmValuePart)
     if (!newName) return block
+
+    const signIdMatch = block.match(/signId: '([^']+)'/)
+    const nameMatch = block.match(/name: '([^']+)'/)
+    const signId = signIdMatch?.[1] ?? osmValuePart
+    const catalogueName = nameMatch?.[1] ?? signId
+
+    if (newName === signId || newName === catalogueName) {
+      const stripped = block
+        .replace(/\n\s*descriptiveName:\s*'(?:\\'|[^'])*',?/, '')
+        .replace(/\n\s*descriptiveName:\s*\n\s*'(?:\\'|[^'])*',?/, '')
+      if (stripped === block) return block
+      filePatchedNames++
+      return stripped
+    }
 
     const descriptiveNameMatches = block.match(/descriptiveName:/g)
     if (!descriptiveNameMatches) return block

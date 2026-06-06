@@ -5,7 +5,6 @@ export const _idiograms_id: SignType[] = [
     osmValuePart: 'Panneau',
     signId: 'Panneau',
     name: 'Panneau',
-    descriptiveName: 'Panneau',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

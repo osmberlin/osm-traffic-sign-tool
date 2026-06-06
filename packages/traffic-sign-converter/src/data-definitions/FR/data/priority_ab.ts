@@ -39,7 +39,6 @@ export const _priority_ab: SignType[] = [
     osmValuePart: 'AB3a',
     signId: 'AB3a',
     name: 'AB3a',
-    descriptiveName: 'AB3a',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedPriorityRecommendation('give_way'),
@@ -54,7 +53,6 @@ export const _priority_ab: SignType[] = [
     osmValuePart: 'AB4',
     signId: 'AB4',
     name: 'AB4',
-    descriptiveName: 'AB4',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: sharedPriorityRecommendation('stop'),
@@ -103,7 +101,6 @@ export const _priority_ab: SignType[] = [
     osmValuePart: 'AB25',
     signId: 'AB25',
     name: 'AB25',
-    descriptiveName: 'AB25',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

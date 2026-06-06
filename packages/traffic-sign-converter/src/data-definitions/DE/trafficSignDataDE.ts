@@ -724,7 +724,6 @@ export const trafficSignDataDE: SignType[] = [
     osmValuePart: 'Kein Winterdienst',
     signId: 'Kein Winterdienst',
     name: 'Zeichen "Kein Winterdienst"',
-    descriptiveName: 'Kein Winterdienst',
     description: 'Ein inoffizielles Verkehrszeichen.',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -749,7 +748,6 @@ export const trafficSignDataDE: SignType[] = [
     osmValuePart: 'Eingeschränkter Winterdienst',
     signId: 'Eingeschränkter Winterdienst',
     name: 'Zeichen "Eingeschränkter Winterdienst"',
-    descriptiveName: 'Eingeschränkter Winterdienst',
     description: 'Ein inoffizielles Verkehrszeichen.',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [

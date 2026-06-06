@@ -7,7 +7,7 @@ export const signsByDescriptiveName = (signDefinition: SignType[], names: string
   const signs = names
     .map((name) => {
       const exactMatch = signDefinition.find((s) => s.descriptiveName == name)
-      const startsWithMatch = signDefinition.find((s) => s.descriptiveName.startsWith(name))
+      const startsWithMatch = signDefinition.find((s) => s.descriptiveName?.startsWith(name))
       return exactMatch || startsWithMatch
     })
     .filter(Boolean)
