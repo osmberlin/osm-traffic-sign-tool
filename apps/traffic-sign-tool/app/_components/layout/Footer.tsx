@@ -1,6 +1,7 @@
 import { ResultDebug } from '@app/app/(signs)/_components/PageApp/results/ResultDebug'
 import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
+import { hasQaCapability } from '@osm-traffic-signs/converter'
 import { Link } from '@tanstack/react-router'
 import { ExternalLink } from '../links/ExternalLink'
 
@@ -30,14 +31,37 @@ export const Footer = () => {
     },
   ]
 
-  const internalNavigation = [
-    { name: m.footer_taginfo(), to: '/$lang/taginfo' as const },
-    { name: m.footer_wiki(), to: '/$lang/wiki' as const },
-    { name: m.footer_signs_qa(), to: '/$lang/signs-qa' as const },
-    { name: m.footer_combinations_qa(), to: '/$lang/check-sign-combinations' as const },
-    { name: m.footer_questions_qa(), to: '/$lang/questions-qa' as const },
-    { name: m.footer_all_signs(), to: '/$lang/signs' as const, active: true },
-  ] as const
+  const internalNavigation = (
+    [
+      {
+        name: m.footer_taginfo(),
+        to: '/$lang/taginfo' as const,
+        capability: 'taginfoComparison' as const,
+      },
+      { name: m.footer_wiki(), to: '/$lang/wiki' as const, capability: 'wikiComparison' as const },
+      {
+        name: m.footer_signs_qa(),
+        to: '/$lang/signs-qa' as const,
+        capability: 'taggingQa' as const,
+      },
+      {
+        name: m.footer_combinations_qa(),
+        to: '/$lang/check-sign-combinations' as const,
+        capability: 'combinationsQa' as const,
+      },
+      {
+        name: m.footer_questions_qa(),
+        to: '/$lang/questions-qa' as const,
+        capability: 'questionsQa' as const,
+      },
+      {
+        name: m.footer_all_signs(),
+        to: '/$lang/signs' as const,
+        capability: 'allSigns' as const,
+        active: true,
+      },
+    ] as const
+  ).filter((item) => hasQaCapability(lang, item.capability))
 
   return (
     <footer className="mx-auto mt-20 max-w-6xl px-4 py-12 sm:px-6 md:mt-0 lg:px-8">
@@ -93,7 +117,9 @@ export const Footer = () => {
           })}
         </div>
 
-        <ResultDebug linkClassName={footerLinkClassName} />
+        {hasQaCapability(lang, 'debugInfo') ? (
+          <ResultDebug linkClassName={footerLinkClassName} />
+        ) : null}
       </nav>
     </footer>
   )

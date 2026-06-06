@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add beta country catalogues: `BE`, `CA`, `PL`, `AT`, `FR`, `AU`, `BR` (OSM Wiki import via `packages/internal_svgs/script-import-wiki-catalogue.ts`).
+- Extend `CountryCatalogueMeta` with `catalogueName`, `isBeta`, `osmTrafficSignPrefix`, and `qaCapabilities` (`fullQaCapabilities` / `betaQaCapabilities`).
+- Add shared recommendation presets (`sharedRecommendationPresets.ts`) for cross-country semantic equivalents.
+- Export catalogue helpers: `getCatalogueDisplayName`, `isBetaCatalogue`, `hasQaCapability`.
+
 - Add sign questions QA helpers (`signHasQuestions`, `filterSignsByQuestionsQa`, `countSignsByQuestionsQa`) for the questions QA page.
 - Add structured **questions** on sign configs (`questionId`, `answerId`, i18n keys, explicit `nil` answer, optional `defaultAnswerId`, `affectsHighway`) and shared question builders (`sidepath`, `surfaceColor`, `guidanceMode`, `highwayClass`, `signDirection`).
 - Add node **Ausrichtung** (`direction=forward|backward`) for DE hazard signs via `signDirection` / `hazardSignNodeQuestions()` (wiki: DE:Key:direction); omit for way-only Schäden Zusatzzeichen.

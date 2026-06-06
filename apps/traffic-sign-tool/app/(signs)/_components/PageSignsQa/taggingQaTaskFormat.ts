@@ -76,27 +76,30 @@ const formatTaskSection = (
   lines.push('')
 }
 
-const formatAgentBrief = (): string[] => [
+const formatAgentBrief = (countryPrefix: string): string[] => [
   '# Tagging QA – catalogue config update',
   '',
   QA_ISSUE_ATTRIBUTION_BANNER,
   '',
-  'Created from the [Tagging QA page](https://trafficsigns.osm-verkehrswende.org/DE/signs-qa).',
+  `Created from the [Tagging QA page](https://trafficsigns.osm-verkehrswende.org/${countryPrefix}/signs-qa).`,
   '',
-  'Submitting this issue (label `tagging-qa`) triggers a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates German sign **config entries** in `@osm-traffic-signs/converter`—not TypeScript schema unless a task requires it.',
+  `Submitting this issue (label \`tagging-qa\`) triggers a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** in \`@osm-traffic-signs/converter\`—not TypeScript schema unless a task requires it.`,
   '',
   '## Agent instructions',
   '',
   '1. Apply every task in the sections below.',
-  `2. Read [\`${TAGGING_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${TAGGING_QA_AGENT_SKILL_PATH}) for \`tagRecommendationsByGeometry\` shape, \`questions\` / \`optionalTags\`, DE \`data/*.ts\` file choice, and OSM wiki tagging research.`,
-  '3. Edit signs under `packages/traffic-sign-converter/src/data-definitions/DE/`. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`tagRecommendationsByGeometry: "none" | [{ geometries, optionalTags?, ... }]`, `questions` with `questionId` / `answerId` / i18n keys).',
+  `2. Read [\`${TAGGING_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${TAGGING_QA_AGENT_SKILL_PATH}) for \`tagRecommendationsByGeometry\` shape, \`questions\` / \`optionalTags\`, and OSM wiki tagging research.`,
+  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Schema: \`packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts\` (\`tagRecommendationsByGeometry: "none" | [{ geometries, optionalTags?, ... }]\`, \`questions\` with \`questionId\` / \`answerId\` / i18n keys).`,
   '4. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
   '',
   '## Tasks',
   '',
 ]
 
-export const formatTaggingQaTaskResults = (entries: SignTaskEntry[]): string => {
+export const formatTaggingQaTaskResults = (
+  entries: SignTaskEntry[],
+  countryPrefix = 'DE',
+): string => {
   if (entries.length === 0) {
     return ''
   }
@@ -105,7 +108,7 @@ export const formatTaggingQaTaskResults = (entries: SignTaskEntry[]): string => 
   const addSuggestions = entries.filter((entry) => entry.task === 'add_suggestions')
   const comments = entries.filter((entry) => entry.task === 'comment')
 
-  const lines = [...formatAgentBrief()]
+  const lines = [...formatAgentBrief(countryPrefix)]
 
   formatTaskSection(
     lines,
@@ -132,9 +135,9 @@ export const formatTaggingQaTaskResults = (entries: SignTaskEntry[]): string => 
 const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
 export const TAGGING_QA_ISSUE_TEMPLATE = 'tagging-qa-catalogue-update.md'
 
-export const buildGithubIssueUrl = (entries: SignTaskEntry[]): string => {
-  const title = `Tagging QA: ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`
-  const body = formatTaggingQaTaskResults(entries)
+export const buildGithubIssueUrl = (entries: SignTaskEntry[], countryPrefix = 'DE'): string => {
+  const title = `Tagging QA (${countryPrefix}): ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`
+  const body = formatTaggingQaTaskResults(entries, countryPrefix)
   const params = new URLSearchParams({
     template: TAGGING_QA_ISSUE_TEMPLATE,
     title,

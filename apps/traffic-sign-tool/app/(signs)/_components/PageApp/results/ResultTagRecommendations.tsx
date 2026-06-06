@@ -1,7 +1,7 @@
 import { useParamAnswers } from '@app/app/(signs)/_components/store/useParamAnswers.search'
 import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.search'
-import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import { CopyButton } from '@app/app/_components/links/CopyButton'
+import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
 import { getGeometryLabel } from '@app/src/features/i18n/geometryLabels'
 import { ClipboardDocumentIcon } from '@heroicons/react/20/solid'

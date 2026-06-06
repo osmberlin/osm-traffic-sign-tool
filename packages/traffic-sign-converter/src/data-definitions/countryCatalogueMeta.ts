@@ -1,13 +1,13 @@
 import type { CountryCatalogueMeta, CountryQaCapabilities } from '../referenceLinks/types.js'
-import { catalogueMetaDE } from './DE/catalogueMetaDE.js'
-import { catalogueMetaBE } from './BE/catalogueMetaBE.js'
 import { catalogueMetaAT } from './AT/catalogueMetaAT.js'
-import { catalogueMetaCA } from './CA/catalogueMetaCA.js'
-import { catalogueMetaPL } from './PL/catalogueMetaPL.js'
-import { catalogueMetaFR } from './FR/catalogueMetaFR.js'
 import { catalogueMetaAU } from './AU/catalogueMetaAU.js'
+import { catalogueMetaBE } from './BE/catalogueMetaBE.js'
 import { catalogueMetaBR } from './BR/catalogueMetaBR.js'
+import { catalogueMetaCA } from './CA/catalogueMetaCA.js'
 import type { CountryPrefixType } from './countryDefinitions.js'
+import { catalogueMetaDE } from './DE/catalogueMetaDE.js'
+import { catalogueMetaFR } from './FR/catalogueMetaFR.js'
+import { catalogueMetaPL } from './PL/catalogueMetaPL.js'
 
 export type { CountryQaCapabilities }
 

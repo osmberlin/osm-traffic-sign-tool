@@ -1,6 +1,6 @@
-import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import { setUiLocale, useUiLocale } from '@app/app/_components/i18n/useUiLocale'
 import { stonePillButton } from '@app/app/_components/links/buttonStyles'
+import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
 import { uiLocales, type UiLocale } from '@app/src/features/i18n/uiLocale'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'

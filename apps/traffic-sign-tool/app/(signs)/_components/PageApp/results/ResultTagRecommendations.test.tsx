@@ -13,6 +13,12 @@ vi.mock('@app/app/(signs)/_components/store/useParamSigns.search', () => ({
   }),
 }))
 
+vi.mock('@app/app/(signs)/_components/store/useParamAnswers.search', () => ({
+  useParamAnswers: () => ({
+    paramAnswers: new Map(),
+  }),
+}))
+
 vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', () => ({
   useCountryPrefix: () => ({ countryPrefix: 'DE' as const }),
   useCatalogueHtmlLang: () => 'de-DE',
@@ -44,6 +50,7 @@ vi.mock('@osm-traffic-signs/converter', async (importOriginal) => {
     signsToComments: () => new Map(),
     signsToTags: (signs: any, countryPrefix: string, geometry: string) =>
       mockSignsToTags(signs, countryPrefix, geometry),
+    signsToOptionalTagsBySign: () => new Map(),
     toTag: ({ key, value }: { key: string; value: string }) => `${key}=${value}`,
   }
 })

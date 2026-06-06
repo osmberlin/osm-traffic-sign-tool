@@ -3,7 +3,7 @@ import { clsx } from 'clsx'
 
 type LangSwitcherOptionProps = {
   badge: string
-  label: string
+  label: React.ReactNode
   isSelected: boolean
   onClick: () => void
 }

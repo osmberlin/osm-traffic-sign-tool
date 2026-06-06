@@ -10,6 +10,14 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Add **beta traffic sign catalogues** for Belgium (`BE`), Canada (`CA`), Poland (`PL`), Austria (`AT`), France (`FR`), Australia (`AU`), and Brazil (`BR`), imported from their OSM Wiki pages.
+- Add catalogue metadata flags: `isBeta`, `catalogueName`, `osmTrafficSignPrefix`, and per-country `qaCapabilities`.
+- Add shared cross-country recommendation presets for semantically equivalent signs (cycle/foot paths, access bans, speed, parking).
+- Show **Beta** labels in the catalogue switcher, under “Choose Signs”, on geometry-specific recommendation headings, and in the about intro for beta catalogues.
+- Gate wiki comparison, taginfo comparison, and footer QA links by country capability configuration.
+- Make QA GitHub issue export country-aware (paths and URLs include active catalogue prefix).
+- Add country isolation tests and shared preset tests in `@osm-traffic-signs/converter`.
+
 - Add **Sign questions QA** page at `/$lang/questions-qa` with with/without/all filters, one-sign-at-a-time review of catalogue `questions` and answers, per-sign suggestion tasks, and pre-filled GitHub issues (label `question-qa`) with Cursor automation (see `.github/QUESTION_QA_AUTOMATION.md`, skill `.cursor/skills/update-sign-questions`).
 - Add tagging **questions** for selected signs (sidepath, surface colour, guidance mode, highway class, hazard sign orientation) with translated labels (EN/DE), per-sign editors in the selected-sign column, and an aggregated choices section in the results column.
 - Persist question answers in the URL (`answers` search param) with LocalStorage cache hydration when signs are loaded or changed.

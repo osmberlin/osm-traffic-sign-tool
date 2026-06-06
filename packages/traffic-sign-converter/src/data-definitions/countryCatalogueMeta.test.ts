@@ -4,39 +4,33 @@ import {
   getCatalogueMaturity,
   getCountryCatalogueMeta,
 } from './countryCatalogueMeta.js'
+import { countries } from './countryDefinitions.js'
 import { isVisibleMaturity } from './featureMaturities.js'
 
 describe('countryCatalogueMeta', () => {
-  test('contains DE catalogue metadata', () => {
-    expect(countryCatalogueMeta.DE).toMatchInlineSnapshot(`
-      {
-        "catalogueLocale": "de",
-        "countryPrefix": "DE",
-        "defaultCommentLang": "de",
-        "maturity": "alpha",
-        "osmWikiOverviewUrl": "https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland",
-        "referenceLinks": {
-          "hashPrefixes": {
-            "main": "Zeichen_",
-            "modifier": "Zusatzzeichen_",
-          },
-          "osmWikiTableUrl": "https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#{hashPrefix}{signId}",
-          "wikipediaTableUrl": "https://de.wikipedia.org/wiki/Bildtafel_der_Verkehrszeichen_in_der_Bundesrepublik_Deutschland_seit_2017#:~:text={textFragment}",
-          "wikipediaTextFragmentLabels": {
-            "main": "Zeichen",
-            "modifier": "Zusatzzeichen",
-          },
-        },
-      }
-    `)
+  test('contains DE catalogue metadata with full QA', () => {
+    expect(countryCatalogueMeta.DE.maturity).toBe('alpha')
+    expect(countryCatalogueMeta.DE.qaCapabilities.wikiComparison).toBe(true)
+    expect(countryCatalogueMeta.DE.qaCapabilities.taginfoComparison).toBe(true)
   })
 
-  test('DE catalogue is alpha', () => {
-    expect(getCatalogueMaturity('DE')).toBe('alpha')
-    expect(isVisibleMaturity(getCatalogueMaturity('DE'))).toBe(true)
+  test('all sign catalogues are alpha', () => {
+    for (const prefix of countries) {
+      expect(getCatalogueMaturity(prefix)).toBe('alpha')
+      expect(isVisibleMaturity(getCatalogueMaturity(prefix))).toBe(true)
+    }
+  })
+
+  test('non-DE countries expose package-data QA only', () => {
+    for (const prefix of countries) {
+      if (prefix === 'DE') continue
+      expect(getCountryCatalogueMeta(prefix).qaCapabilities.wikiComparison).toBe(false)
+      expect(getCountryCatalogueMeta(prefix).qaCapabilities.taginfoComparison).toBe(false)
+      expect(getCountryCatalogueMeta(prefix).qaCapabilities.taggingQa).toBe(true)
+    }
   })
 
   test('returns metadata by country prefix', () => {
-    expect(getCountryCatalogueMeta('DE')).toBe(countryCatalogueMeta.DE)
+    expect(getCountryCatalogueMeta('BE').catalogueName).toBe('Belgian traffic signs')
   })
 })

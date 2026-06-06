@@ -7,6 +7,7 @@ import { contentPreClass } from '@app/app/_components/layout/ContentTable'
 import { buttonStyle } from '@app/app/_components/links/buttonStyles'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import clsx from 'clsx'
 import { useRef, useState } from 'react'
@@ -16,10 +17,11 @@ type Props = {
 }
 
 export const TaggingQaTaskResults = ({ entries }: Props) => {
+  const countryPrefix = useCurrentLang()
   const [copied, setCopied] = useState(false)
   const copyFeedbackGenerationRef = useRef(0)
-  const resultText = formatTaggingQaTaskResults(entries)
-  const issueUrl = entries.length > 0 ? buildGithubIssueUrl(entries) : undefined
+  const resultText = formatTaggingQaTaskResults(entries, countryPrefix)
+  const issueUrl = entries.length > 0 ? buildGithubIssueUrl(entries, countryPrefix) : undefined
   const hasResults = entries.length > 0
 
   const handleCopy = async () => {

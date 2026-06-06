@@ -1,14 +1,14 @@
+import { useCountryPrefix } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import { useParamFocus } from '@app/app/(signs)/_components/store/useParamFocus.search'
 import { MaturityLabel } from '@app/app/_components/MaturityLabel'
 import * as m from '@app/paraglide/messages'
 import { signCategoryEntries } from '@app/src/features/i18n/signCategoryLabels'
-import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import {
   activeCatalogueFocusView,
   filterSignsByFocus,
   getCatalogueMaturity,
-  isHighlightedInView,
   isVisibleMaturity,
+  isHighlightedInView,
   SignType,
 } from '@osm-traffic-signs/converter'
 import { SearchSignInput } from './signGroups/SearchSignInput'
@@ -18,9 +18,9 @@ import { SignGridSearchQuery } from './signGroups/SignGridSearchQuery'
 type Props = { trafficSignData: SignType[] }
 
 export const SignSelectionColumn = ({ trafficSignData }: Props) => {
-  const lang = useCurrentLang()
-  const catalogueMaturity = getCatalogueMaturity(lang)
+  const { countryPrefix } = useCountryPrefix()
   const { focuses } = useParamFocus()
+  const catalogueMaturity = getCatalogueMaturity(countryPrefix)
 
   const displaySigns = filterSignsByFocus(trafficSignData, focuses)
   const activeView = activeCatalogueFocusView(focuses)

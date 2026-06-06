@@ -9,13 +9,15 @@ import {
 } from '@app/app/_components/layout/ContentTable'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import { catalogueHtmlLang } from '@app/src/features/routing/lang'
+import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { SignStateType } from '@osm-traffic-signs/converter'
 import { WikiSign } from '../page'
 
 const isImageUrl = (value: string) => /^(https?:|data:image\/)/i.test(value)
 
 export const Tablelize = ({ data }: { data: Partial<SignStateType> | Partial<WikiSign> }) => {
-  const catalogueLangAttr = catalogueHtmlLang('DE')
+  const countryPrefix = useCurrentLang()
+  const catalogueLangAttr = catalogueHtmlLang(countryPrefix)
 
   return (
     <ContentTable className="mt-3" lang={catalogueLangAttr}>

@@ -5,7 +5,10 @@ import type { CountryPrefixType } from './countryDefinitions.js'
 /** OSM `traffic_sign=*` country codes; includes catalogues not yet in `countryDefinitions`. */
 export type CatalogueCountryPrefix = CountryPrefixType | 'FR' | 'PL' | 'CA' | 'AU' | 'BR'
 
-export type BetaCountryCatalogueMeta = Omit<CountryCatalogueMeta, 'countryPrefix' | 'osmTrafficSignPrefix'> & {
+export type BetaCountryCatalogueMeta = Omit<
+  CountryCatalogueMeta,
+  'countryPrefix' | 'osmTrafficSignPrefix'
+> & {
   countryPrefix: CatalogueCountryPrefix
   osmTrafficSignPrefix: CatalogueCountryPrefix
 }
@@ -20,7 +23,9 @@ type BetaCatalogueMetaInput = {
   osmTrafficSignPrefix?: CatalogueCountryPrefix
 }
 
-export const createBetaCatalogueMeta = (input: BetaCatalogueMetaInput): BetaCountryCatalogueMeta => ({
+export const createBetaCatalogueMeta = (
+  input: BetaCatalogueMetaInput,
+): BetaCountryCatalogueMeta => ({
   countryPrefix: input.countryPrefix,
   catalogueName: input.catalogueName,
   maturity: 'alpha',

@@ -2,7 +2,19 @@ import { SelectedSignValuePrompt } from '@app/app/(signs)/_components/PageApp/se
 import type { SignStateType } from '@osm-traffic-signs/converter'
 import { cleanup, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeAll, beforeEach, describe, expect, test, vi } from 'vitest'
+
+beforeAll(() => {
+  Object.defineProperty(globalThis, 'localStorage', {
+    value: {
+      getItem: () => null,
+      setItem: () => undefined,
+      removeItem: () => undefined,
+      clear: () => undefined,
+    },
+    writable: true,
+  })
+})
 
 beforeEach(() => {
   vi.spyOn(console, 'info').mockImplementation(() => {})
@@ -21,14 +33,10 @@ vi.mock('@app/app/(signs)/_components/store/useParamSigns.search', () => ({
   }),
 }))
 
-vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', async (importOriginal) => {
-  const actual =
-    await importOriginal<typeof import('@app/app/(signs)/_components/store/CountryPrefixContext')>()
-  return {
-    ...actual,
-    useCountryPrefix: () => ({ countryPrefix: 'DE' as const }),
-  }
-})
+vi.mock('@app/app/(signs)/_components/store/CountryPrefixContext', () => ({
+  useCountryPrefix: () => ({ countryPrefix: 'DE' as const }),
+  useCatalogueHtmlLang: () => 'de-DE',
+}))
 
 vi.mock('@app/app/_components/i18n/useUiLocale', () => ({
   useUiLocale: () => 'en',

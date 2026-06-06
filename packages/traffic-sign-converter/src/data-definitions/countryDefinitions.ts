@@ -1,11 +1,11 @@
-import { trafficSignDataDE } from './DE/trafficSignDataDE.js'
-import { trafficSignDataBE } from './BE/trafficSignDataBE.js'
 import { trafficSignDataAT } from './AT/trafficSignDataAT.js'
-import { trafficSignDataCA } from './CA/trafficSignDataCA.js'
-import { trafficSignDataPL } from './PL/trafficSignDataPL.js'
-import { trafficSignDataFR } from './FR/trafficSignDataFR.js'
 import { trafficSignDataAU } from './AU/trafficSignDataAU.js'
+import { trafficSignDataBE } from './BE/trafficSignDataBE.js'
 import { trafficSignDataBR } from './BR/trafficSignDataBR.js'
+import { trafficSignDataCA } from './CA/trafficSignDataCA.js'
+import { trafficSignDataDE } from './DE/trafficSignDataDE.js'
+import { trafficSignDataFR } from './FR/trafficSignDataFR.js'
+import { trafficSignDataPL } from './PL/trafficSignDataPL.js'
 import type { SignType } from './TrafficSignDataTypes.js'
 
 // Data Definitions per Country

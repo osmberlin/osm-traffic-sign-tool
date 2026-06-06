@@ -1,11 +1,23 @@
 import { sidepathQuestion } from '@osm-traffic-signs/converter'
 import type { SignType } from '@osm-traffic-signs/converter'
-import { describe, expect, test } from 'vitest'
+import { beforeAll, describe, expect, test } from 'vitest'
 import {
   buildGithubIssueUrl,
   collectQuestionTaskEntries,
   formatQuestionsQaTaskResults,
 } from './questionsQaTaskFormat'
+
+beforeAll(() => {
+  Object.defineProperty(globalThis, 'localStorage', {
+    value: {
+      getItem: () => null,
+      setItem: () => undefined,
+      removeItem: () => undefined,
+      clear: () => undefined,
+    },
+    writable: true,
+  })
+})
 
 const baseSign = {
   osmValuePart: '237',

@@ -1,11 +1,11 @@
-import TaginfoPage from '@app/app/(signs)/DE/taginfo/page'
+import TaginfoComparisonRoutePage from '@app/app/(signs)/_components/TaginfoComparisonRoutePage'
 import * as m from '@app/paraglide/messages'
 import { deSearchSchema } from '@app/src/features/searchParams/deSearch'
 import { buildNoindexPageHead } from '@app/src/features/seo/seoHead'
 import { createFileRoute } from '@tanstack/react-router'
 
 function LangTaginfoRouteComponent() {
-  return <TaginfoPage />
+  return <TaginfoComparisonRoutePage />
 }
 
 export const Route = createFileRoute('/$lang/taginfo')({
