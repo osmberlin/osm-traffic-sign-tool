@@ -31,6 +31,6 @@
     // For my SVGs
     "allowSyntheticDefaultImports": true
   },
-  "include": [".", "src/svg.d.ts"],
-  "exclude": ["dist", "node_modules"]
+  "include": ["src"],
+  "exclude": ["dist", "node_modules", "script-import-wiki-catalogue.ts"]
 }

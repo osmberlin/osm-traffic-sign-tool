@@ -31,6 +31,6 @@
     // Usefull
     "noErrorTruncation": true // https://stackoverflow.com/a/53131824
   },
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules", "vitest.config.ts"]
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules", "vitest.config.ts", "scripts"]
 }

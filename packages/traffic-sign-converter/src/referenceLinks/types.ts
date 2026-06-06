@@ -15,13 +15,50 @@ export type CountryReferenceLinkConfig = {
   }
 }
 
+/** Per-country QA / maintainer view availability. */
+export type CountryQaCapabilities = {
+  taggingQa: boolean
+  questionsQa: boolean
+  combinationsQa: boolean
+  allSigns: boolean
+  wikiComparison: boolean
+  taginfoComparison: boolean
+  debugInfo: boolean
+}
+
+/** Full QA capabilities (stable DE catalogue). */
+export const fullQaCapabilities = {
+  taggingQa: true,
+  questionsQa: true,
+  combinationsQa: true,
+  allSigns: true,
+  wikiComparison: true,
+  taginfoComparison: true,
+  debugInfo: true,
+} as const satisfies CountryQaCapabilities
+
+/** Beta catalogue: package-data QA only until wiki/taginfo snapshots exist per country. */
+export const betaQaCapabilities = {
+  taggingQa: true,
+  questionsQa: true,
+  combinationsQa: true,
+  allSigns: true,
+  wikiComparison: false,
+  taginfoComparison: false,
+  debugInfo: true,
+} as const satisfies CountryQaCapabilities
+
 /** Catalogue or feature release stage shown in the UI when not `stable`. */
 export type MaturityKey = 'alpha' | 'beta' | 'stable'
 
 export type CountryCatalogueMeta = {
   countryPrefix: CountryPrefixType
+  /** English display name for catalogue switcher (not translated per UI locale). */
+  catalogueName: string
   /** Release stage; `alpha` and `beta` show a label in the UI. */
   maturity: MaturityKey
+  /** Prefix used in `traffic_sign=*` values (normally same as route key). */
+  osmTrafficSignPrefix: CountryPrefixType
   /** BCP 47 locale for catalogue rendering/sorting. */
   catalogueLocale: string
   /** Fallback language for catalogue comments without explicit lang tags. */
@@ -29,4 +66,5 @@ export type CountryCatalogueMeta = {
   /** Country overview wiki page for multi-modifier warning links. */
   osmWikiOverviewUrl: string
   referenceLinks: CountryReferenceLinkConfig
+  qaCapabilities: CountryQaCapabilities
 }

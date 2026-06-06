@@ -23,8 +23,10 @@ export * from './data-definitions/countryDefinitions.js'
 export type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
 export {
   countryCatalogueMeta,
-  getCatalogueMaturity,
   getCountryCatalogueMeta,
+  getCatalogueDisplayName,
+  hasQaCapability,
+  getCatalogueMaturity,
 } from './data-definitions/countryCatalogueMeta.js'
 export {
   geometryTagRecommendationsMaturity,
@@ -157,11 +159,30 @@ export type {
   ValidateConditionalOpeningHoursOptions,
 } from './utils/validateConditionalOpeningHours.js'
 
+export {
+  sharedAccessBanRecommendation,
+  sharedBridlewayRecommendation,
+  sharedCyclewayRecommendation,
+  sharedFootwayRecommendation,
+  sharedMaxspeedRecommendation,
+  sharedOnewayRecommendation,
+  sharedParkingRestrictionRecommendation,
+  sharedPriorityRecommendation,
+  sharedSegregatedFootCyclePathRecommendation,
+  sharedSharedFootCyclePathRecommendation,
+} from './sharedRecommendationPresets.js'
+export type { SharedAccessBanKind, SharedPriorityKind } from './sharedRecommendationPresets.js'
+
 // Country reference links
 export { buildSignReferenceLinks } from './referenceLinks/buildSignReferenceLinks.js'
 export type { SignReferenceLinks } from './referenceLinks/buildSignReferenceLinks.js'
 export { buildOsmWikiKeyUrl, buildOsmWikiTagUrl } from './referenceLinks/buildOsmWikiUrl.js'
-export type { CountryCatalogueMeta, CountryReferenceLinkConfig } from './referenceLinks/types.js'
+export type {
+  CountryCatalogueMeta,
+  CountryQaCapabilities,
+  CountryReferenceLinkConfig,
+} from './referenceLinks/types.js'
+export { betaQaCapabilities, fullQaCapabilities } from './referenceLinks/types.js'
 
 // Data PER COUNTRY: DE
 // export * from './data-definitions/DE/trafficSignDataDE.js'

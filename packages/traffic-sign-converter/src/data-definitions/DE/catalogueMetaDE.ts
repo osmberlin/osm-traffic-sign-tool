@@ -1,8 +1,11 @@
 import type { CountryCatalogueMeta } from '../../referenceLinks/types.js'
+import { fullQaCapabilities } from '../../referenceLinks/types.js'
 
 export const catalogueMetaDE = {
   countryPrefix: 'DE',
+  catalogueName: 'German traffic signs',
   maturity: 'alpha',
+  osmTrafficSignPrefix: 'DE',
   catalogueLocale: 'de',
   defaultCommentLang: 'de',
   osmWikiOverviewUrl: 'https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland',
@@ -20,4 +23,5 @@ export const catalogueMetaDE = {
       modifier: 'Zusatzzeichen',
     },
   },
+  qaCapabilities: fullQaCapabilities,
 } as const satisfies CountryCatalogueMeta
