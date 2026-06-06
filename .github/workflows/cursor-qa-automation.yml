@@ -1,0 +1,146 @@
+# Triggers a Cursor cloud agent when a QA issue is opened (cursor-qa or per-page labels).
+# See https://cursor.com/docs/cloud-agent and .github/CURSOR_QA_AUTOMATION.md
+name: Cursor QA automation
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  issues: write
+
+jobs:
+  trigger-cursor:
+    runs-on: ubuntu-latest
+    steps:
+      # GitHub validates workflow files on push; a run with every step skipped fails.
+      - name: Workflow file check (push validation only)
+        if: github.event_name == 'push'
+        run: echo "Cursor QA automation runs on issues with label cursor-qa, tagging-qa, combination-qa, or question-qa."
+
+      - name: Start Cursor agent via issue comment
+        if: |
+          github.event_name == 'issues' && (
+            (github.event.action == 'opened' && (
+              contains(github.event.issue.labels.*.name, 'cursor-qa') ||
+              contains(github.event.issue.labels.*.name, 'tagging-qa') ||
+              contains(github.event.issue.labels.*.name, 'combination-qa') ||
+              contains(github.event.issue.labels.*.name, 'question-qa')
+            )) ||
+            (github.event.action == 'labeled' && (
+              github.event.label.name == 'cursor-qa' ||
+              github.event.label.name == 'tagging-qa' ||
+              github.event.label.name == 'combination-qa' ||
+              github.event.label.name == 'question-qa'
+            ))
+          )
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const GHA_ATTRIBUTION =
+              '> **GitHub Actions (automation)** — This comment only starts the Cursor cloud agent. It is not written by the issue author.\n\n';
+
+            const CURSOR_TRIGGER_MARKER = '@cursor repo=';
+            const SPECIFIC_LABELS = ['tagging-qa', 'combination-qa', 'question-qa'];
+            const LABEL_CONFIG = {
+              'tagging-qa': {
+                title: 'Tagging QA',
+                skill: '.cursor/skills/add-traffic-sign/SKILL.md',
+              },
+              'combination-qa': {
+                title: 'Sign combination QA',
+                skill: '.cursor/skills/fix-sign-combination/SKILL.md',
+              },
+              'question-qa': {
+                title: 'Sign questions QA',
+                skill: '.cursor/skills/update-sign-questions/SKILL.md',
+              },
+              'cursor-qa': {
+                title: 'Catalogue QA',
+                skill: null,
+              },
+            };
+
+            const issue = context.payload.issue;
+            const { owner, repo } = context.repo;
+            const issueLabels = issue.labels.map((label) =>
+              typeof label === 'string' ? label : label.name,
+            );
+
+            const resolveActiveLabel = () => {
+              for (const label of SPECIFIC_LABELS) {
+                if (issueLabels.includes(label)) {
+                  return label;
+                }
+              }
+              if (issueLabels.includes('cursor-qa')) {
+                return 'cursor-qa';
+              }
+              return null;
+            };
+
+            const activeLabel = resolveActiveLabel();
+            if (!activeLabel) {
+              core.info('No Cursor QA trigger label found on issue; skipping.');
+              return;
+            }
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number: issue.number,
+              per_page: 100,
+            });
+
+            const alreadyTriggered = comments.some((comment) =>
+              comment.body?.includes(CURSOR_TRIGGER_MARKER),
+            );
+
+            if (alreadyTriggered) {
+              core.info('Cursor trigger already exists (@cursor comment); skipping.');
+              return;
+            }
+
+            const config = LABEL_CONFIG[activeLabel];
+            const issueBody = issue.body ?? '';
+            let skillInstruction;
+
+            if (config.skill) {
+              skillInstruction = `Follow \`${config.skill}\`.`;
+            } else {
+              const skillMatch = issueBody.match(/\.cursor\/skills\/[^\s`]+\/SKILL\.md/);
+              skillInstruction = skillMatch
+                ? `Follow \`${skillMatch[0]}\`.`
+                : 'Read the **issue body** for the agent skill path and instructions.';
+            }
+
+            const body = `${GHA_ATTRIBUTION}@cursor repo=${owner}/${repo} branch=main
+
+**${config.title}** issue #${issue.number} (label \`${activeLabel}\`).
+
+Read the **issue body** (agent instructions + tasks). ${skillInstruction} Update sign config under \`packages/traffic-sign-converter/src/data-definitions/\`, run converter tests, and **open a PR** whose description includes \`Closes #${issue.number}\` (auto-closes this issue on merge). Prefix all GitHub comments and the PR description with \`**[Cursor Agent]**\`.`;
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body,
+            });
+
+      - name: No-op for other issue events
+        if: |
+          github.event_name == 'issues' && !(
+            (github.event.action == 'opened' && (
+              contains(github.event.issue.labels.*.name, 'cursor-qa') ||
+              contains(github.event.issue.labels.*.name, 'tagging-qa') ||
+              contains(github.event.issue.labels.*.name, 'combination-qa') ||
+              contains(github.event.issue.labels.*.name, 'question-qa')
+            )) ||
+            (github.event.action == 'labeled' && (
+              github.event.label.name == 'cursor-qa' ||
+              github.event.label.name == 'tagging-qa' ||
+              github.event.label.name == 'combination-qa' ||
+              github.event.label.name == 'question-qa'
+            ))
+          )
+        run: echo "Issue event ignored (not a Cursor QA trigger)."

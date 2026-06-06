@@ -3,6 +3,7 @@ name: Sign questions QA catalogue update
 about: Apply sign questions QA tasks from the questions-qa page to the converter catalogue (triggers Cursor)
 title: '[Question QA] '
 labels:
+  - cursor-qa
   - question-qa
 assignees: ''
 ---
@@ -10,7 +11,7 @@ assignees: ''
 <!--
   Opened from the Sign questions QA page or filled manually.
 
-  Issues with the `question-qa` label trigger `.github/workflows/cursor-question-qa-automation.yml`,
+  Issues with the `question-qa` or `cursor-qa` label trigger `.github/workflows/cursor-qa-automation.yml`,
   which comments `@cursor` so a cloud agent can apply catalogue updates and open a PR.
 
   Requires the Cursor GitHub app on this repository.

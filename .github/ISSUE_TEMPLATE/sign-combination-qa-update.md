@@ -3,6 +3,7 @@ name: Sign combination QA update
 about: Apply sign combination QA tasks from the check-sign-combinations page to the converter catalogue (triggers Cursor)
 title: '[Combination QA] '
 labels:
+  - cursor-qa
   - combination-qa
 assignees: ''
 ---
@@ -10,7 +11,7 @@ assignees: ''
 <!--
   Opened from the Sign combinations QA page or filled manually.
 
-  Issues with the `combination-qa` label trigger `.github/workflows/cursor-combination-qa-automation.yml`,
+  Issues with the `combination-qa` or `cursor-qa` label trigger `.github/workflows/cursor-qa-automation.yml`,
   which comments `@cursor` so a cloud agent can apply catalogue updates and open a PR.
 
   Requires the Cursor GitHub app on this repository.
