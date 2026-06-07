@@ -46,15 +46,20 @@
       "import": "./dist/data-svgs/*/svgs/*.svg",
       "default": "./dist/data-svgs/*/svgs/*.svg",
       "types": "./dist/types/svg.d.ts"
-    }
+    },
+    "./sign-data/manifest.json": "./dist/sign-data/manifest.json",
+    "./sign-data/catalogue-meta.json": "./dist/sign-data/catalogue-meta.json",
+    "./sign-data/general-redirects.json": "./dist/sign-data/general-redirects.json",
+    "./sign-data/*.json": "./dist/sign-data/*.json"
   },
   "scripts": {
     "bleach": "rm -rf node_modules && rm -rf dist",
-    "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:copy-types && bun run build:copy-svgs",
+    "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:json && bun run build:copy-types && bun run build:copy-svgs",
     "build:clean": "rimraf dist",
     "build:clean-svgs": "rimraf ./src/data-svgs",
     "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
     "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
+    "build:json": "bun ./scripts/write-sign-data-json.ts",
     "build:transfer-svgs": "bun ./scripts/transfer-svgs.ts",
     "build:ts": "tsc -p tsconfig.build.json",
     "build:watch": "tsc -p tsconfig.build.json --watch",
