@@ -125,6 +125,44 @@ describe('trafficSignTagToSigns()', () => {
     })
   })
 
+  describe('parking mapping signs', () => {
+    const parkingSignIds = [
+      '290',
+      '314.1',
+      '1024-20',
+      '1040-32',
+      '1040-33',
+      '1044-10',
+      '1044-11',
+      '1044-30',
+      '1050-32',
+      '1051-33',
+      '1053-31',
+      '1053-31-1053-31',
+      '1010-59',
+      '1010-67',
+    ] as const
+
+    test.each(parkingSignIds)('recognizes DE:%s', (signId) => {
+      const result = trafficSignTagToSigns(`traffic_sign=DE:${signId}`, countryPrefix)
+      expect(result[0]?.recodgnizedSign).toBe(true)
+    })
+
+    test('redirects DE:314-1 to DE:314.1', () => {
+      const result = trafficSignTagToSigns('traffic_sign=DE:314-1', countryPrefix)
+      expect(result[0]?.recodgnizedSign).toBe(true)
+      expect(result[0]?.osmValuePart).toBe('314.1')
+      expect(result[0]?.matchdByAlternativeKey).toBe('314-1')
+    })
+
+    test('recognizes bracket value for DE:1040-32', () => {
+      const result = trafficSignTagToSigns('traffic_sign=DE:1040-32[2 h]', countryPrefix)
+      expect(result[0]?.recodgnizedSign).toBe(true)
+      expect(result[0]?.osmValuePart).toMatch('1040-32')
+      expect(result[0]?.signValue).toBe('2 h')
+    })
+  })
+
   describe('newly supported DE signs', () => {
     test('recognizes DE:350.1', () => {
       const result = trafficSignTagToSigns('traffic_sign=DE:350.1', countryPrefix)

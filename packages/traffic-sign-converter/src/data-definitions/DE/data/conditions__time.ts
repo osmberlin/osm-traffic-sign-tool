@@ -277,4 +277,74 @@ export const _conditions__time: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '1040-32[2 h]',
+    signId: '1040-32',
+    name: 'Zusatzzeichen 1040-32',
+    descriptiveName: 'Parkscheibe',
+    description: 'Parken mit Parkscheibe (Höchstparkdauer)',
+    kind: 'condition_modifier',
+    signValue: '2 h',
+    valuePrompt: {
+      prompt: 'Höchstparkdauer',
+      defaultValue: '2 h',
+      format: 'opening_hours',
+    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'authentication:disc', value: 'yes' },
+          { key: 'fee', value: 'no' },
+          { key: 'maxstay', value: '$' },
+        ],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1040-32_-_Parkscheibe_2_Stunden,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1040-33',
+    signId: '1040-33',
+    name: 'Zusatzzeichen 1040-33',
+    descriptiveName: 'Parken mit Parkscheibe in gekennzeichneten Flächen',
+    description: 'Parken mit Parkscheibe in gekennzeichneten Flächen (Zeitangabe frei)',
+    kind: 'condition_modifier',
+    signValue: '2 h',
+    valuePrompt: {
+      prompt: 'Höchstparkdauer',
+      defaultValue: '2 h',
+      format: 'opening_hours',
+    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'authentication:disc', value: 'yes' },
+          { key: 'fee', value: 'no' },
+          { key: 'maxstay', value: '$' },
+        ],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1040-33_-_Parken_mit_Parkscheibe_in_gekennzeichneten_Fl%C3%A4chen_2_Stunden,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]

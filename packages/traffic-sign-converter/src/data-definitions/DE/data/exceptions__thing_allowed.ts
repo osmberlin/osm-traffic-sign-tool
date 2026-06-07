@@ -329,6 +329,32 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
   },
   {
+    osmValuePart: '1024-20',
+    signId: '1024-20',
+    name: 'Zusatzzeichen 1024-20',
+    descriptiveName: 'Elektrisch betriebene Fahrzeuge frei',
+    description: 'Fahrzeuge mit E-Kennzeichen',
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        accessTags: [{ key: 'electric_vehicle', value: 'yes' }],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'exception_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1024-20_-_elektrisch_betriebene_Fahrzeuge_frei,_StVO_2015.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '1024-16',
     signId: '1024-16',
     name: 'Zusatzzeichen 1024-16',

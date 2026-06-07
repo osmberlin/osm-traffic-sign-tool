@@ -216,4 +216,211 @@ export const _conditions__other: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '1044-10',
+    signId: '1044-10',
+    name: 'Zusatzzeichen 1044-10',
+    descriptiveName: 'Nur Schwerbehinderte mit außergewöhnlicher Gehbehinderung und Blinde',
+    description: null,
+    kind: 'condition_modifier',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'access', value: 'no' },
+          { key: 'disabled', value: 'designated' },
+        ],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1044-10_-_nur_Schwerbehinderte_mit_au%C3%9Fergew%C3%B6hnlicher_Gehbehinderung_und_Blinde,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1044-11',
+    signId: '1044-11',
+    name: 'Zusatzzeichen 1044-11',
+    descriptiveName: 'Nur Schwerbehinderte mit Parkausweis Nr. …',
+    description: null,
+    kind: 'condition_modifier',
+    signValue: '123',
+    valuePrompt: {
+      prompt: 'Parkausweis-Nummer',
+      defaultValue: '123',
+      format: 'opening_hours',
+    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'access', value: 'no' },
+          { key: 'disabled', value: 'private' },
+          { key: 'ref', value: '$' },
+        ],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1044-11_-_nur_Schwerbehinderte_mit_Parkausweis_Nr_..._(600x330);_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1044-30',
+    signId: '1044-30',
+    name: 'Zusatzzeichen 1044-30',
+    descriptiveName: 'Bewohner mit Parkausweis Nr. …',
+    description: null,
+    kind: 'condition_modifier',
+    signValue: 'A',
+    valuePrompt: {
+      prompt: 'Parkausweis-Nummer / Zone',
+      defaultValue: 'A',
+      format: 'opening_hours',
+    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'access', value: 'private' },
+          { key: 'zone', value: '$' },
+        ],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1044-30_-_Bewohner_mit_Parkausweis_Nr._...._(600x330),_StVO_2002.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1050-32',
+    signId: '1050-32',
+    name: 'Zusatzzeichen 1050-32',
+    descriptiveName: 'Elektrofahrzeuge während des Ladevorgangs',
+    description: null,
+    kind: 'condition_modifier',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'restriction', value: 'charging_only' }],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1050-32_-_Elektrofahrzeuge_w%C3%A4hrend_des_Ladevorgangs,_StVO_2011.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1051-33',
+    signId: '1051-33',
+    name: 'Zusatzzeichen 1051-33',
+    descriptiveName: 'Mit Parkschein',
+    description: 'Parken nur mit Parkschein (Gebührenpflicht)',
+    kind: 'condition_modifier',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'authentication:ticket', value: 'yes' },
+          { key: 'fee', value: 'yes' },
+        ],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1053-31_-_Mit_Parkschein_(600x330),_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1053-31',
+    signId: '1053-31',
+    name: 'Zusatzzeichen 1053-31',
+    descriptiveName: 'Mit Parkschein',
+    description: 'Parken nur mit Parkschein (Gebührenpflicht)',
+    kind: 'condition_modifier',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'authentication:ticket', value: 'yes' },
+          { key: 'fee', value: 'yes' },
+        ],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1053-31_-_Mit_Parkschein_(600x330),_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1053-31-1053-31',
+    signId: '1053-31-1053-31',
+    name: 'Zusatzzeichen 1053-31 (doppelt)',
+    descriptiveName: 'Mit Parkschein (Bedingung)',
+    description:
+      'Doppeltes Zusatzzeichen für bedingte Gebührenpflicht (z. B. mit Zeitbeschränkung)',
+    kind: 'condition_modifier',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'authentication:ticket', value: 'yes' },
+          { key: 'fee', value: 'yes' },
+        ],
+      },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1053-31_-_Mit_Parkschein_(600x330),_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]

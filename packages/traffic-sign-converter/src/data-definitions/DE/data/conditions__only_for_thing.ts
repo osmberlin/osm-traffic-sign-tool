@@ -339,11 +339,55 @@ export const _conditions__only_for_thing: SignType[] = [
     },
   },
   {
+    osmValuePart: '1010-59',
+    signId: '1010-59',
+    name: 'Zusatzzeichen 1010-59',
+    descriptiveName: 'Personenkraftwagen mit Anhänger',
+    description: null,
+    kind: 'condition_modifier',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'trailer', uniqueTags: [] },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1010-59_-_Personenkraftwagen_mit_Anh%C3%A4nger,_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '1010-67',
+    signId: '1010-67',
+    name: 'Zusatzzeichen 1010-67',
+    descriptiveName: 'Wohnmobile',
+    description: null,
+    kind: 'condition_modifier',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], modifierValue: 'motorhome', uniqueTags: [] },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'condition_modifier',
+      focus: { parking: true },
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1010-67_-_Wohnmobile_(600x330),_StVO_2017.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '1048-11',
     signId: '1048-11',
     name: 'Zusatzzeichen 1048-11',
-    descriptiveName: 'Anhänger',
-    description: 'Zusatzzeichen zur Anwendung eines Hauptzeichens speziell auf Anhänger',
+    descriptiveName: 'Personenkraftwagen mit Anhänger',
+    description: 'Zusatzzeichen zur Anwendung eines Hauptzeichens speziell auf Pkw mit Anhänger',
     kind: 'condition_modifier',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], modifierValue: 'trailer', uniqueTags: [] },
@@ -355,7 +399,7 @@ export const _conditions__only_for_thing: SignType[] = [
     image: {
       kind: 'remote',
       sourceUrl:
-        'https://de.wikipedia.org/wiki/Datei:Zusatzzeichen_1010-59_-_Personenkraftwagen_mit_Anh%C3%A4nger,_StVO_2017.svg',
+        'https://commons.wikimedia.org/wiki/File:Zusatzzeichen_1048-11_-_nur_Pkw_mit_Anh%C3%A4nger_(600x330),_StVO_1992.svg',
       licence: 'Public Domain',
     },
   },
