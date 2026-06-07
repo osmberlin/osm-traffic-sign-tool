@@ -56,13 +56,13 @@ If you add new `questionI18nKey` / `answerI18nKey` values:
 
 ## Common changes
 
-| Reviewer intent | Typical change |
-|-----------------|----------------|
+| Reviewer intent                     | Typical change                                                        |
+| ----------------------------------- | --------------------------------------------------------------------- |
 | Add questions to a sign without any | Import factories from `questionCatalog.ts`, assign `questions: [...]` |
-| New answer option | Append to `answers` on the relevant `SignQuestion`; add i18n keys |
-| Change default highway | Update `defaultAnswerId` on `highwayClassQuestion` |
-| Remove a question | Delete from `questions` array or replace with narrower set |
-| Tag mapping fix | Update `tags` / `removeTags` / `highwayValue` on the answer object |
+| New answer option                   | Append to `answers` on the relevant `SignQuestion`; add i18n keys     |
+| Change default highway              | Update `defaultAnswerId` on `highwayClassQuestion`                    |
+| Remove a question                   | Delete from `questions` array or replace with narrower set            |
+| Tag mapping fix                     | Update `tags` / `removeTags` / `highwayValue` on the answer object    |
 
 ## Attribution
 

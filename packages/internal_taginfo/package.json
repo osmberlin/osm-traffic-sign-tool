@@ -9,14 +9,14 @@
   "scripts": {
     "bleach": "rm -rf node_modules",
     "build": "tsc",
-    "check": "bun run type-check && bun run format && bun run lint",
+    "check": "bun run type-check && bun run lint",
     "dev": "tsc --watch",
-    "format": "oxfmt --config ../../oxfmt.config.mjs --write .",
-    "format:check": "oxfmt --config ../../oxfmt.config.mjs --check .",
+    "format": "bun run --cwd ../.. format",
+    "format:check": "bun run --cwd ../.. format:check",
     "lint": "oxlint -c ../../oxlint.config.mjs .",
     "taginfo": "bun run taginfo:generate",
     "taginfo:fetch": "bun run taginfo:generate",
-    "taginfo:generate": "bun run ./src/generateTaginfoSnapshots.ts && oxfmt --config ../../oxfmt.config.mjs --write ./src/data",
+    "taginfo:generate": "bun run ./src/generateTaginfoSnapshots.ts && bun run --cwd ../.. format:files -- packages/internal_taginfo/src/data",
     "test": "echo No tests configured",
     "test:watch": "echo No tests configured",
     "type-check": "tsc --skipLibCheck --noEmit"

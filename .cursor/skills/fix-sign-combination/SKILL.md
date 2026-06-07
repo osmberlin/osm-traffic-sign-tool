@@ -12,11 +12,11 @@ This skill teaches the agent how to resolve feedback from the Sign combinations 
 
 ## Issue task types
 
-| Reviewer status | Meaning | Typical fix |
-|-----------------|---------|-------------|
-| **OK** | Combination is allowed and tag output verified | Add or update `compatibility.confirmedModifiers[<modifierSignId>]` on the primary sign with the confirmation date |
-| **Not OK** | Combination is allowed but tag output is wrong | Update `tagRecommendations` on primary/modifier and/or add `signsToTags` test |
-| **Invalid combination** | Combination should not be allowed | Update primary `compatibility` (`incompatibleModifiers` or `canReceiveModifiers: false`) |
+| Reviewer status         | Meaning                                        | Typical fix                                                                                                       |
+| ----------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **OK**                  | Combination is allowed and tag output verified | Add or update `compatibility.confirmedModifiers[<modifierSignId>]` on the primary sign with the confirmation date |
+| **Not OK**              | Combination is allowed but tag output is wrong | Update `tagRecommendations` on primary/modifier and/or add `signsToTags` test                                     |
+| **Invalid combination** | Combination should not be allowed              | Update primary `compatibility` (`incompatibleModifiers` or `canReceiveModifiers: false`)                          |
 
 Each issue task includes:
 

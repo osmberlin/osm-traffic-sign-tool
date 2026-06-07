@@ -20,5 +20,6 @@ export default defineConfig({
     '**/.turbo/**',
     '**/dist/**',
     '**/coverage/**',
+    '**/*.{yml,yaml}',
   ],
 })

@@ -4,8 +4,8 @@ This is a **static client-side React SPA monorepo** — no databases, Docker, or
 
 ## Services
 
-| Service | Command | Port |
-|---------|---------|------|
+| Service                    | Command                                                  | Port |
+| -------------------------- | -------------------------------------------------------- | ---- |
 | Vite dev server (main app) | `bun run dev` (from root, runs all watchers in parallel) | 5173 |
 
 Running `bun run dev` from the repo root starts the Vite dev server for the app plus TypeScript watchers for all packages.

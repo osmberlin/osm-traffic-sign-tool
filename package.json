@@ -1,18 +1,20 @@
 {
   "name": "osm-traffic-sign-tools-monorepo",
   "private": true,
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "bleach": "bun run --filter '*' bleach && rm -rf node_modules",
     "build": "bun run build:packages && bun run --cwd apps/traffic-sign-tool build",
     "build:packages": "bun run --cwd packages/traffic-sign-converter build && bun run --cwd packages/internal_taginfo build && bun run --cwd packages/internal_svgs build && bun run --cwd packages/internal_wiki build",
-    "dev": "bun run --parallel --filter '*' dev",
-    "check": "bun run --filter '*' check",
+    "check": "bun run format && bun run --filter '*' check",
     "check:clean-build": "bun run ./script-check-clean-build.ts",
-    "format": "bun run --filter '*' format && bun run format:root",
-    "format:check": "bun run --filter '*' format:check && bun run format:check:root",
-    "format:check:root": "oxfmt --config ./oxfmt.config.mjs --check release-cli.ts vitest.workspace.ts script-check-clean-build.ts script-commons-audit.ts script-new-data.ts script-new-svg.ts script-rank-tier-b.ts script-refresh-all-svg.ts",
-    "format:root": "oxfmt --config ./oxfmt.config.mjs --write release-cli.ts vitest.workspace.ts script-check-clean-build.ts script-commons-audit.ts script-new-data.ts script-new-svg.ts script-rank-tier-b.ts script-refresh-all-svg.ts",
+    "dev": "bun run --parallel --filter '*' dev",
+    "format": "oxfmt --config ./oxfmt.config.mjs --write .",
+    "format:check": "oxfmt --config ./oxfmt.config.mjs --check .",
+    "format:files": "oxfmt --config ./oxfmt.config.mjs --write",
     "lint": "bun run --filter '*' lint",
     "prepare": "husky",
     "release": "bun run release-cli.ts",
@@ -26,12 +28,16 @@
     "@colors/colors": "^1.6.0",
     "@types/bun": "latest",
     "husky": "^9.1.7",
+    "nano-staged": "^1.0.2",
     "oxc-plugin-react-compiler": "^0.2.0",
     "oxfmt": "0.50.0",
     "oxlint": "1.65.0",
     "postcss": "^8.5.6",
     "svgo": "^4.0.0",
     "vitest": "^4.0.16"
+  },
+  "nano-staged": {
+    "*": "bun run format:files --"
   },
   "engines": {
     "node": ">=22.21.1"

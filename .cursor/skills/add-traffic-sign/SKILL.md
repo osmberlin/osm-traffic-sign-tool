@@ -179,13 +179,13 @@ test('Merged access tags for specific combination', () => {
 
 Use `catalogue.focus` (object keyed by view). Omit `focus` for ordinary **Standard** signs.
 
-| `catalogue.focus` | Meaning |
-|-------------------|---------|
-| *(omitted)* | Standard tab only (implicit `default: true`) |
-| `{ default: 'highlight' }` | Standard + “Häufig verwendet” |
-| `{ parking: true }` / `{ highway: true }` / `{ bike_foot: true }` | Thematic tab + Alle |
-| `{ highway: 'highlight' }` | Thematic tab + featured row there |
-| `{ all: true }` | Alle only (rare object markers) |
+| `catalogue.focus`                                                 | Meaning                                      |
+| ----------------------------------------------------------------- | -------------------------------------------- |
+| _(omitted)_                                                       | Standard tab only (implicit `default: true`) |
+| `{ default: 'highlight' }`                                        | Standard + “Häufig verwendet”                |
+| `{ parking: true }` / `{ highway: true }` / `{ bike_foot: true }` | Thematic tab + Alle                          |
+| `{ highway: 'highlight' }`                                        | Thematic tab + featured row there            |
+| `{ all: true }`                                                   | Alle only (rare object markers)              |
 
 Do not use `visibility` on new signs.
 

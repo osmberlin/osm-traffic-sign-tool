@@ -4,23 +4,23 @@ Several QA pages in the Traffic Sign Tool can open GitHub issues with pre-filled
 
 ## Supported QA pages
 
-| Page | Route | Issue label | Skill |
-|------|-------|-------------|-------|
-| Tagging QA | `/{country}/signs-qa` | `tagging-qa` (+ `cursor-qa`) | [add-traffic-sign](../.cursor/skills/add-traffic-sign/SKILL.md) |
-| Sign combinations QA | `/{country}/check-sign-combinations` | `combination-qa` (+ `cursor-qa`) | [fix-sign-combination](../.cursor/skills/fix-sign-combination/SKILL.md) |
-| Sign questions QA | `/{country}/questions-qa` | `question-qa` (+ `cursor-qa`) | [update-sign-questions](../.cursor/skills/update-sign-questions/SKILL.md) |
-| Taginfo comparison | `/{country}/taginfo` | `cursor-qa` | [add-traffic-sign](../.cursor/skills/add-traffic-sign/SKILL.md) |
-| Wiki comparison | `/{country}/wiki` | `cursor-qa` | [add-traffic-sign](../.cursor/skills/add-traffic-sign/SKILL.md) |
+| Page                 | Route                                | Issue label                      | Skill                                                                     |
+| -------------------- | ------------------------------------ | -------------------------------- | ------------------------------------------------------------------------- |
+| Tagging QA           | `/{country}/signs-qa`                | `tagging-qa` (+ `cursor-qa`)     | [add-traffic-sign](../.cursor/skills/add-traffic-sign/SKILL.md)           |
+| Sign combinations QA | `/{country}/check-sign-combinations` | `combination-qa` (+ `cursor-qa`) | [fix-sign-combination](../.cursor/skills/fix-sign-combination/SKILL.md)   |
+| Sign questions QA    | `/{country}/questions-qa`            | `question-qa` (+ `cursor-qa`)    | [update-sign-questions](../.cursor/skills/update-sign-questions/SKILL.md) |
+| Taginfo comparison   | `/{country}/taginfo`                 | `cursor-qa`                      | [add-traffic-sign](../.cursor/skills/add-traffic-sign/SKILL.md)           |
+| Wiki comparison      | `/{country}/wiki`                    | `cursor-qa`                      | [add-traffic-sign](../.cursor/skills/add-traffic-sign/SKILL.md)           |
 
 The general `cursor-qa` label is used for new QA flows (taginfo, wiki) and is also applied alongside page-specific labels on older templates. Future QA pages only need the `cursor-qa` label and an issue body that references the relevant skill path.
 
 ## Who speaks on GitHub
 
-| Surface | GitHub identity | How we mark it |
-|--------|-----------------|----------------|
-| Issue body | Human submitter (your avatar) | Blockquote banner in issue body: human vs machine-generated vs agent |
-| Workflow trigger comment | `github-actions[bot]` | `> **GitHub Actions (automation)** — …` in [cursor-qa-automation.yml](workflows/cursor-qa-automation.yml) |
-| Agent PR and comments | **`cursor`** app when Team Owned; else connected user | Agent must prefix text with `**[Cursor Agent]**` (see [github-agent-attribution](../.cursor/rules/github-agent-attribution.mdc)) |
+| Surface                  | GitHub identity                                       | How we mark it                                                                                                                   |
+| ------------------------ | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Issue body               | Human submitter (your avatar)                         | Blockquote banner in issue body: human vs machine-generated vs agent                                                             |
+| Workflow trigger comment | `github-actions[bot]`                                 | `> **GitHub Actions (automation)** — …` in [cursor-qa-automation.yml](workflows/cursor-qa-automation.yml)                        |
+| Agent PR and comments    | **`cursor`** app when Team Owned; else connected user | Agent must prefix text with `**[Cursor Agent]**` (see [github-agent-attribution](../.cursor/rules/github-agent-attribution.mdc)) |
 
 GitHub always attributes the **issue opener** to whoever clicks Create issue; the QA tool only pre-fills the body.
 
