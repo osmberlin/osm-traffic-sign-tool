@@ -2,11 +2,35 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Ship plain JSON files alongside the compiled JS in `@osm-traffic-signs/converter` so consumers can load traffic sign definitions without executing TypeScript or bundling the package’s modules.
+**Goal:** Ship plain JSON files alongside the compiled JS in `@osm-traffic-signs/converter` so non-JS consumers (JOSM, StreetComplete, Vespucci, mobile map apps, etc.) can load traffic sign catalogue data — OSM tag mappings, names, descriptions, and image references — without executing TypeScript or bundling the package’s modules. Closes the first milestone of [issue #120](https://github.com/osmberlin/osm-traffic-sign-tool/issues/120).
 
-**Architecture:** Keep the source of truth as today’s TypeScript modules under `src/data-definitions/`. After `tsc` emits `dist/`, run a small Node ESM script that dynamically imports the built `countryDefinitions` (and `generalRedirects` for redirect metadata used at runtime) from `dist/`, then writes UTF-8 JSON under `dist/sign-data/`. Declare stable `package.json` `exports` subpaths for those JSON files so resolution works under Node 16+ and bundlers. Copy the same JSON tree into the TanStack app’s static output (`public/sign-data/` → Vite `dist/sign-data/`) so Netlify deploy previews and GitHub Pages can serve them over HTTPS for manual smoke tests. Document consumption in the converter README; surface the package and JSON URLs in the app footer.
+**Architecture:** Keep the source of truth as today’s TypeScript modules under `src/data-definitions/` (incremental step; unlike [id-tagging-schema](https://github.com/openstreetmap/id-tagging-schema), JSON is a **derived build artifact**, not the edit source — see **Issue #120 alignment** below). After `tsc` emits `dist/`, run a small Bun/Node ESM script that dynamically imports the built `countryDefinitions`, `countryCatalogueMeta`, and `generalRedirects` from `dist/`, then writes UTF-8 JSON under `dist/sign-data/`. Declare stable `package.json` `exports` subpaths for those JSON files. Copy the same JSON tree into the TanStack app’s static output (`public/sign-data/` → Vite `dist/sign-data/`) so Netlify deploy previews and GitHub Pages can serve them over HTTPS for manual smoke tests. Document consumption for non-JS integrators in the converter README; surface the package and JSON URLs in the app footer.
 
-**Tech Stack:** Node 22+, `pnpm`, `turbo`, existing `tsc` + `copyfiles` build, Vite, TanStack Router, Paraglide i18n, `@arethetypeswrong/cli` (`check-exports`), `vitest`, `bun run release-cli.ts` for manual npm releases, Netlify deploy previews (`netlify.toml`).
+**Tech Stack:** Bun, Node 22+, `pnpm`, `turbo`, existing `tsc -p tsconfig.build.json` + `copyfiles` build, Vite, TanStack Router, Paraglide i18n, `@arethetypeswrong/cli` (`check-exports`), `vitest`, `bun run release-cli.ts` for manual npm releases, Netlify deploy previews (`netlify.toml`).
+
+---
+
+## Issue #120 alignment
+
+[Issue #120 — Separate data from code](https://github.com/osmberlin/osm-traffic-sign-tool/issues/120) asks for sign data (OSM tags ↔ picture/description) in JSON, consumable by editors and apps that are not web/JS-based, and wonders whether an **iD preset** export would make sense.
+
+| #120 goal | This plan | Notes |
+|-----------|-----------|-------|
+| Data separated from code | **Yes (Task 1–2)** | Per-country JSON arrays mirror `SignType` configs; no TS runtime needed to *read* catalogue data. |
+| Language-agnostic consumption | **Yes (Task 3)** | Plain JSON over npm paths or HTTPS static URLs; document schema fields. |
+| OSM tags ↔ sign identity | **Yes** | Each entry has `signId`, `osmValuePart`, `tagRecommendationsByGeometry`, `identifyingTags`, redirects. |
+| Picture / description | **Partial** | `descriptiveName`, `description`, `comments` are in JSON. **Pictures:** `image.sourceUrl` (remote wiki) or `image: "missing"`; bundled SVGs stay in `@osm-traffic-signs/converter/data-svgs/{CC}/svgs/` — pair by `signId` (see Task 3). JSON does not embed SVG bytes. |
+| JSON as edit source (like id-tagging-schema) | **Out of scope** | TS modules remain authoritative; follow-up could invert the pipeline later. |
+| iD preset export | **Out of scope** | Different schema (presets, fields, geometry filters). Worth a **separate issue/spike**: map `tagRecommendationsByGeometry` + `questions` → preset fragments; partial overlap only. Listed under optional follow-ups. |
+| Tag conversion logic in non-JS apps | **Out of scope** | `signsToTags`, conditional merging, question resolution stay in the npm package for now. JSON supplies catalogue + recommendations; reimplementing conversion is a later step for native apps. |
+| Question UI strings | **Partial** | `questions` use `*I18nKey` fields (Paraglide keys), not plain text — non-JS apps need their own translations or a future i18n JSON export. |
+
+**Plan changes vs earlier draft (post-rebase on `main`):**
+
+- Export **`catalogue-meta.json`** alongside country files (beta/stable, QA capabilities, wiki links).
+- Expect **8 countries** in manifest: `AT`, `AU`, `BE`, `BR`, `CA`, `DE`, `FR`, `PL` (not DE-only).
+- JSON schema reflects **`tagRecommendationsByGeometry`** and **`image: "missing"`** (0.5.0 model).
+- Build/release commands use **`bun`** and next release is **`0.6.0`** (package is already at `0.5.0`).
 
 ---
 
@@ -57,6 +81,9 @@ function toFileUrl(relativePath) {
 const { countryDefinitions } = await import(
   toFileUrl('data-definitions/countryDefinitions.js'),
 )
+const { countryCatalogueMeta } = await import(
+  toFileUrl('data-definitions/countryCatalogueMeta.js'),
+)
 const { generalRedirects } = await import(
   toFileUrl('data-definitions/generalRedirects.js'),
 )
@@ -71,6 +98,12 @@ writeFileSync(
   jsonOpts,
 )
 
+writeFileSync(
+  join(outDir, 'catalogue-meta.json'),
+  `${JSON.stringify(countryCatalogueMeta, null, 2)}\n`,
+  jsonOpts,
+)
+
 for (const [countryCode, signs] of Object.entries(countryDefinitions)) {
   writeFileSync(
     join(outDir, `${countryCode}.json`),
@@ -81,12 +114,18 @@ for (const [countryCode, signs] of Object.entries(countryDefinitions)) {
 
 const manifest = {
   version: 1,
+  schemaNote:
+    'Each {CC}.json is SignType[]; fields match TrafficSignDataTypes (tagRecommendationsByGeometry, image, questions, …).',
   countries: Object.keys(countryDefinitions).sort(),
   files: {
     countries: Object.fromEntries(
       Object.keys(countryDefinitions).map((c) => [c, `./${c}.json`]),
     ),
+    catalogueMeta: './catalogue-meta.json',
     generalRedirects: './general-redirects.json',
+  },
+  relatedAssets: {
+    bundledSvgs: '@osm-traffic-signs/converter/data-svgs/{CC}/svgs/{signId}.svg',
   },
 }
 
@@ -102,13 +141,13 @@ writeFileSync(
 After `build:ts` (so `dist/data-definitions/*.js` exists), run the script. Insert into the `build` chain:
 
 ```json
-"build:json": "node ./scripts/write-sign-data-json.mjs",
+"build:json": "bun ./scripts/write-sign-data-json.mjs",
 ```
 
 And extend `build` (order matters: **after** `build:ts`, **before** `build:copy-svgs` is fine):
 
 ```
-"build": "... && npm run build:ts && npm run build:json && npm run build:copy-types && ..."
+"build": "bun run build:clean && ... && bun run build:ts && bun run build:json && bun run build:copy-types && ..."
 ```
 
 - [ ] **Step 3: Run build and confirm artifacts**
@@ -121,17 +160,18 @@ pnpm exec turbo build --filter=@osm-traffic-signs/converter
 
 Expected: files exist:
 
-- `packages/traffic-sign-converter/dist/sign-data/DE.json`
+- `packages/traffic-sign-converter/dist/sign-data/DE.json` (and `AT.json`, `FR.json`, …)
+- `packages/traffic-sign-converter/dist/sign-data/catalogue-meta.json`
 - `packages/traffic-sign-converter/dist/sign-data/general-redirects.json`
 - `packages/traffic-sign-converter/dist/sign-data/manifest.json`
 
 Quick sanity check:
 
 ```bash
-node -e "const m=require('./packages/traffic-sign-converter/dist/sign-data/manifest.json'); console.log(m.countries)"
+node -e "const m=require('./packages/traffic-sign-converter/dist/sign-data/manifest.json'); console.log(m.countries.join(','))"
 ```
 
-Expected stdout includes `DE`.
+Expected stdout includes all eight prefixes: `AT,AU,BE,BR,CA,DE,FR,PL` (order may differ).
 
 - [ ] **Step 4: Commit**
 
@@ -154,6 +194,7 @@ Add subpaths (adjust if you drop `manifest.json` in Task 1):
 
 ```json
 "./sign-data/manifest.json": "./dist/sign-data/manifest.json",
+"./sign-data/catalogue-meta.json": "./dist/sign-data/catalogue-meta.json",
 "./sign-data/general-redirects.json": "./dist/sign-data/general-redirects.json",
 "./sign-data/*.json": "./dist/sign-data/*.json"
 ```
@@ -188,13 +229,18 @@ git commit -m "feat(converter): export sign-data JSON paths in package exports"
 
 Add a **JSON sign data** section after **Main data**, documenting:
 
-- `import manifest from '@osm-traffic-signs/converter/sign-data/manifest.json' assert { type: 'json' }` (or `with { type: 'json' }` depending on target) **or** `readFile` + `JSON.parse` for CJS-style consumers.
-- Per-country: `@osm-traffic-signs/converter/sign-data/DE.json`
-- `general-redirects.json` and its purpose (cross-cutting redirect map, not part of per-country arrays).
+- Start from `manifest.json` → per-country files; read `catalogue-meta.json` for beta/stable and QA capability flags.
+- Per-country: `@osm-traffic-signs/converter/sign-data/DE.json` (array of sign objects).
+- `general-redirects.json` — cross-cutting redirect map used at lookup time.
+- **Non-JS integrators (issue #120):**
+  - Schema matches `TrafficSignDataTypes` / exported TS types (`tagRecommendationsByGeometry`, `questions` with `*I18nKey`, `image` as remote object, local object, or `"missing"`).
+  - **Pictures:** use `image.sourceUrl` when remote; for bundled assets import/copy from `@osm-traffic-signs/converter/data-svgs/{CC}/svgs/` (filename derived from `signId`, same rules as `createSvgFilename`).
+  - **Conversion logic** (`signsToTags`, question merging) is not in JSON — use the npm package or reimplement from published recommendations.
+  - Link to [issue #120](https://github.com/osmberlin/osm-traffic-sign-tool/issues/120) as tracking issue; note iD preset export is not included (future work).
 
 - [ ] **Step 2: Changelog bullet**
 
-Under `## Unreleased`, add a line such as: ship JSON copies of country sign lists, general redirects, and a small manifest under `sign-data/` with stable package export paths.
+Under `## Unreleased`, add a line such as: ship JSON copies of country sign lists, catalogue metadata, general redirects, and a manifest under `sign-data/` with stable package export paths (addresses #120 data separation).
 
 - [ ] **Step 3: Commit**
 
@@ -289,7 +335,7 @@ curl -sS http://localhost:4173/sign-data/manifest.json | head
 curl -sS -o /dev/null -w '%{http_code}\n' http://localhost:4173/sign-data/DE.json
 ```
 
-Expected: HTTP `200`, manifest JSON with `"countries": ["DE"]`.
+Expected: HTTP `200`, manifest JSON whose `countries` array lists all configured prefixes (e.g. includes `"DE"` and `"FR"`).
 
 - [ ] **Step 3: Document test links using the Netlify preview URL**
 
@@ -298,7 +344,9 @@ After pushing the implementation PR, read the **Deploy Preview** link from the `
 | Resource | URL |
 |----------|-----|
 | Manifest | `{PREVIEW}/sign-data/manifest.json` |
+| Catalogue metadata | `{PREVIEW}/sign-data/catalogue-meta.json` |
 | Germany signs | `{PREVIEW}/sign-data/DE.json` |
+| France signs (beta) | `{PREVIEW}/sign-data/FR.json` |
 | General redirects | `{PREVIEW}/sign-data/general-redirects.json` |
 
 **Example (PR #131 plan branch — replace when implementing feature PR):**
@@ -315,7 +363,7 @@ curl -sS "$PREVIEW/sign-data/manifest.json" | node -e "let d='';process.stdin.on
 curl -sS -o /dev/null -w '%{http_code}\n' "$PREVIEW/sign-data/DE.json"
 ```
 
-Expected: prints `DE` (or current country list) and `200`.
+Expected: prints full country list (8 prefixes) and `200`.
 
 **SPA fallback note:** `netlify.toml` rewrites unknown paths to `index.html`. Static files under `dist/sign-data/` are served as files first; if JSON URLs return HTML instead, add an explicit rule *above* the catch-all:
 
@@ -356,7 +404,7 @@ Leave `## Unreleased` in the feature PR; do **not** add a version section until 
 
 - [ ] **Step 2: Choose semver bump**
 
-Additive, non-breaking API → **minor** bump (current package version `0.4.0` → `0.5.0`), consistent with prior converter releases.
+Additive, non-breaking API → **minor** bump (current package version `0.5.0` → `0.6.0`), consistent with prior converter releases.
 
 - [ ] **Step 3: Manual release checklist (maintainer)**
 
@@ -370,10 +418,10 @@ The CLI will:
 
 1. Confirm `CHANGELOG.md` `## Unreleased` is complete.
 2. Run `npm version minor` in `packages/traffic-sign-converter` (updates `package.json` only).
-3. Prompt to move `## Unreleased` content into `## 0.5.0` with date `_YYYY-MM-DD_`.
-4. `turbo build --force` and `pnpm run check` in the package.
+3. Prompt to move `## Unreleased` content into `## 0.6.0` with date `_YYYY-MM-DD_`.
+4. `turbo build --force` and `bun run check` in the package.
 5. `npm publish` (requires `npm login`).
-6. Git commit `Package: release v0.5.0` and optional push.
+6. Git commit `Package: release v0.6.0` and optional push.
 
 **Pre-release verification on the tarball:**
 
@@ -381,7 +429,7 @@ The CLI will:
 cd packages/traffic-sign-converter && pnpm run build && npm pack --dry-run
 ```
 
-Confirm `package/sign-data/DE.json`, `manifest.json`, and `general-redirects.json` appear in the packed file list.
+Confirm `package/sign-data/DE.json`, `catalogue-meta.json`, `manifest.json`, and `general-redirects.json` appear in the packed file list.
 
 - [ ] **Step 4: Post-release (optional follow-up PR)**
 
@@ -452,8 +500,12 @@ git commit -m "feat(app): footer links for converter npm package and JSON sign d
 
 ---
 
-## Optional follow-ups (not required for issue #120)
+## Optional follow-ups (beyond issue #120 milestone 1)
 
+- **iD preset export (#120 question):** Spike mapping `SignType` → [id-tagging-schema](https://github.com/openstreetmap/id-tagging-schema) preset JSON; likely needs custom fields for modifiers, geometry-specific recommendations, and question flows. Track as separate issue.
+- **JSON as source of truth:** Invert pipeline (edit JSON → generate TS) like id-tagging-schema; large migration.
+- **i18n bundle for questions:** Export Paraglide message keys used in `questions` as `{locale}.json` for native apps.
+- **Picture index JSON:** Flat `{countryPrefix}/{signId} → {url|svgPath}` lookup file for map renderers.
 - **Tests:** Add a `vitest` test that imports `countryDefinitions` from source and asserts `JSON.stringify` equals `JSON.stringify(JSON.parse(fs.readFileSync('dist/sign-data/DE.json')))` — only if you add a test script phase that runs **after** `build` in CI; otherwise skip to avoid order coupling.
 - **Minified JSON:** Switch to `JSON.stringify(x)` without pretty-print to shrink tarball; trade-off: worse `git diff` on accidental commits (dist is not usually committed).
 - **Single combined file:** If consumers prefer one download, add `all-countries.json` with the same shape as `countryDefinitions` — redundant with per-country files; add only if requested.
@@ -464,12 +516,14 @@ git commit -m "feat(app): footer links for converter npm package and JSON sign d
 
 | Requirement (from #120 / PR / review) | Task |
 |----------------------------------------|------|
-| JSON version of traffic sign data in the NPM build | Task 1 (`dist/sign-data/*.json`) |
-| Easy to consume without TS modules | Task 2 (package exports) + Task 3 (README) |
-| Future countries | Task 1 loop + wildcard export |
-| Test links via Netlify deploy preview | Task 5 (static copy + URL table from bot comment) |
-| Prepare npm package for manual release | Task 6 (changelog, semver, `release-cli.ts` checklist) |
-| App footer: package + JSON feature | Task 7 (`Footer.tsx` + i18n) |
+| Separate catalogue data from TS/code (#120) | Task 1–2 |
+| Non-JS consumption (tags, names, descriptions) | Task 2–3 (exports + integrator README) |
+| Image references (not embedded SVG) | Task 1 + Task 3 (`relatedAssets` in manifest, data-svgs docs) |
+| Multi-country catalogues (AT…BR) | Task 1 loop + `catalogue-meta.json` |
+| iD preset export (#120 question) | Optional follow-up (out of scope) |
+| Test links via Netlify deploy preview | Task 5 |
+| Prepare npm package for manual release | Task 6 (`0.6.0`) |
+| App footer: package + JSON feature | Task 7 |
 
 **Placeholder scan:** No TBD/TODO in executable steps above.
 
