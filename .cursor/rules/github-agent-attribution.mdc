@@ -3,6 +3,8 @@ description: GitHub comment and PR attribution when acting as a Cursor cloud age
 globs:
   - .cursor/skills/**
   - .github/workflows/cursor-*-qa-automation.yml
+metadata:
+  environments: cloud
 ---
 
 # GitHub attribution (Cursor agent)
