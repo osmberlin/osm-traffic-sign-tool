@@ -47,6 +47,9 @@ jobs:
       - name: Build monorepo (Vite app and packages)
         env:
           GITHUB_PAGES: true
+        # CRITICAL: package build order must match root package.json `build:packages`
+        # (and `check:clean-build` / script-check-clean-build.ts). Internal packages
+        # compile against @osm-traffic-signs/converter dist/ — converter must build first.
         run: |
           bun run --cwd packages/traffic-sign-converter build
           bun run --cwd packages/internal_taginfo build

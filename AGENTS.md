@@ -21,7 +21,7 @@ Running `bun run dev` from the repo root starts the Vite dev server for the app 
 - **Format check**: `bun run format:check` (runs oxfmt; note `routeTree.gen.ts` is auto-generated and may fail format check)
 - **Format fix**: `bun run format`
 - **Test**: `bun run test` (vitest across all packages)
-- **Pre-push check**: `bun run check` (what the husky pre-push hook runs)
+- **Pre-push check**: `bun run check` then `bun run check:clean-build` (husky pre-push; clean-build wipes `dist/` and runs a full `GITHUB_PAGES=true` build like deploy CI)
 
 ### Gotchas
 

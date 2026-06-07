@@ -1,1 +1,2 @@
 bun run check
+bun run check:clean-build
