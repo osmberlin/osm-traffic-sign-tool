@@ -18,7 +18,7 @@
     "lint": "bun run --filter '*' lint",
     "prepare": "husky",
     "release": "bun run release-cli.ts",
-    "test": "bun run --filter '*' test",
+    "test": "vitest run .github/scripts && bun run --filter '*' test",
     "test:watch": "bun run --parallel --filter '*' test:watch",
     "updatePackages:major": "bunx taze -r major --includeLocked --write --maturity-period 5 && bun install",
     "updatePackages:minor": "bunx taze -r minor --includeLocked --write --maturity-period 5 && bun install"

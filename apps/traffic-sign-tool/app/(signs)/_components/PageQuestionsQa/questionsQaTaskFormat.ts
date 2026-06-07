@@ -3,6 +3,12 @@ import {
   type CountryPrefixType,
   type SignType,
 } from '@osm-traffic-signs/converter'
+import {
+  type QaDeployContext,
+  formatQaDeployContextLines,
+  getQaDeployContext,
+  githubBlobUrl,
+} from '../qaDeployContext'
 import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
 
 export type QuestionTaskState = {
@@ -58,19 +64,21 @@ const formatCatalogueLabel = (countryPrefix: string) => {
   return `${catalogueName} (\`${countryPrefix}\`)`
 }
 
-const formatAgentBrief = (countryPrefix: string): string[] => [
+const formatAgentBrief = (countryPrefix: string, deployContext: QaDeployContext): string[] => [
   `# Sign questions QA – ${formatCatalogueLabel(countryPrefix)}`,
   '',
   QA_ISSUE_ATTRIBUTION_BANNER,
   '',
-  `Source: [Sign questions QA](https://trafficsigns.osm-verkehrswende.org/${countryPrefix}/questions-qa) · Config: \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\``,
+  ...formatQaDeployContextLines(deployContext),
+  '',
+  `Source: [Sign questions QA](${deployContext.pageOrigin}/${countryPrefix}/questions-qa) · Config: \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\``,
   '',
   `Submit with label \`question-qa\` to trigger a Cursor cloud agent. It should open a PR updating \`questions\` and related i18n in the **${formatCatalogueLabel(countryPrefix)}** catalogue.`,
   '',
   '## Agent instructions',
   '',
   '1. Apply every task below.',
-  `2. Read [\`${QUESTION_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${QUESTION_QA_AGENT_SKILL_PATH}) for \`SignQuestion\` shape, \`questionCatalog.ts\` factories, and i18n in \`messages/*.json\`.`,
+  `2. Read [\`${QUESTION_QA_AGENT_SKILL_PATH}\`](${githubBlobUrl(QUESTION_QA_AGENT_SKILL_PATH, deployContext)}) for \`SignQuestion\` shape, \`questionCatalog.ts\` factories, and i18n in \`messages/*.json\`.`,
   `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Reuse \`questionCatalog.ts\` factories where possible.`,
   '4. Run tests in `packages/traffic-sign-converter`. Open a PR with `Closes #<issue-number>` in the description.',
   '',
@@ -81,12 +89,13 @@ const formatAgentBrief = (countryPrefix: string): string[] => [
 export const formatQuestionsQaTaskResults = (
   entries: QuestionTaskEntry[],
   countryPrefix = 'DE',
+  deployContext: QaDeployContext = getQaDeployContext(),
 ): string => {
   if (entries.length === 0) {
     return ''
   }
 
-  const lines = [...formatAgentBrief(countryPrefix)]
+  const lines = [...formatAgentBrief(countryPrefix, deployContext)]
 
   lines.push('### Sign question updates', '')
   lines.push(

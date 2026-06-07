@@ -4,6 +4,12 @@ import {
   type CountryPrefixType,
   type SignStateType,
 } from '@osm-traffic-signs/converter'
+import {
+  type QaDeployContext,
+  formatQaDeployContextLines,
+  getQaDeployContext,
+  githubBlobUrl,
+} from '../qaDeployContext'
 import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
 
 export type CombinationFeedbackStatus = 'OK' | 'NOTOK' | 'INVALID'
@@ -160,19 +166,21 @@ const formatOkTaskSection = (
   lines.push('')
 }
 
-const formatAgentBrief = (countryPrefix: string): string[] => [
+const formatAgentBrief = (countryPrefix: string, deployContext: QaDeployContext): string[] => [
   '# Sign combination QA – catalogue config update',
   '',
   QA_ISSUE_ATTRIBUTION_BANNER,
   '',
-  `Created from the [Sign combinations QA page](https://trafficsigns.osm-verkehrswende.org/${countryPrefix}/check-sign-combinations).`,
+  ...formatQaDeployContextLines(deployContext),
+  '',
+  `Created from the [Sign combinations QA page](${deployContext.pageOrigin}/${countryPrefix}/check-sign-combinations).`,
   '',
   `Submitting this issue (label \`combination-qa\`) triggers a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** and/or combination conversion behavior in \`@osm-traffic-signs/converter\`.`,
   '',
   '## Agent instructions',
   '',
   '1. Apply every task in the sections below.',
-  `2. Read [\`${COMBINATION_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${COMBINATION_QA_AGENT_SKILL_PATH}) for compatibility fields, tag output fixes, and test expectations.`,
+  `2. Read [\`${COMBINATION_QA_AGENT_SKILL_PATH}\`](${githubBlobUrl(COMBINATION_QA_AGENT_SKILL_PATH, deployContext)}) for compatibility fields, tag output fixes, and test expectations.`,
   `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Schema: \`packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts\` (\`compatibility.canReceiveModifiers\`, \`compatibility.incompatibleModifiers\`, \`compatibility.confirmedModifiers\`, \`tagRecommendationsByGeometry\`).`,
   '4. For **Not OK** tasks: fix the combined tag output (usually `tagRecommendationsByGeometry` on primary/modifier and/or `signsToTags` interaction tests).',
   '5. For **Invalid combination** tasks: update compatibility so the converter blocks the pair (add `incompatibleModifiers` on the primary sign or set `canReceiveModifiers: false` when the primary must never take modifiers).',
@@ -186,6 +194,7 @@ const formatAgentBrief = (countryPrefix: string): string[] => [
 export const formatCombinationQaTaskResults = (
   entries: CombinationTaskEntry[],
   countryPrefix = 'DE',
+  deployContext: QaDeployContext = getQaDeployContext(),
 ): string => {
   if (entries.length === 0) {
     return ''
@@ -195,7 +204,7 @@ export const formatCombinationQaTaskResults = (
   const notOk = entries.filter((entry) => entry.status === 'NOTOK')
   const invalid = entries.filter((entry) => entry.status === 'INVALID')
 
-  const lines = [...formatAgentBrief(countryPrefix)]
+  const lines = [...formatAgentBrief(countryPrefix, deployContext)]
 
   formatOkTaskSection(
     lines,

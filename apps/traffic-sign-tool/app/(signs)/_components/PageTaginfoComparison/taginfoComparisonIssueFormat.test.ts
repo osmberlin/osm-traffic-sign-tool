@@ -1,10 +1,18 @@
 import { describe, expect, test } from 'vitest'
+import type { QaDeployContext } from '../qaDeployContext'
 import {
   buildTaginfoSignGithubIssueUrl,
   formatTaginfoSignIssueBody,
   TAGINFO_QA_AGENT_SKILL_PATH,
   TAGINFO_QA_ISSUE_TEMPLATE,
 } from './taginfoComparisonIssueFormat'
+
+const previewDeployContext: QaDeployContext = {
+  branch: 'feat/qa-preview',
+  pageOrigin: 'https://deploy-preview-42--site.netlify.app',
+  isNetlify: true,
+  deployContext: 'deploy-preview',
+}
 
 describe('taginfoComparisonIssueFormat', () => {
   test('formatTaginfoSignIssueBody', () => {
@@ -21,6 +29,13 @@ describe('taginfoComparisonIssueFormat', () => {
     expect(body).toContain('1,234 objects in OSM (snapshot)')
     expect(body).toContain('## Tool tag recommendations')
     expect(body).toContain('---')
+  })
+
+  test('formatTaginfoSignIssueBody includes deploy context on preview branch', () => {
+    const body = formatTaginfoSignIssueBody('DE:240', 1234, 'DE', previewDeployContext)
+
+    expect(body).toContain('**Source branch:** `feat/qa-preview`')
+    expect(body).toContain('blob/feat/qa-preview/.cursor/skills/add-traffic-sign/SKILL.md')
   })
 
   test('buildTaginfoSignGithubIssueUrl', () => {

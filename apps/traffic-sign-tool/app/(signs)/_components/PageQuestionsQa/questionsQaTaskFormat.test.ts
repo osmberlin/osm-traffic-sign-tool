@@ -1,11 +1,19 @@
 import { sidepathQuestion } from '@osm-traffic-signs/converter'
 import type { SignType } from '@osm-traffic-signs/converter'
 import { beforeAll, describe, expect, test } from 'vitest'
+import type { QaDeployContext } from '../qaDeployContext'
 import {
   buildGithubIssueUrl,
   collectQuestionTaskEntries,
   formatQuestionsQaTaskResults,
 } from './questionsQaTaskFormat'
+
+const previewDeployContext: QaDeployContext = {
+  branch: 'feat/qa-preview',
+  pageOrigin: 'https://deploy-preview-42--site.netlify.app',
+  isNetlify: true,
+  deployContext: 'deploy-preview',
+}
 
 beforeAll(() => {
   Object.defineProperty(globalThis, 'localStorage', {
@@ -61,6 +69,22 @@ describe('questionsQaTaskFormat', () => {
     expect(text).not.toContain('Questions & answers')
     expect(text).toContain('Add default for surface colour')
     expect(text).toContain('```json')
+  })
+
+  test('formatQuestionsQaTaskResults includes deploy context on preview branch', () => {
+    const entries = [
+      {
+        osmValuePart: '237',
+        signId: '237',
+        descriptiveName: 'Radweg',
+        questions: [sidepathQuestion()],
+        suggestionNotes: 'Add default for surface colour',
+      },
+    ]
+    const text = formatQuestionsQaTaskResults(entries, 'DE', previewDeployContext)
+
+    expect(text).toContain('**Source branch:** `feat/qa-preview`')
+    expect(text).toContain('blob/feat/qa-preview/.cursor/skills/update-sign-questions/SKILL.md')
   })
 
   test('buildGithubIssueUrl', () => {

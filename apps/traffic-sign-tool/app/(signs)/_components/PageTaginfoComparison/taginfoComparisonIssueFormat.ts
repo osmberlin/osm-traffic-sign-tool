@@ -6,6 +6,12 @@ import {
   type CountryPrefixType,
   type SignComentType,
 } from '@osm-traffic-signs/converter'
+import {
+  type QaDeployContext,
+  formatQaDeployContextLines,
+  getQaDeployContext,
+  githubBlobUrl,
+} from '../qaDeployContext'
 import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
 
 const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
@@ -41,19 +47,24 @@ export const buildTaginfoToolRecommendations = (
   return byGeometry
 }
 
-const formatAgentBrief = (countryPrefix: CountryPrefixType): string[] => [
+const formatAgentBrief = (
+  countryPrefix: CountryPrefixType,
+  deployContext: QaDeployContext,
+): string[] => [
   '# Taginfo comparison – catalogue update',
   '',
   QA_ISSUE_ATTRIBUTION_BANNER,
   '',
-  `Created from the [Taginfo comparison page](https://trafficsigns.osm-verkehrswende.org/${countryPrefix}/taginfo).`,
+  ...formatQaDeployContextLines(deployContext),
+  '',
+  `Created from the [Taginfo comparison page](${deployContext.pageOrigin}/${countryPrefix}/taginfo).`,
   '',
   'Submit with label `cursor-qa` to trigger a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates sign config in `@osm-traffic-signs/converter`.',
   '',
   '## Agent instructions',
   '',
   '1. Apply the feedback in **My feedback** below using taginfo usage and tool recommendations as context.',
-  `2. Read [\`${TAGINFO_QA_AGENT_SKILL_PATH}\`](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/${TAGINFO_QA_AGENT_SKILL_PATH}) for \`tagRecommendationsByGeometry\` shape and OSM wiki tagging research.`,
+  `2. Read [\`${TAGINFO_QA_AGENT_SKILL_PATH}\`](${githubBlobUrl(TAGINFO_QA_AGENT_SKILL_PATH, deployContext)}) for \`tagRecommendationsByGeometry\` shape and OSM wiki tagging research.`,
   `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`.`,
   '4. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
   '',
@@ -63,11 +74,12 @@ export const formatTaginfoSignIssueBody = (
   value: string,
   usageCount: number,
   countryPrefix: CountryPrefixType,
+  deployContext: QaDeployContext = getQaDeployContext(),
 ): string => {
   const recommendations = buildTaginfoToolRecommendations(value, countryPrefix)
 
   return [
-    ...formatAgentBrief(countryPrefix),
+    ...formatAgentBrief(countryPrefix, deployContext),
     `## My feedback for traffic_sign value ${value}`,
     '',
     'WRITE HERE',

@@ -1,10 +1,18 @@
 import type { SignType } from '@osm-traffic-signs/converter'
 import { describe, expect, test } from 'vitest'
+import type { QaDeployContext } from '../qaDeployContext'
 import {
   buildGithubIssueUrl,
   collectSignTaskEntries,
   formatTaggingQaTaskResults,
 } from './taggingQaTaskFormat'
+
+const previewDeployContext: QaDeployContext = {
+  branch: 'feat/qa-preview',
+  pageOrigin: 'https://deploy-preview-42--site.netlify.app',
+  isNetlify: true,
+  deployContext: 'deploy-preview',
+}
 
 const baseSign = {
   osmValuePart: '274',
@@ -55,6 +63,22 @@ describe('taggingQaTaskFormat', () => {
     expect(text).toContain('uniqueTags')
     expect(text).toContain('### Comments')
     expect(text).toContain('Unclear wiki mapping')
+  })
+
+  test('formatTaggingQaTaskResults includes deploy context on preview branch', () => {
+    const entries = [
+      {
+        osmValuePart: '274',
+        signId: '274',
+        descriptiveName: 'Höchstgeschwindigkeit',
+        task: 'explicit_none' as const,
+      },
+    ]
+    const text = formatTaggingQaTaskResults(entries, 'DE', previewDeployContext)
+
+    expect(text).toContain('**Source branch:** `feat/qa-preview`')
+    expect(text).toContain('blob/feat/qa-preview/.cursor/skills/add-traffic-sign/SKILL.md')
+    expect(text).toContain('deploy-preview-42--site.netlify.app/DE/signs-qa')
   })
 
   test('buildGithubIssueUrl', () => {

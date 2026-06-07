@@ -1,10 +1,18 @@
 import { describe, expect, test } from 'vitest'
+import type { QaDeployContext } from '../qaDeployContext'
 import {
   buildWikiSignGithubIssueUrl,
   formatWikiSignIssueBody,
   WIKI_QA_AGENT_SKILL_PATH,
   WIKI_QA_ISSUE_TEMPLATE,
 } from './wikiComparisonIssueFormat'
+
+const previewDeployContext: QaDeployContext = {
+  branch: 'feat/qa-preview',
+  pageOrigin: 'https://deploy-preview-42--site.netlify.app',
+  isNetlify: true,
+  deployContext: 'deploy-preview',
+}
 
 describe('wikiComparisonIssueFormat', () => {
   const wikiSign = {
@@ -28,6 +36,13 @@ describe('wikiComparisonIssueFormat', () => {
     expect(body).toContain('## Current Config')
     expect(body).toContain('"sign": "BR:R-1"')
     expect(body).toContain('---')
+  })
+
+  test('formatWikiSignIssueBody includes deploy context on preview branch', () => {
+    const body = formatWikiSignIssueBody(wikiSign, undefined, previewDeployContext)
+
+    expect(body).toContain('**Source branch:** `feat/qa-preview`')
+    expect(body).toContain('blob/feat/qa-preview/.cursor/skills/add-traffic-sign/SKILL.md')
   })
 
   test('formatWikiSignIssueBody uses catalogue config when available', () => {

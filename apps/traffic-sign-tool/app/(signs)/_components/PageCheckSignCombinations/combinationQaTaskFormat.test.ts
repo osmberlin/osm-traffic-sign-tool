@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'vitest'
+import type { QaDeployContext } from '../qaDeployContext'
 import {
   buildGithubIssueUrl,
   collectCombinationTaskEntries,
@@ -6,6 +7,13 @@ import {
   getCombinationQaConfirmationDate,
   type CombinationFeedbackState,
 } from './combinationQaTaskFormat'
+
+const previewDeployContext: QaDeployContext = {
+  branch: 'feat/qa-preview',
+  pageOrigin: 'https://deploy-preview-42--site.netlify.app',
+  isNetlify: true,
+  deployContext: 'deploy-preview',
+}
 
 describe('combinationQaTaskFormat', () => {
   test('collectCombinationTaskEntries and format', () => {
@@ -36,6 +44,24 @@ describe('combinationQaTaskFormat', () => {
     expect(text).toContain('Must not combine with parking zone')
     expect(text).toContain('DE:111,DE:1010-12')
     expect(text).toContain('Confirmation date: `2026-06-06`')
+  })
+
+  test('formatCombinationQaTaskResults includes deploy context on preview branch', () => {
+    const text = formatCombinationQaTaskResults(
+      [
+        {
+          tagValue: 'DE:274,DE:1010-12',
+          primarySignId: '274',
+          status: 'NOTOK',
+          currentTags: 'maxspeed=50',
+        },
+      ],
+      'DE',
+      previewDeployContext,
+    )
+
+    expect(text).toContain('**Source branch:** `feat/qa-preview`')
+    expect(text).toContain('blob/feat/qa-preview/.cursor/skills/fix-sign-combination/SKILL.md')
   })
 
   test('getCombinationQaConfirmationDate returns ISO date', () => {
