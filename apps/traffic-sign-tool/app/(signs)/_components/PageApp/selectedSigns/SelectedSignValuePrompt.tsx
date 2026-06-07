@@ -42,20 +42,28 @@ const SelectedSignValuePromptFields = ({ sign }: { sign: ValuePromptSign }) => {
     updateSignValue(sign.osmValuePart, event.target.value)
   }
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    cancelPendingSignValueUpdate(sign.osmValuePart)
+    updateSignValue(sign.osmValuePart, String(inputValue))
+  }
+
   // Cancel pending navigate() if this field unmounts (sign removed / key change).
   useEffect(() => {
     return () => cancelPendingSignValueUpdate(sign.osmValuePart)
   }, [cancelPendingSignValueUpdate, sign.osmValuePart])
 
   return (
-    <form className="group mt-2 rounded-sm border border-stone-400/50 p-1 text-sm leading-tight md:mx-1">
+    <form
+      onSubmit={handleSubmit}
+      className="group mt-2 rounded-sm border border-stone-400/50 p-1 text-sm leading-tight md:mx-1"
+    >
       <label htmlFor={sign.osmValuePart} className="break-word">
         <span lang={catalogueLang}>{sign.valuePrompt.prompt}</span>:
       </label>
       <input
         onChange={handleChange}
         onBlur={handleBlur}
-        name={sign.osmValuePart}
         type={inputType}
         step={inputStep}
         value={inputValue}
