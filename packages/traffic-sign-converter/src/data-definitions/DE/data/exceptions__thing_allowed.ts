@@ -537,7 +537,19 @@ export const _exceptions__thing_allowed: SignType[] = [
     descriptiveName: 'Bewohner mit Parkausweis Nr. … frei',
     description: null,
     kind: 'exception_modifier',
-    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: [], uniqueTags: [] }],
+    valuePrompt: {
+      prompt: 'Parkausweis-Nummer / Zone',
+      defaultValue: 'A',
+      format: 'opening_hours',
+    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        modifierValue: 'residents',
+        uniqueTags: [{ key: 'zone', value: '$' }],
+      },
+    ],
     comments: [],
     catalogue: {
       signCategory: 'exception_modifier',

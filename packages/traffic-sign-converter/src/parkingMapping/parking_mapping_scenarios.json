@@ -1,0 +1,3882 @@
+[
+  {
+    "expectedTags": {
+      "area": ["restriction=no_stopping", "traffic_sign=DE:283"],
+      "wayExpanded": {
+        "both": ["parking:both:restriction=no_stopping", "parking:both:traffic_sign=DE:283"],
+        "left": ["parking:left:restriction=no_stopping", "parking:left:traffic_sign=DE:283"],
+        "right": ["parking:right:restriction=no_stopping", "parking:right:traffic_sign=DE:283"]
+      },
+      "wayTemplate": ["parking:SEITE:restriction=no_stopping", "parking:SEITE:traffic_sign=DE:283"]
+    },
+    "fixtureId": "scenario-0001",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/283.png",
+    "imageFileName": "283.png",
+    "imageLocalPath": "img/283.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "283",
+    "trafficSignKey": "DE:283"
+  },
+  {
+    "expectedTags": {
+      "area": ["restriction:hgv=no_stopping", "traffic_sign=DE:283,1010-51"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:hgv=no_stopping",
+          "parking:both:traffic_sign=DE:283,1010-51"
+        ],
+        "left": [
+          "parking:left:restriction:hgv=no_stopping",
+          "parking:left:traffic_sign=DE:283,1010-51"
+        ],
+        "right": [
+          "parking:right:restriction:hgv=no_stopping",
+          "parking:right:traffic_sign=DE:283,1010-51"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:hgv=no_stopping",
+        "parking:SEITE:traffic_sign=DE:283,1010-51"
+      ]
+    },
+    "fixtureId": "scenario-0002",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/283_1010-51.png",
+    "imageFileName": "283_1010-51.png",
+    "imageLocalPath": "img/283_1010-51.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "283_1010-51",
+    "trafficSignKey": "DE:283,1010-51"
+  },
+  {
+    "expectedTags": {
+      "area": ["restriction:motorcar=no_stopping", "traffic_sign=DE:283,1010-58"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:motorcar=no_stopping",
+          "parking:both:traffic_sign=DE:283,1010-58"
+        ],
+        "left": [
+          "parking:left:restriction:motorcar=no_stopping",
+          "parking:left:traffic_sign=DE:283,1010-58"
+        ],
+        "right": [
+          "parking:right:restriction:motorcar=no_stopping",
+          "parking:right:traffic_sign=DE:283,1010-58"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:motorcar=no_stopping",
+        "parking:SEITE:traffic_sign=DE:283,1010-58"
+      ]
+    },
+    "fixtureId": "scenario-0003",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/283_1010-58.png",
+    "imageFileName": "283_1010-58.png",
+    "imageLocalPath": "img/283_1010-58.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "283_1010-58",
+    "trafficSignKey": "DE:283,1010-58"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction=no_stopping",
+        "restriction:vehicle:electric=none",
+        "traffic_sign=DE:283,1024-20"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=no_stopping",
+          "parking:both:restriction:vehicle:electric=none",
+          "parking:both:traffic_sign=DE:283,1024-20"
+        ],
+        "left": [
+          "parking:left:restriction=no_stopping",
+          "parking:left:restriction:vehicle:electric=none",
+          "parking:left:traffic_sign=DE:283,1024-20"
+        ],
+        "right": [
+          "parking:right:restriction=no_stopping",
+          "parking:right:restriction:vehicle:electric=none",
+          "parking:right:traffic_sign=DE:283,1024-20"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=no_stopping",
+        "parking:SEITE:restriction:vehicle:electric=none",
+        "parking:SEITE:traffic_sign=DE:283,1024-20"
+      ]
+    },
+    "fixtureId": "scenario-0004",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/283_1024-20.png",
+    "imageFileName": "283_1024-20.png",
+    "imageLocalPath": "img/283_1024-20.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "283_1024-20",
+    "trafficSignKey": "DE:283,1024-20"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction:conditional=no_stopping @ (OPENINGHOURS)",
+        "traffic_sign=DE:283,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:conditional=no_stopping @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:283,1042-33"
+        ],
+        "left": [
+          "parking:left:restriction:conditional=no_stopping @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:283,1042-33"
+        ],
+        "right": [
+          "parking:right:restriction:conditional=no_stopping @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:283,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:conditional=no_stopping @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:283,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0005",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/283_1042-33.png",
+    "imageFileName": "283_1042-33.png",
+    "imageLocalPath": "img/283_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "283_1042-33",
+    "trafficSignKey": "DE:283,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["restriction=no_parking", "traffic_sign=DE:286"],
+      "wayExpanded": {
+        "both": ["parking:both:restriction=no_parking", "parking:both:traffic_sign=DE:286"],
+        "left": ["parking:left:restriction=no_parking", "parking:left:traffic_sign=DE:286"],
+        "right": ["parking:right:restriction=no_parking", "parking:right:traffic_sign=DE:286"]
+      },
+      "wayTemplate": ["parking:SEITE:restriction=no_parking", "parking:SEITE:traffic_sign=DE:286"]
+    },
+    "fixtureId": "scenario-0006",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286.png",
+    "imageFileName": "286.png",
+    "imageLocalPath": "img/286.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286",
+    "trafficSignKey": "DE:286"
+  },
+  {
+    "expectedTags": {
+      "area": ["restriction:hgv=no_parking", "traffic_sign=DE:286,1010-51"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:hgv=no_parking",
+          "parking:both:traffic_sign=DE:286,1010-51"
+        ],
+        "left": [
+          "parking:left:restriction:hgv=no_parking",
+          "parking:left:traffic_sign=DE:286,1010-51"
+        ],
+        "right": [
+          "parking:right:restriction:hgv=no_parking",
+          "parking:right:traffic_sign=DE:286,1010-51"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:hgv=no_parking",
+        "parking:SEITE:traffic_sign=DE:286,1010-51"
+      ]
+    },
+    "fixtureId": "scenario-0007",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1010-51.png",
+    "imageFileName": "286_1010-51.png",
+    "imageLocalPath": "img/286_1010-51.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1010-51",
+    "trafficSignKey": "DE:286,1010-51"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction:hgv:conditional=no_parking @ (OPENINGHOURS)",
+        "traffic_sign=DE:286,1010-51,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:hgv:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:286,1010-51,1042-33"
+        ],
+        "left": [
+          "parking:left:restriction:hgv:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:286,1010-51,1042-33"
+        ],
+        "right": [
+          "parking:right:restriction:hgv:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:286,1010-51,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:hgv:conditional=no_parking @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:286,1010-51,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0008",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1010-51_1042-33.png",
+    "imageFileName": "286_1010-51_1042-33.png",
+    "imageLocalPath": "img/286_1010-51_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1010-51_1042-33",
+    "trafficSignKey": "DE:286,1010-51,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["restriction:motorcycle=no_parking", "traffic_sign=DE:286,1010-62"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:motorcycle=no_parking",
+          "parking:both:traffic_sign=DE:286,1010-62"
+        ],
+        "left": [
+          "parking:left:restriction:motorcycle=no_parking",
+          "parking:left:traffic_sign=DE:286,1010-62"
+        ],
+        "right": [
+          "parking:right:restriction:motorcycle=no_parking",
+          "parking:right:traffic_sign=DE:286,1010-62"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:motorcycle=no_parking",
+        "parking:SEITE:traffic_sign=DE:286,1010-62"
+      ]
+    },
+    "fixtureId": "scenario-0009",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1010-62.png",
+    "imageFileName": "286_1010-62.png",
+    "imageLocalPath": "img/286_1010-62.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1010-62",
+    "trafficSignKey": "DE:286,1010-62"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction:motorcycle:conditional=no_parking @ (OPENINGHOURS)",
+        "traffic_sign=DE:286,1010-62,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:motorcycle:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:286,1010-62,1042-33"
+        ],
+        "left": [
+          "parking:left:restriction:motorcycle:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:286,1010-62,1042-33"
+        ],
+        "right": [
+          "parking:right:restriction:motorcycle:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:286,1010-62,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:motorcycle:conditional=no_parking @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:286,1010-62,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0010",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1010-62_1042-33.png",
+    "imageFileName": "286_1010-62_1042-33.png",
+    "imageLocalPath": "img/286_1010-62_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1010-62_1042-33",
+    "trafficSignKey": "DE:286,1010-62,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction=no_parking",
+        "restriction:conditional=none @ residents",
+        "zone=AUSWEIS",
+        "traffic_sign=DE:286,1020-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=no_parking",
+          "parking:both:restriction:conditional=none @ residents",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:286,1020-32"
+        ],
+        "left": [
+          "parking:left:restriction=no_parking",
+          "parking:left:restriction:conditional=none @ residents",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:286,1020-32"
+        ],
+        "right": [
+          "parking:right:restriction=no_parking",
+          "parking:right:restriction:conditional=none @ residents",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:286,1020-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=no_parking",
+        "parking:SEITE:restriction:conditional=none @ residents",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:286,1020-32"
+      ]
+    },
+    "fixtureId": "scenario-0011",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1020-32.png",
+    "imageFileName": "286_1020-32.png",
+    "imageLocalPath": "img/286_1020-32.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1020-32",
+    "trafficSignKey": "DE:286,1020-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction=no_parking",
+        "restriction:motorcycle=none",
+        "traffic_sign=DE:286,1022-12"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=no_parking",
+          "parking:both:restriction:motorcycle=none",
+          "parking:both:traffic_sign=DE:286,1022-12"
+        ],
+        "left": [
+          "parking:left:restriction=no_parking",
+          "parking:left:restriction:motorcycle=none",
+          "parking:left:traffic_sign=DE:286,1022-12"
+        ],
+        "right": [
+          "parking:right:restriction=no_parking",
+          "parking:right:restriction:motorcycle=none",
+          "parking:right:traffic_sign=DE:286,1022-12"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=no_parking",
+        "parking:SEITE:restriction:motorcycle=none",
+        "parking:SEITE:traffic_sign=DE:286,1022-12"
+      ]
+    },
+    "fixtureId": "scenario-0012",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1022-12.png",
+    "imageFileName": "286_1022-12.png",
+    "imageLocalPath": "img/286_1022-12.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1022-12",
+    "trafficSignKey": "DE:286,1022-12"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction=no_parking",
+        "restriction:motorcar=none",
+        "traffic_sign=DE:286,1024-10"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=no_parking",
+          "parking:both:restriction:motorcar=none",
+          "parking:both:traffic_sign=DE:286,1024-10"
+        ],
+        "left": [
+          "parking:left:restriction=no_parking",
+          "parking:left:restriction:motorcar=none",
+          "parking:left:traffic_sign=DE:286,1024-10"
+        ],
+        "right": [
+          "parking:right:restriction=no_parking",
+          "parking:right:restriction:motorcar=none",
+          "parking:right:traffic_sign=DE:286,1024-10"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=no_parking",
+        "parking:SEITE:restriction:motorcar=none",
+        "parking:SEITE:traffic_sign=DE:286,1024-10"
+      ]
+    },
+    "fixtureId": "scenario-0013",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1024-10.png",
+    "imageFileName": "286_1024-10.png",
+    "imageLocalPath": "img/286_1024-10.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1024-10",
+    "trafficSignKey": "DE:286,1024-10"
+  },
+  {
+    "expectedTags": {
+      "area": ["restriction=no_parking", "restriction:hgv=none", "traffic_sign=DE:286,1024-12"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=no_parking",
+          "parking:both:restriction:hgv=none",
+          "parking:both:traffic_sign=DE:286,1024-12"
+        ],
+        "left": [
+          "parking:left:restriction=no_parking",
+          "parking:left:restriction:hgv=none",
+          "parking:left:traffic_sign=DE:286,1024-12"
+        ],
+        "right": [
+          "parking:right:restriction=no_parking",
+          "parking:right:restriction:hgv=none",
+          "parking:right:traffic_sign=DE:286,1024-12"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=no_parking",
+        "parking:SEITE:restriction:hgv=none",
+        "parking:SEITE:traffic_sign=DE:286,1024-12"
+      ]
+    },
+    "fixtureId": "scenario-0014",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1024-12.png",
+    "imageFileName": "286_1024-12.png",
+    "imageLocalPath": "img/286_1024-12.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1024-12",
+    "trafficSignKey": "DE:286,1024-12"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction=no_parking",
+        "restriction:bus=none",
+        "restriction:tourist_bus=none",
+        "traffic_sign=DE:286,1024-14"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=no_parking",
+          "parking:both:restriction:bus=none",
+          "parking:both:restriction:tourist_bus=none",
+          "parking:both:traffic_sign=DE:286,1024-14"
+        ],
+        "left": [
+          "parking:left:restriction=no_parking",
+          "parking:left:restriction:bus=none",
+          "parking:left:restriction:tourist_bus=none",
+          "parking:left:traffic_sign=DE:286,1024-14"
+        ],
+        "right": [
+          "parking:right:restriction=no_parking",
+          "parking:right:restriction:bus=none",
+          "parking:right:restriction:tourist_bus=none",
+          "parking:right:traffic_sign=DE:286,1024-14"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=no_parking",
+        "parking:SEITE:restriction:bus=none",
+        "parking:SEITE:restriction:tourist_bus=none",
+        "parking:SEITE:traffic_sign=DE:286,1024-14"
+      ]
+    },
+    "fixtureId": "scenario-0015",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1024-14.png",
+    "imageFileName": "286_1024-14.png",
+    "imageLocalPath": "img/286_1024-14.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1024-14",
+    "trafficSignKey": "DE:286,1024-14"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction=no_parking",
+        "restriction:vehicle:electric=none",
+        "traffic_sign=DE:286,1024-20"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=no_parking",
+          "parking:both:restriction:vehicle:electric=none",
+          "parking:both:traffic_sign=DE:286,1024-20"
+        ],
+        "left": [
+          "parking:left:restriction=no_parking",
+          "parking:left:restriction:vehicle:electric=none",
+          "parking:left:traffic_sign=DE:286,1024-20"
+        ],
+        "right": [
+          "parking:right:restriction=no_parking",
+          "parking:right:restriction:vehicle:electric=none",
+          "parking:right:traffic_sign=DE:286,1024-20"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=no_parking",
+        "parking:SEITE:restriction:vehicle:electric=none",
+        "parking:SEITE:traffic_sign=DE:286,1024-20"
+      ]
+    },
+    "fixtureId": "scenario-0016",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1024-20.png",
+    "imageFileName": "286_1024-20.png",
+    "imageLocalPath": "img/286_1024-20.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1024-20",
+    "trafficSignKey": "DE:286,1024-20"
+  },
+  {
+    "expectedTags": {
+      "area": ["access=delivery", "traffic_sign=DE:286,1026-35"],
+      "wayExpanded": {
+        "both": ["parking:both:access=delivery", "parking:both:traffic_sign=DE:286,1026-35"],
+        "left": ["parking:left:access=delivery", "parking:left:traffic_sign=DE:286,1026-35"],
+        "right": ["parking:right:access=delivery", "parking:right:traffic_sign=DE:286,1026-35"]
+      },
+      "wayTemplate": ["parking:SEITE:access=delivery", "parking:SEITE:traffic_sign=DE:286,1026-35"]
+    },
+    "fixtureId": "scenario-0017",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1026-35.png",
+    "imageFileName": "286_1026-35.png",
+    "imageLocalPath": "img/286_1026-35.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1026-35",
+    "trafficSignKey": "DE:286,1026-35"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction:conditional=no_parking @ (OPENINGHOURS)",
+        "traffic_sign=DE:286,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:286,1042-33"
+        ],
+        "left": [
+          "parking:left:restriction:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:286,1042-33"
+        ],
+        "right": [
+          "parking:right:restriction:conditional=no_parking @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:286,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:conditional=no_parking @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:286,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0018",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1042-33.png",
+    "imageFileName": "286_1042-33.png",
+    "imageLocalPath": "img/286_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1042-33",
+    "trafficSignKey": "DE:286,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction:conditional=no_parking @ (OPENINGHOURS); none @ residents",
+        "zone=AUSWEIS",
+        "traffic_sign=DE:286,1042-33,1020-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction:conditional=no_parking @ (OPENINGHOURS); none @ residents",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:286,1042-33,1020-32"
+        ],
+        "left": [
+          "parking:left:restriction:conditional=no_parking @ (OPENINGHOURS); none @ residents",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:286,1042-33,1020-32"
+        ],
+        "right": [
+          "parking:right:restriction:conditional=no_parking @ (OPENINGHOURS); none @ residents",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:286,1042-33,1020-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction:conditional=no_parking @ (OPENINGHOURS); none @ residents",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:286,1042-33,1020-32"
+      ]
+    },
+    "fixtureId": "scenario-0019",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1042-33_1020-32.png",
+    "imageFileName": "286_1042-33_1020-32.png",
+    "imageLocalPath": "img/286_1042-33_1020-32.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1042-33_1020-32",
+    "trafficSignKey": "DE:286,1042-33,1020-32"
+  },
+  {
+    "expectedTags": {
+      "area": ["maxweight=OTHER", "traffic_sign=DE:286,1053-33"],
+      "wayExpanded": {
+        "both": ["parking:both:maxweight=OTHER", "parking:both:traffic_sign=DE:286,1053-33"],
+        "left": ["parking:left:maxweight=OTHER", "parking:left:traffic_sign=DE:286,1053-33"],
+        "right": ["parking:right:maxweight=OTHER", "parking:right:traffic_sign=DE:286,1053-33"]
+      },
+      "wayTemplate": ["parking:SEITE:maxweight=OTHER", "parking:SEITE:traffic_sign=DE:286,1053-33"]
+    },
+    "fixtureId": "scenario-0020",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/286_1053-33.png",
+    "imageFileName": "286_1053-33.png",
+    "imageLocalPath": "img/286_1053-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": true,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "286_1053-33",
+    "trafficSignKey": "DE:286,1053-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["restriction=no_parking", "traffic_sign=DE:290"],
+      "wayExpanded": {
+        "both": ["parking:both:restriction=no_parking", "parking:both:traffic_sign=DE:290"],
+        "left": ["parking:left:restriction=no_parking", "parking:left:traffic_sign=DE:290"],
+        "right": ["parking:right:restriction=no_parking", "parking:right:traffic_sign=DE:290"]
+      },
+      "wayTemplate": ["parking:SEITE:restriction=no_parking", "parking:SEITE:traffic_sign=DE:290"]
+    },
+    "fixtureId": "scenario-0021",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/290.png",
+    "imageFileName": "290.png",
+    "imageLocalPath": "img/290.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "290",
+    "trafficSignKey": "DE:290"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "restriction=no_parking",
+        "restriction:bus=none",
+        "restriction:tourist_bus=none",
+        "traffic_sign=DE:290,1024-14"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=no_parking",
+          "parking:both:restriction:bus=none",
+          "parking:both:restriction:tourist_bus=none",
+          "parking:both:traffic_sign=DE:290,1024-14"
+        ],
+        "left": [
+          "parking:left:restriction=no_parking",
+          "parking:left:restriction:bus=none",
+          "parking:left:restriction:tourist_bus=none",
+          "parking:left:traffic_sign=DE:290,1024-14"
+        ],
+        "right": [
+          "parking:right:restriction=no_parking",
+          "parking:right:restriction:bus=none",
+          "parking:right:restriction:tourist_bus=none",
+          "parking:right:traffic_sign=DE:290,1024-14"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=no_parking",
+        "parking:SEITE:restriction:bus=none",
+        "parking:SEITE:restriction:tourist_bus=none",
+        "parking:SEITE:traffic_sign=DE:290,1024-14"
+      ]
+    },
+    "fixtureId": "scenario-0022",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/290_1024-14.png",
+    "imageFileName": "290_1024-14.png",
+    "imageLocalPath": "img/290_1024-14.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "290_1024-14",
+    "trafficSignKey": "DE:290,1024-14"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=no",
+        "authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+        "fee=no",
+        "fee:conditional=yes @ (OPENINGHOURS)",
+        "traffic_sign=DE:290,1053-31-1053-31,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=no",
+          "parking:both:authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:fee=no",
+          "parking:both:fee:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:290,1053-31-1053-31,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=no",
+          "parking:left:authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:fee=no",
+          "parking:left:fee:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:290,1053-31-1053-31,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=no",
+          "parking:right:authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:fee=no",
+          "parking:right:fee:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:290,1053-31-1053-31,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=no",
+        "parking:SEITE:authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:fee:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:290,1053-31-1053-31,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0023",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/290_1053-31-1053-31_1042-33.png",
+    "imageFileName": "290_1053-31-1053-31_1042-33.png",
+    "imageLocalPath": "img/290_1053-31-1053-31_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "290_1053-31-1053-31_1042-33",
+    "trafficSignKey": "DE:290,1053-31-1053-31,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["access=yes", "fee=no", "traffic_sign=DE:314"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access=yes",
+          "parking:both:fee=no",
+          "parking:both:traffic_sign=DE:314"
+        ],
+        "left": [
+          "parking:left:access=yes",
+          "parking:left:fee=no",
+          "parking:left:traffic_sign=DE:314"
+        ],
+        "right": [
+          "parking:right:access=yes",
+          "parking:right:fee=no",
+          "parking:right:traffic_sign=DE:314"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access=yes",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:traffic_sign=DE:314"
+      ]
+    },
+    "fixtureId": "scenario-0024",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314.png",
+    "imageFileName": "314.png",
+    "imageLocalPath": "img/314.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314",
+    "trafficSignKey": "DE:314"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "traffic_sign=DE:314.1,1040-33,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:fee=no",
+          "parking:both:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314.1,1040-33,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:fee=no",
+          "parking:left:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314.1,1040-33,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:fee=no",
+          "parking:right:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314.1,1040-33,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314.1,1040-33,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0025",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314.1_1040-33_1042-33.png",
+    "imageFileName": "314.1_1040-33_1042-33.png",
+    "imageLocalPath": "img/314.1_1040-33_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314.1_1040-33_1042-33",
+    "trafficSignKey": "DE:314.1,1040-33,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["access=private", "zone=AUSWEIS", "traffic_sign=DE:314.1,1044-30"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access=private",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:314.1,1044-30"
+        ],
+        "left": [
+          "parking:left:access=private",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:314.1,1044-30"
+        ],
+        "right": [
+          "parking:right:access=private",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:314.1,1044-30"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access=private",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314.1,1044-30"
+      ]
+    },
+    "fixtureId": "scenario-0026",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314.1_1044-30.png",
+    "imageFileName": "314.1_1044-30.png",
+    "imageLocalPath": "img/314.1_1044-30.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314.1_1044-30",
+    "trafficSignKey": "DE:314.1,1044-30"
+  },
+  {
+    "expectedTags": {
+      "area": ["authentication:ticket=yes", "fee=yes", "traffic_sign=DE:314.1,1051-33"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:traffic_sign=DE:314.1,1051-33"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:traffic_sign=DE:314.1,1051-33"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:traffic_sign=DE:314.1,1051-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:traffic_sign=DE:314.1,1051-33"
+      ]
+    },
+    "fixtureId": "scenario-0027",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314.1_1051-33.png",
+    "imageFileName": "314.1_1051-33.png",
+    "imageLocalPath": "img/314.1_1051-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314.1_1051-33",
+    "trafficSignKey": "DE:314.1,1051-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["hgv=designated", "vehicle=no", "traffic_sign=DE:314,1010-51"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:hgv=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-51"
+        ],
+        "left": [
+          "parking:left:hgv=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-51"
+        ],
+        "right": [
+          "parking:right:hgv=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-51"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:hgv=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-51"
+      ]
+    },
+    "fixtureId": "scenario-0028",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-51.png",
+    "imageFileName": "314_1010-51.png",
+    "imageLocalPath": "img/314_1010-51.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-51",
+    "trafficSignKey": "DE:314,1010-51"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "bus=designated",
+        "tourist_bus=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-57"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:bus=designated",
+          "parking:both:tourist_bus=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-57"
+        ],
+        "left": [
+          "parking:left:bus=designated",
+          "parking:left:tourist_bus=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-57"
+        ],
+        "right": [
+          "parking:right:bus=designated",
+          "parking:right:tourist_bus=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-57"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:bus=designated",
+        "parking:SEITE:tourist_bus=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-57"
+      ]
+    },
+    "fixtureId": "scenario-0029",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-57.png",
+    "imageFileName": "314_1010-57.png",
+    "imageLocalPath": "img/314_1010-57.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-57",
+    "trafficSignKey": "DE:314,1010-57"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "bus:conditional=designated @ (OPENINGHOURS)",
+        "tourist_bus:conditional=designated @ (OPENINGHOURS)",
+        "vehicle=yes",
+        "vehicle:conditional=no @ (OPENINGHOURS)",
+        "traffic_sign=DE:314,1010-57,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:bus:conditional=designated @ (OPENINGHOURS)",
+          "parking:both:tourist_bus:conditional=designated @ (OPENINGHOURS)",
+          "parking:both:vehicle=yes",
+          "parking:both:vehicle:conditional=no @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314,1010-57,1042-33"
+        ],
+        "left": [
+          "parking:left:bus:conditional=designated @ (OPENINGHOURS)",
+          "parking:left:tourist_bus:conditional=designated @ (OPENINGHOURS)",
+          "parking:left:vehicle=yes",
+          "parking:left:vehicle:conditional=no @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314,1010-57,1042-33"
+        ],
+        "right": [
+          "parking:right:bus:conditional=designated @ (OPENINGHOURS)",
+          "parking:right:tourist_bus:conditional=designated @ (OPENINGHOURS)",
+          "parking:right:vehicle=yes",
+          "parking:right:vehicle:conditional=no @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314,1010-57,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:bus:conditional=designated @ (OPENINGHOURS)",
+        "parking:SEITE:tourist_bus:conditional=designated @ (OPENINGHOURS)",
+        "parking:SEITE:vehicle=yes",
+        "parking:SEITE:vehicle:conditional=no @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314,1010-57,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0030",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-57_1042-33.png",
+    "imageFileName": "314_1010-57_1042-33.png",
+    "imageLocalPath": "img/314_1010-57_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-57_1042-33",
+    "trafficSignKey": "DE:314,1010-57,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["motorcar=designated", "vehicle=no", "traffic_sign=DE:314,1010-58"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:motorcar=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58"
+        ],
+        "left": [
+          "parking:left:motorcar=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58"
+        ],
+        "right": [
+          "parking:right:motorcar=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58"
+      ]
+    },
+    "fixtureId": "scenario-0031",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58.png",
+    "imageFileName": "314_1010-58.png",
+    "imageLocalPath": "img/314_1010-58.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58",
+    "trafficSignKey": "DE:314,1010-58"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "motorcar=designated",
+        "motorcycle=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-58,1010-62"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:motorcar=designated",
+          "parking:both:motorcycle=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58,1010-62"
+        ],
+        "left": [
+          "parking:left:motorcar=designated",
+          "parking:left:motorcycle=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58,1010-62"
+        ],
+        "right": [
+          "parking:right:motorcar=designated",
+          "parking:right:motorcycle=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58,1010-62"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:motorcycle=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1010-62"
+      ]
+    },
+    "fixtureId": "scenario-0032",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58_1010-62.png",
+    "imageFileName": "314_1010-58_1010-62.png",
+    "imageLocalPath": "img/314_1010-58_1010-62.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1010-62",
+    "trafficSignKey": "DE:314,1010-58,1010-62"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "fee=yes",
+        "motorcar=designated",
+        "motorcycle=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-58,1010-62,1053-31"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:motorcar=designated",
+          "parking:both:motorcycle=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58,1010-62,1053-31"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:motorcar=designated",
+          "parking:left:motorcycle=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58,1010-62,1053-31"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:motorcar=designated",
+          "parking:right:motorcycle=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58,1010-62,1053-31"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:motorcycle=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1010-62,1053-31"
+      ]
+    },
+    "fixtureId": "scenario-0033",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58_1010-62_1053-31.png",
+    "imageFileName": "314_1010-58_1010-62_1053-31.png",
+    "imageLocalPath": "img/314_1010-58_1010-62_1053-31.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1010-62_1053-31",
+    "trafficSignKey": "DE:314,1010-58,1010-62,1053-31"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=yes",
+        "maxstay=TIME",
+        "motorcar=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-58,1040-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:fee=no",
+          "parking:both:maxstay=TIME",
+          "parking:both:motorcar=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58,1040-32"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:fee=no",
+          "parking:left:maxstay=TIME",
+          "parking:left:motorcar=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58,1040-32"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:fee=no",
+          "parking:right:maxstay=TIME",
+          "parking:right:motorcar=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58,1040-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1040-32"
+      ]
+    },
+    "fixtureId": "scenario-0034",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58_1040-32.png",
+    "imageFileName": "314_1010-58_1040-32.png",
+    "imageLocalPath": "img/314_1010-58_1040-32.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1040-32",
+    "trafficSignKey": "DE:314,1010-58,1040-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=yes",
+        "maxstay=TIME",
+        "motorcar=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-58,1040-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:fee=no",
+          "parking:both:maxstay=TIME",
+          "parking:both:motorcar=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58,1040-33"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:fee=no",
+          "parking:left:maxstay=TIME",
+          "parking:left:motorcar=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58,1040-33"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:fee=no",
+          "parking:right:maxstay=TIME",
+          "parking:right:motorcar=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58,1040-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1040-33"
+      ]
+    },
+    "fixtureId": "scenario-0035",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58_1040-33.png",
+    "imageFileName": "314_1010-58_1040-33.png",
+    "imageLocalPath": "img/314_1010-58_1040-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1040-33",
+    "trafficSignKey": "DE:314,1010-58,1040-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=no",
+        "authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "maxstay=no",
+        "maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "motorcar=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-58,1040-33,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=no",
+          "parking:both:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:maxstay=no",
+          "parking:both:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:both:motorcar=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58,1040-33,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:disc=no",
+          "parking:left:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:maxstay=no",
+          "parking:left:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:left:motorcar=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58,1040-33,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:disc=no",
+          "parking:right:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:maxstay=no",
+          "parking:right:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:right:motorcar=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58,1040-33,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=no",
+        "parking:SEITE:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:maxstay=no",
+        "parking:SEITE:maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1040-33,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0036",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58_1040-32_1042-33.png",
+    "imageFileName": "314_1010-58_1040-32_1042-33.png",
+    "imageLocalPath": "img/314_1010-58_1040-32_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1040-33_1042-33",
+    "trafficSignKey": "DE:314,1010-58,1040-33,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=no",
+        "authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "maxstay=no",
+        "maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "motorcar=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-58,1040-33,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=no",
+          "parking:both:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:maxstay=no",
+          "parking:both:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:both:motorcar=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58,1040-33,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:disc=no",
+          "parking:left:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:maxstay=no",
+          "parking:left:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:left:motorcar=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58,1040-33,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:disc=no",
+          "parking:right:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:maxstay=no",
+          "parking:right:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:right:motorcar=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58,1040-33,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=no",
+        "parking:SEITE:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:maxstay=no",
+        "parking:SEITE:maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1040-33,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0037",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58_1040-33_1042-33.png",
+    "imageFileName": "314_1010-58_1040-33_1042-33.png",
+    "imageLocalPath": "img/314_1010-58_1040-33_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1040-33_1042-33",
+    "trafficSignKey": "DE:314,1010-58,1040-33,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "motorcar=yes",
+        "motorcar:conditional=designated @ (OPENINGHOURS)",
+        "vehicle=designated",
+        "vehicle:conditional=no @ (OPENINGHOURS)",
+        "traffic_sign=DE:314,1010-58,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:motorcar=yes",
+          "parking:both:motorcar:conditional=designated @ (OPENINGHOURS)",
+          "parking:both:vehicle=designated",
+          "parking:both:vehicle:conditional=no @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314,1010-58,1042-33"
+        ],
+        "left": [
+          "parking:left:motorcar=yes",
+          "parking:left:motorcar:conditional=designated @ (OPENINGHOURS)",
+          "parking:left:vehicle=designated",
+          "parking:left:vehicle:conditional=no @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314,1010-58,1042-33"
+        ],
+        "right": [
+          "parking:right:motorcar=yes",
+          "parking:right:motorcar:conditional=designated @ (OPENINGHOURS)",
+          "parking:right:vehicle=designated",
+          "parking:right:vehicle:conditional=no @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314,1010-58,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:motorcar=yes",
+        "parking:SEITE:motorcar:conditional=designated @ (OPENINGHOURS)",
+        "parking:SEITE:vehicle=designated",
+        "parking:SEITE:vehicle:conditional=no @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0038",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58_1042-33.png",
+    "imageFileName": "314_1010-58_1042-33.png",
+    "imageLocalPath": "img/314_1010-58_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1042-33",
+    "trafficSignKey": "DE:314,1010-58,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "fee=yes",
+        "motorcar=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-58,1053-31"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:motorcar=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58,1053-31"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:motorcar=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58,1053-31"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:motorcar=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58,1053-31"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1053-31"
+      ]
+    },
+    "fixtureId": "scenario-0039",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-58_1053-31.png",
+    "imageFileName": "314_1010-58_1053-31.png",
+    "imageLocalPath": "img/314_1010-58_1053-31.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1053-31",
+    "trafficSignKey": "DE:314,1010-58,1053-31"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "fee=yes",
+        "motorcar=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-58,1053-31"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:motorcar=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-58,1053-31"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:motorcar=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-58,1053-31"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:motorcar=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-58,1053-31"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-58,1053-31"
+      ]
+    },
+    "fixtureId": "scenario-0040",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31_1010-58.png",
+    "imageFileName": "314_1053-31_1010-58.png",
+    "imageLocalPath": "img/314_1053-31_1010-58.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-58_1053-31",
+    "trafficSignKey": "DE:314,1010-58,1053-31"
+  },
+  {
+    "expectedTags": {
+      "area": ["trailer=designated", "vehicle=no", "traffic_sign=DE:314,1010-59"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:trailer=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-59"
+        ],
+        "left": [
+          "parking:left:trailer=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-59"
+        ],
+        "right": [
+          "parking:right:trailer=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-59"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:trailer=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-59"
+      ]
+    },
+    "fixtureId": "scenario-0041",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-59.png",
+    "imageFileName": "314_1010-59.png",
+    "imageLocalPath": "img/314_1010-59.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-59",
+    "trafficSignKey": "DE:314,1010-59"
+  },
+  {
+    "expectedTags": {
+      "area": ["amenity=motorcycle_parking", "traffic_sign=DE:314,1010-62"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:motorcycle=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-62"
+        ],
+        "left": [
+          "parking:left:motorcycle=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-62"
+        ],
+        "right": [
+          "parking:right:motorcycle=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-62"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:motorcycle=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-62"
+      ]
+    },
+    "fixtureId": "scenario-0042",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-62.png",
+    "imageFileName": "314_1010-62.png",
+    "imageLocalPath": "img/314_1010-62.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-62",
+    "trafficSignKey": "DE:314,1010-62"
+  },
+  {
+    "expectedTags": {
+      "area": ["vehicle=no", "vehicle:electric=designated", "traffic_sign=DE:314,1010-66"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:vehicle=no",
+          "parking:both:vehicle:electric=designated",
+          "parking:both:traffic_sign=DE:314,1010-66"
+        ],
+        "left": [
+          "parking:left:vehicle=no",
+          "parking:left:vehicle:electric=designated",
+          "parking:left:traffic_sign=DE:314,1010-66"
+        ],
+        "right": [
+          "parking:right:vehicle=no",
+          "parking:right:vehicle:electric=designated",
+          "parking:right:traffic_sign=DE:314,1010-66"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:vehicle:electric=designated",
+        "parking:SEITE:traffic_sign=DE:314,1010-66"
+      ]
+    },
+    "fixtureId": "scenario-0043",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-66.png",
+    "imageFileName": "314_1010-66.png",
+    "imageLocalPath": "img/314_1010-66.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-66",
+    "trafficSignKey": "DE:314,1010-66"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=yes",
+        "maxstay=TIME",
+        "vehicle=no",
+        "vehicle:electric=designated",
+        "traffic_sign=DE:314,1010-66,1040-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:maxstay=TIME",
+          "parking:both:vehicle=no",
+          "parking:both:vehicle:electric=designated",
+          "parking:both:traffic_sign=DE:314,1010-66,1040-32"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:maxstay=TIME",
+          "parking:left:vehicle=no",
+          "parking:left:vehicle:electric=designated",
+          "parking:left:traffic_sign=DE:314,1010-66,1040-32"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:maxstay=TIME",
+          "parking:right:vehicle=no",
+          "parking:right:vehicle:electric=designated",
+          "parking:right:traffic_sign=DE:314,1010-66,1040-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:vehicle:electric=designated",
+        "parking:SEITE:traffic_sign=DE:314,1010-66,1040-32"
+      ]
+    },
+    "fixtureId": "scenario-0044",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-66_1040-32.png",
+    "imageFileName": "314_1010-66_1040-32.png",
+    "imageLocalPath": "img/314_1010-66_1040-32.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-66_1040-32",
+    "trafficSignKey": "DE:314,1010-66,1040-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "access:conditional=private @ (OPENINGHOURS)",
+        "zone=AUSWEIS",
+        "traffic_sign=DE:314,1044-30,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access:conditional=private @ (OPENINGHOURS)",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:314,1044-30,1042-33"
+        ],
+        "left": [
+          "parking:left:access:conditional=private @ (OPENINGHOURS)",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:314,1044-30,1042-33"
+        ],
+        "right": [
+          "parking:right:access:conditional=private @ (OPENINGHOURS)",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:314,1044-30,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access:conditional=private @ (OPENINGHOURS)",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314,1044-30,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0045",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1044-30_1042-33.png",
+    "imageFileName": "314_1044-30_1042-33.png",
+    "imageLocalPath": "img/314_1044-30_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1044-30_1042-33",
+    "trafficSignKey": "DE:314,1044-30,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "fee=yes",
+        "motorhome=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1010-67,1053-31"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:motorhome=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1010-67,1053-31"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:motorhome=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1010-67,1053-31"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:motorhome=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1010-67,1053-31"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:motorhome=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1010-67,1053-31"
+      ]
+    },
+    "fixtureId": "scenario-0046",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1010-67_1053-31.png",
+    "imageFileName": "314_1010-67_1053-31.png",
+    "imageLocalPath": "img/314_1010-67_1053-31.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1010-67_1053-31",
+    "trafficSignKey": "DE:314,1010-67,1053-31"
+  },
+  {
+    "expectedTags": {
+      "area": ["authentication:disc=yes", "maxstay=TIME", "traffic_sign=DE:314,1040-32"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:fee=no",
+          "parking:both:maxstay=TIME",
+          "parking:both:traffic_sign=DE:314,1040-32"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:fee=no",
+          "parking:left:maxstay=TIME",
+          "parking:left:traffic_sign=DE:314,1040-32"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:fee=no",
+          "parking:right:maxstay=TIME",
+          "parking:right:traffic_sign=DE:314,1040-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:traffic_sign=DE:314,1040-32"
+      ]
+    },
+    "fixtureId": "scenario-0047",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1040-32.png",
+    "imageFileName": "314_1040-32.png",
+    "imageLocalPath": "img/314_1040-32.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1040-32",
+    "trafficSignKey": "DE:314,1040-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=yes",
+        "maxstay=TIME",
+        "motorcar=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1040-32,1010-58"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:fee=no",
+          "parking:both:maxstay=TIME",
+          "parking:both:motorcar=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1040-32,1010-58"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:fee=no",
+          "parking:left:maxstay=TIME",
+          "parking:left:motorcar=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1040-32,1010-58"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:fee=no",
+          "parking:right:maxstay=TIME",
+          "parking:right:motorcar=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1040-32,1010-58"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1040-32,1010-58"
+      ]
+    },
+    "fixtureId": "scenario-0048",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1040-32_1010-58.png",
+    "imageFileName": "314_1040-32_1010-58.png",
+    "imageLocalPath": "img/314_1040-32_1010-58.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1040-32_1010-58",
+    "trafficSignKey": "DE:314,1040-32,1010-58"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=yes",
+        "maxstay=TIME",
+        "maxstay:conditional=no @ residents",
+        "zone=AUSWEIS",
+        "traffic_sign=DE:314,1040-32,1020-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:maxstay=TIME",
+          "parking:both:maxstay:conditional=no @ residents",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:314,1040-32,1020-32"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:maxstay=TIME",
+          "parking:left:maxstay:conditional=no @ residents",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:314,1040-32,1020-32"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:maxstay=TIME",
+          "parking:right:maxstay:conditional=no @ residents",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:314,1040-32,1020-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:maxstay:conditional=no @ residents",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314,1040-32,1020-32"
+      ]
+    },
+    "fixtureId": "scenario-0049",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1040-32_1020-32.png",
+    "imageFileName": "314_1040-32_1020-32.png",
+    "imageLocalPath": "img/314_1040-32_1020-32.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1040-32_1020-32",
+    "trafficSignKey": "DE:314,1040-32,1020-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "traffic_sign=DE:314,1040-32,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:fee=no",
+          "parking:both:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314,1040-32,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:fee=no",
+          "parking:left:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314,1040-32,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:fee=no",
+          "parking:right:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314,1040-32,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314,1040-32,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0050",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1040-32_1042-33.png",
+    "imageFileName": "314_1040-32_1042-33.png",
+    "imageLocalPath": "img/314_1040-32_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1040-32_1042-33",
+    "trafficSignKey": "DE:314,1040-32,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "maxstay:conditional=TIME @ (OPENINGHOURS); no @ residents",
+        "zone=AUSWEIS",
+        "traffic_sign=DE:314,1040-32,1042-33,1020-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:maxstay:conditional=TIME @ (OPENINGHOURS); no @ residents",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:314,1040-32,1042-33,1020-32"
+        ],
+        "left": [
+          "parking:left:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:maxstay:conditional=TIME @ (OPENINGHOURS); no @ residents",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:314,1040-32,1042-33,1020-32"
+        ],
+        "right": [
+          "parking:right:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:maxstay:conditional=TIME @ (OPENINGHOURS); no @ residents",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:314,1040-32,1042-33,1020-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:maxstay:conditional=TIME @ (OPENINGHOURS); no @ residents",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314,1040-32,1042-33,1020-32"
+      ]
+    },
+    "fixtureId": "scenario-0051",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1040-32_1042-33_1020-32.png",
+    "imageFileName": "314_1040-32_1042-33_1020-32.png",
+    "imageLocalPath": "img/314_1040-32_1042-33_1020-32.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1040-32_1042-33_1020-32",
+    "trafficSignKey": "DE:314,1040-32,1042-33,1020-32"
+  },
+  {
+    "expectedTags": {
+      "area": ["authentication:disc=yes", "maxstay=TIME", "traffic_sign=DE:314,1040-33"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:fee=no",
+          "parking:both:maxstay=TIME",
+          "parking:both:traffic_sign=DE:314,1040-33"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:fee=no",
+          "parking:left:maxstay=TIME",
+          "parking:left:traffic_sign=DE:314,1040-33"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:fee=no",
+          "parking:right:maxstay=TIME",
+          "parking:right:traffic_sign=DE:314,1040-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:traffic_sign=DE:314,1040-33"
+      ]
+    },
+    "fixtureId": "scenario-0052",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1040-33.png",
+    "imageFileName": "314_1040-33.png",
+    "imageLocalPath": "img/314_1040-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1040-33",
+    "trafficSignKey": "DE:314,1040-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "authentication:ticket:conditional=no @ (residents)",
+        "maxstay=TIME",
+        "maxstay:conditional=no @ (residents)",
+        "traffic_sign=DE:314,1040-33,1020-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:authentication:ticket:conditional=no @ (residents)",
+          "parking:both:maxstay=TIME",
+          "parking:both:maxstay:conditional=no @ (residents)",
+          "parking:both:traffic_sign=DE:314,1040-33,1020-32"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:authentication:ticket:conditional=no @ (residents)",
+          "parking:left:maxstay=TIME",
+          "parking:left:maxstay:conditional=no @ (residents)",
+          "parking:left:traffic_sign=DE:314,1040-33,1020-32"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:authentication:ticket:conditional=no @ (residents)",
+          "parking:right:maxstay=TIME",
+          "parking:right:maxstay:conditional=no @ (residents)",
+          "parking:right:traffic_sign=DE:314,1040-33,1020-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:authentication:ticket:conditional=no @ (residents)",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:maxstay:conditional=no @ (residents)",
+        "parking:SEITE:traffic_sign=DE:314,1040-33,1020-32"
+      ]
+    },
+    "fixtureId": "scenario-0053",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1040-33_1020-32.png",
+    "imageFileName": "314_1040-33_1020-32.png",
+    "imageLocalPath": "img/314_1040-33_1020-32.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1040-33_1020-32",
+    "trafficSignKey": "DE:314,1040-33,1020-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "traffic_sign=DE:314,1040-33,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:fee=no",
+          "parking:both:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314,1040-33,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:fee=no",
+          "parking:left:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314,1040-33,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:fee=no",
+          "parking:right:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314,1040-33,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314,1040-33,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0054",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1040-33_1042-33.png",
+    "imageFileName": "314_1040-33_1042-33.png",
+    "imageLocalPath": "img/314_1040-33_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1040-33_1042-33",
+    "trafficSignKey": "DE:314,1040-33,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "access=no",
+        "access:conditional=yes @ (OPENINGHOURS)",
+        "traffic_sign=DE:314,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access=no",
+          "parking:both:access:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314,1042-33"
+        ],
+        "left": [
+          "parking:left:access=no",
+          "parking:left:access:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314,1042-33"
+        ],
+        "right": [
+          "parking:right:access=no",
+          "parking:right:access:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access=no",
+        "parking:SEITE:access:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0055",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1042-33.png",
+    "imageFileName": "314_1042-33.png",
+    "imageLocalPath": "img/314_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1042-33",
+    "trafficSignKey": "DE:314,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["access=no", "disabled=designated", "traffic_sign=DE:314,1044-10"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access=no",
+          "parking:both:disabled=designated",
+          "parking:both:traffic_sign=DE:314,1044-10"
+        ],
+        "left": [
+          "parking:left:access=no",
+          "parking:left:disabled=designated",
+          "parking:left:traffic_sign=DE:314,1044-10"
+        ],
+        "right": [
+          "parking:right:access=no",
+          "parking:right:disabled=designated",
+          "parking:right:traffic_sign=DE:314,1044-10"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access=no",
+        "parking:SEITE:disabled=designated",
+        "parking:SEITE:traffic_sign=DE:314,1044-10"
+      ]
+    },
+    "fixtureId": "scenario-0056",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1044-10.png",
+    "imageFileName": "314_1044-10.png",
+    "imageLocalPath": "img/314_1044-10.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1044-10",
+    "trafficSignKey": "DE:314,1044-10"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "access=yes",
+        "access:conditional=no @ (OPENINGHOURS)",
+        "disabled:conditional=designated @ (OPENINGHOURS)",
+        "traffic_sign=DE:314,1044-10,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access=yes",
+          "parking:both:access:conditional=no @ (OPENINGHOURS)",
+          "parking:both:disabled:conditional=designated @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314,1044-10,1042-33"
+        ],
+        "left": [
+          "parking:left:access=yes",
+          "parking:left:access:conditional=no @ (OPENINGHOURS)",
+          "parking:left:disabled:conditional=designated @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314,1044-10,1042-33"
+        ],
+        "right": [
+          "parking:right:access=yes",
+          "parking:right:access:conditional=no @ (OPENINGHOURS)",
+          "parking:right:disabled:conditional=designated @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314,1044-10,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access=yes",
+        "parking:SEITE:access:conditional=no @ (OPENINGHOURS)",
+        "parking:SEITE:disabled:conditional=designated @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314,1044-10,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0057",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1044-10_1042-33.png",
+    "imageFileName": "314_1044-10_1042-33.png",
+    "imageLocalPath": "img/314_1044-10_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1044-10_1042-33",
+    "trafficSignKey": "DE:314,1044-10,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "access=yes",
+        "access:conditional=no @ (OPENINGHOURS)",
+        "authentication:disc=yes",
+        "disabled:conditional=designated @ (OPENINGHOURS)",
+        "maxstay=TIME",
+        "traffic_sign=DE:314,1044-10,1042-33,1040-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access=yes",
+          "parking:both:access:conditional=no @ (OPENINGHOURS)",
+          "parking:both:authentication:disc=yes",
+          "parking:both:disabled:conditional=designated @ (OPENINGHOURS)",
+          "parking:both:maxstay=TIME",
+          "parking:both:traffic_sign=DE:314,1044-10,1042-33,1040-32"
+        ],
+        "left": [
+          "parking:left:access=yes",
+          "parking:left:access:conditional=no @ (OPENINGHOURS)",
+          "parking:left:authentication:disc=yes",
+          "parking:left:disabled:conditional=designated @ (OPENINGHOURS)",
+          "parking:left:maxstay=TIME",
+          "parking:left:traffic_sign=DE:314,1044-10,1042-33,1040-32"
+        ],
+        "right": [
+          "parking:right:access=yes",
+          "parking:right:access:conditional=no @ (OPENINGHOURS)",
+          "parking:right:authentication:disc=yes",
+          "parking:right:disabled:conditional=designated @ (OPENINGHOURS)",
+          "parking:right:maxstay=TIME",
+          "parking:right:traffic_sign=DE:314,1044-10,1042-33,1040-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access=yes",
+        "parking:SEITE:access:conditional=no @ (OPENINGHOURS)",
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:disabled:conditional=designated @ (OPENINGHOURS)",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:traffic_sign=DE:314,1044-10,1042-33,1040-32"
+      ]
+    },
+    "fixtureId": "scenario-0058",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1044-10_1042-33_1040-32.png",
+    "imageFileName": "314_1044-10_1042-33_1040-32.png",
+    "imageLocalPath": "img/314_1044-10_1042-33_1040-32.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1044-10_1042-33_1040-32",
+    "trafficSignKey": "DE:314,1044-10,1042-33,1040-32"
+  },
+  {
+    "expectedTags": {
+      "area": ["access=no", "disabled=private", "ref=AUSWEIS", "traffic_sign=DE:314,1044-11"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access=no",
+          "parking:both:disabled=private",
+          "parking:both:ref=AUSWEIS",
+          "parking:both:traffic_sign=DE:314,1044-11"
+        ],
+        "left": [
+          "parking:left:access=no",
+          "parking:left:disabled=private",
+          "parking:left:ref=AUSWEIS",
+          "parking:left:traffic_sign=DE:314,1044-11"
+        ],
+        "right": [
+          "parking:right:access=no",
+          "parking:right:disabled=private",
+          "parking:right:ref=AUSWEIS",
+          "parking:right:traffic_sign=DE:314,1044-11"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access=no",
+        "parking:SEITE:disabled=private",
+        "parking:SEITE:ref=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314,1044-11"
+      ]
+    },
+    "fixtureId": "scenario-0059",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1044-11.png",
+    "imageFileName": "314_1044-11.png",
+    "imageLocalPath": "img/314_1044-11.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1044-11",
+    "trafficSignKey": "DE:314,1044-11"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "access:conditional=no @ (OPENINGHOURS)",
+        "disabled:conditional=private @ (OPENINGHOURS)",
+        "ref=AUSWEIS",
+        "traffic_sign=DE:314,1044-11,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access:conditional=no @ (OPENINGHOURS)",
+          "parking:both:disabled:conditional=private @ (OPENINGHOURS)",
+          "parking:both:ref=AUSWEIS",
+          "parking:both:traffic_sign=DE:314,1044-11,1042-33"
+        ],
+        "left": [
+          "parking:left:access:conditional=no @ (OPENINGHOURS)",
+          "parking:left:disabled:conditional=private @ (OPENINGHOURS)",
+          "parking:left:ref=AUSWEIS",
+          "parking:left:traffic_sign=DE:314,1044-11,1042-33"
+        ],
+        "right": [
+          "parking:right:access:conditional=no @ (OPENINGHOURS)",
+          "parking:right:disabled:conditional=private @ (OPENINGHOURS)",
+          "parking:right:ref=AUSWEIS",
+          "parking:right:traffic_sign=DE:314,1044-11,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access:conditional=no @ (OPENINGHOURS)",
+        "parking:SEITE:disabled:conditional=private @ (OPENINGHOURS)",
+        "parking:SEITE:ref=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314,1044-11,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0060",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1044-11_1042-33.png",
+    "imageFileName": "314_1044-11_1042-33.png",
+    "imageLocalPath": "img/314_1044-11_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1044-11_1042-33",
+    "trafficSignKey": "DE:314,1044-11,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["access=private", "zone=AUSWEIS", "traffic_sign=DE:314,1044-30"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:access=private",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:314,1044-30"
+        ],
+        "left": [
+          "parking:left:access=private",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:314,1044-30"
+        ],
+        "right": [
+          "parking:right:access=private",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:314,1044-30"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:access=private",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314,1044-30"
+      ]
+    },
+    "fixtureId": "scenario-0061",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1044-30.png",
+    "imageFileName": "314_1044-30.png",
+    "imageLocalPath": "img/314_1044-30.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1044-30",
+    "trafficSignKey": "DE:314,1044-30"
+  },
+  {
+    "expectedTags": {
+      "area": ["restriction=charging_only", "traffic_sign=DE:314,1050-32"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:restriction=charging_only",
+          "parking:both:traffic_sign=DE:314,1050-32"
+        ],
+        "left": [
+          "parking:left:restriction=charging_only",
+          "parking:left:traffic_sign=DE:314,1050-32"
+        ],
+        "right": [
+          "parking:right:restriction=charging_only",
+          "parking:right:traffic_sign=DE:314,1050-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:restriction=charging_only",
+        "parking:SEITE:traffic_sign=DE:314,1050-32"
+      ]
+    },
+    "fixtureId": "scenario-0062",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1050-32.png",
+    "imageFileName": "314_1050-32.png",
+    "imageLocalPath": "img/314_1050-32.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1050-32",
+    "trafficSignKey": "DE:314,1050-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=yes",
+        "maxstay=TIME",
+        "restriction=charging_only",
+        "traffic_sign=DE:314,1050-32,1040-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:maxstay=TIME",
+          "parking:both:restriction=charging_only",
+          "parking:both:traffic_sign=DE:314,1050-32,1040-32"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:maxstay=TIME",
+          "parking:left:restriction=charging_only",
+          "parking:left:traffic_sign=DE:314,1050-32,1040-32"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:maxstay=TIME",
+          "parking:right:restriction=charging_only",
+          "parking:right:traffic_sign=DE:314,1050-32,1040-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:maxstay=TIME",
+        "parking:SEITE:restriction=charging_only",
+        "parking:SEITE:traffic_sign=DE:314,1050-32,1040-32"
+      ]
+    },
+    "fixtureId": "scenario-0063",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1050-32_1040-32.png",
+    "imageFileName": "314_1050-32_1040-32.png",
+    "imageLocalPath": "img/314_1050-32_1040-32.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1050-32_1040-32",
+    "trafficSignKey": "DE:314,1050-32,1040-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:disc=yes",
+        "maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "restriction=charging_only",
+        "traffic_sign=DE:314,1050-32,1040-32,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:disc=yes",
+          "parking:both:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:both:restriction=charging_only",
+          "parking:both:traffic_sign=DE:314,1050-32,1040-32,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:disc=yes",
+          "parking:left:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:left:restriction=charging_only",
+          "parking:left:traffic_sign=DE:314,1050-32,1040-32,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:disc=yes",
+          "parking:right:maxstay:conditional=TIME @ (OPENINGHOURS)",
+          "parking:right:restriction=charging_only",
+          "parking:right:traffic_sign=DE:314,1050-32,1040-32,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:disc=yes",
+        "parking:SEITE:maxstay:conditional=TIME @ (OPENINGHOURS)",
+        "parking:SEITE:restriction=charging_only",
+        "parking:SEITE:traffic_sign=DE:314,1050-32,1040-32,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0064",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1050-32_1040-32_1042-33.png",
+    "imageFileName": "314_1050-32_1040-32_1042-33.png",
+    "imageLocalPath": "img/314_1050-32_1040-32_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": true
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1050-32_1040-32_1042-33",
+    "trafficSignKey": "DE:314,1050-32,1040-32,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": ["authentication:ticket=yes", "fee=yes", "traffic_sign=DE:314,1053-31"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:traffic_sign=DE:314,1053-31"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:traffic_sign=DE:314,1053-31"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:traffic_sign=DE:314,1053-31"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:traffic_sign=DE:314,1053-31"
+      ]
+    },
+    "fixtureId": "scenario-0065",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31.png",
+    "imageFileName": "314_1053-31.png",
+    "imageLocalPath": "img/314_1053-31.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31",
+    "trafficSignKey": "DE:314,1053-31"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "bus=designated",
+        "fee=yes",
+        "motorcar=designated",
+        "motorcycle=designated",
+        "tourist_bus=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1053-31,1010-57,1010-58,1010-62"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:bus=designated",
+          "parking:both:fee=yes",
+          "parking:both:motorcar=designated",
+          "parking:both:motorcycle=designated",
+          "parking:both:tourist_bus=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1053-31,1010-57,1010-58,1010-62"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:bus=designated",
+          "parking:left:fee=yes",
+          "parking:left:motorcar=designated",
+          "parking:left:motorcycle=designated",
+          "parking:left:tourist_bus=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1053-31,1010-57,1010-58,1010-62"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:bus=designated",
+          "parking:right:fee=yes",
+          "parking:right:motorcar=designated",
+          "parking:right:motorcycle=designated",
+          "parking:right:tourist_bus=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1053-31,1010-57,1010-58,1010-62"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:bus=designated",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:motorcycle=designated",
+        "parking:SEITE:tourist_bus=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1053-31,1010-57,1010-58,1010-62"
+      ]
+    },
+    "fixtureId": "scenario-0066",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31_1010-57_1010-58_1010-62.png",
+    "imageFileName": "314_1053-31_1010-57_1010-58_1010-62.png",
+    "imageLocalPath": "img/314_1053-31_1010-57_1010-58_1010-62.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31_1010-57_1010-58_1010-62",
+    "trafficSignKey": "DE:314,1053-31,1010-57,1010-58,1010-62"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "fee=yes",
+        "motorcar=designated",
+        "motorcycle=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1053-31,1010-58,1010-62"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:motorcar=designated",
+          "parking:both:motorcycle=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1053-31,1010-58,1010-62"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:motorcar=designated",
+          "parking:left:motorcycle=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1053-31,1010-58,1010-62"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:motorcar=designated",
+          "parking:right:motorcycle=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1053-31,1010-58,1010-62"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:motorcycle=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1053-31,1010-58,1010-62"
+      ]
+    },
+    "fixtureId": "scenario-0067",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31_1010-58_1010-62.png",
+    "imageFileName": "314_1053-31_1010-58_1010-62.png",
+    "imageLocalPath": "img/314_1053-31_1010-58_1010-62.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31_1010-58_1010-62",
+    "trafficSignKey": "DE:314,1053-31,1010-58,1010-62"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "bus=designated",
+        "fee=yes",
+        "motorcar=designated",
+        "motorcycle=designated",
+        "tourist_bus=designated",
+        "vehicle=no",
+        "traffic_sign=DE:314,1053-31,1010-57,1010-58,1010-62"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:bus=designated",
+          "parking:both:fee=yes",
+          "parking:both:motorcar=designated",
+          "parking:both:motorcycle=designated",
+          "parking:both:tourist_bus=designated",
+          "parking:both:vehicle=no",
+          "parking:both:traffic_sign=DE:314,1053-31,1010-57,1010-58,1010-62"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:bus=designated",
+          "parking:left:fee=yes",
+          "parking:left:motorcar=designated",
+          "parking:left:motorcycle=designated",
+          "parking:left:tourist_bus=designated",
+          "parking:left:vehicle=no",
+          "parking:left:traffic_sign=DE:314,1053-31,1010-58,1010-62"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:bus=designated",
+          "parking:right:fee=yes",
+          "parking:right:motorcar=designated",
+          "parking:right:motorcycle=designated",
+          "parking:right:tourist_bus=designated",
+          "parking:right:vehicle=no",
+          "parking:right:traffic_sign=DE:314,1053-31,1010-58,1010-62"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:bus=designated",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:motorcar=designated",
+        "parking:SEITE:motorcycle=designated",
+        "parking:SEITE:tourist_bus=designated",
+        "parking:SEITE:vehicle=no",
+        "parking:SEITE:traffic_sign=DE:314,1053-31,1010-58,1010-62"
+      ]
+    },
+    "fixtureId": "scenario-0068",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31_1010-58_1010-62_1010-57.png",
+    "imageFileName": "314_1053-31_1010-58_1010-62_1010-57.png",
+    "imageLocalPath": "img/314_1053-31_1010-58_1010-62_1010-57.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31_1010-57_1010-58_1010-62",
+    "trafficSignKey": "DE:314,1053-31,1010-57,1010-58,1010-62"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "fee=yes",
+        "zone=AUSWEIS",
+        "traffic_sign=DE:314,1053-31,1020-32"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:314,1053-31,1020-32"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:314,1053-31,1020-32"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:314,1053-31,1020-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314,1053-31,1020-32"
+      ]
+    },
+    "fixtureId": "scenario-0069",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31_1020-32.png",
+    "imageFileName": "314_1053-31_1020-32.png",
+    "imageLocalPath": "img/314_1053-31_1020-32.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31_1020-32",
+    "trafficSignKey": "DE:314,1053-31,1020-32"
+  },
+  {
+    "expectedTags": {
+      "area": ["fee=yes", "zone=AUSWEIS", "traffic_sign=DE:314,1053-31,1020-32"],
+      "wayExpanded": {
+        "both": [
+          "parking:both:fee=yes",
+          "parking:both:zone=AUSWEIS",
+          "parking:both:traffic_sign=DE:314,1053-31,1020-32"
+        ],
+        "left": [
+          "parking:left:fee=yes",
+          "parking:left:zone=AUSWEIS",
+          "parking:left:traffic_sign=DE:314,1053-31,1020-32"
+        ],
+        "right": [
+          "parking:right:fee=yes",
+          "parking:right:zone=AUSWEIS",
+          "parking:right:traffic_sign=DE:314,1053-31,1020-32"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:zone=AUSWEIS",
+        "parking:SEITE:traffic_sign=DE:314,1053-31,1020-32"
+      ]
+    },
+    "fixtureId": "scenario-0070",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-32_1020-32.png",
+    "imageFileName": "314_1053-32_1020-32.png",
+    "imageLocalPath": "img/314_1053-32_1020-32.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31_1020-32",
+    "trafficSignKey": "DE:314,1053-31,1020-32"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "fee=yes",
+        "zone:conditional=AUSWEIS @ (OPENINGHOURS)",
+        "traffic_sign=DE:314,1053-31,1020-32,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:fee=yes",
+          "parking:both:zone:conditional=AUSWEIS @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314,1053-31,1020-32,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:fee=yes",
+          "parking:left:zone:conditional=AUSWEIS @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314,1053-31,1020-32,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:fee=yes",
+          "parking:right:zone:conditional=AUSWEIS @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314,1053-31,1020-32,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:zone:conditional=AUSWEIS @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314,1053-31,1020-32,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0071",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31_1020-32_1042-33.png",
+    "imageFileName": "314_1053-31_1020-32_1042-33.png",
+    "imageLocalPath": "img/314_1053-31_1020-32_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": true,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31_1020-32_1042-33",
+    "trafficSignKey": "DE:314,1053-31,1020-32,1042-33"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=yes",
+        "authentication:ticket:bus=no",
+        "authentication:ticket:tourist_bus=no",
+        "fee=yes",
+        "fee:bus=no",
+        "fee:tourist_bus=no",
+        "traffic_sign=DE:314,1053-31,1024-14"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=yes",
+          "parking:both:authentication:ticket:bus=no",
+          "parking:both:authentication:ticket:tourist_bus=no",
+          "parking:both:fee=yes",
+          "parking:both:fee:bus=no",
+          "parking:both:fee:tourist_bus=no",
+          "parking:both:traffic_sign=DE:314,1053-31,1024-14"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=yes",
+          "parking:left:authentication:ticket:bus=no",
+          "parking:left:authentication:ticket:tourist_bus=no",
+          "parking:left:fee=yes",
+          "parking:left:fee:bus=no",
+          "parking:left:fee:tourist_bus=no",
+          "parking:left:traffic_sign=DE:314,1053-31,1024-14"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=yes",
+          "parking:right:authentication:ticket:bus=no",
+          "parking:right:authentication:ticket:tourist_bus=no",
+          "parking:right:fee=yes",
+          "parking:right:fee:bus=no",
+          "parking:right:fee:tourist_bus=no",
+          "parking:right:traffic_sign=DE:314,1053-31,1024-14"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=yes",
+        "parking:SEITE:authentication:ticket:bus=no",
+        "parking:SEITE:authentication:ticket:tourist_bus=no",
+        "parking:SEITE:fee=yes",
+        "parking:SEITE:fee:bus=no",
+        "parking:SEITE:fee:tourist_bus=no",
+        "parking:SEITE:traffic_sign=DE:314,1053-31,1024-14"
+      ]
+    },
+    "fixtureId": "scenario-0072",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31_1024-14.png",
+    "imageFileName": "314_1053-31_1024-14.png",
+    "imageLocalPath": "img/314_1053-31_1024-14.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": false,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31_1024-14",
+    "trafficSignKey": "DE:314,1053-31,1024-14"
+  },
+  {
+    "expectedTags": {
+      "area": [
+        "authentication:ticket=no",
+        "authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+        "fee=no",
+        "fee:conditional=yes @ (OPENINGHOURS)",
+        "traffic_sign=DE:314,1053-31,1042-33"
+      ],
+      "wayExpanded": {
+        "both": [
+          "parking:both:authentication:ticket=no",
+          "parking:both:authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:fee=no",
+          "parking:both:fee:conditional=yes @ (OPENINGHOURS)",
+          "parking:both:traffic_sign=DE:314,1053-31,1042-33"
+        ],
+        "left": [
+          "parking:left:authentication:ticket=no",
+          "parking:left:authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:fee=no",
+          "parking:left:fee:conditional=yes @ (OPENINGHOURS)",
+          "parking:left:traffic_sign=DE:314,1053-31,1042-33"
+        ],
+        "right": [
+          "parking:right:authentication:ticket=no",
+          "parking:right:authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:fee=no",
+          "parking:right:fee:conditional=yes @ (OPENINGHOURS)",
+          "parking:right:traffic_sign=DE:314,1053-31,1042-33"
+        ]
+      },
+      "wayTemplate": [
+        "parking:SEITE:authentication:ticket=no",
+        "parking:SEITE:authentication:ticket:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:fee=no",
+        "parking:SEITE:fee:conditional=yes @ (OPENINGHOURS)",
+        "parking:SEITE:traffic_sign=DE:314,1053-31,1042-33"
+      ]
+    },
+    "fixtureId": "scenario-0073",
+    "image": "https://raw.githubusercontent.com/wielandb/osm-parking-tagging/main/img/314_1053-31_1042-33.png",
+    "imageFileName": "314_1053-31_1042-33.png",
+    "imageLocalPath": "img/314_1053-31_1042-33.png",
+    "placeholders": {
+      "AUSWEIS": false,
+      "OPENINGHOURS": true,
+      "OTHER": false,
+      "SEITE": true,
+      "TIME": false
+    },
+    "sampleSubstitution": {
+      "AUSWEIS": "resident_permit_A",
+      "OPENINGHOURS": "Mo-Fr 08:00-18:00",
+      "OTHER": "example_value",
+      "SEITE": "right",
+      "TIME": "2 h"
+    },
+    "signIdentifier": "314_1053-31_1042-33",
+    "trafficSignKey": "DE:314,1053-31,1042-33"
+  }
+]

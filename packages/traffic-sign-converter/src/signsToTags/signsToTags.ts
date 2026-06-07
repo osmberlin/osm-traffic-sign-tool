@@ -5,6 +5,7 @@ import type {
   SignStateType,
 } from '../data-definitions/TrafficSignDataTypes.js'
 import { signsToTrafficSignTagValue } from '../signsToTrafficSignTag/signsToTrafficSignTagValue.js'
+import { applyParkingCombinationTags } from './utils/applyParkingCombinationTags.js'
 import { collectAccessTags } from './utils/collectAccessTags.js'
 import { collectConditionalTags } from './utils/collectConditionalTags.js'
 import { collectHighwayValues } from './utils/collectHighwayValues.js'
@@ -68,6 +69,8 @@ export const signsToTags = (
     conditionalTag.forEach((tag) => {
       tagMap.set(tag.key, tag.value)
     })
+
+    applyParkingCombinationTags(tagMap, signGroup, geometry)
 
     applyQuestionTagRemovals(tagMap, collectQuestionTagRemovals(signGroup, geometry, answers))
   }

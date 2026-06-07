@@ -13,10 +13,13 @@ export const collectUniqueTags = (signs: SignStateType[], geometry: GeometryType
       for (const uniqueTag of recs.uniqueTags) {
         const template =
           'valueTemplate' in uniqueTag && uniqueTag.valueTemplate ? uniqueTag.valueTemplate : '$'
+        const promptValue = String(sign.signValue ?? sign.valuePrompt?.defaultValue ?? '')
         const value =
           'value' in uniqueTag
-            ? uniqueTag.value
-            : template.replace('$', String(sign.signValue) || sign.valuePrompt?.defaultValue || '')
+            ? uniqueTag.value === '$'
+              ? promptValue
+              : uniqueTag.value
+            : template.replace('$', promptValue)
 
         if (!value) {
           console.warn('ERROR', Boolean(value), 'should never be empty')
