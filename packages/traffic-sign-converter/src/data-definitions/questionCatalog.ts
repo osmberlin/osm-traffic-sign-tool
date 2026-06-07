@@ -54,6 +54,25 @@ export const surfaceColorQuestion = (
   ],
 })
 
+/** Road marking line colour (`colour=*`). */
+export const markingColorQuestion = (): SignQuestion => ({
+  questionId: 'markingColor',
+  questionI18nKey: 'markingColor.prompt',
+  answers: [
+    nilAnswer('markingColor'),
+    {
+      answerId: 'white',
+      answerI18nKey: 'markingColor.answer.white',
+      tags: [{ key: 'colour', value: 'white' }],
+    },
+    {
+      answerId: 'yellow',
+      answerI18nKey: 'markingColor.answer.yellow',
+      tags: [{ key: 'colour', value: 'yellow' }],
+    },
+  ],
+})
+
 /** Street-adjacent vs independently routed path/cycleway. */
 export const guidanceModeQuestion = (): SignQuestion => ({
   questionId: 'guidanceMode',

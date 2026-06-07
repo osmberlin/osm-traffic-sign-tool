@@ -1,3 +1,4 @@
+import { markingColorQuestion } from '../../questionCatalog.js'
 import type { SignType } from '../../TrafficSignDataTypes.js'
 
 export const _surface: SignType[] = [
@@ -18,12 +19,8 @@ export const _surface: SignType[] = [
         ],
       },
     ],
-    comments: [
-      {
-        lang: 'de',
-        comment: 'Optional: [Tag:colour=white]',
-      },
-    ],
+    questions: [markingColorQuestion()],
+    comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',
@@ -52,12 +49,8 @@ export const _surface: SignType[] = [
         ],
       },
     ],
-    comments: [
-      {
-        lang: 'de',
-        comment: 'Optional: [Tag:colour=white]',
-      },
-    ],
+    questions: [markingColorQuestion()],
+    comments: [],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',

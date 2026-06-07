@@ -101,6 +101,7 @@ export {
   guidanceModeQuestion,
   hazardSignNodeQuestions,
   highwayClassQuestion,
+  markingColorQuestion,
   pathInfrastructureQuestions,
   sidepathQuestion,
   signDirectionQuestion,

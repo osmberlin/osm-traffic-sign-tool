@@ -4,6 +4,7 @@ import type { QuestionAnswer } from '@osm-traffic-signs/converter'
 const promptShortLabels: Record<string, () => string> = {
   'sidepath.prompt': m.question_sidepath_title,
   'surfaceColor.prompt': m.question_surfaceColor_title,
+  'markingColor.prompt': m.question_markingColor_title,
   'guidanceMode.prompt': m.question_guidanceMode_title,
   'highwayClass.prompt': m.question_highwayClass_title,
   'signDirection.prompt': m.question_signDirection_title,
@@ -17,6 +18,9 @@ const answerLabels: Record<string, () => string> = {
   'surfaceColor.answer.red': m.question_surfaceColor_answer_red,
   'surfaceColor.answer.green': m.question_surfaceColor_answer_green,
   'surfaceColor.answer.red_green': m.question_surfaceColor_answer_red_green,
+  'markingColor.answer.nil': m.question_markingColor_answer_nil,
+  'markingColor.answer.white': m.question_markingColor_answer_white,
+  'markingColor.answer.yellow': m.question_markingColor_answer_yellow,
   'guidanceMode.answer.nil': m.question_guidanceMode_answer_nil,
   'guidanceMode.answer.streetAdjacent': m.question_guidanceMode_answer_streetAdjacent,
   'guidanceMode.answer.independent': m.question_guidanceMode_answer_independent,

@@ -94,6 +94,47 @@ describe('question answers in signsToTags()', () => {
     expect(cyclewayTags.has('bicycle')).toBe(false)
   })
 
+  test('markingColor white emits colour tag for DE:298', () => {
+    const signs = signsStateByDescriptiveName('DE', data, ['Sperrflächen'])
+    expect(signs.length).toBeGreaterThan(0)
+    const signKey = signs[0]!.osmValuePart
+    const result = signsToTags(signs, 'DE', 'way', {
+      [signKey]: { markingColor: 'white' },
+    })
+    expect(result.get('colour')).toBe('white')
+    expect(result.get('road_marking')).toBe('restriction')
+    expect(result.get('pattern')).toBe('stripes')
+  })
+
+  test('markingColor yellow emits colour tag for DE:299', () => {
+    const signs = signsStateByDescriptiveName('DE', data, [
+      'Grenzmarkierung für Halt- und Parkverbote',
+    ])
+    expect(signs.length).toBeGreaterThan(0)
+    const signKey = signs[0]!.osmValuePart
+    const result = signsToTags(signs, 'DE', 'way', {
+      [signKey]: { markingColor: 'yellow' },
+    })
+    expect(result.get('colour')).toBe('yellow')
+    expect(result.get('road_marking')).toBe('restriction')
+    expect(result.get('pattern')).toBe('zigzag')
+  })
+
+  test('markingColor nil omits colour tag for DE:298 and DE:299', () => {
+    for (const descriptiveName of [
+      'Sperrflächen',
+      'Grenzmarkierung für Halt- und Parkverbote',
+    ] as const) {
+      const signs = signsStateByDescriptiveName('DE', data, [descriptiveName])
+      expect(signs.length).toBeGreaterThan(0)
+      const signKey = signs[0]!.osmValuePart
+      const result = signsToTags(signs, 'DE', 'way', {
+        [signKey]: { markingColor: QUESTION_NIL_ANSWER_ID },
+      })
+      expect(result.has('colour')).toBe(false)
+    }
+  })
+
   test('signDirection applies direction tag on node only', () => {
     const signs = signsStateByDescriptiveName('DE', data, ['Radverkehr – Aufstellung rechts'])
     expect(signs.length).toBeGreaterThan(0)
