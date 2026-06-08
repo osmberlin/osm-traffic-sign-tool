@@ -11,7 +11,7 @@ _2026-06-06_
 - Flag BR `A-49a`, `A-49b`, `A-50a`, `A-50b` as `image: 'missing'` (wiki file absent).
 - SVG download pipeline: classify `wiki_file_missing` errors, skip catalogue-missing signs on download, and `apply-missing-svg-flags.ts` to patch source data from `downloadErrors_*.json`.
 
-- Add beta country catalogues: `BE`, `CA`, `PL`, `AT`, `FR`, `AU`, `BR` (OSM Wiki import via `packages/internal_svgs/script-import-wiki-catalogue.ts`).
+- Add beta country catalogues: `BE`, `CA`, `PL`, `AT`, `FR`, `AU`, `BR` (OSM Wiki import via `packages/internal_wiki` — `bun run wiki:importCatalogue`).
 - Extend `CountryCatalogueMeta` with `catalogueName`, `isBeta`, `osmTrafficSignPrefix`, and `qaCapabilities` (`fullQaCapabilities` / `betaQaCapabilities`).
 - Add shared recommendation presets (`sharedRecommendationPresets.ts`) for cross-country semantic equivalents.
 - Export catalogue helpers: `getCatalogueDisplayName`, `isBetaCatalogue`, `hasQaCapability`.

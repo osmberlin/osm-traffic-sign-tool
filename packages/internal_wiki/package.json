@@ -22,10 +22,10 @@
     "wiki": "bun run wiki:generate",
     "wiki:downloadWiki": "bun ./src/downloadWiki/downloadWiki.ts && bun run --cwd ../.. format:files -- packages/internal_wiki",
     "wiki:generate": "bun ./src/generateWikiSnapshots.ts && bun run --cwd ../.. format:files -- packages/internal_wiki/src/data",
+    "wiki:importCatalogue": "bun ./src/importWikiCatalogue/importWikiCatalogue.ts",
     "wiki:parseWiki": "bun ./src/parseWiki/parseWiki.ts && bun run --cwd ../.. format:files -- packages/internal_wiki"
   },
   "devDependencies": {
-    "@internal/svgs": "workspace:*",
     "@osm-traffic-signs/converter": "workspace:*",
     "cheerio": "^1.1.2",
     "rimraf": "^6.1.2",

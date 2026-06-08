@@ -96,7 +96,6 @@
     "packages/internal_wiki": {
       "name": "@internal/wiki",
       "devDependencies": {
-        "@internal/svgs": "workspace:*",
         "@osm-traffic-signs/converter": "workspace:*",
         "cheerio": "^1.1.2",
         "rimraf": "^6.1.2",
@@ -107,7 +106,7 @@
     },
     "packages/traffic-sign-converter": {
       "name": "@osm-traffic-signs/converter",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "dependencies": {
         "opening_hours": "^3.12.0",
       },
