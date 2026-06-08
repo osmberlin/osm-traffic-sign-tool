@@ -160,6 +160,12 @@ describe('parseWikiTags', () => {
       { key: 'maxspeed:bus', value: '40' },
     ])
   })
+
+  test('parses multiple space-separated tags in one segment', () => {
+    expect(parseWikiTags('traffic_sign=FR:A1a hazard=turn')).toEqual([
+      { key: 'hazard', value: 'turn' },
+    ])
+  })
 })
 
 describe('normalizeWikiTagValue', () => {
