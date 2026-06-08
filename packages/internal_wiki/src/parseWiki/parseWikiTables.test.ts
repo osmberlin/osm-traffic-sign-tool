@@ -130,43 +130,64 @@ const frSu1RowHtml = `
 </table>`
 
 describe('parseWikiTags', () => {
-  test('parses conditional maxstay values with spaces', () => {
-    expect(parseWikiTags('maxstay:conditional=1 hour @ (Sa 09:00-12:00)')).toEqual([
-      { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
-    ])
+  describe('wiki Tag template 3= and || prefixes (AU R5-1)', () => {
+    test('parses conditional maxstay values with spaces from rendered AU:R5-1 cell', () => {
+      expect(parseWikiTags('maxstay:conditional=1 hour @ (Sa 09:00-12:00)')).toEqual([
+        { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
+      ])
+    })
+
+    test('strips 3= prefix from wikitext and rendered equals format', () => {
+      expect(parseWikiTags('{{Tag|maxstay:conditional|3=1 hour @ (Sa 09:00-12:00)}}')).toEqual([
+        { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
+      ])
+      expect(parseWikiTags('maxstay:conditional=3=1 hour @ (Sa 09:00-12:00)')).toEqual([
+        { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
+      ])
+    })
+
+    test('strips || prefix from wikitext and rendered equals format', () => {
+      expect(parseWikiTags('{{Tag|maxspeed:conditional||40 @ (09:00-18:00)}}')).toEqual([
+        { key: 'maxspeed:conditional', value: '40 @ (09:00-18:00)' },
+      ])
+      expect(parseWikiTags('maxspeed:conditional=||40 @ (09:00-18:00)')).toEqual([
+        { key: 'maxspeed:conditional', value: '40 @ (09:00-18:00)' },
+      ])
+    })
+
+    test('parses FR destination tags using || no-link prefix', () => {
+      expect(parseWikiTags('{{Tag|destination:access:goods||no}}')).toEqual([
+        { key: 'destination:access:goods', value: 'no' },
+      ])
+      expect(parseWikiTags('{{Tag|destination:access:maxweightrating:goods||5.5}}')).toEqual([
+        { key: 'destination:access:maxweightrating:goods', value: '5.5' },
+      ])
+    })
   })
 
-  test('strips wiki Tag template 3= value prefix', () => {
-    expect(parseWikiTags('{{Tag|maxstay:conditional|3=1 hour @ (Sa 09:00-12:00)}}')).toEqual([
-      { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
-    ])
-    expect(parseWikiTags('maxstay:conditional=3=1 hour @ (Sa 09:00-12:00)')).toEqual([
-      { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
-    ])
+  describe('space-separated tags in one segment (FR A1a)', () => {
+    test('parses hazard tag alongside skipped traffic_sign from rendered FR:A1a cell', () => {
+      expect(parseWikiTags('traffic_sign=FR:A1a hazard=turn')).toEqual([
+        { key: 'hazard', value: 'turn' },
+      ])
+    })
+
+    test('parses multiple AU R4-246 speed tags separated by plus', () => {
+      expect(parseWikiTags('maxspeed:hgv=40 + maxspeed:bus=40')).toEqual([
+        { key: 'maxspeed:hgv', value: '40' },
+        { key: 'maxspeed:bus', value: '40' },
+      ])
+    })
+
+    test('parses AU R5-20 parking tags from rendered wiki cell', () => {
+      expect(parseWikiTags('parking:side:access=no + parking:side:bus=designated')).toEqual([
+        { key: 'parking:side:access', value: 'no' },
+        { key: 'parking:side:bus', value: 'designated' },
+      ])
+    })
   })
 
-  test('strips wiki Tag template || value prefix', () => {
-    expect(parseWikiTags('{{Tag|maxspeed:conditional||40 @ (09:00-18:00)}}')).toEqual([
-      { key: 'maxspeed:conditional', value: '40 @ (09:00-18:00)' },
-    ])
-    expect(parseWikiTags('maxspeed:conditional=||40 @ (09:00-18:00)')).toEqual([
-      { key: 'maxspeed:conditional', value: '40 @ (09:00-18:00)' },
-    ])
-  })
-
-  test('parses multiple tags separated by plus', () => {
-    expect(parseWikiTags('maxspeed:hgv=40 + maxspeed:bus=40')).toEqual([
-      { key: 'maxspeed:hgv', value: '40' },
-      { key: 'maxspeed:bus', value: '40' },
-    ])
-  })
-
-  test('parses multiple space-separated tags in one segment', () => {
-    expect(parseWikiTags('traffic_sign=FR:A1a hazard=turn')).toEqual([
-      { key: 'hazard', value: 'turn' },
-    ])
-  })
-
+  describe('equals inside conditionals (AU R6-17)', () => {
   test('parses AU R6-17 axle-group conditional from rendered wiki cell text', () => {
     expect(
       parseWikiTags(
@@ -202,6 +223,30 @@ describe('parseWikiTags', () => {
     ).toHaveLength(2)
   })
 
+    test('parses FR SC1b destination conditional with comparison operator', () => {
+      expect(
+        parseWikiTags('destination:access:goods:conditional=designated @ (weightrating > 5.5)'),
+      ).toEqual([
+        {
+          key: 'destination:access:goods:conditional',
+          value: 'designated @ (weightrating > 5.5)',
+        },
+      ])
+    })
+
+    test('parses AU R9-1-1 restriction conditional from rendered wiki cell', () => {
+      expect(
+        parseWikiTags('restriction:conditional=restriction-value @ (Mo-Fr 07:00-09:30)'),
+      ).toEqual([
+        {
+          key: 'restriction:conditional',
+          value: 'restriction-value @ (Mo-Fr 07:00-09:30)',
+        },
+      ])
+    })
+  })
+
+  describe('plain tags alongside wiki Tag templates', () => {
   test('parses AU R4-V105 school zone tags from rendered wiki cell text', () => {
     expect(
       parseWikiTags(
@@ -230,11 +275,19 @@ describe('parseWikiTags', () => {
     ])
   })
 
-  test('parses plain tags in the same segment as wiki Tag templates', () => {
-    expect(parseWikiTags('{{Tag|bridge|yes}} maxspeed=10')).toEqual([
-      { key: 'bridge', value: 'yes' },
-      { key: 'maxspeed', value: '10' },
-    ])
+    test('parses plain tags in the same segment as wiki Tag templates', () => {
+      expect(parseWikiTags('{{Tag|bridge|yes}} maxspeed=10')).toEqual([
+        { key: 'bridge', value: 'yes' },
+        { key: 'maxspeed', value: '10' },
+      ])
+    })
+
+    test('parses AU W5-V129 hazard and bridge tags from rendered wiki cell', () => {
+      expect(parseWikiTags('hazard:conditional=slippery @ icy + bridge=yes')).toEqual([
+        { key: 'hazard:conditional', value: 'slippery @ icy' },
+        { key: 'bridge', value: 'yes' },
+      ])
+    })
   })
 })
 
@@ -360,6 +413,12 @@ describe('parseUniversalTable', () => {
     expect(row?.name).toBe(
       'Direction conseillée aux véhicules de transport de marchandises dont le poids total autorisé en charge ou le poids total roulant autorisé excède le nombre indiqué',
     )
+  })
+
+  test('parses space-separated FR A1a hazard tag from rendered wiki row', () => {
+    const $ = cheerio.load(frA1aRowHtml)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(toWikiSign('FR', row!)?.osmTags).toEqual(['hazard=turn'])
   })
 })
 
