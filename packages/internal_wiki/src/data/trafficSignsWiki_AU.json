@@ -36,7 +36,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/Australia_R5-1_%28vertical_-_one_time%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-1_(vertical_-_one_time).svg",
     "name": "R5-1",
-    "osmTags": ["maxstay:conditional=1"],
+    "osmTags": ["maxstay:conditional=1 hour @ (Sa 09:00-12:00)"],
     "comments": ""
   },
   {
