@@ -32,5 +32,5 @@
     "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
-  "exclude": ["dist", "node_modules", "script-import-wiki-catalogue.ts"]
+  "exclude": ["dist", "node_modules"]
 }
