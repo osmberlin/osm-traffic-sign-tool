@@ -1,6 +1,7 @@
 import type { CountryPrefixType } from '@osm-traffic-signs/converter'
 import * as cheerio from 'cheerio'
-import { countryWikiConfigs, WIKI_BASE, wikiSnapshotCountryPrefixes } from './countryWikiConfigs.js'
+import { countryWikiConfigs, wikiSnapshotCountryPrefixes } from './countryWikiConfigs.js'
+import { fetchWikiPage } from './fetchWikiPage.js'
 import {
   dedupeWikiSigns,
   parseBelgiumTable,
@@ -10,13 +11,6 @@ import {
 } from './parseWiki/parseWikiTables.js'
 import type { WikiSign } from './wikiSignTypes.js'
 import { wikiSnapshotPath } from './wikiSnapshotPaths.js'
-
-const fetchPage = async (slug: string) => {
-  const url = `${WIKI_BASE}${slug}`
-  const response = await fetch(url)
-  if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.status}`)
-  return response.text()
-}
 
 export const parseWikiHtml = (
   html: string,
@@ -50,7 +44,7 @@ export const generateWikiSnapshotForCountry = async (
   for (const page of config.pages) {
     const parseMode = page.parseMode ?? 'universal'
     console.log(`[${countryPrefix}] Fetching ${page.slug}...`)
-    let html = await fetchPage(page.slug)
+    let html = await fetchWikiPage(page.slug)
     const signs = parseWikiHtml(html, config.prefix, parseMode)
 
     console.log(`  ${signs.length} signs`)
