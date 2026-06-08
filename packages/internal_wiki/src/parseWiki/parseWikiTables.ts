@@ -57,6 +57,18 @@ const pushWikiTag = (
   }
 }
 
+const stripWikiTagTemplates = (segment: string): string =>
+  segment.replace(/\{\{Tag\|[^}]+\}\}/gi, ' ').trim()
+
+const isInsideParentheses = (text: string, index: number): boolean => {
+  let depth = 0
+  for (let i = 0; i < index; i++) {
+    if (text[i] === '(') depth++
+    else if (text[i] === ')') depth = Math.max(0, depth - 1)
+  }
+  return depth > 0
+}
+
 const parseWikiTagTemplates = (tagsText: string): { key: string; value: string }[] => {
   const tags: { key: string; value: string }[] = []
   const templatePatterns = [
@@ -77,21 +89,22 @@ const parseEqualsFormatWikiTags = (tagsText: string): { key: string; value: stri
   const normalized = tagsText.replace(/\s+/g, ' ')
   const keyPattern = /([a-z0-9:_-]+)\s*=\s*/gi
   for (const segment of normalized.split(/\s*\+\s*/)) {
-    const trimmed = segment.trim()
-    if (!trimmed || trimmed.includes('{{Tag|')) continue
-    const matches = [...trimmed.matchAll(keyPattern)]
+    const plainText = stripWikiTagTemplates(segment.trim())
+    if (!plainText) continue
+    const matches = [...plainText.matchAll(keyPattern)].filter(
+      (match) => !isInsideParentheses(plainText, match.index!),
+    )
     for (let index = 0; index < matches.length; index++) {
       const match = matches[index]!
       const key = match[1]!.trim()
       if (!/^[a-z0-9:_-]+$/i.test(key) || /^\d+$/.test(key)) continue
       const valueStart = match.index! + match[0].length
-      let valueEnd = index + 1 < matches.length ? matches[index + 1]!.index! : trimmed.length
+      let valueEnd = index + 1 < matches.length ? matches[index + 1]!.index! : plainText.length
       if (index + 1 < matches.length && /^\d+$/.test(matches[index + 1]![1]!)) {
-        valueEnd =
-          index + 2 < matches.length ? matches[index + 2]!.index! : trimmed.length
+        valueEnd = index + 2 < matches.length ? matches[index + 2]!.index! : plainText.length
         index += 1
       }
-      pushWikiTag(tags, key, trimmed.slice(valueStart, valueEnd))
+      pushWikiTag(tags, key, plainText.slice(valueStart, valueEnd))
     }
   }
   return tags
