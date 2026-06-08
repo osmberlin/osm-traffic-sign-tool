@@ -166,6 +166,76 @@ describe('parseWikiTags', () => {
       { key: 'hazard', value: 'turn' },
     ])
   })
+
+  test('parses AU R6-17 axle-group conditional from rendered wiki cell text', () => {
+    expect(
+      parseWikiTags(
+        'bridge=yes + maxweight:conditional=X @ (axles=1); X @ (axles=2); X @ (axles=3)',
+      ),
+    ).toEqual([
+      { key: 'bridge', value: 'yes' },
+      {
+        key: 'maxweight:conditional',
+        value: 'X @ (axles=1); X @ (axles=2); X @ (axles=3)',
+      },
+    ])
+  })
+
+  test('parses AU R6-17 axle-group conditional from wiki Tag templates', () => {
+    expect(
+      parseWikiTags(
+        '{{Tag|bridge|yes}} + {{Tag|maxweight:conditional|3=X @ (axles=1); X @ (axles=2); X @ (axles=3)}}',
+      ),
+    ).toEqual(
+      expect.arrayContaining([
+        { key: 'bridge', value: 'yes' },
+        {
+          key: 'maxweight:conditional',
+          value: 'X @ (axles=1); X @ (axles=2); X @ (axles=3)',
+        },
+      ]),
+    )
+    expect(
+      parseWikiTags(
+        '{{Tag|bridge|yes}} + {{Tag|maxweight:conditional|3=X @ (axles=1); X @ (axles=2); X @ (axles=3)}}',
+      ),
+    ).toHaveLength(2)
+  })
+
+  test('parses AU R4-V105 school zone tags from rendered wiki cell text', () => {
+    expect(
+      parseWikiTags(
+        'maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off) + hazard=school_zone',
+      ),
+    ).toEqual([
+      {
+        key: 'maxspeed:conditional',
+        value: '40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
+      },
+      { key: 'hazard', value: 'school_zone' },
+    ])
+  })
+
+  test('parses AU R4-V105 school zone tags from wiki Tag templates', () => {
+    expect(
+      parseWikiTags(
+        '{{Tag|maxspeed:conditional|3=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)}} + {{Tag|hazard|school_zone}}',
+      ),
+    ).toEqual([
+      {
+        key: 'maxspeed:conditional',
+        value: '40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
+      },
+      { key: 'hazard', value: 'school_zone' },
+    ])
+  })
+
+  test('parses plain tags in the same segment as wiki Tag templates', () => {
+    expect(parseWikiTags('{{Tag|bridge|yes}} maxspeed=10')).toEqual([
+      { key: 'bridge', value: 'yes' },
+      { key: 'maxspeed', value: '10' },
+    ])
+  })
 })
 
 describe('normalizeWikiTagValue', () => {
