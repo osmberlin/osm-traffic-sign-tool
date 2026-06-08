@@ -137,9 +137,9 @@ describe('parseWikiTags', () => {
   })
 
   test('strips wiki Tag template 3= value prefix', () => {
-    expect(
-      parseWikiTags('{{Tag|maxstay:conditional|3=1 hour @ (Sa 09:00-12:00)}}'),
-    ).toEqual([{ key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' }])
+    expect(parseWikiTags('{{Tag|maxstay:conditional|3=1 hour @ (Sa 09:00-12:00)}}')).toEqual([
+      { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
+    ])
     expect(parseWikiTags('maxstay:conditional=3=1 hour @ (Sa 09:00-12:00)')).toEqual([
       { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
     ])
