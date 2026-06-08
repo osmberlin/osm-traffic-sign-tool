@@ -240,12 +240,15 @@ const normalizeWikiTagValue = (value: string): string => {
   return trimmed
 }
 
+const trimWikiTagListSeparator = (value: string): string =>
+  value.replace(/[,;]\s*$/, '').trim()
+
 const pushWikiTag = (
   tags: { key: string; value: string }[],
   key: string,
   rawValue: string,
 ): void => {
-  const value = normalizeWikiTagValue(rawValue)
+  const value = trimWikiTagListSeparator(normalizeWikiTagValue(rawValue))
   if (key === 'traffic_sign' || !value || value === '*' || value === '=*') return
   if (!tags.some((t) => t.key === key && t.value === value)) {
     tags.push({ key, value })
