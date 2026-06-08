@@ -37,6 +37,56 @@ const parsePolishDescriptionTagCell = (tagsText: string): { key: string; value: 
   return tags
 }
 
+/** OSM wiki {{Tag}} templates use `3=` or `||` before the value to mean "do not link the value". */
+export const normalizeWikiTagValue = (value: string): string => {
+  const trimmed = value.replace(/`/g, '').trim()
+  if (trimmed.startsWith('||')) return trimmed.slice(2).trim()
+  if (trimmed.startsWith('3=')) return trimmed.slice(2).trim()
+  return trimmed
+}
+
+const pushWikiTag = (
+  tags: { key: string; value: string }[],
+  key: string,
+  rawValue: string,
+): void => {
+  const value = normalizeWikiTagValue(rawValue)
+  if (key === 'traffic_sign' || !value || value === '*' || value === '=*') return
+  if (!tags.some((t) => t.key === key && t.value === value)) {
+    tags.push({ key, value })
+  }
+}
+
+const parseWikiTagTemplates = (tagsText: string): { key: string; value: string }[] => {
+  const tags: { key: string; value: string }[] = []
+  const templatePatterns = [
+    /\{\{Tag\|([^|{}]+)\|\|([^}]+)\}\}/gi,
+    /\{\{Tag\|([^|{}]+)\|3=([^}]+)\}\}/gi,
+    /\{\{Tag\|([^|{}]+)\|([^|{}]+)\}\}/gi,
+  ]
+  for (const pattern of templatePatterns) {
+    for (const match of tagsText.matchAll(pattern)) {
+      pushWikiTag(tags, match[1]!.trim(), match[2]!)
+    }
+  }
+  return tags
+}
+
+const parseEqualsFormatWikiTags = (tagsText: string): { key: string; value: string }[] => {
+  const tags: { key: string; value: string }[] = []
+  const normalized = tagsText.replace(/\s+/g, ' ')
+  for (const segment of normalized.split(/\s*\+\s*/)) {
+    const trimmed = segment.trim()
+    if (!trimmed || trimmed.includes('{{Tag|')) continue
+    const eqIndex = trimmed.search(/(?<=[a-z0-9:_-])\s*=/)
+    if (eqIndex === -1) continue
+    const key = trimmed.slice(0, eqIndex).trim()
+    if (!/^[a-z0-9:_-]+$/i.test(key)) continue
+    pushWikiTag(tags, key, trimmed.slice(eqIndex + 1))
+  }
+  return tags
+}
+
 export const parseWikiTags = (tagsText: string): { key: string; value: string }[] => {
   if (!tagsText || /^(n\/a|na|–|-|\*|= \*)$/i.test(tagsText.trim())) return []
 
@@ -46,18 +96,16 @@ export const parseWikiTags = (tagsText: string): { key: string; value: string }[
   }
 
   const tags: { key: string; value: string }[] = []
+  for (const tag of parseWikiTagTemplates(tagsText)) {
+    pushWikiTag(tags, tag.key, tag.value)
+  }
+
   const normalized = tagsText.replace(/\s+/g, ' ')
-  const tagPatterns = [
-    ...normalized.matchAll(/([a-z0-9:_-]+)\s*=\s*([^`\s,;]+(?:\[[^\]]+\])?)/gi),
-    ...normalized.matchAll(/([a-z0-9:_-]+)\s+([a-z0-9:_*-]+)\s*`=`/gi),
-  ]
-  for (const match of tagPatterns) {
-    const key = match[1]!
-    const value = match[2]!.replace(/`/g, '')
-    if (key === 'traffic_sign' || value === '*' || value === '=*') continue
-    if (!tags.some((t) => t.key === key && t.value === value)) {
-      tags.push({ key, value })
-    }
+  for (const tag of parseEqualsFormatWikiTags(normalized)) {
+    pushWikiTag(tags, tag.key, tag.value)
+  }
+  for (const match of normalized.matchAll(/([a-z0-9:_-]+)\s+([a-z0-9:_*-]+)\s*`=`/gi)) {
+    pushWikiTag(tags, match[1]!, match[2]!)
   }
   return tags
 }

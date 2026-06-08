@@ -505,7 +505,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'red_turn:left', value: '3=yes' }],
+        uniqueTags: [{ key: 'red_turn:left', value: 'yes' }],
       },
     ],
     comments: [],
@@ -565,7 +565,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'red_turn:left', value: '3=yes' }],
+        uniqueTags: [{ key: 'red_turn:left', value: 'yes' }],
       },
     ],
     comments: [],
@@ -1906,7 +1906,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
+            value: '40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -1941,7 +1941,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=60 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
+            value: '60 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -1976,7 +1976,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
+            value: '40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -2011,7 +2011,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=60 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
+            value: '60 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -2080,7 +2080,7 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'maxspeed:conditional', value: '3=40 @ (Mo-Fr 09:00-19:00; Sa 09:00-15:00)' },
+          { key: 'maxspeed:conditional', value: '40 @ (Mo-Fr 09:00-19:00; Sa 09:00-15:00)' },
         ],
       },
     ],
@@ -2286,8 +2286,8 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'maxspeed:hgv', value: '3=40' },
-          { key: 'maxspeed:bus', value: '3=40' },
+          { key: 'maxspeed:hgv', value: '40' },
+          { key: 'maxspeed:bus', value: '40' },
         ],
       },
     ],
@@ -2315,7 +2315,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
+            value: '40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -2345,7 +2345,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
+            value: '40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -2395,7 +2395,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=40 @ (Mo-Fr XX:XX-XX:XX,XX:XX-XX:XX; PH off; SH off)',
+            value: '40 @ (Mo-Fr XX:XX-XX:XX,XX:XX-XX:XX; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -2425,7 +2425,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=40 @ (Mo-Fr XX:XX-XX:XX,XX:XX-XX:XX; PH off; SH off)',
+            value: '40 @ (Mo-Fr XX:XX-XX:XX,XX:XX-XX:XX; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -2528,8 +2528,8 @@ export const _Regulatory: SignType[] = [
         highwayValues: [],
         uniqueTags: [
           { key: 'maxspeed', value: '60' },
-          { key: 'maxspeed:hgv', value: '3=40' },
-          { key: 'maxspeed:bus', value: '3=40' },
+          { key: 'maxspeed:hgv', value: '40' },
+          { key: 'maxspeed:bus', value: '40' },
         ],
       },
     ],
@@ -2557,7 +2557,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=40 @ (Mo-Fr 08:00-09:00,14:30-15:30; PH off; SH off)',
+            value: '40 @ (Mo-Fr 08:00-09:00,14:30-15:30; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -2605,7 +2605,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxspeed:conditional',
-            value: '3=40 @ (Mo-Fr 08:00-09:00,14:30-15:30; PH off; SH off)',
+            value: '40 @ (Mo-Fr 08:00-09:00,14:30-15:30; PH off; SH off)',
           },
           { key: 'hazard', value: 'school_zone' },
         ],
@@ -2632,7 +2632,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'maxspeed:roadtrain', value: '3=40' }],
+        uniqueTags: [{ key: 'maxspeed:roadtrain', value: '40' }],
       },
     ],
     comments: [],
@@ -2692,7 +2692,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'maxstay:conditional', value: '3=1 hour @ (Sa 09:00-12:00)' }],
+        uniqueTags: [{ key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' }],
       },
     ],
     comments: [],
@@ -2718,7 +2718,7 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'maxstay:conditional', value: '3=2 hours @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)' },
+          { key: 'maxstay:conditional', value: '2 hours @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)' },
         ],
       },
     ],
@@ -2762,7 +2762,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'maxstay:conditional', value: '3=2 minutes @ (Mo-Fr 09:00-16:00)' }],
+        uniqueTags: [{ key: 'maxstay:conditional', value: '2 minutes @ (Mo-Fr 09:00-16:00)' }],
       },
     ],
     comments: [],
@@ -2786,7 +2786,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'maxstay:conditional', value: '3=5 minutes @ (Mo-Fr 09:00-16:00)' }],
+        uniqueTags: [{ key: 'maxstay:conditional', value: '5 minutes @ (Mo-Fr 09:00-16:00)' }],
       },
     ],
     comments: [],
@@ -2810,7 +2810,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'maxstay:conditional', value: '3=10 minutes @ (Mo-Fr 09:00-16:00)' }],
+        uniqueTags: [{ key: 'maxstay:conditional', value: '10 minutes @ (Mo-Fr 09:00-16:00)' }],
       },
     ],
     comments: [],
@@ -2837,7 +2837,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxstay:conditional',
-            value: '3=15 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)',
+            value: '15 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)',
           },
         ],
       },
@@ -2866,7 +2866,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxstay:conditional',
-            value: '3=30 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)',
+            value: '30 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)',
           },
         ],
       },
@@ -2895,7 +2895,7 @@ export const _Regulatory: SignType[] = [
         uniqueTags: [
           {
             key: 'maxstay:conditional',
-            value: '3=90 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)',
+            value: '90 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)',
           },
         ],
       },
@@ -3347,7 +3347,7 @@ export const _Regulatory: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'shoulder', value: '3=yes' }] },
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'shoulder', value: 'yes' }] },
     ],
     comments: [],
     catalogue: {
@@ -3372,7 +3372,7 @@ export const _Regulatory: SignType[] = [
         highwayValues: [],
         uniqueTags: [
           { key: 'amenity', value: 'parking' },
-          { key: 'maxstay:conditional', value: '3=2 hours @ (Mo-Fr 08:30-17:00, Sa 08:30-12:00)' },
+          { key: 'maxstay:conditional', value: '2 hours @ (Mo-Fr 08:30-17:00, Sa 08:30-12:00)' },
         ],
       },
     ],
@@ -3398,7 +3398,7 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'maxstay:conditional', value: '3=2 hours @ (Mo-Fr 08:30-17:00, Sa 08:30-12:00)' },
+          { key: 'maxstay:conditional', value: '2 hours @ (Mo-Fr 08:30-17:00, Sa 08:30-12:00)' },
         ],
       },
     ],
@@ -4083,7 +4083,7 @@ export const _Regulatory: SignType[] = [
         highwayValues: [],
         uniqueTags: [
           { key: 'bridge', value: 'yes' },
-          { key: 'maxweight:conditional', value: '3=X @ (axles=1); X @ (axles=2); X @ (axles=3)' },
+          { key: 'maxweight:conditional', value: 'X @ (axles=1); X @ (axles=2); X @ (axles=3)' },
         ],
       },
     ],
@@ -4510,8 +4510,8 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'lanes:both_ways', value: '3=1' },
-          { key: 'turn:lanes:both_ways', value: '3=right' },
+          { key: 'lanes:both_ways', value: '1' },
+          { key: 'turn:lanes:both_ways', value: 'right' },
         ],
       },
     ],
@@ -4913,7 +4913,7 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'hov', value: '3=designated @ (Mo-Fr 06:00-10:00)' },
+          { key: 'hov', value: 'designated @ (Mo-Fr 06:00-10:00)' },
           { key: 'hov:minimum', value: '2' },
         ],
       },
@@ -4940,7 +4940,7 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'hov', value: '3=designated @ (Mo-Fr 06:30-10:00,15:30-19:00)' },
+          { key: 'hov', value: 'designated @ (Mo-Fr 06:30-10:00,15:30-19:00)' },
           { key: 'hov:minimum', value: '2' },
         ],
       },
@@ -4967,7 +4967,7 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'hov', value: '3=designated @ (Mo-Fr 06:00-10:00)' },
+          { key: 'hov', value: 'designated @ (Mo-Fr 06:00-10:00)' },
           { key: 'hov:minimum', value: '3' },
         ],
       },
@@ -4994,7 +4994,7 @@ export const _Regulatory: SignType[] = [
         geometries: ['way'],
         highwayValues: [],
         uniqueTags: [
-          { key: 'hov', value: '3=designated @ (Mo-Fr 06:30-10:00,15:30-19:00)' },
+          { key: 'hov', value: 'designated @ (Mo-Fr 06:30-10:00,15:30-19:00)' },
           { key: 'hov:minimum', value: '3' },
         ],
       },
@@ -5402,7 +5402,7 @@ export const _Regulatory: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'except', value: '3=bus' }] },
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'except', value: 'bus' }] },
     ],
     comments: [],
     catalogue: {
@@ -5425,7 +5425,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'except', value: '3=bicycle' }],
+        uniqueTags: [{ key: 'except', value: 'bicycle' }],
       },
     ],
     comments: [],
@@ -5449,7 +5449,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'except', value: '3=private' }],
+        uniqueTags: [{ key: 'except', value: 'private' }],
       },
     ],
     comments: [],
@@ -5565,7 +5565,7 @@ export const _Regulatory: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'lanes', value: '3=1' }] },
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'lanes', value: '1' }] },
     ],
     comments: [],
     catalogue: {
@@ -5585,7 +5585,7 @@ export const _Regulatory: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'narrow', value: '3=yes' }] },
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'narrow', value: 'yes' }] },
     ],
     comments: [],
     catalogue: {
@@ -5656,7 +5656,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'except', value: '3=bus,taxi' }],
+        uniqueTags: [{ key: 'except', value: 'bus,taxi' }],
       },
     ],
     comments: [],
@@ -5677,7 +5677,7 @@ export const _Regulatory: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'except', value: '3=tram' }] },
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'except', value: 'tram' }] },
     ],
     comments: [],
     catalogue: {
@@ -5700,7 +5700,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'except', value: '3=bus,taxi' }],
+        uniqueTags: [{ key: 'except', value: 'bus,taxi' }],
       },
     ],
     comments: [],
@@ -5721,7 +5721,7 @@ export const _Regulatory: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'except', value: '3=hgv' }] },
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'except', value: 'hgv' }] },
     ],
     comments: [],
     catalogue: {
@@ -5744,7 +5744,7 @@ export const _Regulatory: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'except', value: '3=emergency' }],
+        uniqueTags: [{ key: 'except', value: 'emergency' }],
       },
     ],
     comments: [],

@@ -3,8 +3,10 @@ import { describe, expect, test } from 'vitest'
 import {
   cleanWikiSignName,
   extractDeTrafficSignValue,
+  normalizeWikiTagValue,
   parseDeRowIdTable,
   parseUniversalTable,
+  parseWikiTags,
   toWikiSign,
 } from './parseWikiTables.js'
 
@@ -126,6 +128,48 @@ const frSu1RowHtml = `
     </tr>
   </tbody>
 </table>`
+
+describe('parseWikiTags', () => {
+  test('parses conditional maxstay values with spaces', () => {
+    expect(parseWikiTags('maxstay:conditional=1 hour @ (Sa 09:00-12:00)')).toEqual([
+      { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
+    ])
+  })
+
+  test('strips wiki Tag template 3= value prefix', () => {
+    expect(
+      parseWikiTags('{{Tag|maxstay:conditional|3=1 hour @ (Sa 09:00-12:00)}}'),
+    ).toEqual([{ key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' }])
+    expect(parseWikiTags('maxstay:conditional=3=1 hour @ (Sa 09:00-12:00)')).toEqual([
+      { key: 'maxstay:conditional', value: '1 hour @ (Sa 09:00-12:00)' },
+    ])
+  })
+
+  test('strips wiki Tag template || value prefix', () => {
+    expect(parseWikiTags('{{Tag|maxspeed:conditional||40 @ (09:00-18:00)}}')).toEqual([
+      { key: 'maxspeed:conditional', value: '40 @ (09:00-18:00)' },
+    ])
+    expect(parseWikiTags('maxspeed:conditional=||40 @ (09:00-18:00)')).toEqual([
+      { key: 'maxspeed:conditional', value: '40 @ (09:00-18:00)' },
+    ])
+  })
+
+  test('parses multiple tags separated by plus', () => {
+    expect(parseWikiTags('maxspeed:hgv=40 + maxspeed:bus=40')).toEqual([
+      { key: 'maxspeed:hgv', value: '40' },
+      { key: 'maxspeed:bus', value: '40' },
+    ])
+  })
+})
+
+describe('normalizeWikiTagValue', () => {
+  test('removes wiki no-link prefixes', () => {
+    expect(normalizeWikiTagValue('3=yes')).toBe('yes')
+    expect(normalizeWikiTagValue('||designated @ (Mo-Fr 06:00-10:00)')).toBe(
+      'designated @ (Mo-Fr 06:00-10:00)',
+    )
+  })
+})
 
 describe('cleanWikiSignName', () => {
   test('removes Siehe references', () => {

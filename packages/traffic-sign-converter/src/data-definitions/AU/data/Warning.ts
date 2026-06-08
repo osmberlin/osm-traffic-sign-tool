@@ -3427,7 +3427,7 @@ export const _Warning: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'maxspeed:advisory', value: '3=20' }],
+        uniqueTags: [{ key: 'maxspeed:advisory', value: '20' }],
       },
     ],
     comments: [],
@@ -6759,7 +6759,7 @@ export const _Warning: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'maxspeed:advisory', value: '3=45' }],
+        uniqueTags: [{ key: 'maxspeed:advisory', value: '45' }],
       },
     ],
     comments: [],
@@ -6783,7 +6783,7 @@ export const _Warning: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: [],
-        uniqueTags: [{ key: 'maxspeed:advisory', value: '3=45' }],
+        uniqueTags: [{ key: 'maxspeed:advisory', value: '45' }],
       },
     ],
     comments: [],
