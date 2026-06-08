@@ -1,5 +1,4 @@
 const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
-export const PRODUCTION_ORIGIN = 'https://trafficsigns.osm-verkehrswende.org'
 
 export type QaDeployContext = {
   branch: string
@@ -9,19 +8,15 @@ export type QaDeployContext = {
 }
 
 export const getQaDeployContext = (): QaDeployContext => {
-  const isNetlify = import.meta.env.VITE_NETLIFY === 'true'
+  const isNetlify = import.meta.env.NETLIFY === 'true'
   const deployContext =
-    (import.meta.env.VITE_DEPLOY_CONTEXT as QaDeployContext['deployContext'] | undefined) ?? 'local'
+    (import.meta.env.CONTEXT as QaDeployContext['deployContext'] | undefined) ?? 'local'
 
   return {
-    branch: import.meta.env.VITE_DEPLOY_BRANCH ?? 'main',
+    branch: import.meta.env.BRANCH || 'main',
     isNetlify,
     deployContext,
-    pageOrigin: isNetlify
-      ? (import.meta.env.VITE_DEPLOY_URL ?? PRODUCTION_ORIGIN)
-      : typeof window !== 'undefined'
-        ? window.location.origin
-        : PRODUCTION_ORIGIN,
+    pageOrigin: import.meta.env.DEPLOY_PRIME_URL || window.location.origin,
   }
 }
 

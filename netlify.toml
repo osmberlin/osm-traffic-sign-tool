@@ -13,12 +13,6 @@ publish = "apps/traffic-sign-tool/dist"
 # Exit 0 = skip build. Only run for PR deploy previews, not main/develop pushes.
 ignore = "bash -c 'test \"$CONTEXT\" = \"deploy-preview\" && exit 1 || exit 0'"
 
-[context.deploy-preview.environment]
-VITE_NETLIFY = "true"
-VITE_DEPLOY_CONTEXT = "deploy-preview"
-VITE_DEPLOY_BRANCH = "$BRANCH"
-VITE_DEPLOY_URL = "$DEPLOY_PRIME_URL"
-
 # TanStack Router SPA — serve index.html for client-side routes.
 [[redirects]]
 from = "/*"

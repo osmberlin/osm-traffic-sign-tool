@@ -1,10 +1,10 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_NETLIFY?: string
-  readonly VITE_DEPLOY_CONTEXT?: string
-  readonly VITE_DEPLOY_BRANCH?: string
-  readonly VITE_DEPLOY_URL?: string
+  readonly NETLIFY?: string
+  readonly CONTEXT?: string
+  readonly BRANCH?: string
+  readonly DEPLOY_PRIME_URL?: string
 }
 
 interface ImportMeta {

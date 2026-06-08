@@ -47,10 +47,9 @@ jobs:
       - name: Build monorepo (Vite app and packages)
         env:
           GITHUB_PAGES: true
-          VITE_NETLIFY: 'false'
-          VITE_DEPLOY_CONTEXT: production
-          VITE_DEPLOY_BRANCH: main
-          VITE_DEPLOY_URL: https://trafficsigns.osm-verkehrswende.org
+          CONTEXT: production
+          BRANCH: main
+          DEPLOY_PRIME_URL: https://trafficsigns.osm-verkehrswende.org
         # CRITICAL: package build order must match root package.json `build:packages`
         # (and `check:clean-build` / script-check-clean-build.ts). Internal packages
         # compile against @osm-traffic-signs/converter dist/ — converter must build first.
