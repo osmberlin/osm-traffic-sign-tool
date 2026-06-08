@@ -23,7 +23,7 @@ export const _surface: SignType[] = [
       {
         lang: 'de',
         comment:
-          'Die Markierung ist in der Regel weiß. Bei Sonderfällen kann optional `colour=*` gesetzt werden (z. B. gelbe Baustellenmarkierungen oder lila Markierungen auf Privatgrund). Siehe [DE:Key:road_marking](https://wiki.openstreetmap.org/wiki/DE:Key:road_marking#Weitere_zus%C3%A4tzliche_Attribute_zur_physischen_Beschreibung_von_Markierungen).',
+          'Die Markierung ist in der Regel weiß. Bei Sonderfällen kann optional `colour=*` gesetzt werden. Siehe [DE:Key:road_marking](https://wiki.openstreetmap.org/wiki/DE:Key:road_marking#Weitere_zus%C3%A4tzliche_Attribute_zur_physischen_Beschreibung_von_Markierungen).',
       },
     ],
     compatibility: { canReceiveModifiers: false },
