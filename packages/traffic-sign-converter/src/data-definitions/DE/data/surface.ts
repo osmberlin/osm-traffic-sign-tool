@@ -19,8 +19,13 @@ export const _surface: SignType[] = [
         ],
       },
     ],
-    questions: [markingColorQuestion()],
-    comments: [],
+    comments: [
+      {
+        lang: 'de',
+        comment:
+          'Die Markierung ist in der Regel weiß. Bei Sonderfällen kann optional `colour=*` gesetzt werden. Siehe [DE:Key:road_marking](https://wiki.openstreetmap.org/wiki/DE:Key:road_marking#Weitere_zus%C3%A4tzliche_Attribute_zur_physischen_Beschreibung_von_Markierungen).',
+      },
+    ],
     compatibility: { canReceiveModifiers: false },
     catalogue: {
       signCategory: 'surface_sign',
