@@ -45,8 +45,7 @@ export const normalizeWikiTagValue = (value: string): string => {
   return trimmed
 }
 
-const trimWikiTagListSeparator = (value: string): string =>
-  value.replace(/[,;]\s*$/, '').trim()
+const trimWikiTagListSeparator = (value: string): string => value.replace(/[,;]\s*$/, '').trim()
 
 const pushWikiTag = (
   tags: { key: string; value: string }[],
