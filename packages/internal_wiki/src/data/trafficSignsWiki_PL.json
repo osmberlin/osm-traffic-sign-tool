@@ -392,7 +392,7 @@
       "hgv=no",
       "hgv=PL:sign_B-5",
       "agricultural=no[2] Opcjonalnie",
-      "conditional=* maxgvweightrating:hgv=* ma też pewne użycie"
+      "maxgvweightrating:hgv=* ma też pewne użycie"
     ],
     "comments": ""
   },
@@ -548,7 +548,7 @@
     "osmTags": [
       "maxweight=X",
       "maxweight=PL:sign_B-18 Opcjonalnie",
-      "conditional=* maxgcweight=* ma też pewne użycie"
+      "maxgcweight=* ma też pewne użycie"
     ],
     "comments": ""
   },

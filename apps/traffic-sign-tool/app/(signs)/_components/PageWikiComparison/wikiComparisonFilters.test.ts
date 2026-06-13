@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest'
 import {
   countWikiRowsByFocus,
   countWikiRowsByStatus,
+  enrichWikiSigns,
   filterWikiRowsByFocus,
   filterWikiRowsByStatus,
   getWikiRowPlaceholderSign,
@@ -137,5 +138,24 @@ describe('wikiComparisonFilters', () => {
     expect(counts.default).toBe(1)
     expect(counts.highway).toBe(0)
     expect(counts.all).toBe(2)
+  })
+
+  test('enrichWikiSigns falls back to wiki name when sign id is abbreviated', () => {
+    const [row] = enrichWikiSigns(
+      [
+        {
+          sign: 'AU:R1',
+          name: 'R1-1',
+          imageSvg: 'https://example.com/r1-1.svg',
+          osmTags: ['highway=stop'],
+          comments: '',
+        },
+      ],
+      'AU',
+    )
+
+    expect(row?.toolSign?.recodgnizedSign).toBe(true)
+    expect(row?.toolSign?.osmValuePart).toBe('R1-1')
+    expect(isWikiRowMissingInCatalogue(row!)).toBe(false)
   })
 })

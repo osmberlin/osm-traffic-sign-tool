@@ -10,9 +10,26 @@ This is a **static client-side React SPA monorepo** — no databases, Docker, or
 
 Running `bun run dev` from the repo root starts the Vite dev server for the app plus TypeScript watchers for all packages.
 
+## Cloud provisioning
+
+Cursor Cloud runs the `install` command from `.cursor/environment.json` once when the VM is created. Cloud VMs do **not** ship with Bun, and that script runs in a non-interactive shell (it does not source `~/.bashrc`).
+
+The install command bootstraps Bun first, then installs dependencies:
+
+```bash
+curl -fsSL https://bun.sh/install | bash -s "bun-v1.3.13"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+bun install --frozen-lockfile
+```
+
+If async install failed with `bun: command not found`, the VM was likely provisioned before this bootstrap was added, or from an older commit. Re-run the command above manually, or start a new cloud agent on current `main`.
+
+After provisioning, use `bun install` locally as usual when dependencies change.
+
 ## Key commands
 
-- **Install deps**: `bun install`
+- **Install deps** (after Bun is on PATH): `bun install`
 - **Build all**: `bun run build`
 - **Dev (all watchers)**: `bun run dev`
 - **Lint**: `bun run lint` (runs oxlint across all packages)
@@ -23,7 +40,7 @@ Running `bun run dev` from the repo root starts the Vite dev server for the app 
 
 ## Gotchas
 
-- **Bun version**: Pinned via `packageManager` in root `package.json` (e.g. `bun@1.3.13`). CI and Netlify use the same pin.
+- **Bun version**: Pinned via `packageManager` in root `package.json` (e.g. `bun@1.3.13`). CI, Netlify, and cloud bootstrap use the same pin.
 - **Node version**: Pinned in `.nvmrc` and `engines.node` in root `package.json`. GitHub Actions uses `setup-node` with `.nvmrc` alongside Bun for Vite/Vitest.
 - **Supply-chain gate**: `minimumReleaseAge` in `bunfig.toml` (5 days, ported from former pnpm workspace config).
 - **Package build order**: `bun run build` uses `--sequential` so packages like `@internal/svgs` compile after `@osm-traffic-signs/converter` (devDependency types from `dist/`). The converter copies SVGs from `packages/internal_svgs/src/data-svgs/` (committed to repo).

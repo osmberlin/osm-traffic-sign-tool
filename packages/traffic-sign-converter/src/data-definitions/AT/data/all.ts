@@ -1576,8 +1576,15 @@ export const _all: SignType[] = [
       {
         geometries: ['way'],
         highwayValues: ['cycleway'],
-        accessTags: [{ key: 'bicycle', value: 'use_sidepath' }],
         uniqueTags: [{ key: 'cycleway:bicycle', value: 'designated' }],
+        optionalTags: {
+          tags: [{ key: 'bicycle', value: 'use_sidepath' }],
+          guidance: {
+            lang: 'de',
+            comment:
+              'highway=cycleway und cycleway:bicycle=designated an der Radweglinie. bicycle=use_sidepath an der Straßenlinie, wenn der Radweg Teil der Straße ist.',
+          },
+        },
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -2017,9 +2024,8 @@ export const _all: SignType[] = [
     descriptiveName: '3a: Gottesdienste',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'DE:Tag:amenity', value: 'place' }] },
-    ],
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -2584,11 +2590,8 @@ export const _all: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        accessTags: [{ key: 'motor_vehicle', value: 'private)' }],
-        uniqueTags: [
-          { key: 'maxspeed', value: 'walk)' },
-          { key: 'DE:Tag:traffic_sign', value: 'AT:53.26a' },
-        ],
+        accessTags: [{ key: 'motor_vehicle', value: 'private' }],
+        uniqueTags: [{ key: 'maxspeed', value: 'walk' }],
       },
     ],
     catalogue: { signCategory: 'speed' },
@@ -3001,6 +3004,7 @@ export const _all: SignType[] = [
     osmValuePart: 'FKV_1.9',
     signId: 'FKV_1.9',
     name: 'FKV_1.9',
+    descriptiveName: '1.9: Forststraße',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -3008,10 +3012,20 @@ export const _all: SignType[] = [
         geometries: ['way'],
         accessTags: [
           { key: 'vehicle', value: 'forestry' },
-          { key: 'horse', value: 'no' },
           { key: 'bicycle', value: 'no' },
         ],
-        uniqueTags: [{ key: 'ski', value: 'yes' }],
+        optionalTags: {
+          tags: [
+            { key: 'horse', value: 'no' },
+            { key: 'ski', value: 'yes' },
+          ],
+          guidance: {
+            lang: 'de',
+            comment:
+              'Laut Wiki optional zu vehicle=forestry. bicycle=no ist bereits in vehicle=forestry enthalten.',
+            link: 'https://wiki.openstreetmap.org/wiki/DE:Forststraßen_in_Österreich',
+          },
+        },
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -3031,17 +3045,31 @@ export const _all: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        highwayValues: ['track', 'path)'],
+        highwayValues: ['track'],
         accessTags: [
           { key: 'motor_vehicle', value: 'private' },
           { key: 'bicycle', value: 'yes' },
         ],
         uniqueTags: [
-          { key: 'tracktype', value: 'grade1)' },
           { key: 'inline_skates', value: 'no' },
-          { key: 'description', value: 'Treppelweg' },
-          { key: 'DE:Tag:traffic_sign', value: 'AT:WVO_F.1' },
+          {
+            key: 'description',
+            value:
+              'Treppelweg (zur einfachen, menschenlesbaren Beschreibung als Treppelweg - "Treppelweg" ist nicht der name=* des Weges)',
+          },
         ],
+        optionalTags: {
+          tags: [
+            { key: 'highway', value: 'path' },
+            { key: 'tracktype', value: 'grade1' },
+          ],
+          guidance: {
+            lang: 'de',
+            comment:
+              'Selten auch highway=path statt track. Oftmals tracktype=grade1. bicycle=yes und inline_skates=no gelten, wenn die Zusatztafeln F.3.x bzw. F.4.x fehlen.',
+            link: 'https://wiki.openstreetmap.org/wiki/DE:Tag:traffic_sign%3DAT:WVO_F.1',
+          },
+        },
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },

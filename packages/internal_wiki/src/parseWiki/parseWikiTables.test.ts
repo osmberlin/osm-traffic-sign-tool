@@ -3,6 +3,7 @@ import { describe, expect, test } from 'vitest'
 import {
   cleanWikiSignName,
   extractDeTrafficSignValue,
+  extractTrafficSignId,
   normalizeWikiTagValue,
   parseDeRowIdTable,
   parseUniversalTable,
@@ -129,6 +130,22 @@ const frSu1RowHtml = `
   </tbody>
 </table>`
 
+const auR1RowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:Australia_road_sign_R1-1.svg"><img src="/thumb/Australia_road_sign_R1-1.svg"></a></td>
+      <td>R1-1 Stop highway = stop</td>
+      <td>R1-1: Stop</td>
+    </tr>
+    <tr>
+      <td><a href="/wiki/File:Australia_road_sign_R2-2-L.svg"><img src="/thumb/Australia_road_sign_R2-2-L.svg"></a></td>
+      <td>R2-2-L One Way highway = oneway</td>
+      <td>R2-2-L: One Way</td>
+    </tr>
+  </tbody>
+</table>`
+
 describe('parseWikiTags', () => {
   describe('wiki Tag template 3= and || prefixes (AU R5-1)', () => {
     test('parses conditional maxstay values with spaces from rendered AU:R5-1 cell', () => {
@@ -185,6 +202,137 @@ describe('parseWikiTags', () => {
         { key: 'hazard', value: 'curve' },
         { key: 'hazard', value: 'turn' },
       ])
+    })
+  })
+
+  describe('German oder-separated alternatives (AT priority signs)', () => {
+    test('parses priority=forward oder priority=backward as separate tags', () => {
+      expect(parseWikiTags('priority=forward oder priority=backward')).toEqual([
+        { key: 'priority', value: 'forward' },
+        { key: 'priority', value: 'backward' },
+      ])
+    })
+
+    test('parses oder between plus-separated tag groups', () => {
+      expect(parseWikiTags('maxspeed=30 + source:maxspeed=sign oder + maxspeed:type=sign')).toEqual(
+        [
+          { key: 'maxspeed', value: '30' },
+          { key: 'source:maxspeed', value: 'sign' },
+          { key: 'maxspeed:type', value: 'sign' },
+        ],
+      )
+    })
+
+    test('strips trailing und before the next key=value alternative', () => {
+      expect(
+        parseWikiTags('maxspeed=130 und source:maxspeed=AT:motorway oder source:maxspeed=AT:trunk'),
+      ).toEqual([
+        { key: 'maxspeed', value: '130' },
+        { key: 'source:maxspeed', value: 'AT:motorway' },
+        { key: 'source:maxspeed', value: 'AT:trunk' },
+      ])
+    })
+  })
+
+  describe('parenthetical OSM tags in AT wiki prose (53.26a)', () => {
+    const schulstrasseTagsText =
+      'Als Linie mit traffic_sign=AT:53.26a (maxspeed=walk) (motor_vehicle=private) Achtung: Beim Schulstraße-Hinweiszeichen ist normalerweise immer eine Zusatztafel mit zeitlicher Befristung angebracht. Tagging siehe DE:Tag:traffic_sign=AT:53.26a'
+
+    test('parses parenthetical maxspeed and motor_vehicle tags', () => {
+      expect(parseWikiTags(schulstrasseTagsText)).toEqual([
+        { key: 'maxspeed', value: 'walk' },
+        { key: 'motor_vehicle', value: 'private' },
+      ])
+    })
+
+    test('omits wiki cross-reference keys from osmTags', () => {
+      expect(
+        toWikiSign('AT', {
+          signId: '53.26a',
+          name: '26a: Schulstraße',
+          tagsText: schulstrasseTagsText,
+          isNa: false,
+        })?.osmTags,
+      ).toEqual(['maxspeed=walk', 'motor_vehicle=private'])
+    })
+  })
+
+  describe('German wiki prose after tag values (AT 53.27)', () => {
+    test('strips als Teil einer Straße from highway=cycleway', () => {
+      expect(
+        parseWikiTags(
+          'Als Linie von der Straße separiert traffic_sign=AT:53.27 highway=cycleway als Teil einer Straße cycleway=* cycleway:bicycle=designated',
+        ),
+      ).toEqual([
+        { key: 'highway', value: 'cycleway' },
+        { key: 'cycleway:bicycle', value: 'designated' },
+      ])
+    })
+  })
+
+  describe('wiki wildcard placeholders (AT Zusatztafel 54f/54g)', () => {
+    test('does not emit :conditional from *:conditional=* @ wet placeholder', () => {
+      expect(
+        parseWikiTags(
+          'traffic_sign=AT:54g In Kombination mit einem Verkehrszeichen traffic_sign=AT:...,54g Als Linie zusätzlich mit *:conditional=* @ wet',
+        ),
+      ).toEqual([])
+      expect(
+        toWikiSign('AT', {
+          signId: '54g',
+          name: 'g: bei nasser Fahrbahn',
+          tagsText:
+            'traffic_sign=AT:54g In Kombination mit einem Verkehrszeichen traffic_sign=AT:...,54g Als Linie zusätzlich mit *:conditional=* @ wet',
+          isNa: false,
+        })?.osmTags,
+      ).toEqual([])
+    })
+  })
+
+  describe('conditional example dates and prose (AT FKV_1.3)', () => {
+    test('strips wiki placeholder dates and German instructions from access:conditional', () => {
+      expect(
+        parseWikiTags(
+          'Als Linie mit traffic_sign=AT:FKV_1.3 access:conditional=forestry @ 2024 May 01 - 2024 Oct 01 Zeitraum ist entsprechend der Beschilderung anzupassen.',
+        ),
+      ).toEqual([{ key: 'access:conditional', value: 'forestry' }])
+    })
+  })
+
+  describe('AT FKV_1.9 forest road tagging cell', () => {
+    const fkv19TaggingCell =
+      'Als Linie mit traffic_sign=AT:FKV_1.9 vehicle=forestry und optional horse=no ski=yes sowie (bereits in vehicle=forestry enthalten) bicycle=no'
+
+    const fkv19RowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:AT_FKV_1_9.svg"><img src="/thumb/AT_FKV_1_9.svg"></a></td>
+      <td>${fkv19TaggingCell}</td>
+      <td>1.9: Forststraße Nicht beschilderte Forststraßen können ebenso bezeichnet werden, wobei statt traffic_sign=* dann source:access=forestry_law gesetzt wird. Siehe dazu DE:Forststraßen_in_Österreich.</td>
+    </tr>
+  </tbody>
+</table>`
+
+    test('uses the tagging cell instead of the name cell with traffic_sign=* prose', () => {
+      expect(parseWikiTags(fkv19TaggingCell)).toEqual([
+        { key: 'vehicle', value: 'forestry' },
+        { key: 'horse', value: 'no' },
+        { key: 'ski', value: 'yes' },
+        { key: 'bicycle', value: 'no' },
+      ])
+      const signs = parseUniversalTable(cheerio.load(fkv19RowHtml), 'AT')
+      expect(signs).toHaveLength(1)
+      expect(signs[0]?.tagsText).toBe(fkv19TaggingCell)
+      expect(signs[0]?.name).toMatch(/^1\.9: Forststraße/)
+      expect(
+        toWikiSign('AT', {
+          signId: signs[0]!.signId,
+          name: signs[0]!.name,
+          tagsText: signs[0]!.tagsText,
+          isNa: false,
+        })?.osmTags,
+      ).toEqual(['vehicle=forestry', 'horse=no', 'ski=yes', 'bicycle=no'])
     })
   })
 
@@ -443,6 +591,33 @@ describe('parseUniversalTable', () => {
     const [row] = parseUniversalTable($, 'FR')
     expect(toWikiSign('FR', row!)?.osmTags).toEqual(['hazard=turn'])
   })
+
+  test('parses AU regulatory rows with full sign variant ids', () => {
+    const $ = cheerio.load(auR1RowHtml)
+    const rows = parseUniversalTable($, 'AU')
+
+    expect(rows.map((row) => row.signId)).toEqual(['R1-1', 'R2-2-L'])
+    expect(toWikiSign('AU', rows[0]!)).toMatchObject({
+      sign: 'AU:R1-1',
+    })
+  })
+})
+
+describe('extractTrafficSignId', () => {
+  test('extracts full AU variant codes from regulatory wiki row text', () => {
+    expect(extractTrafficSignId('R1-1 Stop highway = stop', 'AU')).toBe('R1-1')
+    expect(extractTrafficSignId('R2-2-L One Way highway = oneway', 'AU')).toBe('R2-2-L')
+    expect(extractTrafficSignId('W6-1 Kangaroo hazard = animal_crossing', 'AU')).toBe('W6-1')
+    expect(extractTrafficSignId('GE2-3 End road work', 'AU')).toBe('GE2-3')
+    expect(extractTrafficSignId('TC9866 QLD animal crossing', 'AU')).toBe('TC9866')
+  })
+
+  test('prefers explicit traffic_sign values over abbreviated row text', () => {
+    expect(extractTrafficSignId('traffic_sign=AU:G4-1 reassurance sign', 'AU')).toBe('G4-1')
+    expect(extractTrafficSignId('Als Linie mit traffic_sign=AT:53.26 highway=*', 'AT')).toBe(
+      '53.26',
+    )
+  })
 })
 
 describe('parseDeRowIdTable', () => {
@@ -467,5 +642,27 @@ describe('parseDeRowIdTable', () => {
       name: 'Kurve links',
       osmTags: ['hazard=curve'],
     })
+  })
+
+  test('normalizes raw deOsmTags list items with trailing oder', () => {
+    const sign = toWikiSign('AT', {
+      signId: 'AT:8a',
+      name: '8a: Autobahn',
+      tagsText: '',
+      isNa: false,
+      deOsmTags: [
+        'highway=motorway',
+        'maxspeed=130 und',
+        'source:maxspeed=AT:motorway oder',
+        'maxspeed:type=AT:motorway',
+      ],
+    })
+
+    expect(sign?.osmTags).toEqual([
+      'highway=motorway',
+      'maxspeed=130',
+      'source:maxspeed=AT:motorway',
+      'maxspeed:type=AT:motorway',
+    ])
   })
 })

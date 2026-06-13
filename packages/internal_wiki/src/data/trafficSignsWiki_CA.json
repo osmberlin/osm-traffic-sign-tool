@@ -3,8 +3,8 @@
     "sign": "CA:M511",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/CA-ON_road_sign_M-511.svg",
     "imageUrl": "https://otc.org/wp-content/uploads/2023/01/OTM-Book-18-Cycling-Facilities.pdf.pdf#page=354",
-    "name": "Bicycle route marker sign",
-    "osmTags": [],
+    "name": "TODO",
+    "osmTags": ["lcn=yes"],
     "comments": ""
   },
   {

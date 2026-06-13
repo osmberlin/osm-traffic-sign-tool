@@ -3,23 +3,23 @@
     "sign": "BR:R-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/65/Brasil_R-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-1.svg",
-    "name": "Parada Obrigatória",
-    "osmTags": ["highway=stopRelation:type=stop"],
+    "name": "highway=stopRelation:type=stop",
+    "osmTags": ["stopRelation:type=stop"],
     "comments": ""
   },
   {
     "sign": "BR:R-2",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Brasil_R-2.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-2.svg",
-    "name": "Dê a Preferência",
-    "osmTags": ["highway=give_way"],
+    "name": "highway=give_way Right of way",
+    "osmTags": ["highway=give_way Right of way"],
     "comments": ""
   },
   {
     "sign": "BR:R-3",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Brasil_R-3.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-3.svg",
-    "name": "Sentido Proibido",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -27,7 +27,7 @@
     "sign": "BR:R-4a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/Brasil_R-4a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-4a.svg",
-    "name": "Proibido virar à Esquerda",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -35,7 +35,7 @@
     "sign": "BR:R-4b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/94/Brasil_R-4b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-4b.svg",
-    "name": "Proibido virar à Direita",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -43,7 +43,7 @@
     "sign": "BR:R-5a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Brasil_R-5a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-5a.svg",
-    "name": "Proibido retornar à esquerda",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -51,7 +51,7 @@
     "sign": "BR:R-5b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Brasil_R-5b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-5b.svg",
-    "name": "Proibido retornar à direita",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -59,7 +59,7 @@
     "sign": "BR:R-6a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Brasil_R-6a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-6a.svg",
-    "name": "Proibido Estacionar",
+    "name": "No parking",
     "osmTags": ["parking:lane=no_parking"],
     "comments": ""
   },
@@ -67,15 +67,15 @@
     "sign": "BR:R-6b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/32/Brasil_R-6b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-6b.svg",
-    "name": "Estacionamento Regulamentado",
-    "osmTags": ["parking:lane=*amenity=parking"],
+    "name": "parking:lane=*amenity=parking",
+    "osmTags": ["amenity=parking"],
     "comments": ""
   },
   {
     "sign": "BR:R-6c",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Brasil_R-6c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-6c.svg",
-    "name": "Proibido Parar e Estacionar",
+    "name": "No Parking and No Stop",
     "osmTags": ["parking:lane=no_stopping"],
     "comments": ""
   },
@@ -83,7 +83,7 @@
     "sign": "BR:R-7",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Brasil_R-7.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-7.svg",
-    "name": "Proibido Ultrapassar",
+    "name": "No overtaking",
     "osmTags": ["overtaking=no"],
     "comments": ""
   },
@@ -91,7 +91,7 @@
     "sign": "BR:R-8a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/71/Brasil_R-8a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-8a.svg",
-    "name": "Proibido mudar de faixa da esquerda para direita",
+    "name": "Forbidden to change lane from left to right",
     "osmTags": ["change=not_right"],
     "comments": ""
   },
@@ -99,7 +99,7 @@
     "sign": "BR:R-8b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Brasil_R-8b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-8b.svg",
-    "name": "Proibido mudar de faixa da direita para esquerda",
+    "name": "Forbidden to change lane from right to left",
     "osmTags": ["change=not_left"],
     "comments": ""
   },
@@ -107,15 +107,15 @@
     "sign": "BR:R-9",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Brasil_R-9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-9.svg",
-    "name": "Proibido trânsito de caminhões",
-    "osmTags": [],
+    "name": "access=* =*",
+    "osmTags": ["access=* =*"],
     "comments": ""
   },
   {
     "sign": "BR:R-10",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/Brasil_R-10.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-10.svg",
-    "name": "Proibido Trânsito de Veículos Automotores",
+    "name": "=* motor_vehicle=no",
     "osmTags": ["motor_vehicle=no"],
     "comments": ""
   },
@@ -123,7 +123,7 @@
     "sign": "BR:R-11",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/19/Brasil_R-11.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-11.svg",
-    "name": "Proibido Trânsito de Veículos de Tração Animal",
+    "name": "=* carriage=no",
     "osmTags": ["carriage=no"],
     "comments": ""
   },
@@ -131,7 +131,7 @@
     "sign": "BR:R-12",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/24/Brasil_R-12.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-12.svg",
-    "name": "Proibido Trânsito de Bicicletas",
+    "name": "=* =*",
     "osmTags": [],
     "comments": ""
   },
@@ -139,7 +139,7 @@
     "sign": "BR:R-13",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/83/Brasil_R-13.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-13.svg",
-    "name": "Proibido Trânsito de Máquinas Agrícolas",
+    "name": "=* agricultural=no",
     "osmTags": ["agricultural=no"],
     "comments": ""
   },
@@ -147,7 +147,7 @@
     "sign": "BR:R-14",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Brasil_R-14.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-14.svg",
-    "name": "Carga Máxima Permitida",
+    "name": "Maximum permited weight",
     "osmTags": [],
     "comments": ""
   },
@@ -155,7 +155,7 @@
     "sign": "BR:R-15",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/86/Brasil_R-15.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-15.svg",
-    "name": "Altura Máxima Permitida",
+    "name": "Maximum permitted height",
     "osmTags": [],
     "comments": ""
   },
@@ -163,7 +163,7 @@
     "sign": "BR:R-16",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Brasil_R-16.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-16.svg",
-    "name": "Largura Máxima Permitida",
+    "name": "Maximum permitted width",
     "osmTags": [],
     "comments": ""
   },
@@ -171,7 +171,7 @@
     "sign": "BR:R-17",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Brasil_R-17.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-17.svg",
-    "name": "Peso Máximo Permitido por Eixo",
+    "name": "Maximum axle weight",
     "osmTags": [],
     "comments": ""
   },
@@ -179,7 +179,7 @@
     "sign": "BR:R-18",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/35/Brasil_R-18.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-18.svg",
-    "name": "Comprimento Máximo Permitido",
+    "name": "Maximum length",
     "osmTags": [],
     "comments": ""
   },
@@ -187,7 +187,7 @@
     "sign": "BR:R-19",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Brasil_R-19_%2880%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-19_(80).svg",
-    "name": "Velocidade Máxima Permitida",
+    "name": "Maximum permited speed",
     "osmTags": [],
     "comments": ""
   },
@@ -195,7 +195,7 @@
     "sign": "BR:R-20",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/22/Brasil_R-20.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-20.svg",
-    "name": "Proibido Acionar Buzina ou Sinal Sonoro",
+    "name": "No use of horn or sound signals",
     "osmTags": ["honking=no"],
     "comments": ""
   },
@@ -203,7 +203,7 @@
     "sign": "BR:R-21",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/63/Brasil_R-21.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-21.svg",
-    "name": "Alfândega",
+    "name": "Custom Clearance/Border Control",
     "osmTags": ["barrier=border_control"],
     "comments": ""
   },
@@ -211,7 +211,7 @@
     "sign": "BR:R-22",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/Brasil_R-22.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-22.svg",
-    "name": "Uso Obrigatório de Corrente",
+    "name": "Obligatory use of chains",
     "osmTags": ["snow_chains=required"],
     "comments": ""
   },
@@ -219,7 +219,7 @@
     "sign": "BR:R-23",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Brasil_R-23.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-23.svg",
-    "name": "Conserve-se à Direita",
+    "name": "Keep right",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -227,7 +227,7 @@
     "sign": "BR:R-24a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Brasil_R-24a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-24a.svg",
-    "name": "Sentido Obrigatório",
+    "name": "=* Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -235,7 +235,7 @@
     "sign": "BR:R-24b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Brasil_R-24b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-24b.svg",
-    "name": "Passagem Obrigatória",
+    "name": "Obligatory passage",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -243,7 +243,7 @@
     "sign": "BR:R-25a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/35/Brasil_R-25a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-25a.svg",
-    "name": "Vire à Esquerda",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -251,7 +251,7 @@
     "sign": "BR:R-25b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/12/Brasil_R-25b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-25b.svg",
-    "name": "Vire à Direita",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -259,7 +259,7 @@
     "sign": "BR:R-25c",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/91/Brasil_R-25c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-25c.svg",
-    "name": "Siga em Frente ou à Esquerda",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -267,7 +267,7 @@
     "sign": "BR:R-25d",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/39/Brasil_R-25d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-25d.svg",
-    "name": "Siga em Frente ou à Direita",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -275,7 +275,7 @@
     "sign": "BR:R-26",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/34/Brasil_R-26.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-26.svg",
-    "name": "Siga em Frente",
+    "name": "Pt:Relation:restriction",
     "osmTags": [],
     "comments": ""
   },
@@ -283,7 +283,7 @@
     "sign": "BR:R-27",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/24/Brasil_R-27.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-27.svg",
-    "name": "Veículos de grande porte mantenham-se à direita",
+    "name": "Large vehicles keep to the right",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -291,7 +291,7 @@
     "sign": "BR:R-28",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Brasil_R-28.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-28.svg",
-    "name": "Mão Dupla",
+    "name": "=* (já é implícito em todas as ruas)",
     "osmTags": [],
     "comments": ""
   },
@@ -299,7 +299,7 @@
     "sign": "BR:R-29",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Brasil_R-29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-29.svg",
-    "name": "Proibido Trânsito de Pedestres",
+    "name": "=* =*",
     "osmTags": [],
     "comments": ""
   },
@@ -307,7 +307,7 @@
     "sign": "BR:R-30",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/82/Brasil_R-30.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-30.svg",
-    "name": "Pedestre, ande pela esquerda",
+    "name": "Pedestrians to the left",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -315,7 +315,7 @@
     "sign": "BR:R-31",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/Brasil_R-31.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-31.svg",
-    "name": "Pedestre, ande pela direita",
+    "name": "Pedestrians to the right",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -323,7 +323,7 @@
     "sign": "BR:R-32",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/00/Brasil_R-32.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-32.svg",
-    "name": "Circulação exclusiva de ônibus",
+    "name": "access=no bus=designated",
     "osmTags": ["access=no", "bus=designated"],
     "comments": ""
   },
@@ -331,7 +331,7 @@
     "sign": "BR:R-33",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Brasil_R-33.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-33.svg",
-    "name": "Sentido de circulação na rotatória",
+    "name": "Direction of traffic at the roundabout",
     "osmTags": ["junction=roundabout"],
     "comments": ""
   },
@@ -339,7 +339,7 @@
     "sign": "BR:R-34",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/83/Brasil_R-34.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-34.svg",
-    "name": "Circulação exclusiva de bicicletas",
+    "name": "access=no bicycle=designated",
     "osmTags": ["access=no", "bicycle=designated"],
     "comments": ""
   },
@@ -347,7 +347,7 @@
     "sign": "BR:R-35a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/94/Brasil_R-35a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-35a.svg",
-    "name": "Ciclista, transite à esquerda",
+    "name": "Cyclists, ride on the left",
     "osmTags": [],
     "comments": ""
   },
@@ -355,7 +355,7 @@
     "sign": "BR:R-35b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/93/Brasil_R-35b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-35b.svg",
-    "name": "Ciclista, transite à direita",
+    "name": "Cyclists, ride on the right",
     "osmTags": [],
     "comments": ""
   },
@@ -363,7 +363,7 @@
     "sign": "BR:R-36a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Brasil_R-36a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-36a.svg",
-    "name": "Ciclistas à esquerda, pedestres à direita",
+    "name": "Cyclists on the left, pedestrians on the right",
     "osmTags": [],
     "comments": ""
   },
@@ -371,7 +371,7 @@
     "sign": "BR:R-36b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/03/Brasil_R-36b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-36b.svg",
-    "name": "Pedestres à esquerda, ciclistas à direita",
+    "name": "Pedestrians on the left, cyclists on the right",
     "osmTags": [],
     "comments": ""
   },
@@ -379,7 +379,7 @@
     "sign": "BR:R-37",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/db/Brasil_R-37.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-37.svg",
-    "name": "Proibido trânsito de motocicletas, motonetas e ciclomotores",
+    "name": "motorcycle=no moped=no mofa=no",
     "osmTags": ["motorcycle=no", "moped=no", "mofa=no"],
     "comments": ""
   },
@@ -387,7 +387,7 @@
     "sign": "BR:R-38",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/47/Brasil_R-38.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-38.svg",
-    "name": "Proibido trânsito de ônibus",
+    "name": "Buses prohibited",
     "osmTags": ["bus=no"],
     "comments": ""
   },
@@ -395,7 +395,7 @@
     "sign": "BR:R-39",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Brasil_R-39.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-39.svg",
-    "name": "Circulação exclusiva de caminhão",
+    "name": "access=no hgv=designated",
     "osmTags": ["access=no", "hgv=designated"],
     "comments": ""
   },
@@ -403,7 +403,7 @@
     "sign": "BR:R-40",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Brasil_R-40.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_R-40.svg",
-    "name": "Trânsito proibido a carros de mão",
+    "name": "Traffic prohibited for hand carts",
     "osmTags": ["hand_cart=no"],
     "comments": ""
   },
@@ -411,7 +411,7 @@
     "sign": "BR:A-1a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/96/Brasil_A-1a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-1a.svg",
-    "name": "Curva Acentuada à Esquerda",
+    "name": "Sharp curve to left",
     "osmTags": ["hazard=turn"],
     "comments": ""
   },
@@ -419,7 +419,7 @@
     "sign": "BR:A-1b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Brasil_A-1b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-1b.svg",
-    "name": "Curva Acentuada à Direita",
+    "name": "Sharp curve to right",
     "osmTags": ["hazard=turn"],
     "comments": ""
   },
@@ -427,7 +427,7 @@
     "sign": "BR:A-2a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/00/Brasil_A-2a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-2a.svg",
-    "name": "Curva à Esquerda",
+    "name": "left courve",
     "osmTags": ["hazard=curve"],
     "comments": ""
   },
@@ -435,7 +435,7 @@
     "sign": "BR:A-2b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Brasil_A-2b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-2b.svg",
-    "name": "Curva à Direita",
+    "name": "right courve",
     "osmTags": ["hazard=curve"],
     "comments": ""
   },
@@ -443,7 +443,7 @@
     "sign": "BR:A-3a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/Brasil_A-3a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-3a.svg",
-    "name": "Pista Sinuosa à Direita",
+    "name": "courving road to right",
     "osmTags": ["hazard=curves"],
     "comments": ""
   },
@@ -451,7 +451,7 @@
     "sign": "BR:A-3b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Brasil_A-3b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-3b.svg",
-    "name": "Pista Sinuosa à Esquerda",
+    "name": "courving road to left",
     "osmTags": ["hazard=curves"],
     "comments": ""
   },
@@ -459,7 +459,7 @@
     "sign": "BR:A-4a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Brasil_A-4a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-4a.svg",
-    "name": "Curva Acentuda em \"S\" à Esquerda",
+    "name": "sharp \"S\" courve to left",
     "osmTags": ["hazard=turns"],
     "comments": ""
   },
@@ -467,7 +467,7 @@
     "sign": "BR:A-4b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/35/Brasil_A-4b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-4b.svg",
-    "name": "Curva Acentuda em \"S\" à Direita",
+    "name": "sharp \"S\" courve to right",
     "osmTags": ["hazard=turns"],
     "comments": ""
   },
@@ -475,7 +475,7 @@
     "sign": "BR:A-5a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/Brasil_A-5a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-5a.svg",
-    "name": "Curva em \"S\" à Direita",
+    "name": "\"S\" curve to right",
     "osmTags": ["hazard=curves"],
     "comments": ""
   },
@@ -483,7 +483,7 @@
     "sign": "BR:A-5b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Brasil_A-5b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-5b.svg",
-    "name": "Curva em \"S\" à Esquerda",
+    "name": "\"S\" curve to left",
     "osmTags": ["hazard=curves"],
     "comments": ""
   },
@@ -491,7 +491,7 @@
     "sign": "BR:A-6a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Brasil_A-6.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-6.svg",
-    "name": "Cruzamento de Vias",
+    "name": "intersection with crossing road",
     "osmTags": ["hazard=dangerous_junction"],
     "comments": ""
   },
@@ -499,7 +499,7 @@
     "sign": "BR:A-7a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Brasil_A-7a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-7a.svg",
-    "name": "Via Lateral à Direita",
+    "name": "intersection with road to right",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -507,7 +507,7 @@
     "sign": "BR:A-7b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/61/Brasil_A-7b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-7b.svg",
-    "name": "Via Lateral à Esquerda",
+    "name": "intersection with road to left",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -563,7 +563,7 @@
     "sign": "BR:A-12",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/Brasil_A-12.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-12.svg",
-    "name": "Interseção em Círculo",
+    "name": "=* =*",
     "osmTags": [],
     "comments": ""
   },
@@ -587,7 +587,7 @@
     "sign": "BR:A-14",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Brasil_A-14.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-14.svg",
-    "name": "Semáforo a Frente",
+    "name": "Light signal ahead",
     "osmTags": [],
     "comments": ""
   },
@@ -595,7 +595,7 @@
     "sign": "BR:A-15",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Brasil_A-15.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-15.svg",
-    "name": "Parada Obrigatória à Frente",
+    "name": "Obligatory stop ahead",
     "osmTags": [],
     "comments": ""
   },
@@ -603,7 +603,7 @@
     "sign": "BR:A-16",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/81/Brasil_A-16.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-16.svg",
-    "name": "Bonde",
+    "name": "=* + =*",
     "osmTags": [],
     "comments": ""
   },
@@ -619,7 +619,7 @@
     "sign": "BR:A-18",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Brasil_A-18.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-18.svg",
-    "name": "Saliência ou Lombada",
+    "name": "=* ou =*",
     "osmTags": [],
     "comments": ""
   },
@@ -627,7 +627,7 @@
     "sign": "BR:A-19",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/49/Brasil_A-19.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-19.svg",
-    "name": "Depressão",
+    "name": "=* hazard=dip",
     "osmTags": ["hazard=dip"],
     "comments": ""
   },
@@ -635,7 +635,7 @@
     "sign": "BR:A-20a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Brasil_A-20a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-20a.svg",
-    "name": "Declive Acentuado",
+    "name": "Steep decline",
     "osmTags": [],
     "comments": ""
   },
@@ -643,7 +643,7 @@
     "sign": "BR:A-20b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/07/Brasil_A-20b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-20b.svg",
-    "name": "Aclive Acentuado",
+    "name": "Steep incline",
     "osmTags": [],
     "comments": ""
   },
@@ -651,7 +651,7 @@
     "sign": "BR:A-21a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Brasil_A-21a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-21a.svg",
-    "name": "Estreitamento de Pista ao Centro",
+    "name": "hazard=road_narrows ou =*",
     "osmTags": ["hazard=road_narrows"],
     "comments": ""
   },
@@ -691,15 +691,15 @@
     "sign": "BR:A-22",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Brasil_A-22.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-22.svg",
-    "name": "Ponte Estreita",
-    "osmTags": ["bridge=yes", "narrow=yes", "hazard=road_narrows"],
+    "name": "highway=* bridge=yes narrow=yes =* hazard=road_narrows",
+    "osmTags": ["bridge=yes", "hazard=road_narrows"],
     "comments": ""
   },
   {
     "sign": "BR:A-23",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Brasil_A-23.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-23.svg",
-    "name": "Ponte Móvel",
+    "name": "=* =*",
     "osmTags": [],
     "comments": ""
   },
@@ -707,7 +707,7 @@
     "sign": "BR:A-24",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Brasil_A-24.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-24.svg",
-    "name": "Obras",
+    "name": "Road works",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -763,15 +763,15 @@
     "sign": "BR:A-30",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Brasil_A-30a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-30a.svg",
-    "name": "Ciclistas",
-    "osmTags": [],
+    "name": "proposal =* / =* =*",
+    "osmTags": ["proposal=* / =* =*"],
     "comments": ""
   },
   {
     "sign": "BR:A-31",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Brasil_A-31.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-31.svg",
-    "name": "Maquinaria Agrícola",
+    "name": "proposal",
     "osmTags": [],
     "comments": ""
   },
@@ -779,7 +779,7 @@
     "sign": "BR:A-32a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Brasil_A-32a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-32a.svg",
-    "name": "Passagem de Pedestres",
+    "name": "=* =* / =* / =* / =*",
     "osmTags": [],
     "comments": ""
   },
@@ -787,7 +787,7 @@
     "sign": "BR:A-33a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/Brasil_A-33a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-33a.svg",
-    "name": "Área Escolar",
+    "name": "=* =* / =*",
     "osmTags": [],
     "comments": ""
   },
@@ -803,7 +803,7 @@
     "sign": "BR:A-34",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Brasil_A-34.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-34.svg",
-    "name": "Crianças",
+    "name": "Children",
     "osmTags": [],
     "comments": ""
   },
@@ -827,7 +827,7 @@
     "sign": "BR:A-37",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Brasil_A-37.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-37.svg",
-    "name": "Altura Limitada",
+    "name": "Limited height",
     "osmTags": [],
     "comments": ""
   },
@@ -835,7 +835,7 @@
     "sign": "BR:A-38",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Brasil_A-38.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-38.svg",
-    "name": "Largura Limitada",
+    "name": "Limited width",
     "osmTags": [],
     "comments": ""
   },
@@ -843,7 +843,7 @@
     "sign": "BR:A-39",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/55/Brasil_A-39.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-39.svg",
-    "name": "Passagem de Nível sem Barreira",
+    "name": "Railway Level Crossing without barrier",
     "osmTags": [],
     "comments": ""
   },
@@ -851,7 +851,7 @@
     "sign": "BR:A-40",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Brasil_A-40.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-40.svg",
-    "name": "Passagem de Nível com Barreira",
+    "name": "Railway Level Crossing with barrier",
     "osmTags": [],
     "comments": ""
   },
@@ -867,7 +867,7 @@
     "sign": "BR:A-42a",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/64/Brasil_A-42a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-42a.svg",
-    "name": "Início de Pista Dupla",
+    "name": "Start of dual carriageway",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -875,7 +875,7 @@
     "sign": "BR:A-42b",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/63/Brasil_A-42b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-42b.svg",
-    "name": "Fim de Pista Dupla",
+    "name": "End of dual carriageway",
     "osmTags": [],
     "comments": "N/A"
   },
@@ -883,7 +883,7 @@
     "sign": "BR:A-43",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Brasil_A-43.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-43.svg",
-    "name": "Aeroporto",
+    "name": "Airport",
     "osmTags": [],
     "comments": ""
   },
@@ -891,7 +891,7 @@
     "sign": "BR:A-44",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/57/Brasil_A-44.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-44.svg",
-    "name": "Vento lateral",
+    "name": "Lateral winds",
     "osmTags": [],
     "comments": ""
   },
@@ -899,7 +899,7 @@
     "sign": "BR:A-45",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/09/Brasil_A-45.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-45.svg",
-    "name": "Rua sem saída",
+    "name": "Road without exit",
     "osmTags": [],
     "comments": ""
   },
@@ -907,7 +907,7 @@
     "sign": "BR:A-46",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/79/Brasil_A-46.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-46.svg",
-    "name": "Peso bruto total limitado",
+    "name": "Limited gross weight",
     "osmTags": [],
     "comments": ""
   },
@@ -915,7 +915,7 @@
     "sign": "BR:A-47",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Brasil_A-47.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-47.svg",
-    "name": "Peso limitado por eixo",
+    "name": "Limited weight per axle",
     "osmTags": [],
     "comments": ""
   },
@@ -923,35 +923,35 @@
     "sign": "BR:A-48",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Brasil_A-48.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Brasil_A-48.svg",
-    "name": "Comprimento limitado",
+    "name": "Limited length",
     "osmTags": [],
     "comments": ""
   },
   {
     "sign": "BR:A-49a",
     "imageUrl": "https://wiki.openstreetmap.org/w/index.php?title=Special:Upload&wpDestFile=Brasil_A-49a.svg",
-    "name": "File:Brasil A-49a.svg",
+    "name": "Pedestrians on the left, tram on the right",
     "osmTags": [],
     "comments": ""
   },
   {
     "sign": "BR:A-49b",
     "imageUrl": "https://wiki.openstreetmap.org/w/index.php?title=Special:Upload&wpDestFile=Brasil_A-49b.svg",
-    "name": "File:Brasil A-49b.svg",
+    "name": "Pedestrians on the right, tram on the left",
     "osmTags": [],
     "comments": ""
   },
   {
     "sign": "BR:A-50a",
     "imageUrl": "https://wiki.openstreetmap.org/w/index.php?title=Special:Upload&wpDestFile=Brasil_A-50a.svg",
-    "name": "File:Brasil A-50a.svg",
+    "name": "Vehicles on the left, tram on the right",
     "osmTags": [],
     "comments": ""
   },
   {
     "sign": "BR:A-50b",
     "imageUrl": "https://wiki.openstreetmap.org/w/index.php?title=Special:Upload&wpDestFile=Brasil_A-50b.svg",
-    "name": "File:Brasil A-50b.svg",
+    "name": "Vehicles on the right, tram on the left",
     "osmTags": [],
     "comments": ""
   }
