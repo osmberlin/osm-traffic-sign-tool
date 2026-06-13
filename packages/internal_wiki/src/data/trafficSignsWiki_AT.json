@@ -12,7 +12,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Gefahrenzeichen_2a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2a.svg",
     "name": "2a: Gefährliche Kurve (Rechtskurve)",
-    "osmTags": ["hazard=curve oder", "hazard=turn / turn_right?"],
+    "osmTags": ["hazard=curve", "hazard=turn / turn_right?"],
     "comments": ""
   },
   {
@@ -20,7 +20,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Gefahrenzeichen_2b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2b.svg",
     "name": "2b: Gefährliche Kurve (Linkskurve)",
-    "osmTags": ["hazard=curve oder", "hazard=turn / turn_left?"],
+    "osmTags": ["hazard=curve", "hazard=turn / turn_left?"],
     "comments": ""
   },
   {
@@ -28,7 +28,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/Gefahrenzeichen_2c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2c.svg",
     "name": "2c: Gefährliche Kurven (Doppelkurve rechts beginnend)",
-    "osmTags": ["hazard=turns oder turns_first_right"],
+    "osmTags": ["hazard=turns"],
     "comments": ""
   },
   {
@@ -36,7 +36,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Gefahrenzeichen_2d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2d.svg",
     "name": "2d: Gefährliche Kurven (Doppelkurve links beginnend)",
-    "osmTags": ["hazard=turns oder turns_first_left"],
+    "osmTags": ["hazard=turns"],
     "comments": ""
   },
   {
@@ -151,7 +151,7 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_7_(2010).svg",
     "name": "7: Gefährliches Gefälle",
     "osmTags": [
-      "traffic_sign:forward=AT:50.7[10] oder",
+      "traffic_sign:forward=AT:50.7[10]",
       "traffic_sign:backward=AT:50.7[10] und zusätzlich",
       "incline=(-)10% (In eckiger Klammer der %-Wert des Gefälles)"
     ],
@@ -163,7 +163,7 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_7a_(2010).svg",
     "name": "7a: Starke Steigung",
     "osmTags": [
-      "traffic_sign:forward=AT:50.7a[10] oder",
+      "traffic_sign:forward=AT:50.7a[10]",
       "traffic_sign:backward=AT:50.7a[10] und zusätzlich",
       "incline=(-)10% (In eckiger Klammer der %-Wert der Steigung)"
     ],
@@ -382,7 +382,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Vorschriftszeichen_5.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_5.svg",
     "name": "5: Wartepflicht bei Gegenverkehr",
-    "osmTags": ["priority=forward oder", "priority=backward"],
+    "osmTags": ["priority=forward", "priority=backward"],
     "comments": ""
   },
   {
@@ -574,7 +574,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Vorschriftszeichen_10a_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_10a_(2010).svg",
     "name": "10a: Geschwindigkeitsbeschränkung (erlaubte Höchstgeschwindigkeit)",
-    "osmTags": ["maxspeed=30", "source:maxspeed=sign oder", "maxspeed:type=sign"],
+    "osmTags": ["maxspeed=30", "source:maxspeed=sign", "maxspeed:type=sign"],
     "comments": ""
   },
   {
@@ -739,7 +739,7 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_17a-a.svg",
     "name": "17a/a: Geh- und Radweg (gemeinsam geführter Weg)",
     "osmTags": [
-      "highway=cycleway oder",
+      "highway=cycleway",
       "highway=path",
       "bicycle=designated",
       "foot=designated",
@@ -761,7 +761,7 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_17a-b.svg",
     "name": "17a/b: Geh- und Radweg (getrennt geführter Weg)",
     "osmTags": [
-      "highway=cycleway oder",
+      "highway=cycleway",
       "highway=path",
       "bicycle=designated",
       "foot=designated",
@@ -798,7 +798,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Vorschriftszeichen_19.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_19.svg",
     "name": "19: Vorgeschriebene Mindestgeschwindigkeit",
-    "osmTags": ["minspeed=30 oder bei unterschiedlichen Werten pro Fahrstreifen:"],
+    "osmTags": ["minspeed=30"],
     "comments": ""
   },
   {
@@ -942,7 +942,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/54/Hinweiszeichen_7a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_7a.svg",
     "name": "7a: Wartepflicht für Gegenverkehr",
-    "osmTags": ["priority=forward oder", "priority=backward"],
+    "osmTags": ["priority=forward", "priority=backward"],
     "comments": ""
   },
   {
@@ -954,7 +954,7 @@
       "highway=motorway",
       "highway=motorway_link",
       "maxspeed=130",
-      "source:maxspeed=AT:motorway oder",
+      "source:maxspeed=AT:motorway",
       "maxspeed:type=AT:motorway"
     ],
     "comments": ""
@@ -975,7 +975,7 @@
     "osmTags": [
       "motorroad=yes",
       "maxspeed=100",
-      "source:maxspeed=AT:trunk oder",
+      "source:maxspeed=AT:trunk",
       "maxspeed:type=AT:trunk"
     ],
     "comments": ""
@@ -985,7 +985,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Hinweiszeichen_8d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_8d.svg",
     "name": "8d: Ende der Autostraße",
-    "osmTags": ["motorroad=* oder", "motorroad=no"],
+    "osmTags": ["motorroad=no"],
     "comments": ""
   },
   {
@@ -1025,7 +1025,7 @@
       "highway=living_street",
       "vehicle=yes",
       "maxspeed=20 (Selten 30, je nach Beschilderung)",
-      "source:maxspeed=AT:shared_zone20 oder",
+      "source:maxspeed=AT:shared_zone20",
       "maxspeed:type=AT:shared_zone20"
     ],
     "comments": ""
@@ -1160,7 +1160,7 @@
       "bicycle=designated",
       "vehicle=destination",
       "maxspeed=30",
-      "source:maxspeed=AT:bicycle_road oder",
+      "source:maxspeed=AT:bicycle_road",
       "maxspeed:type=AT:bicycle_road"
     ],
     "comments": ""
@@ -1187,7 +1187,7 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_28a.svg",
     "name": "28a: Geh- und Radweg ohne Benützungspflicht (gemeinsam)",
     "osmTags": [
-      "highway=cycleway oder",
+      "highway=cycleway",
       "highway=path",
       "bicycle=designated",
       "foot=designated",
@@ -1201,7 +1201,7 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_28b.svg",
     "name": "28b: Geh- und Radweg ohne Benützungspflicht (getrennt)",
     "osmTags": [
-      "highway=cycleway oder",
+      "highway=cycleway",
       "highway=path",
       "bicycle=designated",
       "foot=designated",

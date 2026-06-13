@@ -205,6 +205,23 @@ describe('parseWikiTags', () => {
     })
   })
 
+  describe('German oder-separated alternatives (AT priority signs)', () => {
+    test('parses priority=forward oder priority=backward as separate tags', () => {
+      expect(parseWikiTags('priority=forward oder priority=backward')).toEqual([
+        { key: 'priority', value: 'forward' },
+        { key: 'priority', value: 'backward' },
+      ])
+    })
+
+    test('parses oder between plus-separated tag groups', () => {
+      expect(parseWikiTags('maxspeed=30 + source:maxspeed=sign oder + maxspeed:type=sign')).toEqual([
+        { key: 'maxspeed', value: '30' },
+        { key: 'source:maxspeed', value: 'sign' },
+        { key: 'maxspeed:type', value: 'sign' },
+      ])
+    })
+  })
+
   describe('space-separated tags in one segment (FR A1a)', () => {
     test('parses hazard tag alongside skipped traffic_sign from rendered FR:A1a cell', () => {
       expect(parseWikiTags('traffic_sign=FR:A1a hazard=turn')).toEqual([

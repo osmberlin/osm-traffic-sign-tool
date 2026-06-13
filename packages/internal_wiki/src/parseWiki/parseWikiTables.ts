@@ -40,10 +40,14 @@ const parsePolishDescriptionTagCell = (tagsText: string): { key: string; value: 
 /** OSM wiki {{Tag}} templates use `3=` or `||` before the value to mean "do not link the value". */
 export const normalizeWikiTagValue = (value: string): string => {
   const trimmed = value.replace(/`/g, '').trim()
-  if (trimmed.startsWith('||')) return trimmed.slice(2).trim()
-  if (trimmed.startsWith('3=')) return trimmed.slice(2).trim()
-  return trimmed
+  if (trimmed.startsWith('||')) return trimmed.slice(2).trim().replace(/\s+oder\s*$/i, '').trim()
+  if (trimmed.startsWith('3=')) return trimmed.slice(2).trim().replace(/\s+oder\s*$/i, '').trim()
+  return trimmed.replace(/\s+oder\s*$/i, '').trim()
 }
+
+/** German wiki tables use "oder" between alternative taggings, similar to Polish "lub". */
+const normalizeWikiAlternativeSeparators = (text: string): string =>
+  text.replace(/\s+oder\s+/gi, ' + ').replace(/\s*\+\s*(?:\+\s*)+/g, ' + ')
 
 const trimWikiTagListSeparator = (value: string): string => value.replace(/[,;]\s*$/, '').trim()
 
@@ -88,7 +92,7 @@ const parseWikiTagTemplates = (tagsText: string): { key: string; value: string }
 
 const parseEqualsFormatWikiTags = (tagsText: string): { key: string; value: string }[] => {
   const tags: { key: string; value: string }[] = []
-  const normalized = tagsText.replace(/\s+/g, ' ')
+  const normalized = normalizeWikiAlternativeSeparators(tagsText.replace(/\s+/g, ' '))
   const keyPattern = /([a-z0-9:_-]+)\s*=\s*/gi
   for (const segment of normalized.split(/\s*\+\s*/)) {
     const plainText = stripWikiTagTemplates(segment.trim())
@@ -125,7 +129,7 @@ export const parseWikiTags = (tagsText: string): { key: string; value: string }[
     pushWikiTag(tags, tag.key, tag.value)
   }
 
-  const normalized = tagsText.replace(/\s+/g, ' ')
+  const normalized = normalizeWikiAlternativeSeparators(tagsText.replace(/\s+/g, ' '))
   for (const tag of parseEqualsFormatWikiTags(normalized)) {
     pushWikiTag(tags, tag.key, tag.value)
   }
