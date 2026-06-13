@@ -97,6 +97,7 @@ export type {
   ValuePrompt,
 } from './data-definitions/TrafficSignDataTypes.js'
 export {
+  centerlineOnewayContextQuestion,
   cycleInfrastructureQuestions,
   guidanceModeQuestion,
   hazardSignNodeQuestions,
