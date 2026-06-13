@@ -918,7 +918,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/88/Hinweiszeichen_3a_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_3a_(2010).svg",
     "name": "3a: Gottesdienste",
-    "osmTags": ["DE:Tag:amenity=place of worship"],
+    "osmTags": [],
     "comments": ""
   },
   {
@@ -1170,7 +1170,7 @@
     "imageSvg": "/w/images/4/47/Schulstra%C3%9Fe.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Schulstra%C3%9Fe.svg",
     "name": "26a: Schulstraße",
-    "osmTags": ["DE:Tag:traffic_sign=AT:53.26a"],
+    "osmTags": ["maxspeed=walk", "motor_vehicle=private"],
     "comments": ""
   },
   {
@@ -1379,8 +1379,7 @@
       "motor_vehicle=private",
       "bicycle=yes (falls die Zusatztafel F.3.1 bzw. F.3.2 nicht vorhanden ist)",
       "inline_skates=no (falls die Zusatztafel F.4.1 bzw. F.4.2 nicht vorhanden ist)",
-      "description=Treppelweg (zur einfachen, menschenlesbaren Beschreibung als Treppelweg - \"Treppelweg\" ist nicht der name=* des Weges) Beispiel siehe:",
-      "DE:Tag:traffic_sign=AT:WVO_F.1"
+      "description=Treppelweg (zur einfachen, menschenlesbaren Beschreibung als Treppelweg - \"Treppelweg\" ist nicht der name=* des Weges) Beispiel siehe:"
     ],
     "comments": ""
   },

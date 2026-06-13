@@ -38,11 +38,14 @@ const parsePolishDescriptionTagCell = (tagsText: string): { key: string; value: 
 }
 
 /** OSM wiki {{Tag}} templates use `3=` or `||` before the value to mean "do not link the value". */
-const stripWikiConjunctionSuffix = (value: string): string =>
-  value
+const stripWikiConjunctionSuffix = (value: string): string => {
+  let trimmed = value
     .replace(/\s+oder\s*$/i, '')
     .replace(/\s+und\s*$/i, '')
     .trim()
+  if (!trimmed.includes('(')) trimmed = trimmed.replace(/\)+$/g, '').trim()
+  return trimmed
+}
 
 export const normalizeWikiTagValue = (value: string): string => {
   const trimmed = value.replace(/`/g, '').trim()
@@ -82,13 +85,16 @@ const normalizeWikiOsmTagStrings = (rawTags: string[]): string[] => {
 
 const trimWikiTagListSeparator = (value: string): string => value.replace(/[,;]\s*$/, '').trim()
 
+const isWikiCrossReferenceTagKey = (key: string): boolean =>
+  key === 'traffic_sign' || /:Tag:/i.test(key)
+
 const pushWikiTag = (
   tags: { key: string; value: string }[],
   key: string,
   rawValue: string,
 ): void => {
   const value = trimWikiTagListSeparator(normalizeWikiTagValue(rawValue))
-  if (key === 'traffic_sign' || !value || value === '*' || value === '=*') return
+  if (isWikiCrossReferenceTagKey(key) || !value || value === '*' || value === '=*') return
   if (!tags.some((t) => t.key === key && t.value === value)) {
     tags.push({ key, value })
   }
@@ -117,6 +123,17 @@ const parseWikiTagTemplates = (tagsText: string): { key: string; value: string }
     for (const match of tagsText.matchAll(pattern)) {
       pushWikiTag(tags, match[1]!.trim(), match[2]!)
     }
+  }
+  return tags
+}
+
+/** AT/DE wiki prose wraps suggested tags in parentheses, e.g. `(maxspeed=walk)`. */
+const parseParentheticalOsmTags = (tagsText: string): { key: string; value: string }[] => {
+  const tags: { key: string; value: string }[] = []
+  for (const match of tagsText.matchAll(/\(([a-z][a-z0-9:_-]*)\s*=\s*([^()&]+)\)/gi)) {
+    const prefix = tagsText.slice(0, match.index!).trimEnd()
+    if (prefix.endsWith('@') || prefix.endsWith('&')) continue
+    pushWikiTag(tags, match[1]!.trim(), match[2]!.trim())
   }
   return tags
 }
@@ -157,6 +174,9 @@ export const parseWikiTags = (tagsText: string): { key: string; value: string }[
 
   const tags: { key: string; value: string }[] = []
   for (const tag of parseWikiTagTemplates(tagsText)) {
+    pushWikiTag(tags, tag.key, tag.value)
+  }
+  for (const tag of parseParentheticalOsmTags(tagsText)) {
     pushWikiTag(tags, tag.key, tag.value)
   }
 

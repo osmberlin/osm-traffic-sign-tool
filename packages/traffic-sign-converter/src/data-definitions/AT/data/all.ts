@@ -2584,11 +2584,8 @@ export const _all: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        accessTags: [{ key: 'motor_vehicle', value: 'private)' }],
-        uniqueTags: [
-          { key: 'maxspeed', value: 'walk)' },
-          { key: 'DE:Tag:traffic_sign', value: 'AT:53.26a' },
-        ],
+        accessTags: [{ key: 'motor_vehicle', value: 'private' }],
+        uniqueTags: [{ key: 'maxspeed', value: 'walk' }],
       },
     ],
     catalogue: { signCategory: 'speed' },

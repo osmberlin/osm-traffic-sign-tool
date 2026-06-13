@@ -225,14 +225,35 @@ describe('parseWikiTags', () => {
 
     test('strips trailing und before the next key=value alternative', () => {
       expect(
-        parseWikiTags(
-          'maxspeed=130 und source:maxspeed=AT:motorway oder source:maxspeed=AT:trunk',
-        ),
+        parseWikiTags('maxspeed=130 und source:maxspeed=AT:motorway oder source:maxspeed=AT:trunk'),
       ).toEqual([
         { key: 'maxspeed', value: '130' },
         { key: 'source:maxspeed', value: 'AT:motorway' },
         { key: 'source:maxspeed', value: 'AT:trunk' },
       ])
+    })
+  })
+
+  describe('parenthetical OSM tags in AT wiki prose (53.26a)', () => {
+    const schulstrasseTagsText =
+      'Als Linie mit traffic_sign=AT:53.26a (maxspeed=walk) (motor_vehicle=private) Achtung: Beim Schulstraße-Hinweiszeichen ist normalerweise immer eine Zusatztafel mit zeitlicher Befristung angebracht. Tagging siehe DE:Tag:traffic_sign=AT:53.26a'
+
+    test('parses parenthetical maxspeed and motor_vehicle tags', () => {
+      expect(parseWikiTags(schulstrasseTagsText)).toEqual([
+        { key: 'maxspeed', value: 'walk' },
+        { key: 'motor_vehicle', value: 'private' },
+      ])
+    })
+
+    test('omits wiki cross-reference keys from osmTags', () => {
+      expect(
+        toWikiSign('AT', {
+          signId: '53.26a',
+          name: '26a: Schulstraße',
+          tagsText: schulstrasseTagsText,
+          isNa: false,
+        })?.osmTags,
+      ).toEqual(['maxspeed=walk', 'motor_vehicle=private'])
     })
   })
 
