@@ -54,6 +54,11 @@ export const isWikiRowWikiSvgMissing = (row: WikiComparisonRow): boolean => {
   return isSignSvgMissing(row.toolSign) || isWikiSignImageMissing(row)
 }
 
+const wikiSignCodePattern = /^[A-Z]{1,3}\d(?:-[A-Za-z0-9]+)*$/
+
+const matchWikiSignToCatalogue = (value: string, countryPrefix: CountryPrefixType) =>
+  trafficSignTagToSigns(value, countryPrefix).at(0)
+
 export const enrichWikiSigns = (
   wikiSigns: WikiSign[],
   countryPrefix: CountryPrefixType,
@@ -62,7 +67,15 @@ export const enrichWikiSigns = (
 
   for (const sign of rows) {
     const cleanSign = sign.sign.replace('traffic_sign', '')
-    sign.toolSign = trafficSignTagToSigns(cleanSign, countryPrefix).at(0)
+    let toolSign = matchWikiSignToCatalogue(cleanSign, countryPrefix)
+
+    const fallbackName = sign.name.trim()
+    if (!toolSign?.recodgnizedSign && wikiSignCodePattern.test(fallbackName)) {
+      toolSign =
+        matchWikiSignToCatalogue(`${countryPrefix}:${fallbackName}`, countryPrefix) ?? toolSign
+    }
+
+    sign.toolSign = toolSign
   }
 
   return rows

@@ -3,6 +3,7 @@ import { describe, expect, test } from 'vitest'
 import {
   cleanWikiSignName,
   extractDeTrafficSignValue,
+  extractTrafficSignId,
   normalizeWikiTagValue,
   parseDeRowIdTable,
   parseUniversalTable,
@@ -125,6 +126,22 @@ const frSu1RowHtml = `
       <td>50px</td>
       <td>traffic_sign=FR:SU1</td>
       <td>Symbole de déviation</td>
+    </tr>
+  </tbody>
+</table>`
+
+const auR1RowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:Australia_road_sign_R1-1.svg"><img src="/thumb/Australia_road_sign_R1-1.svg"></a></td>
+      <td>R1-1 Stop highway = stop</td>
+      <td>R1-1: Stop</td>
+    </tr>
+    <tr>
+      <td><a href="/wiki/File:Australia_road_sign_R2-2-L.svg"><img src="/thumb/Australia_road_sign_R2-2-L.svg"></a></td>
+      <td>R2-2-L One Way highway = oneway</td>
+      <td>R2-2-L: One Way</td>
     </tr>
   </tbody>
 </table>`
@@ -442,6 +459,33 @@ describe('parseUniversalTable', () => {
     const $ = cheerio.load(frA1aRowHtml)
     const [row] = parseUniversalTable($, 'FR')
     expect(toWikiSign('FR', row!)?.osmTags).toEqual(['hazard=turn'])
+  })
+
+  test('parses AU regulatory rows with full sign variant ids', () => {
+    const $ = cheerio.load(auR1RowHtml)
+    const rows = parseUniversalTable($, 'AU')
+
+    expect(rows.map((row) => row.signId)).toEqual(['R1-1', 'R2-2-L'])
+    expect(toWikiSign('AU', rows[0]!)).toMatchObject({
+      sign: 'AU:R1-1',
+    })
+  })
+})
+
+describe('extractTrafficSignId', () => {
+  test('extracts full AU variant codes from regulatory wiki row text', () => {
+    expect(extractTrafficSignId('R1-1 Stop highway = stop', 'AU')).toBe('R1-1')
+    expect(extractTrafficSignId('R2-2-L One Way highway = oneway', 'AU')).toBe('R2-2-L')
+    expect(extractTrafficSignId('W6-1 Kangaroo hazard = animal_crossing', 'AU')).toBe('W6-1')
+    expect(extractTrafficSignId('GE2-3 End road work', 'AU')).toBe('GE2-3')
+    expect(extractTrafficSignId('TC9866 QLD animal crossing', 'AU')).toBe('TC9866')
+  })
+
+  test('prefers explicit traffic_sign values over abbreviated row text', () => {
+    expect(extractTrafficSignId('traffic_sign=AU:G4-1 reassurance sign', 'AU')).toBe('G4-1')
+    expect(extractTrafficSignId('Als Linie mit traffic_sign=AT:53.26 highway=*', 'AT')).toBe(
+      '53.26',
+    )
   })
 })
 

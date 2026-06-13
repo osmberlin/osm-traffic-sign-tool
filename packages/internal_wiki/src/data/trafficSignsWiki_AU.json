@@ -1,165 +1,3322 @@
 [
   {
-    "sign": "AU:R1",
+    "sign": "AU:R1-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Australia_road_sign_R1-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R1-1.svg",
-    "name": "R1-1",
+    "name": "Stop",
     "osmTags": ["highway=stop"],
     "comments": ""
   },
   {
-    "sign": "AU:R2",
+    "sign": "AU:R1-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Australia_road_sign_R1-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R1-2.svg",
+    "name": "Give Way",
+    "osmTags": ["highway=give_way"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R1-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Australia_road_sign_R1-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R1-3.svg",
+    "name": "Give way at roundabout",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R1-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Australia_road_sign_R1-4N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R1-4N.svg",
+    "name": "Suggestion highway:conditional=stop @ signals_off",
+    "osmTags": ["highway:conditional=stop @ signals_off"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R1-V6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/33/AU-VIC_road_sign_R1-V6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R1-V6.svg",
+    "name": "Give Way to Stock (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-2",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Australia_road_sign_R2-2-L.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-2-L.svg",
-    "name": "R2-2",
+    "name": "One Way (left)",
     "osmTags": ["oneway=yes"],
     "comments": ""
   },
   {
-    "sign": "AU:R3",
+    "sign": "AU:R2-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/23/Australia_road_sign_R2-3-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-3-L.svg",
+    "name": "Keep Left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/61/Australia_road_sign_R2-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-4.svg",
+    "name": "Where on the reverse side of a oneway sign then as oneway=yes on the way.",
+    "osmTags": ["oneway=yes on the way."],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Australia_road_sign_R2-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-5.svg",
+    "name": "No U-turn (excluding the ACT, NSW and NT)",
+    "osmTags": ["restriction=no_u_turn"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Australia_road_sign_R2-6-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-6-L.svg",
+    "name": "No Left Turn (excluding the ACT, NSW and NT)",
+    "osmTags": ["restriction=no_left_turn"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Australia_road_sign_R2-7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-7.svg",
+    "name": "No Turns (Straight Only)",
+    "osmTags": ["restriction=only_straight_on"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Australia_road_sign_R2-9-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-9-L.svg",
+    "name": "Left Lane Must Turn Left",
+    "osmTags": ["turn:lanes=left|..."],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Australia_road_sign_R2-10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-10.svg",
+    "name": "Give Way to Pedestrians",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Australia_road_sign_R2-11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-11.svg",
+    "name": "Two-way Traffic",
+    "osmTags": ["oneway=no"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/55/Australia_road_sign_R2-14-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-14-L.svg",
+    "name": "Turn Left",
+    "osmTags": ["restriction=only_left_turn"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Australia_road_sign_R2-15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-15.svg",
+    "name": "U-turn Permitted",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Australia_road_sign_R2-16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-16.svg",
+    "name": "Turn Left at Any Time with Care",
+    "osmTags": [
+      "red_turn:left=yes or traffic_signals:turn<direction>=<turn-value>|left_on_red (Proposal:Turn signals)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Australia_road_sign_R2-17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-17.svg",
+    "name": "One Way (forward)",
+    "osmTags": ["oneway=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Australia_road_sign_R2-19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-19.svg",
+    "name": "Left Lane Must Exit",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Australia_road_sign_R2-20.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-20.svg",
+    "name": "Left Turn on Red Permitted after Stopping",
+    "osmTags": [
+      "red_turn:left=yes or traffic_signals:turn<direction>=<turn-value>|left_on_red (Proposal:Turn signals)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Australia_road_sign_R2-21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-21.svg",
+    "name": "(see discussion https://community.openstreetmap.org/t/how-to-tag-hook-turns/133992)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-V21-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/AU-VIC_road_sign_R2-V21-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R2-V21-1.svg",
+    "name": "Right Turn from Left Ahead (used in VIC and Gold Coast, QLD",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-22",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Australia_road_sign_R2-22.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R2-22.svg",
+    "name": "No hook turn by Bicycles",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-Q02",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/74/Queensland_R2-Q02.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R2-Q02.svg",
+    "name": "Through Traffic Keep Left (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-V115",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/28/AU-VIC_road_sign_R2-V115.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R2-V115.svg",
+    "name": "U-turn Must Give Way (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-V122",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d9/AU-VIC_road_sign_R2-V122.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R2-V122.svg",
+    "name": "Keep Left at Islands (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R2-V124",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d8/AU-VIC_road_sign_R2-V124.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R2-V124.svg",
+    "name": "Give Way to Merging Tram (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R3-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Australia_road_sign_R3-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R3-1.svg",
-    "name": "R3-1",
+    "name": "Pedestrian Crossing",
     "osmTags": ["highway=crossing"],
     "comments": ""
   },
   {
-    "sign": "AU:R4",
+    "sign": "AU:R3-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/Australia_road_sign_R3-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R3-2.svg",
+    "name": "Safety Zone (excluding the ACT and NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R3-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Australia_road_sign_R3-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R3-3.svg",
+    "name": "Children Crossing (flags are displayed near crossings around schools, orange variant, excluding NT)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R3-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Australia_road_sign_R3-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R3-4.svg",
+    "name": "Children Crossing Speed Limit when Lights Flashing",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R3-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Australia_road_sign_R3-5-R.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R3-5-R.svg",
+    "name": "Pedestrians may Cross Diagonally (left)",
+    "osmTags": ["crossing:scramble=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R3-V102",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b2/AU-VIC_road_sign_R3-V102.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R3-V102.svg",
+    "name": "Pedestrians use Overpass (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R3-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/86/Queensland_R3-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R3-Q01.svg",
+    "name": "Walk to Island and Wait for Further Signal (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/11/Australia_road_sign_R4-1_%2810%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-1_(10).svg",
-    "name": "R4-1",
+    "name": "10 km/h Speed Limit",
     "osmTags": ["maxspeed=10"],
     "comments": ""
   },
   {
-    "sign": "AU:R5",
+    "sign": "AU:R4-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Australia_road_sign_R4-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-2.svg",
+    "name": "Speed De-restriction",
+    "osmTags": ["maxspeed=none"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/30/Australia_road_sign_R4-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-3.svg",
+    "name": "Temporary events are not mapped, per Good Practice.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Australia_road_sign_R4-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-4.svg",
+    "name": "maxspeed=10 + foot=designated + designation=shared_zone (see Australian Tagging Guidelines/Roads#highway=living_street)",
+    "osmTags": [
+      "maxspeed=10",
+      "foot=designated",
+      "designation=shared_zone (see Australian Tagging Guidelines/Roads#highway=living_street)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/33/Australia_road_sign_R4-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-5.svg",
+    "name": "End of Shared Zone",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Australia_road_sign_R4-6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-6.svg",
+    "name": "maxspeed=40 + designation=local_traffic_area",
+    "osmTags": ["maxspeed=40", "designation=local_traffic_area"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/73/Australia_road_sign_R4-10_%2820%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-10_(20).svg",
+    "name": "20 km/h Speed Limit Zone Area",
+    "osmTags": ["maxspeed=20"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/89/Australia_road_sign_R4-11_%2820%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-11_(20).svg",
+    "name": "End of 20 km/h Speed Limit Zone Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/57/Australia_road_signs_R4-12_%2810%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_signs_R4-12_(10).svg",
+    "name": "End of 10 km/h Speed Limit",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-V100",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cf/AU-VIC_road_sign_R4-V100.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R4-V100.svg",
+    "name": "Service Road (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-V105",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/AU-VIC_road_sign_R4-V105_%2840%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R4-V105_(40).svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off) + hazard=school_zone",
+    "osmTags": [
+      "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)",
+      "hazard=school_zone"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-V106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1a/AU-VIC_road_sign_R4-V106_%2840%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R4-V106_(40).svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off) + hazard=school_zone",
+    "osmTags": [
+      "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)",
+      "hazard=school_zone"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-V111",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/23/AU-VIC_road_sign_R4-V111.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R4-V111.svg",
+    "name": "New Speed Limit Ahead (used in VIC and WA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-V114-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d2/AU-VIC_road_sign_R4-V114-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R4-V114-1.svg",
+    "name": "maxspeed:conditional=40 @ (09:00-18:00)",
+    "osmTags": ["maxspeed:conditional=40 @ (09:00-18:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-V114-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/db/AU-VIC_road_sign_R4-V114-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R4-V114-2.svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr 09:00-19:00; Sa 09:00-15:00)",
+    "osmTags": ["maxspeed:conditional=40 @ (Mo-Fr 09:00-19:00; Sa 09:00-15:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-V122",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Australia_road_sign_R4-V122.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-V122.svg",
+    "name": "60 km/h Community Gateway Speed Limit (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-V119",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1a/AU-VIC_road_sign_R4-V119.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R4-V119.svg",
+    "name": "New Limit (used in VIC and QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-201",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9d/AU-NSW_road_sign_R4-201.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R4-201.svg",
+    "name": "On Bridge (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-205",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Australia_road_sign_R4-205N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-205N.svg",
+    "name": "State Speed Limit (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-212",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Australia_road_sign_R4-212N-20.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-212N-20.svg",
+    "name": "Temporary events are not mapped, per Good Practice.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-220",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/14/AU-NSW_road_sign_R4-220.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R4-220.svg",
+    "name": "End of Truck and Bus Speed Limit (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-225-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b3/AU-NSW_road_sign_R4-225-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R4-225-1.svg",
+    "name": "Speed Limit Ahead (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-229",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/90/AU-NSW_road_sign_R4-229.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R4-229.svg",
+    "name": "maxspeed:hgv=40 + maxspeed:bus=40",
+    "osmTags": ["maxspeed:hgv=40", "maxspeed:bus=40"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-230",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/48/Australia_road_sign_R4-230N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-230N.svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off) + hazard=school_zone",
+    "osmTags": [
+      "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)",
+      "hazard=school_zone"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-230-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/50/Australia_road_sign_R4-230-1N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-230-1N.svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off) + hazard=school_zone",
+    "osmTags": [
+      "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:30,14:30-16:00; PH off; SH off)",
+      "hazard=school_zone"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-231",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/Australia_road_sign_R4-231N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-231N.svg",
+    "name": "End of School Zone (used in NSW)",
+    "osmTags": ["maxspeed=60"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-235",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Australia_road_sign_R4-235N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-235N.svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr XX:XX-XX:XX,XX:XX-XX:XX; PH off; SH off) + hazard=school_zone",
+    "osmTags": [
+      "maxspeed:conditional=40 @ (Mo-Fr XX:XX-XX:XX,XX:XX-XX:XX; PH off; SH off)",
+      "hazard=school_zone"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-235-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Australia_road_sign_R4-235-1N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-235-1N.svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr XX:XX-XX:XX,XX:XX-XX:XX; PH off; SH off) + hazard=school_zone",
+    "osmTags": [
+      "maxspeed:conditional=40 @ (Mo-Fr XX:XX-XX:XX,XX:XX-XX:XX; PH off; SH off)",
+      "hazard=school_zone"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-239",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Australia_road_sign_R4-239N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R4-239N.svg",
+    "name": "maxspeed=100Then tag the indicated speed for rain as maxspeed:conditional=XX @ wet",
+    "osmTags": [
+      "maxspeed=100Then tag the indicated speed for rain as",
+      "maxspeed:conditional=XX @ wet"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-242",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/48/AU-NSW_road_sign_R4-242.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R4-242.svg",
+    "name": "Bus Speed Limit (used in NSW)",
+    "osmTags": ["maxspeed:bus=40"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-243",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/02/AU-NSW_road_sign_R4-243.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R4-243.svg",
+    "name": "End of Bus Speed Limit (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-244-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ea/AU-NSW_road_sign_R4-244-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R4-244-1.svg",
+    "name": "School Zone Ahead (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-246",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9f/AU-NSW_road_sign_R4-246.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R4-246.svg",
+    "name": "maxspeed=60 + maxspeed:hgv=40 + maxspeed:bus=40",
+    "osmTags": ["maxspeed=60", "maxspeed:hgv=40", "maxspeed:bus=40"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Queensland_R4-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R4-Q01.svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:00,14:30-15:30; PH off; SH off) + hazard=school_zone",
+    "osmTags": [
+      "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:00,14:30-15:30; PH off; SH off)",
+      "hazard=school_zone"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-Q03",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1b/AU-QLD_road_sign_R4-Q03.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_R4-Q03.svg",
+    "name": "School Zone Ahead (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-Q04",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Queensland_R4-Q04.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R4-Q04.svg",
+    "name": "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:00,14:30-15:30; PH off; SH off) + hazard=school_zone",
+    "osmTags": [
+      "maxspeed:conditional=40 @ (Mo-Fr 08:00-09:00,14:30-15:30; PH off; SH off)",
+      "hazard=school_zone"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-Q05",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/30/AU-QLD_road_sign_R4-Q05.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_R4-Q05.svg",
+    "name": "Road Train Speed Limit (used in QLD)",
+    "osmTags": ["maxspeed:roadtrain=40"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-Q06",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/AU-QLD_road_sign_R4-Q06.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_R4-Q06.svg",
+    "name": "End of Road Train Speed Limit (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R4-Q07",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bd/AU-QLD_road_sign_R4-Q07.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_R4-Q07.svg",
+    "name": "Hospital Zone (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/de/Australia_R5-1_%28vertical_-_one_time%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-1_(vertical_-_one_time).svg",
-    "name": "R5-1",
+    "name": "maxstay:conditional=1 hour @ (Sa 09:00-12:00)",
     "osmTags": ["maxstay:conditional=1 hour @ (Sa 09:00-12:00)"],
     "comments": ""
   },
   {
-    "sign": "AU:R6",
+    "sign": "AU:R5-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Australia_R5-2_%28horizontal_-_two_times%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-2_(horizontal_-_two_times).svg",
+    "name": "maxstay:conditional=2 hours @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)",
+    "osmTags": ["maxstay:conditional=2 hours @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Australia_R5-10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-10.svg",
+    "name": "Parking Permitted: No Limit",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Australia_R5-12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-12.svg",
+    "name": "maxstay:conditional=2 minutes @ (Mo-Fr 09:00-16:00)",
+    "osmTags": ["maxstay:conditional=2 minutes @ (Mo-Fr 09:00-16:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/40/Australia_R5-13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-13.svg",
+    "name": "maxstay:conditional=5 minutes @ (Mo-Fr 09:00-16:00)",
+    "osmTags": ["maxstay:conditional=5 minutes @ (Mo-Fr 09:00-16:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Australia_R5-14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-14.svg",
+    "name": "maxstay:conditional=10 minutes @ (Mo-Fr 09:00-16:00)",
+    "osmTags": ["maxstay:conditional=10 minutes @ (Mo-Fr 09:00-16:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/82/Australia_R5-15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-15.svg",
+    "name": "maxstay:conditional=15 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)",
+    "osmTags": ["maxstay:conditional=15 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Australia_R5-16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-16.svg",
+    "name": "maxstay:conditional=30 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)",
+    "osmTags": ["maxstay:conditional=30 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Australia_R5-17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-17.svg",
+    "name": "maxstay:conditional=90 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)",
+    "osmTags": ["maxstay:conditional=90 minutes @ (Mo-Fr 09:00-16:00; Sa 09:00-12:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Australia_road_sign_R5-20.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-20.svg",
+    "name": "parking:side:access=no + parking:side:bus=designated",
+    "osmTags": ["parking:side:access=no", "parking:side:bus=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/84/Australia_road_sign_R5-21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-21.svg",
+    "name": "parking:side:access=no + parking:side:taxi=designated",
+    "osmTags": ["parking:side:access=no", "parking:side:taxi=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-22",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/20/Australia_R5-22.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-22.svg",
+    "name": "parking:side:access=yes + parking:side:access:conditional=no @ (Mo-Fr 09:00-16:00) + parking:side:private:conditional=designated @ (Mo-Fr 09:00-16:00)",
+    "osmTags": [
+      "parking:side:access=yes",
+      "parking:side:access:conditional=no @ (Mo-Fr 09:00-16:00)",
+      "parking:side:private:conditional=designated @ (Mo-Fr 09:00-16:00)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Australia_road_sign_R5-23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-23.svg",
+    "name": "Loading Zone",
+    "osmTags": ["parking:side:restriction=loading_only"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-24",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Australia_road_sign_R5-24.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-24.svg",
+    "name": "parking:side:access=no +parking:side:hgv=designated",
+    "osmTags": ["parking:side:access=no", "parking:side:hgv=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Australia_road_sign_R5-25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-25.svg",
+    "name": "Temporary events are not mapped, per Good Practice.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-26",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Australia_road_sign_R5-26.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-26.svg",
+    "name": "Mail Zone",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-35",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Australia_road_sign_R5-35.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-35.svg",
+    "name": "No Stopping",
+    "osmTags": ["parking:side:restriction=no_stopping"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-36",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/Australia_R5-36_%28horizontal_-_single_time%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-36_(horizontal_-_single_time).svg",
+    "name": "parking:side:restriction:conditional=no_stopping @ (Mo-Fr 16:00-18:00)",
+    "osmTags": ["parking:side:restriction:conditional=no_stopping @ (Mo-Fr 16:00-18:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-39",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/41/Australia_road_sign_R5-39.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-39.svg",
+    "name": "Tow-Away Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-40",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/67/Australia_road_sign_R5-40.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-40.svg",
+    "name": "No Parking",
+    "osmTags": ["parking:side:restriction=no_parking"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-41",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Australia_R5-41.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-41.svg",
+    "name": "parking:side:restriction:conditional=no_parking @ (Mo-Fr 16:00-18:00)",
+    "osmTags": ["parking:side:restriction:conditional=no_parking @ (Mo-Fr 16:00-18:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-45",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Australia_road_sign_R5-45.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-45.svg",
+    "name": "parking:side:restriction=no_stopping + parking:side:restriction:reason=clearway",
+    "osmTags": ["parking:side:restriction=no_stopping", "parking:side:restriction:reason=clearway"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-46",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Australia_R5-46.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-46.svg",
+    "name": "parking:side:restriction:conditional=no_stopping @ (Mo-Fr 16:00-18:00) + parking:side:restriction:reason:conditional=clearway @ (Mo-Fr 16:00-18:00)",
+    "osmTags": [
+      "parking:side:restriction:conditional=no_stopping @ (Mo-Fr 16:00-18:00)",
+      "parking:side:restriction:reason:conditional=clearway @ (Mo-Fr 16:00-18:00)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-51",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/da/Australia_road_sign_R5-51.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-51.svg",
+    "name": "End Clearway",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-58",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Australia_road_sign_R5-58-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-58-L.svg",
+    "name": "Emergency Stopping Lane Only",
+    "osmTags": ["shoulder=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-61",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Australia_R5-61.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-61.svg",
+    "name": "amenity=parking + maxstay:conditional=2 hours @ (Mo-Fr 08:30-17:00, Sa 08:30-12:00)",
+    "osmTags": [
+      "amenity=parking",
+      "maxstay:conditional=2 hours @ (Mo-Fr 08:30-17:00, Sa 08:30-12:00)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-62",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/80/Australia_R5-62.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-62.svg",
+    "name": "maxstay:conditional=2 hours @ (Mo-Fr 08:30-17:00, Sa 08:30-12:00)",
+    "osmTags": ["maxstay:conditional=2 hours @ (Mo-Fr 08:30-17:00, Sa 08:30-12:00)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-63",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Australia_road_sign_R5-63-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-63-5.svg",
+    "name": "End of 2 Hour Parking Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-64",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/69/Australia_road_sign_R5-64.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-64.svg",
+    "name": "Area Parking Control Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-65",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Australia_road_sign_R5-65.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-65.svg",
+    "name": "Park in Bays Only",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-71",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Australia_R5-71.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-71.svg",
+    "name": "No Stopping Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-72",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Australia_R5-72.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-72.svg",
+    "name": "No Stopping Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-73",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/52/Australia_road_sign_R5-73.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-73.svg",
+    "name": "End of No Stopping Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-81",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/28/Australia_R5-81.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-81.svg",
+    "name": "No Parking Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-82",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/09/Australia_R5-82.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R5-82.svg",
+    "name": "No Parking Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-83",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/57/Australia_road_sign_R5-83.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R5-83.svg",
+    "name": "End of No Parking Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-V103",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/AU-VIC_road_sign_R5-V103.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R5-V103.svg",
+    "name": "New Clearway Times (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-V104",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/73/AU-VIC_road_sign_R5-V104.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R5-V104.svg",
+    "name": "New Times (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-400",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/92/AU-NSW_road_sign_R5-400.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R5-400.svg",
+    "name": "No Stopping (used in NSW)",
+    "osmTags": ["parking:side:restriction=no_stopping"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-405",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a4/AU-NSW_road_sign_R5-405.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R5-405.svg",
+    "name": "parking:side:restriction=no_stopping + parking:side:restriction:taxi:conditional=none @ (maxstay < 1 minute)",
+    "osmTags": [
+      "parking:side:restriction=no_stopping",
+      "parking:side:restriction:taxi:conditional=none @ (maxstay < 1 minute)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-406",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f5/AU-NSW_road_sign_R5-406.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R5-406.svg",
+    "name": "Taxi Pick-up Point (used in NSW)",
+    "osmTags": ["amenity=taxi"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Queensland_R5-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R5-Q01.svg",
+    "name": "Tow-Away Zone (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-Q04",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/12/Queensland_R5-Q04.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R5-Q04.svg",
+    "name": "parking:side:restriction:conditional=loading_only @ (Mo-Fr 09:00-16:00, Sa 09:12:00) + TODO 2 mins max + TODO passengers",
+    "osmTags": [
+      "parking:side:restriction:conditional=loading_only @ (Mo-Fr 09:00-16:00, Sa 09:12:00)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R5-Q05",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Queensland_R5-Q05.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R5-Q05.svg",
+    "name": "parking:side:restriction:conditional=loading_only @ (Mo-Fr 09:00-16:00, Sa 09:12:00) + todo commercial veh + TODO 20 mins max",
+    "osmTags": [
+      "parking:side:restriction:conditional=loading_only @ (Mo-Fr 09:00-16:00, Sa 09:12:00)"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Australia_road_sign_R6-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-1.svg",
-    "name": "R6-1",
+    "name": "No Overtaking or Passing (used at bottlenecks)",
     "osmTags": ["overtaking=no"],
     "comments": ""
   },
   {
-    "sign": "AU:R7",
+    "sign": "AU:R6-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/09/Australia_road_sign_R6-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-2.svg",
+    "name": "overtaking=no + bridge=yes",
+    "osmTags": ["overtaking=no", "bridge=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Australia_road_sign_R6-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-3.svg",
+    "name": "bridge=yes + maxweight=*",
+    "osmTags": ["bridge=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Australia_road_sign_R6-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-4.svg",
+    "name": "Gross Load Limit",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Australia_road_sign_R6-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-5.svg",
+    "name": "End Load Limit",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Australia_road_sign_R6-6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-6.svg",
+    "name": "Stop Here on Red Signal",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Australia_road_sign_R6-7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-7.svg",
+    "name": "Hand Held Stop Sign (for children crossings)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Australia_road_sign_R6-8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-8.svg",
+    "name": "Hand Held Stop Sign (for roadworks)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Australia_R6-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_R6-9.svg",
+    "name": "Stop on Red Signal",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-10-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/10/Australia_road_sign_R6-10-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-10-1.svg",
+    "name": "No Buses",
+    "osmTags": ["bus=no"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-10-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Australia_road_sign_R6-10-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-10-2.svg",
+    "name": "No Trucks",
+    "osmTags": ["hgv=no"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-10-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Australia_road_sign_R6-10-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-10-3.svg",
+    "name": "No Bicycles",
+    "osmTags": ["bicycle=no"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/Australia_road_sign_R6-11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-11.svg",
+    "name": "Low Clearance Marker",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/45/Australia_road_sign_R6-12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-12.svg",
+    "name": "Clearance Marker",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Australia_road_sign_R6-13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-13.svg",
+    "name": "foot=no + bicycle=no + horse=no + agricultural=no",
+    "osmTags": ["foot=no", "bicycle=no", "horse=no", "agricultural=no"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Australia_road_sign_R6-14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-14.svg",
+    "name": "Stop Here on Red Arrow",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Australia_road_sign_R6-15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-15.svg",
+    "name": "No Pedestrians",
+    "osmTags": ["foot=no"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/85/Australia_road_sign_R6-17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-17.svg",
+    "name": "bridge=yes + maxweight:conditional=X @ (axles=1); X @ (axles=2); X @ (axles=3)",
+    "osmTags": ["bridge=yes", "maxweight:conditional=X @ (axles=1); X @ (axles=2); X @ (axles=3)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Australia_road_sign_R6-18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-18.svg",
+    "name": "Buses Must Enter (Checking stations and weighbridges are set up on roads for buses to check their weight and length)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/17/Australia_road_sign_R6-19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-19.svg",
+    "name": "Start Freeway",
+    "osmTags": ["highway=motorway"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Australia_road_sign_R6-20.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-20.svg",
+    "name": "Freeway Entrance",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-21",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/01/Australia_road_sign_R6-21.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-21.svg",
+    "name": "End Freeway",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-V19-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/AU-VIC_road_sign_R6-V19-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R6-V19-2.svg",
+    "name": "Start Tollway (used in VIC)",
+    "osmTags": ["toll=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-V20-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2d/AU-VIC_road_sign_R6-V20-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R6-V20-2.svg",
+    "name": "Tollway Entrance (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-V21-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9a/AU-VIC_road_sign_R6-V21-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R6-V21-2.svg",
+    "name": "End Tollway (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-22",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Australia_road_sign_R6-22.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-22.svg",
+    "name": "low_gears:hgv=designated + low_gears:bus=designated See discussion at https://lists.openstreetmap.org/pipermail/talk-au/2023-January/016700.html",
+    "osmTags": [
+      "low_gears:hgv=designated",
+      "low_gears:bus=designated See discussion at https://lists.openstreetmap.org/pipermail/talk-au/2023-January/016700.html"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/19/Australia_road_sign_R6-23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-23.svg",
+    "name": "End Truck & Bus Low Gear Area",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-24",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/Australia_road_sign_R6-24.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-24.svg",
+    "name": "Railway Crossing",
+    "osmTags": ["railway=level_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/70/Australia_road_sign_R6-25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-25.svg",
+    "name": "Railway Crossing (with red backing board)",
+    "osmTags": ["railway=level_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-26",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/Australia_road_sign_R6-26_%28obsolete%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-26_(obsolete).svg",
+    "name": "Tramway Crossing (used in Adelaide and Melbourne)",
+    "osmTags": ["railway=tram_level_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-27",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Australia_road_sign_R6-27.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-27.svg",
+    "name": "Trucks Must Enter (Checking stations and weighbridges are set up on roads for trucks to check their weight and length)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-28",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Australia_road_sign_R6-28.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-28.svg",
+    "name": "Trucks Use Left Lane",
+    "osmTags": ["hgv:lanes=yes|no..."],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-29",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/da/Australia_road_sign_R6-29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-29.svg",
+    "name": "See discussion at https://community.openstreetmap.org/t/overtaking-lane-tagging/137924/16",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-30",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Australia_road_sign_R6-30.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-30.svg",
+    "name": "lanes:both_ways=1 + turn:lanes:both_ways=right",
+    "osmTags": ["lanes:both_ways=1", "turn:lanes:both_ways=right"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Australia_road_sign_R6-31.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-31.svg",
+    "name": "Give Way to Buses (Attached to a bus)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-32",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Australia_road_sign_R6-32.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-32.svg",
+    "name": "See discussion at https://community.openstreetmap.org/t/overtaking-lane-tagging/137924/16",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-33",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Australia_road_sign_R6-33.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-33.svg",
+    "name": "Overall Length Limit",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-240n",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/Australia_road_sign_R6-240n.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R6-240n.svg",
+    "name": "hgv:lanes=yes|no... bus:lanes=yes|no...",
+    "osmTags": ["hgv:lanes=yes|no...", "bus:lanes=yes|no..."],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-249",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Australian_wet_weather_speed_limit_90.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australian_wet_weather_speed_limit_90.svg",
+    "name": "Wet weather speed limit ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-256",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/AU-NSW_road_sign_R6-256.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R6-256.svg",
+    "name": "Stop Here On Red Arrow, Otherwise turn left with care",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-V106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b6/AU-VIC_road_sign_R6-V106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R6-V106.svg",
+    "name": "Truck restriction ends (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R6-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Queensland_R6-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R6-Q01.svg",
+    "name": "foot=no + bicycle=no + horse=no + agricultural=no",
+    "osmTags": ["foot=no", "bicycle=no", "horse=no", "agricultural=no"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-1-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/67/Australia_road_sign_R7-1-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-1-1.svg",
-    "name": "R7-1-1",
+    "name": "Bus Lane",
     "osmTags": ["bus:lanes=designated"],
     "comments": ""
   },
   {
-    "sign": "AU:R8",
+    "sign": "AU:R7-1-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Australia_road_sign_R7-1-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-1-3.svg",
+    "name": "Truck Lane",
+    "osmTags": ["hgv:lanes=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-1-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Australia_road_sign_R7-1-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-1-4.svg",
+    "name": "Bicycle Lane",
+    "osmTags": ["cycleway=lane"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-1-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Australia_road_sign_R7-1-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-1-5.svg",
+    "name": "Tram Lane",
+    "osmTags": ["tram:lanes=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/92/Australia_road_sign_R7-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-2.svg",
+    "name": "Ahead (used with bus, transit or truck lane signs)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Australia_road_sign_R7-3-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-3-L.svg",
+    "name": "Left Lane (used with bus, transit or truck lane signs)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/58/Australia_road_sign_R7-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-4.svg",
+    "name": "R7-4",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Australia_road_sign_R7-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-5.svg",
+    "name": "Lane Clearance",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-7-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/03/Australia_road_sign_R7-7-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-7-1.svg",
+    "name": "hov:lanes=designated + hov:minimum=2",
+    "osmTags": ["hov:lanes=designated", "hov:minimum=2"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-7-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Australia_road_sign_R7-7-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-7-2.svg",
+    "name": "hov:lanes=designated + hov:minimum=3",
+    "osmTags": ["hov:lanes=designated", "hov:minimum=3"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-7-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/Australia_road_sign_R7-7-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-7-3.svg",
+    "name": "hov:lanes:conditional=designated @ (Mo-Fr 06:00-10:00) + hov:minimum=2",
+    "osmTags": ["hov:lanes:conditional=designated @ (Mo-Fr 06:00-10:00)", "hov:minimum=2"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-7-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/11/Australia_road_sign_R7-7-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-7-4.svg",
+    "name": "hov:lanes:conditional=designated @ (Mo-Fr 06:30-10:00,15:30-19:00) + hov:minimum=2",
+    "osmTags": [
+      "hov:lanes:conditional=designated @ (Mo-Fr 06:30-10:00,15:30-19:00)",
+      "hov:minimum=2"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-7-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Australia_road_sign_R7-7-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-7-5.svg",
+    "name": "hov:lanes:conditional=designated @ (Mo-Fr 06:00-10:00) + hov:minimum=3",
+    "osmTags": ["hov:lanes:conditional=designated @ (Mo-Fr 06:00-10:00)", "hov:minimum=3"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-7-6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Australia_road_sign_R7-7-6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-7-6.svg",
+    "name": "hov:lanes:conditional=designated @ (Mo-Fr 06:30-10:00,15:30-19:00) + hov:minimum=3",
+    "osmTags": [
+      "hov:lanes:conditional=designated @ (Mo-Fr 06:30-10:00,15:30-19:00)",
+      "hov:minimum=3"
+    ],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-V7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/AU-VIC_road_sign_R7-V7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R7-V7.svg",
+    "name": "Transit Lane (used in VIC)",
+    "osmTags": ["hov:lanes=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Australia_road_sign_R7-8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-8.svg",
+    "name": "access=no + bus=designated",
+    "osmTags": ["access=no", "bus=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-9-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Australia_road_sign_R7-9-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-9-1.svg",
+    "name": "End of T2 Transit Lane",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-9-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Australia_road_sign_R7-9-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R7-9-2.svg",
+    "name": "End of T3 Transit Lane",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-V9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/60/AU-VIC_road_sign_R7-V9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R7-V9.svg",
+    "name": "End of Transit Lane (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/Queensland_R7-Q01_%28L%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R7-Q01_(L).svg",
+    "name": "Ahead on Side Road (left) (used with bus, transit or truck lane signs) (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-Q04",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/87/Queensland_R7-Q04.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R7-Q04.svg",
+    "name": "Bus Lane Ahead (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-V101-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6f/AU-VIC_road_sign_R7-V101-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R7-V101-1.svg",
+    "name": "Part Time Tram Lane (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-V104",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/AU-VIC_road_sign_R7-V104.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R7-V104.svg",
+    "name": "Tram Lane Ahead (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-V132",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/AU-VIC_road_sign_R7-V132.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R7-V132.svg",
+    "name": "Merge left with times (used before a part-time tram lane) (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R7-V133",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/95/AU-VIC_road_sign_R7-V133.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R7-V133.svg",
+    "name": "access=no + tram=designated",
+    "osmTags": ["access=no", "tram=designated"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R8-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Australia_road_sign_R8-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R8-1.svg",
-    "name": "R8-1",
+    "name": "access=no + bicycle=designated",
     "osmTags": ["access=no", "bicycle=designated"],
     "comments": ""
   },
   {
-    "sign": "AU:R9",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Australia_road_sign_R9-1-1.svg",
-    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-1-1.svg",
-    "name": "R9-1-1",
-    "osmTags": ["restriction:conditional=restriction-value"],
+    "sign": "AU:R8-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Australia_road_sign_R8-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R8-2.svg",
+    "name": "foot=designated + bicycle=designated + segregated=no",
+    "osmTags": ["foot=designated", "bicycle=designated", "segregated=no"],
     "comments": ""
   },
   {
-    "sign": "AU:W1",
+    "sign": "AU:R8-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/37/Australia_road_sign_R8-3-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R8-3-L.svg",
+    "name": "foot=designated + bicycle=designated + segregated=yes",
+    "osmTags": ["foot=designated", "bicycle=designated", "segregated=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-1-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Australia_road_sign_R9-1-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-1-1.svg",
+    "name": "restriction:conditional=restriction-value @ (Mo-Fr 07:00-09:30)",
+    "osmTags": ["restriction:conditional=restriction-value @ (Mo-Fr 07:00-09:30)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-1-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/Australia_road_sign_R9-1-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-1-2.svg",
+    "name": "restriction:conditional=restriction-value @ (Mo-Fr 07:00-09:00, 16:30-18:30)",
+    "osmTags": ["restriction:conditional=restriction-value @ (Mo-Fr 07:00-09:00, 16:30-18:30)"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-1-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/59/Australia_road_sign_R9-1-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-1-3.svg",
+    "name": "At All Times",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Australia_road_sign_R9-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-2.svg",
+    "name": "Buses Excepted",
+    "osmTags": ["except=bus"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/93/Australia_road_sign_R9-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-3.svg",
+    "name": "Bicycles Excepted",
+    "osmTags": ["except=bicycle"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/30/Australia_road_sign_R9-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-4.svg",
+    "name": "Authorised Vehicles Excepted",
+    "osmTags": ["except=private"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-6-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Australia_road_sign_R9-6-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-6-1.svg",
+    "name": "Distance (in metres) (used with No u-turn, No left turn, No right turn or No turns signs)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-6-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Australia_road_sign_R9-6-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-6-2.svg",
+    "name": "Distance (in metres) (used with No u-turn, No left turn, No right turn or No turns signs)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-7-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Australia_road_sign_R9-7-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-7-1.svg",
+    "name": "Distance (in kilometres) (used with No u-turn, No left turn, No right turn or No turns signs)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-7-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Australia_road_sign_R9-7-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-7-2.svg",
+    "name": "Distance (in kilometres) (used with No u-turn, No left turn, No right turn or No turns signs)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Australia_road_sign_R9-8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-8.svg",
+    "name": "At Street Name (used with No u-turn, No left turn, No right turn or No turns signs)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/74/Australia_road_sign_R9-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_R9-9.svg",
+    "name": "One Lane",
+    "osmTags": ["lanes=1"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-233",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ed/AU-NSW_road_sign_R9-233.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R9-233.svg",
+    "name": "Narrow Lanes (used in NSW)",
+    "osmTags": ["narrow=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-234",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c1/AU-NSW_road_sign_R9-234.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R9-234.svg",
+    "name": "Slippery Surface (used in NSW)",
+    "osmTags": ["hazard=slippery"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-236",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c9/AU-NSW_road_sign_R9-236.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_R9-236.svg",
+    "name": "Railway Crossing (used in NSW)",
+    "osmTags": ["railway=level_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-V101-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/AU-VIC_road_sign_R9-V101-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R9-V101-2.svg",
+    "name": "Buses, Taxis, VHA/B/C Excepted (used in VIC)",
+    "osmTags": ["except=bus,taxi"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-V106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a1/AU-VIC_road_sign_R9-V106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_R9-V106.svg",
+    "name": "Trams Excepted (used in VIC)",
+    "osmTags": ["except=tram"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Queensland_R9-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R9-Q01.svg",
+    "name": "Buses and Taxis Excepted (used in QLD)",
+    "osmTags": ["except=bus,taxi"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-Q02",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/42/Queensland_R9-Q02.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R9-Q02.svg",
+    "name": "Trucks Excepted (used in QLD)",
+    "osmTags": ["except=hgv"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:R9-Q03",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/05/Queensland_R9-Q03.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_R9-Q03.svg",
+    "name": "Police Excepted (used in QLD)",
+    "osmTags": ["except=emergency"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Australia_road_sign_W1-1-L.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-1-L.svg",
-    "name": "W1-1",
+    "name": "90 Sharp turn, to left",
     "osmTags": ["hazard=curve"],
     "comments": ""
   },
   {
-    "sign": "AU:W2",
+    "sign": "AU:W1-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/10/Australia_road_sign_W1-2-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-2-L.svg",
+    "name": "Double sharp curve first to left",
+    "osmTags": ["hazard=turns"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Australia_road_sign_W1-3-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-3-L.svg",
+    "name": "Curve to left",
+    "osmTags": ["hazard=curve"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Australia_road_sign_W1-4-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-4-L.svg",
+    "name": "Double curve first to left",
+    "osmTags": ["hazard=turns"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Australia_road_sign_W1-5-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-5-L.svg",
+    "name": "Winding road first to left",
+    "osmTags": ["hazard=curves"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Australia_road_sign_W1-7-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-7-L.svg",
+    "name": "Hairpin curve to left",
+    "osmTags": ["hazard=curve"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Australia_road_sign_W1-8-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-8-L.svg",
+    "name": "Tilting Truck (left)",
+    "osmTags": ["maxspeed:hgv:advisory=40"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-9-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/82/Australia_road_sign_W1-9-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-9-1.svg",
+    "name": "Exit advisory speed",
+    "osmTags": ["maxspeed:advisory=60"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-9-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Australia_road_sign_W1-9-2-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-9-2-L.svg",
+    "name": "Exit advisory speed with curve to left",
+    "osmTags": ["maxspeed:advisory=60"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-9-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Australia_road_sign_W1-9-3-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-9-3-L.svg",
+    "name": "Exit advisory speed with turn to left",
+    "osmTags": ["maxspeed:advisory=60"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-9-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Australia_road_sign_W1-9-4-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-9-4-L.svg",
+    "name": "Exit advisory speed with reverse curve, first to left",
+    "osmTags": ["maxspeed:advisory=60"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-9-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/23/Australia_road_sign_W1-9-5-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W1-9-5-L.svg",
+    "name": "Exit advisory speed with hairpin curve to left",
+    "osmTags": ["maxspeed:advisory=60"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W1-V50",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b5/AU-VIC_road_sign_W1-V50.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W1-V50.svg",
+    "name": "Spiral loop (used in VIC)",
+    "osmTags": ["hazard=curve"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/53/AU_road_sign_W2-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W2-1.svg",
-    "name": "W2-1",
+    "name": "Crossroad intersection",
     "osmTags": ["hazard=dangerous_junction"],
     "comments": ""
   },
   {
-    "sign": "AU:W3",
+    "sign": "AU:W2-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/AU_road_sign_W2-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W2-3.svg",
+    "name": "T-junction",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/95/AU_road_sign_W2-4-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W2-4-L.svg",
+    "name": "Side road intersection from left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Australia_road_sign_W2-7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-7.svg",
+    "name": "Roundabout Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/38/AU_road_sign_W2-8-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W2-8-L.svg",
+    "name": "Staggered side road intersection, first from left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/85/Australia_road_sign_W2-9-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-9-L.svg",
+    "name": "Side road intersection from right on a curve to left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Australia_road_sign_W2-10-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-10-L.svg",
+    "name": "Side road intersection from left on a curve to left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Australia_road_sign_W2-11-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-11-L.svg",
+    "name": "Staggered side road intersection, first from right on a curve to left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Australia_road_sign_W2-12-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-12-L.svg",
+    "name": "Staggered side road intersection, first from left on a curve to left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8d/AU_road_sign_W2-13-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W2-13-L.svg",
+    "name": "Double side road intersections from left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/84/Australia_road_sign_W2-14-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-14-L.svg",
+    "name": "T-junction beyond a curve to left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Australia_road_sign_W2-15-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-15-L.svg",
+    "name": "Crossroad intersection on a curve to left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/75/Australia_road_sign_W2-16-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-16-L.svg",
+    "name": "Side road intersection, entering straight ahead on a curve to left",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-V104",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Victoria_W2-V104_%28L%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W2-V104_(L).svg",
+    "name": "Crossroad intersection on a curve to left (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-V112-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3a/AU-VIC_road_sign_W2-V112-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W2-V112-1.svg",
+    "name": "T-junction at dual carriageway (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-V116",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/10/Victoria_W2-V116.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W2-V116.svg",
+    "name": "Watch for Oncoming Traffic (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-208",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/45/Australia_road_sign_W2-208.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-208.svg",
+    "name": "Priority crossroad intersection (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W2-209",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Australia_road_sign_W2-209_%28L%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W2-209_(L).svg",
+    "name": "Priority side road intersection from left (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W3-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/AU_road_sign_W3-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W3-1.svg",
-    "name": "W3-1",
+    "name": "Stop Sign ahead",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:W4",
+    "sign": "AU:W3-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cd/AU_road_sign_W3-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W3-2.svg",
+    "name": "Give Way Sign ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W3-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/92/AU_road_sign_W3-3-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W3-3-1.svg",
+    "name": "Traffic Lights ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W3-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/AU_road_sign_W3-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W3-4.svg",
+    "name": "Speed Hump Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W3-V101",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9f/AU-VIC_road_sign_W3-V101.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W3-V101.svg",
+    "name": "Traffic Light ahead (Prepare to Stop) (used with the warning sign for signals ahead) (used in VIC, QLD and WA)",
+    "osmTags": ["hazard=traffic_signals"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W3-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0e/AU-QLD_road_sign_W3-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_W3-Q01.svg",
+    "name": "Ramp Metering (or Roundabout Metering) Signals ahead (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Australia_road_sign_W4-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-1.svg",
-    "name": "W4-1",
+    "name": "Narrow Bridge",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:W5",
+    "sign": "AU:W4-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/80/Australia_road_sign_W4-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-3.svg",
+    "name": "Road Narrows",
+    "osmTags": ["hazard=road_narrows"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Australia_road_sign_W4-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-4.svg",
+    "name": "Divided Road",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/AU_road_sign_W4-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W4-5.svg",
+    "name": "Island",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/10/Australia_road_sign_W4-6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-6.svg",
+    "name": "End Divided Road",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Australia_road_sign_W4-8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-8.svg",
+    "name": "Low Clearance ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/db/AU_road_sign_W4-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W4-9.svg",
+    "name": "Left Lane Ends",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Australia_road_sign_W4-10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-10.svg",
+    "name": "Lane Allocation ahead (Three-way traffic)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/00/Australia_road_sign_W4-11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-11.svg",
+    "name": "Two-way Traffic ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-V101",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/AU-VIC_road_sign_W4-V101.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W4-V101.svg",
+    "name": "Lane Allocation ahead (Right lane goes straight ahead or turn right) (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-V102",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/76/AU-VIC_road_sign_W4-V102.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W4-V102.svg",
+    "name": "Lane Allocation ahead (Four-way traffic) (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-V106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/74/AU-VIC_road_sign_W4-V106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W4-V106.svg",
+    "name": "Low Tree Branches (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-211",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/69/Australia_road_sign_W4-211N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-211N.svg",
+    "name": "Clearance ahead (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W4-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Australia_road_sign_W4-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W4-Q01.svg",
+    "name": "S-lane (Sign placed before the lane ends) (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/AU_road_sign_W5-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-1.svg",
-    "name": "W5-1",
+    "name": "Ferry",
     "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e8/AU_road_sign_W5-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-2.svg",
+    "name": "Opening Bridge",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/69/AU_road_sign_W5-6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-6.svg",
+    "name": "Ford",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-7-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/df/AU_road_sign_W5-7-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-7-1.svg",
+    "name": "Floodway",
+    "osmTags": ["hazard=flooding"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-7-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/19/AU_road_sign_W5-7-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-7-2.svg",
+    "name": "Floodways",
+    "osmTags": ["hazard=flooding"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5d/AU_road_sign_W5-8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-8.svg",
+    "name": "Low Level Bridge",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c0/AU_road_sign_W5-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-9.svg",
+    "name": "W5-9",
+    "osmTags": ["hazard=dip"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b6/AU_road_sign_W5-10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-10.svg",
+    "name": "Road Bump",
+    "osmTags": ["hazard=bump"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-11",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/86/AU_road_sign_W5-11.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-11.svg",
+    "name": "Crest",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Australia_road_sign_W5-12.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-12.svg",
+    "name": "Steep Descent",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/85/Australia_road_sign_W5-13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-13.svg",
+    "name": "Steep ascent",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/48/AU_road_sign_W5-14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-14.svg",
+    "name": "Gate",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9e/AU_road_sign_W5-16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-16.svg",
+    "name": "Grid",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e0/AU_road_sign_W5-18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-18.svg",
+    "name": "Road Ends",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/AU_road_sign_W5-19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-19.svg",
+    "name": "Gravel Road",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/33/Australia_road_sign_W5-20.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-20.svg",
+    "name": "hazard:conditional=slippery @ wet",
+    "osmTags": ["hazard:conditional=slippery @ wet"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-22",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/91/Australia_road_sign_W5-22.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-22.svg",
+    "name": "Trucks Crossing or Entering",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/Australia_road_sign_W5-25N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-25N.svg",
+    "name": "Turning Traffic",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-29",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/90/Australia_road_sign_W5-29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-29.svg",
+    "name": "Kangaroos",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-30",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Australia_road_sign_W5-30.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-30.svg",
+    "name": "Aircraft",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/54/Australia_road_sign_W5-31.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-31.svg",
+    "name": "Safety Ramp Crossing",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-33",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/16/AU_road_sign_W5-33.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-33.svg",
+    "name": "Slow Point",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-34",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Australia_road_sign_W5-34-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-34-L.svg",
+    "name": "Merging Traffic (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-35",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/Australia_road_sign_W5-35-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-35-L.svg",
+    "name": "Added Lane (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-36",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/84/AU_road_sign_W5-36.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-36.svg",
+    "name": "Fire Station",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-37",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/AU_road_sign_W5-37.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-37.svg",
+    "name": "Ambulance Station",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-38",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a9/AU_road_sign_W5-38.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-38.svg",
+    "name": "Stock Crossing",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-41",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Australia_road_sign_W5-41.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-41.svg",
+    "name": "Tram Crossing",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-42",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8a/AU_road_sign_W5-42-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-42-L.svg",
+    "name": "Falling Rocks (left)",
+    "osmTags": ["hazard=falling_rocks"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-43",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/AU_road_sign_W5-43.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-43.svg",
+    "name": "Uneven Surface",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-44",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/34/AU_road_sign_W5-44.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-44.svg",
+    "name": "Camels crossing",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-45",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/AU_road_sign_W5-45.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-45.svg",
+    "name": "Emus crossing",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-46",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1b/AU_road_sign_W5-46.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-46.svg",
+    "name": "Wild Horses Crossing",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-47",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/56/AU_road_sign_W5-47.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-47.svg",
+    "name": "Koalas Crossing",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-48",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f1/AU_road_sign_W5-48.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-48.svg",
+    "name": "Wombats Crossing",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-49",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dd/AU_road_sign_W5-49.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W5-49.svg",
+    "name": "Wild Animals",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-50",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Australia_road_sign_W5-50.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-50.svg",
+    "name": "Farm Machinery",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA63",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/AU-SA_road_sign_W5-SA63.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA63.svg",
+    "name": "Cattle (used in SA)",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA70",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/30/AU-SA_road_sign_W5-SA70.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA70.svg",
+    "name": "Emergency Vehicles (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA72",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/46/AU-SA_road_sign_W5-SA72-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA72-L.svg",
+    "name": "Tilting truck from the left (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA74",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/91/AU-SA_road_sign_W5-SA74.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA74.svg",
+    "name": "Low Branches (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA75",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/37/AU-SA_road_sign_W5-SA75.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA75.svg",
+    "name": "Forklifts (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA101",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/AU-SA_road_sign_W5-SA101.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA101.svg",
+    "name": "Cross Wind (used in SA)",
+    "osmTags": ["hazard=side_winds"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V102",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b6/AU-VIC_road_sign_W5-V102.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V102.svg",
+    "name": "Rough Surface (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Australia_road_sign_W5-SA106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-SA106.svg",
+    "name": "Wildlife on Road (used in SA)",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/AU-VIC_road_sign_W5-V106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V106.svg",
+    "name": "Strong Cross Wind (used in VIC)",
+    "osmTags": ["hazard=side_winds"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA109",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/AU-SA_road_sign_W5-SA109.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA109.svg",
+    "name": "Creek (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V109",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Victoria_W5-V109.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W5-V109.svg",
+    "name": "High Risk Area (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA110",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ef/AU-SA_road_sign_W5-SA110.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA110.svg",
+    "name": "Creeks (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V110",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/Victoria_W5-V110.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W5-V110.svg",
+    "name": "Tram Speed (used in VIC and Gold Coast, Queensland)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA111",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/80/AU-SA_road_sign_W5-SA111.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA111.svg",
+    "name": "Rocky Creek Bed Track (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V111",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/AU-VIC_road_sign_W5-V111.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V111.svg",
+    "name": "Equestrians (used in VIC)",
+    "osmTags": ["hazard=horse_riders"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-SA112",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/ff/AU-SA_road_sign_W5-SA112.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W5-SA112.svg",
+    "name": "Wildlife (used in SA)",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V116",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Victoria_W5-V116.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W5-V116.svg",
+    "name": "hazard:conditional=slippery @ icy",
+    "osmTags": ["hazard:conditional=slippery @ icy"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V120",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/AU-VIC_road_sign_W5-V120.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V120.svg",
+    "name": "Wildlife Crossing (used in VIC)",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V121",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/AU-VIC_road_sign_W5-V121.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V121.svg",
+    "name": "Emergency Vehicles (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V122",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/ba/AU-VIC_road_sign_W5-V122.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V122.svg",
+    "name": "Fire Station (Prepare to Stop) (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V123",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2b/AU-VIC_road_sign_W5-V123.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V123.svg",
+    "name": "Slippery for Motorcycles (used in VIC)",
+    "osmTags": ["hazard:motorcycles=slippery"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V129",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Victoria_W5-V129.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W5-V129.svg",
+    "name": "hazard:conditional=slippery @ icy + bridge=yes",
+    "osmTags": ["hazard:conditional=slippery @ icy", "bridge=yes"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V130",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/36/AU-VIC_road_sign_W5-V130.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V130.svg",
+    "name": "Rumble Strips (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V131",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/da/Victoria_W5-V131.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W5-V131.svg",
+    "name": "Stock Crossing Ahead (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V132",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Victoria_W5-V132_%28L%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W5-V132_(L).svg",
+    "name": "Falling Rocks (left) (used in VIC)",
+    "osmTags": ["hazard=falling_rocks"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-V134",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/69/AU-VIC_road_sign_W5-V134.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W5-V134.svg",
+    "name": "Deer (used in VIC)",
+    "osmTags": ["hazard=animal_crossing"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-204",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Australia_road_sign_W5-204.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-204.svg",
+    "name": "Falling Rocks (used in NSW)",
+    "osmTags": ["hazard=falling_rocks"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-226",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Australia_road_sign_W5-226.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-226.svg",
+    "name": "Wind Gusts (used in NSW)",
+    "osmTags": ["hazard=side_winds"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-232",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/Australia_road_sign_W5-232N.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-232N.svg",
+    "name": "Buses Turning (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Queensland_W5-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W5-Q01.svg",
+    "name": "Start of Cane Railway Crossings (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-Q02",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/13/Queensland_W5-Q02.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W5-Q02.svg",
+    "name": "End of Cane Railway Crossings (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-Q04",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7d/AU-QLD_road_sign_W5-Q04.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_W5-Q04.svg",
+    "name": "Drift Sand (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-Q05",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/AU-QLD_road_sign_W5-Q05.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_W5-Q05.svg",
+    "name": "Soft Edges (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-Q07",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Queensland_W5-Q07.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W5-Q07.svg",
+    "name": "Cane Hauling Ahead (This flag is used with the guide sign sugar cane area.) (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-Q09",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/44/Australia_road_sign_W5-Q09.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W5-Q09.svg",
+    "name": "Rumble Strips (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W5-Q10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/26/Queensland_W5-Q10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W5-Q10.svg",
+    "name": "Unfenced Road (Watch for Wandering Animals) (used in QLD)",
+    "osmTags": ["hazard=animal_crossing"],
     "comments": ""
   },
   {
     "sign": "AU:TC9866",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/AU-QLD_road_sign_TC9866.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-QLD_road_sign_TC9866.svg",
-    "name": "QLD-TC9866",
+    "name": "Cassowary (used in QLD)",
     "osmTags": ["hazard=animal_crossing"],
     "comments": ""
   },
   {
-    "sign": "AU:W6",
+    "sign": "AU:W6-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/90/AU_road_sign_W6-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W6-1.svg",
-    "name": "W6-1",
+    "name": "Pedestrians",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:W7",
+    "sign": "AU:W6-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/33/AU_road_sign_W6-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W6-2.svg",
+    "name": "Pedestrian Crossing Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-V2-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c2/AU-VIC_road_sign_W6-V2-1-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W6-V2-1-L.svg",
+    "name": "Pedestrian Crossing Ahead on Side Road (veer left) (used in VIC and Queensland)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-V2-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d4/AU-VIC_road_sign_W6-V2-2-R.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W6-V2-2-R.svg",
+    "name": "Pedestrian Crossing Ahead on Side Road (turn right) (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/AU_road_sign_W6-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W6-3.svg",
+    "name": "Children",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Australia_road_sign_W6-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W6-4.svg",
+    "name": "School",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Australia_road_sign_W6-7-FYG.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W6-7-FYG.svg",
+    "name": "Cyclists",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/20/Australia_road_sign_W6-8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W6-8.svg",
+    "name": "Road Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Australia_road_sign_W6-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W6-9.svg",
+    "name": "Pedestrians and Cyclists",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-V9-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/53/Victoria_W6-V9-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W6-V9-2.svg",
+    "name": "Pedestrians, Cyclists and Equestrians (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-V101",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0a/AU-VIC_road_sign_W6-V101.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W6-V101.svg",
+    "name": "Cyclists (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-V103",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7c/AU-VIC_road_sign_W6-V103.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W6-V103.svg",
+    "name": "Steep Descent for Cyclists (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-V104",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/AU-VIC_road_sign_W6-V104.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W6-V104.svg",
+    "name": "Slippery for Cyclists (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-V105",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/86/Victoria_W6-V105.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W6-V105.svg",
+    "name": "Pedestrian, Cyclist and Equestrian Crossing Ahead (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-SA106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a3/AU-SA_road_sign_W6-SA106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W6-SA106.svg",
+    "name": "School Zone (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-V106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/AU-VIC_road_sign_W6-V106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W6-V106.svg",
+    "name": "School Bus Stop Ahead (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-216-ACT",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Australia_road_sign_W6-216-ACT.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W6-216-ACT.svg",
+    "name": "School Zone (used in the ACT)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Queensland_W6-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W6-Q01.svg",
+    "name": "National Trail (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W6-Q02",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Queensland_W6-Q02.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W6-Q02.svg",
+    "name": "National Trail Road Crossing (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W7-2",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/97/Australia_road_sign_W7-2-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W7-2-1.svg",
-    "name": "W7-2",
+    "name": "Number of Tracks",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:W8",
+    "sign": "AU:W7-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Australia_road_sign_W7-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W7-4.svg",
+    "name": "Railway Level Crossing with Flashing Signals ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W7-7",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Australia_road_sign_W7-7-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W7-7-L.svg",
+    "name": "Railway Level Crossing ahead (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W7-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Australia_road_sign_W7-8.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W7-8.svg",
+    "name": "Railway Level Crossing on Road ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W7-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/61/Australia_road_sign_W7-9-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W7-9-L.svg",
+    "name": "Railway Level Crossing on Road ahead (skewed) (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W7-12",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/81/Australia_road_sign_W7-12-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W7-12-L.svg",
+    "name": "Railway Level Crossing on Side Road (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W7-13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/52/Australia_road_sign_W7-13-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W7-13-L.svg",
+    "name": "Railway Level Crossing on Crossroad (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W7-15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/17/AU_road_sign_W7-15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W7-15.svg",
+    "name": "Railway Gate",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-2",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/57/Australia_road_sign_W8-2-60.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-2-60.svg",
-    "name": "W8-2",
+    "name": "Advisory Speed",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:W9",
+    "sign": "AU:W8-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Australia_road_sign_W8-3-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-3-L.svg",
+    "name": "On Side Road (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Australia_road_sign_W8-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-5.svg",
+    "name": "Metre plate",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-V6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/11/AU-VIC_road_sign_W8-V6.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W8-V6.svg",
+    "name": "Kilometre plate (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-8",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/40/Australia_road_sign_W8-7.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-7.svg",
+    "name": "When Wet",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Australia_road_sign_W8-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-9.svg",
+    "name": "Under Snow",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-13",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/28/AU_road_sign_W8-13.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W8-13.svg",
+    "name": "Playground",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-14",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/89/AU_road_sign_W8-14.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W8-14.svg",
+    "name": "School",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Australia_road_sign_W8-15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-15.svg",
+    "name": "Merge Right",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/61/Australia_road_sign_W8-16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-16.svg",
+    "name": "One Lane",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-17-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Australia_road_sign_W8-17-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-17-1.svg",
+    "name": "Distance (in kilometres)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-17-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/47/Australia_road_sign_W8-17-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-17-2.svg",
+    "name": "Distance (in metres 250)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a7/AU_road_sign_W8-18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W8-18.svg",
+    "name": "Aged",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-19",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d3/AU_road_sign_W8-19.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W8-19.svg",
+    "name": "Blind",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-20",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/AU_road_sign_W8-20.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W8-20.svg",
+    "name": "Disabled",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-22",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3d/AU_road_sign_W8-22.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W8-22.svg",
+    "name": "Crossing Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Australia_road_sign_W8-23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-23.svg",
+    "name": "Crossing Arrows",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-24",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/AU_road_sign_W8-24.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W8-24.svg",
+    "name": "Preschool",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-25",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/AU_road_sign_W8-25.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_W8-25.svg",
+    "name": "Refuge Island",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-26",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Australia_road_sign_W8-26.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-26.svg",
+    "name": "Added Lane",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-27",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Australia_road_sign_W8-27.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-27.svg",
+    "name": "Prepare to Stop",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-28",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/04/Australia_road_sign_W8-28.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-28.svg",
+    "name": "Crossing Ramp",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-29",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/17/Australia_road_sign_W8-29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-29.svg",
+    "name": "On Bridge When Frosty",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-SA54",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/23/AU-SA_road_sign_W8-SA54.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W8-SA54.svg",
+    "name": "Over Crest (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-SA55",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/AU-SA_road_sign_W8-SA55.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W8-SA55.svg",
+    "name": "Mud on Road (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-SA56",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/AU-SA_road_sign_W8-SA56.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W8-SA56.svg",
+    "name": "School Bus (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-SA62",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/AU-SA_road_sign_W8-SA62.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W8-SA62.svg",
+    "name": "Watch for Road Trains (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-SA64",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/92/AU-SA_road_sign_W8-SA64.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W8-SA64.svg",
+    "name": "Prunning Planned (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-SA65",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/02/AU-SA_road_sign_W8-SA65.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W8-SA65.svg",
+    "name": "On Green Signal (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-SA102",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/35/AU-SA_road_sign_W8-SA102.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_W8-SA102.svg",
+    "name": "Unfenced Road (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-V106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Victoria_W8-V106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W8-V106.svg",
+    "name": "Crossing Ahead (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-V107",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ed/AU-VIC_road_sign_W8-V107.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W8-V107.svg",
+    "name": "Divided Road (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-V112",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/42/AU-VIC_road_sign_W8-V112.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W8-V112.svg",
+    "name": "Narrow Shoulder on Bridge (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-V116",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/AU-VIC_road_sign_W8-V116.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W8-V116.svg",
+    "name": "Trucks use Low Gear (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-V118",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/AU-VIC_road_sign_W8-V118.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W8-V118.svg",
+    "name": "When Icy (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-V121",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/85/Victoria_W8-V121.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Victoria_W8-V121.svg",
+    "name": "Advisory Speed (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-V122",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e2/AU-VIC_road_sign_W8-V122.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_W8-V122.svg",
+    "name": "On Bridge When Icy (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-208",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Australia_road_sign_W8-208.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-208.svg",
+    "name": "Limited Width Warning (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-212",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Australia_road_sign_W8-212.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W8-212.svg",
+    "name": "High Wind Area (used in NSW)",
+    "osmTags": ["hazard=side_winds"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Queensland_W8-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W8-Q01.svg",
+    "name": "Cane Railway (A railway is used by sugar cane trains) (This warning sign is only used with Railway Level Crossing ahead) (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-Q02",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Queensland_W8-Q02.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W8-Q02.svg",
+    "name": "Crossing Ahead (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-Q03",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Queensland_W8-Q03.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W8-Q03.svg",
+    "name": "Bus Stop (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-Q05",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Queensland_W8-Q05.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W8-Q05.svg",
+    "name": "Wait Till Road Clear (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W8-Q06",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Queensland_W8-Q06.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_W8-Q06.svg",
+    "name": "Watch for Traffic (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W9-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Australia_road_sign_W9-1-L.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W9-1-L.svg",
-    "name": "W9-1",
+    "name": "Modified side road intersection (left)",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:G2",
+    "sign": "AU:W9-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Australia_road_sign_W9-2-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W9-2-L.svg",
+    "name": "Modified T-junction (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:W9-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Australia_road_sign_W9-3-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_W9-3-L.svg",
+    "name": "Modified crossroad intersection (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G2-5",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G2-5_Major_Intersection_Direction_-_narrow_format_-road_name_%26_destination_%26_route_marker.gif",
-    "name": "G2-5",
+    "name": "Relation:destination_sign: type=destination_sign destination:ref=A6 destination=Ermington destination:street=Stewart Street colour:arrow=white colour:back=green colour:text=white",
     "osmTags": [
       "type=destination_sign",
       "destination:ref=A6",
       "destination=Ermington",
-      "destination:street=Stewart",
+      "destination:street=Stewart Street",
       "colour:arrow=white",
       "colour:back=green",
       "colour:text=white"
@@ -167,9 +3324,9 @@
     "comments": ""
   },
   {
-    "sign": "AU:G3",
+    "sign": "AU:G3-3",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G3-3_Minor_Intersection_Direction_Fingerboard_Sign.gif",
-    "name": "G3-3",
+    "name": "Relation:destination_sign: type=destination_sign destination:ref=A39 destination=Narrabri distance=18 colour:back=green colour:text=white",
     "osmTags": [
       "type=destination_sign",
       "destination:ref=A39",
@@ -187,107 +3344,542 @@
     "osmTags": [
       "type=destination_sign",
       "destination:ref=A31",
-      "destination:street=Hume",
-      "destination=Goulburn",
-      "distance=21",
+      "destination:street=Hume Highway",
+      "destination=Goulburn;Yass;Canberra;Melbourne",
+      "distance=21;103;115;722",
       "colour:back=green",
-      "colour:text=white"
+      "colour:text=white For example",
+      "type=destination_sign relation",
+      "type=destination_sign relation and"
     ],
     "comments": ""
   },
   {
-    "sign": "AU:G6",
+    "sign": "AU:G6-254",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4c/AU-NSW_road_sign_G6-254.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-254.svg",
-    "name": "G6-254",
+    "name": "Speed Cameras Check Your Speed Now (used in NSW)",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:P2",
+    "sign": "AU:G6-327-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/17/AU-NSW_road_sign_G6-327-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-327-1.svg",
+    "name": "Speed Camera (24 Hours) (Speed Limit) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-327-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5c/AU-NSW_road_sign_G6-327-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-327-2.svg",
+    "name": "Speed Camera (24 Hours) (Variable Speed Limit Enforced) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-327-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b6/AU-NSW_road_sign_G6-327-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-327-3.svg",
+    "name": "Speed Camera (24 Hours) (Speed Limits per Category) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-328-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/04/AU-NSW_road_sign_G6-328-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-328-1.svg",
+    "name": "Speed Camera Ahead (Speed Limit) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-328-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/39/AU-NSW_road_sign_G6-328-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-328-2.svg",
+    "name": "Speed Camera Ahead (Variable Speed Limit Enforced) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-328-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/91/AU-NSW_road_sign_G6-328-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-328-5.svg",
+    "name": "Speed Camera Ahead (Speed Limits per Category) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-329-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4c/AU-NSW_road_sign_G6-329-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-329-1.svg",
+    "name": "Speed Camera (Heavy Fines Loss of Licence) (Speed Limit) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-329-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/52/AU-NSW_road_sign_G6-329-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-329-2.svg",
+    "name": "Speed Camera (Heavy Fines Loss of Licence) (Variable Speed Limit Enforced) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-329-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d9/AU-NSW_road_sign_G6-329-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-329-3.svg",
+    "name": "Speed Camera (Heavy Fines Loss of Licence) (Speed Limits per Category) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-330-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/da/AU-NSW_road_sign_G6-330-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-330-1.svg",
+    "name": "Speed Camera in Tunnel Ahead (Speed Limit) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-330-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/AU-NSW_road_sign_G6-330-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-330-2.svg",
+    "name": "Speed Camera in Tunnel Ahead (Variable Speed Limit Enforced) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-331-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2e/AU-NSW_road_sign_G6-331-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-331-1.svg",
+    "name": "Speed Camera in Tunnel (24 Hours) (Speed Limit) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-331-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e0/AU-NSW_road_sign_G6-331-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-331-2.svg",
+    "name": "Speed Camera in Tunnel (24 Hours) (Variable Speed Limit Enforced) (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:P2-V100",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/05/AU-VIC_road_sign_P2-V100.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_P2-V100.svg",
-    "name": "P2-V100",
+    "name": "Speed & Red Light Cameras Operate Throughout Victoria (used in VIC)",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:G9",
+    "sign": "AU:P2-V105",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/AU-VIC_road_sign_P2-V105.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_P2-V105.svg",
+    "name": "Speed Cameras Used In Construction Zones (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:P2-V106",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4f/AU-VIC_road_sign_P2-V106.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_P2-V106.svg",
+    "name": "Temporary events are not mapped, per Good Practice.",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:P2-V111-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6d/AU-VIC_road_sign_P2-V111-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_P2-V111-2.svg",
+    "name": "Road Safety Cameras Operate In This Area (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G6-332",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/49/AU-NSW_road_sign_G6-332.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G6-332.svg",
+    "name": "School Zone Ahead (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-9",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Australia_G9-9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G9-9.svg",
-    "name": "G9-9",
+    "name": "Reduce Speed",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:GE2-",
+    "sign": "AU:G9-11",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:G9_11.jpg",
+    "name": "No Through Road",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-37",
+    "name": "See https://community.openstreetmap.org/t/overtaking-lane-tagging/137924",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-38",
+    "name": "See https://community.openstreetmap.org/t/overtaking-lane-tagging/137924",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-51",
+    "name": "Slow Vehicle Use Turnouts",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-69",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Australia_G9-69.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G9-69.svg",
+    "name": "Wrong Way - Go Back",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-79",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/49/Australia_road_sign_G9-79_%2810%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_G9-79_(10).svg",
+    "name": "10 km/h Speed Limit Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-82",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/93/Australia_G9-82.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G9-82.svg",
+    "name": "Steep Descent",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-83",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Australia_G9-83.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_G9-83.svg",
+    "name": "Long Steep Descent",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-V113-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/AU-VIC_road_sign_G9-V113-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_G9-V113-1.svg",
+    "name": "Sections of This Road Are Subject to Frost, Ice, Snow; Drive Slowly (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-V170",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/83/AU-VIC_road_sign_G9-V170.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_G9-V170.svg",
+    "name": "Drive On Left In Australia (Placed in areas with high tourist traffic, such as roadways near airports) (used in VIC and QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-V203",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Australia_road_sign_G9-V203.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_G9-V203.svg",
+    "name": "Keep Clear (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-375",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3c/AU-NSW_road_sign_G9-375.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G9-375.svg",
+    "name": "Speed Limit during Non-School Zone times (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:G9-380",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/59/AU-NSW_road_sign_G9-380.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_G9-380.svg",
+    "name": "Speed Limits Enforced (used in NSW)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:GE2-3",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/48/Australia_GE2-3.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE2-3.svg",
-    "name": "GE2-3",
+    "name": "Exit",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:GE6-",
+    "sign": "AU:GE2-4",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Australia_GE2-4.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE2-4.svg",
+    "name": "Exit (with supplementary number)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:GE6-9",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/99/Australia_GE6-9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE6-9.svg",
-    "name": "GE6-9",
+    "name": "End Freeway 2 km",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:GE9-",
+    "sign": "AU:GE6-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/45/Australia_GE6-10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE6-10.svg",
+    "name": "End Freeway 1 km",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:GE9-3",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Australia_GE9-3.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE9-3.svg",
-    "name": "GE9-3",
+    "name": "Reduce Speed Now",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:D4",
+    "sign": "AU:GE9-15",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Australia_GE9-15.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE9-15.svg",
+    "name": "Wrong Way",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:GE9-23",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Australia_GE9-23.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_GE9-23.svg",
+    "name": "Emergency Median Crossing",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-1-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/91/Australia_D4-1-1_%28L%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_D4-1-1_(L).svg",
-    "name": "D4-1-1",
+    "name": "Left curve marker (used at curves or roundabouts)",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:T1",
+    "sign": "AU:D4-1-1-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Queensland_D4-1-1-Q01_%28L%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_D4-1-1-Q01_(L).svg",
+    "name": "Left curve marker (used at curves in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-1-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6d/AU_road_sign_D4-1-2-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_D4-1-2-L.svg",
+    "name": "Island curve marker (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-2-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/18/Australia_D4-2-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_D4-2-2.svg",
+    "name": "Pass either side Chevron",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-2-2-Q01",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/58/Queensland_D4-2-2-Q01.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Queensland_D4-2-2-Q01.svg",
+    "name": "Pass either side (used in QLD)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-2-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Australia_D4-2-3.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_D4-2-3.svg",
+    "name": "End of road Curve marker (used at T-junctions)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/11/Australia_D4-3_%28L%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_D4-3_(L).svg",
+    "name": "Narrow marker (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-6",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c4/AU_road_sign_D4-6-L.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_D4-6-L.svg",
+    "name": "Curve marker (left)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-V105",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b8/AU-VIC_road_sign_D4-V105.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-VIC_road_sign_D4-V105.svg",
+    "name": "Pass either side (used in VIC)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:D4-V110",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/76/Australia_road_sign_D4-V110_%28L%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_road_sign_D4-V110_(L).svg",
+    "name": "Curve marker with Advisory Speed (left, used in VIC)",
+    "osmTags": ["maxspeed:advisory=45"],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Australia_T1-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T1-1.svg",
-    "name": "T1-1",
+    "name": "Roadwork Ahead",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:T2",
+    "sign": "AU:T1-3-1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Australia_T1-3-1.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T1-3-1.svg",
+    "name": "Road Plant Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1-5",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/19/Australia_T1-5.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T1-5.svg",
+    "name": "Workers Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1-10",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Australia_T1-10.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T1-10.svg",
+    "name": "Traffic Hazard",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1-16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Australia_T1-16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T1-16.svg",
+    "name": "Roadwork 1 km ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1-18",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/68/AU_road_sign_T1-18.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU_road_sign_T1-18.svg",
+    "name": "Prepare to Stop",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1-30",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/89/Australia_T1-30.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T1-30.svg",
+    "name": "Traffic Lights",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1-31",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Australia_T1-31.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T1-31.svg",
+    "name": "Roadwork Ahead",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T1-SA109",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fe/AU-SA_road_sign_T1-SA109.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-SA_road_sign_T1-SA109.svg",
+    "name": "Speed Limit Changed (used in SA)",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T2-6-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Australia_T2-6-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T2-6-1.svg",
-    "name": "T2-6-1",
+    "name": "Lane Status",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:T3",
+    "sign": "AU:T2-6-2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/28/Australia_T2-6-2.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T2-6-2.svg",
+    "name": "Lane Status",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T2-16",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Australia_T2-16.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T2-16.svg",
+    "name": "End Roadwork",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T2-17",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Australia_T2-17.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T2-17.svg",
+    "name": "End Roadwork",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T3-3",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Australia_T3-3.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T3-3.svg",
-    "name": "T3-3",
+    "name": "Slippery road when wet",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:T4",
+    "sign": "AU:T3-9",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Australia_T3-9.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T3-9.svg",
+    "name": "Loose Gravel",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "AU:T4-216N",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b7/AU-NSW_road_sign_T4-216N.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AU-NSW_road_sign_T4-216N.svg",
-    "name": "T4-216N",
+    "name": "Roadwork Speed Limits Enforced (used in NSW)",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "AU:T7",
+    "sign": "AU:T7-1",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/87/Australia_T7-1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Australia_T7-1.svg",
-    "name": "T7-1",
+    "name": "Slow",
     "osmTags": [],
     "comments": ""
   }

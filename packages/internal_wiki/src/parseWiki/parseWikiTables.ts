@@ -143,10 +143,15 @@ export const extractTrafficSignId = (rowText: string, prefix: string): string | 
     const id = explicit[2] ?? explicit[1]
     return id!.replace(/`/g, '').trim()
   }
+
+  const leadingCode = rowText.match(/^([A-Z]{1,3}\d+(?:-[A-Za-z0-9]+)*)\b/)
+  if (leadingCode) return leadingCode[1]!
+
   const codeMatch = rowText.match(
-    /\b([A-Z]-\d+[a-z]?|[A-Z]\d+[a-z]?|[A-Z]{1,2}\d+[a-z.-]*|\d+[a-z](?:\.\d+)?(?:-\d+[a-z]?)?)\b/,
+    /\b([A-Z]-\d+[a-z]?|[A-Z]{1,2}\d+(?:-[A-Za-z0-9]+)+|[A-Z]{1,2}\d+[a-z.-]*|[A-Z]\d+[a-z]?|\d+[a-z](?:\.\d+)?(?:-\d+[a-z]?)?)\b/,
   )
   if (codeMatch) return codeMatch[1]!
+
   const numbered = rowText.match(/^(\d+[a-z]?(?:\.\d+)?(?:-\d+)?)\s*:/)
   if (numbered) return numbered[1]!
   return null
