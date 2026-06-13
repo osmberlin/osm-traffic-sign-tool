@@ -23,14 +23,27 @@ export const Footer = () => {
     {
       name: m.footer_imprint(),
       href: 'https://www.osm-verkehrswende.org/contact',
+      blank: true,
     },
     {
       name: m.footer_changelog(),
       href: 'https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/apps/traffic-sign-tool/CHANGELOG.md',
+      blank: true,
     },
     {
       name: m.footer_github(),
       href: 'https://github.com/osmberlin/osm-traffic-sign-tool',
+      blank: true,
+    },
+    {
+      name: m.footer_converter_package(),
+      href: 'https://www.npmjs.com/package/@osm-traffic-signs/converter',
+      blank: true,
+    },
+    {
+      name: m.footer_sign_data_json(),
+      href: '/sign-data/manifest.json',
+      blank: false,
     },
   ]
 
@@ -88,7 +101,7 @@ export const Footer = () => {
           {navigation.map((item) => {
             return (
               <div key={item.href} className="px-5 py-2">
-                <ExternalLink href={item.href} className={footerLinkClassName} blank>
+                <ExternalLink href={item.href} className={footerLinkClassName} blank={item.blank}>
                   {item.name}
                 </ExternalLink>
               </div>

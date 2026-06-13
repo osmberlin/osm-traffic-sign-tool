@@ -7,7 +7,8 @@
   "type": "module",
   "scripts": {
     "bleach": "rm -rf node_modules && rm -rf dist/",
-    "build": "bun run build:paraglide && bun run build:vite",
+    "build": "bun run build:paraglide && bun run build:copy-sign-data && bun run build:vite",
+    "build:copy-sign-data": "bun ./scripts/copy-sign-data-json.ts",
     "build:gh-pages": "bun run build && cp dist/index.html dist/404.html",
     "build:paraglide": "paraglide-js compile --project ./project.inlang --outdir ./paraglide --strategy localStorage baseLocale",
     "build:vite": "vite build",

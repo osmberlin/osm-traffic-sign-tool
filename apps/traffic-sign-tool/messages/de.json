@@ -33,6 +33,8 @@
   "footer_combinations_qa": "Zeichenkombinations-QA",
   "footer_questions_qa": "Zeichenfragen-QA",
   "footer_all_signs": "Alle Zeichen",
+  "footer_converter_package": "NPM-Paket (@osm-traffic-signs/converter)",
+  "footer_sign_data_json": "Zeichendaten (JSON)",
   "qa_pages_nav_label": "QA-Seiten:",
   "qa_pages_nav_aria_label": "QA-Seiten",
   "qa_pages_nav_taginfo": "Taginfo",

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Ship JSON sign data under `sign-data/` (per-country catalogues, `catalogue-meta.json`, `general-redirects.json`, `manifest.json`) with package export paths for non-JS consumers ([#120](https://github.com/osmberlin/osm-traffic-sign-tool/issues/120)).
+
 ## 0.5.0
 
 _2026-06-06_
