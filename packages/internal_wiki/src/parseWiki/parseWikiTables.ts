@@ -49,6 +49,8 @@ const trimWikiTagValueProse = (value: string): string => {
     /\s+\(falls\b.*$/i,
     /\s+Beispiel\s+siehe:.*$/i,
     /\s+zur\s+einfachen\b.*$/i,
+    /\s+Zeitraum\s+ist\b.*$/i,
+    /\s+(?:Achtung|Hinweis|Anmerkung):\s.*$/i,
   ]
   for (const pattern of cutPatterns) {
     trimmed = trimmed.replace(pattern, '')
@@ -56,13 +58,23 @@ const trimWikiTagValueProse = (value: string): string => {
   return trimmed.trim()
 }
 
+/** Wiki often shows placeholder date ranges in conditionals that mappers should replace. */
+const trimWikiConditionalExampleDates = (value: string): string =>
+  value
+    .replace(
+      /\s+@\s+\d{4}\s+[A-Za-z]{3}\s+\d{2}\s+-\s+\d{4}\s+[A-Za-z]{3}\s+\d{2}\s*$/,
+      '',
+    )
+    .trim()
+
 const stripWikiConjunctionSuffix = (value: string): string => {
   let trimmed = value
     .replace(/\s+oder\s*$/i, '')
     .replace(/\s+und\s*$/i, '')
     .trim()
   if (!trimmed.includes('(')) trimmed = trimmed.replace(/\)+$/g, '').trim()
-  return trimWikiTagValueProse(trimmed)
+  trimmed = trimWikiTagValueProse(trimmed)
+  return trimWikiConditionalExampleDates(trimmed)
 }
 
 export const normalizeWikiTagValue = (value: string): string => {

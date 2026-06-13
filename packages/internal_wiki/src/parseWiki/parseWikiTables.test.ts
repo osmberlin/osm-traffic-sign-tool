@@ -289,6 +289,16 @@ describe('parseWikiTags', () => {
     })
   })
 
+  describe('conditional example dates and prose (AT FKV_1.3)', () => {
+    test('strips wiki placeholder dates and German instructions from access:conditional', () => {
+      expect(
+        parseWikiTags(
+          'Als Linie mit traffic_sign=AT:FKV_1.3 access:conditional=forestry @ 2024 May 01 - 2024 Oct 01 Zeitraum ist entsprechend der Beschilderung anzupassen.',
+        ),
+      ).toEqual([{ key: 'access:conditional', value: 'forestry' }])
+    })
+  })
+
   describe('space-separated tags in one segment (FR A1a)', () => {
     test('parses hazard tag alongside skipped traffic_sign from rendered FR:A1a cell', () => {
       expect(parseWikiTags('traffic_sign=FR:A1a hazard=turn')).toEqual([
