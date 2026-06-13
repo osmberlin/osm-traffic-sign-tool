@@ -212,5 +212,25 @@ describe('question answers in signsToTags()', () => {
       expect(result.get('is_sidepath')).toBe('yes')
       expect(result.get('traffic_sign')).toBe('DE:240,1000-30')
     })
+
+    test('DE:241-30 + DE:1000-31 defaults to oneway=no (oneway:bicycle=no documented in comments)', () => {
+      const mainSign = data.find((item) => item.osmValuePart === '241-30')
+      const modifierSign = data.find((item) => item.osmValuePart === '1000-31')
+      expect(mainSign).toBeDefined()
+      expect(modifierSign).toBeDefined()
+
+      const signs = [
+        transformToSignState('DE', mainSign!),
+        transformToSignState('DE', modifierSign!),
+      ]
+
+      const result = signsToTags(signs, 'DE', 'way', {
+        '241-30': { highwayClass: 'path', sidepath: 'yes' },
+      })
+      expect(result.get('highway')).toMatchObject(['path'])
+      expect(result.get('oneway')).toBe('no')
+      expect(result.has('oneway:bicycle')).toBe(false)
+      expect(result.get('traffic_sign')).toBe('DE:241-30,1000-31')
+    })
   })
 })
