@@ -257,6 +257,19 @@ describe('parseWikiTags', () => {
     })
   })
 
+  describe('German wiki prose after tag values (AT 53.27)', () => {
+    test('strips als Teil einer Straße from highway=cycleway', () => {
+      expect(
+        parseWikiTags(
+          'Als Linie von der Straße separiert traffic_sign=AT:53.27 highway=cycleway als Teil einer Straße cycleway=* cycleway:bicycle=designated',
+        ),
+      ).toEqual([
+        { key: 'highway', value: 'cycleway' },
+        { key: 'cycleway:bicycle', value: 'designated' },
+      ])
+    })
+  })
+
   describe('space-separated tags in one segment (FR A1a)', () => {
     test('parses hazard tag alongside skipped traffic_sign from rendered FR:A1a cell', () => {
       expect(parseWikiTags('traffic_sign=FR:A1a hazard=turn')).toEqual([

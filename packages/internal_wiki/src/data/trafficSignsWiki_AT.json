@@ -52,7 +52,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Gefahrenzeichen_3a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_3a.svg",
     "name": "3a: Kreuzung mit Kreisverkehr",
-    "osmTags": ["hazard=roundabout Als Linie zusätzlich mit", "junction=roundabout"],
+    "osmTags": ["hazard=roundabout", "junction=roundabout"],
     "comments": ""
   },
   {
@@ -704,7 +704,7 @@
     "name": "16: Radweg",
     "osmTags": [
       "highway=cycleway (an der Radweglinie)",
-      "bicycle=use_sidepath (an der Straßenlinie) als Teil einer Straße",
+      "bicycle=use_sidepath (an der Straßenlinie)",
       "cycleway:bicycle=designated"
     ],
     "comments": ""
@@ -1178,7 +1178,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Hinweiszeichen_27.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_27.svg",
     "name": "27: Radweg ohne Benützungspflicht",
-    "osmTags": ["highway=cycleway als Teil einer Straße", "cycleway:bicycle=designated"],
+    "osmTags": ["highway=cycleway", "cycleway:bicycle=designated"],
     "comments": ""
   },
   {
@@ -1374,12 +1374,11 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:WVO_F.1.svg",
     "name": "F.1: Beginn eines Treppelweges",
     "osmTags": [
-      "highway=track (selten auch highway=path)",
-      "tracktype=* (oftmals tracktype=grade1)",
+      "highway=track",
       "motor_vehicle=private",
-      "bicycle=yes (falls die Zusatztafel F.3.1 bzw. F.3.2 nicht vorhanden ist)",
-      "inline_skates=no (falls die Zusatztafel F.4.1 bzw. F.4.2 nicht vorhanden ist)",
-      "description=Treppelweg (zur einfachen, menschenlesbaren Beschreibung als Treppelweg - \"Treppelweg\" ist nicht der name=* des Weges) Beispiel siehe:"
+      "bicycle=yes",
+      "inline_skates=no",
+      "description=Treppelweg (zur einfachen, menschenlesbaren Beschreibung als Treppelweg - \"Treppelweg\" ist nicht der name=* des Weges)"
     ],
     "comments": ""
   },

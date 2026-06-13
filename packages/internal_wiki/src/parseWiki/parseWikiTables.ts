@@ -38,13 +38,31 @@ const parsePolishDescriptionTagCell = (tagsText: string): { key: string; value: 
 }
 
 /** OSM wiki {{Tag}} templates use `3=` or `||` before the value to mean "do not link the value". */
+const trimWikiTagValueProse = (value: string): string => {
+  let trimmed = value
+  const cutPatterns = [
+    /\s+als\s+Teil\s+einer\s+Straße.*$/i,
+    /\s+als\s+(?:Linie|Teil|Punkt|Weg|Straße)\b.*$/i,
+    /\s+an\s+der\s+Straßenlinie\b.*$/i,
+    /\s+\(selten\s+auch\b.*$/i,
+    /\s+\(oftmals\b.*$/i,
+    /\s+\(falls\b.*$/i,
+    /\s+Beispiel\s+siehe:.*$/i,
+    /\s+zur\s+einfachen\b.*$/i,
+  ]
+  for (const pattern of cutPatterns) {
+    trimmed = trimmed.replace(pattern, '')
+  }
+  return trimmed.trim()
+}
+
 const stripWikiConjunctionSuffix = (value: string): string => {
   let trimmed = value
     .replace(/\s+oder\s*$/i, '')
     .replace(/\s+und\s*$/i, '')
     .trim()
   if (!trimmed.includes('(')) trimmed = trimmed.replace(/\)+$/g, '').trim()
-  return trimmed
+  return trimWikiTagValueProse(trimmed)
 }
 
 export const normalizeWikiTagValue = (value: string): string => {
