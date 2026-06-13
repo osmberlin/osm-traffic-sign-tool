@@ -270,6 +270,25 @@ describe('parseWikiTags', () => {
     })
   })
 
+  describe('wiki wildcard placeholders (AT Zusatztafel 54f/54g)', () => {
+    test('does not emit :conditional from *:conditional=* @ wet placeholder', () => {
+      expect(
+        parseWikiTags(
+          'traffic_sign=AT:54g In Kombination mit einem Verkehrszeichen traffic_sign=AT:...,54g Als Linie zusätzlich mit *:conditional=* @ wet',
+        ),
+      ).toEqual([])
+      expect(
+        toWikiSign('AT', {
+          signId: '54g',
+          name: 'g: bei nasser Fahrbahn',
+          tagsText:
+            'traffic_sign=AT:54g In Kombination mit einem Verkehrszeichen traffic_sign=AT:...,54g Als Linie zusätzlich mit *:conditional=* @ wet',
+          isNa: false,
+        })?.osmTags,
+      ).toEqual([])
+    })
+  })
+
   describe('space-separated tags in one segment (FR A1a)', () => {
     test('parses hazard tag alongside skipped traffic_sign from rendered FR:A1a cell', () => {
       expect(parseWikiTags('traffic_sign=FR:A1a hazard=turn')).toEqual([

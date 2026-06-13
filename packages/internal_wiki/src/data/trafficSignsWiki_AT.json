@@ -4,7 +4,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/47/Gefahrenzeichen_1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_1.svg",
     "name": "1: Querrinne oder Aufwölbung",
-    "osmTags": ["hazard=bump"],
+    "osmTags": [
+      "hazard=bump"
+    ],
     "comments": ""
   },
   {
@@ -12,7 +14,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Gefahrenzeichen_2a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2a.svg",
     "name": "2a: Gefährliche Kurve (Rechtskurve)",
-    "osmTags": ["hazard=curve", "hazard=turn / turn_right?"],
+    "osmTags": [
+      "hazard=curve",
+      "hazard=turn / turn_right?"
+    ],
     "comments": ""
   },
   {
@@ -20,7 +25,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Gefahrenzeichen_2b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2b.svg",
     "name": "2b: Gefährliche Kurve (Linkskurve)",
-    "osmTags": ["hazard=curve", "hazard=turn / turn_left?"],
+    "osmTags": [
+      "hazard=curve",
+      "hazard=turn / turn_left?"
+    ],
     "comments": ""
   },
   {
@@ -28,7 +36,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/Gefahrenzeichen_2c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2c.svg",
     "name": "2c: Gefährliche Kurven (Doppelkurve rechts beginnend)",
-    "osmTags": ["hazard=turns"],
+    "osmTags": [
+      "hazard=turns"
+    ],
     "comments": ""
   },
   {
@@ -36,7 +46,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Gefahrenzeichen_2d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_2d.svg",
     "name": "2d: Gefährliche Kurven (Doppelkurve links beginnend)",
-    "osmTags": ["hazard=turns"],
+    "osmTags": [
+      "hazard=turns"
+    ],
     "comments": ""
   },
   {
@@ -44,7 +56,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/Gefahrenzeichen_3.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_3.svg",
     "name": "3: Kreuzung",
-    "osmTags": ["hazard=dangerous_junction"],
+    "osmTags": [
+      "hazard=dangerous_junction"
+    ],
     "comments": ""
   },
   {
@@ -52,7 +66,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Gefahrenzeichen_3a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_3a.svg",
     "name": "3a: Kreuzung mit Kreisverkehr",
-    "osmTags": ["hazard=roundabout", "junction=roundabout"],
+    "osmTags": [
+      "hazard=roundabout",
+      "junction=roundabout"
+    ],
     "comments": ""
   },
   {
@@ -60,7 +77,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Gefahrenzeichen_4.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_4.svg",
     "name": "4: Kreuzung mit Straße ohne Vorrang",
-    "osmTags": ["hazard=dangerous_junction"],
+    "osmTags": [
+      "hazard=dangerous_junction"
+    ],
     "comments": ""
   },
   {
@@ -174,7 +193,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/49/Gefahrenzeichen_8a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_8a.svg",
     "name": "8a: Fahrbahnverengung (beidseitig)",
-    "osmTags": ["traffic_calming=choker"],
+    "osmTags": [
+      "traffic_calming=choker"
+    ],
     "comments": ""
   },
   {
@@ -182,7 +203,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Gefahrenzeichen_8b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_8b.svg",
     "name": "8b: Fahrbahnverengung (linksseitig)",
-    "osmTags": ["hazard=?"],
+    "osmTags": [
+      "hazard=?"
+    ],
     "comments": ""
   },
   {
@@ -190,7 +213,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/03/Gefahrenzeichen_8c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_8c.svg",
     "name": "8c: Fahrbahnverengung (rechtsseitig)",
-    "osmTags": ["hazard=?"],
+    "osmTags": [
+      "hazard=?"
+    ],
     "comments": ""
   },
   {
@@ -198,7 +223,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Gefahrenzeichen_9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_9.svg",
     "name": "9: Baustelle",
-    "osmTags": ["highway=construction", "construction=value des ways z.B. primary"],
+    "osmTags": [
+      "highway=construction",
+      "construction=value des ways z.B. primary"
+    ],
     "comments": ""
   },
   {
@@ -206,7 +234,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/77/Gefahrenzeichen_10.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_10.svg",
     "name": "10: Schleudergefahr",
-    "osmTags": ["hazard=slippery"],
+    "osmTags": [
+      "hazard=slippery"
+    ],
     "comments": ""
   },
   {
@@ -214,7 +244,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Gefahrenzeichen_10a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_10a.svg",
     "name": "10a: Seitenwind",
-    "osmTags": ["hazard=side_winds"],
+    "osmTags": [
+      "hazard=side_winds"
+    ],
     "comments": ""
   },
   {
@@ -222,7 +254,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/58/Gefahrenzeichen_10b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_10b.svg",
     "name": "10b: Steinschlag",
-    "osmTags": ["hazard=falling_rocks"],
+    "osmTags": [
+      "hazard=falling_rocks"
+    ],
     "comments": ""
   },
   {
@@ -230,7 +264,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/40/Gefahrenzeichen_10c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_10c.svg",
     "name": "10c: Flugbetrieb",
-    "osmTags": ["hazard=low_flying_aircraft"],
+    "osmTags": [
+      "hazard=low_flying_aircraft"
+    ],
     "comments": ""
   },
   {
@@ -238,7 +274,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Gefahrenzeichen_11.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_11.svg",
     "name": "11: Fußgängerübergang",
-    "osmTags": ["hazard=pedestrians"],
+    "osmTags": [
+      "hazard=pedestrians"
+    ],
     "comments": ""
   },
   {
@@ -246,7 +284,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/48/Gefahrenzeichen_11a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_11a.svg",
     "name": "11a: Radfahrerüberfahrt",
-    "osmTags": ["hazard=cyclists"],
+    "osmTags": [
+      "hazard=cyclists"
+    ],
     "comments": ""
   },
   {
@@ -254,7 +294,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Gefahrenzeichen_12.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_12.svg",
     "name": "12: Kinder",
-    "osmTags": ["hazard=children"],
+    "osmTags": [
+      "hazard=children"
+    ],
     "comments": ""
   },
   {
@@ -262,7 +304,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Gefahrenzeichen_13a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_13a.svg",
     "name": "13a: Achtung Tiere",
-    "osmTags": ["hazard=animal_crossing"],
+    "osmTags": [
+      "hazard=animal_crossing"
+    ],
     "comments": ""
   },
   {
@@ -270,7 +314,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/71/Gefahrenzeichen_13b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_13b.svg",
     "name": "13b: Achtung Wildwechsel",
-    "osmTags": ["hazard=animal_crossing"],
+    "osmTags": [
+      "hazard=animal_crossing"
+    ],
     "comments": ""
   },
   {
@@ -278,7 +324,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/af/Gefahrenzeichen_14.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_14.svg",
     "name": "14: Achtung Gegenverkehr",
-    "osmTags": ["hazard=two_way_traffic ?"],
+    "osmTags": [
+      "hazard=two_way_traffic ?"
+    ],
     "comments": ""
   },
   {
@@ -294,7 +342,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Gefahrenzeichen_15.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_15.svg",
     "name": "15: Vorankündigung eines Lichtzeichens",
-    "osmTags": ["hazard=traffic_signals"],
+    "osmTags": [
+      "hazard=traffic_signals"
+    ],
     "comments": ""
   },
   {
@@ -302,7 +352,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Gefahrenzeichen_16.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gefahrenzeichen_16.svg",
     "name": "16: Andere Gefahren",
-    "osmTags": ["hazard=yes ?"],
+    "osmTags": [
+      "hazard=yes ?"
+    ],
     "comments": ""
   },
   {
@@ -310,7 +362,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/37/Vorschriftszeichen_1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_1.svg",
     "name": "1: Fahrverbot (in beiden Richtungen)",
-    "osmTags": ["vehicle=no"],
+    "osmTags": [
+      "vehicle=no"
+    ],
     "comments": ""
   },
   {
@@ -318,7 +372,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Vorschriftszeichen_2.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_2.svg",
     "name": "2: Einfahrt verboten",
-    "osmTags": ["type=restriction", "restriction=no_entry"],
+    "osmTags": [
+      "type=restriction",
+      "restriction=no_entry"
+    ],
     "comments": ""
   },
   {
@@ -326,7 +383,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/98/Vorschriftszeichen_3a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_3a.svg",
     "name": "3a: Einbiegen nach links verboten",
-    "osmTags": ["type=restriction", "restriction=no_left_turn"],
+    "osmTags": [
+      "type=restriction",
+      "restriction=no_left_turn"
+    ],
     "comments": ""
   },
   {
@@ -334,7 +394,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/36/Vorschriftszeichen_3b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_3b.svg",
     "name": "3b: Einbiegen nach rechts verboten",
-    "osmTags": ["type=restriction", "restriction=no_right_turn"],
+    "osmTags": [
+      "type=restriction",
+      "restriction=no_right_turn"
+    ],
     "comments": ""
   },
   {
@@ -342,7 +405,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/27/Vorschriftszeichen_3c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_3c.svg",
     "name": "3c: Umkehren verboten",
-    "osmTags": ["type=restriction", "restriction=no_u_turn"],
+    "osmTags": [
+      "type=restriction",
+      "restriction=no_u_turn"
+    ],
     "comments": ""
   },
   {
@@ -350,7 +416,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Vorschriftszeichen_4a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_4a.svg",
     "name": "4a: Überholen von mehrspurigen KFZ verboten",
-    "osmTags": ["overtaking=no"],
+    "osmTags": [
+      "overtaking=no"
+    ],
     "comments": ""
   },
   {
@@ -358,7 +426,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Vorschriftszeichen_4b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_4b.svg",
     "name": "4b: Ende des Überholverbotes",
-    "osmTags": ["overtaking=yes"],
+    "osmTags": [
+      "overtaking=yes"
+    ],
     "comments": ""
   },
   {
@@ -366,7 +436,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Vorschriftszeichen_4c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_4c.svg",
     "name": "4c: Überholen für Lastkraftfahrzeuge verboten",
-    "osmTags": ["overtaking:hgv=no"],
+    "osmTags": [
+      "overtaking:hgv=no"
+    ],
     "comments": ""
   },
   {
@@ -374,7 +446,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Vorschriftszeichen_4d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_4d.svg",
     "name": "4d: Ende des Überholverbotes für Lastkraftfahrzeuge",
-    "osmTags": ["overtaking:hgv=yes"],
+    "osmTags": [
+      "overtaking:hgv=yes"
+    ],
     "comments": ""
   },
   {
@@ -382,7 +456,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Vorschriftszeichen_5.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_5.svg",
     "name": "5: Wartepflicht bei Gegenverkehr",
-    "osmTags": ["priority=forward", "priority=backward"],
+    "osmTags": [
+      "priority=forward",
+      "priority=backward"
+    ],
     "comments": ""
   },
   {
@@ -390,7 +467,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Vorschriftszeichen_6a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_6a.svg",
     "name": "6a: Fahrverbot für alle Kraftfahrzeuge außer einspurigen Motorrädern",
-    "osmTags": ["motorcar=no"],
+    "osmTags": [
+      "motorcar=no"
+    ],
     "comments": ""
   },
   {
@@ -398,7 +477,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/31/Vorschriftszeichen_6b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_6b.svg",
     "name": "6b: Fahrverbot für Motorräder",
-    "osmTags": ["motorcycle=no"],
+    "osmTags": [
+      "motorcycle=no"
+    ],
     "comments": ""
   },
   {
@@ -406,7 +487,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Vorschriftszeichen_6c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_6c.svg",
     "name": "6c: Fahrverbot für alle Kraftfahrzeuge",
-    "osmTags": ["motor_vehicle=no"],
+    "osmTags": [
+      "motor_vehicle=no"
+    ],
     "comments": ""
   },
   {
@@ -414,7 +497,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Vorschriftszeichen_6d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_6d.svg",
     "name": "6d: Fahrverbot für Kraftfahrzeuge mit Anhänger",
-    "osmTags": ["trailer=no"],
+    "osmTags": [
+      "trailer=no"
+    ],
     "comments": ""
   },
   {
@@ -422,7 +507,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Vorschriftszeichen_6d_Gewicht_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_6d_Gewicht_(2010).svg",
     "name": "6d: Fahrverbot für Kraftfahrzeuge mit Anhänger, wenn höchstens zulässiges Gesamtgewicht des Anhängers … Tonnen überschreitet",
-    "osmTags": ["maxweightrating:trailer=2.4"],
+    "osmTags": [
+      "maxweightrating:trailer=2.4"
+    ],
     "comments": ""
   },
   {
@@ -430,7 +517,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Vorschriftszeichen_6d_L%C3%A4nge_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_6d_L%C3%A4nge_(2010).svg",
     "name": "6d: Fahrverbot für Kraftfahrzeuge mit Anhänger, wenn Länge des Anhängers … Meter überschreitet",
-    "osmTags": ["maxlength:trailer=10"],
+    "osmTags": [
+      "maxlength:trailer=10"
+    ],
     "comments": ""
   },
   {
@@ -438,7 +527,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/41/Vorschriftszeichen_7a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7a.svg",
     "name": "7a: Fahrverbot für Lastkraftfahrzeuge",
-    "osmTags": ["hgv=no"],
+    "osmTags": [
+      "hgv=no"
+    ],
     "comments": ""
   },
   {
@@ -446,7 +537,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Vorschriftszeichen_7a_Gewicht_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7a_Gewicht_(2010).svg",
     "name": "7a: Fahrverbot für Last­kraftfahrzeuge bzw. Anhänger mit mehr als ... Tonnen höchst­zu­lässigem Gesamtgewicht",
-    "osmTags": ["maxweightrating:hgv=5.5"],
+    "osmTags": [
+      "maxweightrating:hgv=5.5"
+    ],
     "comments": ""
   },
   {
@@ -454,7 +547,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Vorschriftszeichen_7a_L%C3%A4nge_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7a_L%C3%A4nge_(2010).svg",
     "name": "7a: Fahrverbot für Lastkraftfahrzeuge (bzw. inklusive Anhänger) über ... Meter Gesamtlänge",
-    "osmTags": ["maxlength:hgv=10"],
+    "osmTags": [
+      "maxlength:hgv=10"
+    ],
     "comments": ""
   },
   {
@@ -462,7 +557,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Vorschriftszeichen_7b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7b.svg",
     "name": "7b: Fahrverbot für Lastkraftfahrzeuge mit Anhänger",
-    "osmTags": ["hgv:trailer=no"],
+    "osmTags": [
+      "hgv:trailer=no"
+    ],
     "comments": ""
   },
   {
@@ -470,7 +567,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Vorschriftszeichen_7c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7c.svg",
     "name": "7c: Fahrverbot für Fuhrwerke",
-    "osmTags": ["carriage=no"],
+    "osmTags": [
+      "carriage=no"
+    ],
     "comments": ""
   },
   {
@@ -478,7 +577,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/24/Vorschriftszeichen_7e.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7e.svg",
     "name": "7e: Fahrverbot für Kraftfahrzeuge mit gefährlichen Gütern",
-    "osmTags": ["hazmat=no"],
+    "osmTags": [
+      "hazmat=no"
+    ],
     "comments": ""
   },
   {
@@ -486,7 +587,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/36/Vorschriftszeichen_7d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7d.svg",
     "name": "7d: Fahrverbot für Tankkraftfahrzeuge",
-    "osmTags": ["hazmat=no"],
+    "osmTags": [
+      "hazmat=no"
+    ],
     "comments": ""
   },
   {
@@ -494,7 +597,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/47/Vorschriftszeichen_7f.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7f.svg",
     "name": "7f: Fahrverbot für Omnibusse",
-    "osmTags": ["bus=no", "tourist_bus=no"],
+    "osmTags": [
+      "bus=no",
+      "tourist_bus=no"
+    ],
     "comments": ""
   },
   {
@@ -502,7 +608,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Vorschriftszeichen_7f_Gewicht_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7f_Gewicht_(2010).svg",
     "name": "7f: Fahrverbot für Omnibusse mit mehr als ... Tonnen höchst­zu­lässigem Gesamtgewicht",
-    "osmTags": ["maxweightrating:bus=7.5", "maxweightrating:tourist_bus=7.5"],
+    "osmTags": [
+      "maxweightrating:bus=7.5",
+      "maxweightrating:tourist_bus=7.5"
+    ],
     "comments": ""
   },
   {
@@ -510,7 +619,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/97/Vorschriftszeichen_7f_L%C3%A4nge_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_7f_L%C3%A4nge_(2010).svg",
     "name": "7f: Fahrverbot für Omnibusse über ... Meter Gesamtlänge",
-    "osmTags": ["maxlength:bus=10", "maxlength:tourist_bus=10"],
+    "osmTags": [
+      "maxlength:bus=10",
+      "maxlength:tourist_bus=10"
+    ],
     "comments": ""
   },
   {
@@ -518,7 +630,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/09/Vorschriftszeichen_8a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_8a.svg",
     "name": "8a: Fahrverbot für Fahrräder und Motorfahrräder",
-    "osmTags": ["bicycle=no", "moped=no"],
+    "osmTags": [
+      "bicycle=no",
+      "moped=no"
+    ],
     "comments": ""
   },
   {
@@ -526,7 +641,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Vorschriftszeichen_8b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_8b.svg",
     "name": "8b: Fahrverbot für Motorfahrräder",
-    "osmTags": ["moped=no"],
+    "osmTags": [
+      "moped=no"
+    ],
     "comments": ""
   },
   {
@@ -534,7 +651,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Vorschriftszeichen_8c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_8c.svg",
     "name": "8c: Fahrverbot für Fahrräder",
-    "osmTags": ["bicycle=no"],
+    "osmTags": [
+      "bicycle=no"
+    ],
     "comments": ""
   },
   {
@@ -542,7 +661,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/17/Vorschriftszeichen_9a_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_9a_(2010).svg",
     "name": "9a: Fahrverbot für über ... Meter breite Fahrzeuge",
-    "osmTags": ["maxwidth=2"],
+    "osmTags": [
+      "maxwidth=2"
+    ],
     "comments": ""
   },
   {
@@ -550,7 +671,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/05/Vorschriftszeichen_9b_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_9b_(2010).svg",
     "name": "9b: Fahrverbot für über ... Meter hohe Fahrzeuge",
-    "osmTags": ["maxheight=2.9"],
+    "osmTags": [
+      "maxheight=2.9"
+    ],
     "comments": ""
   },
   {
@@ -558,7 +681,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Vorschriftszeichen_9c_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_9c_(2010).svg",
     "name": "9c: Fahrverbot für Fahrzeuge mit über ... Tonnen Gesamtgewicht",
-    "osmTags": ["maxweight=5.5"],
+    "osmTags": [
+      "maxweight=5.5"
+    ],
     "comments": ""
   },
   {
@@ -566,7 +691,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/23/Vorschriftszeichen_9d_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_9d_(2010).svg",
     "name": "9d: Fahrverbot für alle Fahrzeuge mit über ... Tonnen Achslast",
-    "osmTags": ["maxaxleload=2.4"],
+    "osmTags": [
+      "maxaxleload=2.4"
+    ],
     "comments": ""
   },
   {
@@ -574,7 +701,11 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Vorschriftszeichen_10a_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_10a_(2010).svg",
     "name": "10a: Geschwindigkeitsbeschränkung (erlaubte Höchstgeschwindigkeit)",
-    "osmTags": ["maxspeed=30", "source:maxspeed=sign", "maxspeed:type=sign"],
+    "osmTags": [
+      "maxspeed=30",
+      "source:maxspeed=sign",
+      "maxspeed:type=sign"
+    ],
     "comments": ""
   },
   {
@@ -614,7 +745,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/74/Vorschriftszeichen_12_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_12_(2010).svg",
     "name": "12: Halt Zoll",
-    "osmTags": ["barrier=border_control"],
+    "osmTags": [
+      "barrier=border_control"
+    ],
     "comments": ""
   },
   {
@@ -670,7 +803,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Vorschriftszeichen_14.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_14.svg",
     "name": "14: Hupverbot",
-    "osmTags": ["horn=no"],
+    "osmTags": [
+      "horn=no"
+    ],
     "comments": ""
   },
   {
@@ -678,7 +813,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Vorschriftszeichen_14a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_14a.svg",
     "name": "14a: Reitverbot",
-    "osmTags": ["horse=no"],
+    "osmTags": [
+      "horse=no"
+    ],
     "comments": ""
   },
   {
@@ -686,7 +823,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/81/Vorschriftszeichen_14b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_14b.svg",
     "name": "14b: Verbot für Fußgänger",
-    "osmTags": ["foot=no"],
+    "osmTags": [
+      "foot=no"
+    ],
     "comments": ""
   },
   {
@@ -694,7 +833,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Vorschriftszeichen_15a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_15a.svg",
     "name": "15a: Vorgeschriebene Fahrtrichtung für Kraftfahrzeuge mit gefährlichen Gütern",
-    "osmTags": ["type=restriction", "restriction:hazmat=only_right_turn"],
+    "osmTags": [
+      "type=restriction",
+      "restriction:hazmat=only_right_turn"
+    ],
     "comments": ""
   },
   {
@@ -722,7 +864,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/48/Vorschriftszeichen_17.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_17.svg",
     "name": "17: Gehweg",
-    "osmTags": ["highway=footway"],
+    "osmTags": [
+      "highway=footway"
+    ],
     "comments": ""
   },
   {
@@ -782,7 +926,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Vorschriftszeichen_17b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_17b.svg",
     "name": "17b: Reitweg",
-    "osmTags": ["highway=bridleway"],
+    "osmTags": [
+      "highway=bridleway"
+    ],
     "comments": ""
   },
   {
@@ -790,7 +936,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Vorschriftszeichen_18.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_18.svg",
     "name": "18: Unterführung",
-    "osmTags": ["highway=steps"],
+    "osmTags": [
+      "highway=steps"
+    ],
     "comments": ""
   },
   {
@@ -798,7 +946,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Vorschriftszeichen_19.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_19.svg",
     "name": "19: Vorgeschriebene Mindestgeschwindigkeit",
-    "osmTags": ["minspeed=30"],
+    "osmTags": [
+      "minspeed=30"
+    ],
     "comments": ""
   },
   {
@@ -814,7 +964,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Vorschriftszeichen_21.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_21.svg",
     "name": "21: Umkehrgebot",
-    "osmTags": ["type=restriction", "restriction=only_u_turn"],
+    "osmTags": [
+      "type=restriction",
+      "restriction=only_u_turn"
+    ],
     "comments": ""
   },
   {
@@ -838,7 +991,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Vorschriftszeichen_23.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_23.svg",
     "name": "23: Vorrang geben",
-    "osmTags": ["highway=give_way"],
+    "osmTags": [
+      "highway=give_way"
+    ],
     "comments": ""
   },
   {
@@ -846,7 +1001,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/59/Vorschriftszeichen_24.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_24.svg",
     "name": "24: Halt",
-    "osmTags": ["highway=stop"],
+    "osmTags": [
+      "highway=stop"
+    ],
     "comments": ""
   },
   {
@@ -854,7 +1011,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Vorschriftszeichen_25a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_25a.svg",
     "name": "25a: Beginn der Vorrangstraße",
-    "osmTags": ["priority_road=designated"],
+    "osmTags": [
+      "priority_road=designated"
+    ],
     "comments": ""
   },
   {
@@ -862,7 +1021,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/43/Vorschriftszeichen_25b.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_25b.svg",
     "name": "25b: Ende der Vorrangstraße",
-    "osmTags": ["priority_road=end"],
+    "osmTags": [
+      "priority_road=end"
+    ],
     "comments": ""
   },
   {
@@ -870,7 +1031,11 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Hinweiszeichen_1a_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_1a_(2010).svg",
     "name": "1a: Parken",
-    "osmTags": ["amenity=parking", "parking=surface/multi-storey/underground/...", "fee=yes/no"],
+    "osmTags": [
+      "amenity=parking",
+      "parking=surface/multi-storey/underground/...",
+      "fee=yes/no"
+    ],
     "comments": ""
   },
   {
@@ -886,7 +1051,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Hinweiszeichen_1c_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_1c_(2010).svg",
     "name": "1c: Pannenbucht",
-    "osmTags": ["highway=emergency_bay"],
+    "osmTags": [
+      "highway=emergency_bay"
+    ],
     "comments": ""
   },
   {
@@ -894,7 +1061,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Hinweiszeichen_2a_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_2a_(2010).svg",
     "name": "2a: Kennzeichnung eines Schutzweges",
-    "osmTags": ["footway=crossing"],
+    "osmTags": [
+      "footway=crossing"
+    ],
     "comments": ""
   },
   {
@@ -902,7 +1071,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Hinweiszeichen_2b_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_2b_(2010).svg",
     "name": "2b: Kennzeichnung einer Radfahrerüberfahrt",
-    "osmTags": ["cycleway=crossing"],
+    "osmTags": [
+      "cycleway=crossing"
+    ],
     "comments": ""
   },
   {
@@ -910,7 +1081,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Hinweiszeichen_2c-b_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_2c-b_(2010).svg",
     "name": "2c: Kennzeichnung eines Schutzweges und einer Radfahrerüberfahrt",
-    "osmTags": ["cycleway=crossing", "footway=crossing"],
+    "osmTags": [
+      "cycleway=crossing",
+      "footway=crossing"
+    ],
     "comments": ""
   },
   {
@@ -934,7 +1108,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Hinweiszeichen_6a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_6a.svg",
     "name": "6a: Taxistandplatz",
-    "osmTags": ["amenity=taxi"],
+    "osmTags": [
+      "amenity=taxi"
+    ],
     "comments": ""
   },
   {
@@ -942,7 +1118,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/54/Hinweiszeichen_7a.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_7a.svg",
     "name": "7a: Wartepflicht für Gegenverkehr",
-    "osmTags": ["priority=forward", "priority=backward"],
+    "osmTags": [
+      "priority=forward",
+      "priority=backward"
+    ],
     "comments": ""
   },
   {
@@ -985,7 +1164,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Hinweiszeichen_8d.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_8d.svg",
     "name": "8d: Ende der Autostraße",
-    "osmTags": ["motorroad=no"],
+    "osmTags": [
+      "motorroad=no"
+    ],
     "comments": ""
   },
   {
@@ -993,7 +1174,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Hinweiszeichen_9a_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_9a_(2010).svg",
     "name": "9a: Fußgängerzone",
-    "osmTags": ["highway=pedestrian"],
+    "osmTags": [
+      "highway=pedestrian"
+    ],
     "comments": ""
   },
   {
@@ -1007,7 +1190,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/23/Hinweiszeichen_9c.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_9c.svg",
     "name": "9c: Wohnstraße",
-    "osmTags": ["highway=living_street"],
+    "osmTags": [
+      "highway=living_street"
+    ],
     "comments": ""
   },
   {
@@ -1041,7 +1226,11 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Hinweiszeichen_9g.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_9g.svg",
     "name": "9g: Tunnel",
-    "osmTags": ["tunnel=yes", "layer=-1", "length=2148 (Länge in Meter ohne Maßeinheit)"],
+    "osmTags": [
+      "tunnel=yes",
+      "layer=-1",
+      "length=2148 (Länge in Meter ohne Maßeinheit)"
+    ],
     "comments": ""
   },
   {
@@ -1065,7 +1254,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Hinweiszeichen_12.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_12.svg",
     "name": "12: Laternen, die nicht die ganze Nacht über leuchten",
-    "osmTags": ["highway=street_lamp"],
+    "osmTags": [
+      "highway=street_lamp"
+    ],
     "comments": ""
   },
   {
@@ -1079,7 +1270,11 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Hinweiszeichen_13b_mit_Nr._geradeaus_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_13b_mit_Nr._geradeaus_(2010).svg",
     "name": "13b: Wegweiser",
-    "osmTags": ["destination:forward=Wien", "destination:ref:lanes=60", "turn:lanes=through"],
+    "osmTags": [
+      "destination:forward=Wien",
+      "destination:ref:lanes=60",
+      "turn:lanes=through"
+    ],
     "comments": ""
   },
   {
@@ -1139,7 +1334,12 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Hinweiszeichen_24.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_24.svg",
     "name": "24: Straße für Omnibusse",
-    "osmTags": ["highway=service", "vehicle=no", "bus=designated", "taxi=yes"],
+    "osmTags": [
+      "highway=service",
+      "vehicle=no",
+      "bus=designated",
+      "taxi=yes"
+    ],
     "comments": ""
   },
   {
@@ -1170,7 +1370,10 @@
     "imageSvg": "/w/images/4/47/Schulstra%C3%9Fe.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Schulstra%C3%9Fe.svg",
     "name": "26a: Schulstraße",
-    "osmTags": ["maxspeed=walk", "motor_vehicle=private"],
+    "osmTags": [
+      "maxspeed=walk",
+      "motor_vehicle=private"
+    ],
     "comments": ""
   },
   {
@@ -1178,7 +1381,10 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Hinweiszeichen_27.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Hinweiszeichen_27.svg",
     "name": "27: Radweg ohne Benützungspflicht",
-    "osmTags": ["highway=cycleway", "cycleway:bicycle=designated"],
+    "osmTags": [
+      "highway=cycleway",
+      "cycleway:bicycle=designated"
+    ],
     "comments": ""
   },
   {
@@ -1214,7 +1420,9 @@
     "imageSvg": "/w/images/e/ee/Osm_element_way.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/DE:Key:traffic_sign",
     "name": "geregelt in StVO § 54 Abs. 1-4",
-    "osmTags": ["access=* Tags"],
+    "osmTags": [
+      "access=* Tags"
+    ],
     "comments": ""
   },
   {
@@ -1262,7 +1470,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Zusatztafel_f.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatztafel_f.svg",
     "name": "f: bei Schneelage oder Eisbildung",
-    "osmTags": [":conditional=* @ snow"],
+    "osmTags": [],
     "comments": ""
   },
   {
@@ -1270,7 +1478,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Zusatztafel_g.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatztafel_g.svg",
     "name": "g: bei nasser Fahrbahn",
-    "osmTags": [":conditional=* @ wet"],
+    "osmTags": [],
     "comments": ""
   },
   {
@@ -1278,7 +1486,9 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Zusatztafel_h.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatztafel_h.svg",
     "name": "h: außer nach StVO § 29b Abs. 4 gekennzeichnete Fahrzeuge (hier: Behinderte)",
-    "osmTags": ["disabled=yes"],
+    "osmTags": [
+      "disabled=yes"
+    ],
     "comments": ""
   },
   {
@@ -1318,28 +1528,38 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/23/Zusatztafel_m.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatztafel_m.svg",
     "name": "m: ausgenommen Elektrofahrzeuge während des Ladevorgangs Auch als \"Z 111\" bekannt",
-    "osmTags": ["restriction=charging_only"],
+    "osmTags": [
+      "restriction=charging_only"
+    ],
     "comments": ""
   },
   {
     "sign": "AT:54n-1",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gruenpfeil-Rad-Goettingen-beide.jpg",
     "name": "n: Radfahrer dürfen trotz rotem Lichtzeichen rechts abbiegen (Grünpfeil)",
-    "osmTags": ["red_turn:right:bicycle=yes", "highway=traffic_signals"],
+    "osmTags": [
+      "red_turn:right:bicycle=yes",
+      "highway=traffic_signals"
+    ],
     "comments": ""
   },
   {
     "sign": "AT:54n-2",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Gruenpfeil-Rad-Goettingen-beide.jpg",
     "name": "n: Radfahrer dürfen trotz rotem Lichtzeichen geradeaus fahren (Grünpfeil bei T-Kreuzungen)",
-    "osmTags": ["red_turn:straight:bicycle=yes", "highway=traffic_signals"],
+    "osmTags": [
+      "red_turn:straight:bicycle=yes",
+      "highway=traffic_signals"
+    ],
     "comments": ""
   },
   {
     "sign": "AT:FKV_1.2",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AT_forstliches_Sperrgebiet.png",
     "name": "1.2: Forstliches Sperrgebiet",
-    "osmTags": ["access=forestry"],
+    "osmTags": [
+      "access=forestry"
+    ],
     "comments": ""
   },
   {
@@ -1355,7 +1575,9 @@
     "sign": "AT:FKV_1.8",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AT_FKV_1_8.png",
     "name": "1.8: Explizite Zulässigkeit der allgemeinen Benützung von Forststraßen oder sonstigen Wegen im Wald durch Radfahrer",
-    "osmTags": ["bicycle=yes"],
+    "osmTags": [
+      "bicycle=yes"
+    ],
     "comments": ""
   },
   {
@@ -1387,7 +1609,9 @@
     "imageSvg": "/w/images/b/b0/WVO_F.3.1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:WVO_F.3.1.svg",
     "name": "F.3.1: Radfahren erlaubt",
-    "osmTags": ["bicycle=designated"],
+    "osmTags": [
+      "bicycle=designated"
+    ],
     "comments": ""
   },
   {
@@ -1395,7 +1619,9 @@
     "imageSvg": "/w/images/e/e6/WVO_F.3.2.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:WVO_F.3.2.svg",
     "name": "F.3.2: Radfahren verboten",
-    "osmTags": ["bicycle=no"],
+    "osmTags": [
+      "bicycle=no"
+    ],
     "comments": ""
   },
   {
@@ -1403,7 +1629,9 @@
     "imageSvg": "/w/images/a/a6/WVO_F.4.1.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:WVO_F.4.1.svg",
     "name": "F.4.1: Rollschuhfahren bzw. Inline-Skaten erlaubt",
-    "osmTags": ["inline_skates=yes"],
+    "osmTags": [
+      "inline_skates=yes"
+    ],
     "comments": ""
   },
   {
@@ -1411,7 +1639,9 @@
     "imageSvg": "/w/images/b/b5/WVO_F.4.2.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:WVO_F.4.2.svg",
     "name": "F.4.2: Rollschuhfahren bzw. Inline-Skaten verboten",
-    "osmTags": ["inline_skates=no"],
+    "osmTags": [
+      "inline_skates=no"
+    ],
     "comments": ""
   }
 ]

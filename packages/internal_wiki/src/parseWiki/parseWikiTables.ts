@@ -106,13 +106,25 @@ const trimWikiTagListSeparator = (value: string): string => value.replace(/[,;]\
 const isWikiCrossReferenceTagKey = (key: string): boolean =>
   key === 'traffic_sign' || /:Tag:/i.test(key)
 
+/** Wiki uses `*:conditional=* @ wet` as a placeholder for the main sign's conditional tag. */
+const isWikiWildcardPlaceholderTag = (key: string, value: string): boolean =>
+  key.startsWith(':') || /^\*\s*@/.test(value) || value === '*'
+
 const pushWikiTag = (
   tags: { key: string; value: string }[],
   key: string,
   rawValue: string,
 ): void => {
   const value = trimWikiTagListSeparator(normalizeWikiTagValue(rawValue))
-  if (isWikiCrossReferenceTagKey(key) || !value || value === '*' || value === '=*') return
+  if (
+    isWikiCrossReferenceTagKey(key) ||
+    isWikiWildcardPlaceholderTag(key, value) ||
+    !value ||
+    value === '*' ||
+    value === '=*'
+  ) {
+    return
+  }
   if (!tags.some((t) => t.key === key && t.value === value)) {
     tags.push({ key, value })
   }
