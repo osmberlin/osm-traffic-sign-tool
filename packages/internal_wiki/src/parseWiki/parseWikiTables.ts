@@ -51,6 +51,11 @@ const trimWikiTagValueProse = (value: string): string => {
     /\s+zur\s+einfachen\b.*$/i,
     /\s+Zeitraum\s+ist\b.*$/i,
     /\s+(?:Achtung|Hinweis|Anmerkung):\s.*$/i,
+    /\s+und\s+optional\b.*$/i,
+    /\s+sowie\b.*$/i,
+    /\s+\(bereits\b.*$/i,
+    /\s+gesetzt\s+wird\.\s*.*$/i,
+    /\s+Siehe\s+dazu\b.*$/i,
   ]
   for (const pattern of cutPatterns) {
     trimmed = trimmed.replace(pattern, '')
@@ -61,10 +66,7 @@ const trimWikiTagValueProse = (value: string): string => {
 /** Wiki often shows placeholder date ranges in conditionals that mappers should replace. */
 const trimWikiConditionalExampleDates = (value: string): string =>
   value
-    .replace(
-      /\s+@\s+\d{4}\s+[A-Za-z]{3}\s+\d{2}\s+-\s+\d{4}\s+[A-Za-z]{3}\s+\d{2}\s*$/,
-      '',
-    )
+    .replace(/\s+@\s+\d{4}\s+[A-Za-z]{3}\s+\d{2}\s+-\s+\d{4}\s+[A-Za-z]{3}\s+\d{2}\s*$/, '')
     .trim()
 
 const stripWikiConjunctionSuffix = (value: string): string => {
@@ -321,17 +323,18 @@ export const isWikiTaggingCell = (text: string): boolean => {
   )
 }
 
+const hasWikiSignNamePrefix = (text: string): boolean =>
+  /^(?:\d+[a-z]?(?:[./][a-z]+)*(?:\[[^\]]*\])?|\d+\.\d+[a-z]?(?:\[[^\]]*\])?|[A-Za-z]{1,3}_[\w.]+|[a-z])(?:\s+groß)?:\s/.test(
+    text,
+  ) || /^[A-Z]{1,2}\d[\w.+-]*\s*:\s/.test(text)
+
 export const looksLikeWikiSignNameCell = (text: string): boolean => {
   const trimmed = text.trim().replace(/^\|\s*/, '')
-  if (!trimmed || isWikiTaggingCell(trimmed) || /^fixme:/i.test(trimmed)) return false
-  if (
-    /^(?:\d+[a-z]?(?:[./][a-z]+)*(?:\[[^\]]*\])?|\d+\.\d+[a-z]?(?:\[[^\]]*\])?|[A-Za-z]{1,3}_[\w.]+|[a-z])(?:\s+groß)?:\s/.test(
-      trimmed,
-    )
-  ) {
-    return true
-  }
-  return /^[A-Z]{1,2}\d[\w.+-]*\s*:\s/.test(trimmed)
+  if (!trimmed || /^fixme:/i.test(trimmed)) return false
+  // Name cells may mention traffic_sign=* in prose; detect the prefix before tagging heuristics.
+  if (hasWikiSignNamePrefix(trimmed)) return true
+  if (isWikiTaggingCell(trimmed)) return false
+  return false
 }
 
 export const finalizeWikiSignName = (rawName: string, signId: string): string => {
@@ -389,7 +392,10 @@ const pickWikiRowName = (
 const pickWikiRowTagsText = (rowTexts: string[]): string => {
   const taggingCell = [...rowTexts]
     .reverse()
-    .find((text) => isWikiTaggingCell(text) && !wikiSignCodeOnly(text))
+    .find(
+      (text) =>
+        isWikiTaggingCell(text) && !wikiSignCodeOnly(text) && !looksLikeWikiSignNameCell(text),
+    )
   return taggingCell ?? rowTexts[rowTexts.length - 1] ?? ''
 }
 

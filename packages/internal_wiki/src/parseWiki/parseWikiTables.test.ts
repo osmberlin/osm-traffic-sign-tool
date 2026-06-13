@@ -299,6 +299,43 @@ describe('parseWikiTags', () => {
     })
   })
 
+  describe('AT FKV_1.9 forest road tagging cell', () => {
+    const fkv19TaggingCell =
+      'Als Linie mit traffic_sign=AT:FKV_1.9 vehicle=forestry und optional horse=no ski=yes sowie (bereits in vehicle=forestry enthalten) bicycle=no'
+
+    const fkv19RowHtml = `
+<table class="wikitable">
+  <tbody>
+    <tr>
+      <td><a href="/wiki/File:AT_FKV_1_9.svg"><img src="/thumb/AT_FKV_1_9.svg"></a></td>
+      <td>${fkv19TaggingCell}</td>
+      <td>1.9: Forststraße Nicht beschilderte Forststraßen können ebenso bezeichnet werden, wobei statt traffic_sign=* dann source:access=forestry_law gesetzt wird. Siehe dazu DE:Forststraßen_in_Österreich.</td>
+    </tr>
+  </tbody>
+</table>`
+
+    test('uses the tagging cell instead of the name cell with traffic_sign=* prose', () => {
+      expect(parseWikiTags(fkv19TaggingCell)).toEqual([
+        { key: 'vehicle', value: 'forestry' },
+        { key: 'horse', value: 'no' },
+        { key: 'ski', value: 'yes' },
+        { key: 'bicycle', value: 'no' },
+      ])
+      const signs = parseUniversalTable(cheerio.load(fkv19RowHtml), 'AT')
+      expect(signs).toHaveLength(1)
+      expect(signs[0]?.tagsText).toBe(fkv19TaggingCell)
+      expect(signs[0]?.name).toMatch(/^1\.9: Forststraße/)
+      expect(
+        toWikiSign('AT', {
+          signId: signs[0]!.signId,
+          name: signs[0]!.name,
+          tagsText: signs[0]!.tagsText,
+          isNa: false,
+        })?.osmTags,
+      ).toEqual(['vehicle=forestry', 'horse=no', 'ski=yes', 'bicycle=no'])
+    })
+  })
+
   describe('space-separated tags in one segment (FR A1a)', () => {
     test('parses hazard tag alongside skipped traffic_sign from rendered FR:A1a cell', () => {
       expect(parseWikiTags('traffic_sign=FR:A1a hazard=turn')).toEqual([

@@ -728,15 +728,19 @@
     "sign": "AT:52.11a[...]",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Vorschriftszeichen_11a_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_11a_(2010).svg",
-    "name": "52.11a[...]",
-    "osmTags": [],
+    "name": "11a: Zonenbeschränkung",
+    "osmTags": [
+      "maxspeed=30",
+      "source:maxspeed=AT:zone30",
+      "maxspeed:type=AT:zone30"
+    ],
     "comments": ""
   },
   {
     "sign": "AT:52.11b[...]",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Vorschriftszeichen_11b_%282010%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Vorschriftszeichen_11b_(2010).svg",
-    "name": "52.11b[...]",
+    "name": "11b: Ende der Zonenbeschränkung",
     "osmTags": [],
     "comments": ""
   },
@@ -1584,9 +1588,12 @@
     "sign": "AT:FKV_1.9",
     "imageSvg": "/w/images/f/f3/AT_FKV_1_9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:AT_FKV_1_9.svg",
-    "name": "FKV_1.9",
+    "name": "1.9: Forststraße Nicht beschilderte Forststraßen können ebenso bezeichnet werden, wobei statt traffic_sign=* dann source:access=forestry_law gesetzt wird. Siehe dazu DE:Forststraßen_in_Österreich.",
     "osmTags": [
-      "source:access=forestry_law gesetzt wird. Siehe dazu DE:Forststraßen_in_Österreich."
+      "vehicle=forestry",
+      "horse=no",
+      "ski=yes",
+      "bicycle=no"
     ],
     "comments": ""
   },
