@@ -38,16 +38,47 @@ const parsePolishDescriptionTagCell = (tagsText: string): { key: string; value: 
 }
 
 /** OSM wiki {{Tag}} templates use `3=` or `||` before the value to mean "do not link the value". */
+const stripWikiConjunctionSuffix = (value: string): string =>
+  value
+    .replace(/\s+oder\s*$/i, '')
+    .replace(/\s+und\s*$/i, '')
+    .trim()
+
 export const normalizeWikiTagValue = (value: string): string => {
   const trimmed = value.replace(/`/g, '').trim()
-  if (trimmed.startsWith('||')) return trimmed.slice(2).trim().replace(/\s+oder\s*$/i, '').trim()
-  if (trimmed.startsWith('3=')) return trimmed.slice(2).trim().replace(/\s+oder\s*$/i, '').trim()
-  return trimmed.replace(/\s+oder\s*$/i, '').trim()
+  if (trimmed.startsWith('||')) return stripWikiConjunctionSuffix(trimmed.slice(2).trim())
+  if (trimmed.startsWith('3=')) return stripWikiConjunctionSuffix(trimmed.slice(2).trim())
+  return stripWikiConjunctionSuffix(trimmed)
 }
 
 /** German wiki tables use "oder" between alternative taggings, similar to Polish "lub". */
 const normalizeWikiAlternativeSeparators = (text: string): string =>
-  text.replace(/\s+oder\s+/gi, ' + ').replace(/\s*\+\s*(?:\+\s*)+/g, ' + ')
+  text
+    .replace(/\s+und\s+(?=[a-z][a-z0-9:_-]*\s*=)/gi, ' + ')
+    .replace(/\s+oder\s+/gi, ' + ')
+    .replace(/\s*\+\s*(?:\+\s*)+/g, ' + ')
+
+const normalizeWikiOsmTagStrings = (rawTags: string[]): string[] => {
+  const tags: string[] = []
+
+  for (const raw of rawTags) {
+    const text = raw.replace(/\n/g, ' ').trim()
+    if (!text) continue
+
+    const parsed = parseWikiTags(text)
+    if (parsed.length > 0) {
+      tags.push(...parsed.map((tag) => `${tag.key}=${tag.value}`))
+      continue
+    }
+
+    for (const part of text.split(/\s+oder\s+/i)) {
+      const cleaned = stripWikiConjunctionSuffix(part.trim())
+      if (cleaned && !/^oder\b/i.test(cleaned)) tags.push(cleaned)
+    }
+  }
+
+  return [...new Set(tags)]
+}
 
 const trimWikiTagListSeparator = (value: string): string => value.replace(/[,;]\s*$/, '').trim()
 
@@ -443,10 +474,11 @@ export const toWikiSign = (
   if (!row.signId) return null
 
   const sign = row.signId.includes(':') ? row.signId : `${countryPrefix}:${row.signId}`
-  const osmTags =
+  const rawOsmTags =
     'deOsmTags' in row && row.deOsmTags.length > 0
       ? row.deOsmTags
       : parseWikiTags(row.tagsText).map((tag) => `${tag.key}=${tag.value}`)
+  const osmTags = normalizeWikiOsmTagStrings(rawOsmTags)
 
   return {
     sign,

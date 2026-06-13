@@ -214,10 +214,24 @@ describe('parseWikiTags', () => {
     })
 
     test('parses oder between plus-separated tag groups', () => {
-      expect(parseWikiTags('maxspeed=30 + source:maxspeed=sign oder + maxspeed:type=sign')).toEqual([
-        { key: 'maxspeed', value: '30' },
-        { key: 'source:maxspeed', value: 'sign' },
-        { key: 'maxspeed:type', value: 'sign' },
+      expect(parseWikiTags('maxspeed=30 + source:maxspeed=sign oder + maxspeed:type=sign')).toEqual(
+        [
+          { key: 'maxspeed', value: '30' },
+          { key: 'source:maxspeed', value: 'sign' },
+          { key: 'maxspeed:type', value: 'sign' },
+        ],
+      )
+    })
+
+    test('strips trailing und before the next key=value alternative', () => {
+      expect(
+        parseWikiTags(
+          'maxspeed=130 und source:maxspeed=AT:motorway oder source:maxspeed=AT:trunk',
+        ),
+      ).toEqual([
+        { key: 'maxspeed', value: '130' },
+        { key: 'source:maxspeed', value: 'AT:motorway' },
+        { key: 'source:maxspeed', value: 'AT:trunk' },
       ])
     })
   })
@@ -528,5 +542,27 @@ describe('parseDeRowIdTable', () => {
       name: 'Kurve links',
       osmTags: ['hazard=curve'],
     })
+  })
+
+  test('normalizes raw deOsmTags list items with trailing oder', () => {
+    const sign = toWikiSign('AT', {
+      signId: 'AT:8a',
+      name: '8a: Autobahn',
+      tagsText: '',
+      isNa: false,
+      deOsmTags: [
+        'highway=motorway',
+        'maxspeed=130 und',
+        'source:maxspeed=AT:motorway oder',
+        'maxspeed:type=AT:motorway',
+      ],
+    })
+
+    expect(sign?.osmTags).toEqual([
+      'highway=motorway',
+      'maxspeed=130',
+      'source:maxspeed=AT:motorway',
+      'maxspeed:type=AT:motorway',
+    ])
   })
 })

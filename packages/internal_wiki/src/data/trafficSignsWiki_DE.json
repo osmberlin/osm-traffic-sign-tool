@@ -152,7 +152,7 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_224.svg",
     "name": "Haltestelle",
     "osmTags": [
-      "public_transport=stop_position auf der Straße und",
+      "public_transport=stop_position auf der Straße",
       "public_transport=platform neben der Straße",
       "amenity=bus_station (Busbahnhof)",
       "name=Name der Haltestelle"
@@ -282,7 +282,8 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_245_-_Bussonderfahrstreifen,_StVO_2013.svg",
     "name": "Bussonderfahrstreifen",
     "osmTags": [
-      "highway=service oder highway=busway (je nach Verwendung der Wege)",
+      "highway=service",
+      "highway=busway (je nach Verwendung der Wege)",
       "vehicle=no (highway=busway impliziert access=no)",
       "bus=designated (implizit mit (highway=busway)",
       "Siehe Bus lanes (en)."
@@ -487,9 +488,9 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1_-_Beginn_einer_Tempo_30-Zone,_StVO_2013.svg",
     "name": "Beginn einer Tempo 30-Zone",
     "osmTags": [
-      "maxspeed=30 und\nsource:maxspeed=DE:zone30 oder\nsource:maxspeed=DE:zone oder\nsource:maxspeed=DE:zone:30 alternativ\nzone:maxspeed=DE:30alternativ\nmaxpseed:type=DE:zone30",
-      "source:maxspeed=DE:zone30 oder",
-      "source:maxspeed=DE:zone oder",
+      "maxspeed=30",
+      "source:maxspeed=DE:zone30",
+      "source:maxspeed=DE:zone",
       "source:maxspeed=DE:zone:30 alternativ",
       "zone:maxspeed=DE:30alternativ",
       "maxpseed:type=DE:zone30"
@@ -502,9 +503,9 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.1-20_-_Beginn_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg",
     "name": "Beginn einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen - einseitig",
     "osmTags": [
-      "maxspeed=20 und\nsource:maxspeed=DE:zone20 oder\nsource:maxspeed=DE:zone oder\nsource:maxspeed=DE:zone:20 alternativ\nzone:maxspeed=DE:20alternativ\nmaxpseed:type=DE:zone20",
-      "source:maxspeed=DE:zone20 oder",
-      "source:maxspeed=DE:zone oder",
+      "maxspeed=20",
+      "source:maxspeed=DE:zone20",
+      "source:maxspeed=DE:zone",
       "source:maxspeed=DE:zone:20 alternativ",
       "zone:maxspeed=DE:20alternativ",
       "maxpseed:type=DE:zone20"
@@ -517,9 +518,9 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.2_-_Ende_einer_Tempo_30-Zone_(einseitig),_StVO_2013.svg",
     "name": "Ende einer Tempo 30-Zone",
     "osmTags": [
-      "maxspeed=30 und\nsource:maxspeed=DE:zone30 oder\nsource:maxspeed=DE:zone oder\nsource:maxspeed=DE:zone:30 alternativ\nzone:maxspeed=DE:30",
-      "source:maxspeed=DE:zone30 oder",
-      "source:maxspeed=DE:zone oder",
+      "maxspeed=30",
+      "source:maxspeed=DE:zone30",
+      "source:maxspeed=DE:zone",
       "source:maxspeed=DE:zone:30 alternativ",
       "zone:maxspeed=DE:30"
     ],
@@ -531,9 +532,9 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_274.2-20_-_Ende_einer_Tempo_20-Zone_in_verkehrsberuhigten_Gesch%C3%A4ftsbereichen_(einseitig),_StVO_2013.svg",
     "name": "Ende einer Tempo 20-Zone in verkehrsberuhigten Geschäftsbereichen",
     "osmTags": [
-      "maxspeed=20 und\nsource:maxspeed=DE:zone20 oder\nsource:maxspeed=DE:zone oder\nsource:maxspeed=DE:zone:20 alternativ\nzone:maxspeed=DE:20",
-      "source:maxspeed=DE:zone20 oder",
-      "source:maxspeed=DE:zone oder",
+      "maxspeed=20",
+      "source:maxspeed=DE:zone20",
+      "source:maxspeed=DE:zone",
       "source:maxspeed=DE:zone:20 alternativ",
       "zone:maxspeed=DE:20"
     ],
@@ -781,7 +782,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Zeichen_331.2_-_Ende_der_Kraftfahrstra%C3%9Fe%2C_StVO_2013.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_331.2_-_Ende_der_Kraftfahrstra%C3%9Fe,_StVO_2013.svg",
     "name": "Ende der Kraftfahrstraße",
-    "osmTags": ["ohne motorroad=* oder motorroad=no"],
+    "osmTags": ["motorroad=no"],
     "comments": "Entweder ohne Merkmal motorroad=* oder motorroad=no"
   },
   {
@@ -821,7 +822,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/df/Zeichen_355-10_-_Fu%C3%9Fg%C3%A4ngerunterf%C3%BChrung_einseitig%2C_StVO_1992.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zeichen_355-10_-_Fu%C3%9Fg%C3%A4ngerunterf%C3%BChrung_einseitig,_StVO_1992.svg",
     "name": "",
-    "osmTags": ["traffic_sign=DE:365-63 oder", "traffic_sign=DE:365-64"],
+    "osmTags": ["traffic_sign=DE:365-63", "traffic_sign=DE:365-64"],
     "comments": "Das Schild ist nicht mehr Teil der StVO. Es hat nur informativen Charakter. Es ist noch Teil des Verkehrszeichenkatalogs unter den Nummern 365-63 Fußgängerunterführung 365-64 Fußgängerüberführung. Unter- oder Überführung müssen nicht mit Treppen ausgestattet sein, sondern können auch nur eine Rampe aufweisen."
   },
   {
@@ -991,7 +992,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Zusatzzeichen_1000-12_-_Fu%C3%9Fg%C3%A4nger_Gehweg_gegen%C3%BCber_benutzen%2C_linksweisend%3B_StVO_1992.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-12_-_Fu%C3%9Fg%C3%A4nger_Gehweg_gegen%C3%BCber_benutzen,_linksweisend;_StVO_1992.svg",
     "name": "Fußgänger Gehweg gegenüber benutzen, linksweisend",
-    "osmTags": ["ist der Fußweg ein- oder anderseitig der Straße weiterzuführen"],
+    "osmTags": ["ist der Fußweg ein-", "anderseitig der Straße weiterzuführen"],
     "comments": "Dieses Zusatzzeichen sollte nur erfasst werden, wenn es dauerhaft oder absehbar für lange Zeit aufgestellt ist. Bei der Linieneigenschaft sidewalk=both ist je nach Linienrichtung zu sidewalk=left bzw. sidewalk=right wechseln. Eine Markierung eines Überwegs mittels highway=crossing kann angebracht sein. Sind beidseits der Straße eigene Linien für Fußgänger vorhanden, ist das Ende der einen Linie mit der anderen zu verbinden. Der Überweg sollte entsprechend der Situation mit highway=crossing markiert werden Dieses Zusatzzeichen wird oftmals auch ohne Hauptzeichen als Umleitungshinweis für Fußgänger verwendet. Weitere Variante: DE:1000-22 Fußgänger Gehweg gegenüber benutzen, rechtsweisend Fußgänger Gehweg gegenüber benutzen, rechtsweisend"
   },
   {
@@ -1008,9 +1009,12 @@
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1000-32_-_Radfahrer_kreuzen_von_rechts_und_links,_StVO_1997.svg",
     "name": "Radverkehr kreuzt von links und rechts",
     "osmTags": [
-      "+ highway=* + cycleway=track + oneway:bicycle=no (Fahrbahnzusatztag)",
-      "+ highway=cycleway + oneway=no",
-      "+ highway=residential + oneway:bicycle=no"
+      "cycleway=track",
+      "oneway:bicycle=no (Fahrbahnzusatztag)",
+      "highway=cycleway",
+      "oneway=no",
+      "highway=residential",
+      "oneway:bicycle=no"
     ],
     "comments": "Zunächst nur vorgesehen, um In Verbindung mit Zeichen 205  oder 206  den Verkehr aus seitlichen Einmündungen vor einem Zweirichtungsradweg zu warnen. Seit 2013 korrekte Beschilderung bei freigegebenen Einbahnstraßen (statt vorher Zeichen 1000-33) unter dem Zeichen 220 .[3] Einzelne Verkehrsbehörden haben es schon vorher so gemacht."
   },
@@ -1309,7 +1313,7 @@
     "name": "Wintersport erlaubt, zeitlich beschränkt (10 - 16 h)",
     "osmTags": [
       "traffic_sign=DE:1040-10[…]",
-      "access:conditional=winter_sports @ (10:00-16:00) oder",
+      "access:conditional=winter_sports @ (10:00-16:00)",
       "hazard:conditional=winter_sports @ (10:00-16:00)"
     ],
     "comments": "In Kombination mit Zeichen 250 als Einschränkung für Wintersportler In Kombination mit Zeichen 101  als allgemeiner Warnhinweis Bei der Erfassung als Knoten ist die Zeitangabe im Wertefeld, wie auf dem Zeichen zu lesen, ohne führende Null, jedoch ohne die Einheit [h] anzugeben (traffic_sign=DE:101,1040-10[9-18])."
@@ -1335,7 +1339,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Zusatzzeichen_1048-14_-_nur_Sattelkraftfahrzeuge%2C_StVO_1992.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1048-14_-_nur_Sattelkraftfahrzeuge,_StVO_1992.svg",
     "name": "nur Sattelkraftfahrzeuge",
-    "osmTags": ["traffic_sign=DE:1048-14", "hgv_articulated=* oder", "maxspeed:hgv_articulated=*"],
+    "osmTags": ["traffic_sign=DE:1048-14", "hgv_articulated=*", "maxspeed:hgv_articulated=*"],
     "comments": "In Kombination mit Zeichen 253 als Verbot für Sattelkraftfahrzeuge über 3,5 t.Als Knoten traffic_sign=DE:253,1048-14, als Linie hgv_articulated=no In Kombination mit Zeichen 274  als zulässige Höchstgeschwindigkeit nur für Sattelkraftfahrzeuge.Als Knoten traffic_sign=DE:274-60,1048-14, als Linie maxspeed:hgv_articulated=60"
   },
   {
