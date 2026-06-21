@@ -62,6 +62,7 @@ export {
   taggingSuggestionsQaStatuses,
 } from './data-definitions/TrafficSignDataTypes.js'
 export { hasBundledSvg, isSignSvgMissing, isSignSvgUnavailable } from './signSvgAvailability.js'
+export { loadTrafficSignSvg } from './loadTrafficSignSvg.js'
 export { isSignImageMissing, isSignImageSource, normalizeSignImage } from './signImage.js'
 export {
   classifyTaggingSuggestionsQa,

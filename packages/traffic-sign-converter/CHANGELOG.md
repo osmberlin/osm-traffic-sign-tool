@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 0.6.0
+
+_2026-06-15_
+
+- **BREAKING:** Eager SVG namespaces moved from `@osm-traffic-signs/converter/data-svgs` to `@osm-traffic-signs/converter/data-svgs/eager` (`import { SvgsDE } from '.../data-svgs/eager'`). The root `data-svgs` entry now exports loader maps only (`SvgLoadersDE`, etc.); per-country `@osm-traffic-signs/converter/data-svgs/DE/loaders` is unchanged.
+- Add `loadTrafficSignSvg()` to load a single bundled SVG by country and sign (lazy, code-split friendly).
+- Importing `hasBundledSvg` from the main package entry no longer pulls in eager static SVG imports.
+
 ## 0.5.0
 
 _2026-06-06_

@@ -1,6 +1,6 @@
 {
   "name": "@osm-traffic-signs/converter",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Convert traffic sign IDs to OSM tags; suggest a traffic_sign-tag based on OSM tags.",
   "keywords": [
     "openstreetmap"
@@ -31,6 +31,11 @@
       "import": "./dist/data-svgs/index.js",
       "default": "./dist/data-svgs/index.js",
       "types": "./dist/data-svgs/index.d.ts"
+    },
+    "./data-svgs/eager": {
+      "import": "./dist/data-svgs/eager.js",
+      "default": "./dist/data-svgs/eager.js",
+      "types": "./dist/data-svgs/eager.d.ts"
     },
     "./data-svgs/*": {
       "import": "./dist/data-svgs/*/index.js",
