@@ -159,15 +159,16 @@ for (const [country, data] of countryDefinitionMap.entries()) {
   })
 }
 
-// TYPES: Add barrel file
-const barrelFile = path.join(__dirname, 'data-svgs', 'index.ts')
-console.log('WRITE BARREL FILE', barrelFile)
-const barrelContent = Array.from(countryDefinitionMap.entries())
-  .map(([country]) => {
-    return [
-      `export * as Svgs${country} from './${country}/index.js'`,
-      `export { SvgLoaders${country} } from './${country}/loaders.js'`,
-    ].join('\n')
-  })
+// TYPES: Add barrel files (loaders-only root + eager namespace entry)
+const loadersBarrelFile = path.join(__dirname, 'data-svgs', 'index.ts')
+const eagerBarrelFile = path.join(__dirname, 'data-svgs', 'eager.ts')
+console.log('WRITE LOADERS BARREL FILE', loadersBarrelFile)
+console.log('WRITE EAGER BARREL FILE', eagerBarrelFile)
+const loadersBarrelContent = Array.from(countryDefinitionMap.entries())
+  .map(([country]) => `export { SvgLoaders${country} } from './${country}/loaders.js'`)
   .join('\n')
-await Bun.write(barrelFile, barrelContent)
+const eagerBarrelContent = Array.from(countryDefinitionMap.entries())
+  .map(([country]) => `export * as Svgs${country} from './${country}/index.js'`)
+  .join('\n')
+await Bun.write(loadersBarrelFile, loadersBarrelContent)
+await Bun.write(eagerBarrelFile, eagerBarrelContent)

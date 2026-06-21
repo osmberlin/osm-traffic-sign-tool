@@ -1,0 +1,8 @@
+export * as SvgsDE from './DE/index.js'
+export * as SvgsBE from './BE/index.js'
+export * as SvgsAT from './AT/index.js'
+export * as SvgsCA from './CA/index.js'
+export * as SvgsPL from './PL/index.js'
+export * as SvgsFR from './FR/index.js'
+export * as SvgsAU from './AU/index.js'
+export * as SvgsBR from './BR/index.js'
