@@ -1,0 +1,133 @@
+version: 2
+updates:
+  - package-ecosystem: bun
+    directories:
+      - /
+      - /apps/traffic-sign-tool
+      - /packages/traffic-sign-converter
+      - /packages/internal_taginfo
+      - /packages/internal_svgs
+      - /packages/internal_wiki
+    schedule:
+      interval: weekly
+      day: monday
+      time: '07:00'
+      timezone: Europe/Berlin
+    cooldown:
+      default-days: 5
+    open-pull-requests-limit: 1
+    exclude-paths:
+      - .cursor/**
+      - .agents/**
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      security-dev-tools:
+        applies-to: security-updates
+        patterns:
+          - 'oxlint*'
+          - 'oxfmt*'
+          - 'oxc-plugin-react-compiler'
+          - 'vitest*'
+          - '@testing-library/*'
+          - 'husky*'
+          - '@types/*'
+          - 'typescript'
+          - 'eslint*'
+
+      shared-monorepo-tools:
+        applies-to: version-updates
+        group-by: dependency-name
+        patterns:
+          - 'oxlint*'
+          - 'oxfmt*'
+          - 'oxc-plugin-react-compiler'
+          - '@types/bun'
+
+      app-dev-minor-patch:
+        applies-to: version-updates
+        patterns:
+          - '@arethetypeswrong/*'
+          - '@babel/*'
+          - '@clack/*'
+          - '@colors/*'
+          - '@heroicons/*'
+          - '@inlang/*'
+          - '@rolldown/*'
+          - '@testing-library/*'
+          - '@total-typescript/*'
+          - '@vitejs/*'
+          - 'babel-plugin-*'
+          - 'cheerio'
+          - 'copyfiles'
+          - 'husky'
+          - 'jsdom'
+          - 'nano-staged'
+          - 'oxfmt'
+          - 'oxlint*'
+          - 'oxc-plugin-react-compiler'
+          - 'postcss'
+          - 'rimraf'
+          - 'sharp'
+          - 'svgo'
+          - 'vitest'
+          - 'vite'
+          - '@types/*'
+          - 'typescript'
+        update-types:
+          - minor
+          - patch
+
+      app-framework-minor-patch:
+        applies-to: version-updates
+        patterns:
+          - '@headlessui/*'
+          - '@tanstack/*'
+          - '@tailwindcss/*'
+          - 'tailwindcss'
+          - 'react'
+          - 'react-dom'
+          - '@types/react*'
+          - 'framer-motion'
+          - 'zod'
+          - 'zustand'
+        update-types:
+          - minor
+          - patch
+
+      app-prod-misc-patch:
+        applies-to: version-updates
+        update-types:
+          - patch
+        patterns:
+          - '*'
+        exclude-patterns:
+          - '@tanstack/*'
+          - '@tailwindcss/*'
+          - 'react'
+          - 'react-dom'
+          - 'framer-motion'
+          - 'zod'
+          - 'zustand'
+          - '@headlessui/*'
+          - '@inlang/*'
+          - 'micromark*'
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '07:00'
+      timezone: Europe/Berlin
+    cooldown:
+      default-days: 5
+    open-pull-requests-limit: 1
+    groups:
+      actions-minor-patch:
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - '*'
