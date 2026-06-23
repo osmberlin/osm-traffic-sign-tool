@@ -31,7 +31,7 @@
     "@fontsource/noto-serif": "^5.2.9",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
-    "@inlang/paraglide-js": "^2.18.1",
+    "@inlang/paraglide-js": "^2.20.0",
     "@inlang/paraglide-js-react": "^1.0.2",
     "@internal/taginfo": "workspace:*",
     "@internal/wiki": "workspace:*",
@@ -44,13 +44,13 @@
     "micromark-extension-gfm": "^3.0.0",
     "react": "^19.0.3",
     "react-dom": "^19.0.3",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.1",
     "zod": "^4.2.1",
     "zustand": "^5.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@inlang/plugin-m-function-matcher": "^2.2.6",
+    "@inlang/plugin-m-function-matcher": "^2.2.9",
     "@inlang/plugin-message-format": "^4.4.0",
     "@rolldown/plugin-babel": "^0.2.3",
     "@tailwindcss/forms": "^0.5.11",
@@ -69,7 +69,7 @@
     "jsdom": "^27.3.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "vite": "^8.0.13",
-    "vitest": "^4.0.16"
+    "vite": "^8.0.16",
+    "vitest": "^4.1.9"
   }
 }
