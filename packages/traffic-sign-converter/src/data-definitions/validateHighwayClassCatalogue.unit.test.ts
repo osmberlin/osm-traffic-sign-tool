@@ -38,6 +38,7 @@ describe('findHighwayClassCatalogueViolations', () => {
       ...baseSign,
       osmValuePart: '1000-31',
       kind: 'exception_modifier',
+      catalogue: { signCategory: 'exception_modifier' },
       tagRecommendationsByGeometry: [
         {
           geometries: ['way'],
@@ -58,6 +59,7 @@ describe('findHighwayClassCatalogueViolations', () => {
       ...baseSign,
       osmValuePart: '1020-30',
       kind: 'exception_modifier',
+      catalogue: { signCategory: 'exception_modifier' },
       tagRecommendationsByGeometry: [
         {
           geometries: ['way'],

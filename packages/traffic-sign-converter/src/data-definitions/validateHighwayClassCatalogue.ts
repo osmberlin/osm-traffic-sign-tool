@@ -1,6 +1,6 @@
+import type { CountryPrefixType } from './countryDefinitions.js'
 import type { GeometryType } from './geometryTypes.js'
 import type { SignType } from './TrafficSignDataTypes.js'
-import type { CountryPrefixType } from './countryDefinitions.js'
 
 export class HighwayClassCatalogueConflictError extends Error {
   constructor(
@@ -58,15 +58,36 @@ const modifierHasStaleMultiValueHighwayValues = (sign: SignType): boolean => {
 
     const hasAccessTags = (recommendation.accessTags?.length ?? 0) > 0
     const hasModifierValue =
-      'modifierValue' in recommendation && Boolean(recommendation.modifierValue)
-    const hasConditionalTags = (recommendation.conditionalTags?.length ?? 0) > 0
+      ('modifierValue' in recommendation && Boolean(recommendation.modifierValue)) ||
+      ('modifierValueFromValuePrompt' in recommendation &&
+        Boolean(recommendation.modifierValueFromValuePrompt))
 
-    if (!hasAccessTags && !hasModifierValue && !hasConditionalTags) {
+    if (!hasAccessTags && !hasModifierValue) {
       return true
     }
   }
 
   return false
+}
+
+/** Catalogue highwayValues that conflict with a highwayClass question (build + runtime guard). */
+export const signHasInvalidCatalogueHighwayValues = (sign: SignType): boolean => {
+  if (signHasHighwayClassQuestion(sign) && getCatalogueHighwayValues(sign).length > 0) {
+    return true
+  }
+
+  return modifierHasStaleMultiValueHighwayValues(sign)
+}
+
+export const signHasRuntimeHighwayClassCatalogueConflict = (
+  sign: SignType,
+  groupIncludesHighwayQuestion: boolean,
+): boolean => {
+  if (signHasHighwayClassQuestion(sign) && getCatalogueHighwayValues(sign).length > 0) {
+    return true
+  }
+
+  return groupIncludesHighwayQuestion && modifierHasStaleMultiValueHighwayValues(sign)
 }
 
 export const findHighwayClassCatalogueViolations = (
@@ -90,7 +111,7 @@ export const findHighwayClassCatalogueViolations = (
         country,
         signOsmValuePart: sign.osmValuePart,
         rule: 'modifierMultiValueHighwayValuesWithoutContext',
-        message: `${country}:${sign.osmValuePart} defines multi-value catalogue highwayValues without access/modifier/conditional context. Remove highwayValues or migrate to a highwayClass question on the main sign.`,
+        message: `${country}:${sign.osmValuePart} defines multi-value catalogue highwayValues without access/modifier context. Remove highwayValues or migrate to a highwayClass question on the main sign.`,
       })
     }
   }

@@ -1,6 +1,10 @@
 import type { GeometryType } from '../../data-definitions/geometryTypes.js'
-import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
-import { HighwayClassCatalogueConflictError } from '../../data-definitions/validateHighwayClassCatalogue.js'
+import type { SignStateType, SignType } from '../../data-definitions/TrafficSignDataTypes.js'
+import {
+  HighwayClassCatalogueConflictError,
+  getCatalogueHighwayValues,
+  signHasRuntimeHighwayClassCatalogueConflict,
+} from '../../data-definitions/validateHighwayClassCatalogue.js'
 import { signHasHighwayQuestion } from './collectQuestionTags.js'
 import { getRecommendations } from './getRecommendations.js'
 import { uniqueArray } from './uniqueArray.js'
@@ -41,15 +45,23 @@ export const collectHighwayValues = (
 ) => {
   if (!Array.isArray(signs)) return []
 
-  const conflicts = findConflictingCatalogueHighwayContributors(signs, geometry)
-  if (conflicts.length > 0) {
+  const groupIncludesHighwayQuestion = groupHasHighwayQuestion(signs)
+  const invalidDefinitions = signs.filter(
+    (sign) =>
+      sign.recodgnizedSign &&
+      signHasRuntimeHighwayClassCatalogueConflict(sign as SignType, groupIncludesHighwayQuestion),
+  )
+
+  if (invalidDefinitions.length > 0) {
     throw new HighwayClassCatalogueConflictError(
-      conflicts.map((conflict) => conflict.osmValuePart),
-      uniqueArray(conflicts.flatMap((conflict) => conflict.highwayValues)),
+      invalidDefinitions.map((sign) => sign.osmValuePart),
+      uniqueArray(
+        invalidDefinitions.flatMap((sign) => getCatalogueHighwayValues(sign as SignType)),
+      ),
     )
   }
 
-  if (groupHasHighwayQuestion(signs)) {
+  if (groupIncludesHighwayQuestion) {
     return []
   }
 

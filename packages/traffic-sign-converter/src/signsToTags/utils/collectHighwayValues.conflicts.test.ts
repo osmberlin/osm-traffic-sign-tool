@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest'
-import { HighwayClassCatalogueConflictError } from '../../data-definitions/validateHighwayClassCatalogue.js'
 import { highwayClassQuestion } from '../../data-definitions/questionCatalog.js'
 import type { SignStateType } from '../../data-definitions/TrafficSignDataTypes.js'
+import { HighwayClassCatalogueConflictError } from '../../data-definitions/validateHighwayClassCatalogue.js'
 import {
   collectHighwayValues,
   findConflictingCatalogueHighwayContributors,
