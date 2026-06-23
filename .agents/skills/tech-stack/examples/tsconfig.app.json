@@ -1,0 +1,43 @@
+{
+  // Soft-aligned to total-typescript bundler/dom (no extends): https://github.com/total-typescript/tsconfig
+  // Intentionally NOT adopted:
+  //   verbatimModuleSyntax: true  — TanStack Start client/server split: type-only imports can become
+  //     empty runtime imports and leak server code into client bundles
+  //   module: "preserve"            — total-typescript bundler default; TanStack Start recommends ESNext
+  //   noUnusedLocals / noUnusedParameters — delegated to oxlint; avoid duplicate signal with tsc
+  // Never install or extend @total-typescript/tsconfig — keep settings inlined with these comments.
+  "include": ["**/*.ts", "**/*.tsx", "vite.config.ts"],
+  "exclude": ["node_modules", "**/*.e2e.ts", ".output", "dist", "scripts"],
+  "compilerOptions": {
+    "target": "ES2025",
+    "lib": ["ES2025", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "types": ["vite/client", "bun-types", "web"],
+
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": false,
+    "noEmit": true,
+
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noUncheckedSideEffectImports": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo-app",
+    "noErrorTruncation": true,
+
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

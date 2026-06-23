@@ -1,0 +1,24 @@
+{
+  "name": "playwright-skill",
+  "version": "4.1.0",
+  "description": "TanStack Start E2E and ad-hoc Playwright automation (FMC/TILDA patterns)",
+  "keywords": [
+    "automation",
+    "browser-testing",
+    "claude-skill",
+    "general-purpose",
+    "playwright",
+    "web-automation"
+  ],
+  "license": "MIT",
+  "author": "lackeyjb",
+  "main": "run.js",
+  "scripts": {
+    "install-all-browsers": "bunx playwright install chromium firefox webkit",
+    "setup": "bun install && bunx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.57.0"
+  },
+  "packageManager": "bun@1.3.13"
+}

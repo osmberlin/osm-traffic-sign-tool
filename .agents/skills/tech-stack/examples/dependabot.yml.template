@@ -1,0 +1,147 @@
+# Copy to .github/dependabot.yml on scaffold.
+# Source: tilda-geo — https://github.com/FixMyBerlin/tilda-geo/blob/develop/.github/dependabot.yml
+# Tune directories, groups, and ignore rules for your layout (see references/dependabot.md).
+version: 2
+updates:
+  - package-ecosystem: bun
+    directories:
+      - /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '07:00'
+      timezone: Europe/Berlin
+    cooldown:
+      default-days: 5
+    open-pull-requests-limit: 1
+    exclude-paths:
+      - .cursor/**
+    commit-message:
+      prefix: chore
+      include: scope
+    ignore:
+      - dependency-name: nitro
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+          - version-update:semver-patch
+    groups:
+      security-dev-tools:
+        applies-to: security-updates
+        patterns:
+          - 'oxlint*'
+          - 'oxfmt*'
+          - 'vitest*'
+          - '@playwright/*'
+          - '@testing-library/*'
+          - 'knip*'
+          - 'husky*'
+          - '@types/*'
+          - 'typescript'
+          - '@typescript/typescript-*'
+          - 'eslint*'
+
+      shared-monorepo-tools:
+        applies-to: version-updates
+        group-by: dependency-name
+        patterns:
+          - 'oxlint*'
+          - 'oxfmt*'
+          - '@types/bun'
+
+      app-dev-minor-patch:
+        applies-to: version-updates
+        patterns:
+          - '@clack/*'
+          - '@heroicons/*'
+          - '@playwright/*'
+          - '@testing-library/*'
+          - '@total-typescript/*'
+          - '@vitejs/*'
+          - 'babel-plugin-*'
+          - 'eslint-*'
+          - 'husky'
+          - 'jsdom'
+          - 'knip'
+          - 'oxfmt'
+          - 'oxlint*'
+          - 'sharp'
+          - 'vitest'
+          - 'vite'
+          - '@types/*'
+          - 'typescript'
+          - '@typescript/typescript-*'
+          - 'dotenv'
+        update-types:
+          - minor
+          - patch
+
+      app-framework-minor-patch:
+        applies-to: version-updates
+        patterns:
+          - '@tanstack/*'
+          - '@tailwindcss/*'
+          - 'tailwindcss'
+          - '@turf/*'
+          - '@prisma/*'
+          - 'prisma'
+          - 'react'
+          - 'react-dom'
+          - '@types/react*'
+          - 'maplibre-gl'
+          - 'react-map-gl'
+          - 'better-auth'
+          - 'zod'
+        update-types:
+          - minor
+          - patch
+
+      app-prod-misc-patch:
+        applies-to: version-updates
+        update-types:
+          - patch
+        patterns:
+          - '*'
+        exclude-patterns:
+          - '@tanstack/*'
+          - '@tailwindcss/*'
+          - '@turf/*'
+          - '@prisma/*'
+          - 'prisma'
+          - 'react'
+          - 'react-dom'
+          - 'maplibre-gl'
+          - 'better-auth'
+          - 'zod'
+          - 'nitro*'
+          - '@maptiler/*'
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '07:00'
+      timezone: Europe/Berlin
+    cooldown:
+      default-days: 5
+    open-pull-requests-limit: 1
+    groups:
+      actions-minor-patch:
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - '*'
+
+  - package-ecosystem: docker
+    directories:
+      - /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 1
+    groups:
+      docker-bases:
+        patterns:
+          - 'debian*'
+          - 'oven/bun*'

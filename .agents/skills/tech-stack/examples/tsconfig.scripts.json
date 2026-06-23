@@ -1,0 +1,33 @@
+{
+  // Soft-aligned to total-typescript bundler/no-dom (no extends): https://github.com/total-typescript/tsconfig
+  // Scripts have no TanStack Start client/server boundary — verbatimModuleSyntax: true is safe here.
+  // Never install or extend @total-typescript/tsconfig — keep settings inlined with these comments.
+  "include": ["scripts/**/*.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "target": "ES2025",
+    "lib": ["ES2025"],
+    "types": ["bun-types"],
+    "module": "ESNext",
+
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noUncheckedSideEffectImports": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo-scripts"
+  }
+}
