@@ -17,7 +17,7 @@
     "format:files": "oxfmt --config ./oxfmt.config.mjs --write",
     "lint": "bun run --filter '*' lint",
     "prepare": "husky",
-    "release": "bun run release-cli.ts",
+    "release": "bun run scripts/release-cli.ts",
     "test": "vitest run .github/scripts && bun run --filter '*' test",
     "test:watch": "bun run --parallel --filter '*' test:watch",
     "updatePackages:major": "bunx taze -r major --includeLocked --write --maturity-period 5 && bun install",

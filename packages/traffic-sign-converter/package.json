@@ -13,7 +13,8 @@
   "author": "Tobias Jordans <t@tobiasjordans.de> (https://www.osm-verkehrswende.org/traffic-signs/)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git"
+    "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git",
+    "directory": "packages/traffic-sign-converter"
   },
   "files": [
     "dist"
