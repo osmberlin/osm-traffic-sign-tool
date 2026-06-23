@@ -9,6 +9,8 @@ This section is TODO. Please let me know what you where looking for.
 Run the release CLI:
 
 ```bash
-bun run release-cli.ts --app
-# or just: bun run release-cli.ts
+bun run release --app
+# or: bun run scripts/release-cli.ts --app
 ```
+
+Each release is tagged as `osm-traffic-sign-tool@<version>`.

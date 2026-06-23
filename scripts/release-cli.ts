@@ -3,6 +3,7 @@
 import { join } from 'path'
 import * as p from '@clack/prompts'
 import { $ } from 'bun'
+import { releaseTagName } from './release-tag.ts'
 
 type ReleaseType = 'patch' | 'minor' | 'major'
 type ReleaseTarget = 'package' | 'app' | 'both'
@@ -126,11 +127,15 @@ async function promptChangelogUpdate(changelogPath: string, newVersion: string) 
   }
 }
 
-// Helper: Get version from package.json
-async function getPackageVersion(packageJsonPath: string) {
+async function readPackageJson(packageJsonPath: string) {
   const file = Bun.file(packageJsonPath)
   const content = await file.text()
-  const json = JSON.parse(content)
+  return JSON.parse(content) as { name: string; version: string }
+}
+
+// Helper: Get version from package.json
+async function getPackageVersion(packageJsonPath: string) {
+  const json = await readPackageJson(packageJsonPath)
   return json.version
 }
 
@@ -144,9 +149,31 @@ async function hasUncommittedChanges() {
   }
 }
 
+async function createReleaseTag(packageName: string, version: string) {
+  const tag = releaseTagName(packageName, version)
+  await $`git tag ${tag}`.quiet()
+  return tag
+}
+
+async function pushRelease(tag: string, shouldPush: boolean) {
+  if (shouldPush) {
+    const spinner = p.spinner()
+    spinner.start('Pushing to main...')
+    await $`git push origin main`
+    spinner.stop('✓ Pushed to main')
+
+    spinner.start(`Pushing tag ${tag}...`)
+    await $`git push origin ${tag}`
+    spinner.stop('✓ Tag pushed')
+  } else {
+    p.log.info(`Run \`git push origin main && git push origin ${tag}\` manually when ready.`)
+  }
+}
+
 // Package release flow
 async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: boolean) {
-  p.intro('Releasing Package: @osm-traffic-signs/converter')
+  const { name: packageName } = await readPackageJson(PACKAGE_PACKAGE_JSON)
+  p.intro(`Releasing Package: ${packageName}`)
 
   // Check for uncommitted changes
   if (await hasUncommittedChanges()) {
@@ -193,7 +220,7 @@ async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: bool
 
   // Build
   spinner.start('Building package...')
-  await $`bun run --filter '@osm-traffic-signs/converter' build`
+  await $`bun run --filter '${packageName}' build`
   spinner.stop('✓ Build complete')
 
   // Check
@@ -206,7 +233,7 @@ async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: bool
   try {
     await $`cd ${PACKAGE_DIR} && npm publish`
     spinner.stop('✓ Published to npm')
-  } catch (error) {
+  } catch {
     spinner.stop('✗ Publish failed')
     p.log.error('Failed to publish to npm')
     p.log.info('Test…')
@@ -219,8 +246,11 @@ async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: bool
   // Git commit
   spinner.start('Committing changes...')
   await $`git add ${PACKAGE_CHANGELOG} ${PACKAGE_PACKAGE_JSON}`
-  await $`git commit -m "Package: release v${newVersion}"`.quiet()
+  await $`git commit -m ${'Package: release v' + newVersion}`.quiet()
   spinner.stop('✓ Changes committed')
+
+  const tag = await createReleaseTag(packageName, newVersion)
+  p.log.info(`Tagged release as ${tag}`)
 
   // Ask about push
   const shouldPush = await p.confirm({
@@ -228,13 +258,7 @@ async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: bool
     initialValue: false,
   })
 
-  if (shouldPush) {
-    spinner.start('Pushing to main...')
-    await $`git push origin main`
-    spinner.stop('✓ Pushed to main')
-  } else {
-    p.log.info('Run `git push` manually when ready.')
-  }
+  await pushRelease(tag, shouldPush)
 
   p.outro(`✓ Package ${newVersion} released successfully!`)
 }
@@ -245,7 +269,8 @@ async function releaseApp(
   skipChangelogCheck: boolean,
   packageJustReleased: boolean,
 ) {
-  p.intro('Releasing App: osm-traffic-sign-tool')
+  const { name: packageName } = await readPackageJson(APP_PACKAGE_JSON)
+  p.intro(`Releasing App: ${packageName}`)
 
   // Check for uncommitted changes
   if (await hasUncommittedChanges()) {
@@ -301,8 +326,11 @@ async function releaseApp(
   // Git commit
   spinner.start('Committing changes...')
   await $`git add ${APP_CHANGELOG} ${APP_PACKAGE_JSON}`
-  await $`git commit -m "App: release v${newVersion}"`.quiet()
+  await $`git commit -m ${'App: release v' + newVersion}`.quiet()
   spinner.stop('✓ Changes committed')
+
+  const tag = await createReleaseTag(packageName, newVersion)
+  p.log.info(`Tagged release as ${tag}`)
 
   // Ask about push
   const shouldPush = await p.confirm({
@@ -310,13 +338,10 @@ async function releaseApp(
     initialValue: false,
   })
 
+  await pushRelease(tag, shouldPush)
+
   if (shouldPush) {
-    spinner.start('Pushing to main...')
-    await $`git push origin main`
-    spinner.stop('✓ Pushed to main')
     p.log.info('GitHub Actions will deploy to trafficsigns.osm-verkehrswende.org')
-  } else {
-    p.log.info('Run `git push` manually when ready.')
   }
 
   p.outro(`✓ App ${newVersion} released successfully!`)
