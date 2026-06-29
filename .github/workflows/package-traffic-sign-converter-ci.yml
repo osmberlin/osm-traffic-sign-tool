@@ -27,7 +27,7 @@ jobs:
           cache: true
 
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           # See ./NODE_VERSION.md
           node-version-file: '.nvmrc'
