@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest'
 import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
 import { QUESTION_NIL_ANSWER_ID } from '../data-definitions/TrafficSignDataTypes.js'
 import { signsStateByDescriptiveName } from '../utils/signsByDescriptiveName.js'
+import { transformToSignState } from '../utils/transformToSignState.js'
 import { signsToTags } from './signsToTags.js'
 
 describe('question answers in signsToTags()', () => {
@@ -133,5 +134,103 @@ describe('question answers in signsToTags()', () => {
     const wayTags = signsToTags(signs, 'DE', 'way', answers)
     expect(wayTags.has('direction')).toBe(false)
     expect(wayTags.get('hazard')).toBe('cyclists')
+  })
+
+  describe('DE:1000-30/31/32/33 bidirectional oneway tagging', () => {
+    test('DE:1000-31 separate way recommends oneway=no', () => {
+      const sign = data.find((item) => item.osmValuePart === '1000-31')
+      expect(sign).toBeDefined()
+
+      const result = signsToTags([transformToSignState('DE', sign!)], 'DE', 'way')
+      expect(result.get('oneway')).toBe('no')
+      expect(result.has('oneway:bicycle')).toBe(false)
+    })
+
+    test('DE:1000-32 separate way recommends oneway=no', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Radverkehr kreuzt von links und rechts',
+      ])
+      expect(signs.length).toBeGreaterThan(0)
+
+      const result = signsToTags(signs, 'DE', 'way')
+      expect(result.get('oneway')).toBe('no')
+      expect(result.has('oneway:bicycle')).toBe(false)
+    })
+
+    test('DE:1000-32 centerline defaults to cycleway=track and oneway:bicycle=no', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Radverkehr kreuzt von links und rechts',
+      ])
+      expect(signs.length).toBeGreaterThan(0)
+
+      const result = signsToTags(signs, 'DE', 'way_centerline')
+      expect(result.get('cycleway')).toBe('track')
+      expect(result.get('oneway:bicycle')).toBe('no')
+      expect(result.has('oneway')).toBe(false)
+    })
+
+    test('DE:1000-32 centerline contraflow one-way removes cycleway=track', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Radverkehr kreuzt von links und rechts',
+      ])
+      expect(signs.length).toBeGreaterThan(0)
+      const signKey = signs[0]!.osmValuePart
+
+      const result = signsToTags(signs, 'DE', 'way_centerline', {
+        [signKey]: { centerlineOnewayContext: 'contraflowOneWay' },
+      })
+      expect(result.get('oneway:bicycle')).toBe('no')
+      expect(result.has('cycleway')).toBe(false)
+    })
+
+    test('DE:1000-33 centerline recommends oneway:bicycle=no', () => {
+      const signs = signsStateByDescriptiveName('DE', data, ['Radverkehr im Gegenverkehr'])
+      expect(signs.length).toBeGreaterThan(0)
+
+      const centerlineTags = signsToTags(signs, 'DE', 'way_centerline')
+      expect(centerlineTags.get('oneway:bicycle')).toBe('no')
+      expect(centerlineTags.has('oneway')).toBe(false)
+
+      const wayTags = signsToTags(signs, 'DE', 'way')
+      expect(wayTags.get('oneway')).toBe('no')
+      expect(wayTags.has('oneway:bicycle')).toBe(false)
+    })
+
+    test('DE:240 + DE:1000-30 with sidepath keeps oneway=no on separate way', () => {
+      const signs = signsStateByDescriptiveName('DE', data, [
+        'Gemeinsamer Fuß- und Radweg',
+        'Beide Richtungen',
+      ])
+      const modifier = signs.find((item) => item.osmValuePart === '1000-30')
+      expect(modifier).toBeDefined()
+
+      const result = signsToTags(signs, 'DE', 'way', {
+        '240': { sidepath: 'yes' },
+      })
+      expect(result.get('highway')).toMatchObject(['path'])
+      expect(result.get('oneway')).toBe('no')
+      expect(result.get('is_sidepath')).toBe('yes')
+      expect(result.get('traffic_sign')).toBe('DE:240,1000-30')
+    })
+
+    test('DE:241-30 + DE:1000-31 defaults to oneway=no (oneway:bicycle=no documented in comments)', () => {
+      const mainSign = data.find((item) => item.osmValuePart === '241-30')
+      const modifierSign = data.find((item) => item.osmValuePart === '1000-31')
+      expect(mainSign).toBeDefined()
+      expect(modifierSign).toBeDefined()
+
+      const signs = [
+        transformToSignState('DE', mainSign!),
+        transformToSignState('DE', modifierSign!),
+      ]
+
+      const result = signsToTags(signs, 'DE', 'way', {
+        '241-30': { highwayClass: 'path', sidepath: 'yes' },
+      })
+      expect(result.get('highway')).toMatchObject(['path'])
+      expect(result.get('oneway')).toBe('no')
+      expect(result.has('oneway:bicycle')).toBe(false)
+      expect(result.get('traffic_sign')).toBe('DE:241-30,1000-31')
+    })
   })
 })

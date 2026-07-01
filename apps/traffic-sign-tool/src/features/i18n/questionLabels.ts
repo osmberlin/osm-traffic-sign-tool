@@ -8,6 +8,7 @@ const promptShortLabels: Record<string, () => string> = {
   'guidanceMode.prompt': m.question_guidanceMode_title,
   'highwayClass.prompt': m.question_highwayClass_title,
   'signDirection.prompt': m.question_signDirection_title,
+  'centerlineOnewayContext.prompt': m.question_centerlineOnewayContext_title,
 }
 
 const answerLabels: Record<string, () => string> = {
@@ -33,6 +34,11 @@ const answerLabels: Record<string, () => string> = {
   'signDirection.answer.nil': m.question_signDirection_answer_nil,
   'signDirection.answer.forward': m.question_signDirection_answer_forward,
   'signDirection.answer.backward': m.question_signDirection_answer_backward,
+  'centerlineOnewayContext.answer.nil': m.question_centerlineOnewayContext_answer_nil,
+  'centerlineOnewayContext.answer.adjacentCycleTrack':
+    m.question_centerlineOnewayContext_answer_adjacentCycleTrack,
+  'centerlineOnewayContext.answer.contraflowOneWay':
+    m.question_centerlineOnewayContext_answer_contraflowOneWay,
 }
 
 export const getQuestionPromptShortLabel = (questionI18nKey: string): string =>
