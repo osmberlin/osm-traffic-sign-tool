@@ -65,7 +65,7 @@ jobs:
         working-directory: apps/traffic-sign-tool
 
       - name: Upload artifact (Vite)
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./apps/traffic-sign-tool/dist
 
