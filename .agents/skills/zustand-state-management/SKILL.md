@@ -62,7 +62,9 @@ const useMapFiltersStore = create<MapFiltersStore>()((set) => ({
   applied: [],
   actions: {
     addFilter: (filter) =>
-      set((state) => (state.applied.includes(filter) ? state : { applied: [...state.applied, filter] })),
+      set((state) =>
+        state.applied.includes(filter) ? state : { applied: [...state.applied, filter] },
+      ),
     clearFilters: () => set({ applied: [] }),
   },
 }))
@@ -112,7 +114,9 @@ If two primitives are needed together rarely, use `useShallow` — see llms.txt 
 ```typescript
 import { useShallow } from 'zustand/shallow'
 
-const { applied, count } = useMapFiltersStore(useShallow((s) => ({ applied: s.applied, count: s.applied.length })))
+const { applied, count } = useMapFiltersStore(
+  useShallow((s) => ({ applied: s.applied, count: s.applied.length })),
+)
 ```
 
 Prefer atomic hooks over `useShallow` when practical.
