@@ -11,8 +11,8 @@
 command = "bun run build"
 publish = "apps/traffic-sign-tool/dist"
 # Exit 0 = skip. Build deploy previews only; skip main pushes and Dependabot PRs.
-# Netlify: exit 0 cancels, exit 1 proceeds. HEAD is the PR branch (dependabot/*).
-ignore = "bash -c '[[ \"$CONTEXT\" != deploy-preview ]] && exit 0; [[ \"$HEAD\" == dependabot/* ]] && exit 0; exit 1'"
+# Netlify: exit 0 cancels, exit 1 proceeds. BRANCH is the PR branch (dependabot/*).
+ignore = "bash -c '[[ \"$CONTEXT\" != deploy-preview ]] && exit 0; [[ \"$BRANCH\" == dependabot/* ]] && exit 0; exit 1'"
 
 # TanStack Router SPA — serve index.html for client-side routes.
 [[redirects]]
