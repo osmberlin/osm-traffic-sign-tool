@@ -31,7 +31,7 @@
     "@fontsource/noto-serif": "^5.2.9",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
-    "@inlang/paraglide-js": "^2.20.1",
+    "@inlang/paraglide-js": "^2.20.2",
     "@inlang/paraglide-js-react": "^1.0.2",
     "@internal/taginfo": "workspace:*",
     "@internal/wiki": "workspace:*",
@@ -69,7 +69,7 @@
     "jsdom": "^27.3.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "vite": "^8.1.0",
+    "vite": "^8.1.2",
     "vitest": "^4.1.9"
   }
 }
