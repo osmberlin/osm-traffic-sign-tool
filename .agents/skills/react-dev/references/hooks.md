@@ -47,10 +47,7 @@ function CustomInput({ ref, label }: InputProps) {
 For subscribing to external stores with SSR-safe snapshots:
 
 ```typescript
-function useStore<T>(store: {
-  getState: () => T
-  subscribe: (onStoreChange: () => void) => () => void
-}): T {
+function useStore<T>(store: { getState: () => T; subscribe: (onStoreChange: () => void) => () => void }): T {
   return useSyncExternalStore(
     store.subscribe,
     store.getState,
