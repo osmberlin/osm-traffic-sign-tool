@@ -21,6 +21,5 @@ export default defineConfig({
     '**/dist/**',
     '**/coverage/**',
     '**/*.{yml,yaml}',
-    'apps/traffic-sign-tool/src/routeTree.gen.ts',
   ],
 })

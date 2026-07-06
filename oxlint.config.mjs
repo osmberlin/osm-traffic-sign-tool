@@ -45,11 +45,5 @@ export default defineConfig({
       },
     },
   ],
-  ignorePatterns: [
-    '**/node_modules/**',
-    '**/.turbo/**',
-    '**/dist/**',
-    '**/coverage/**',
-    'apps/traffic-sign-tool/src/routeTree.gen.ts',
-  ],
+  ignorePatterns: ['**/node_modules/**', '**/.turbo/**', '**/dist/**', '**/coverage/**'],
 })
