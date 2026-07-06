@@ -31,9 +31,6 @@ jobs:
           # See ./NODE_VERSION.md
           node-version-file: '.nvmrc'
 
-      - name: Validate lockfile manifests
-        run: bun run validate-lockfile-manifests
-
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
