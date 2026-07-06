@@ -9,6 +9,15 @@ import {
   isOpeningHoursValuePromptFormat,
   type ValuePromptFormat,
 } from '@osm-traffic-signs/converter'
+import type { ReactNode } from 'react'
+
+const openingHoursWikiMarkup = {
+  link: ({ children, options }: { children?: ReactNode; options: { to: string } }) => (
+    <ExternalLink href={options.to} blank>
+      {children}
+    </ExternalLink>
+  ),
+}
 
 type Props = {
   format: ValuePromptFormat
@@ -62,16 +71,7 @@ export const ConditionalOpeningHoursValidationFeedback = ({ format, inputValue }
   return (
     <>
       <p className="mt-2 text-gray-500 group-hover:text-gray-800">
-        <ParaglideMessage
-          message={m.opening_hours_wiki_block}
-          markup={{
-            link: ({ children, options }) => (
-              <ExternalLink href={options.to} blank>
-                {children}
-              </ExternalLink>
-            ),
-          }}
-        />
+        <ParaglideMessage message={m.opening_hours_wiki_block} markup={openingHoursWikiMarkup} />
       </p>
       <ValidationMessageList validation={validation} />
     </>
