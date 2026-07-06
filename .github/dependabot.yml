@@ -113,6 +113,8 @@ updates:
           - '@headlessui/*'
           - '@inlang/*'
           - 'micromark*'
+          # Dependabot multi-directory scans fail with unknown_error for this dep.
+          - 'opening_hours'
 
   - package-ecosystem: github-actions
     directory: /
