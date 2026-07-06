@@ -1,10 +1,11 @@
 ---
 name: review-dependabot
 description: >-
-  Review and merge Dependabot PRs for FMC repos (tilda-geo, trassenscout, etc.):
+  Review and merge open Dependabot PRs in the current workspace repo:
   changelog triage, risk classification, CI verification, and rebase merge.
-  Use when triaging dependency update PRs, weekly Bun/GitHub Actions/Docker
-  bumps, grouped patch PRs, security updates, or semver-major upgrades.
+  Use for "/review dependabot" or similar — always scoped to the repo you have
+  open. Weekly Bun/GitHub Actions/Docker bumps, grouped patches, security
+  updates, semver-major upgrades.
 ---
 
 # Review Dependabot PRs
@@ -13,12 +14,13 @@ Workflow for FMC geo React apps. Dependabot **config** (groups, schedule, ignore
 
 After merge, use skill `babysit` only if the PR needs conflict/CI/comment follow-up on a feature branch — not for routine weekly bumps on `develop`.
 
-## Repos and cadence
+## Repo scope
 
-| Repo                                                              | Typical base | Notes                                                    |
-| ----------------------------------------------------------------- | ------------ | -------------------------------------------------------- |
-| [tilda-geo](https://github.com/FixMyBerlin/tilda-geo/pulls)       | `develop`    | Monorepo: `/app`, `/processing`                          |
-| [trassenscout](https://github.com/FixMyBerlin/trassenscout/pulls) | `develop`    | Same as tilda-geo — never merge Dependabot PRs to `main` |
+**Work only in the Git repository of the current workspace.** List, review, and merge Dependabot PRs for that repo — never for other repos.
+
+Run all `gh` commands from the project root **without `--repo`** so GitHub CLI uses the checkout. Stop if the workspace is not a git repo or has no `.github/dependabot.yml`.
+
+Typical FMC app repos target **`develop`** — never merge Dependabot PRs to `main`. Confirm `baseRefName` on each PR; use **AskQuestion** if it looks wrong.
 
 Policy: **one open Dependabot PR per ecosystem** — merge or explicitly defer (close + ignore) before the next opens.
 
@@ -27,8 +29,9 @@ Policy: **one open Dependabot PR per ecosystem** — merge or explicitly defer (
 Copy and track:
 
 ```
+- [ ] List open Dependabot PRs in this repo
 - [ ] Identify PR type (security / grouped patch / major / actions / docker)
-- [ ] Read release notes in PR description (and linked changelog)
+- [ ] Read release notes from the PR body (primary changelog source)
 - [ ] Classify risk (see below)
 - [ ] Scan lockfile + manifest diff for surprises
 - [ ] Confirm CI green on latest commit
@@ -39,31 +42,39 @@ Copy and track:
 ### 1. Gather context
 
 ```bash
-gh pr view <number> --repo FixMyBerlin/<repo> --json title,body,baseRefName,headRefName,mergeable,statusCheckRollup,author,labels
-gh pr diff <number> --repo FixMyBerlin/<repo> --name-only
+gh pr list --author app/dependabot --state open --json number,title,baseRefName,headRefName,labels
 ```
 
-Read the PR body first — Dependabot embeds release notes and compare links. Follow **breaking change**, **migration**, and **deprecation** sections before reading code.
+For each open PR:
 
-Note **group name** in the title (e.g. `app-framework-minor-patch`) — a single PR may bundle many packages; one risky changelog can block the whole group.
+```bash
+gh pr view <number> --json title,body,baseRefName,headRefName,mergeable,statusCheckRollup,author,labels
+gh pr diff <number> --name-only
+```
+
+**The PR body is the changelog.** Dependabot embeds release notes for every bumped package (version range, compare link, and excerpted release notes). Read `body` from `gh pr view` first and use that text for triage — do **not** fetch GitHub releases, npm pages, or other external changelogs unless the body is empty or clearly incomplete for a package you must decide on.
+
+In grouped PRs, each package has its own section — scan all of them; one risky entry can block the whole group. Follow **breaking change**, **migration**, and **deprecation** headings in the body before reading the diff or grepping the codebase.
+
+Note **group name** in the title (e.g. `app-framework-minor-patch`).
 
 ### 2. Classify risk
 
-| Tier                  | Examples                                                                                                                  | Action                                                                                                                                  |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **Low**               | Patch dev tools (`knip`, `husky`), typings, isolated utilities                                                            | CI green → merge                                                                                                                        |
-| **Medium**            | Grouped minor/patch framework deps, `vite`, `oxlint`/`oxfmt`, Playwright                                                  | Read changelogs; spot-check usage; `bun run build` + `bun oxlint` locally if notes mention behavior changes                             |
-| **High**              | `react`, `@tanstack/*`, `maplibre-gl`, `react-map-gl`, `prisma`, `better-auth`, `zod`, `tailwindcss`, `typescript` majors | Full changelog + migration guide; grep codebase for affected APIs; run build, lint, unit tests; Playwright if maps/auth/routing touched |
-| **Critical decision** | Semver **major**, explicit breaking changes, peer-dep conflicts, CI red, or changelog unclear                             | **AskQuestion** — do not merge until human chooses                                                                                      |
+| Tier                  | Examples                                                                                                                  | Action                                                                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Low**               | Patch dev tools (`knip`, `husky`), typings, isolated utilities                                                            | CI green → merge                                                                                                                                   |
+| **Medium**            | Grouped minor/patch framework deps, `vite`, `oxlint`/`oxfmt`, Playwright                                                  | Read PR-body release notes; spot-check usage; `bun run build` + `bun oxlint` locally if notes mention behavior changes                             |
+| **High**              | `react`, `@tanstack/*`, `maplibre-gl`, `react-map-gl`, `prisma`, `better-auth`, `zod`, `tailwindcss`, `typescript` majors | Read all PR-body notes + migration sections; grep codebase for affected APIs; run build, lint, unit tests; Playwright if maps/auth/routing touched |
+| **Critical decision** | Semver **major**, explicit breaking changes, peer-dep conflicts, CI red, or changelog unclear                             | **AskQuestion** — do not merge until human chooses                                                                                                 |
 
 Security updates: treat as **medium** minimum — still read notes; do not merge blind even when labeled security.
 
 ### 3. Investigate in code
 
-When changelog or tier says investigate:
+When PR-body release notes or tier say investigate:
 
-1. `gh pr diff` — focus on `package.json`, `bun.lock`, not only lockfile noise.
-2. Grep for APIs mentioned in breaking sections (deprecated props, renamed exports, config keys).
+1. `gh pr diff <number>` — focus on `package.json`, `bun.lock`, not only lockfile noise.
+2. Grep the local checkout for APIs mentioned in breaking sections (deprecated props, renamed exports, config keys).
 3. Load the relevant FMC skill if the bump touches that area (`react-dev`, `react-map-gl`, `tanstack-start-conventions`, `playwright-skill`, etc.).
 4. Check **peer dependency** warnings in CI logs.
 
@@ -81,7 +92,7 @@ Use Cursor **AskQuestion** when the agent cannot safely decide alone:
 - Breaking change affects code paths you cannot fully verify in session
 - CI fails and fix is not obvious or would widen scope beyond the bump
 - Grouped PR mixes safe and risky packages — merge all vs split vs close and reconfigure groups
-- Changelog missing or contradictory
+- PR-body release notes missing or contradictory for a package you must decide on
 - Proposed **ignore** rule vs taking the update now
 - Merge vs wait for a sibling PR / upstream fix
 
@@ -98,7 +109,7 @@ Requirements:
 **Use rebase merge** to keep history linear:
 
 ```bash
-gh pr merge <number> --repo FixMyBerlin/<repo> --rebase --delete-branch
+gh pr merge <number> --rebase --delete-branch
 ```
 
 If the repo disallows rebase via CLI, use the GitHub UI with **Rebase and merge**.
@@ -127,7 +138,7 @@ flowchart TD
   ci -->|no| fix{Fix in scope?}
   fix -->|yes| fixCi[Fix + push]
   fix -->|no| ask[AskQuestion]
-  ci -->|yes| notes[Read changelog]
+  ci -->|yes| notes[Read PR body release notes]
   notes --> major{Major or breaking?}
   major -->|yes| investigate[Code + migration check]
   investigate --> ask
@@ -142,6 +153,8 @@ flowchart TD
 
 ## What not to do
 
+- Do not fetch external changelogs when the PR body already has release notes — use `gh pr view` `body` first
+- Do not review or merge Dependabot PRs outside the **current workspace repo**
 - Do not merge with failing required checks “to unblock the queue”
 - Do not refactor app code in the same session as a routine Dependabot merge unless the bump **requires** it
 - Do not change CI workflows to make a bad bump pass — flag instead

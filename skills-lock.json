@@ -3,9 +3,10 @@
   "skills": {
     "finish-work": {
       "source": "FixMyBerlin/fixmyskills",
+      "ref": "main",
       "sourceType": "github",
       "skillPath": "skills/finish-work/SKILL.md",
-      "computedHash": "50a0d008ddae614ebd8544073d75024ce8dba755e6848d40127e5bb72b826ccf"
+      "computedHash": "a58aaf4d46abeb1498b6d6abe3262f5881288f87f13c3e235b0701c8c2dc26f7"
     },
     "playwright-skill": {
       "source": "FixMyBerlin/fixmyskills",
@@ -15,21 +16,24 @@
     },
     "react-dev": {
       "source": "FixMyBerlin/fixmyskills",
+      "ref": "main",
       "sourceType": "github",
       "skillPath": "skills/react-dev/SKILL.md",
       "computedHash": "e87957bc8783afe17e6ed19df5c3a22bb50de8c6fed681b4907cd4b21b98f109"
     },
     "review-dependabot": {
       "source": "FixMyBerlin/fixmyskills",
+      "ref": "main",
       "sourceType": "github",
       "skillPath": "skills/review-dependabot/SKILL.md",
-      "computedHash": "fd04be5189e29ae0ad54c3f09016335ad6c9ef147c865e04a028a53818feee3e"
+      "computedHash": "24075b958c648c11c62bfa70b3632a92bb196c316eb4a3ca57c104f6be67a285"
     },
     "tech-stack": {
       "source": "FixMyBerlin/fixmyskills",
+      "ref": "main",
       "sourceType": "github",
       "skillPath": "skills/tech-stack/SKILL.md",
-      "computedHash": "af52bfd6b23a98dcf11a79b76b452fbd00835fc8867c5b74e7383024d5b9d3aa"
+      "computedHash": "26de8c9f08b797937b88af26b59adfc219b5812611c01663609b937c6122b835"
     },
     "touch-ipad-review": {
       "source": "FixMyBerlin/fixmyskills",
@@ -39,6 +43,7 @@
     },
     "zustand-state-management": {
       "source": "FixMyBerlin/fixmyskills",
+      "ref": "main",
       "sourceType": "github",
       "skillPath": "skills/zustand-state-management/SKILL.md",
       "computedHash": "7d6d64aee41189884cad34afb26214245b55d2e2118af833538c714631c467bd"
