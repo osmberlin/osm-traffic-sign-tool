@@ -59,8 +59,18 @@ getRegistryEntry('DE:274-30') // → { yolo, country, osmValue, spriteKey, signI
 spriteManifest.sheets // → [{ country, spriteBaseName, keyCount, unsupportedKeys }, …]
 ```
 
-The sprite `.png` / `.json` files are also exported for hosting:
-`@osm-traffic-signs/panoramax-sprites/sprites/trafficsigns_fr.json`, etc.
+The sprite `.png` / `.json` files are also exported for hosting or bundling:
+`@osm-traffic-signs/panoramax-sprites/sprites/trafficsigns_fr.json`, `…_fr.png`, `…_fr@2x.*`, etc.
+
+## Consuming in a MapLibre app (bundled + lazy)
+
+You can add this package as a dependency and lazy-load only the country sheet you need, instead of
+fetching from a remote host. MapLibre builds sprite requests from a **base URL** (`X.json`, `X.png`,
+`X@2x.*`), so either copy `dist/data/sprites/*` into your static dir and
+`map.addSprite('pnx-tfsigns-de', '/sprites/trafficsigns_de')` on demand, or keep everything bundled
+and redirect the sprite requests to the imported assets via `transformRequest`. Both patterns —
+including a config-driven, per-country lazy loader for the Panoramax viewer — are written up in
+[`docs/04-panoramax-update-prompt.md`](./docs/04-panoramax-update-prompt.md).
 
 ## Regenerating
 

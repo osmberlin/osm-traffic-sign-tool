@@ -149,6 +149,94 @@ if (/^[A-Z]{2}$/.test(cc)) ensureSpriteForCountry(map, cc)
 Net effect: a user browsing France downloads only the FR sheet; panning into Germany fetches the DE
 sheet exactly once, on demand.
 
+## Step 3C — Consume this package as an npm dependency (bundled, no presets host)
+
+Instead of a `presets.panoramax.fr` (or `<host>`) URL, add the package as a dependency and serve the
+sheets from the app itself:
+
+```bash
+npm install @osm-traffic-signs/panoramax-sprites
+```
+
+The package ships the sheets as subpath exports — `@osm-traffic-signs/panoramax-sprites/sprites/trafficsigns_<cc>.json`
+/ `.png` / `@2x.*` — plus a `spriteManifest` of which countries exist.
+
+The one constraint to design around: MapLibre builds sprite requests from a **base URL** — for a base
+`X` it fetches `X.json`, `X.png`, and (on HiDPI) `X@2x.json`, `X@2x.png`. So you can't hand it a single
+bundler-hashed asset; you give it a base and make those four requests resolve. Two ways:
+
+### Option 1 — copy into the app's static dir at build (simplest)
+
+Copy `node_modules/@osm-traffic-signs/panoramax-sprites/dist/data/sprites/*` into the app's
+`public/sprites/` (a one-line build step / Vite `publicDir` or `vite-plugin-static-copy`). Then the
+base URLs are same-origin and the **Step 3B lazy loader works unchanged**, just with local URLs:
+
+```js
+export const TRAFFIC_SIGN_SPRITES = {
+  fr: '/sprites/trafficsigns_fr',
+  de: '/sprites/trafficsigns_de',
+  be: '/sprites/trafficsigns_be',
+}
+```
+
+Source of truth is the npm package; nothing is fetched from an external host.
+
+### Option 2 — fully bundled + lazy via `transformRequest` (no copy step)
+
+Import each country's four asset files through the app's bundler (so they get hashed URLs and code-
+split), map a **virtual base** to them, and let a `transformRequest` redirect MapLibre's sprite
+requests to the bundled URLs. Only the country you actually need is `import()`-ed, so its assets land
+in their own lazily-loaded chunk.
+
+```js
+// sprites/de.ts — one module per country; `?url` gives the bundled asset URL (Vite; webpack: asset/resource)
+import json from '@osm-traffic-signs/panoramax-sprites/sprites/trafficsigns_de.json?url'
+import png from '@osm-traffic-signs/panoramax-sprites/sprites/trafficsigns_de.png?url'
+import json2x from '@osm-traffic-signs/panoramax-sprites/sprites/trafficsigns_de@2x.json?url'
+import png2x from '@osm-traffic-signs/panoramax-sprites/sprites/trafficsigns_de@2x.png?url'
+export default { json, png, json2x, png2x }
+
+// spriteAssets.ts — registry filled lazily
+const loaders = {
+  de: () => import('./sprites/de.ts'),
+  be: () => import('./sprites/be.ts'),
+  fr: () => import('./sprites/fr.ts'),
+}
+const assets = {} // cc -> { json, png, json2x, png2x }
+
+// Register ONE transformRequest on the map (at construction). It rewrites the virtual base
+// `pkg-sprite://<cc>` requests to the bundled asset URLs. ResourceType is SpriteJSON / SpriteImage.
+export function spriteTransformRequest(url, resourceType) {
+  const m = url.match(/^pkg-sprite:\/\/([a-z]{2})(@2x)?\.(json|png)$/)
+  if (!m) return undefined // let MapLibre handle everything else
+  const [, cc, retina, ext] = m
+  const a = assets[cc]
+  if (!a) return { url } // not loaded yet — shouldn't happen if you await the loader first
+  const key = ext === 'json' ? (retina ? 'json2x' : 'json') : retina ? 'png2x' : 'png'
+  return { url: a[key] }
+}
+
+// Lazy loader: dynamic-import the country chunk, then register its sprite by the virtual base.
+const loaded = new Set()
+export async function ensureSpriteForCountry(map, cc) {
+  cc = cc.toLowerCase()
+  if (loaded.has(cc) || !loaders[cc]) return
+  loaded.add(cc)
+  assets[cc] = (await loaders[cc]()).default // fetch the country's chunk (json + png + @2x)
+  await map.addSprite(`pnx-tfsigns-${cc}`, `pkg-sprite://${cc}`) // transformRequest resolves the 4 URLs
+}
+```
+
+Wire `spriteTransformRequest` into the map's existing `transformRequest` (compose if one already
+exists), and call `ensureSpriteForCountry(map, cc)` from the same detection-parsing hook as Step 3B.
+
+Trade-off vs Option 1: fully self-contained and versioned with the app (no copy step, no separate
+deploy of sprites), at the cost of a small `transformRequest` shim. Both keep the "load only the
+country you're looking at" laziness.
+
+> `map.addSprite` / `removeSprite` require MapLibre GL JS ≥ 3. `transformRequest` receives
+> `ResourceType.SpriteJSON` for the `.json` and `ResourceType.SpriteImage` for the `.png`.
+
 ## Step 4 — Source the config from the manifest (optional)
 
 Rather than hand-maintaining `TRAFFIC_SIGN_SPRITES`, the viewer can fetch this package's
