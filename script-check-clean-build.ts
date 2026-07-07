@@ -14,6 +14,7 @@ const distDirs = [
   'packages/internal_taginfo/dist',
   'packages/internal_svgs/dist',
   'packages/internal_wiki/dist',
+  'packages/panoramax-sprites/dist',
   'apps/traffic-sign-tool/dist',
 ]
 

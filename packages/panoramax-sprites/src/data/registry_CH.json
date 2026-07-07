@@ -1,0 +1,1263 @@
+{
+  "country": "CH",
+  "hasCatalogue": false,
+  "counts": {
+    "ok": 0,
+    "svg-missing": 0,
+    "signId-not-in-tool": 0,
+    "country-not-in-tool": 139
+  },
+  "entries": [
+    {
+      "yolo": "hazard:right_turn",
+      "country": "CH",
+      "osmValue": "CH:1.01",
+      "spriteKey": null,
+      "signId": "1.01",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:left_turn",
+      "country": "CH",
+      "osmValue": "CH:1.02",
+      "spriteKey": null,
+      "signId": "1.02",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:zigzag",
+      "country": "CH",
+      "osmValue": "CH:1.03",
+      "spriteKey": null,
+      "signId": "1.03",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:zigzag:left",
+      "country": "CH",
+      "osmValue": "CH:1.04",
+      "spriteKey": null,
+      "signId": "1.04",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:slippery",
+      "country": "CH",
+      "osmValue": "CH:1.05",
+      "spriteKey": null,
+      "signId": "1.05",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:bumps",
+      "country": "CH",
+      "osmValue": "CH:1.06",
+      "spriteKey": null,
+      "signId": "1.06",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:narrow_both",
+      "country": "CH",
+      "osmValue": "CH:1.07",
+      "spriteKey": null,
+      "signId": "1.07",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:narrow_right",
+      "country": "CH",
+      "osmValue": "CH:1.08",
+      "spriteKey": null,
+      "signId": "1.08",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:narrow_left",
+      "country": "CH",
+      "osmValue": "CH:1.09",
+      "spriteKey": null,
+      "signId": "1.09",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:incline:down",
+      "country": "CH",
+      "osmValue": "CH:1.10",
+      "spriteKey": null,
+      "signId": "1.10",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:incline:up",
+      "country": "CH",
+      "osmValue": "CH:1.11",
+      "spriteKey": null,
+      "signId": "1.11",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:gravel",
+      "country": "CH",
+      "osmValue": "CH:1.12",
+      "spriteKey": null,
+      "signId": "1.12",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:rocks",
+      "country": "CH",
+      "osmValue": "CH:1.13a",
+      "spriteKey": null,
+      "signId": "1.13a",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:road_works",
+      "country": "CH",
+      "osmValue": "CH:1.14",
+      "spriteKey": null,
+      "signId": "1.14",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:level_crossing",
+      "country": "CH",
+      "osmValue": "CH:1.15",
+      "spriteKey": null,
+      "signId": "1.15",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:train",
+      "country": "CH",
+      "osmValue": "CH:1.16",
+      "spriteKey": null,
+      "signId": "1.16",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:tram",
+      "country": "CH",
+      "osmValue": "CH:1.17",
+      "spriteKey": null,
+      "signId": "1.17",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:pedestrian_crossing",
+      "country": "CH",
+      "osmValue": "CH:1.22",
+      "spriteKey": null,
+      "signId": "1.22",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:school",
+      "country": "CH",
+      "osmValue": "CH:1.23",
+      "spriteKey": null,
+      "signId": "1.23",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:wild_animals",
+      "country": "CH",
+      "osmValue": "CH:1.24",
+      "spriteKey": null,
+      "signId": "1.24",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:horse",
+      "country": "CH",
+      "osmValue": "CH:1.24a",
+      "spriteKey": null,
+      "signId": "1.24a",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:animals",
+      "country": "CH",
+      "osmValue": "CH:1.25",
+      "spriteKey": null,
+      "signId": "1.25",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:bothways",
+      "country": "CH",
+      "osmValue": "CH:1.26",
+      "spriteKey": null,
+      "signId": "1.26",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:traffic_signal",
+      "country": "CH",
+      "osmValue": "CH:1.27",
+      "spriteKey": null,
+      "signId": "1.27",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:airport",
+      "country": "CH",
+      "osmValue": "CH:1.28",
+      "spriteKey": null,
+      "signId": "1.28",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard",
+      "country": "CH",
+      "osmValue": "CH:1.30",
+      "spriteKey": null,
+      "signId": "1.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:traffic_jam",
+      "country": "CH",
+      "osmValue": "CH:1.31",
+      "spriteKey": null,
+      "signId": "1.31",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:bicycle",
+      "country": "CH",
+      "osmValue": "CH:1.32",
+      "spriteKey": null,
+      "signId": "1.32",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_way",
+      "country": "CH",
+      "osmValue": "CH:2.01",
+      "spriteKey": null,
+      "signId": "2.01",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_entry",
+      "country": "CH",
+      "osmValue": "CH:2.02",
+      "spriteKey": null,
+      "signId": "2.02",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_car",
+      "country": "CH",
+      "osmValue": "CH:2.03",
+      "spriteKey": null,
+      "signId": "2.03",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_motorcycle",
+      "country": "CH",
+      "osmValue": "CH:2.04",
+      "spriteKey": null,
+      "signId": "2.04",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_bicycle",
+      "country": "CH",
+      "osmValue": "CH:2.05",
+      "spriteKey": null,
+      "signId": "2.05",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_moped",
+      "country": "CH",
+      "osmValue": "CH:2.06",
+      "spriteKey": null,
+      "signId": "2.06",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_hgv",
+      "country": "CH",
+      "osmValue": "CH:2.07",
+      "spriteKey": null,
+      "signId": "2.07",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_bus",
+      "country": "CH",
+      "osmValue": "CH:2.08",
+      "spriteKey": null,
+      "signId": "2.08",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_trailer",
+      "country": "CH",
+      "osmValue": "CH:2.09",
+      "spriteKey": null,
+      "signId": "2.09",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_dangerous",
+      "country": "CH",
+      "osmValue": "CH:2.10.1",
+      "spriteKey": null,
+      "signId": "2.10.1",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_dangerous_liquid",
+      "country": "CH",
+      "osmValue": "CH:2.11",
+      "spriteKey": null,
+      "signId": "2.11",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_horse",
+      "country": "CH",
+      "osmValue": "CH:2.12",
+      "spriteKey": null,
+      "signId": "2.12",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_motor_vehicle2",
+      "country": "CH",
+      "osmValue": "CH:2.13",
+      "spriteKey": null,
+      "signId": "2.13",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_motor_vehicle",
+      "country": "CH",
+      "osmValue": "CH:2.14",
+      "spriteKey": null,
+      "signId": "2.14",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_pedestrian",
+      "country": "CH",
+      "osmValue": "CH:2.15",
+      "spriteKey": null,
+      "signId": "2.15",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_skiing",
+      "country": "CH",
+      "osmValue": "CH:2.15.1",
+      "spriteKey": null,
+      "signId": "2.15.1",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_sledging",
+      "country": "CH",
+      "osmValue": "CH:2.15.2",
+      "spriteKey": null,
+      "signId": "2.15.2",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_roller",
+      "country": "CH",
+      "osmValue": "CH:2.15.3",
+      "spriteKey": null,
+      "signId": "2.15.3",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxweight",
+      "country": "CH",
+      "osmValue": "CH:2.16",
+      "spriteKey": null,
+      "signId": "2.16",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxaxleweight",
+      "country": "CH",
+      "osmValue": "CH:2.17",
+      "spriteKey": null,
+      "signId": "2.17",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxwidth",
+      "country": "CH",
+      "osmValue": "CH:2.18",
+      "spriteKey": null,
+      "signId": "2.18",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxheight",
+      "country": "CH",
+      "osmValue": "CH:2.19",
+      "spriteKey": null,
+      "signId": "2.19",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxlength",
+      "country": "CH",
+      "osmValue": "CH:2.20",
+      "spriteKey": null,
+      "signId": "2.20",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:10",
+      "country": "CH",
+      "osmValue": "CH:2.30[10]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:100",
+      "country": "CH",
+      "osmValue": "CH:2.30[100]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:110",
+      "country": "CH",
+      "osmValue": "CH:2.30[110]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:120",
+      "country": "CH",
+      "osmValue": "CH:2.30[120]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:130",
+      "country": "CH",
+      "osmValue": "CH:2.30[130]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:15",
+      "country": "CH",
+      "osmValue": "CH:2.30[15]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:20",
+      "country": "CH",
+      "osmValue": "CH:2.30[20]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:25",
+      "country": "CH",
+      "osmValue": "CH:2.30[25]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:30",
+      "country": "CH",
+      "osmValue": "CH:2.30[30]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:40",
+      "country": "CH",
+      "osmValue": "CH:2.30[40]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:5",
+      "country": "CH",
+      "osmValue": "CH:2.30[5]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:50",
+      "country": "CH",
+      "osmValue": "CH:2.30[50]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:60",
+      "country": "CH",
+      "osmValue": "CH:2.30[60]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:70",
+      "country": "CH",
+      "osmValue": "CH:2.30[70]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:80",
+      "country": "CH",
+      "osmValue": "CH:2.30[80]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:90",
+      "country": "CH",
+      "osmValue": "CH:2.30[90]",
+      "spriteKey": null,
+      "signId": "2.30",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "min_speed",
+      "country": "CH",
+      "osmValue": "CH:2.31",
+      "spriteKey": null,
+      "signId": "2.31",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_right",
+      "country": "CH",
+      "osmValue": "CH:2.32",
+      "spriteKey": null,
+      "signId": "2.32",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_left",
+      "country": "CH",
+      "osmValue": "CH:2.33",
+      "spriteKey": null,
+      "signId": "2.33",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_right_down",
+      "country": "CH",
+      "osmValue": "CH:2.34",
+      "spriteKey": null,
+      "signId": "2.34",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_left_down",
+      "country": "CH",
+      "osmValue": "CH:2.35",
+      "spriteKey": null,
+      "signId": "2.35",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_through",
+      "country": "CH",
+      "osmValue": "CH:2.36",
+      "spriteKey": null,
+      "signId": "2.36",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_turn_right",
+      "country": "CH",
+      "osmValue": "CH:2.37",
+      "spriteKey": null,
+      "signId": "2.37",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_turn_left",
+      "country": "CH",
+      "osmValue": "CH:2.38",
+      "spriteKey": null,
+      "signId": "2.38",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_turn_left_right",
+      "country": "CH",
+      "osmValue": "CH:2.39",
+      "spriteKey": null,
+      "signId": "2.39",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_turn_right_through",
+      "country": "CH",
+      "osmValue": "CH:2.40",
+      "spriteKey": null,
+      "signId": "2.40",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "arrow_turn_left_through",
+      "country": "CH",
+      "osmValue": "CH:2.41",
+      "spriteKey": null,
+      "signId": "2.41",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "roundabout",
+      "country": "CH",
+      "osmValue": "CH:2.41.1",
+      "spriteKey": null,
+      "signId": "2.41.1",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_turn:right",
+      "country": "CH",
+      "osmValue": "CH:2.42",
+      "spriteKey": null,
+      "signId": "2.42",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_turn:left",
+      "country": "CH",
+      "osmValue": "CH:2.43",
+      "spriteKey": null,
+      "signId": "2.43",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_overtaking",
+      "country": "CH",
+      "osmValue": "CH:2.44",
+      "spriteKey": null,
+      "signId": "2.44",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_overtaking:hgv",
+      "country": "CH",
+      "osmValue": "CH:2.45",
+      "spriteKey": null,
+      "signId": "2.45",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_u_turn",
+      "country": "CH",
+      "osmValue": "CH:2.46",
+      "spriteKey": null,
+      "signId": "2.46",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "min_distance",
+      "country": "CH",
+      "osmValue": "CH:2.47",
+      "spriteKey": null,
+      "signId": "2.47",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "chains",
+      "country": "CH",
+      "osmValue": "CH:2.48",
+      "spriteKey": null,
+      "signId": "2.48",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_stop",
+      "country": "CH",
+      "osmValue": "CH:2.49",
+      "spriteKey": null,
+      "signId": "2.49",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_parking",
+      "country": "CH",
+      "osmValue": "CH:2.50",
+      "spriteKey": null,
+      "signId": "2.50",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "customs",
+      "country": "CH",
+      "osmValue": "CH:2.51",
+      "spriteKey": null,
+      "signId": "2.51",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "maxspeed:end",
+      "country": "CH",
+      "osmValue": "CH:2.53",
+      "spriteKey": null,
+      "signId": "2.53",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "min_speed:end",
+      "country": "CH",
+      "osmValue": "CH:2.54",
+      "spriteKey": null,
+      "signId": "2.54",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_overtaking:end",
+      "country": "CH",
+      "osmValue": "CH:2.55",
+      "spriteKey": null,
+      "signId": "2.55",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_overtaking:end:hgv",
+      "country": "CH",
+      "osmValue": "CH:2.56",
+      "spriteKey": null,
+      "signId": "2.56",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "chains:end",
+      "country": "CH",
+      "osmValue": "CH:2.57",
+      "spriteKey": null,
+      "signId": "2.57",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no:end",
+      "country": "CH",
+      "osmValue": "CH:2.58",
+      "spriteKey": null,
+      "signId": "2.58",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:30",
+      "country": "CH",
+      "osmValue": "CH:2.59.1",
+      "spriteKey": null,
+      "signId": "2.59.1",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:parking",
+      "country": "CH",
+      "osmValue": "CH:2.59.1c",
+      "spriteKey": null,
+      "signId": "2.59.1c",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:no_parking",
+      "country": "CH",
+      "osmValue": "CH:2.59.1e",
+      "spriteKey": null,
+      "signId": "2.59.1e",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:parking:end",
+      "country": "CH",
+      "osmValue": "CH:2.59.2c",
+      "spriteKey": null,
+      "signId": "2.59.2c",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:no_parking:end",
+      "country": "CH",
+      "osmValue": "CH:2.59.2e",
+      "spriteKey": null,
+      "signId": "2.59.2e",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:pedestrian",
+      "country": "CH",
+      "osmValue": "CH:2.59.3b",
+      "spriteKey": null,
+      "signId": "2.59.3b",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:pedestrian:end",
+      "country": "CH",
+      "osmValue": "CH:2.59.4b",
+      "spriteKey": null,
+      "signId": "2.59.4b",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:calm",
+      "country": "CH",
+      "osmValue": "CH:2.59.5a",
+      "spriteKey": null,
+      "signId": "2.59.5a",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "zone:calm:end",
+      "country": "CH",
+      "osmValue": "CH:2.59.6a",
+      "spriteKey": null,
+      "signId": "2.59.6a",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "bicycle:start",
+      "country": "CH",
+      "osmValue": "CH:2.60",
+      "spriteKey": null,
+      "signId": "2.60",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "bicycle:end",
+      "country": "CH",
+      "osmValue": "CH:2.60.1",
+      "spriteKey": null,
+      "signId": "2.60.1",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "pedestrian:start",
+      "country": "CH",
+      "osmValue": "CH:2.61",
+      "spriteKey": null,
+      "signId": "2.61",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "horse:start",
+      "country": "CH",
+      "osmValue": "CH:2.62",
+      "spriteKey": null,
+      "signId": "2.62",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "pedestrian_bicycle:designated",
+      "country": "CH",
+      "osmValue": "CH:2.63",
+      "spriteKey": null,
+      "signId": "2.63",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "pedestrian_bicycle:start",
+      "country": "CH",
+      "osmValue": "CH:2.63.1",
+      "spriteKey": null,
+      "signId": "2.63.1",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "bus:start",
+      "country": "CH",
+      "osmValue": "CH:2.64",
+      "spriteKey": null,
+      "signId": "2.64",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "stop",
+      "country": "CH",
+      "osmValue": "CH:3.01",
+      "spriteKey": null,
+      "signId": "3.01",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "give_way",
+      "country": "CH",
+      "osmValue": "CH:3.02",
+      "spriteKey": null,
+      "signId": "3.02",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "priority:start",
+      "country": "CH",
+      "osmValue": "CH:3.03",
+      "spriteKey": null,
+      "signId": "3.03",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "priority:end",
+      "country": "CH",
+      "osmValue": "CH:3.04",
+      "spriteKey": null,
+      "signId": "3.04",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:intersection",
+      "country": "CH",
+      "osmValue": "CH:3.05",
+      "spriteKey": null,
+      "signId": "3.05",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "hazard:crossing",
+      "country": "CH",
+      "osmValue": "CH:3.06",
+      "spriteKey": null,
+      "signId": "3.06",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "priority:backward",
+      "country": "CH",
+      "osmValue": "CH:3.09",
+      "spriteKey": null,
+      "signId": "3.09",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "priority:forward",
+      "country": "CH",
+      "osmValue": "CH:3.10",
+      "spriteKey": null,
+      "signId": "3.10",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "motorway:start",
+      "country": "CH",
+      "osmValue": "CH:4.01",
+      "spriteKey": null,
+      "signId": "4.01",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "motorway:end",
+      "country": "CH",
+      "osmValue": "CH:4.02",
+      "spriteKey": null,
+      "signId": "4.02",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "trunk:start",
+      "country": "CH",
+      "osmValue": "CH:4.03",
+      "spriteKey": null,
+      "signId": "4.03",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "trunk:end",
+      "country": "CH",
+      "osmValue": "CH:4.04",
+      "spriteKey": null,
+      "signId": "4.04",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "tunnel:start",
+      "country": "CH",
+      "osmValue": "CH:4.07",
+      "spriteKey": null,
+      "signId": "4.07",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "oneway",
+      "country": "CH",
+      "osmValue": "CH:4.08",
+      "spriteKey": null,
+      "signId": "4.08",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_exit",
+      "country": "CH",
+      "osmValue": "CH:4.09",
+      "spriteKey": null,
+      "signId": "4.09",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "no_exit:car",
+      "country": "CH",
+      "osmValue": "CH:4.10",
+      "spriteKey": null,
+      "signId": "4.10",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "pedestrian_crossing",
+      "country": "CH",
+      "osmValue": "CH:4.11",
+      "spriteKey": null,
+      "signId": "4.11",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "pedestrian:underpass",
+      "country": "CH",
+      "osmValue": "CH:4.12",
+      "spriteKey": null,
+      "signId": "4.12",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "pedestrian:overpass",
+      "country": "CH",
+      "osmValue": "CH:4.13",
+      "spriteKey": null,
+      "signId": "4.13",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "parking",
+      "country": "CH",
+      "osmValue": "CH:4.17",
+      "spriteKey": null,
+      "signId": "4.17",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "parking:disc",
+      "country": "CH",
+      "osmValue": "CH:4.18",
+      "spriteKey": null,
+      "signId": "4.18",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "parking:meter",
+      "country": "CH",
+      "osmValue": "CH:4.20",
+      "spriteKey": null,
+      "signId": "4.20",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "parking:covered",
+      "country": "CH",
+      "osmValue": "CH:4.21",
+      "spriteKey": null,
+      "signId": "4.21",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "escape_lane",
+      "country": "CH",
+      "osmValue": "CH:4.24",
+      "spriteKey": null,
+      "signId": "4.24",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "parking:park_ride",
+      "country": "CH",
+      "osmValue": "CH:4.25",
+      "spriteKey": null,
+      "signId": "4.25",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "exit",
+      "country": "CH",
+      "osmValue": "CH:4.63",
+      "spriteKey": null,
+      "signId": "4.63",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "information",
+      "country": "CH",
+      "osmValue": "CH:4.88",
+      "spriteKey": null,
+      "signId": "4.88",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    },
+    {
+      "yolo": "info:radio",
+      "country": "CH",
+      "osmValue": "CH:4.90",
+      "spriteKey": null,
+      "signId": "4.90",
+      "svgName": null,
+      "status": "country-not-in-tool"
+    }
+  ]
+}

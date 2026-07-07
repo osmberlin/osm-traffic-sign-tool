@@ -1,0 +1,14 @@
+# System
+.DS_Store
+
+# Env
+.env
+.env*.local
+
+# Package
+/node_modules
+/dist
+
+# Accidental copies from mis-run copyfiles/cp (wrong cwd or destination)
+/packages
+/apps
