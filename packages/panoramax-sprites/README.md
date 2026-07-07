@@ -81,7 +81,6 @@ Requires nothing beyond `bun install` (the sprite generator is in-process — no
 bun run generate           # registry + sprites (the checked-in outputs)
 bun run registry:generate  # just the registry JSON/MD
 bun run sprites:generate   # just the sprite sheets + manifest
-bun run seed:yaml          # re-seed the YAML from scripts/panoramax-classes.source.csv (rarely needed)
 ```
 
 Editing workflow: change `src/registry/panoramax-classes.yaml`, run `bun run generate`, commit the

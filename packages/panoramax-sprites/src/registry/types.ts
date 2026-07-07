@@ -19,7 +19,7 @@ export const registryStatuses = [
 export type RegistryStatus = (typeof registryStatuses)[number]
 
 export type SpriteRegistryEntry = {
-  /** Semantic detection-class key from the CSV/YAML, e.g. `arrow_left_down`. */
+  /** Semantic detection-class key from the YAML, e.g. `arrow_left_down`. */
   yolo: string
   country: RegistryCountry
   /** Panoramax `osm|traffic_sign` value, e.g. `FR:C113` (reconstructed `country:code`). */

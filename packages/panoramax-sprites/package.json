@@ -54,7 +54,6 @@
     "generate": "bun run registry:generate && bun run sprites:generate",
     "lint": "oxlint -c ../../oxlint.config.mjs .",
     "registry:generate": "bun run ./scripts/generateRegistry.ts && bun run --cwd ../.. format:files -- packages/panoramax-sprites/src/data",
-    "seed:yaml": "bun run ./scripts/seedYamlFromCsv.ts && bun run --cwd ../.. format:files -- packages/panoramax-sprites/src/registry/panoramax-classes.yaml",
     "sprites:generate": "bun run ./scripts/generateSprites.ts && bun run --cwd ../.. format:files -- packages/panoramax-sprites/src/data/sprites",
     "test": "bun test",
     "test:watch": "bun test --watch",

@@ -6,8 +6,8 @@
 # All values are quoted strings so codes with `:`, `,` or numeric-looking ids
 # (e.g. `CH: "2.35"`, `DE: "314,1044-10"`) stay intact.
 #
-# Seeded from ./scripts/panoramax-classes.source.csv via `bun run seed:yaml`.
-# After seeding, edit THIS file (not the CSV). Then run `bun run generate`.
+# Originally derived from the Panoramax detection-class CSV; this YAML is now the source of truth.
+# Edit this file, then run `bun run generate` to refresh the registry + sprites.
 
 - yolo: "arrow_left_down"
   DE: "222-10"
