@@ -136,12 +136,14 @@ export type {
 export {
   getValuePromptInputAttributes,
   isOpeningHoursValuePromptFormat,
+  isTextValuePromptFormat,
   valuePromptFormats,
   valuePromptInputFormats,
 } from './data-definitions/valuePromptFormats.js'
 export type {
   NumericValuePromptFormat,
   OpeningHoursValuePromptFormat,
+  TextValuePromptFormat,
   ValuePromptFormat,
   ValuePromptInputAttributes,
 } from './data-definitions/valuePromptFormats.js'
