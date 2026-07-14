@@ -13,7 +13,7 @@ export const _indication_e: SignType[] = [
     image: {
       kind: 'remote',
       sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:%C3%8Acritchieau_frontchi%C3%A9the_Manche.jpg',
+        'https://wiki.openstreetmap.org/wiki/File:%C3%8Ecritchieau_frontchi%C3%A9the_Manche.jpg',
       licence: 'Public Domain',
     },
   },

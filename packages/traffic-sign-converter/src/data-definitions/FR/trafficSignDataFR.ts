@@ -1,5 +1,7 @@
 import type { SignType } from '../TrafficSignDataTypes.js'
+import { _beacons_j } from './data/beacons_j.js'
 import { _danger_a } from './data/danger_a.js'
+import { _danger_ak } from './data/danger_ak.js'
 import { _idiograms_id } from './data/idiograms_id.js'
 import { _indication_c } from './data/indication_c.js'
 import { _indication_ce } from './data/indication_ce.js'
@@ -11,8 +13,10 @@ import { _other } from './data/other.js'
 import { _panels_m } from './data/panels_m.js'
 import { _prescription_b } from './data/prescription_b.js'
 import { _priority_ab } from './data/priority_ab.js'
+import { _safety_sr } from './data/safety_sr.js'
 import { _symbols_si_sc } from './data/symbols_si_sc.js'
 import { _symbols_su } from './data/symbols_su.js'
+import { _temporary_k } from './data/temporary_k.js'
 
 export const trafficSignDataFR: SignType[] = [
   ..._danger_a,
@@ -29,4 +33,8 @@ export const trafficSignDataFR: SignType[] = [
   ..._priority_ab,
   ..._symbols_si_sc,
   ..._symbols_su,
+  ..._beacons_j,
+  ..._danger_ak,
+  ..._safety_sr,
+  ..._temporary_k,
 ]

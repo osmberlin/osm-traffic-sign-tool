@@ -86,8 +86,12 @@ export const trafficSignTagToSigns = (
     const { signId, signValue } = splitSignIdSignValue(osmValuePart)
     if (!signValue) return
 
-    const signInMap = getSignBySignIdAndCheckValue(signsMap, signId, signValue)
-    if (signInMap) {
+    const directMatch = signsMap.get(osmValuePart)
+    const signInMap =
+      directMatch?.signId != null
+        ? directMatch
+        : getSignBySignIdAndCheckValue(signsMap, signId, signValue)
+    if (signInMap?.signId) {
       signInMap.svgName = createSvgImportname(countryPrefix, signInMap.osmValuePart) // Needs to happen before we modify the signs
       signInMap.osmValuePart = combineSignIdSignValue(signId, signValue)
       signInMap.signValue = signValue
@@ -100,8 +104,12 @@ export const trafficSignTagToSigns = (
   const signs: SignStateType[] = workingValueParts.map((osmValuePart) => {
     // The lookup has to happen just based on `signId` so custom values don't prevent the match
     const { signId, signValue } = splitSignIdSignValue(osmValuePart)
-    const sign = getSignBySignIdAndCheckValue(signsMap, signId, signValue)
-    if (sign) {
+    const directMatch = signsMap.get(osmValuePart)
+    const sign =
+      directMatch?.signId != null
+        ? directMatch
+        : getSignBySignIdAndCheckValue(signsMap, signId, signValue)
+    if (sign?.signId) {
       return {
         // @ts-expect-error we use the re-assign to either add missing `svgName`s or they get overwritten by more precise once from above
         svgName: createSvgImportname(countryPrefix, osmValuePart),
