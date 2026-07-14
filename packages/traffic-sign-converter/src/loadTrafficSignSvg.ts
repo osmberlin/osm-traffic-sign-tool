@@ -67,9 +67,12 @@ export const loadTrafficSignSvg = async (
   countryPrefix: CountryPrefixType,
   signOrOsmValuePart: SignWithImage | string,
 ): Promise<string | undefined> => {
-  const osmValuePart =
-    typeof signOrOsmValuePart === 'string' ? signOrOsmValuePart : signOrOsmValuePart.osmValuePart
-  const svgName = createSvgImportname(countryPrefix, osmValuePart)
+  const svgName =
+    typeof signOrOsmValuePart === 'string'
+      ? createSvgImportname(countryPrefix, signOrOsmValuePart)
+      : 'svgName' in signOrOsmValuePart && signOrOsmValuePart.svgName
+        ? signOrOsmValuePart.svgName
+        : createSvgImportname(countryPrefix, signOrOsmValuePart.osmValuePart)
   const cacheKey = `${countryPrefix}:${svgName}`
 
   const cachedSvg = loadedSvgCache.get(cacheKey)

@@ -184,6 +184,7 @@ export const SvgLoadersFR: FRSvgLoaderMap = {
   FR_M4y: () => import('./svgs/FR_M4y.svg'),
   FR_M5: () => import('./svgs/FR_M5.svg'),
   FR_M6a: () => import('./svgs/FR_M6a.svg'),
+  FR_M9z__Accotements_dangereux__: () => import('./svgs/FR_M9z__Accotements_dangereux__.svg'),
   FR_SC10: () => import('./svgs/FR_SC10.svg'),
   FR_SC11: () => import('./svgs/FR_SC11.svg'),
   FR_SC12: () => import('./svgs/FR_SC12.svg'),
