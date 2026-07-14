@@ -1,6 +1,6 @@
 import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import * as m from '@app/paraglide/messages'
-import { isOpeningHoursValuePromptFormat, SignStateType } from '@osm-traffic-signs/converter'
+import { isTextValuePromptFormat, SignStateType } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import { MissingSvgNotice } from '../../MissingSvgNotice'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
@@ -21,10 +21,7 @@ export const SelectedSignGraphic = ({ sign, compact = false }: Props) => {
     'valuePrompt' in sign && sign.valuePrompt
       ? sign.valuePrompt.defaultValue === '47' ||
         sign.signValue !== sign.valuePrompt.defaultValue ||
-        isOpeningHoursValuePromptFormat(sign.valuePrompt.format) ||
-        (sign.kind === 'exception_modifier' &&
-          sign.valuePrompt.format === 'integer' &&
-          Boolean(sign.signValue))
+        isTextValuePromptFormat(sign.valuePrompt.format)
       : false
 
   if (!sign.recodgnizedSign) {

@@ -17,23 +17,23 @@ export const _panels_m: SignType[] = [
     },
   },
   {
-    osmValuePart: 'M2[6]',
+    osmValuePart: 'M2[50]',
     signId: 'M2',
     name: 'M2',
     descriptiveName: "Étendue de l'effet du panneau",
     description: null,
     kind: 'exception_modifier',
-    signValue: '6',
+    signValue: '50',
     valuePrompt: {
       prompt: 'Kilomètre (km)',
-      defaultValue: '6',
+      defaultValue: '50',
       format: 'integer',
     },
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'exception_modifier' },
     image: {
       kind: 'remote',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:France_road_sign_M2.svg',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:France_road_sign_M2.svg',
       licence: 'Public Domain',
     },
   },
@@ -49,7 +49,7 @@ export const _panels_m: SignType[] = [
     valuePrompt: {
       prompt: 'Texte du panonceau',
       defaultValue: 'Accotements dangereux',
-      format: 'opening_hours',
+      format: 'text',
     },
     tagRecommendationsByGeometry: [
       {
@@ -61,7 +61,7 @@ export const _panels_m: SignType[] = [
     catalogue: { signCategory: 'exception_modifier' },
     image: {
       kind: 'remote',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:France_road_sign_M9z-2.svg',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:France_road_sign_M9z-2.svg',
       licence: 'Public Domain',
     },
   },

@@ -3,6 +3,7 @@ import type { GeometryType } from './geometryTypes.js'
 import type {
   NumericValuePromptFormat,
   OpeningHoursValuePromptFormat,
+  TextValuePromptFormat,
   ValuePromptFormat,
 } from './valuePromptFormats.js'
 
@@ -59,6 +60,7 @@ export type ModifierSignType = Prettify<
       signValue?: string | number
       valuePrompt?:
         | ValuePrompt<NumericValuePromptFormat>
+        | ValuePrompt<TextValuePromptFormat>
         | ValuePrompt<OpeningHoursValuePromptFormat>
       tagRecommendationsByGeometry: TagRecommendationsModifierSign
     } & SharedComments &
