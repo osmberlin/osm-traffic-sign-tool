@@ -1,7 +1,4 @@
-import {
-  sharedMaxspeedRecommendation,
-  sharedOnewayRecommendation,
-} from '../../sharedRecommendationPresets.js'
+import { sharedOnewayRecommendation } from '../../sharedRecommendationPresets.js'
 import type { SignType } from '../../TrafficSignDataTypes.js'
 
 export const _indication_c: SignType[] = [
@@ -475,7 +472,7 @@ export const _indication_c: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-    catalogue: { signCategory: 'speed' },
+    catalogue: { signCategory: 'signpost' },
     image: 'missing',
   },
   {
@@ -485,9 +482,11 @@ export const _indication_c: SignType[] = [
     descriptiveName: 'Panneau de vitesse conseillée à 50km/h',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: sharedMaxspeedRecommendation('50'),
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'recommended_speed', value: '50' }] },
+    ],
     valuePrompt: { prompt: 'Valeur', defaultValue: '50', format: 'integer' },
-    catalogue: { signCategory: 'speed' },
+    catalogue: { signCategory: 'signpost' },
     image: 'missing',
   },
   {
@@ -498,7 +497,7 @@ export const _indication_c: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-    catalogue: { signCategory: 'speed' },
+    catalogue: { signCategory: 'signpost' },
     image: 'missing',
   },
   {
@@ -508,9 +507,9 @@ export const _indication_c: SignType[] = [
     descriptiveName: 'Panneau de fin de vitesse conseillée à 50km/h',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: sharedMaxspeedRecommendation('50'),
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     valuePrompt: { prompt: 'Valeur', defaultValue: '50', format: 'integer' },
-    catalogue: { signCategory: 'speed' },
+    catalogue: { signCategory: 'signpost' },
     image: 'missing',
   },
   {

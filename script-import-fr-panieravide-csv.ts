@@ -75,11 +75,16 @@ const inferCategory = (code: string): string => {
   if (/^M|^KM/.test(code)) return 'exception_modifier'
   if (/^SU/.test(code)) return 'condition_modifier'
   if (/^A|^AK/.test(code)) return 'hazard_sign'
-  if (/^B14|^B30|^B33|^B25|^B43|^C4a|^C4b/.test(code)) return 'speed'
+  if (/^B14|^B30/.test(code)) return 'speed'
+  if (/^C4a|^C4b/.test(code)) return 'signpost'
   if (/^SI|^SC/.test(code)) return 'signpost'
   if (/^J|^K/.test(code)) return 'object_sign'
   return 'traffic_sign'
 }
+
+const isMaxspeedLimitSign = (code: string) => /^B14\[|^B30\[/.test(code)
+const isMinspeedSign = (code: string) => /^B25\[/.test(code)
+const isAdvisorySpeedSign = (code: string) => /^C4a\[/.test(code)
 
 const extractBracketValue = (code: string) => {
   const match = code.match(/\[(\d+)\]/)
@@ -106,20 +111,30 @@ const emitSignObject = (row: CsvRow) => {
   const category = inferCategory(code)
   const bracketValue = extractBracketValue(code)
   const signId = extractBaseSignId(code)
-  const isSpeed = category === 'speed' && bracketValue
 
   const descriptiveNameLine =
     label && label !== code ? `    descriptiveName: '${escapeString(label)}',\n` : ''
 
-  const tagRecommendations = isSpeed
-    ? `tagRecommendationsByGeometry: sharedMaxspeedRecommendation('${bracketValue}'),`
-    : `tagRecommendationsByGeometry: [{ geometries: ['way'] }],`
-
-  const valuePromptLine = isSpeed
+  const valuePromptLine = bracketValue
     ? `\n    valuePrompt: { prompt: 'Valeur', defaultValue: '${bracketValue}', format: 'integer' },`
     : ''
 
-  const needsSharedImport = isSpeed
+  let tagRecommendations: string
+  let needsSharedImport = false
+  if (isMaxspeedLimitSign(code) && bracketValue) {
+    tagRecommendations = `tagRecommendationsByGeometry: sharedMaxspeedRecommendation('${bracketValue}'),`
+    needsSharedImport = true
+  } else if (isMinspeedSign(code) && bracketValue) {
+    tagRecommendations = `tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'minspeed', value: '${bracketValue}' }] },
+    ],`
+  } else if (isAdvisorySpeedSign(code) && bracketValue) {
+    tagRecommendations = `tagRecommendationsByGeometry: [
+      { geometries: ['way'], uniqueTags: [{ key: 'recommended_speed', value: '${bracketValue}' }] },
+    ],`
+  } else {
+    tagRecommendations = `tagRecommendationsByGeometry: [{ geometries: ['way'] }],`
+  }
 
   return {
     needsSharedImport,

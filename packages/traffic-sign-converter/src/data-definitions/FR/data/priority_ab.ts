@@ -120,7 +120,7 @@ export const _priority_ab: SignType[] = [
     descriptiveName: 'Cédez le passage',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
+    tagRecommendationsByGeometry: sharedPriorityRecommendation('give_way'),
     catalogue: { signCategory: 'traffic_sign' },
     image: 'missing',
   },
