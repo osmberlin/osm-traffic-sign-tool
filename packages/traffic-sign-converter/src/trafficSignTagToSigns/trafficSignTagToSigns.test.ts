@@ -188,3 +188,25 @@ describe('trafficSignTagToSigns()', () => {
     })
   })
 })
+
+describe('trafficSignTagToSigns() FR bracket speed signs', () => {
+  const countryPrefix: CountryPrefixType = 'FR'
+
+  test('recognizes exact B14[50] variant', () => {
+    const result = trafficSignTagToSigns('B14[50]', countryPrefix)
+    expect(result[0]?.recodgnizedSign).toBe(true)
+    expect(result[0]?.osmValuePart).toBe('B14[50]')
+  })
+
+  test('recognizes imported B14[30] variant', () => {
+    const result = trafficSignTagToSigns('B14[30]', countryPrefix)
+    expect(result[0]?.recodgnizedSign).toBe(true)
+    expect(result[0]?.osmValuePart).toBe('B14[30]')
+  })
+
+  test('recognizes generic B14 placeholder', () => {
+    const result = trafficSignTagToSigns('B14', countryPrefix)
+    expect(result[0]?.recodgnizedSign).toBe(true)
+    expect(result[0]?.osmValuePart).toBe('B14')
+  })
+})

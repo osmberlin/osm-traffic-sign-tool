@@ -25,18 +25,66 @@ const wikiFileUrl = (wikicommonsName: string) => {
   return `https://wiki.openstreetmap.org/wiki/File:${fileName}`
 }
 
+const parseCsvField = (text: string, start: number) => {
+  if (text[start] === '"') {
+    let value = ''
+    let index = start + 1
+    while (index < text.length) {
+      if (text[index] === '"') {
+        if (text[index + 1] === '"') {
+          value += '"'
+          index += 2
+          continue
+        }
+        return { value, nextIndex: index + 1 }
+      }
+      value += text[index]
+      index += 1
+    }
+    return { value, nextIndex: index }
+  }
+
+  let value = ''
+  let index = start
+  while (index < text.length && text[index] !== ',') {
+    value += text[index]
+    index += 1
+  }
+  return { value, nextIndex: index }
+}
+
+const parseCsvLine = (line: string): CsvRow | null => {
+  const fields: string[] = []
+  let index = 0
+  while (index <= line.length && fields.length < 4) {
+    if (index === line.length) {
+      fields.push('')
+      break
+    }
+    const field = parseCsvField(line, index)
+    fields.push(field.value)
+    index = field.nextIndex
+    if (index < line.length && line[index] === ',') index += 1
+  }
+
+  const code = fields[0]?.trim() ?? ''
+  if (!code) return null
+
+  return {
+    code,
+    label: fields[1]?.trim() ?? '',
+    wikicommonsName: fields[2]?.trim() ?? '',
+    wikicommonsSvg: fields[3]?.trim() ?? '',
+  }
+}
+
 const parseCsv = (text: string): CsvRow[] => {
   const rows: CsvRow[] = []
   for (const line of text.trim().split('\n').slice(1)) {
-    const parts = line.split(',')
-    rows.push({
-      code: parts[0] ?? '',
-      label: parts[1] ?? '',
-      wikicommonsName: parts[2] ?? '',
-      wikicommonsSvg: parts[3] ?? '',
-    })
+    const row = parseCsvLine(line)
+    if (row) rows.push(row)
   }
-  return rows.filter((row) => row.code)
+  return rows
 }
 
 const readRegisteredCodes = async () => {

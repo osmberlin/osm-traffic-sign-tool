@@ -207,7 +207,11 @@ export const _danger_a: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'hazard_sign' },
-    image: 'missing',
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:France_Road_Sign_A9a.png',
+      licence: 'Public Domain',
+    },
   },
   {
     osmValuePart: 'A9b',
