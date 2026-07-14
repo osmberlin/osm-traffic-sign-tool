@@ -38,6 +38,34 @@ export const _panels_m: SignType[] = [
     },
   },
   {
+    osmValuePart: 'M9z[Accotements dangereux]',
+    signId: 'M9z',
+    name: 'M9z',
+    descriptiveName:
+      "Panonceau de danger : il précise la nature du danger annoncé par le panneau qu'il complète",
+    description: null,
+    kind: 'exception_modifier',
+    signValue: 'Accotements dangereux',
+    valuePrompt: {
+      prompt: 'Texte du panonceau',
+      defaultValue: 'Accotements dangereux',
+      format: 'opening_hours',
+    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'hazard', value: 'shoulder' }],
+      },
+    ],
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:France_road_sign_M9z-2.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: 'M3a1',
     signId: 'M3a1',
     name: 'M3a1',
