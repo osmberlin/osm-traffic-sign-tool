@@ -10,12 +10,7 @@ export const _indication_e: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'signpost' },
-    image: {
-      kind: 'remote',
-      sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:%C3%8Acritchieau_frontchi%C3%A9the_Manche.jpg',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'E36b',
@@ -26,11 +21,7 @@ export const _indication_e: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'signpost' },
-    image: {
-      kind: 'remote',
-      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:FR-03-Border2.JPG',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'E31',
@@ -42,11 +33,6 @@ export const _indication_e: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'signpost' },
-    image: {
-      kind: 'remote',
-      sourceUrl:
-        'https://wiki.openstreetmap.org/wiki/File:Mortefontaine_(Aisne)_city_limit_sign_Pouy.JPG',
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
 ]

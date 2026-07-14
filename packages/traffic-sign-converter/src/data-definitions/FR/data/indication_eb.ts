@@ -13,11 +13,7 @@ export const _indication_eb: SignType[] = [
       { geometries: ['way'], uniqueTags: [{ key: 'name', value: 'Le nom du lieu' }] },
     ],
     catalogue: { signCategory: 'signpost' },
-    image: {
-      kind: 'remote',
-      sourceUrl: "https://wiki.openstreetmap.org/wiki/File:Panneau_d'entree_d'agglomeration.jpg",
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
   {
     osmValuePart: 'EB20',
@@ -31,10 +27,6 @@ export const _indication_eb: SignType[] = [
       { geometries: ['way'], uniqueTags: [{ key: 'name', value: 'Le nom du lieu' }] },
     ],
     catalogue: { signCategory: 'signpost' },
-    image: {
-      kind: 'remote',
-      sourceUrl: "https://wiki.openstreetmap.org/wiki/File:Panneau_de_sortie_d'agglomeration.jpg",
-      licence: 'Public Domain',
-    },
+    image: 'missing',
   },
 ]
