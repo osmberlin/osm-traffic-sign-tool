@@ -113,11 +113,7 @@ const emitSignObject = (row: CsvRow) => {
 
   const tagRecommendations = isSpeed
     ? `tagRecommendationsByGeometry: sharedMaxspeedRecommendation('${bracketValue}'),`
-    : kind === 'exception_modifier' || kind === 'condition_modifier'
-      ? `tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-    taggingSuggestionsQa: 'none',`
-      : `tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-    taggingSuggestionsQa: 'none',`
+    : `tagRecommendationsByGeometry: [{ geometries: ['way'] }],`
 
   const valuePromptLine = isSpeed
     ? `\n    valuePrompt: { prompt: 'Valeur', defaultValue: '${bracketValue}', format: 'integer' },`
