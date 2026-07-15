@@ -1,4 +1,9 @@
-import opening_hours, { type nominatim_object, type optional_conf_param } from 'opening_hours'
+import opening_hours, {
+  type nominatim_object,
+  type opening_hours_warning,
+  type opening_hours_warning_type,
+  type optional_conf_param,
+} from 'opening_hours'
 
 export type OpeningHoursFeedbackItem = {
   /** Fragment from the input that triggered the issue (before `<---`). */
@@ -19,32 +24,46 @@ export type ValidateConditionalOpeningHoursOptions = {
 }
 
 /**
- * opening_hours.js messages we hide in the UI (not relevant for *:conditional on signs).
- * Matched by detail prefix after parsing.
+ * opening_hours.js warning types we hide in the UI (not relevant for *:conditional on signs).
  */
-export const SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES = [
-  'Es wurde keine Regel für "PH" (feiertags) angegeben.',
-] as const
+export const SKIPPABLE_OPENING_HOURS_WARNING_TYPES = ['public_holiday'] as const
 
-export const shouldSkipOpeningHoursMessage = (detail: string) =>
-  SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES.some((prefix) => detail.startsWith(prefix))
+export const shouldSkipOpeningHoursWarningType = (type: opening_hours_warning_type) =>
+  SKIPPABLE_OPENING_HOURS_WARNING_TYPES.includes(
+    type as (typeof SKIPPABLE_OPENING_HOURS_WARNING_TYPES)[number],
+  )
 
-export const partitionOpeningHoursMessages = (messages: OpeningHoursFeedbackItem[]) => {
+const mapStructuredWarningToFeedbackItem = (
+  warning: opening_hours_warning,
+): OpeningHoursFeedbackItem => {
+  const reference =
+    warning.position != null && warning.position > 0
+      ? warning.value.slice(0, warning.position).trimEnd() || null
+      : null
+
+  return {
+    reference,
+    detail: warning.message,
+  }
+}
+
+const partitionStructuredWarnings = (warnings: opening_hours_warning[]) => {
   const displayed: OpeningHoursFeedbackItem[] = []
   const skipped: OpeningHoursFeedbackItem[] = []
 
-  for (const message of messages) {
-    if (shouldSkipOpeningHoursMessage(message.detail)) {
-      skipped.push(message)
+  for (const warning of warnings) {
+    const item = mapStructuredWarningToFeedbackItem(warning)
+    if (shouldSkipOpeningHoursWarningType(warning.type)) {
+      skipped.push(item)
     } else {
-      displayed.push(message)
+      displayed.push(item)
     }
   }
 
   return { displayed, skipped }
 }
 
-/** Fatal errors are one string; warnings are string[]. Neither is structured JSON. */
+/** Fatal errors are one string; uses balanced parentheses because detail text often contains nested "(feiertags)" etc. */
 const OPENING_HOURS_MARKER = '<--- ('
 
 const findBalancedClosingParenIndex = (text: string, openParenIndex: number) => {
@@ -64,11 +83,8 @@ const findBalancedClosingParenIndex = (text: string, openParenIndex: number) => 
   return null
 }
 
-/**
- * Parses opening_hours.js feedback. Uses balanced parentheses because detail text
- * often contains nested "(feiertags)" etc. — a naive `\([^)]*\)` match truncates.
- */
-export const parseOpeningHoursFeedbackMessage = (message: string): OpeningHoursFeedbackItem[] => {
+/** Parses fatal opening_hours.js error strings thrown by the constructor. */
+const parseOpeningHoursErrorMessage = (message: string): OpeningHoursFeedbackItem[] => {
   const trimmed = message.trim()
   if (!trimmed) {
     return []
@@ -106,30 +122,6 @@ export const parseOpeningHoursFeedbackMessage = (message: string): OpeningHoursF
   return items
 }
 
-/** Parses one chunk into reference + detail (strips wrapping parentheses). */
-export const parseOpeningHoursFeedbackChunk = (chunk: string): OpeningHoursFeedbackItem => {
-  const [first, ...rest] = parseOpeningHoursFeedbackMessage(chunk)
-
-  if (!first) {
-    return { reference: null, detail: chunk.trim() }
-  }
-
-  if (rest.length > 0) {
-    return first
-  }
-
-  return first
-}
-
-/** Splits concatenated opening_hours.js feedback into separate raw chunks. */
-export const splitOpeningHoursFeedbackMessage = (message: string): string[] =>
-  parseOpeningHoursFeedbackMessage(message).map((item) =>
-    item.reference ? `${item.reference} <--- (${item.detail})` : item.detail,
-  )
-
-export const flattenOpeningHoursMessages = (messages: string[]) =>
-  messages.flatMap(parseOpeningHoursFeedbackMessage)
-
 export const normalizeOpeningHoursLocale = (requestedLocale?: string): string => {
   if (!requestedLocale?.trim()) {
     return 'de'
@@ -149,27 +141,14 @@ const buildNominatimObject = (opts?: ValidateConditionalOpeningHoursOptions): no
     },
   }) as nominatim_object
 
-const buildDisplayedValidationResult = (
-  severity: 'warning' | 'error',
-  messages: OpeningHoursFeedbackItem[],
-): ConditionalValidationResult => {
-  const { displayed } = partitionOpeningHoursMessages(messages)
-
-  return {
-    severity: displayed.length > 0 ? severity : 'none',
-    messages: displayed,
-  }
-}
-
 const logOpeningHoursValidation = (
   input: string,
   parsedSeverity: 'warning' | 'error',
   originalMessages: string[],
   processedMessages: OpeningHoursFeedbackItem[],
+  skipped: OpeningHoursFeedbackItem[],
   result: ConditionalValidationResult,
 ): ConditionalValidationResult => {
-  const { skipped } = partitionOpeningHoursMessages(processedMessages)
-
   console.info('[opening_hours validation]', {
     input,
     severity: parsedSeverity,
@@ -204,21 +183,42 @@ export const validateConditionalOpeningHours = (
     } as optional_conf_param
 
     const oh = new opening_hours(trimmed, nominatim, parserConfig)
-    const warnings = oh.getWarnings()
+    const structuredWarnings = oh.getStructuredWarnings()
 
-    if (warnings.length > 0) {
-      const processedMessages = flattenOpeningHoursMessages(warnings)
-      const result = buildDisplayedValidationResult('warning', processedMessages)
+    if (structuredWarnings.length > 0) {
+      const { displayed, skipped } = partitionStructuredWarnings(structuredWarnings)
+      const processedMessages = structuredWarnings.map(mapStructuredWarningToFeedbackItem)
+      const result: ConditionalValidationResult = {
+        severity: displayed.length > 0 ? 'warning' : 'none',
+        messages: displayed,
+      }
 
-      return logOpeningHoursValidation(trimmed, 'warning', warnings, processedMessages, result)
+      return logOpeningHoursValidation(
+        trimmed,
+        'warning',
+        oh.getWarnings(),
+        processedMessages,
+        skipped,
+        result,
+      )
     }
 
     return { severity: 'none', messages: [] }
   } catch (error) {
     const originalMessages = [String(error)]
-    const processedMessages = flattenOpeningHoursMessages(originalMessages)
-    const result = buildDisplayedValidationResult('error', processedMessages)
+    const processedMessages = parseOpeningHoursErrorMessage(String(error))
+    const result: ConditionalValidationResult = {
+      severity: processedMessages.length > 0 ? 'error' : 'none',
+      messages: processedMessages,
+    }
 
-    return logOpeningHoursValidation(trimmed, 'error', originalMessages, processedMessages, result)
+    return logOpeningHoursValidation(
+      trimmed,
+      'error',
+      originalMessages,
+      processedMessages,
+      [],
+      result,
+    )
   }
 }
