@@ -73,7 +73,7 @@ const formatAgentBrief = (countryPrefix: string, deployContext: QaDeployContext)
   '',
   `Source: [Sign questions QA](${deployContext.pageOrigin}/${countryPrefix}/questions-qa) · Config: \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\``,
   '',
-  `Submit with label \`question-qa\` to trigger a Cursor cloud agent. It should open a PR updating \`questions\` and related i18n in the **${formatCatalogueLabel(countryPrefix)}** catalogue.`,
+  `Submit with label \`question-qa\` to start a Cursor cloud agent. It should open a PR updating \`questions\` and related i18n in the **${formatCatalogueLabel(countryPrefix)}** catalogue.`,
   '',
   '## Agent instructions',
   '',

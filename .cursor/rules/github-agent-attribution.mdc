@@ -16,4 +16,4 @@ When posting on GitHub (issues, pull requests, reviews) as a cloud agent:
 3. Do **not** write as if you are the human who opened the issue; refer to them as **the submitter**.
 4. Status comments on the source issue must use the prefix and state you are not the submitter.
 
-GitHub Actions automation comments use `> **GitHub Actions (automation)** — …` and are not from you.
+GitHub Actions automation comments use `> **GitHub Actions (automation)** — …` and link to the started cloud agent; they are not from you.

@@ -1,8 +1,9 @@
 import { describe, expect, test } from 'vitest'
 import {
-  buildCursorTriggerCommentBody,
-  CURSOR_TRIGGER_MARKER,
-  hasExistingCursorTrigger,
+  buildAgentPrompt,
+  buildAgentStartedCommentBody,
+  CURSOR_AGENT_LINK_MARKER,
+  hasExistingCursorAgent,
   resolveActiveLabel,
   resolveSkillInstruction,
   resolveSourceBranch,
@@ -34,15 +35,15 @@ describe('resolveSourceBranch', () => {
   })
 })
 
-describe('hasExistingCursorTrigger', () => {
-  test('detects existing @cursor trigger comments', () => {
+describe('hasExistingCursorAgent', () => {
+  test('detects existing agent-started comments', () => {
     expect(
-      hasExistingCursorTrigger([
+      hasExistingCursorAgent([
         { body: 'Human comment' },
-        { body: `${CURSOR_TRIGGER_MARKER}osmberlin/osm-traffic-sign-tool branch=main` },
+        { body: `Started agent: https://${CURSOR_AGENT_LINK_MARKER}bc-123` },
       ]),
     ).toBe(true)
-    expect(hasExistingCursorTrigger([{ body: 'No trigger here' }])).toBe(false)
+    expect(hasExistingCursorAgent([{ body: 'No trigger here' }])).toBe(false)
   })
 })
 
@@ -66,20 +67,34 @@ describe('resolveSkillInstruction', () => {
   })
 })
 
-describe('buildCursorTriggerCommentBody', () => {
-  test('builds trigger comment with branch and label metadata', () => {
-    const body = buildCursorTriggerCommentBody({
-      owner: 'osmberlin',
-      repo: 'osm-traffic-sign-tool',
+describe('buildAgentPrompt', () => {
+  test('builds agent prompt with label metadata and skill', () => {
+    const prompt = buildAgentPrompt({
       issueNumber: 42,
       activeLabel: 'tagging-qa',
       issueBody: '> **Source branch:** `feat/qa-preview`',
     })
 
-    expect(body).toContain('@cursor repo=osmberlin/osm-traffic-sign-tool branch=feat/qa-preview')
-    expect(body).toContain('**Tagging QA** #42 (`tagging-qa`).')
-    expect(body).toContain('Follow `.cursor/skills/add-traffic-sign/SKILL.md`.')
-    expect(body).toContain('Closes #42')
-    expect(body).toContain('**[Cursor Agent]**')
+    expect(prompt).toContain('**Tagging QA** #42 (`tagging-qa`).')
+    expect(prompt).toContain('Read GitHub issue #42 for full context and task details.')
+    expect(prompt).toContain('Follow `.cursor/skills/add-traffic-sign/SKILL.md`.')
+    expect(prompt).toContain('Closes #42')
+    expect(prompt).toContain('**[Cursor Agent]**')
+    expect(prompt).not.toContain('@cursor')
+  })
+})
+
+describe('buildAgentStartedCommentBody', () => {
+  test('builds status comment with agent link', () => {
+    const body = buildAgentStartedCommentBody({
+      agentUrl: 'https://cursor.com/agents/bc-123',
+      issueNumber: 42,
+      activeLabel: 'tagging-qa',
+    })
+
+    expect(body).toContain('**GitHub Actions (automation)**')
+    expect(body).toContain('**Tagging QA** #42 (`tagging-qa`)')
+    expect(body).toContain('https://cursor.com/agents/bc-123')
+    expect(body).not.toContain('@cursor')
   })
 })

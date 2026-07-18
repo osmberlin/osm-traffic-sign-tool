@@ -91,7 +91,7 @@ const formatAgentBrief = (countryPrefix: string, deployContext: QaDeployContext)
   '',
   `Created from the [Tagging QA page](${deployContext.pageOrigin}/${countryPrefix}/signs-qa).`,
   '',
-  `Submitting this issue (label \`tagging-qa\`) triggers a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** in \`@osm-traffic-signs/converter\`—not TypeScript schema unless a task requires it.`,
+  `Submitting this issue (label \`tagging-qa\`) starts a Cursor cloud agent. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** in \`@osm-traffic-signs/converter\`—not TypeScript schema unless a task requires it.`,
   '',
   '## Agent instructions',
   '',

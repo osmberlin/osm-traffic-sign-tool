@@ -59,7 +59,7 @@ const formatAgentBrief = (
   '',
   `Created from the [Taginfo comparison page](${deployContext.pageOrigin}/${countryPrefix}/taginfo).`,
   '',
-  'Submit with label `cursor-qa` to trigger a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates sign config in `@osm-traffic-signs/converter`.',
+  'Submit with label `cursor-qa` to start a Cursor cloud agent. The agent should **open a PR** that updates sign config in `@osm-traffic-signs/converter`.',
   '',
   '## Agent instructions',
   '',

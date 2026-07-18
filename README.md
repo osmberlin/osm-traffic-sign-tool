@@ -46,4 +46,4 @@ Alternatively, the [script lists the separate commands](./script-new-sign.ts)
 ## LLM Cloud Workflows
 
 - Branch previews are generated with Netlify. [Admin UI](https://app.netlify.com/projects/osm-traffic-sign-preview/overview)
-- [QA pages → Cursor automation](./.github/CURSOR_QA_AUTOMATION.md) — GitHub issues from QA pages (`cursor-qa` and per-page labels) trigger a Cursor cloud agent via GitHub Actions
+- [QA pages → Cursor automation](./.github/CURSOR_QA_AUTOMATION.md) — GitHub issues from QA pages (`cursor-qa` and per-page labels) start a Cursor cloud agent via the Cloud Agents API in GitHub Actions
