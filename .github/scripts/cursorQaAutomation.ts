@@ -1,7 +1,9 @@
 const GHA_ATTRIBUTION =
   '> **GitHub Actions (automation)** — This comment only starts the Cursor cloud agent. It is not written by the issue author.\n\n'
 
-export const CURSOR_TRIGGER_MARKER = '@cursor repo='
+export const CURSOR_AGENT_LINK_MARKER = 'cursor.com/agents/'
+export const LEGACY_CURSOR_TRIGGER_MARKER = '@cursor repo='
+export const CURSOR_AUTOMATION_MARKER_PREFIX = 'cursor-qa-automation/issue-'
 
 export const SPECIFIC_LABELS = ['tagging-qa', 'combination-qa', 'question-qa'] as const
 
@@ -38,8 +40,18 @@ export const resolveActiveLabel = (issueLabels: string[]): QaTriggerLabel | null
   return null
 }
 
-export const hasExistingCursorTrigger = (comments: { body?: string | null }[]) =>
-  comments.some((comment) => comment.body?.includes(CURSOR_TRIGGER_MARKER))
+export const automationMarkerForIssue = (issueNumber: number) =>
+  `${CURSOR_AUTOMATION_MARKER_PREFIX}${issueNumber}`
+
+export const hasExistingCursorAgent = (comments: { body?: string | null }[], issueNumber: number) =>
+  comments.some((comment) => {
+    const body = comment.body ?? ''
+    return (
+      body.includes(CURSOR_AGENT_LINK_MARKER) ||
+      body.includes(LEGACY_CURSOR_TRIGGER_MARKER) ||
+      body.includes(automationMarkerForIssue(issueNumber))
+    )
+  })
 
 export const resolveSourceBranch = (body: string) => {
   const quoted = body.match(/\*\*Source branch:\*\*\s*`([^`]+)`/)
@@ -60,26 +72,97 @@ export const resolveSkillInstruction = (
     : 'Read the **issue body** for the agent skill path and instructions.'
 }
 
-export const buildCursorTriggerCommentBody = ({
-  owner,
-  repo,
+export const buildAgentPrompt = ({
   issueNumber,
   activeLabel,
   issueBody,
 }: {
-  owner: string
-  repo: string
   issueNumber: number
   activeLabel: QaTriggerLabel
   issueBody: string
 }) => {
   const config = LABEL_CONFIG[activeLabel]
-  const branch = resolveSourceBranch(issueBody)
   const skillInstruction = resolveSkillInstruction(config, issueBody)
+  const trimmedBody = issueBody.trim()
 
-  return `${GHA_ATTRIBUTION}@cursor repo=${owner}/${repo} branch=${branch}
+  return `**${config.title}** #${issueNumber} (\`${activeLabel}\`).
 
-**${config.title}** #${issueNumber} (\`${activeLabel}\`). Read the issue body. ${skillInstruction} Open a PR with \`Closes #${issueNumber}\`. Prefix comments and PR description with \`**[Cursor Agent]**\`.`
+${skillInstruction}
+
+## Issue body
+
+${trimmedBody || '_No issue body provided._'}
+
+Open a PR with \`Closes #${issueNumber}\`. Prefix comments and PR description with \`**[Cursor Agent]**\`.`
+}
+
+export const buildAgentPendingCommentBody = ({
+  issueNumber,
+  activeLabel,
+}: {
+  issueNumber: number
+  activeLabel: QaTriggerLabel
+}) => {
+  const config = LABEL_CONFIG[activeLabel]
+  return `${GHA_ATTRIBUTION}Starting a Cursor cloud agent for **${config.title}** #${issueNumber} (\`${activeLabel}\`)…
+
+${automationMarkerForIssue(issueNumber)}`
+}
+
+export const buildAgentStartedCommentBody = ({
+  agentUrl,
+  issueNumber,
+  activeLabel,
+}: {
+  agentUrl: string
+  issueNumber: number
+  activeLabel: QaTriggerLabel
+}) => {
+  const config = LABEL_CONFIG[activeLabel]
+  return `${GHA_ATTRIBUTION}Started a Cursor cloud agent for **${config.title}** #${issueNumber} (\`${activeLabel}\`): ${agentUrl}
+
+${automationMarkerForIssue(issueNumber)}`
+}
+
+type CreateCloudAgentResponse = {
+  agent: {
+    id: string
+    url: string
+  }
+}
+
+export const createCloudAgent = async ({
+  apiKey,
+  prompt,
+  repoUrl,
+  startingRef,
+  name,
+}: {
+  apiKey: string
+  prompt: string
+  repoUrl: string
+  startingRef: string
+  name: string
+}) => {
+  const response = await fetch('https://api.cursor.com/v1/agents', {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${Buffer.from(`${apiKey}:`).toString('base64')}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prompt: { text: prompt },
+      name: name.slice(0, 100),
+      repos: [{ url: repoUrl, startingRef }],
+      autoCreatePR: true,
+    }),
+  })
+
+  if (!response.ok) {
+    throw new Error(`Cursor API ${response.status}: ${await response.text()}`)
+  }
+
+  return (await response.json()) as CreateCloudAgentResponse
 }
 
 type IssueLabel = string | { name: string }
@@ -110,15 +193,21 @@ const githubApi = async <T>(token: string, path: string, init?: RequestInit): Pr
     throw new Error(`GitHub API ${response.status}: ${await response.text()}`)
   }
 
+  if (response.status === 204) {
+    return undefined as T
+  }
+
   return response.json() as Promise<T>
 }
 
 export const runCursorQaAutomation = async ({
   token,
+  apiKey,
   repository,
   event,
 }: {
   token: string
+  apiKey: string
   repository: string
   event: IssuesEvent
 }) => {
@@ -141,30 +230,74 @@ export const runCursorQaAutomation = async ({
     `/repos/${owner}/${repo}/issues/${issue.number}/comments?per_page=100`,
   )
 
-  if (hasExistingCursorTrigger(comments)) {
-    console.log('Cursor trigger already exists (@cursor comment); skipping.')
+  if (hasExistingCursorAgent(comments, issue.number)) {
+    console.log('Cursor agent already started for this issue; skipping.')
     return
   }
 
-  const body = buildCursorTriggerCommentBody({
-    owner,
-    repo,
+  const issueBody = issue.body ?? ''
+  const startingRef = resolveSourceBranch(issueBody)
+  const config = LABEL_CONFIG[activeLabel]
+  const prompt = buildAgentPrompt({
     issueNumber: issue.number,
     activeLabel,
-    issueBody: issue.body ?? '',
+    issueBody,
   })
 
-  await githubApi(token, `/repos/${owner}/${repo}/issues/${issue.number}/comments`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ body }),
-  })
+  const pendingComment = await githubApi<{ id: number }>(
+    token,
+    `/repos/${owner}/${repo}/issues/${issue.number}/comments`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        body: buildAgentPendingCommentBody({
+          issueNumber: issue.number,
+          activeLabel,
+        }),
+      }),
+    },
+  )
+
+  try {
+    const { agent } = await createCloudAgent({
+      apiKey,
+      prompt,
+      repoUrl: `https://github.com/${owner}/${repo}`,
+      startingRef,
+      name: `${config.title} #${issue.number}`,
+    })
+
+    await githubApi(token, `/repos/${owner}/${repo}/issues/comments/${pendingComment.id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        body: buildAgentStartedCommentBody({
+          agentUrl: agent.url,
+          issueNumber: issue.number,
+          activeLabel,
+        }),
+      }),
+    })
+
+    console.log(`Started Cursor cloud agent ${agent.id}: ${agent.url}`)
+  } catch (error) {
+    await githubApi(token, `/repos/${owner}/${repo}/issues/comments/${pendingComment.id}`, {
+      method: 'DELETE',
+    })
+    throw error
+  }
 }
 
 const runFromGitHubActions = async () => {
   const token = process.env.GITHUB_TOKEN
   if (!token) {
     throw new Error('GITHUB_TOKEN is required')
+  }
+
+  const apiKey = process.env.CURSOR_API_KEY
+  if (!apiKey) {
+    throw new Error('CURSOR_API_KEY is required')
   }
 
   const eventPath = process.env.GITHUB_EVENT_PATH
@@ -179,7 +312,7 @@ const runFromGitHubActions = async () => {
 
   const event = (await Bun.file(eventPath).json()) as IssuesEvent
 
-  await runCursorQaAutomation({ token, repository, event })
+  await runCursorQaAutomation({ token, apiKey, repository, event })
 }
 
 if (import.meta.main) {

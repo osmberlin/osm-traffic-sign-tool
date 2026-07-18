@@ -175,7 +175,7 @@ const formatAgentBrief = (countryPrefix: string, deployContext: QaDeployContext)
   '',
   `Created from the [Sign combinations QA page](${deployContext.pageOrigin}/${countryPrefix}/check-sign-combinations).`,
   '',
-  `Submitting this issue (label \`combination-qa\`) triggers a Cursor cloud agent via GitHub Actions. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** and/or combination conversion behavior in \`@osm-traffic-signs/converter\`.`,
+  `Submitting this issue (label \`combination-qa\`) starts a Cursor cloud agent. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** and/or combination conversion behavior in \`@osm-traffic-signs/converter\`.`,
   '',
   '## Agent instructions',
   '',

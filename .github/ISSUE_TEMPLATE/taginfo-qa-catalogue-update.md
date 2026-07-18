@@ -11,9 +11,7 @@ assignees: ''
   Opened from the Taginfo comparison page or filled manually.
 
   Issues with the `cursor-qa` label trigger `.github/workflows/cursor-qa-automation.yml`,
-  which comments `@cursor` so a cloud agent can apply catalogue updates and open a PR.
-
-  Requires the Cursor GitHub app on this repository.
+  which starts a Cursor cloud agent via the Cloud Agents API (`CURSOR_API_KEY`).
 -->
 
 ## Taginfo comparison feedback

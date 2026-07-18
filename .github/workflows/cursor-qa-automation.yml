@@ -1,5 +1,5 @@
-# Triggers a Cursor cloud agent when a QA issue is opened (cursor-qa or per-page labels).
-# See https://cursor.com/docs/cloud-agent and .github/CURSOR_QA_AUTOMATION.md
+# Starts a Cursor cloud agent when a QA issue is opened (cursor-qa or per-page labels).
+# See https://cursor.com/docs/cloud-agent/api/endpoints and .github/CURSOR_QA_AUTOMATION.md
 name: Cursor QA automation
 
 on:
@@ -48,10 +48,11 @@ jobs:
         with:
           bun-version-file: package.json
 
-      - name: Start Cursor agent via issue comment
+      - name: Start Cursor cloud agent via API
         run: bun run .github/scripts/cursorQaAutomation.ts
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
 
   issue-noop:
     if: |
