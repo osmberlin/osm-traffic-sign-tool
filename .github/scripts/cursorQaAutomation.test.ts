@@ -1,9 +1,12 @@
 import { describe, expect, test } from 'vitest'
 import {
+  automationMarkerForIssue,
+  buildAgentPendingCommentBody,
   buildAgentPrompt,
   buildAgentStartedCommentBody,
   CURSOR_AGENT_LINK_MARKER,
   hasExistingCursorAgent,
+  LEGACY_CURSOR_TRIGGER_MARKER,
   resolveActiveLabel,
   resolveSkillInstruction,
   resolveSourceBranch,
@@ -38,12 +41,33 @@ describe('resolveSourceBranch', () => {
 describe('hasExistingCursorAgent', () => {
   test('detects existing agent-started comments', () => {
     expect(
-      hasExistingCursorAgent([
-        { body: 'Human comment' },
-        { body: `Started agent: https://${CURSOR_AGENT_LINK_MARKER}bc-123` },
-      ]),
+      hasExistingCursorAgent(
+        [
+          { body: 'Human comment' },
+          { body: `Started agent: https://${CURSOR_AGENT_LINK_MARKER}bc-123` },
+        ],
+        42,
+      ),
     ).toBe(true)
-    expect(hasExistingCursorAgent([{ body: 'No trigger here' }])).toBe(false)
+    expect(hasExistingCursorAgent([{ body: 'No trigger here' }], 42)).toBe(false)
+  })
+
+  test('detects legacy @cursor trigger comments', () => {
+    expect(
+      hasExistingCursorAgent(
+        [{ body: `${LEGACY_CURSOR_TRIGGER_MARKER}osmberlin/osm-traffic-sign-tool branch=main` }],
+        42,
+      ),
+    ).toBe(true)
+  })
+
+  test('detects pending automation marker for the same issue', () => {
+    expect(
+      hasExistingCursorAgent([{ body: `Starting…\n\n${automationMarkerForIssue(42)}` }], 42),
+    ).toBe(true)
+    expect(
+      hasExistingCursorAgent([{ body: `Starting…\n\n${automationMarkerForIssue(41)}` }], 42),
+    ).toBe(false)
   })
 })
 
@@ -68,15 +92,17 @@ describe('resolveSkillInstruction', () => {
 })
 
 describe('buildAgentPrompt', () => {
-  test('builds agent prompt with label metadata and skill', () => {
+  test('builds agent prompt with issue body and skill', () => {
     const prompt = buildAgentPrompt({
       issueNumber: 42,
       activeLabel: 'tagging-qa',
-      issueBody: '> **Source branch:** `feat/qa-preview`',
+      issueBody: '## Tasks\n\n- Fix sign DE:123',
     })
 
     expect(prompt).toContain('**Tagging QA** #42 (`tagging-qa`).')
-    expect(prompt).toContain('Read GitHub issue #42 for full context and task details.')
+    expect(prompt).toContain('## Issue body')
+    expect(prompt).toContain('## Tasks')
+    expect(prompt).toContain('- Fix sign DE:123')
     expect(prompt).toContain('Follow `.cursor/skills/add-traffic-sign/SKILL.md`.')
     expect(prompt).toContain('Closes #42')
     expect(prompt).toContain('**[Cursor Agent]**')
@@ -84,8 +110,20 @@ describe('buildAgentPrompt', () => {
   })
 })
 
+describe('buildAgentPendingCommentBody', () => {
+  test('includes automation marker before agent creation', () => {
+    const body = buildAgentPendingCommentBody({
+      issueNumber: 42,
+      activeLabel: 'tagging-qa',
+    })
+
+    expect(body).toContain('Starting a Cursor cloud agent')
+    expect(body).toContain(automationMarkerForIssue(42))
+  })
+})
+
 describe('buildAgentStartedCommentBody', () => {
-  test('builds status comment with agent link', () => {
+  test('builds status comment with agent link and marker', () => {
     const body = buildAgentStartedCommentBody({
       agentUrl: 'https://cursor.com/agents/bc-123',
       issueNumber: 42,
@@ -95,6 +133,7 @@ describe('buildAgentStartedCommentBody', () => {
     expect(body).toContain('**GitHub Actions (automation)**')
     expect(body).toContain('**Tagging QA** #42 (`tagging-qa`)')
     expect(body).toContain('https://cursor.com/agents/bc-123')
+    expect(body).toContain(automationMarkerForIssue(42))
     expect(body).not.toContain('@cursor')
   })
 })

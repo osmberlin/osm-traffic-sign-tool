@@ -16,11 +16,11 @@ New QA flows only need `cursor-qa` and a skill path in the issue body.
 
 ## Who speaks on GitHub
 
-| Surface                  | GitHub identity                                       | How we mark it                                                                                                                                                              |
-| ------------------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Issue body               | Human submitter (your avatar)                         | Blockquote banner in issue body: human vs machine-generated vs agent                                                                                                        |
-| Workflow status comment  | `github-actions[bot]`                                 | `> **GitHub Actions (automation)** — …` in [cursorQaAutomation.ts](scripts/cursorQaAutomation.ts) (run from [cursor-qa-automation.yml](workflows/cursor-qa-automation.yml)) |
-| Agent PR and comments    | **`cursor`** app when Team Owned; else connected user | Agent must prefix text with `**[Cursor Agent]**` (see [github-agent-attribution](../.cursor/rules/github-agent-attribution.mdc))                                            |
+| Surface                 | GitHub identity                                       | How we mark it                                                                                                                                                              |
+| ----------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Issue body              | Human submitter (your avatar)                         | Blockquote banner in issue body: human vs machine-generated vs agent                                                                                                        |
+| Workflow status comment | `github-actions[bot]`                                 | `> **GitHub Actions (automation)** — …` in [cursorQaAutomation.ts](scripts/cursorQaAutomation.ts) (run from [cursor-qa-automation.yml](workflows/cursor-qa-automation.yml)) |
+| Agent PR and comments   | **`cursor`** app when Team Owned; else connected user | Agent must prefix text with `**[Cursor Agent]**` (see [github-agent-attribution](../.cursor/rules/github-agent-attribution.mdc))                                            |
 
 GitHub attributes the issue opener to whoever clicks Create issue; the tool only pre-fills the body.
 
@@ -28,7 +28,7 @@ GitHub attributes the issue opener to whoever clicks Create issue; the tool only
 
 1. User submits an issue from a QA page.
 2. [cursor-qa-automation.yml](workflows/cursor-qa-automation.yml) runs on `issues: opened` or when a trigger label is added (`cursor-qa`, `tagging-qa`, `combination-qa`, `question-qa`).
-3. The workflow calls `POST https://api.cursor.com/v1/agents` with `CURSOR_API_KEY` (skips if an agent link comment already exists). The agent starts from `<source>` branch parsed from `**Source branch:** \`…\`` in the issue body (Netlify previews only), else `main`.
+3. The workflow calls `POST https://api.cursor.com/v1/agents` with `CURSOR_API_KEY` (skips if an agent link comment already exists). The agent starts from `<source>` branch parsed from `**Source branch:** \`…\``in the issue body (Netlify previews only), else`main`.
 4. The workflow posts a status comment with the agent URL.
 5. The agent reads the issue body, follows the skill, updates `packages/traffic-sign-converter/src/data-definitions/`, and opens a PR with `Closes #<issue-number>`.
 
