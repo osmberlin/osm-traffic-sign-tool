@@ -17,17 +17,51 @@ export const _panels_m: SignType[] = [
     },
   },
   {
-    osmValuePart: 'M2',
+    osmValuePart: 'M2[50]',
     signId: 'M2',
     name: 'M2',
     descriptiveName: "Étendue de l'effet du panneau",
     description: null,
     kind: 'exception_modifier',
+    signValue: '50',
+    valuePrompt: {
+      prompt: 'Kilomètre (km)',
+      defaultValue: '50',
+      format: 'integer',
+    },
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'exception_modifier' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:France_road_sign_M2.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'M9z[Accotements dangereux]',
+    signId: 'M9z',
+    name: 'M9z',
+    descriptiveName:
+      "Panonceau de danger : il précise la nature du danger annoncé par le panneau qu'il complète",
+    description: null,
+    kind: 'exception_modifier',
+    signValue: 'Accotements dangereux',
+    valuePrompt: {
+      prompt: 'Texte du panonceau',
+      defaultValue: 'Accotements dangereux',
+      format: 'text',
+    },
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'hazard', value: 'shoulder' }],
+      },
+    ],
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:France_road_sign_M9z-2.svg',
       licence: 'Public Domain',
     },
   },
