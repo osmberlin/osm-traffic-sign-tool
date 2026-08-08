@@ -307,5 +307,10 @@
   "question_signDirection_prompt": "Ausrichtung",
   "question_signDirection_answer_nil": "Keine Angabe",
   "question_signDirection_answer_forward": "In Fahrtrichtung (Linienrichtung) (direction=forward)",
-  "question_signDirection_answer_backward": "Gegen die Fahrtrichtung (direction=backward)"
+  "question_signDirection_answer_backward": "Gegen die Fahrtrichtung (direction=backward)",
+  "question_centerlineOnewayContext_title": "Mittellinien-Kontext",
+  "question_centerlineOnewayContext_prompt": "Wie ist der Zweirichtungsradverkehr auf der Fahrbahn kartiert?",
+  "question_centerlineOnewayContext_answer_nil": "Keine Angabe",
+  "question_centerlineOnewayContext_answer_adjacentCycleTrack": "Straßenbegleitender Zweirichtungsradweg (cycleway=track, oneway:bicycle=no)",
+  "question_centerlineOnewayContext_answer_contraflowOneWay": "Freigegebene Einbahnstraße (nur oneway:bicycle=no)"
 }
