@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.311 - No through road on side road</title>
+  <path d="M0 0h200v200H0z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  <path d="M1 1h198v198H1z" style="fill:#00408b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  <rect width="190" height="190" x="5" y="5" rx="13.622" ry="13.622" style="fill:none;fill-opacity:.54494413;fill-rule:evenodd;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+  <path d="M19.875 16v168h34v-67.469h85.375V153.5h42v-107h-42v36.031H53.875V16z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.83900023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="translate(-.563)"/>
+  <path d="M50.809-177.817h98.381v35.118H50.809z" style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:5.83900023;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="rotate(90 -.281 -.281)"/>
+</svg>

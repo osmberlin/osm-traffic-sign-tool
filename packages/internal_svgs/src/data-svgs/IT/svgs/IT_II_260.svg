@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.260 - segnale di progressiva chilometrica</title>
+  <g transform="translate(0 -652.375)">
+    <path d="M.5 652.862h399v399H.5z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <g style="font-size:213.97413635px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000;fill-opacity:1;stroke:none;font-family:Sans">
+      <path d="M125.37 774.156q32.95 0 47.29 22.894 8.769 14.124 8.77 30.815-.001 15.835-8.77 29.313-6.21 9.84-19.473 20.968a2545 2545 0 0 1-20.328 17.121h47.284v32.095H71.66v-28.457q0-2.142 19.042-15.196 24.18-16.905 35.307-27.17 19.042-17.546 19.042-30.176 0-8.13-5.133-13.478-5.988-5.994-16.475-5.994-10.911 0-16.69 7.49-4.924 6.419-4.924 16.69 0 2.566.215 4.924H65.672q-.43-2.998-.43-6.85 0-20.328 10.91-34.661 15.405-20.328 49.217-20.328M269.72 776.082h43.438v94.574h18.186v32.741h-19.041v23.965h-35.308v-24.18h-75.107v-38.09zm7.49 42.791-39.8 51.783h39.8z" style="font-variant:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:CodiceNero;-inkscape-font-specification:CodiceNero" transform="translate(1.707)"/>
+    </g>
+    <rect width="388" height="388" x="6" y="658.362" rx="21.087" ry="21.087" style="fill:none;stroke:#000;stroke-width:5.99999952;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+  </g>
+</svg>

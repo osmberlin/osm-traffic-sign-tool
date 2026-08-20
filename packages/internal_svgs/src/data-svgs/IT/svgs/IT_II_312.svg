@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.312 - Advisory speed</title>
+  <g transform="translate(0 -852.362)">
+    <path d="M0 852.362h200v200H0z" style="fill:#00408b;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <rect width="193.111" height="193.111" x="3.444" y="855.807" rx="9.755" ry="9.755" style="fill:none;stroke:#fff;stroke-width:3.33333325;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <g style="font-size:118.8978653px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#fff;fill-opacity:1;stroke:none;font-family:Sans">
+      <path d="M87.143 910.482v15.37H50.075l-1.292 11.377q6.924-3.402 14.313-3.401 11.964 0 20.411 8.329t8.448 20.998q0 12.202-6.92 21.466-8.45 11.263-23.815 11.263-17.127 0-25.809-10.321-3.755-4.342-6.451-12.67l16.189-4.93q1.876 5.163 5.689 8.389 3.812 3.225 8.739 3.225 6.92 0 10.675-4.69 3.638-4.342 3.638-11.38 0-6.688-4.458-10.795-3.991-3.87-9.737-3.87-8.095 0-12.552 7.039l-17.481-2.463 4.926-42.936zM171.861 952.243q0 23.934-12.906 35.078-9.27 7.976-22.053 7.976-12.552 0-21.938-8.209-12.788-11.38-12.788-34.96 0-24.988 13.493-35.896 8.914-7.275 21.233-7.275 12.201 0 21.351 7.626 13.608 11.262 13.608 35.66m-34.844 27.101q17.363 0 17.363-27.92 0-26.865-17.009-26.865-17.714 0-17.714 26.983 0 27.802 17.36 27.802" style="font-size:117.31100464px;font-variant:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#fff;font-family:CodiceBianco;-inkscape-font-specification:CodiceBianco"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.262 - segnale di progressiva ettometrica</title>
+  <path d="M0 0h200v200H0z" style="fill:#fff;fill-opacity:1;stroke:none"/>
+  <g style="font-size:76.80288696px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000;fill-opacity:1;stroke:none;font-family:Sans">
+    <path d="M76.49 112.731q11.826 0 16.974 8.218 3.148 5.07 3.148 11.06 0 5.685-3.148 10.522-2.229 3.533-6.99 7.526a914 914 0 0 1-7.296 6.146H96.15v11.52H57.212v-10.215q0-.768 6.834-5.454 8.679-6.067 12.673-9.753 6.835-6.298 6.835-10.83 0-2.918-1.842-4.838-2.15-2.152-5.914-2.152-3.916 0-5.99 2.689-1.768 2.304-1.768 5.99 0 .922.078 1.768H55.062a17.4 17.4 0 0 1-.154-2.46q0-7.295 3.916-12.44 5.53-7.296 17.666-7.297M128.303 113.423h15.59v33.946h6.528v11.752h-6.834v8.602h-12.673v-8.68h-26.96v-13.671zm2.688 15.36-14.286 18.586h14.286z" style="font-variant:normal;font-stretch:normal;fill:#000;fill-opacity:1;font-family:CodiceNero;-inkscape-font-specification:CodiceNero" transform="matrix(1 0 0 1.00016 0 7.25)"/>
+  </g>
+  <g style="font-size:76.80288696px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000;fill-opacity:1;stroke:none;font-family:Sans">
+    <path d="M46.401 25.276H32.885l15.436 54.3h16.59l15.436-54.3H66.83L56.616 60.99zM103.917 25.736v53.84H91.398v-53.84zM132.418 25.736v53.84H119.9v-53.84zM160.92 25.736v53.84H148.4v-53.84z" style="font-variant:normal;font-stretch:normal;fill:#000;fill-opacity:1;font-family:CodiceNero;-inkscape-font-specification:CodiceNero" transform="translate(-.424 -.602)scale(1.0129)"/>
+  </g>
+  <path d="M31.5 100h136.977" style="fill:none;stroke:#000;stroke-width:3.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+  <rect width="194" height="194" x="3" y="3" rx="10.487" ry="10.487" style="fill:none;stroke:#000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+</svg>

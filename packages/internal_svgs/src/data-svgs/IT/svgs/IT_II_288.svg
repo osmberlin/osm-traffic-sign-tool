@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 750" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.288 - Urban confirmatory sign with 2 spaces</title>
+  <g transform="translate(0 -302.375)">
+    <rect width="299" height="749" x=".5" y="302.862" rx="0" ry="0" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:.99999994;stroke-opacity:1"/>
+    <path d="M0 1032.362h300v20H0z" style="fill:#000;fill-opacity:1;stroke:none"/>
+    <path d="M150.001 532.362h17.704V422.801L240 495.569V443.2l-89.999-90.838L60 443.2v52.369l72.295-72.768v109.561z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke-width:3.53692007"/>
+    <rect width="174.6" height="174.6" x="-237.3" y="585.062" rx="8.125" ry="8.125" style="fill:none;stroke:#000;stroke-width:5.4000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="scale(-1 1)"/>
+    <rect width="174.6" height="174.6" x="-237.3" y="805.062" rx="8.125" ry="8.125" style="fill:none;stroke:#000;stroke-width:5.4000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="scale(-1 1)"/>
+  </g>
+</svg>

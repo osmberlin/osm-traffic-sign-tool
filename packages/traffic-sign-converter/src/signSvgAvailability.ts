@@ -8,6 +8,7 @@ import {
   SvgLoadersCA,
   SvgLoadersDE,
   SvgLoadersFR,
+  SvgLoadersIT,
   SvgLoadersPL,
 } from './data-svgs/index.js'
 import { isSignImageMissing } from './signImage.js'
@@ -23,6 +24,7 @@ const svgLoaderMaps = {
   CA: SvgLoadersCA,
   DE: SvgLoadersDE,
   FR: SvgLoadersFR,
+  IT: SvgLoadersIT,
   PL: SvgLoadersPL,
 } satisfies Record<CountryPrefixType, Record<string, unknown>>
 

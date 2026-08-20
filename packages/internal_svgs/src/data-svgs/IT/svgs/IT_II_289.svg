@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.289 - Urban confirmatory sign with 3 spaces</title>
+  <g transform="translate(0 -552.375)">
+    <rect width="499" height="499" x=".5" y="552.862" rx="0" ry="0" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1;stroke-opacity:1"/>
+    <path d="M0 1032.362h500v20H0z" style="fill:#000;fill-opacity:1;stroke:none"/>
+    <path d="M270 682.363v17.704h109.561l-72.768 72.295h52.37L450 682.363l-90.838-90h-52.369l72.768 72.294H270z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke-width:3.53692007"/>
+    <rect width="174.6" height="174.6" x="-237.3" y="815.062" rx="8.125" ry="8.125" style="fill:none;stroke:#000;stroke-width:5.4000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="scale(-1 1)"/>
+    <rect width="174.6" height="174.6" x="-447.3" y="815.062" rx="8.125" ry="8.125" style="fill:none;stroke:#000;stroke-width:5.4000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="scale(-1 1)"/>
+    <rect width="174.6" height="174.6" x="-237.3" y="595.062" rx="8.125" ry="8.125" style="fill:none;stroke:#000;stroke-width:5.4000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="scale(-1 1)"/>
+  </g>
+</svg>

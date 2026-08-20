@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.353 - First aid</title>
+  <g transform="translate(532.824 -443.316)">
+    <path d="M-532.824 443.316h600v900h-600z" style="fill:#00408b;fill-opacity:1;stroke:#ff73ff;stroke-width:0;stroke-dasharray:none;paint-order:fill markers stroke"/>
+    <rect width="576" height="876" x="-520.824" y="455.316" rx="39" ry="39" style="fill:none;stroke:#fff;stroke-width:12;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+    <path d="M-458.494 518.316h450v450h-450z" style="fill:#fff;fill-opacity:1;stroke:#ff73ff;stroke-width:0;stroke-dasharray:none;paint-order:fill markers stroke"/>
+    <path d="M-308.494 565.816v102.5h-102.5v150h102.5v102.5h150v-102.5h102.5v-150h-102.5v-102.5Z" style="fill:#d40000;stroke:#ff73ff;stroke-width:0;stroke-dasharray:none;paint-order:fill markers stroke"/>
+  </g>
+</svg>

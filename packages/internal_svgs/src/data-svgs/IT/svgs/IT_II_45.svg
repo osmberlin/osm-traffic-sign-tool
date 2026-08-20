@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 158.75" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.45 - Priority over oncoming traffic</title>
+  <g transform="translate(10.322 -348.51)">
+    <path d="M-10.322 348.509h158.75v158.75h-158.75z" style="fill:#00408b;fill-rule:evenodd;stroke-width:4.61138"/>
+    <rect width="153.458" height="153.458" x="-7.676" y="351.155" rx="7.938" ry="7.938" style="fill:none;fill-opacity:.449231;fill-rule:evenodd;stroke:#fff;stroke-width:2.64583"/>
+    <path d="m102.749 386.053-21.767 37.714c-1.405 2.434.388 3.263 2.176 2.784l9.847-2.422c2.246-.602 3.035-.62 3.024 1.76v42.524h13.44V425.89c-.01-2.38.778-2.362 3.025-1.76l9.846 2.422c1.788.48 3.581-.35 2.176-2.784z" style="fill:#fff;stroke-width:57.5145;paint-order:fill markers stroke" transform="translate(-.705 .651)"/>
+    <path d="M36.767 468.413 15 430.7c-1.405-2.434.388-3.263 2.176-2.784l9.847 2.422c2.246.602 3.035.62 3.024-1.76v-42.524h13.44v42.524c-.01 2.38.778 2.362 3.025 1.76l9.846-2.422c1.788-.48 3.581.35 2.176 2.784z" style="fill:#d40000;stroke-width:57.5145;paint-order:fill markers stroke" transform="translate(-.705 .651)"/>
+  </g>
+</svg>

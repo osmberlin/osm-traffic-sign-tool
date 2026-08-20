@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.293 - Numero civico</title>
+  <g transform="translate(0 -852.375)">
+    <path d="M.1 852.475h399.8v199.8H.1z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:.2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <rect width="388" height="188" x="6" y="858.362" rx="21.087" ry="21.087" style="fill:none;stroke:#00408b;stroke-width:5.99999905;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <g style="font-size:171.17930603px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000;fill-opacity:1;stroke:none;font-family:Sans">
+      <path d="M101.01 891.338v121.024H72.593v-79.086H51.884V908.97H64.38q11.127-2.053 11.127-14.209 0-1.709-.172-3.422zM170.73 888.94q19.172 0 32.355 9.759t13.182 24.819q0 18.66-14.381 25.509 8.73 3.248 13.18 13.52 3.254 7.192 3.254 13.18 0 14.208-11.127 25.336-13.352 13.352-36.463 13.352-23.106 0-36.458-13.692-10.788-11.3-10.788-24.997 0-7.527 2.743-14.036 4.45-10.783 15.06-12.496-8.556-2.226-12.323-10.782-2.737-5.82-2.737-12.841 0-11.978 7.36-21.737 11.64-14.893 37.143-14.894m-15.578 37.148q0 6.16 6.164 9.069 4.45 2.225 10.443 2.225 6.849 0 11.3-3.251 4.45-3.253 4.45-8.56 0-5.475-4.28-8.557-4.282-3.082-11.298-3.082-16.779 0-16.779 12.156m-2.225 49.299q0 6.331 6.164 9.758 4.796 2.565 11.639 2.565 8.39 0 13.183-3.508t4.793-8.815q0-13.697-17.976-13.697-17.803 0-17.803 13.697M289.711 888.6q19.172.001 32.352 10.783 19.344 15.918 19.345 52.893 0 34.41-19 50.673-13.864 11.811-32.697 11.811-17.118 0-31.668-11.811-20.712-16.78-20.713-50.673 0-35.09 18.833-51.524 13.691-12.15 33.548-12.151m-23.45 62.992q0 15.923 3.939 23.967 5.475 11.64 19.339 11.64 23.967 0 23.967-35.607t-23.622-35.607-23.623 35.607" style="font-variant:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000;font-family:CodiceNero;-inkscape-font-specification:CodiceNero"/>
+    </g>
+  </g>
+</svg>

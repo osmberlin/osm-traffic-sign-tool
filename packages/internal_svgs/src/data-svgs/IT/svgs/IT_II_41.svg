@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.279 159.279" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.41 - Oncoming traffic has priority</title>
+  <g transform="translate(-690.236 -667.804)">
+    <circle cx="769.876" cy="747.444" r="79.64" style="fill:#000;fill-rule:evenodd;stroke-width:7.29393"/>
+    <g transform="translate(-40.726 256.135)">
+      <circle cx="810.602" cy="491.309" r="79.375" style="fill:#fff;fill-rule:evenodd;stroke-width:7.2697"/>
+      <circle cx="810.602" cy="491.309" r="76.729" style="fill:#d40000;fill-rule:evenodd;stroke-width:7.02738"/>
+      <circle cx="810.602" cy="491.309" r="56.885" style="fill:#fff;fill-rule:evenodd;stroke-width:5.20995"/>
+    </g>
+    <path d="m565.087 654.587-14.886 25.79c-.96 1.665.266 2.233 1.489 1.905l6.733-1.656c1.536-.412 2.076-.425 2.068 1.203v38.945h9.192v-38.945c-.008-1.628.531-1.615 2.067-1.203l6.734 1.656c1.223.328 2.449-.24 1.488-1.904z" style="fill:#d40004;stroke-width:39.3311;paint-order:fill markers stroke" transform="translate(224.875 59.764)"/>
+    <path d="m524.916 720.774-14.886-25.79c-.96-1.665.266-2.232 1.489-1.905l6.733 1.656c1.536.412 2.076.425 2.068-1.203v-38.945h9.192v38.945c-.008 1.628.531 1.615 2.067 1.203l6.734-1.656c1.223-.327 2.449.24 1.488 1.904z" style="fill:#000;stroke-width:39.3311;paint-order:fill markers stroke" transform="translate(224.875 59.764)"/>
+  </g>
+</svg>

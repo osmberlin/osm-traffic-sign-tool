@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 238.125" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.355 - Telephone</title>
+  <g transform="translate(1070.994 -792.755)">
+    <path d="M-1070.994 792.755h158.75v238.125h-158.75z" style="fill:#00408b;fill-rule:evenodd;stroke-width:29.4791;paint-order:markers fill stroke"/>
+    <rect width="152.4" height="231.775" x="-1067.819" y="795.93" rx="10.319" ry="10.319" style="fill:none;fill-rule:evenodd;stroke:#fff;stroke-width:3.175;paint-order:markers fill stroke"/>
+    <path d="M-1051.15 812.599h119.063v119.063h-119.063z" style="fill:#fff;fill-rule:evenodd;stroke-width:4.84527;paint-order:markers fill stroke"/>
+    <g style="fill:#0084ff;fill-opacity:.470769">
+      <path d="m-950.826 352.58-1.261 10.278 3.014-1.431.78-7.829-1.956-1.232c-.222-.144-.555-.118-.577.215M-950.725 387.32l-1.538-10.377 3.113 1.564.93 7.728-1.923 1.284c-.218.15-.552.134-.582-.199" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke-width:1.81319;stroke-opacity:.329231;paint-order:markers fill stroke" transform="rotate(-32.174 -2502.18 -2454.161)scale(3.15128)"/>
+      <path d="m-951.642 352.818-1.316 10.992-.173.384-.202 11.199.354 1.847 1.434 9.84-4.359-2.786-1.963-9.786.235-9.562 1.725-9.38z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke-width:1.81319;stroke-opacity:.329231;paint-order:markers fill stroke" transform="rotate(-32.174 -2502.18 -2454.161)scale(3.15128)"/>
+    </g>
+  </g>
+</svg>

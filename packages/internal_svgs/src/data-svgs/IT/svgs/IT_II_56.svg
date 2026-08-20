@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.28 159.28" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.56 - No entry for motorcycles</title>
+  <g transform="translate(-877.077 -510.41)">
+    <circle cx="956.72" cy="590.05" r="79.64" fill-rule="evenodd"/>
+    <circle cx="956.72" cy="590.05" r="79.375" fill="#fff" fill-rule="evenodd"/>
+    <circle cx="956.72" cy="590.05" r="76.729" fill="#d40000" fill-rule="evenodd"/>
+    <circle cx="956.72" cy="590.05" r="56.885" fill="#fff" fill-rule="evenodd"/>
+    <g stroke-linejoin="bevel" stroke-width="4.521" transform="translate(-11.107 -7.26)scale(1.0117)">
+      <circle cx="929.12" cy="605.1" r="12.475" fill="none" stroke="#000"/>
+      <circle cx="985.17" cy="605.1" r="12.475" fill="none" stroke="#000"/>
+      <path fill-rule="evenodd" d="M931.15 582.21c0-3.386 3.587-3.37 3.587-3.37l8.53-.001 13.047-9.77c2.261-1.305 3.934-1.325 5.64.38l10.917 14.91c1.22 1.628.715 4.165-1.86 5.172l-14.758 6.276 7.205 12.842s1.775 3.48-1.162 4.765-4.881-1.395-4.881-1.395l-8.658-15.399c-1.315-2.278-.521-4.512 1.627-5.753l9.82-4.251c.579-.31.774-.658.174-1.173l-6.217-4.86c-.516-.42-1.396-.406-1.832.03l-6.478 4.967h-11.114s-3.587.016-3.587-3.37z"/>
+      <path fill-rule="evenodd" d="m945.29 574.94 13.251-9.717c0-2.332-.045-3.767-.435-5.067a7 7 0 0 0-2.384-3.48c-1.326-1.03-2.853-1.48-4.947-1.438-1.942.04-3.573.65-4.782 1.69-1.624 1.395-2.488 3.563-2.326 6.158l6.533-1.253.863 5.341-6.245 4.726z"/>
+    </g>
+  </g>
+</svg>

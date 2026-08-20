@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 238.125" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.358 - Bus stop</title>
+  <g transform="translate(0 -58.875)">
+    <path d="M0 58.875h158.75V297H0z" style="fill:#234f86;fill-rule:evenodd;stroke-width:29.4791;paint-order:markers fill stroke"/>
+    <rect width="152.4" height="231.775" x="3.175" y="62.05" rx="10.319" ry="10.319" style="fill:none;fill-rule:evenodd;stroke:#fff;stroke-width:3.175;paint-order:markers fill stroke"/>
+    <path d="M19.844 78.719h119.063v119.063H19.844z" style="fill:#fff;fill-rule:evenodd;stroke-width:4.84527;paint-order:markers fill stroke"/>
+    <path d="M351.733 46.754h31.233v2.998l-4.836.485h-26.65Z" style="fill:#000;fill-rule:evenodd;stroke-width:3.175;paint-order:markers fill stroke" transform="translate(-1078.198 -9.277)scale(3.15128)"/>
+    <path d="M355.528 42.092h26.628l.81 3.514v.727h-27.438z" style="fill:#000;fill-rule:evenodd;stroke-width:3.48748;paint-order:markers fill stroke" transform="translate(-1078.198 -9.277)scale(3.15128)"/>
+    <path d="M355.017 42.092h-2.961l-.215 4.241h3.176z" style="fill:#000;fill-rule:evenodd;stroke-width:1.15137;paint-order:markers fill stroke" transform="translate(-1078.198 -9.277)scale(3.15128)"/>
+    <path d="M356.189 42.82h4.447v2.786h-4.447zM352.628 42.82h1.636v2.786h-1.636zM361.376 42.82h4.447v2.786h-4.447zM366.564 42.82h4.447v2.786h-4.447zM371.751 42.82h4.447v2.786h-4.447zM376.939 42.82h4.6l.658 2.786h-5.258z" style="fill:#fff;fill-rule:evenodd;stroke-width:3.15536;paint-order:markers fill stroke" transform="translate(-1078.198 -9.277)scale(3.15128)"/>
+    <g transform="translate(-1078.198 -9.277)scale(3.15128)">
+      <circle cx="356.623" cy="50.147" r="2.505" style="fill:#fff;fill-rule:evenodd;stroke-width:10.33;paint-order:markers fill stroke"/>
+      <circle cx="356.623" cy="50.147" r="2.136" style="fill:#000;fill-rule:evenodd;stroke-width:8.8095;paint-order:markers fill stroke"/>
+      <circle cx="356.623" cy="50.147" r=".824" style="fill:#fff;fill-rule:evenodd;stroke-width:3.39861;paint-order:markers fill stroke"/>
+    </g>
+    <g transform="translate(-1018.712 -9.277)scale(3.15128)">
+      <circle cx="356.623" cy="50.147" r="2.505" style="fill:#fff;fill-rule:evenodd;stroke-width:10.33;paint-order:markers fill stroke"/>
+      <circle cx="356.623" cy="50.147" r="2.136" style="fill:#000;fill-rule:evenodd;stroke-width:8.8095;paint-order:markers fill stroke"/>
+      <circle cx="356.623" cy="50.147" r=".824" style="fill:#fff;fill-rule:evenodd;stroke-width:3.39861;paint-order:markers fill stroke"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 75" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen MII.6i - Slippery road because of rain</title>
+  <g transform="translate(-334.215 8.834)">
+    <path d="M334.215-8.834h200v75h-200z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M335.215-7.834h198v73h-198z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <rect width="193" height="68" x="337.551" y="-5.42" rx="10.666" ry="10.609" style="fill:none;stroke:#000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="m407.462-1.192 118.89.36v47.858c-8.801-1.597-14.832-5.48-17.816-11.875-13.416 9.478-27.467 14.715-44.72-1.439-16.906 7.736-24.168-1.709-31.63-10.795-17.988-1.606-24.134-11.024-24.724-24.11" style="fill:#999;fill-opacity:1;stroke:none"/>
+    <path d="m394.027 12.979-9.202 9.018M375.071 31.567l-7.73 7.913M393.107 42.425l-7.361 7.362M382.065 46.474l-9.202 9.018" style="fill:none;stroke:#000;stroke-width:4;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="m359.244 47.21-7.362 7.362M372.127 42.057l-7.362 7.362M406.726 28.99l-7.362 7.362M414.088 28.99l-7.362 7.362M410.223 40.4l-7.362 7.362M424.21 27.15l-7.362 7.361M419.425 38.928l-7.362 7.362M432.307 32.671l-7.361 7.362M438.565 40.953l-7.362 7.361M438.565 48.498l-7.362 7.362M418.873 46.29l-7.362 7.361" style="fill:none;stroke:#000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="m404.518 17.764-7.73 7.914" style="fill:none;stroke:#000;stroke-width:4;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="m382.433 38.928-7.362 7.362M397.708 30.647l-5.521 5.52M449.423 38.008l-5.521 5.521M428.075 44.45l-5.522 5.52M401.02 42.425l-5.52 5.521M402.31 11.69l-5.522 5.522M408.566 49.235l-5.52 5.52M414.64 20.893l-3.681 3.496M390.53 30.647l-3.68 3.496M427.154 52.915l-3.68 3.497M437.46 35.248l-3.68 3.496M390.715 23.653l-7.362 7.362" style="fill:none;stroke:#000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+  </g>
+</svg>

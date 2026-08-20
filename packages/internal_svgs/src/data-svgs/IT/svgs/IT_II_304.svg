@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 158.75" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.304 - School bus (stop)</title>
+  <g transform="translate(-631.452 -1640.84)">
+    <path d="M631.452 1640.84h158.75v158.75h-158.75z" style="fill:#f60;stroke-width:2.1285;stroke-linecap:round;paint-order:fill markers stroke"/>
+    <rect width="153.458" height="153.458" x="634.098" y="1643.486" rx="7.938" ry="7.938" style="fill:none;fill-opacity:.419162;stroke:#000;stroke-width:2.64583;stroke-linecap:round;paint-order:fill markers stroke"/>
+    <g transform="translate(-222.779 -158.643)scale(1.42052)">
+      <circle cx="631.634" cy="1297.744" r="6.639" style="fill:#000;stroke-width:2.74594;stroke-linecap:round;paint-order:fill markers stroke"/>
+      <path d="M682.51 1296.842a5.8 5.8 0 0 0-5.802 5.802 5.8 5.8 0 0 0 5.802 5.803 5.8 5.8 0 0 0 4.055-1.672l1.669.997-1.973 1.138 4.212 2.456.157-2.16 2.553 1.526a1.286 1.286 0 0 0 1.764-.445 1.286 1.286 0 0 0-.444-1.764l-2.335-1.396 1.726-.996-4.212-2.454-.136 1.881-1.59-.95a5.8 5.8 0 0 0 .356-1.964 5.8 5.8 0 0 0-5.802-5.802z" style="fill:#000;stroke-width:2.3998;stroke-linecap:round;paint-order:fill markers stroke"/>
+      <path d="m616.96 1322.85 15.566 9.43-6.695 11.047-15.399-9.652z" style="fill:#000;stroke-width:2.57286;stroke-linecap:round;paint-order:fill markers stroke"/>
+      <g style="fill:#252422 icc-color(sRGB-IEC61966-2,.1,.14498901,.14099121,.13299561)">
+        <path d="m2209.536-52.476 15.818-25.162" style="color:#000;stroke-linecap:round;-inkscape-stroke:none;paint-order:fill markers stroke" transform="translate(-876.775 1359.856)scale(.68074)"/>
+        <path d="M2229.352-82.72c-2.735-.203-5.342 1.072-7.037 3.171l-15.819 25.162a3.59 3.59 0 1 0 6.08 3.822l8.496-13.513 9.692 11.765-4.098 9.59 1.951.74-2.234 5.415c-.251.626-.5 1.405-.558 2.032-.057.628.04 1.092.105 1.675l3.142 25.546a4.346 4.346 0 1 0 8.63-1.062l-3.114-25.287 2.16-5.235 1.8.684 2.214-5.656 3.525 4.263 1.455-1.115 6.397 6.604c.544.554 1.464 1.314 2.61 1.55s2.084.16 3.304-.501l14.867-8.15a4.346 4.346 0 1 0-4.18-7.624l-12.254 6.719-3.8-3.922 1.435-1.102-9.342-10.572-4.164-13.654 15.418 5.31a3.59 3.59 0 0 0 2.338-6.79l-28.101-9.678a3.6 3.6 0 0 0-.918-.188" style="color:#000;fill:#000;stroke-linecap:round;-inkscape-stroke:none;paint-order:fill markers stroke" transform="translate(-876.775 1359.856)scale(.68074)"/>
+      </g>
+      <g style="fill:#252422 icc-color(sRGB-IEC61966-2,.1,.14498901,.14099121,.13299561)">
+        <path d="m2266.029-65.75 5.972 6.318" style="color:#000;stroke-linecap:round;-inkscape-stroke:none;paint-order:fill markers stroke" transform="translate(-876.775 1359.856)scale(.68074)"/>
+        <path d="M2292.707-71.992c-1.114-.086-1.931-.224-3.07-.042s-1.964.68-2.992 1.278L2273-62.777l-4.773-5.05a3.024 3.024 0 1 0-4.395 4.155l5.97 6.316c.695.736 1.818 1.106 2.708 1.11.89.003 1.535-.143 2.201-.526l7.61-4.449 3.058 8.006-4.998 14.344h2.476l-3.004 9.097c-.523 1.322-.922 2.421-.777 3.819l2.776 18.232a3.59 3.59 0 1 0 7.1-1.08l-2.743-17.645 4.21-12.423h2.655l4.533 7.808c.543.932 1.34 1.63 2.282 1.904.941.276 1.966.28 2.812.028l16.139-4.941a3.59 3.59 0 1 0-2.102-6.868l-14.062 4.305-1.4-2.412 2.02-.807-6.966-13.361 4.053-10.096 3.066.967 2.844 7.21a3.024 3.024 0 1 0 5.625-2.22l-3.43-8.695c-.446-1.125-1.725-1.59-3.222-2.113l-11.895-3.7a3 3 0 0 0-.664-.13" style="color:#000;fill:#000;stroke-linecap:round;-inkscape-stroke:none;paint-order:fill markers stroke" transform="translate(-876.775 1359.856)scale(.68074)"/>
+      </g>
+      <path d="m699.924 1323.52 3.794 5.356-10.6 4.24-.614-6.639z" style="fill:#000;stroke-width:4.11658;stroke-linecap:round;paint-order:fill markers stroke"/>
+    </g>
+  </g>
+</svg>

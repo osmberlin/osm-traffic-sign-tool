@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.282 - Hospital</title>
+  <g transform="translate(0 -152.375)">
+    <path d="M.5 152.875h599v899H.5z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:.99999994;stroke-opacity:1"/>
+    <rect width="576" height="876" x="12" y="164.375" rx="39" ry="39" style="fill:none;stroke:#000;stroke-width:12;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <rect width="438.75" height="438.75" x="80.625" y="233" rx="50.703" ry="50.703" style="fill:#00408b;fill-opacity:1;stroke:#00408b;stroke-width:11.25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M-191.826 15.786v17.293h-17.293v24.414h17.293v17.293h24.414V57.493h17.293V33.079h-17.293V15.786z" style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:#fff;stroke-width:2.99999952;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="translate(781.768 235.732)scale(2.25)"/>
+    <path d="m-276.264 81.69 43.835-12.703c3.054-.818 5.729 2.555 5.729 5.729v37.609l-55.293 18.68V88.29c0-3.174 2.694-5.787 5.729-6.6" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="translate(781.768 235.732)scale(2.25)"/>
+    <path d="m-226.275 86.537 68.594 35.344-38.063 16.406-.75.313-.218.781-5.625 19.719-67.5-38.781V99.38z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="translate(781.768 235.732)scale(2.25)"/>
+    <path d="m-226.806 80.881-46.438 13.625v27.781l.875.47 70.22 40.343 1.905 1.094.594-2.094 6-21.031 40.594-17.469 3.312-1.438-3.187-1.625-49.75-25.656 2.812-.844-3.906-1.906zm.531 5.656 14.531 7.5-39.406 11.75-14.344-7.687zm18.906 9.75 49.688 25.594-38.063 16.406-.75.313-.218.781-5.625 19.719-67.5-38.781V99.63l18.28 9.781z" style="fill:#00408b;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="translate(781.768 235.732)scale(2.25)"/>
+    <path d="m-227.119 84.506 17.938 8.75-41.969 12.531-17.156-9.187z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="translate(781.768 235.732)scale(2.25)"/>
+    <path d="m-194.82 134.243 41.096-11.956c3.604-.965 6.227 2.777 6.227 6.227v32.13l-7.223 2.49v-15.339l-37.858 11.46v13.095l-8.468 2.74v-33.564c0-3.45 2.635-6.321 6.226-7.283z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#00408b;stroke-width:3.4000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" transform="translate(781.768 235.732)scale(2.25)"/>
+    <path d="M464.774 827.296 465 878.83H288.473l10.623 60.801c-.226 1.583-.677 3.165-1.583 4.069-.903 1.13-3.164 1.355-4.747 1.355L135 853.062l157.992-92.219c1.583 0 3.843.452 4.52.904.904 1.13 1.358 2.26 1.13 3.842l-11.075 61.705z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  </g>
+</svg>
