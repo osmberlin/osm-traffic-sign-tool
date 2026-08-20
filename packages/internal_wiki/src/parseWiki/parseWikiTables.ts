@@ -399,6 +399,60 @@ const pickWikiRowTagsText = (rowTexts: string[]): string => {
   return taggingCell ?? rowTexts[rowTexts.length - 1] ?? ''
 }
 
+const ITALY_SIGN_ID_PATTERN = /^(?:II|MII)\.\d+[a-z]?$/i
+
+const extractItalySignId = (text: string): string | null => {
+  const trimmed = text.replace(/\s+/g, ' ').trim()
+  if (!trimmed || !ITALY_SIGN_ID_PATTERN.test(trimmed)) return null
+  return trimmed
+}
+
+/** Italian wiki tables use Figura (vertical signs) or Modello (panels) as the OSM sign id. */
+export const parseItalyTable = ($: cheerio.CheerioAPI): ParsedWikiRow[] => {
+  const signMap = new Map<string, ParsedWikiRow>()
+  $('table.wikitable tbody tr').each((_, row) => {
+    const cells = $(row).find('td')
+    if (cells.length < 4) return
+
+    const rowTexts = cells.map((_, cell) => $(cell).text().replace(/\s+/g, ' ').trim()).get()
+    if (/^(sign|figura|modello)$/i.test(rowTexts[0] ?? '')) return
+
+    const signId = extractItalySignId(rowTexts[1] ?? '')
+    if (!signId) return
+
+    const imgHref = $(cells[0]).find('a').attr('href') ?? $(cells[1]).find('a').attr('href')
+    const imgSrc = $(cells[0]).find('img').attr('src') ?? $(cells[1]).find('img').attr('src')
+    const imageUrl = wikiImageUrl(imgHref)
+    const tagsText = pickWikiRowTagsText(rowTexts)
+    const englishName = rowTexts[4]?.trim()
+    const italianName = rowTexts[3]?.trim()
+    const name =
+      englishName && englishName !== signId
+        ? finalizeWikiSignName(englishName, signId)
+        : italianName && italianName !== signId
+          ? finalizeWikiSignName(italianName, signId)
+          : signId
+    const isNa = /^(n\/a|na|n\/a\.?)$/i.test(tagsText) || /N\/A/i.test(tagsText)
+
+    const entry: ParsedWikiRow = {
+      signId,
+      name,
+      imageUrl,
+      imageSvg: imageSvgFromThumbSrc(imgSrc),
+      tagsText,
+      isNa,
+    }
+    const existing = signMap.get(signId)
+    if (
+      !existing ||
+      wikiSignNameQuality(name, signId) > wikiSignNameQuality(existing.name, signId)
+    ) {
+      signMap.set(signId, entry)
+    }
+  })
+  return [...signMap.values()]
+}
+
 export const parseBelgiumTable = ($: cheerio.CheerioAPI): ParsedWikiRow[] => {
   const signs: ParsedWikiRow[] = []
   $('table.wikitable tbody tr').each((_, row) => {

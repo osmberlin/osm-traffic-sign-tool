@@ -6,6 +6,7 @@ import brMeta from './data/taginfoSnapshotMeta_BR.json' with { type: 'json' }
 import caMeta from './data/taginfoSnapshotMeta_CA.json' with { type: 'json' }
 import deMeta from './data/taginfoSnapshotMeta_DE.json' with { type: 'json' }
 import frMeta from './data/taginfoSnapshotMeta_FR.json' with { type: 'json' }
+import itMeta from './data/taginfoSnapshotMeta_IT.json' with { type: 'json' }
 import plMeta from './data/taginfoSnapshotMeta_PL.json' with { type: 'json' }
 
 export type TaginfoSnapshotMeta = {
@@ -20,6 +21,7 @@ const metaByCountry: Partial<Record<CountryPrefixType, TaginfoSnapshotMeta>> = {
   CA: caMeta,
   DE: deMeta,
   FR: frMeta,
+  IT: itMeta,
   PL: plMeta,
 }
 
