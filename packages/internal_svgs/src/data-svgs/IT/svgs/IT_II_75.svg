@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.279 159.279" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.75 - Standing and parking prohibited</title>
+  <g transform="translate(-163.638 -1342.835)">
+    <circle cx="243.277" cy="1422.475" r="79.64" style="fill:#000;stroke-width:11.7623;stroke-linejoin:bevel"/>
+    <circle cx="243.277" cy="1422.475" r="79.375" style="fill:#fff;stroke-width:18.9205;stroke-linejoin:bevel;stroke-opacity:.643077"/>
+    <circle cx="243.277" cy="1422.475" r="76.729" style="fill:#d40000;stroke-width:18.2898;stroke-linejoin:bevel;stroke-opacity:.643077"/>
+    <circle cx="243.277" cy="1422.475" r="56.885" style="fill:#fff;stroke-width:10.8171;stroke-linejoin:bevel"/>
+    <circle cx="243.277" cy="1422.475" r="52.917" style="fill:#00408b;stroke-width:12.9094;stroke-linejoin:bevel"/>
+    <path d="m212.641 1378.275-13.563 13.564 30.636 30.635-30.636 30.636 13.564 13.564 30.636-30.636 30.636 30.636 13.563-13.563-30.636-30.636 30.636-30.636-13.563-13.564-30.637 30.636z" style="color:#000;fill:#fff;stroke-linejoin:bevel"/>
+    <path d="M197.363 1192.875v11.244h51.793v51.792H260.4v-51.792h51.792v-11.244H260.4v-51.792h-11.244v51.792z" style="color:#000;fill:#d40000;stroke-linejoin:bevel" transform="rotate(45 -21.337 1296.603)"/>
+  </g>
+</svg>

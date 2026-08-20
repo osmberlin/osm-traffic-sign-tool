@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.314 - Motorroad (road for motor vehicles only)</title>
+  <g transform="translate(225.417 -1480.814)">
+    <path d="M-225.417 1480.814h600v600h-600z" style="fill:#00408c;fill-opacity:1;stroke-width:27.3522;paint-order:fill markers stroke"/>
+    <g transform="translate(688.298 1859.495)scale(3.77953)">
+      <path d="M-219.162 1.895a3.14 3.14 0 0 0-3.147 3.148 3.14 3.14 0 0 0 3.147 3.147h113.567a3.14 3.14 0 0 0 3.147-3.147 3.14 3.14 0 0 0-3.147-3.148h-56.784z" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:20.9067;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+      <path d="M-162.379-30.867c-9.7 0-44.916 3.4-54.275 7.04-9.36 3.639-8.427 19.704 2.463 22.622h103.625c10.89-2.918 11.822-18.983 2.463-22.623-9.36-3.639-44.576-7.04-54.276-7.04" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:5.56481;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+      <circle cx="-210.086" cy="-12.791" r="8.392" style="fill:#004090;fill-opacity:1;stroke:none;stroke-width:6.82616;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+      <path d="M-162.379-61.501c-14.443.025-29.594 2.09-34.16 3.315s-8.356 2.721-10.08 7.63l-7.845 22.623 7.48-1.094 6.38-18.513c1.19-2.406 3.075-3.98 6.366-4.55s19.63-2.438 31.86-2.438c12.228 0 28.57 1.87 31.86 2.438 3.291.57 5.175 2.144 6.365 4.55l6.381 18.513 7.48 1.094-7.845-22.622c-1.725-4.91-5.515-6.406-10.08-7.631-4.567-1.225-19.718-3.29-34.162-3.315" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:5.56481;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+      <path d="M-216.557 10.865v9.31a3.777 3.777 0 0 0 3.784 3.784h11.847a3.776 3.776 0 0 0 3.784-3.784v-9.31z" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:6.93582;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+      <circle cx="114.671" cy="-12.791" r="8.392" style="fill:#004090;fill-opacity:1;stroke:none;stroke-width:6.82616;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke" transform="scale(-1 1)"/>
+      <path d="M-108.2 10.866v9.309a3.777 3.777 0 0 1-3.784 3.784h-11.847a3.776 3.776 0 0 1-3.783-3.784v-9.31z" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:6.93582;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+    </g>
+    <rect width="580" height="580" x="-215.417" y="1490.814" rx="30" ry="30" style="fill:none;stroke:#fff;stroke-width:9.99999;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+  </g>
+</svg>

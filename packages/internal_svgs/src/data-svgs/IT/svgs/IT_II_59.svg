@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.279 159.279" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.59 - No entry for buses</title>
+  <g transform="translate(-730.963 -411.67)">
+    <circle cx="810.602" cy="491.309" r="79.64" style="fill:#000;fill-rule:evenodd;stroke-width:8.23434"/>
+    <circle cx="810.602" cy="491.309" r="79.375" style="fill:#fff;fill-rule:evenodd;stroke-width:7.2697"/>
+    <circle cx="810.602" cy="491.309" r="76.729" style="fill:#d40000;fill-rule:evenodd;stroke-width:7.02738"/>
+    <circle cx="810.602" cy="491.309" r="56.885" style="fill:#fff;fill-rule:evenodd;stroke-width:5.20995"/>
+    <g fill-rule="evenodd" transform="translate(-371.99 341.648)scale(3.21742)">
+      <path d="M351.73 46.754h31.232v2.999l-4.836.485h-26.65zM355.53 42.092h26.628l.81 3.514v.727H355.53zM355.02 42.092h-2.961l-.215 4.241h3.176z" style="fill:#000;paint-order:markers fill stroke"/>
+      <path fill="#fff" d="M356.19 42.82h4.447v2.787h-4.447ZM352.63 42.82h1.636v2.787h-1.636ZM361.38 42.82h4.447v2.787h-4.447ZM366.56 42.82h4.447v2.787h-4.447ZM371.75 42.82h4.447v2.787h-4.447ZM376.94 42.82h4.6l.659 2.787h-5.26z" style="paint-order:markers fill stroke"/>
+      <circle cx="356.62" cy="50.147" r="2.505" fill="#fff" style="paint-order:markers fill stroke"/>
+      <circle cx="356.62" cy="50.147" r="2.136" style="paint-order:markers fill stroke"/>
+      <circle cx="356.62" cy="50.147" r=".824" fill="#fff" style="paint-order:markers fill stroke"/>
+      <g transform="translate(18.877)">
+        <circle cx="356.62" cy="50.147" r="2.505" fill="#fff" style="paint-order:markers fill stroke"/>
+        <circle cx="356.62" cy="50.147" r="2.136" style="paint-order:markers fill stroke"/>
+        <circle cx="356.62" cy="50.147" r=".824" fill="#fff" style="paint-order:markers fill stroke"/>
+      </g>
+    </g>
+  </g>
+</svg>

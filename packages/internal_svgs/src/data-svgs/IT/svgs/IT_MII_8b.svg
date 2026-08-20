@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1350" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen MII.8b - Mandatory direction for vehicles carrying dangerous goods</title>
+  <g transform="translate(0 297.625)">
+    <path d="M.5-297.138h899v1349H.5z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+    <rect width="868" height="1318" x="16" y="-281.638" rx="62" ry="62" style="fill:none;stroke:#000;stroke-width:15.99999905;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M614.409 878.41c-1.575.58-3.271.916-5.052.916h-36.768v68.9a14.104 14.104 0 0 0 14.135 14.136h13.54a14.11 14.11 0 0 0 14.145-14.136zm-328.816.916v68.9a14.11 14.11 0 0 0 14.144 14.136h13.539a14.105 14.105 0 0 0 14.138-14.136v-68.9zm52.2 0v68.9a14.105 14.105 0 0 0 14.138 14.136h13.538a14.103 14.103 0 0 0 14.137-14.136V917.83h50.972a21.06 21.06 0 0 0 19.419 12.943 21.06 21.06 0 0 0 19.426-12.943h50.973v30.396a14.104 14.104 0 0 0 14.138 14.136h13.538a14.103 14.103 0 0 0 14.137-14.136v-68.9h-41.813v22.259h-50.973a21.06 21.06 0 0 0-19.426-12.93 21.06 21.06 0 0 0-19.41 12.93h-50.981v-22.26z" style="fill:#000;fill-rule:evenodd;stroke-width:1.09007001;stroke-opacity:.64615401"/>
+    <path d="M272.502 826.379h354.996v41.216H272.502z" style="fill:#000;fill-rule:evenodd;stroke-width:.803846;stroke-opacity:.64615401"/>
+    <path d="M272.5 516.329s118.307-5.243 177.5-5.243 177.5 5.243 177.5 5.243v299.044H272.504z" style="fill:#000;fill-rule:evenodd;stroke-width:2.16526008;stroke-opacity:.64615401"/>
+    <path d="M313.852 557.013h272.292v218.261H313.852z" style="fill:#f60;fill-rule:evenodd;stroke-width:.801346;stroke-opacity:.64615401"/>
+    <path d="M750 87.362c.028 165.677-134.295 300-300 300s-300.028-134.323-300-300c-.028-165.677 134.295-300 300-300s300.028 134.323 300 300" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M749 87.362c0 165.133-133.867 299-299 299s-299-133.867-299-299 133.867-299 299-299 299 133.867 299 299" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M450-203.688c-160.715 0-291 130.285-291 291s130.285 291 291 291 291-130.285 291-291-130.285-291-291-291" style="fill:#00408b;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M208.518 127.247h271.484c2.52 0 4.567 2.045 4.567 4.55 0 .593-.121 1.176-.313 1.682L459.9 205.498a13.5 13.5 0 0 0-.529 3.695c0 7.19 5.842 13.014 13.02 13.014 2.544 0 4.907-.726 6.914-1.99L691.482 86.97 479.307-45.6a12.9 12.9 0 0 0-6.914-1.984c-7.178 0-13.02 5.819-13.02 13.014 0 1.28.191 2.507.529 3.678l24.357 71.397c.191.517.312 1.094.312 1.677a4.56 4.56 0 0 1-4.567 4.555H208.52v80.509" style="fill:#fff"/>
+  </g>
+</svg>

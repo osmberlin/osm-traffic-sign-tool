@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen MII.7e - Bend in priority road</title>
+  <g transform="translate(0 -452.375)">
+    <path d="M452.875.5h599v599h-599z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" transform="matrix(0 1 1 0 0 0)"/>
+    <rect width="580" height="580" x="462.375" y="10" rx="30" ry="30" style="fill:none;stroke:#000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="matrix(0 1 1 0 0 0)"/>
+    <path d="M672.375 45h50v190h-50z" style="fill:#000;fill-opacity:1;stroke:none" transform="matrix(0 1 1 0 0 0)"/>
+    <path d="m77.345 975.03 237.22-237.22a115 115 0 0 1 81.318-33.683H555" style="fill:none;stroke:#000;stroke-width:90;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M-386.287-1001.54h50v190h-50z" style="fill:#000;fill-opacity:1;stroke:none" transform="scale(-1)"/>
+  </g>
+</svg>

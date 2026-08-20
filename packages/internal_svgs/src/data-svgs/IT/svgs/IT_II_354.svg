@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 238.125" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.354 - Breakdown service</title>
+  <g transform="translate(888.996 -792.268)">
+    <path d="M-888.996 792.268h158.75v238.125h-158.75z" style="fill:#00408b;fill-rule:evenodd;stroke-width:29.4791;paint-order:markers fill stroke"/>
+    <rect width="152.4" height="231.775" x="-885.821" y="795.443" rx="10.319" ry="10.319" style="fill:none;fill-rule:evenodd;stroke:#fff;stroke-width:3.175;paint-order:markers fill stroke"/>
+    <path d="M-869.152 812.112h119.063v119.063h-119.063z" style="fill:#fff;fill-rule:evenodd;stroke-width:4.84527;paint-order:markers fill stroke"/>
+    <path d="m-810.154 821.595-23.484 4.927v9.858h25.635v6.035h-25.635v9.43h22.849a2.876 2.876 0 0 1 2.786 2.822v11.937l-1.26 2.666v52.746h13.73V869.27l-1.261-2.666V854.66a2.876 2.876 0 0 1 2.786-2.817h7.532v-9.43h-10.317v-6.036h10.315v-14.784z" style="fill:#000;fill-rule:evenodd;stroke-width:9.47806;stroke-opacity:.329231;paint-order:markers fill stroke"/>
+  </g>
+</svg>

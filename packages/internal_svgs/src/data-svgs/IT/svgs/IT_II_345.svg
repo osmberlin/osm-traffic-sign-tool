@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 3000" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.345 - Motorway (green background) / Expressway (blue background)</title>
+  <path fill="#08842c" fill-rule="evenodd" d="M0 0h1700v3000H0z"/>
+  <path fill="#fff" d="M672.164 150 523.25 920h264.795l30.074-770zm209.74 0 30.072 770h264.893l-148.914-770zM100 970v80h190v110h86.836l21.273-110h903.9l21.273 110h86.715v-110h190v-80zm378.77 180L150 2850h562.666l66.396-1700zm442.191 0 66.396 1700h564.428L1221.35 1150z"/>
+  <path fill="none" stroke="#fff" stroke-width="45" d="M202.5 45h1295c87.255 0 157.5 70.245 157.5 157.5v2595c0 87.255-70.245 157.5-157.5 157.5h-1295c-87.255 0-157.5-70.245-157.5-157.5v-2595C45 115.245 115.245 45 202.5 45z"/>
+</svg>

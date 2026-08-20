@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.277 - First aid</title>
+  <g transform="translate(0 -152.375)">
+    <path d="M.5 152.875h599v899H.5z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:.99999994;stroke-opacity:1"/>
+    <rect width="576" height="876" x="12" y="164.375" rx="39" ry="39" style="fill:none;stroke:#000;stroke-width:12;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M135.226 878.602 135 827.068h176.527l-10.623-60.801c.226-1.583.677-3.164 1.583-4.068.903-1.13 3.164-1.356 4.747-1.356L465 852.836l-157.992 92.219c-1.583 0-3.843-.451-4.52-.903-.904-1.13-1.358-2.26-1.13-3.843l11.075-61.705z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <rect width="438.75" height="438.75" x="80.625" y="233" rx="50.703" ry="50.703" style="fill:none;stroke:#000;stroke-width:11.25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M232.5 300.5v84.375h-84.375v135H232.5v84.375h135v-84.375h84.375v-135H367.5V300.5z" style="fill:#d40000;fill-opacity:1;stroke:none"/>
+  </g>
+</svg>

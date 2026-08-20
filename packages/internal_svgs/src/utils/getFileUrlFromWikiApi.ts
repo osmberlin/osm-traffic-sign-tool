@@ -124,7 +124,12 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
   }
 
   const page = extractFirstPage(data)
-  if (page?.missing !== undefined) {
+  const imageInfo = Array.isArray(page?.imageinfo) ? page.imageinfo[0] : undefined
+  const imageUrl =
+    isRecord(imageInfo) && typeof imageInfo.url === 'string' ? imageInfo.url : undefined
+
+  // OSM wiki pages for Commons-hosted files may carry `missing` while still exposing imageinfo.
+  if (page?.missing !== undefined && !imageUrl) {
     return {
       success: false,
       error: {
@@ -137,9 +142,7 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
     } as const
   }
 
-  const imageInfo = Array.isArray(page?.imageinfo) ? page.imageinfo[0] : undefined
-
-  if (!isRecord(imageInfo) || typeof imageInfo.url !== 'string') {
+  if (!imageUrl) {
     return {
       success: false,
       error: {
@@ -151,5 +154,5 @@ export const getFileUrlFromWikiApi = async (sourceUrl: string) => {
     } as const
   }
 
-  return { success: true, url: imageInfo.url } as const
+  return { success: true, url: imageUrl } as const
 }

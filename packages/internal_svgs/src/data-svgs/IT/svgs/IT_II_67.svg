@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.015 159.015" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.67 - No entry for vehicles or vehicle combinations longer than the specified limit</title>
+  <g transform="translate(-1473.419 -506.89)">
+    <circle cx="1552.926" cy="586.397" r="79.507" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke-width:1.75292;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+    <circle cx="1552.926" cy="586.397" r="79.375" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-width:1.75001;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+    <circle cx="1552.926" cy="586.397" r="76.729" style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke-width:1.97176;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+    <circle cx="1552.926" cy="586.397" r="56.885" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-width:1.46182;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+    <path d="M90.21 135.88h24.374v11.796H90.21Z" style="fill:#000;fill-rule:evenodd;stroke-width:.476001;stroke-linejoin:bevel;paint-order:markers fill stroke" transform="translate(1298.048 200.976)scale(2.59883)"/>
+    <path d="m81.666 144.866 1.909-5.17h5.941v8.37h25.068v1.388l-3.946 1.431H81.666Z" style="fill:#000;fill-rule:evenodd;stroke-width:.477793;stroke-linejoin:bevel;paint-order:markers fill stroke" transform="translate(1298.048 200.976)scale(2.59883)"/>
+    <g transform="matrix(2.59883 0 0 -2.59883 1298.048 200.976)">
+      <circle cx="86.242" cy="-150.95" r="3.253" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-width:.649091;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+      <circle cx="86.242" cy="-150.951" r="2.711" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke-width:.540912;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+      <circle cx="86.242" cy="-150.951" r="1.106" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-width:.220693;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+    </g>
+    <g transform="matrix(2.59883 0 0 -2.59883 1307.331 197.99)">
+      <circle cx="103.872" cy="-152.1" r="3.253" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-width:.649091;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+      <circle cx="103.872" cy="-152.1" r="2.711" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke-width:.540912;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+      <circle cx="103.872" cy="-152.1" r="1.106" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-width:.220693;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+    </g>
+    <path d="M1517.234 567.483h10.735v8.348h-13.803z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke-width:1.23394;stroke-linejoin:bevel;paint-order:markers fill stroke"/>
+    <path d="M1522.871 613.635c-.18 0-.396.06-.635.197l-11.664 5.908c-.291.167-.42.235-.42.451s.129.284.42.452l11.663 5.909c.763.44 1.311.102 1.113-.636l-.794-3.737h6.71v-3.974h-6.71l.794-3.738c.136-.507-.08-.825-.477-.832M1582.98 613.636c.18 0 .397.059.636.197l11.664 5.907c.291.168.42.235.42.452 0 .216-.129.284-.42.451l-11.663 5.91c-.763.44-1.311.101-1.113-.637l.794-3.736h-6.71v-3.975h6.71l-.794-3.737c-.136-.508.08-.826.477-.832" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke-width:1.23394;stroke-linejoin:bevel;paint-order:markers fill stroke" transform="translate(.133)"/>
+    <g aria-label="10 m" style="font-weight:700;font-size:8.28439px;font-family:&quot;Stradale Stretto Positivo&quot;;-inkscape-font-specification:&quot;Stradale Stretto Positivo Bold&quot;;fill:green;fill-rule:evenodd;stroke-width:.662751;stroke-linejoin:bevel;paint-order:markers fill stroke">
+      <path d="M93.14 157.14v6.48h-1.452v-4.094h-.72v-1.124q.482-.017.676-.324.194-.308.186-.939zM96.352 162.236q.546 0 .546-1.897 0-.465-.048-.8-.049-.337-.13-.555-.076-.218-.178-.32-.097-.105-.206-.105-.174 0-.291.215-.113.214-.178.51-.06.295-.085.606-.024.308-.024.498 0 .894.153 1.371.154.477.441.477m.025 1.448q-.38 0-.749-.254-.368-.26-.66-.704-.286-.45-.464-1.048-.174-.603-.162-1.29 0-.72.178-1.327.178-.611.461-1.048.287-.44.647-.687.36-.251.732-.251.373 0 .728.267.36.263.636.72.279.453.449 1.06.17.602.17 1.274.008.687-.166 1.29-.174.599-.457 1.044-.284.44-.636.7-.351.254-.707.254M102.9 160.695v2.925h-1.29v-2.925q0-.239-.08-.324-.077-.089-.203-.089-.275 0-.275.413v2.925H99.82v-4.381h1.035l.077.255q.097-.097.291-.235.198-.137.486-.137.347 0 .566.133.222.13.372.348.15-.206.36-.344t.502-.137q.388 0 .63.141.247.142.377.376.133.235.178.542.048.308.048.64v2.799h-1.286v-2.925q0-.413-.28-.413-.149 0-.213.106-.061.1-.061.307z" style="fill:#000" transform="translate(1258.726 136.939)scale(2.99372)"/>
+    </g>
+  </g>
+</svg>

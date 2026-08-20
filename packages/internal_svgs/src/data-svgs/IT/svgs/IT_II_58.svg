@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.279 159.279" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.58 - No entry for all motor vehicles</title>
+  <g transform="translate(-331.164 -748.907)">
+    <circle cx="410.804" cy="828.547" r="79.64" style="fill:#000;fill-rule:evenodd;stroke-width:7.29393"/>
+    <g transform="translate(-399.798 337.238)">
+      <circle cx="810.602" cy="491.309" r="79.375" style="fill:#fff;fill-rule:evenodd;stroke-width:7.2697"/>
+      <circle cx="810.602" cy="491.309" r="76.729" style="fill:#d40000;fill-rule:evenodd;stroke-width:7.02738"/>
+      <circle cx="810.602" cy="491.309" r="56.885" style="fill:#fff;fill-rule:evenodd;stroke-width:5.20995"/>
+    </g>
+    <g transform="translate(298.29 778.166)scale(2.57281)">
+      <path d="M30.4 24.461a.865.865 0 0 0-.867.867c0 .481.387.868.867.868h26.664c.48 0 .867-.387.867-.867v-.001a.865.865 0 0 0-.867-.867z" style="fill:#000;fill-rule:evenodd;stroke-width:.216734;paint-order:markers fill stroke"/>
+      <path d="M43.732 16.893c-.994 0-10.383.401-12.093 1.16s-2.126 1.715-2.126 2.981c0 1.267.72 2.9 3.405 2.9h21.628c2.685 0 3.404-1.633 3.404-2.9s-.415-2.223-2.125-2.981c-1.71-.759-11.1-1.16-12.093-1.16" style="fill:#000;fill-rule:evenodd;stroke-width:.264583;paint-order:markers fill stroke"/>
+      <circle cx="32.918" cy="20.829" r="2.049" style="fill:#fff;fill-rule:evenodd;stroke-width:.319528;paint-order:markers fill stroke"/>
+      <path d="M43.732 9.346c-2.284 0-4.674.257-6.661.488-1.988.231-2.568.769-2.906 1.594L31.65 17.36l1.984-.401 1.843-4.522c.177-.474.709-.842 1.117-.878 2.468-.344 4.812-.44 7.138-.499 2.325.058 4.67.155 7.138.499.408.036.94.404 1.117.878l1.843 4.522 1.984.401-2.515-5.93c-.338-.826-.919-1.364-2.906-1.595s-4.378-.488-6.661-.488" style="fill:#000;fill-rule:evenodd;stroke-width:.264583;paint-order:markers fill stroke"/>
+      <path d="M31.118 26.738v2.523a.93.93 0 0 0 .932.932h2.755a.93.93 0 0 0 .932-.932v-2.523z" style="fill:#000;fill-rule:evenodd;stroke-width:.30153;paint-order:markers fill stroke"/>
+      <circle cx="-54.546" cy="20.829" r="2.049" style="fill:#fff;fill-rule:evenodd;stroke-width:.319528;paint-order:markers fill stroke" transform="scale(-1 1)"/>
+      <path d="M56.346 26.738v2.523a.93.93 0 0 1-.932.932h-2.755a.93.93 0 0 1-.932-.932v-2.523z" style="fill:#000;fill-rule:evenodd;stroke-width:.30153;paint-order:markers fill stroke"/>
+    </g>
+  </g>
+</svg>

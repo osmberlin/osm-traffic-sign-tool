@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.97a - European state boundary</title>
+  <g transform="translate(0 547.625)">
+    <rect width="1200" height="1200" y="-547.625" rx="0" ry="0" style="fill:#00408b;fill-opacity:1;stroke:none;opacity:1"/>
+    <rect width="1164" height="1164" x="18" y="-530.125" rx="63" ry="63" style="fill:none;stroke:#fff;stroke-width:17.99999809;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="m120 116.375 44-134 44 134-114-82h140m-54-134 44-134 44 134-114-82h140m44-78 44-134 44 134-114-82h140m104 24 44-134 44 134-114-82h140m-490 732 44-134 44 134-114-82h140m44 242 44-134 44 134-114-82h140m104 140 44-134 44 134-114-82h140m104-728 44-134 44 134-114-82h140m44 242 44-134 44 134-114-82h140m-54 298 44-134 44 134-114-82h140m-174 298 44-134 44 134-114-82h140m-272 242 44-134 44 134-114-82h140" style="fill:#fc0"/>
+    <path d="M397.612 2.375h-20.559v100h20.56zM497.782 2.375h-83.077v18.182h31.189v81.818h20.699V20.697h31.189zM529.649 2.375l-32.728 100h21.399l5.315-16.783h41.118l5.595 16.783h21.958l-33.846-100zm14.265 22.518L558.46 66.85h-28.532zM630.567 84.333V2.375h-19.58v100h65.594V84.333zM713.687 2.375h-20.56v100h20.56zM760.29 2.375l-32.727 100h21.398l5.315-16.783h41.119l5.594 16.783h21.958l-33.846-100zm14.266 22.518L789.1 66.85H760.57z" style="font-size:139.86193848px;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;line-height:125%;letter-spacing:-3px;word-spacing:0;fill:#fff;fill-opacity:1;stroke:none;font-family:Alfabeto Normale Negativo;-inkscape-font-specification:Alfabeto Normale Negativo"/>
+  </g>
+</svg>

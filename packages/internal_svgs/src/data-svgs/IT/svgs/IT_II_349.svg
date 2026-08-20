@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 158.75" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.349 - One way</title>
+  <g transform="translate(-1087.7 -35.825)">
+    <path d="M1087.699 35.825h158.75v158.75h-158.75z" style="fill:#00408b;fill-opacity:1;stroke-width:34.1536;paint-order:fill markers stroke"/>
+    <rect width="153.458" height="153.458" x="1090.345" y="38.471" rx="7.938" ry="7.938" style="fill:none;stroke:#fff;stroke-width:2.64583;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+    <path d="m1167.075 50.76-33.273 57.648c-2.148 3.72.593 4.989 3.327 4.256l15.05-3.702c3.434-.92 4.64-.948 4.623 2.69v67.988h20.545v-67.988c-.018-3.638 1.189-3.61 4.623-2.69l15.05 3.702c2.734.733 5.475-.536 3.327-4.256z" style="fill:#fff;fill-opacity:1;stroke-width:87.9151;paint-order:fill markers stroke"/>
+  </g>
+</svg>
