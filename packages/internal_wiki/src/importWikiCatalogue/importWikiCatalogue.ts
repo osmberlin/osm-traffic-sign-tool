@@ -8,6 +8,7 @@ import { catalogueWikiConfigs, type CatalogueCountryConfig } from '../catalogueW
 import { fetchWikiPage } from '../fetchWikiPage.js'
 import {
   parseBelgiumTable,
+  parseItalyTable,
   parseUniversalTable,
   parseWikiTags,
   type ParsedWikiRow,
@@ -156,7 +157,11 @@ const importCountry = async (config: CatalogueCountryConfig) => {
     const html = await fetchWikiPage(page.slug)
     const $ = cheerio.load(html)
     const signs =
-      page.parseMode === 'belgium' ? parseBelgiumTable($) : parseUniversalTable($, config.prefix)
+      page.parseMode === 'belgium'
+        ? parseBelgiumTable($)
+        : page.parseMode === 'italy'
+          ? parseItalyTable($)
+          : parseUniversalTable($, config.prefix)
     total += signs.length
     const content = `import type { SignType } from '../../TrafficSignDataTypes.js'\n\nexport const ${page.exportName}: SignType[] = [\n${signs.map((s) => emitSignObject(s, page.defaultCategory, config.overviewUrl)).join(',\n')}\n]\n`
     await Bun.write(path.join(outDir, page.fileName), content)

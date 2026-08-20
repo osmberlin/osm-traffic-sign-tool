@@ -6,6 +6,7 @@ import {
   extractTrafficSignId,
   normalizeWikiTagValue,
   parseDeRowIdTable,
+  parseItalyTable,
   parseUniversalTable,
   parseWikiTags,
   toWikiSign,
@@ -664,5 +665,43 @@ describe('parseDeRowIdTable', () => {
       'source:maxspeed=AT:motorway',
       'maxspeed:type=AT:motorway',
     ])
+  })
+})
+
+describe('parseItalyTable', () => {
+  const itDangerRowHtml = `
+<table class="wikitable"><tbody><tr>
+  <td><a href="/wiki/File:Italian_traffic_signs_-_curva_pericolosa_a_sinistra.svg"><img src="/thumb/Italian_traffic_signs_-_curva_pericolosa_a_sinistra.svg"></a></td>
+  <td>II.5</td>
+  <td>A, 1a</td>
+  <td>Curva a sinistra</td>
+  <td>Dangerous bend (to the left)</td>
+  <td>hazard curve\`=\`</td>
+</tr></tbody></table>`
+
+  const itPanelRowHtml = `
+<table class="wikitable"><tbody><tr>
+  <td><a href="/wiki/File:Italian_traffic_signs_-_distanza.svg"><img src="/thumb/Italian_traffic_signs_-_distanza.svg"></a></td>
+  <td>MII.1</td>
+  <td>H, 1</td>
+  <td>Distanza</td>
+  <td>Distance</td>
+  <td></td>
+</tr></tbody></table>`
+
+  test('uses Figura column instead of Vienna convention codes', () => {
+    const $ = cheerio.load(itDangerRowHtml)
+    const [row] = parseItalyTable($)
+    expect(row?.signId).toBe('II.5')
+    expect(row?.name).toBe('Dangerous bend (to the left)')
+    expect(toWikiSign('IT', row!)?.sign).toBe('IT:II.5')
+  })
+
+  test('parses Modello column for additional panels', () => {
+    const $ = cheerio.load(itPanelRowHtml)
+    const [row] = parseItalyTable($)
+    expect(row?.signId).toBe('MII.1')
+    expect(row?.name).toBe('Distance')
+    expect(toWikiSign('IT', row!)?.sign).toBe('IT:MII.1')
   })
 })
