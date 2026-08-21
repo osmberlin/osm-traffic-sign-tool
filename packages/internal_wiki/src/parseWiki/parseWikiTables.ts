@@ -3,11 +3,23 @@ import type { WikiSign } from '../wikiSignTypes.js'
 
 export type ParsedWikiRow = {
   signId: string
+  /** Primary display name (Italian Name column for IT imports). */
   name: string
   imageUrl?: string
   imageSvg?: string
   tagsText: string
   isNa: boolean
+  /** Italian wiki: English column. */
+  englishName?: string
+  /** Italian wiki: Vienna convention code. */
+  viennaCode?: string
+  /** Italian wiki: Commenti column. */
+  commentsText?: string
+  /** Italian wiki: section heading used for catalogue grouping. */
+  wikiSection?: string
+  /** Override inferred signCategory (e.g. hazard_sign from wiki section). */
+  signCategory?: string
+  kind?: 'traffic_sign' | 'exception_modifier' | 'condition_modifier'
 }
 
 const isPolishGeometryTaggingCell = (tagsText: string) =>
@@ -401,47 +413,144 @@ const pickWikiRowTagsText = (rowTexts: string[]): string => {
 
 const ITALY_SIGN_ID_PATTERN = /^(?:II|MII)\.\d+[a-z]?$/i
 
+const ITALY_SKIP_HEADINGS = /^(contents|voci correlate|note|navigation menu|personal tools)$/i
+
+type ItalyColumnKey = 'figura' | 'vienna' | 'name' | 'english' | 'tags' | 'commenti'
+
+const ITALY_DEFAULT_COLUMNS: Record<ItalyColumnKey, number> = {
+  figura: 1,
+  vienna: 2,
+  name: 3,
+  english: 4,
+  tags: 5,
+  commenti: 6,
+}
+
 const extractItalySignId = (text: string): string | null => {
   const trimmed = text.replace(/\s+/g, ' ').trim()
   if (!trimmed || !ITALY_SIGN_ID_PATTERN.test(trimmed)) return null
   return trimmed
 }
 
-/** Italian wiki tables use Figura (vertical signs) or Modello (panels) as the OSM sign id. */
-export const parseItalyTable = ($: cheerio.CheerioAPI): ParsedWikiRow[] => {
-  const signMap = new Map<string, ParsedWikiRow>()
-  $('table.wikitable tbody tr').each((_, row) => {
+const parseItalyColumnMap = (headerCells: string[]): Partial<Record<ItalyColumnKey, number>> => {
+  const map: Partial<Record<ItalyColumnKey, number>> = {}
+  for (const [index, header] of headerCells.entries()) {
+    const text = header.trim().toLowerCase()
+    if (text === 'figura' || text === 'modello') map.figura = index
+    else if (text === 'vienna') map.vienna = index
+    else if (text === 'name') map.name = index
+    else if (text === 'english') map.english = index
+    else if (/related tags/i.test(text)) map.tags = index
+    else if (/commenti/i.test(text)) map.commenti = index
+  }
+  return map
+}
+
+const resolveItalyColumnMap = (headerCells: string[]) => {
+  const fromHeader = parseItalyColumnMap(headerCells)
+  if (fromHeader.figura !== undefined && fromHeader.name !== undefined) {
+    return { ...ITALY_DEFAULT_COLUMNS, ...fromHeader }
+  }
+  return ITALY_DEFAULT_COLUMNS
+}
+
+/** Map Italian wiki section headings to catalogue signCategory values. */
+export const inferItalySignCategory = (sectionTitle: string, signId: string): string => {
+  const section = sectionTitle.toLowerCase()
+  if (/pericolo|danger warning/.test(section)) return 'hazard_sign'
+  if (/pannelli integrativi|additional panels|segnali compositi|composite signs/.test(section)) {
+    return 'exception_modifier'
+  }
+  if (
+    /preavviso|direzione|identificazione|itinerario|localit|conferma|nome-strada|turistici|indicazione|informative|facilities|service signs|utili per la guida/.test(
+      section,
+    )
+  ) {
+    return 'signpost'
+  }
+  if (/caselli|toll signals/.test(section)) return 'object_sign'
+  if (signId.startsWith('MII')) return 'exception_modifier'
+  return 'traffic_sign'
+}
+
+export const inferItalySignKind = (
+  signCategory: string,
+  signId: string,
+): 'traffic_sign' | 'exception_modifier' | 'condition_modifier' => {
+  if (signCategory === 'condition_modifier') return 'condition_modifier'
+  if (signCategory === 'exception_modifier' || signCategory === 'direction_modifier') {
+    if (/^MII\.3/i.test(signId)) return 'condition_modifier'
+    return 'exception_modifier'
+  }
+  return 'traffic_sign'
+}
+
+const cellTextAt = (rowTexts: string[], index: number | undefined): string =>
+  index === undefined ? '' : (rowTexts[index]?.trim() ?? '')
+
+const parseItalyWikiTable = (
+  $: cheerio.CheerioAPI,
+  table: Parameters<cheerio.CheerioAPI>[0],
+  sectionTitle: string,
+  signMap: Map<string, ParsedWikiRow>,
+) => {
+  const rows = $(table).find('tbody tr').toArray()
+  if (rows.length === 0) return
+
+  const firstRowTexts = $(rows[0]!)
+    .find('td,th')
+    .map((_, cell) => $(cell).text().replace(/\s+/g, ' ').trim())
+    .get()
+  const hasHeaderRow = firstRowTexts.some((text) => /^(figura|modello)$/i.test(text))
+  const columns = resolveItalyColumnMap(hasHeaderRow ? firstRowTexts : [])
+  const dataRows = hasHeaderRow ? rows.slice(1) : rows
+
+  for (const row of dataRows) {
     const cells = $(row).find('td')
-    if (cells.length < 4) return
+    if (cells.length < 4) continue
 
     const rowTexts = cells.map((_, cell) => $(cell).text().replace(/\s+/g, ' ').trim()).get()
-    if (/^(sign|figura|modello)$/i.test(rowTexts[0] ?? '')) return
+    if (/^(sign|figura|modello)$/i.test(rowTexts[0] ?? '')) continue
 
-    const signId = extractItalySignId(rowTexts[1] ?? '')
-    if (!signId) return
+    const signId = extractItalySignId(cellTextAt(rowTexts, columns.figura))
+    if (!signId) continue
+
+    const italianName = cellTextAt(rowTexts, columns.name)
+    const englishName = cellTextAt(rowTexts, columns.english)
+    const viennaCode = cellTextAt(rowTexts, columns.vienna)
+    const tagsText = cellTextAt(rowTexts, columns.tags)
+    const commentsText = cellTextAt(rowTexts, columns.commenti)
 
     const imgHref = $(cells[0]).find('a').attr('href') ?? $(cells[1]).find('a').attr('href')
     const imgSrc = $(cells[0]).find('img').attr('src') ?? $(cells[1]).find('img').attr('src')
     const imageUrl = wikiImageUrl(imgHref)
-    const tagsText = pickWikiRowTagsText(rowTexts)
-    const englishName = rowTexts[4]?.trim()
-    const italianName = rowTexts[3]?.trim()
-    const name =
-      englishName && englishName !== signId
-        ? finalizeWikiSignName(englishName, signId)
-        : italianName && italianName !== signId
-          ? finalizeWikiSignName(italianName, signId)
-          : signId
     const isNa = /^(n\/a|na|n\/a\.?)$/i.test(tagsText) || /N\/A/i.test(tagsText)
+
+    const name =
+      italianName && italianName !== signId
+        ? finalizeWikiSignName(italianName, signId)
+        : englishName && englishName !== signId
+          ? finalizeWikiSignName(englishName, signId)
+          : signId
+
+    const signCategory = inferItalySignCategory(sectionTitle, signId)
+    const kind = inferItalySignKind(signCategory, signId)
 
     const entry: ParsedWikiRow = {
       signId,
       name,
+      englishName: englishName && englishName !== signId ? englishName : undefined,
+      viennaCode: viennaCode || undefined,
+      commentsText: commentsText || undefined,
+      wikiSection: sectionTitle || undefined,
+      signCategory,
+      kind,
       imageUrl,
       imageSvg: imageSvgFromThumbSrc(imgSrc),
       tagsText,
       isNa,
     }
+
     const existing = signMap.get(signId)
     if (
       !existing ||
@@ -449,7 +558,26 @@ export const parseItalyTable = ($: cheerio.CheerioAPI): ParsedWikiRow[] => {
     ) {
       signMap.set(signId, entry)
     }
+  }
+}
+
+/** Italian wiki pages use Figura/Modello ids and section headings for catalogue grouping. */
+export const parseItalyTable = ($: cheerio.CheerioAPI): ParsedWikiRow[] => {
+  const signMap = new Map<string, ParsedWikiRow>()
+  const contentRoot = $('.mw-parser-output').length ? $('.mw-parser-output') : $('body')
+  let currentSection = ''
+
+  contentRoot.find('h2, h3, h4, table.wikitable').each((_, element) => {
+    const tag = element.tagName?.toLowerCase()
+    if (tag?.startsWith('h')) {
+      const title = $(element).text().replace(/\s+/g, ' ').trim()
+      if (!ITALY_SKIP_HEADINGS.test(title)) currentSection = title
+      return
+    }
+
+    parseItalyWikiTable($, element, currentSection, signMap)
   })
+
   return [...signMap.values()]
 }
 
@@ -608,7 +736,8 @@ export const toWikiSign = (
     imageUrl: row.imageUrl,
     name: row.name,
     osmTags,
-    comments: 'deComments' in row ? row.deComments : row.isNa ? 'N/A' : '',
+    comments:
+      row.commentsText?.trim() ?? ('deComments' in row ? row.deComments : row.isNa ? 'N/A' : ''),
   }
 }
 

@@ -4,8 +4,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.5',
     signId: 'II.5',
-    name: 'II.5',
-    description: null,
+    name: 'Curva a sinistra',
+    descriptiveName: 'Dangerous bend (to the left)',
+    description: 'Vienna A, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'curve' }] },
@@ -21,8 +22,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.4',
     signId: 'II.4',
-    name: 'II.4',
-    description: null,
+    name: 'Curva a destra',
+    descriptiveName: 'Dangerous bend (to the right)',
+    description: 'Vienna A, 1b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'curve' }] },
@@ -38,8 +40,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.7',
     signId: 'II.7',
-    name: 'II.7',
-    description: null,
+    name: 'Doppia curva, la prima a sinistra',
+    descriptiveName: 'Dangerous double bend (the first to the left)',
+    description: 'Vienna A, 1c',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'curves' }] },
@@ -55,8 +58,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.6',
     signId: 'II.6',
-    name: 'II.6',
-    description: null,
+    name: 'Doppia curva, la prima a destra',
+    descriptiveName: 'Dangerous double bend (the first to the right)',
+    description: 'Vienna A, 1d',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'curves' }] },
@@ -72,12 +76,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.15',
     signId: 'II.15',
-    name: 'II.15',
-    description: null,
+    name: 'Discesa pericolosa',
+    descriptiveName: 'Dangerous descent',
+    description: 'Vienna A, 2a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -88,12 +93,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.16',
     signId: 'II.16',
-    name: 'II.16',
-    description: null,
+    name: 'Salita ripida',
+    descriptiveName: 'Dangerous ascent',
+    description: 'Vienna A, 3a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -104,8 +110,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.17',
     signId: 'II.17',
-    name: 'II.17',
-    description: null,
+    name: 'Strettoia simmetrica',
+    descriptiveName: 'Carriageway narrows (both sides)',
+    description: 'Vienna A, 4a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -129,8 +136,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.19',
     signId: 'II.19',
-    name: 'II.19',
-    description: null,
+    name: 'Strettoia asimmetrica a destra',
+    descriptiveName: 'Carriageway narrows (right side)',
+    description: 'Vienna A, 4b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -154,8 +162,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.18',
     signId: 'II.18',
-    name: 'II.18',
-    description: null,
+    name: 'Strettoia asimmetrica a sinistra',
+    descriptiveName: 'Carriageway narrows (left side)',
+    description: 'Vienna A, 4b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -179,8 +188,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.1',
     signId: 'II.1',
-    name: 'II.1',
-    description: null,
+    name: 'Strada deformata',
+    descriptiveName: 'Uneven road',
+    description: 'Vienna A, 7a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'damaged_road' }] },
@@ -196,8 +206,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.2',
     signId: 'II.2',
-    name: 'II.2',
-    description: null,
+    name: 'Dosso',
+    descriptiveName: 'Hump in road',
+    description: 'Vienna A, 7b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -221,8 +232,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.3',
     signId: 'II.3',
-    name: 'II.3',
-    description: null,
+    name: 'Cunetta',
+    descriptiveName: 'Dip in road',
+    description: 'Vienna A, 7c',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'dip' }] },
@@ -237,8 +249,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.22',
     signId: 'II.22',
-    name: 'II.22',
-    description: null,
+    name: 'Strada sdrucciolevole',
+    descriptiveName: 'Slippery road',
+    description: 'Vienna A, 9',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'slippery' }] },
@@ -254,8 +267,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.26',
     signId: 'II.26',
-    name: 'II.26',
-    description: null,
+    name: 'Doppio senso di circolazione',
+    descriptiveName: 'Two-way traffic',
+    description: 'Vienna A, 23',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -277,8 +291,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.31a',
     signId: 'II.31a',
-    name: 'II.31a',
-    description: null,
+    name: 'Semaforo',
+    descriptiveName: 'Light signals (vertical)',
+    description: 'Vienna A, 17a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -298,8 +313,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.31b',
     signId: 'II.31b',
-    name: 'II.31b',
-    description: null,
+    name: 'Semaforo',
+    descriptiveName: 'Light signals (horizontal)',
+    description: 'Vienna A, 17c',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -319,8 +335,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.13',
     signId: 'II.13',
-    name: 'II.13',
-    description: null,
+    name: 'Attraversamento pedonale',
+    descriptiveName: 'Pedestrian crossing',
+    description: 'Vienna A, 12',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -343,8 +360,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.23',
     signId: 'II.23',
-    name: 'II.23',
-    description: null,
+    name: 'Bambini',
+    descriptiveName: 'Children',
+    description: 'Vienna A, 13',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'children' }] },
@@ -359,8 +377,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.24',
     signId: 'II.24',
-    name: 'II.24',
-    description: null,
+    name: 'Animali domestici vaganti',
+    descriptiveName: 'Cattle crossing',
+    description: 'Vienna A, 15a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -382,8 +401,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.25',
     signId: 'II.25',
-    name: 'II.25',
-    description: null,
+    name: 'Animali selvatici vaganti',
+    descriptiveName: 'Wildlife crossing',
+    description: 'Vienna A, 15b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -405,8 +425,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.33',
     signId: 'II.33',
-    name: 'II.33',
-    description: null,
+    name: 'Forte vento laterale',
+    descriptiveName: 'Cross-wind',
+    description: 'Vienna A, 31',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'side_winds' }] },
@@ -422,12 +443,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.21',
     signId: 'II.21',
-    name: 'II.21',
-    description: null,
+    name: 'Banchina cedevole',
+    descriptiveName: 'Dangerous shoulder',
+    description: 'Vienna A, 8',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -438,12 +460,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.34',
     signId: 'II.34',
-    name: 'II.34',
+    name: 'Pericolo di incendio',
+    descriptiveName: 'Danger of wildfires',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -454,8 +477,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.29',
     signId: 'II.29',
-    name: 'II.29',
-    description: null,
+    name: 'Materiale instabile',
+    descriptiveName: 'Loose gravel',
+    description: 'Vienna A, 10a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'loose_gravel' }] },
@@ -471,8 +495,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.30a',
     signId: 'II.30a',
-    name: 'II.30a',
-    description: null,
+    name: 'Caduta massi',
+    descriptiveName: 'Falling rocks',
+    description: 'Vienna A, 11a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }] },
@@ -488,8 +513,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.30b',
     signId: 'II.30b',
-    name: 'II.30b',
-    description: null,
+    name: 'Caduta massi',
+    descriptiveName: 'Falling rocks',
+    description: 'Vienna A, 11a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'falling_rocks' }] },
@@ -505,8 +531,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.14',
     signId: 'II.14',
-    name: 'II.14',
-    description: null,
+    name: 'Attraversamento ciclabile',
+    descriptiveName: 'Cyclists entering or crossing',
+    description: 'Vienna A, 14',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'cyclists' }] },
@@ -522,8 +549,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.32',
     signId: 'II.32',
-    name: 'II.32',
-    description: null,
+    name: 'Aeromobili',
+    descriptiveName: 'Airfield',
+    description: 'Vienna A, 30',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'low_flying_aircraft' }] },
@@ -538,8 +566,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.27',
     signId: 'II.27',
-    name: 'II.27',
-    description: null,
+    name: 'Circolazione Rotatoria',
+    descriptiveName: 'Roundabout ahead',
+    description: 'Vienna A, 22',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -561,12 +590,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.35',
     signId: 'II.35',
-    name: 'II.35',
-    description: null,
+    name: 'Altri pericoli',
+    descriptiveName: 'Other dangers',
+    description: 'Vienna A, 32',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -577,12 +607,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.12',
     signId: 'II.12',
-    name: 'II.12',
-    description: null,
+    name: 'Attraversamento tranviario',
+    descriptiveName: 'Intersection with a tramway line',
+    description: 'Vienna A, 27',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -593,12 +624,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.28',
     signId: 'II.28',
-    name: 'II.28',
-    description: null,
+    name: 'Sbocco su molo o su argine',
+    descriptiveName: 'Road leads on to quay or river bank',
+    description: 'Vienna A, 6',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -609,8 +641,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.8',
     signId: 'II.8',
-    name: 'II.8',
-    description: null,
+    name: 'Passaggio a livello con barriere',
+    descriptiveName: 'Level-crossings with gates',
+    description: 'Vienna A, 25',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -621,7 +654,7 @@ export const _all: SignType[] = [
         ],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -632,8 +665,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.9',
     signId: 'II.9',
-    name: 'II.9',
-    description: null,
+    name: 'Passaggio a livello senza barriere',
+    descriptiveName: 'Other level-crossings',
+    description: 'Vienna A, 26',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -644,7 +678,7 @@ export const _all: SignType[] = [
         ],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -655,12 +689,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.10a',
     signId: 'II.10a',
-    name: 'II.10a',
-    description: null,
+    name: "Croce di Sant'Andrea",
+    descriptiveName: 'Single-rail level-crossing',
+    description: 'Vienna A, 28a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -671,12 +706,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.10b',
     signId: 'II.10b',
-    name: 'II.10b',
-    description: null,
+    name: "Doppia croce di Sant'Andrea",
+    descriptiveName: 'Multi-rail level-crossing',
+    description: 'Vienna A, 28b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -687,12 +723,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.11a',
     signId: 'II.11a',
-    name: 'II.11a',
-    description: null,
+    name: 'Pannello distanziometrico',
+    descriptiveName: 'Advanced sign (150 m)',
+    description: 'Vienna A, 29a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -703,12 +740,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.11b',
     signId: 'II.11b',
-    name: 'II.11b',
-    description: null,
+    name: 'Pannello distanziometrico',
+    descriptiveName: 'Advanced sign (100 m)',
+    description: 'Vienna A, 29b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -719,12 +757,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.11c',
     signId: 'II.11c',
-    name: 'II.11c',
-    description: null,
+    name: 'Pannello distanziometrico',
+    descriptiveName: 'Advanced sign (50 m)',
+    description: 'Vienna A, 29c',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -735,13 +774,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.20',
     signId: 'II.20',
-    name: 'II.20',
-    description: null,
+    name: 'Ponte mobile',
+    descriptiveName: 'Movable bridge',
+    description: 'Vienna A, 5',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'bridge', value: 'movable' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'hazard_sign' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -752,8 +792,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.36',
     signId: 'II.36',
-    name: 'II.36',
-    description: null,
+    name: 'Dare precedenza',
+    descriptiveName: 'Give way',
+    description: 'Vienna B, 1',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['node'], highwayValues: ['give_way'] }],
     catalogue: { signCategory: 'traffic_sign' },
@@ -767,8 +808,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.37',
     signId: 'II.37',
-    name: 'II.37',
-    description: null,
+    name: 'Fermarsi e dare precedenza',
+    descriptiveName: 'Stop',
+    description: 'Vienna B, 2a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['stop sulla highway.'] }],
     catalogue: { signCategory: 'traffic_sign' },
@@ -782,7 +824,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.38',
     signId: 'II.38',
-    name: 'II.38',
+    name: 'Preavviso di dare precedenza',
+    descriptiveName: 'Advance warning of give way',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -798,7 +841,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.39',
     signId: 'II.39',
-    name: 'II.39',
+    name: 'Preavviso di fermarsi e dare precedenza',
+    descriptiveName: 'Advance warning of stop',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -813,8 +857,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.40',
     signId: 'II.40',
-    name: 'II.40',
-    description: null,
+    name: 'Intersezione con precedenza a destra',
+    descriptiveName: 'Intersection with general priority ahead',
+    description: 'Vienna A, 18',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -829,8 +874,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.41',
     signId: 'II.41',
-    name: 'II.41',
-    description: null,
+    name: 'Dare precedenza nei sensi unici alternati',
+    descriptiveName: 'Oncoming traffic has priority',
+    description: 'Vienna B, 5',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -845,8 +891,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.42',
     signId: 'II.42',
-    name: 'II.42',
-    description: null,
+    name: 'Fine del diritto di precedenza',
+    descriptiveName: 'End of priority road',
+    description: 'Vienna B, 4',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -861,8 +908,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.43a',
     signId: 'II.43a',
-    name: 'II.43a',
-    description: null,
+    name: 'Intersezione con diritto di precedenza',
+    descriptiveName: 'Intersection with a road the users of which must give way',
+    description: 'Vienna A, 19a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -877,8 +925,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.43b',
     signId: 'II.43b',
-    name: 'II.43b',
-    description: null,
+    name: 'Intersezione a "T" con diritto di precedenza',
+    descriptiveName: 'Intersection with a road the users of which must give way',
+    description: 'Vienna A, 19b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -893,8 +942,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.43c',
     signId: 'II.43c',
-    name: 'II.43c',
-    description: null,
+    name: 'Intersezione a "T" con diritto di precedenza',
+    descriptiveName: 'Intersection with a road the users of which must give way',
+    description: 'Vienna A, 19b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -909,8 +959,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.43d',
     signId: 'II.43d',
-    name: 'II.43d',
-    description: null,
+    name: 'Confluenza a destra',
+    descriptiveName: 'Intersection with a road the users of which must give way',
+    description: 'Vienna A, 19c',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -925,8 +976,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.43e',
     signId: 'II.43e',
-    name: 'II.43e',
-    description: null,
+    name: 'Confluenza a sinistra',
+    descriptiveName: 'Intersection with a road the users of which must give way',
+    description: 'Vienna A, 19c',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -941,8 +993,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.44',
     signId: 'II.44',
-    name: 'II.44',
-    description: null,
+    name: 'Diritto di precedenza',
+    descriptiveName: 'Priority road',
+    description: 'Vienna B, 3',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -957,8 +1010,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.45',
     signId: 'II.45',
-    name: 'II.45',
-    description: null,
+    name: 'Diritto di precedenza nei sensi unici alternati',
+    descriptiveName: 'Priority over oncoming traffic',
+    description: 'Vienna B, 6',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -973,9 +1027,17 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.46',
     signId: 'II.46',
-    name: 'II.46',
-    description: null,
+    name: 'Divieto di transito',
+    descriptiveName: 'Closed to all vehicles in both directions',
+    description: 'Vienna C, 2',
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          "Il divieto di transito vieta il transito a tutti i veicoli (veicoli a motore, biciclette, veicoli a trazione animale, veicoli a braccia ...). L'utilizzo della combinazione motor_vehicle=no + bicycle=no per mappare questo segnale è imprecisa in quanto si perdono le informazioni a riguardo dei veicoli a braccia, a trazione animale, slitte...",
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: [
       { geometries: ['way'], accessTags: [{ key: 'vehicle', value: 'no' }] },
     ],
@@ -990,9 +1052,17 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.47',
     signId: 'II.47',
-    name: 'II.47',
-    description: null,
+    name: 'Senso vietato',
+    descriptiveName: 'No entry',
+    description: 'Vienna C, 1a',
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          "Nella grande maggioranza dei casi la presenza di questo segnale implica la presenza di un senso unico in direzione contraria; in alcuni casi è effettivamente possibile che la strada sia a doppio senso ma ne sia precluso l'accesso da un'entrata da una parte (senza avere neanche un tratto a senso unico). In questo caso per la mappatura è più appropriato l'uso di relazioni.",
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'oneway', value: 'yes' }] },
     ],
@@ -1007,8 +1077,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.48',
     signId: 'II.48',
-    name: 'II.48',
-    description: null,
+    name: 'Divieto di sorpasso',
+    descriptiveName: 'Prohibition of overtaking',
+    description: 'Vienna C, 13ab',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'overtaking', value: 'no' }] },
@@ -1024,8 +1095,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.49',
     signId: 'II.49',
-    name: 'II.49',
-    description: null,
+    name: 'Distanziamento minimo obbligatorio',
+    descriptiveName: 'Minimum distance between vehicles',
+    description: 'Vienna C, 10',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1040,11 +1112,20 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.50',
     signId: 'II.50',
-    name: 'II.50',
-    description: null,
+    name: 'Limite massimo di velocità',
+    descriptiveName: 'Speed limit',
+    description: 'Vienna C, 14',
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    comments: [{ comment: 'Utilizzare: traffic_sign=maxspeed + maxspeed=*', lang: 'it' }],
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'source:maxspeed', value: 'sign' },
+          { key: 'maxspeed:type', value: 'sign' },
+        ],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1056,8 +1137,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.51',
     signId: 'II.51',
-    name: 'II.51',
-    description: null,
+    name: 'Divieto di segnalazioni acustiche',
+    descriptiveName: 'Prohibition of the use of audible warning devices',
+    description: 'Vienna C, 15',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'honking', value: 'no' }] },
@@ -1073,8 +1155,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.52',
     signId: 'II.52',
-    name: 'II.52',
-    description: null,
+    name: 'Divieto di sorpasso per i veicoli di massa a pieno carico superiore a 3,5 tonnellate',
+    descriptiveName: 'Prohibition of overtaking for trucks',
+    description: 'Vienna C, 13ba',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'overtaking:hgv', value: 'no' }] },
@@ -1090,8 +1173,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.53',
     signId: 'II.53',
-    name: 'II.53',
-    description: null,
+    name: 'Transito vietato ai veicoli a trazione animale',
+    descriptiveName: 'No entry for animal-powered vehicles',
+    description: 'Vienna C, 3j',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'carriage', value: 'no' }] },
@@ -1107,8 +1191,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.54',
     signId: 'II.54',
-    name: 'II.54',
-    description: null,
+    name: 'Transito vietato ai pedoni',
+    descriptiveName: 'No entry for pedestrians',
+    description: 'Vienna C, 3i',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], accessTags: [{ key: 'foot', value: 'no' }] },
@@ -1124,9 +1209,17 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.55',
     signId: 'II.55',
-    name: 'II.55',
-    description: null,
+    name: 'Transito vietato alle biciclette',
+    descriptiveName: 'No entry for bicycles',
+    description: 'Vienna C, 3c',
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          "Il divieto di transito si applica a tutti i velocipedi (ovvero l'insieme dei veicoli non a motore mossi per mezzo di pedali/manovelle) e non solo alle biciclette propriamente dette. In ogni caso il tag bicycle=* copre tutti i veicoli di questo genere.",
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: [
       { geometries: ['way'], accessTags: [{ key: 'bicycle', value: 'no' }] },
     ],
@@ -1141,9 +1234,17 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.56',
     signId: 'II.56',
-    name: 'II.56',
-    description: null,
+    name: 'Transito vietato ai motocicli',
+    descriptiveName: 'No entry for motorcycles',
+    description: 'Vienna C, 3b',
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          'Il divieto si riferisce ai soli motocicli (veicoli a motore a 2 ruote non considerati ciclomotori) e pertanto il segnale non ha alcuna implicazione per i ciclomotori (moped=*).',
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: [
       { geometries: ['way'], accessTags: [{ key: 'motorcycle', value: 'no' }] },
     ],
@@ -1158,8 +1259,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.57',
     signId: 'II.57',
-    name: 'II.57',
-    description: null,
+    name: 'Transito vietato ai veicoli a braccia',
+    descriptiveName: 'No entry for hand carts',
+    description: 'Vienna C, 3k',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], accessTags: [{ key: 'hand_cart', value: 'no' }] },
@@ -1175,8 +1277,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.58',
     signId: 'II.58',
-    name: 'II.58',
-    description: null,
+    name: 'Transito vietato a tutti gli autoveicoli',
+    descriptiveName: 'No entry for all motor vehicles',
+    description: 'Vienna C, 3a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], accessTags: [{ key: 'motorcar', value: 'no' }] },
@@ -1192,11 +1295,17 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.59',
     signId: 'II.59',
-    name: 'II.59',
+    name: 'Transito vietato agli autobus',
+    descriptiveName: 'No entry for buses',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: 'none',
-    taggingSuggestionsQa: 'none',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        accessTags: [{ key: 'bus', value: 'no e' }],
+        uniqueTags: [{ key: 'tourist_bus', value: 'no' }],
+      },
+    ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1208,9 +1317,17 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.60a',
     signId: 'II.60a',
-    name: 'II.60a',
-    description: null,
+    name: 'Transito vietato ai veicoli di massa a pieno carico superiore a 3,5 tonnellate',
+    descriptiveName: 'No entry for trucks (with a permissible maximum with more than 3.5 t)',
+    description: 'Vienna C, 3e',
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          'Il segnale vieta il transito ai veicoli destinati al trasporto di cose con massa a pieno carico superiore a 3,5 t che in OSM sono indicati con il tag hgv=*.',
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: [
       { geometries: ['way'], accessTags: [{ key: 'hgv', value: 'no' }] },
     ],
@@ -1225,17 +1342,25 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.60b',
     signId: 'II.60b',
-    name: 'II.60b',
+    name: 'Transito vietato ai veicoli di massa a pieno carico superiore a ... tonnellate',
+    descriptiveName: 'No entry for trucks with a permissible maximum with more than ... t',
     description: null,
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          "Per mappare questo segnale in realtà sono diffusi (e sono probabilmente predominanti numericamente) differenti schemi di tagging, spesso basati sull'utilizzo di maxweight=* combinato con una restrizione condizionale. Il problema a riguardo di questi schemi è il fatto che il peso indicato nel segnale è una massa a pieno carico (maxweightrating=*) e non una massa effettiva (maxweight=*) e per lungo tempo si è utilizzato quest'ultimo tag per entrambi i casi.",
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
         uniqueTags: [
           {
-            key: 'maxweight',
+            key: 'maxweightrating:hgv',
             value:
-              "* combinato con una restrizione condizionale. Il problema a riguardo di questi schemi è il fatto che il peso indicato nel segnale è una massa a pieno carico (maxweightrating=*) e non una massa effettiva (maxweight=*) e per lungo tempo si è utilizzato quest'ultimo tag per entrambi i casi.",
+              '* (il numero corrisponde al valore indicato sul segnale; usare il punto come separatore decimale)',
           },
         ],
       },
@@ -1251,8 +1376,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.61',
     signId: 'II.61',
-    name: 'II.61',
-    description: null,
+    name: 'Transito vietato a tutti i veicoli a motore trainanti un rimorchio',
+    descriptiveName: 'No entry for vehicles drawing a trailer',
+    description: 'Vienna C, 3f',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'trailer', value: 'no' }] },
@@ -1268,8 +1394,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.62',
     signId: 'II.62',
-    name: 'II.62',
-    description: null,
+    name: 'Transito vietato alle macchine agricole',
+    descriptiveName: 'No entry for tractors',
+    description: 'Vienna C, 3l',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'agricultural', value: 'no' }] },
@@ -1285,8 +1412,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.63',
     signId: 'II.63',
-    name: 'II.63',
-    description: null,
+    name: 'Transito vietato ai veicoli che trasportano merci pericolose',
+    descriptiveName: 'No entry for vehicles transporting dangerous goods',
+    description: 'Vienna C, 3h',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazmat', value: 'no' }] },
@@ -1302,8 +1430,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.64a',
     signId: 'II.64a',
-    name: 'II.64a',
-    description: null,
+    name: 'Transito vietato ai veicoli che trasportano esplosivi o prodotti facilmente infiammabili',
+    descriptiveName: 'No entry for vehicles carrying explosives or readily inflammable substances',
+    description: 'Vienna C, 3m',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazmat:explosive', value: 'no' }] },
@@ -1319,8 +1448,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.64b',
     signId: 'II.64b',
-    name: 'II.64b',
-    description: null,
+    name: "Transito vietato ai veicoli che trasportano prodotti suscettibili di contaminare l'acqua",
+    descriptiveName: 'No entry for vehicles carrying goods capable of water pollution',
+    description: 'Vienna C, 3n',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazmat:water', value: 'no' }] },
@@ -1336,8 +1466,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.65',
     signId: 'II.65',
-    name: 'II.65',
-    description: null,
+    name: 'Transito vietato ai veicoli aventi larghezza superiore a ... metri',
+    descriptiveName: 'No entry for vehicles wider than the specified limit',
+    description: 'Vienna C, 5',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1352,8 +1483,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.66',
     signId: 'II.66',
-    name: 'II.66',
-    description: null,
+    name: 'Transito vietato ai veicoli aventi altezza complessiva superiore a ... metri',
+    descriptiveName: 'No entry for vehicles higher than the specified limit',
+    description: 'Vienna C, 6',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1368,9 +1500,18 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.67',
     signId: 'II.67',
-    name: 'II.67',
-    description: null,
+    name: 'Transito vietato ai veicoli, o a complessi di veicoli, aventi lunghezza superiore a ... metri',
+    descriptiveName:
+      'No entry for vehicles or vehicle combinations longer than the specified limit',
+    description: 'Vienna C, 9',
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          'Si noti che il divieto di transito si applicata a tutti i veicoli più lunghi del valore indicato e non solamente agli autocarri (nonostante nel disegno compaia un camion).',
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'traffic_sign' },
@@ -1384,8 +1525,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.68',
     signId: 'II.68',
-    name: 'II.68',
-    description: null,
+    name: 'Transito vietato ai veicoli aventi una massa superiore a ... tonnellate',
+    descriptiveName: 'No entry for vehicles heavier than the specified limit',
+    description: 'Vienna C, 7',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1400,8 +1542,10 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.69',
     signId: 'II.69',
-    name: 'II.69',
-    description: null,
+    name: 'Transito vietato ai veicoli aventi massa per asse superiore a ... tonnellate',
+    descriptiveName:
+      'No entry for vehicles which immediate weight per axle is over the specified limit',
+    description: 'Vienna C, 8',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1416,8 +1560,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.70',
     signId: 'II.70',
-    name: 'II.70',
-    description: null,
+    name: 'Via libera',
+    descriptiveName: 'End of all prohibitions',
+    description: 'Vienna C, 17a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1431,8 +1576,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.71',
     signId: 'II.71',
-    name: 'II.71',
-    description: null,
+    name: 'Fine limitazione di velocità',
+    descriptiveName: 'End of speed limit',
+    description: 'Vienna C, 17b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1447,8 +1593,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.72',
     signId: 'II.72',
-    name: 'II.72',
-    description: null,
+    name: 'Fine divieto di sorpasso',
+    descriptiveName: 'End of overtaking prohibition',
+    description: 'Vienna C, 17c',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1463,8 +1610,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.73',
     signId: 'II.73',
-    name: 'II.73',
-    description: null,
+    name: 'Fine divieto di sorpasso per i veicoli di massa a pieno carico superiore a 3,5 t',
+    descriptiveName: 'End of overtaking prohibition for trucks',
+    description: 'Vienna C, 17d',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1479,9 +1627,17 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.74',
     signId: 'II.74',
-    name: 'II.74',
-    description: null,
+    name: 'Divieto di sosta',
+    descriptiveName: 'Parking prohibited',
+    description: 'Vienna C, 18',
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          'Il divieto di sosta si applica al lato della strada dove è posto il segnale. Si ricordi che nei centri abitati, in assenza di ulteriori indicazioni (es. pannello integrativo, linea continua al margine della carreggiata, cordolo dipinto in giallo e nero, ...) il divieto di sosta si applica solo dalle 8.00 alle 20:00; fuori dai centri abitati invece il divieto è permanente (salvo diversa indicazione).',
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'parking:side:restriction', value: 'no' }] },
     ],
@@ -1496,9 +1652,17 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.75',
     signId: 'II.75',
-    name: 'II.75',
-    description: null,
+    name: 'Divieto di fermata',
+    descriptiveName: 'Standing and parking prohibited',
+    description: 'Vienna C, 19',
     kind: 'traffic_sign',
+    comments: [
+      {
+        comment:
+          'Il divieto di fermata si applica al lato della strada dove è posto il segnale. Salvo diversa indicazione il segnale ha sempre validità permanente (sia dentro che fuori i centri abitati).',
+        lang: 'it',
+      },
+    ],
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
@@ -1516,8 +1680,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.76',
     signId: 'II.76',
-    name: 'II.76',
-    description: null,
+    name: 'Parcheggio',
+    descriptiveName: 'Parking',
+    description: 'Vienna E, 14a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'parking' }] },
@@ -1533,7 +1698,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.77',
     signId: 'II.77',
-    name: 'II.77',
+    name: 'Preavviso di parcheggio',
+    descriptiveName: 'Advance warning of parking',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1549,7 +1715,7 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.78',
     signId: 'II.78',
-    name: 'II.78',
+    name: 'Passo carrabile',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -1566,9 +1732,11 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.79',
     signId: 'II.79',
-    name: 'II.79',
+    name: 'Sosta consentita a particolare categoria',
+    descriptiveName: 'Various parking exceptions',
     description: null,
     kind: 'traffic_sign',
+    comments: [{ comment: 'Segnale composito, usando diversi modelli', lang: 'it' }],
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'traffic_sign' },
@@ -1582,8 +1750,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.80a',
     signId: 'II.80a',
-    name: 'II.80a',
-    description: null,
+    name: 'Direzione obbligatoria diritto',
+    descriptiveName: 'Mandatory direction straight ahead',
+    description: 'Vienna D, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1602,8 +1771,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.80b',
     signId: 'II.80b',
-    name: 'II.80b',
-    description: null,
+    name: 'Direzione obbligatoria a sinistra',
+    descriptiveName: 'Turn left here',
+    description: 'Vienna D, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1622,8 +1792,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.80c',
     signId: 'II.80c',
-    name: 'II.80c',
-    description: null,
+    name: 'Direzione obbligatoria a destra',
+    descriptiveName: 'Turn right here',
+    description: 'Vienna D, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1642,8 +1813,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.80d',
     signId: 'II.80d',
-    name: 'II.80d',
-    description: null,
+    name: 'Preavviso di direzione obbligatoria a destra',
+    descriptiveName: 'Mandatory left turn',
+    description: 'Vienna D, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1662,8 +1834,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.80e',
     signId: 'II.80e',
-    name: 'II.80e',
-    description: null,
+    name: 'Preavviso di direzione obbligatoria a sinistra',
+    descriptiveName: 'Mandatory right turn',
+    description: 'Vienna D, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1682,7 +1855,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.81a',
     signId: 'II.81a',
-    name: 'II.81a',
+    name: 'Direzioni consentite destra e sinistra',
+    descriptiveName: 'Mandatory right or left turn',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -1702,8 +1876,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.81b',
     signId: 'II.81b',
-    name: 'II.81b',
-    description: null,
+    name: 'Direzioni consentite diritto e destra',
+    descriptiveName: 'Mandatory direction straight ahead or right turn',
+    description: 'Vienna D, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1722,8 +1897,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.81c',
     signId: 'II.81c',
-    name: 'II.81c',
-    description: null,
+    name: 'Direzioni consentite diritto e sinistra',
+    descriptiveName: 'Mandatory direction straight ahead or left turn',
+    description: 'Vienna D, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1742,8 +1918,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.82a',
     signId: 'II.82a',
-    name: 'II.82a',
-    description: null,
+    name: 'Passaggio obbligatorio a sinistra',
+    descriptiveName: 'Pass by on the left-hand side',
+    description: 'Vienna D, 2',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1758,8 +1935,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.82b',
     signId: 'II.82b',
-    name: 'II.82b',
-    description: null,
+    name: 'Passaggio obbligatorio a destra',
+    descriptiveName: 'Pass by on the right-hand side',
+    description: 'Vienna D, 2',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1774,7 +1952,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.83',
     signId: 'II.83',
-    name: 'II.83',
+    name: 'Passaggi consentiti',
+    descriptiveName: 'Drive around',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1790,8 +1969,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.84',
     signId: 'II.84',
-    name: 'II.84',
-    description: null,
+    name: 'Rotatoria',
+    descriptiveName: 'Compulsary Roundabout',
+    description: 'Vienna D, 3',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'junction', value: 'roundabout' }] },
@@ -1806,8 +1986,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.85',
     signId: 'II.85',
-    name: 'II.85',
-    description: null,
+    name: 'Limite minimo di velocità',
+    descriptiveName: 'Compulsory minimum speed',
+    description: 'Vienna D, 7',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1822,8 +2003,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.86',
     signId: 'II.86',
-    name: 'II.86',
-    description: null,
+    name: 'Fine limite minimo di velocità',
+    descriptiveName: 'End of compulsory minimum speed',
+    description: 'Vienna D, 8',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -1838,8 +2020,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.87',
     signId: 'II.87',
-    name: 'II.87',
-    description: null,
+    name: 'Catene per neve obbligatorie',
+    descriptiveName: 'Snow chains compulsory',
+    description: 'Vienna D, 9',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'snow_chains', value: 'required' }] },
@@ -1855,8 +2038,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.88',
     signId: 'II.88',
-    name: 'II.88',
-    description: null,
+    name: 'Percorso pedonale',
+    descriptiveName: 'Compulsory footpath',
+    description: 'Vienna D, 5',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['footway'] }],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1870,7 +2054,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.89',
     signId: 'II.89',
-    name: 'II.89',
+    name: 'Fine del percorso pedonale',
+    descriptiveName: 'End footpath',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1886,8 +2071,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.90',
     signId: 'II.90',
-    name: 'II.90',
-    description: null,
+    name: 'Pista ciclabile',
+    descriptiveName: 'Compulsory cycle track',
+    description: 'Vienna D, 4',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['cycleway'] }],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1901,7 +2087,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.91',
     signId: 'II.91',
-    name: 'II.91',
+    name: 'Fine pista ciclabile',
+    descriptiveName: 'End Cycleway',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1917,8 +2104,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.92a',
     signId: 'II.92a',
-    name: 'II.92a',
-    description: null,
+    name: 'Pista ciclabile contigua al marciapiede',
+    descriptiveName: 'Footpath and cycleway',
+    description: 'Vienna D, 11a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1942,7 +2130,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.93a',
     signId: 'II.93a',
-    name: 'II.93a',
+    name: 'Fine della pista ciclabile contigua al marciapiede',
+    descriptiveName: 'End of footpath and cycleway',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1958,8 +2147,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.92b',
     signId: 'II.92b',
-    name: 'II.92b',
-    description: null,
+    name: 'Percorso pedonale e ciclabile',
+    descriptiveName: 'Footpath and cycleway',
+    description: 'Vienna D, 11b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -1983,7 +2173,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.93b',
     signId: 'II.93b',
-    name: 'II.93b',
+    name: 'Fine del percorso pedonale e ciclabile',
+    descriptiveName: 'End of footpath and cycleway',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -1999,8 +2190,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.94',
     signId: 'II.94',
-    name: 'II.94',
-    description: null,
+    name: 'Percorso riservato ai quadrupedi da soma o da sella',
+    descriptiveName: 'Compulsory track for riders on horseback',
+    description: 'Vienna D, 6',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['bridleway'] }],
     catalogue: { signCategory: 'traffic_sign' },
@@ -2014,7 +2206,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.95',
     signId: 'II.95',
-    name: 'II.95',
+    name: 'Fine del percorso riservato ai quadrupedi da soma o da sella',
+    descriptiveName: 'End of path for riders on animals',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -2030,8 +2223,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.96',
     signId: 'II.96',
-    name: 'II.96',
-    description: null,
+    name: 'Alt - Dogana',
+    descriptiveName: 'Prohibition of passing without stopping (Customs)',
+    description: 'Vienna C, 16',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -2052,7 +2246,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.97a',
     signId: 'II.97a',
-    name: 'II.97a',
+    name: 'Confine di Stato tra paesi della Comunità Europea',
+    descriptiveName: 'European state boundary',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -2068,7 +2263,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.97b',
     signId: 'II.97b',
-    name: 'II.97b',
+    name: 'Preavviso di confine di Stato tra paesi della Comunità Europea',
+    descriptiveName: 'Advance warning of european state boundary',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
@@ -2084,8 +2280,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.98',
     signId: 'II.98',
-    name: 'II.98',
-    description: null,
+    name: 'Alt - Polizia',
+    descriptiveName: 'Prohibition of passing without stopping (Police)',
+    description: 'Vienna C, 16',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -2099,8 +2296,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.99',
     signId: 'II.99',
-    name: 'II.99',
-    description: null,
+    name: 'Alt - Stazione',
+    descriptiveName: 'Prohibition of passing without stopping (Tollbooth)',
+    description: 'Vienna C, 16',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'barrier', value: 'toll_booth' }] },
@@ -2115,12 +2313,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.233',
     signId: 'II.233',
-    name: 'II.233',
+    name: 'Segnale di preavviso di intersezione urbana',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2131,12 +2329,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.234',
     signId: 'II.234',
-    name: 'II.234',
+    name: 'Segnale di preavviso di intersezione extraurbana',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2147,12 +2345,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.235',
     signId: 'II.235',
-    name: 'II.235',
+    name: 'Segnale di preavviso di diramazione autostradale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2163,12 +2361,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.236',
     signId: 'II.236',
-    name: 'II.236',
+    name: 'segnale di preavviso di intersezioni ravvicinate urbane',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2179,12 +2377,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.237',
     signId: 'II.237',
-    name: 'II.237',
+    name: 'segnale di preavviso di intersezioni ravvicinate extraurbane',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2195,12 +2393,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.238',
     signId: 'II.238',
-    name: 'II.238',
+    name: 'segnale di preavviso di intersezione urbana rotatoria',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2211,12 +2409,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.239',
     signId: 'II.239',
-    name: 'II.239',
+    name: 'segnale di preavviso di intersezione urbana, con divieto di transito per una categoria di veicoli su un ramo della intersezione',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2227,12 +2425,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.240',
     signId: 'II.240',
-    name: 'II.240',
+    name: "segnale di preavviso di intersezione extraurbana con passaggio a livello su un ramo dell'intersezione",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2243,12 +2441,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.241',
     signId: 'II.241',
-    name: 'II.241',
+    name: 'segnale di preselezione urbano',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2259,12 +2457,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.242',
     signId: 'II.242',
-    name: 'II.242',
+    name: 'segnale di preselezione urbano posto sopra la carreggiata',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2275,12 +2473,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.243',
     signId: 'II.243',
-    name: 'II.243',
+    name: 'Segnale di preselezione extraurbano',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2291,12 +2489,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.244',
     signId: 'II.244',
-    name: 'II.244',
+    name: 'segnale di preselezione urbano',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2307,12 +2505,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.245',
     signId: 'II.245',
-    name: 'II.245',
+    name: 'Segnale di preselezione extraurbano',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2323,12 +2521,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.246',
     signId: 'II.246',
-    name: 'II.246',
+    name: 'segnali di corsia con funzione di preavviso',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2339,12 +2537,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.247',
     signId: 'II.247',
-    name: 'II.247',
+    name: 'segnali di corsia con funzioni di preselezione e di direzione',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2355,12 +2553,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.248',
     signId: 'II.248',
-    name: 'II.248',
+    name: 'segnale di direzione urbano',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2371,12 +2569,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.249',
     signId: 'II.249',
-    name: 'II.249',
+    name: 'segnale di direzione extraurbano',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2387,12 +2585,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.251',
     signId: 'II.251',
-    name: 'II.251',
+    name: 'segnali di corsia con funzioni di direzione',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2403,12 +2601,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.250',
     signId: 'II.250',
-    name: 'II.250',
+    name: 'segnali di corsia con funzione di direzione',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2419,12 +2617,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.253',
     signId: 'II.253',
-    name: 'II.253',
+    name: 'gruppo segnaletico unitario urbano monofilare',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2435,12 +2633,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.254',
     signId: 'II.254',
-    name: 'II.254',
+    name: 'gruppo segnaletico unitario extraurbano',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2451,12 +2649,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.252',
     signId: 'II.252',
-    name: 'II.252',
+    name: "segnali di corsia con funzione di direzione con le modalità per l'utilizzo delle singole corsie",
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2467,12 +2665,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.255',
     signId: 'II.255',
-    name: 'II.255',
+    name: 'gruppo segnaletico unitario urbano bifilare',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2483,12 +2681,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.256',
     signId: 'II.256',
-    name: 'II.256',
+    name: 'segnale identificazione itinerario internazionale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2499,12 +2697,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.257',
     signId: 'II.257',
-    name: 'II.257',
+    name: 'segnale identificazione autostrada',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2515,12 +2713,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.258',
     signId: 'II.258',
-    name: 'II.258',
+    name: 'segnale identificazione strada statale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2531,12 +2729,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.259',
     signId: 'II.259',
-    name: 'II.259',
+    name: 'segnale identificazione strada provinciale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2547,11 +2745,11 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.260',
     signId: 'II.260',
-    name: 'II.260',
+    name: 'segnale di progressiva chilometrica',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['milestone'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2562,12 +2760,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.261',
     signId: 'II.261',
-    name: 'II.261',
+    name: 'segnale identificazione strada comunale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2578,11 +2776,11 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.262',
     signId: 'II.262',
-    name: 'II.262',
+    name: 'segnale di progressiva ettometrica',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['milestone'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2593,11 +2791,11 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.263',
     signId: 'II.263',
-    name: 'II.263',
+    name: 'progressiva distanziometrica autostradale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['milestone'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2608,11 +2806,11 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.264',
     signId: 'II.264',
-    name: 'II.264',
+    name: 'progressiva distanziometrica autostradale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['milestone'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2623,12 +2821,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.265',
     signId: 'II.265',
-    name: 'II.265',
+    name: 'progressiva distanziometrica integrata con segnale di conferma su strade extraurbane',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2639,11 +2837,11 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.266',
     signId: 'II.266',
-    name: 'II.266',
+    name: 'progressiva distanziometrica per strada statale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['milestone'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2654,11 +2852,11 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.267',
     signId: 'II.267',
-    name: 'II.267',
+    name: 'progressiva distanziometrica per strada provinciale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['milestone'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2669,11 +2867,11 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.268',
     signId: 'II.268',
-    name: 'II.268',
+    name: 'progressiva distanziometrica per strada comunale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['milestone'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2684,12 +2882,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.269',
     signId: 'II.269',
-    name: 'II.269',
+    name: 'numero identificazione autostrada + freccia verticale con funzione di direzione',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2700,12 +2898,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.270',
     signId: 'II.270',
-    name: 'II.270',
+    name: 'numeri identificazione strada statale + freccia e strada comunale + freccia con funzione di direzione',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2716,12 +2914,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.271',
     signId: 'II.271',
-    name: 'II.271',
+    name: 'numero identificazione strada provinciale + freccia con funzione di direzione',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2732,12 +2930,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.272',
     signId: 'II.272',
-    name: 'II.272',
+    name: 'Segnale di itinerario',
+    descriptiveName: 'Itinerary sign',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2748,13 +2947,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.273',
     signId: 'II.273',
-    name: 'II.273',
+    name: 'Inizio centro abitato',
+    descriptiveName: 'Begin of city limits',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'name', value: '* (nome del centro abitato)' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2765,7 +2965,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.274',
     signId: 'II.274',
-    name: 'II.274',
+    name: 'Fine centro abitato',
+    descriptiveName: 'End of city limits',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -2777,7 +2978,7 @@ export const _all: SignType[] = [
         ],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2788,12 +2989,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.275',
     signId: 'II.275',
-    name: 'II.275',
+    name: 'Inizio e fine regione',
+    descriptiveName: 'Begin and end of region',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2804,12 +3006,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.276',
     signId: 'II.276',
-    name: 'II.276',
+    name: 'Inizio e fine provincia',
+    descriptiveName: 'Begin and end of province',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2820,12 +3023,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.277',
     signId: 'II.277',
-    name: 'II.277',
+    name: 'Pronto soccorso',
+    descriptiveName: 'First aid',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2836,12 +3040,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.278',
     signId: 'II.278',
-    name: 'II.278',
+    name: 'Stazione',
+    descriptiveName: 'Station',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2852,12 +3057,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.279',
     signId: 'II.279',
-    name: 'II.279',
+    name: 'Polizia',
+    descriptiveName: 'Police',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2868,12 +3074,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.280',
     signId: 'II.280',
-    name: 'II.280',
+    name: 'Carabinieri',
+    descriptiveName: 'Military police',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2884,12 +3091,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.281',
     signId: 'II.281',
-    name: 'II.281',
+    name: 'Informazioni',
+    descriptiveName: 'Informations',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2900,12 +3108,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.282',
     signId: 'II.282',
-    name: 'II.282',
+    name: 'Ospedale',
+    descriptiveName: 'Hospital',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2916,12 +3125,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.283',
     signId: 'II.283',
-    name: 'II.283',
+    name: 'Comune',
+    descriptiveName: 'City hall',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2932,12 +3142,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.284',
     signId: 'II.284',
-    name: 'II.284',
+    name: 'Polizia municipale',
+    descriptiveName: 'City police',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2948,12 +3159,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.285',
     signId: 'II.285',
-    name: 'II.285',
+    name: 'Segnale di conferma Autostradale',
+    descriptiveName: 'Motorway confirmatory sign',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2964,12 +3176,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.286',
     signId: 'II.286',
-    name: 'II.286',
+    name: 'Segnale di conferma Autostradale',
+    descriptiveName: 'Motorway confirmatory sign',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2980,12 +3193,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.287',
     signId: 'II.287',
-    name: 'II.287',
+    name: 'Segnale di conferma Urbano',
+    descriptiveName: 'Urban confirmatory sign',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -2996,12 +3210,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.288',
     signId: 'II.288',
-    name: 'II.288',
+    name: 'Segnale di conferma Urbano a 2 posti',
+    descriptiveName: 'Urban confirmatory sign with 2 spaces',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3012,12 +3227,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.289',
     signId: 'II.289',
-    name: 'II.289',
+    name: 'Segnale di conferma urbano a 3 posti',
+    descriptiveName: 'Urban confirmatory sign with 3 spaces',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3028,12 +3244,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.291',
     signId: 'II.291',
-    name: 'II.291',
+    name: 'Segnale Nome Strada',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_nome_strada.svg',
@@ -3043,13 +3259,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.292',
     signId: 'II.292',
-    name: 'II.292',
+    name: 'Segnale nome strada con senso unico',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'oneway', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3060,12 +3276,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.293',
     signId: 'II.293',
-    name: 'II.293',
+    name: 'Numero civico',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3076,12 +3292,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.294',
     signId: 'II.294',
-    name: 'II.294',
+    name: 'segnali turistici e di territorio',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3092,12 +3308,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.295',
     signId: 'II.295',
-    name: 'II.295',
+    name: 'Segnale di localizzazione territoriale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_fiume.svg',
@@ -3107,12 +3323,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.297',
     signId: 'II.297',
-    name: 'II.297',
+    name: 'Segnali di direzione per le industrie',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3123,12 +3339,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.296',
     signId: 'II.296',
-    name: 'II.296',
+    name: 'Segnale di avvio zona industriale',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3139,12 +3355,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.298',
     signId: 'II.298',
-    name: 'II.298',
+    name: 'Preavviso di informazioni turistico alberghiere',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3155,12 +3371,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.299',
     signId: 'II.299',
-    name: 'II.299',
+    name: 'informazioni alberghiere',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3171,12 +3387,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.300',
     signId: 'II.300',
-    name: 'II.300',
+    name: 'preavviso alberghiero',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3187,12 +3403,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.301',
     signId: 'II.301',
-    name: 'II.301',
+    name: 'direzione alberghiera',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3203,13 +3419,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.302',
     signId: 'II.302',
-    name: 'II.302',
-    description: null,
+    name: 'Ospedale',
+    descriptiveName: 'Hospital',
+    description: 'Vienna E, 13b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'hospital' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_ospedale.svg',
@@ -3219,11 +3436,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.303',
     signId: 'II.303',
-    name: 'II.303',
-    description: null,
+    name: 'Attraversamento pedonale',
+    descriptiveName: 'Pedestrian crossing',
+    description: 'Vienna E, 12a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['node'], highwayValues: ['crossing'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3234,12 +3452,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.304',
     signId: 'II.304',
-    name: 'II.304',
+    name: 'Scuolabus',
+    descriptiveName: 'School bus (stop)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3250,13 +3469,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.305',
     signId: 'II.305',
-    name: 'II.305',
+    name: 'SOS',
+    descriptiveName: 'Emergency phone',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'emergency', value: 'phone' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3267,8 +3487,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.306',
     signId: 'II.306',
-    name: 'II.306',
-    description: null,
+    name: 'Sottopassaggio pedonale',
+    descriptiveName: 'Pedestrian underpass',
+    description: 'Vienna G, 20',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -3277,7 +3498,7 @@ export const _all: SignType[] = [
         uniqueTags: [{ key: 'tunnel', value: 'yes' }],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3288,8 +3509,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.307',
     signId: 'II.307',
-    name: 'II.307',
-    description: null,
+    name: 'Sovrapassaggio pedonale',
+    descriptiveName: 'Pedestrian overpass',
+    description: 'Vienna G, 20',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -3298,7 +3520,7 @@ export const _all: SignType[] = [
         uniqueTags: [{ key: 'bridge', value: 'yes' }],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3309,8 +3531,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.308',
     signId: 'II.308',
-    name: 'II.308',
-    description: null,
+    name: 'Rampa pedonale',
+    descriptiveName: 'Pedestrian underpass without steps',
+    description: 'Vienna G, 21',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -3319,7 +3542,7 @@ export const _all: SignType[] = [
         uniqueTags: [{ key: 'tunnel', value: 'yes' }],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3330,13 +3553,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.309',
     signId: 'II.309',
-    name: 'II.309',
-    description: null,
+    name: 'Strada senza uscita',
+    descriptiveName: 'No through road',
+    description: 'Vienna G, 13',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'noexit', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3347,13 +3571,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.310',
     signId: 'II.310',
-    name: 'II.310',
+    name: 'Preavviso di strada senza uscita',
+    descriptiveName: 'No through road on side road',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'noexit', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3364,13 +3589,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.311',
     signId: 'II.311',
-    name: 'II.311',
+    name: 'Preavviso di strada senza uscita',
+    descriptiveName: 'No through road on side road',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'noexit', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3381,12 +3607,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.312',
     signId: 'II.312',
-    name: 'II.312',
-    description: null,
+    name: 'Velocità consigliata',
+    descriptiveName: 'Advisory speed',
+    description: 'Vienna G, 17',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3397,12 +3624,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.313',
     signId: 'II.313',
-    name: 'II.313',
+    name: 'Fine velocità consigliata',
+    descriptiveName: 'End advisory speed',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3413,13 +3641,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.314',
     signId: 'II.314',
-    name: 'II.314',
+    name: 'Strada riservata ai veicoli a motore',
+    descriptiveName: 'Motorroad (road for motor vehicles only)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'motorroad', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3430,13 +3659,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.315',
     signId: 'II.315',
-    name: 'II.315',
+    name: 'Fine strada riservata ai veicoli a motore',
+    descriptiveName: 'End of motorroad (end of road for motor vehicles only)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'motorroad', value: 'no' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3447,13 +3677,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.316',
     signId: 'II.316',
-    name: 'II.316',
-    description: null,
+    name: 'Galleria',
+    descriptiveName: 'Tunnel',
+    description: 'Vienna E, 11a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'tunnel', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3464,13 +3695,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.317',
     signId: 'II.317',
-    name: 'II.317',
+    name: 'Ponte',
+    descriptiveName: 'Bridge',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'bridge', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_ponte_blu.svg',
@@ -3480,12 +3712,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.318',
     signId: 'II.318',
-    name: 'II.318',
-    description: null,
+    name: 'Zona residenziale',
+    descriptiveName: 'Home zone',
+    description: 'Vienna E, 17',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3496,12 +3729,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.319',
     signId: 'II.319',
-    name: 'II.319',
+    name: 'Fine zona residenziale',
+    descriptiveName: 'End of home zone',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3512,11 +3746,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.320',
     signId: 'II.320',
-    name: 'II.320',
+    name: 'Area pedonale urbana',
+    descriptiveName: 'Pedestrian zone',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['pedestrian'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3527,11 +3762,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.321',
     signId: 'II.321',
-    name: 'II.321',
+    name: 'Fine area pedonale urbana',
+    descriptiveName: 'End of pedestrian zone',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['pedestrian'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3542,13 +3778,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.322a',
     signId: 'II.322a',
-    name: 'II.322a',
+    name: 'Zona a traffico limitato',
+    descriptiveName: 'Restricted vehicluar access zone',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'boundary', value: 'limited_traffic_zone' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3559,13 +3796,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.322b',
     signId: 'II.322b',
-    name: 'II.322b',
+    name: 'Fine zona a traffico limitato',
+    descriptiveName: 'End of restricted vehicluar access zone',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'boundary', value: 'limited_traffic_zone' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3576,8 +3814,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.323a',
     signId: 'II.323a',
-    name: 'II.323a',
-    description: null,
+    name: 'Zona a velocità limitata',
+    descriptiveName: 'Maximum speed zone',
+    description: 'Vienna E, 9d',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
@@ -3600,12 +3839,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.323b',
     signId: 'II.323b',
-    name: 'II.323b',
-    description: null,
+    name: 'Fine zona a velocità limitata',
+    descriptiveName: 'End maximum speed zone',
+    description: 'Vienna E, 10d',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3616,11 +3856,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.324',
     signId: 'II.324',
-    name: 'II.324',
+    name: 'Attraversamento ciclabile',
+    descriptiveName: 'Bicycle crossing',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['node'], highwayValues: ['crossing'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3631,12 +3872,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.325',
     signId: 'II.325',
-    name: 'II.325',
-    description: null,
+    name: 'Svolta a sinistra semidiretta',
+    descriptiveName: 'Route for making an indirect left turn',
+    description: 'Vienna G, 3',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3647,12 +3889,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.326',
     signId: 'II.326',
-    name: 'II.326',
+    name: 'Svolta a sinistra indiretta',
+    descriptiveName: 'Route for making an indirect left turn',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3663,12 +3906,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.327',
     signId: 'II.327',
-    name: 'II.327',
+    name: 'Inversione di marcia',
+    descriptiveName: 'Infrastructure for reversing (u-turn)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3679,11 +3923,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.328',
     signId: 'II.328',
-    name: 'II.328',
-    description: null,
+    name: 'Piazzola su viabilità ordinaria',
+    descriptiveName: 'Emergency stopping place',
+    description: 'Vienna E, 18a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['emergency_bay'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3694,7 +3939,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.329',
     signId: 'II.329',
-    name: 'II.329',
+    name: 'Piazzola + SOS autostradale',
+    descriptiveName: 'Emergency stopping place with emergency phone (on motorways)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -3704,7 +3950,7 @@ export const _all: SignType[] = [
         uniqueTags: [{ key: 'emergency', value: 'phone' }],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3715,12 +3961,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.330',
     signId: 'II.330',
-    name: 'II.330',
-    description: null,
+    name: 'Transitabilità',
+    descriptiveName: 'Road open or closed',
+    description: 'Vienna G, 15',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3731,12 +3978,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.337',
     signId: 'II.337',
-    name: 'II.337',
+    name: 'Uso corsie su strada extraurbana',
+    descriptiveName: 'Lanes usage for extra urban roads',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3747,12 +3995,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.338',
     signId: 'II.338',
-    name: 'II.338',
+    name: 'Uso corsie su autostrada',
+    descriptiveName: 'Lanes usage for motor roads',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3763,12 +4012,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.339',
     signId: 'II.339',
-    name: 'II.339',
+    name: 'Uso corsie su strada urbana',
+    descriptiveName: 'Lanes usage for urban roads',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3779,12 +4029,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.340',
     signId: 'II.340',
-    name: 'II.340',
+    name: 'Uso corsie su strada urbana a senso unico',
+    descriptiveName: 'Lanes usage for one-way urban roads',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3795,12 +4046,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.341',
     signId: 'II.341',
-    name: 'II.341',
-    description: null,
+    name: 'Variazione corsie disponibili',
+    descriptiveName: 'Change in the number of lanes (2 -> 1)',
+    description: 'Vienna G, 12a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3811,12 +4063,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.342',
     signId: 'II.342',
-    name: 'II.342',
+    name: 'Variazione corsie disponibili',
+    descriptiveName: 'Change in the number of lanes (1 -> 2)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3827,12 +4080,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.343',
     signId: 'II.343',
-    name: 'II.343',
-    description: null,
+    name: 'Variazione corsie disponibili',
+    descriptiveName: 'Change in the number of lanes (3 -> 2)',
+    description: 'Vienna G, 12a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3843,12 +4097,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.344',
     signId: 'II.344',
-    name: 'II.344',
+    name: 'Variazione corsie disponibili',
+    descriptiveName: 'Change in the number of lanes (2 -> 3)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3859,12 +4114,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.345',
     signId: 'II.345',
-    name: 'II.345',
-    description: null,
+    name: 'Inizio autostrada (sfondo verde) / inizio strada extraurbana principale (sfondo blu)',
+    descriptiveName: 'Motorway (green background) / Expressway (blue background)',
+    description: 'Vienna E, 5a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3875,12 +4131,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.346',
     signId: 'II.346',
-    name: 'II.346',
-    description: null,
+    name: 'Fine autostrada (sfondo verde) / fine strada extraurbana principale (sfondo blu)',
+    descriptiveName: 'End motorway (green background) / end expressway (blue background)',
+    description: 'Vienna E, 5b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3891,12 +4148,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.347',
     signId: 'II.347',
-    name: 'II.347',
+    name: 'Preavviso di inizio autostrada (sfondo verde) / preavviso di inizio strada extraurbana principale (sfondo blu)',
+    descriptiveName: 'Motorway ahead (green background) / Expressway ahead (blue background)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3907,13 +4165,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.348',
     signId: 'II.348',
-    name: 'II.348',
-    description: null,
+    name: 'Senso unico parallelo',
+    descriptiveName: 'One way',
+    description: 'Vienna E, 3b',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'oneway', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3924,13 +4183,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.349',
     signId: 'II.349',
-    name: 'II.349',
-    description: null,
+    name: 'Senso unico frontale',
+    descriptiveName: 'One way',
+    description: 'Vienna E, 3a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'oneway', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3941,13 +4201,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.350',
     signId: 'II.350',
-    name: 'II.350',
+    name: 'Preavviso deviazione consigliata autocarri in transito',
+    descriptiveName: 'Suggested detour for trucks ahead',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'route', value: 'detour' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3958,13 +4219,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.351',
     signId: 'II.351',
-    name: 'II.351',
+    name: 'Deviazione consigliata autocarri in transito',
+    descriptiveName: 'Advised itinerary for heavy vehicles',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'route', value: 'detour' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3975,12 +4237,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.352',
     signId: 'II.352',
-    name: 'II.352',
-    description: null,
+    name: 'Limiti di velocità generali',
+    descriptiveName: 'General speed limits',
+    description: 'Vienna G, 14',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -3991,13 +4254,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.353',
     signId: 'II.353',
-    name: 'II.353',
-    description: null,
+    name: 'Pronto soccorso',
+    descriptiveName: 'First aid',
+    description: 'Vienna F, 1a',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'emergency', value: 'yes' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4008,13 +4272,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.354',
     signId: 'II.354',
-    name: 'II.354',
-    description: null,
+    name: 'Assistenza meccanica',
+    descriptiveName: 'Breakdown service',
+    description: 'Vienna F, 2',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'craft', value: 'mechanic' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_riparazioni.svg',
@@ -4024,13 +4289,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.355',
     signId: 'II.355',
-    name: 'II.355',
-    description: null,
+    name: 'Telefono',
+    descriptiveName: 'Telephone',
+    description: 'Vienna F, 3',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'telephone' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_telefono.svg',
@@ -4040,13 +4306,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.356',
     signId: 'II.356',
-    name: 'II.356',
-    description: null,
+    name: 'Rifornimento',
+    descriptiveName: 'Filling station',
+    description: 'Vienna F, 4',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'fuel' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4057,13 +4324,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.357',
     signId: 'II.357',
-    name: 'II.357',
+    name: 'Rifornimento (verde)',
+    descriptiveName: 'Filling station (green)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'fuel' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4074,11 +4342,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.358',
     signId: 'II.358',
-    name: 'II.358',
+    name: 'Fermata autobus',
+    descriptiveName: 'Bus stop',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['bus_stop'] }],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4089,13 +4358,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.359',
     signId: 'II.359',
-    name: 'II.359',
+    name: 'Fermata tram',
+    descriptiveName: 'Tramway stop',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'railway', value: 'tram_stop' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4106,7 +4376,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.360',
     signId: 'II.360',
-    name: 'II.360',
+    name: 'Informazioni',
+    descriptiveName: 'Informations',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -4118,7 +4389,7 @@ export const _all: SignType[] = [
         ],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4129,13 +4400,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.361',
     signId: 'II.361',
-    name: 'II.361',
-    description: null,
+    name: 'Ostello per la gioventù',
+    descriptiveName: 'Youth hostel',
+    description: 'Vienna F, 13',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'tourism', value: 'hostel' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4146,13 +4418,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.362',
     signId: 'II.362',
-    name: 'II.362',
-    description: null,
+    name: 'Area per picnic',
+    descriptiveName: 'Picnic site',
+    description: 'Vienna F, 8',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'tourism', value: 'picnic_site' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4163,13 +4436,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.363',
     signId: 'II.363',
-    name: 'II.363',
-    description: null,
+    name: 'Campeggio',
+    descriptiveName: 'Camping and caravan site',
+    description: 'Vienna F, 12',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'tourism', value: 'camp_site' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_campeggio.svg',
@@ -4179,12 +4453,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.364',
     signId: 'II.364',
-    name: 'II.364',
-    description: null,
+    name: 'Radio informazioni stradali',
+    descriptiveName: 'Radio station giving traffic information',
+    description: 'Vienna F, 14',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4195,13 +4470,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.365',
     signId: 'II.365',
-    name: 'II.365',
-    description: null,
+    name: 'Motel',
+    descriptiveName: 'Hotel or motel',
+    description: 'Vienna F, 5',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'tourism', value: 'hotel' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_albergo.svg',
@@ -4211,13 +4487,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.366',
     signId: 'II.366',
-    name: 'II.366',
-    description: null,
+    name: 'Bar',
+    descriptiveName: 'Refreshments or cafeteria',
+    description: 'Vienna F, 7',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'bar' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_bar.svg',
@@ -4227,13 +4504,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.367',
     signId: 'II.367',
-    name: 'II.367',
-    description: null,
+    name: 'Ristorante',
+    descriptiveName: 'Restaurant',
+    description: 'Vienna F, 6',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'restaurant' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_ristorante.svg',
@@ -4243,7 +4521,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.368',
     signId: 'II.368',
-    name: 'II.368',
+    name: 'Parcheggio di scambio (bus)',
+    descriptiveName: 'Park and ride (bus)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -4255,7 +4534,7 @@ export const _all: SignType[] = [
         ],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4266,7 +4545,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.369',
     signId: 'II.369',
-    name: 'II.369',
+    name: 'Parcheggio di scambio (tram)',
+    descriptiveName: 'Park and ride (tramway)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -4278,7 +4558,7 @@ export const _all: SignType[] = [
         ],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4289,7 +4569,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.370',
     signId: 'II.370',
-    name: 'II.370',
+    name: 'Parcheggio di scambio (treno)',
+    descriptiveName: 'Park and ride (railway)',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -4301,7 +4582,7 @@ export const _all: SignType[] = [
         ],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4312,13 +4593,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.371',
     signId: 'II.371',
-    name: 'II.371',
-    description: null,
+    name: 'Parcheggio di scambio (pedoni)',
+    descriptiveName: 'Starting-point for walks',
+    description: 'Vienna F, 9',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'parking' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4329,12 +4611,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.372',
     signId: 'II.372',
-    name: 'II.372',
+    name: 'Auto su treno',
+    descriptiveName: 'Motorail',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4345,12 +4628,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.373',
     signId: 'II.373',
-    name: 'II.373',
+    name: 'Auto al seguito',
+    descriptiveName: 'Motorail',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4361,12 +4645,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.374',
     signId: 'II.374',
-    name: 'II.374',
+    name: 'Auto su nave',
+    descriptiveName: 'Ferry',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4377,12 +4662,12 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.375',
     signId: 'II.375',
-    name: 'II.375',
+    name: 'Taxi',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_taxi.svg',
@@ -4392,7 +4677,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.376',
     signId: 'II.376',
-    name: 'II.376',
+    name: 'Area di servizio',
+    descriptiveName: 'Service area',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
@@ -4405,7 +4691,7 @@ export const _all: SignType[] = [
         ],
       },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4416,13 +4702,14 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.377',
     signId: 'II.377',
-    name: 'II.377',
+    name: 'Area attrezzata con impianti di scarico',
+    descriptiveName: 'Caravan waste disposal site',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'sanitary_dump_station' }] },
     ],
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4433,12 +4720,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.378',
     signId: 'II.378',
-    name: 'II.378',
+    name: 'Polizia Stradale',
+    descriptiveName: 'Road Police',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4449,12 +4737,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.379',
     signId: 'II.379',
-    name: 'II.379',
+    name: 'Polizia di stato',
+    descriptiveName: 'State Police',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4465,12 +4754,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.380',
     signId: 'II.380',
-    name: 'II.380',
+    name: 'Carabinieri',
+    descriptiveName: 'Military Police',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl: 'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_carabinieri.svg',
@@ -4480,12 +4770,13 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'II.381',
     signId: 'II.381',
-    name: 'II.381',
+    name: 'Guardia di finanza',
+    descriptiveName: 'Financial police',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
-    catalogue: { signCategory: 'traffic_sign' },
+    catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
       sourceUrl:
@@ -4496,8 +4787,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.1',
     signId: 'MII.1',
-    name: 'MII.1',
-    description: null,
+    name: 'Distanza',
+    descriptiveName: 'Distance',
+    description: 'Vienna H, 1',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -4512,8 +4804,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.2',
     signId: 'MII.2',
-    name: 'MII.2',
-    description: null,
+    name: 'Estesa',
+    descriptiveName: 'Length',
+    description: 'Vienna H, 2',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -4528,9 +4821,10 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.3',
     signId: 'MII.3',
-    name: 'MII.3',
+    name: 'Periodo',
+    descriptiveName: 'Period',
     description: null,
-    kind: 'exception_modifier',
+    kind: 'condition_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'exception_modifier' },
@@ -4544,9 +4838,10 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.3c',
     signId: 'MII.3c',
-    name: 'MII.3c',
+    name: 'Periodo',
+    descriptiveName: 'Period',
     description: null,
-    kind: 'exception_modifier',
+    kind: 'condition_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'exception_modifier' },
@@ -4560,9 +4855,10 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.3d',
     signId: 'MII.3d',
-    name: 'MII.3d',
+    name: 'Periodo',
+    descriptiveName: 'Period',
     description: null,
-    kind: 'exception_modifier',
+    kind: 'condition_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'exception_modifier' },
@@ -4576,8 +4872,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.4a',
     signId: 'MII.4a',
-    name: 'MII.4a',
-    description: null,
+    name: 'Limitazioni',
+    descriptiveName: 'Limitations',
+    description: 'Vienna H, 5',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -4592,8 +4889,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.4b',
     signId: 'MII.4b',
-    name: 'MII.4b',
-    description: null,
+    name: 'Eccezioni',
+    descriptiveName: 'Exceptions',
+    description: 'Vienna H, 6',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -4608,7 +4906,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6',
     signId: 'MII.6',
-    name: 'MII.6',
+    name: 'Pannello integrativo a testo libero',
+    descriptiveName: 'Additional free text notice',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4624,7 +4923,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6a',
     signId: 'MII.6a',
-    name: 'MII.6a',
+    name: 'Segni orizzontali in corso di rifacimento',
+    descriptiveName: 'Missing road markings',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4640,7 +4940,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6b',
     signId: 'MII.6b',
-    name: 'MII.6b',
+    name: 'Incidente',
+    descriptiveName: 'Accident',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4656,7 +4957,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6c',
     signId: 'MII.6c',
-    name: 'MII.6c',
+    name: 'Attraversamento di binari',
+    descriptiveName: 'Road intersects tracks',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
@@ -4673,7 +4975,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6d',
     signId: 'MII.6d',
-    name: 'MII.6d',
+    name: 'Sgombraneve in azione',
+    descriptiveName: 'Snowplow in action',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4689,7 +4992,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6e',
     signId: 'MII.6e',
-    name: 'MII.6e',
+    name: 'Zona soggetta ad allagamento',
+    descriptiveName: 'Flood prone zone',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
@@ -4706,7 +5010,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6f',
     signId: 'MII.6f',
-    name: 'MII.6f',
+    name: 'Coda',
+    descriptiveName: 'Congestion',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
@@ -4722,7 +5027,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6g',
     signId: 'MII.6g',
-    name: 'MII.6g',
+    name: 'Mezzi di lavoro in azione',
+    descriptiveName: 'Heavy equipment in action',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4738,8 +5044,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6h',
     signId: 'MII.6h',
-    name: 'MII.6h',
-    description: null,
+    name: 'Strada sdrucciolevole per ghiaccio',
+    descriptiveName: 'Slippery road because of ice or snow',
+    description: 'Vienna H, 9',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
       { geometries: ['way'], uniqueTags: [{ key: 'hazard', value: 'slippery' }] },
@@ -4755,7 +5062,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6i',
     signId: 'MII.6i',
-    name: 'MII.6i',
+    name: 'Strada sdrucciolevole per pioggia',
+    descriptiveName: 'Slippery road because of rain',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
@@ -4772,7 +5080,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6l',
     signId: 'MII.6l',
-    name: 'MII.6l',
+    name: 'Autocarri in rallentamento',
+    descriptiveName: 'Trucks slowing down',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4788,7 +5097,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6m',
     signId: 'MII.6m',
-    name: 'MII.6m',
+    name: 'Zona rimozione coatta',
+    descriptiveName: 'Forced removal',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4804,7 +5114,7 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.6n',
     signId: 'MII.6n',
-    name: 'MII.6n',
+    name: 'Segnale di corsia',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4820,8 +5130,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.7a',
     signId: 'MII.7a',
-    name: 'MII.7a',
-    description: null,
+    name: 'Andamento strada principale',
+    descriptiveName: 'Bend in priority road',
+    description: 'Vienna H, 8',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -4836,7 +5147,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.7b',
     signId: 'MII.7b',
-    name: 'MII.7b',
+    name: 'Andamento strada principale',
+    descriptiveName: 'Bend in priority road',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4852,7 +5164,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.7c',
     signId: 'MII.7c',
-    name: 'MII.7c',
+    name: 'Andamento strada principale',
+    descriptiveName: 'Bend in priority road',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4868,7 +5181,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.7d',
     signId: 'MII.7d',
-    name: 'MII.7d',
+    name: 'Andamento strada principale',
+    descriptiveName: 'Bend in priority road',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4884,7 +5198,8 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.7e',
     signId: 'MII.7e',
-    name: 'MII.7e',
+    name: 'Andamento strada principale',
+    descriptiveName: 'Bend in priority road',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4900,7 +5215,7 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.8a',
     signId: 'MII.8a',
-    name: 'MII.8a',
+    name: 'Divieto di sosta temporaneo',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4916,8 +5231,9 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.8b',
     signId: 'MII.8b',
-    name: 'MII.8b',
-    description: null,
+    name: 'Itinerario obbligatorio per merci pericolose',
+    descriptiveName: 'Mandatory direction for vehicles carrying dangerous goods',
+    description: 'Vienna D, 10c',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
     taggingSuggestionsQa: 'none',
@@ -4932,7 +5248,7 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.8c',
     signId: 'MII.8c',
-    name: 'MII.8c',
+    name: 'Itinerario obbligatorio per merci',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
@@ -4948,7 +5264,7 @@ export const _all: SignType[] = [
   {
     osmValuePart: 'MII.8d',
     signId: 'MII.8d',
-    name: 'MII.8d',
+    name: 'Divieto di transito autocarri',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: 'none',
