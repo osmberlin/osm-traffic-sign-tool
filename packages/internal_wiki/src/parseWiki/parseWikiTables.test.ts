@@ -669,39 +669,80 @@ describe('parseDeRowIdTable', () => {
 })
 
 describe('parseItalyTable', () => {
-  const itDangerRowHtml = `
-<table class="wikitable"><tbody><tr>
-  <td><a href="/wiki/File:Italian_traffic_signs_-_curva_pericolosa_a_sinistra.svg"><img src="/thumb/Italian_traffic_signs_-_curva_pericolosa_a_sinistra.svg"></a></td>
-  <td>II.5</td>
-  <td>A, 1a</td>
-  <td>Curva a sinistra</td>
-  <td>Dangerous bend (to the left)</td>
-  <td>hazard curve\`=\`</td>
-</tr></tbody></table>`
+  const itDangerSectionHtml = `
+<div class="mw-parser-output">
+  <h2>Segnali di pericolo (Danger warning signs)</h2>
+  <table class="wikitable"><tbody><tr>
+    <th>Sign</th><th>Figura</th><th>Vienna</th><th>Name</th><th>English</th><th>Related tags</th>
+  </tr><tr>
+    <td><a href="/wiki/File:Italian_traffic_signs_-_curva_pericolosa_a_sinistra.svg"><img src="/thumb/Italian_traffic_signs_-_curva_pericolosa_a_sinistra.svg"></a></td>
+    <td>II.5</td>
+    <td>A, 1a</td>
+    <td>Curva a sinistra</td>
+    <td>Dangerous bend (to the left)</td>
+    <td>hazard curve\`=\`</td>
+  </tr></tbody></table>
+</div>`
+
+  const itProhibitoryRowHtml = `
+<div class="mw-parser-output">
+  <h4>Segnali di divieto (Prohibitory or restrictive signs)</h4>
+  <table class="wikitable"><tbody><tr>
+    <th>Sign</th><th>Figura</th><th>Vienna</th><th>Name</th><th>English</th><th>Related tags</th><th>Commenti</th>
+  </tr><tr>
+    <td></td>
+    <td>II.46</td>
+    <td>C, 2</td>
+    <td>Divieto di transito</td>
+    <td>Closed to all vehicles in both directions</td>
+    <td>vehicle no\`=\`</td>
+    <td>Il divieto di transito vieta il transito a tutti i veicoli.</td>
+  </tr></tbody></table>
+</div>`
 
   const itPanelRowHtml = `
-<table class="wikitable"><tbody><tr>
-  <td><a href="/wiki/File:Italian_traffic_signs_-_distanza.svg"><img src="/thumb/Italian_traffic_signs_-_distanza.svg"></a></td>
-  <td>MII.1</td>
-  <td>H, 1</td>
-  <td>Distanza</td>
-  <td>Distance</td>
-  <td></td>
-</tr></tbody></table>`
+<div class="mw-parser-output">
+  <h2>Pannelli integrativi (Additional panels)</h2>
+  <table class="wikitable"><tbody><tr>
+    <td><a href="/wiki/File:Italian_traffic_signs_-_distanza.svg"><img src="/thumb/Italian_traffic_signs_-_distanza.svg"></a></td>
+    <td>MII.1</td>
+    <td>H, 1</td>
+    <td>Distanza</td>
+    <td>Distance</td>
+    <td></td>
+  </tr></tbody></table>
+</div>`
 
-  test('uses Figura column instead of Vienna convention codes', () => {
-    const $ = cheerio.load(itDangerRowHtml)
+  test('uses Figura column and Italian Name for sign id and name', () => {
+    const $ = cheerio.load(itDangerSectionHtml)
     const [row] = parseItalyTable($)
     expect(row?.signId).toBe('II.5')
-    expect(row?.name).toBe('Dangerous bend (to the left)')
+    expect(row?.name).toBe('Curva a sinistra')
+    expect(row?.englishName).toBe('Dangerous bend (to the left)')
+    expect(row?.viennaCode).toBe('A, 1a')
+    expect(row?.signCategory).toBe('hazard_sign')
     expect(toWikiSign('IT', row!)?.sign).toBe('IT:II.5')
+    expect(toWikiSign('IT', row!)?.osmTags).toEqual(['hazard=curve'])
   })
 
-  test('parses Modello column for additional panels', () => {
+  test('maps prohibitory Commenti column to comments and keeps related tags', () => {
+    const $ = cheerio.load(itProhibitoryRowHtml)
+    const [row] = parseItalyTable($)
+    expect(row?.signId).toBe('II.46')
+    expect(row?.name).toBe('Divieto di transito')
+    expect(row?.commentsText).toContain('Il divieto di transito')
+    expect(row?.tagsText).toContain('vehicle no')
+    expect(row?.signCategory).toBe('traffic_sign')
+  })
+
+  test('parses Modello column for additional panels as exception modifiers', () => {
     const $ = cheerio.load(itPanelRowHtml)
     const [row] = parseItalyTable($)
     expect(row?.signId).toBe('MII.1')
-    expect(row?.name).toBe('Distance')
+    expect(row?.name).toBe('Distanza')
+    expect(row?.englishName).toBe('Distance')
+    expect(row?.signCategory).toBe('exception_modifier')
+    expect(row?.kind).toBe('exception_modifier')
     expect(toWikiSign('IT', row!)?.sign).toBe('IT:MII.1')
   })
 })

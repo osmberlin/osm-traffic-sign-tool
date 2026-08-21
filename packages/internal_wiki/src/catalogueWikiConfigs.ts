@@ -14,6 +14,7 @@ export type CatalogueCountryConfig = {
   defaultCommentLang: string
   hashPrefixMain: string
   hashPrefixModifier: string
+  iconicSignOsmValuePart?: string
   pages: CataloguePageConfig[]
 }
 
@@ -175,6 +176,7 @@ export const catalogueWikiConfigs: Record<string, CatalogueCountryConfig> = {
     defaultCommentLang: 'it',
     hashPrefixMain: '',
     hashPrefixModifier: 'M',
+    iconicSignOsmValuePart: 'II.13',
     pages: [
       withCataloguePage(countryWikiConfigs.IT!.pages[0]!, {
         exportName: '_all',
