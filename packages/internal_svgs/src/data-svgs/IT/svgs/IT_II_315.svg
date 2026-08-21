@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.315 - End of motorroad (end of road for motor vehicles only)</title>
+  <path d="M-200 697h600v600h-600z" style="fill:#00408c;fill-opacity:1;stroke-width:27.3522;paint-order:fill markers stroke" transform="translate(200 -697)"/>
+  <g transform="translate(913.715 378.681)scale(3.77953)">
+    <path d="M-219.162 1.895a3.14 3.14 0 0 0-3.147 3.148 3.14 3.14 0 0 0 3.147 3.147h113.567a3.14 3.14 0 0 0 3.147-3.147 3.14 3.14 0 0 0-3.147-3.148h-56.784z" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:20.9067;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+    <path d="M-162.379-30.867c-9.7 0-44.916 3.4-54.275 7.04-9.36 3.639-8.427 19.704 2.463 22.622h103.625c10.89-2.918 11.822-18.983 2.463-22.623-9.36-3.639-44.576-7.04-54.276-7.04" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:5.56481;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+    <circle cx="-210.086" cy="-12.791" r="8.392" style="fill:#004090;fill-opacity:1;stroke:none;stroke-width:6.82616;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+    <path d="M-162.379-61.501c-14.443.025-29.594 2.09-34.16 3.315s-8.356 2.721-10.08 7.63l-7.845 22.623 7.48-1.094 6.38-18.513c1.19-2.406 3.075-3.98 6.366-4.55s19.63-2.438 31.86-2.438c12.228 0 28.57 1.87 31.86 2.438 3.291.57 5.175 2.144 6.365 4.55l6.381 18.513 7.48 1.094-7.845-22.622c-1.725-4.91-5.515-6.406-10.08-7.631-4.567-1.225-19.718-3.29-34.162-3.315" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:5.56481;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+    <path d="M-216.557 10.865v9.31a3.777 3.777 0 0 0 3.784 3.784h11.847a3.776 3.776 0 0 0 3.784-3.784v-9.31z" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:6.93582;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+    <circle cx="114.671" cy="-12.791" r="8.392" style="fill:#004090;fill-opacity:1;stroke:none;stroke-width:6.82616;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke" transform="scale(-1 1)"/>
+    <path d="M-108.2 10.866v9.309a3.777 3.777 0 0 1-3.784 3.784h-11.847a3.776 3.776 0 0 1-3.783-3.784v-9.31z" style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:6.93582;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"/>
+  </g>
+  <path d="m-200 1297 600-600" style="color:#000;fill:#ff2a2a;stroke-width:115;paint-order:fill markers stroke" transform="translate(200 -697)"/>
+  <path d="M308.684 707-190 1205.684V1257c0 16.62 13.38 30 30 30h51.317L390 788.317V737c0-16.62-13.38-30-30-30z" style="color:#000;fill:#d40000;paint-order:fill markers stroke" transform="translate(200 -697)"/>
+  <path d="M-160 702c-19.303 0-35 15.697-35 35v520c0 19.304 15.697 35 35 35h520c19.303 0 35-15.696 35-35V737c0-19.303-15.697-35-35-35zm0 10h520c13.936 0 25 11.064 25 25v520c0 13.937-11.064 25-25 25h-520c-13.936 0-25-11.063-25-25V737c0-13.936 11.064-25 25-25" style="color:#000;fill:#fff;paint-order:fill markers stroke" transform="translate(200 -697)"/>
+</svg>

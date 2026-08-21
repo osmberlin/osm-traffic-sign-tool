@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 525 300" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.256 - segnale identificazione itinerario internazionale</title>
+  <g style="font-size:279.72387695px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000;fill-opacity:1;stroke:none;font-family:Sans">
+    <g style="line-height:125%;fill:#000;font-family:Sans" transform="translate(-11144.537 -5043.067)">
+      <path d="M11144.537 5043.067h525v300h-525z" style="font-size:279.72387695px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#08842c;fill-opacity:1;stroke:none;font-family:Sans"/>
+      <g style="font-size:209.79290771px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill-opacity:1;stroke:none;font-family:Sans">
+        <path d="m11429.956 5195.27 11.329-77.413h62.307v24.126h-35.244l-4.406 29.37q2.301-1.022 5.324-1.363 3.021-.34 5.585-.315 11.995.44 19.711 8.552t11.426 18.621 3.688 18.142q-.236 27.49-11.957 41.228t-32.099 13.737q-13.255-.406-22.389-8.052-9.133-7.645-14.47-17.656-5.336-10.01-7.197-17.509l27.273-5.035q3.244 9.44 7.107 14.161 3.86 4.72 9.676 4.72 6.176-.13 9.86-6.608 3.685-6.477 3.777-17.727-.06-10.85-3.639-17.207-3.582-6.356-9.998-6.5-4.438 0-7.264 2.046-2.825 2.046-4.274 6.136zM11540.179 5195.27l11.329-77.413h62.308v24.126h-35.245l-4.406 29.37q2.301-1.022 5.324-1.363t5.585-.315q11.995.44 19.711 8.552t11.427 18.621q3.71 10.51 3.687 18.142-.235 27.49-11.956 41.228t-32.1 13.737q-13.254-.406-22.389-8.052-9.134-7.645-14.469-17.656-5.337-10.01-7.197-17.509l27.272-5.035q3.245 9.44 7.107 14.161 3.861 4.72 9.676 4.72 6.176-.13 9.861-6.608 3.684-6.477 3.776-17.727-.059-10.85-3.639-17.207-3.58-6.356-9.998-6.5-4.438 0-7.263 2.046t-4.275 6.136z" style="font-variant:normal;font-stretch:normal;fill:#fff;font-family:Alfabeto Stretto Negativo;-inkscape-font-specification:Alfabeto Stretto Negativo"/>
+      </g>
+      <rect width="509.248" height="284.248" x="11152.413" y="5050.943" rx="27.562" ry="27.562" style="font-size:279.72387695px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:none;stroke:#fff;stroke-width:7.87599993;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans"/>
+      <g style="font-size:209.79290771px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill-opacity:1;stroke:none;font-family:Sans">
+        <path d="M11304.832 5118.067h-103.427v150h110.979v-29.16h-80.14v-34.616h65.245v-27.063h-65.454v-32.098h72.797z" style="font-variant:normal;font-stretch:normal;fill:#fff;font-family:Alfabeto Normale Negativo;-inkscape-font-specification:Alfabeto Normale Negativo"/>
+      </g>
+    </g>
+  </g>
+</svg>

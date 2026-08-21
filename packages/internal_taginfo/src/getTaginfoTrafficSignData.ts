@@ -6,6 +6,7 @@ import brTaginfo from './data/taginfoTrafficSignData_BR.json' with { type: 'json
 import caTaginfo from './data/taginfoTrafficSignData_CA.json' with { type: 'json' }
 import deTaginfo from './data/taginfoTrafficSignData_DE.json' with { type: 'json' }
 import frTaginfo from './data/taginfoTrafficSignData_FR.json' with { type: 'json' }
+import itTaginfo from './data/taginfoTrafficSignData_IT.json' with { type: 'json' }
 import plTaginfo from './data/taginfoTrafficSignData_PL.json' with { type: 'json' }
 import type { TaginfoEntry } from './taginfoTypes.js'
 
@@ -18,6 +19,7 @@ const taginfoByCountry: Record<CountryPrefixType, TaginfoEntry[]> = {
   FR: frTaginfo as TaginfoEntry[],
   AU: auTaginfo as TaginfoEntry[],
   BR: brTaginfo as TaginfoEntry[],
+  IT: itTaginfo as TaginfoEntry[],
 }
 
 /** @deprecated Use getTaginfoTrafficSignData(countryPrefix) */

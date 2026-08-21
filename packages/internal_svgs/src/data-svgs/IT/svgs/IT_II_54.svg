@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.279 159.279" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.54 - No entry for pedestrians</title>
+  <g transform="translate(-36.248 143.669)">
+    <circle cx="115.888" cy="-64.029" r="79.64" style="fill:#000;fill-rule:evenodd;stroke-width:8.23434"/>
+    <circle cx="115.887" cy="-64.029" r="79.375" style="fill:#fff;fill-rule:evenodd;stroke-width:7.2697"/>
+    <circle cx="115.887" cy="-64.029" r="76.729" style="fill:#d40000;fill-rule:evenodd;stroke-width:7.02738"/>
+    <circle cx="115.887" cy="-64.029" r="56.885" style="fill:#fff;fill-rule:evenodd;stroke-width:5.20995"/>
+    <g style="fill:#d4aa00;fill-opacity:.480176" transform="translate(-83.456 -177.107)scale(.93823)">
+      <path d="m206.434 110.942 1.172 5.746-19.193 39.557s-2.05 4.214 2.096 6.584c4.145 2.37 6.999-2.12 6.999-2.12l16.793-34.424 11.717 33.196s2.495 5.863 7.337 3.962 2.427-7.644 2.427-7.644L222 116.856v-2.176l1.451-6.305c.148-.267.582-.382.837-.167l3.961 4.271v7.6c0 2.41 2.065 3.912 4.13 3.932s4.129-1.443 4.129-3.932v-8.207c0-1.487-.61-2.655-1.284-3.33l-16.069-17.295c-.948-1.08-2.96-1.134-4.017-.558l-4.916 2.313c-.995.441-1.556 1.081-2.216 1.875l-17.593 22.364c-3.609 3.97 3.01 8.935 6.022 5.469l9.163-11.88c.275-.355.726-.235.836.112" style="fill:#000;fill-opacity:1;stroke-width:1.28643;paint-order:markers stroke fill"/>
+      <circle cx="209.768" cy="83.422" r="6.458" style="fill:#000;fill-opacity:1;stroke-width:1.38838;paint-order:markers stroke fill"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.279 159.279" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.60a - No entry for trucks (with a permissible maximum with more than 3.5 t)</title>
+  <g transform="translate(117.794 -1467.667)">
+    <circle cx="-38.155" cy="1547.306" r="79.64" style="fill:#000;fill-rule:evenodd;stroke-width:8.23434"/>
+    <g transform="translate(-848.757 1055.997)">
+      <circle cx="810.602" cy="491.309" r="79.375" style="fill:#fff;fill-rule:evenodd;stroke-width:7.2697"/>
+      <circle cx="810.602" cy="491.309" r="76.729" style="fill:#d40000;fill-rule:evenodd;stroke-width:7.02738"/>
+      <circle cx="810.602" cy="491.309" r="56.885" style="fill:#fff;fill-rule:evenodd;stroke-width:5.20995"/>
+    </g>
+    <path d="M-61.666 1524.3H3.698v31.6h-65.364z" style="fill:#000;stroke-width:7.76156;stroke-linecap:round;paint-order:markers stroke fill"/>
+    <circle cx="-72.879" cy="1564.179" r="7.254" style="fill:#000;stroke-width:4.07099;stroke-linecap:round;paint-order:markers stroke fill"/>
+    <circle cx="-72.879" cy="1564.179" r="3.211" style="fill:#fff;stroke-width:1.80195;stroke-linecap:round;paint-order:markers stroke fill"/>
+    <circle cx="-15.583" cy="1564.179" r="7.254" style="fill:#000;stroke-width:4.07099;stroke-linecap:round;paint-order:markers stroke fill"/>
+    <circle cx="-15.583" cy="1564.179" r="3.211" style="fill:#fff;stroke-width:1.80195;stroke-linecap:round;paint-order:markers stroke fill"/>
+    <path d="m-79.81 1533.872-5.01 13.216-.002 17.545h2.983a9 9 0 0 1-.018-.455 8.978 8.978 0 0 1 17.955 0q-.003.226-.018.455h39.391a7 7 0 0 1-.031-.455 8.98 8.98 0 0 1 2.842-6.53h-41.77v-23.776zm70.384 23.777a8.98 8.98 0 0 1 2.821 6.53 9 9 0 0 1-.033.454l10.336-3.503v-3.481z" style="fill:#000;stroke-width:4.24759;stroke-linecap:round;paint-order:markers stroke fill"/>
+    <path d="m-78.595 1537.364-3.358 8.859h16.21v-8.859z" style="fill:#fff;stroke-width:4.72986;stroke-linecap:round;paint-order:markers stroke fill"/>
+  </g>
+</svg>

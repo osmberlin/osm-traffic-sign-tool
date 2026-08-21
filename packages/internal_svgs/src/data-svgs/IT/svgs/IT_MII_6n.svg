@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen MII.6n - Segnale di corsia</title>
+  <rect width="499" height="249" x=".5" y=".5" rx="0" ry="0" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1;stroke-opacity:1;opacity:1"/>
+  <rect width="484" height="234" x="8" y="8" rx="26" ry="26" style="fill:none;stroke:#000;stroke-width:8;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+  <path d="M333.482 106.52 250 190l-83.48-83.48c-1.985-1.987-2.345-4.978-.89-7.379 1.457-2.4 4.279-3.46 6.955-2.615l53.075 16.756c1.592.502 3.199.174 4.463-.915 1.266-1.088 1.831-2.63 1.569-4.277L224.894 65h50.212l-6.8 43.09c-.268 1.647.306 3.188 1.57 4.277 1.266 1.088 2.874 1.419 4.463.915l53.075-16.756c2.679-.846 5.497.215 6.955 2.615s1.099 5.392-.887 7.378z" style="fill:#000200;fill-rule:evenodd;stroke-width:.15289199"/>
+</svg>

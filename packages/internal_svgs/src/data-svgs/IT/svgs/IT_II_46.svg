@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.46 - Closed to all vehicles in both directions</title>
+  <path fill="#fff" stroke="#000" stroke-linejoin="round" stroke-miterlimit="2" stroke-width="3" d="M598.5 300c0 164.857-133.643 298.5-298.5 298.5S1.5 464.857 1.5 300 135.143 1.5 300 1.5 598.5 135.143 598.5 300z"/>
+  <path fill="#d40000" d="M590 300c0 160.163-129.837 290-290 290S10 460.163 10 300 139.837 10 300 10s290 129.837 290 290"/>
+  <path fill="#fff" d="M515 300c0 118.741-96.259 215-215 215S85 418.741 85 300 181.259 85 300 85s215 96.259 215 215"/>
+</svg>

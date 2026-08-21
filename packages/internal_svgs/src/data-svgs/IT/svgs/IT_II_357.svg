@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 238.125" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.357 - Filling station (green)</title>
+  <g transform="translate(925.306 -1041.533)">
+    <path d="M-925.306 1041.533h158.75v238.125h-158.75z" style="fill:#00408b;fill-rule:evenodd;stroke-width:29.4791;paint-order:markers fill stroke"/>
+    <rect width="152.4" height="231.775" x="-922.131" y="1044.708" rx="10.319" ry="10.319" style="fill:none;fill-rule:evenodd;stroke:#fff;stroke-width:3.175;paint-order:markers fill stroke"/>
+    <path d="M-905.462 1061.377h119.063v119.063h-119.063z" style="fill:#fff;fill-rule:evenodd;stroke-width:4.84527;paint-order:markers fill stroke"/>
+    <path d="M-826.658 1070.312h-55.001v37.875h5.127v43.928h12.184v-25.571h-5.266v-24.934h-3.16a2.563 2.563 0 0 1-2.57-2.57v-19.582a2.56 2.56 0 0 1 2.57-2.568h37.23a2.56 2.56 0 0 1 2.568 2.568v3.296h6.318z" style="fill:#000;fill-rule:evenodd;stroke-width:5.22552;stroke-opacity:.329231;paint-order:markers fill stroke"/>
+    <path d="M-866.84 1087.025v37.876h5.129v43.929h44.447v-36.748c1.925.025 2.949.36 3.318.667.384.32.83.969.83 3.333v23.753c0 2.472.992 4.7 2.513 6.196 1.52 1.494 3.455 2.306 5.407 2.611 3.905.61 8.374-.66 10.464-4.55 1.057-1.965 1.365-4.279.959-6.817v-.01l-8.322-51.5-.016-.083c.023.098-.048-.532-.125-1.277-.076-.746-.304-1.665-.572-2.738-.157-.626-.256-1.207-.513-1.876-.26-.674-.71-1.327-1.294-1.764a3.7 3.7 0 0 0-1.806-.728c-.92-.123-2.06-.049-2.981-.049h-.77v5.679h.772c.725 0 .892.135.969.192s.164.15.28.474.212.833.27 1.394c.055.53.045 1.028.204 1.8l8.299 51.38c.196 1.241-.197 2.945-.351 3.231-.587 1.091-2.639 1.936-4.589 1.63-.975-.152-1.8-.553-2.307-1.051-.507-.499-.81-1.05-.81-2.148v-23.753c0-3.226-.83-5.993-2.886-7.7-1.996-1.656-4.432-1.962-6.94-1.979v-1.502h5.423v-37.876z" style="fill:#27884d;fill-rule:evenodd;stroke-width:5.22552;stroke-opacity:.329231;paint-order:markers fill stroke"/>
+    <rect width="42.369" height="24.72" x="-860.524" y="1093.603" rx="2.569" ry="2.569" style="fill:#fff;fill-rule:evenodd;stroke-width:3.70531;stroke-opacity:.329231;paint-order:markers fill stroke"/>
+  </g>
+</svg>

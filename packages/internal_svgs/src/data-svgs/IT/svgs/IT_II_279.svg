@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.279 - Police</title>
+  <g transform="translate(0 -152.375)">
+    <path d="M.5 152.875h599v899H.5z" style="fill:#fff;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:.99999994;stroke-opacity:1"/>
+    <rect width="576" height="876" x="12" y="164.375" rx="39" ry="39" style="fill:none;stroke:#000;stroke-width:12;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M135.226 878.602 135 827.068h176.527l-10.623-60.801c.226-1.583.677-3.164 1.583-4.068.903-1.13 3.164-1.356 4.747-1.356L465 852.836l-157.992 92.219c-1.583 0-3.843-.451-4.52-.903-.904-1.13-1.358-2.26-1.13-3.843l11.075-61.705z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <rect width="450" height="450" x="75" y="227.375" rx="0" ry="0" style="fill:#fff"/>
+    <rect width="438.75" height="438.75" x="80.625" y="233" rx="50.703" ry="50.703" style="fill:none;stroke:#000;stroke-width:11.25;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M105.371 89.122 68.68 123.326l-39.18-13.06c-4.963 2.841-10.866 5.056-6.218 14.304l50.995 19.901 24.255-18.035.621 26.12 53.04-63.613zM165.695 90.366v88.31l-66.543-.001c-4.146-3.317-4.146-9.356 0-13.502l59.703-.18c4.285-2.694 1.114-5.389 0-8.084h-49.752zM107.548 62.691c1.555-.31 45.088-5.597 45.088-5.597.255 13.311-2.781 24.318-18.968 26.12-11.811-.943-22.497-4.023-26.12-20.523zM88.27 57.094l62.87-7.911c.56 1.046-45.92-7.655-46.063-7.828.19.637-14.75 14.662-16.808 15.739zM95.148 20.465c-.211.004 59.726 15.53 59.347 15.859.399.02-3.086 8.496-3.347 8.363.297-.185-42.031-10.715-41.734-10.292-7.977-7.447-6.204-4.765-14.266-13.93z" style="fill:#000;fill-opacity:1;fill-rule:evenodd;stroke:#000;stroke-width:4.48484516;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" transform="matrix(2.0489 0 0 2.21497 83.681 228.922)"/>
+  </g>
+</svg>

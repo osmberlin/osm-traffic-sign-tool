@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.313 - End advisory speed</title>
+  <path d="M0 0h200v200H0z" style="fill:#00408b;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  <g style="font-size:118.8978653px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#fff;fill-opacity:1;stroke:none;font-family:Sans">
+    <path d="M87.456 58.23V73.6H50.388l-1.292 11.377q6.922-3.4 14.313-3.4 11.964 0 20.411 8.328 8.448 8.329 8.447 20.999 0 12.2-6.92 21.466-8.449 11.262-23.814 11.263-17.127 0-25.809-10.322-3.756-4.342-6.451-12.67l16.189-4.93q1.876 5.163 5.689 8.389 3.812 3.226 8.738 3.225 6.92 0 10.676-4.69 3.637-4.342 3.637-11.38 0-6.689-4.457-10.794-3.991-3.87-9.737-3.87-8.095 0-12.552 7.038l-17.481-2.463L34.9 58.231zM172.174 99.992q0 23.932-12.906 35.077-9.27 7.977-22.053 7.976-12.551 0-21.939-8.209-12.788-11.38-12.788-34.959 0-24.989 13.494-35.897 8.913-7.274 21.233-7.275 12.2 0 21.351 7.626 13.608 11.264 13.608 35.66m-34.845 27.1q17.364 0 17.364-27.92 0-26.865-17.01-26.865-17.713 0-17.713 26.983 0 27.803 17.36 27.803" style="font-size:117.31100464px;font-variant:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#fff;font-family:CodiceBianco;-inkscape-font-specification:CodiceBianco"/>
+  </g>
+  <path d="M196.043 33.579 30.298 196.437l-14.687-.146c-6.6 0-12.513-5.185-12.513-11.84l.098-20.082L166.837 3.517l19.931.22c6.474 0 9.471 5.636 9.471 11.937z" style="fill:#d40000;fill-opacity:1;stroke:none"/>
+  <rect width="193.111" height="193.111" x="3.444" y="3.444" rx="9.755" ry="9.755" style="fill:none;stroke:#fff;stroke-width:3.33333325;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+</svg>

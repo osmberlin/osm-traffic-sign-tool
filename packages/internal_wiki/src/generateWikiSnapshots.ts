@@ -6,6 +6,7 @@ import {
   dedupeWikiSigns,
   parseBelgiumTable,
   parseDeRowIdTable,
+  parseItalyTable,
   parseUniversalTable,
   toWikiSign,
 } from './parseWiki/parseWikiTables.js'
@@ -15,7 +16,7 @@ import { wikiSnapshotPath } from './wikiSnapshotPaths.js'
 export const parseWikiHtml = (
   html: string,
   countryPrefix: string,
-  parseMode: 'belgium' | 'universal' | 'de-row-id',
+  parseMode: 'belgium' | 'universal' | 'de-row-id' | 'italy',
 ): WikiSign[] => {
   const $ = cheerio.load(html)
   const rows =
@@ -23,7 +24,9 @@ export const parseWikiHtml = (
       ? parseDeRowIdTable($)
       : parseMode === 'belgium'
         ? parseBelgiumTable($)
-        : parseUniversalTable($, countryPrefix)
+        : parseMode === 'italy'
+          ? parseItalyTable($)
+          : parseUniversalTable($, countryPrefix)
 
   return dedupeWikiSigns(
     rows

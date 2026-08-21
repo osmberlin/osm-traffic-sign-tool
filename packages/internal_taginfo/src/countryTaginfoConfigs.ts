@@ -15,6 +15,7 @@ export const countryTaginfoConfigs: Record<CountryPrefixType, CountryTaginfoConf
   AU: { countryPrefix: 'AU', geofabrikRegion: 'australia-oceania:australia', apiLang: 'en' },
   BR: { countryPrefix: 'BR', geofabrikRegion: 'south-america:brazil', apiLang: 'pt' },
   CA: { countryPrefix: 'CA', geofabrikRegion: 'north-america:canada', apiLang: 'en' },
+  IT: { countryPrefix: 'IT', geofabrikRegion: 'europe:italy', apiLang: 'it' },
 }
 
 export const taginfoSnapshotCountryPrefixes = Object.keys(

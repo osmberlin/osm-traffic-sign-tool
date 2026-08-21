@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.76 - Parking</title>
+  <g transform="translate(0 -452.362)">
+    <path d="M0 452.362h600v600H0z" style="fill:#00408b;fill-opacity:1;stroke:none"/>
+    <g style="font-size:639.19543457px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#fff;fill-opacity:1;stroke:none;font-family:Sans">
+      <path d="M338.838 527.362q56.88 0 100.986 40.282 47.303 44.105 47.304 109.296 0 62.636-47.948 105.472-44.104 40.263-100.342 40.262H235.92v154.688h-94.588v-450zm-102.918 79.9v132.957h96.52q23.017 0 41.549-20.453 18.531-20.452 18.531-43.47 0-28.752-20.443-49.86-18.531-19.174-39.637-19.174z" style="font-variant:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#fff;font-family:CodiceBianco;-inkscape-font-specification:CodiceBianco"/>
+    </g>
+    <rect width="580" height="580" x="10" y="462.362" rx="30" ry="30" style="fill:none;stroke:#fff;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M560 492.362z" style="fill:none;stroke:#000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+  </g>
+</svg>

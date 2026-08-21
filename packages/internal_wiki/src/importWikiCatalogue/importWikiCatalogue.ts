@@ -8,6 +8,7 @@ import { catalogueWikiConfigs, type CatalogueCountryConfig } from '../catalogueW
 import { fetchWikiPage } from '../fetchWikiPage.js'
 import {
   parseBelgiumTable,
+  parseItalyTable,
   parseUniversalTable,
   parseWikiTags,
   type ParsedWikiRow,
@@ -92,33 +93,50 @@ const escapeString = (value: string) => value.replace(/\\/g, '\\\\').replace(/'/
 
 const emitSignObject = (sign: ParsedWikiRow, defaultCategory: string, overviewUrl: string) => {
   const tags = parseWikiTags(sign.tagsText)
-  const category = inferCategory(sign.signId, tags, defaultCategory)
-  const kind = inferKind(sign.signId, category)
+  const sectionCategory = sign.signCategory ?? inferCategory(sign.signId, tags, defaultCategory)
+  const category = tags.some((tag) => tag.key === 'maxspeed') ? 'speed' : sectionCategory
+  const kind = sign.kind ?? inferKind(sign.signId, category)
   const imageBlock = sign.imageUrl
     ? `image: {\n      kind: 'remote',\n      sourceUrl: '${escapeString(sign.imageUrl)}',\n      licence: 'Public Domain',\n    },`
     : `image: {\n      kind: 'remote',\n      sourceUrl: '${escapeString(overviewUrl)}',\n      licence: 'Public Domain',\n    },`
 
-  const descriptiveNameLine =
-    sign.name !== sign.signId ? `    descriptiveName: '${escapeString(sign.name)}',\n` : ''
+  const descriptiveName =
+    sign.englishName && sign.englishName !== sign.name ? sign.englishName : undefined
+  const descriptiveNameLine = descriptiveName
+    ? `    descriptiveName: '${escapeString(descriptiveName)}',\n`
+    : ''
+
+  const descriptionParts: string[] = []
+  if (sign.viennaCode) descriptionParts.push(`Vienna ${sign.viennaCode}`)
+  const description =
+    descriptionParts.length > 0 ? `'${escapeString(descriptionParts.join(' — '))}'` : 'null'
+
+  const commentsLine = sign.commentsText?.trim()
+    ? `comments: [{ comment: '${escapeString(sign.commentsText.trim())}', lang: 'it' }],\n    `
+    : ''
 
   return `  {
     osmValuePart: '${escapeString(sign.signId)}',
     signId: '${escapeString(sign.signId)}',
-    name: '${escapeString(sign.signId)}',
-${descriptiveNameLine}    description: null,
+    name: '${escapeString(sign.name)}',
+${descriptiveNameLine}    description: ${description},
     kind: '${kind}',
-    ${buildRecommendations(tags, sign.isNa)}
+    ${commentsLine}${buildRecommendations(tags, sign.isNa)}
     catalogue: { signCategory: '${category}' },
     ${imageBlock}
   }`
 }
 
 const emitCatalogueMeta = (config: CatalogueCountryConfig) => {
+  const iconicSignLine = config.iconicSignOsmValuePart
+    ? `  iconicSignOsmValuePart: '${config.iconicSignOsmValuePart}',\n`
+    : ''
+
   return `import { createBetaCatalogueMeta } from '../catalogueMetaHelpers.js'
 
 export const catalogueMeta${config.prefix} = createBetaCatalogueMeta({
   countryPrefix: '${config.prefix}',
-  catalogueName: '${config.catalogueName}',
+${iconicSignLine}  catalogueName: '${config.catalogueName}',
   catalogueLocale: '${config.catalogueLocale}',
   defaultCommentLang: '${config.defaultCommentLang}',
   osmWikiOverviewUrl: '${config.overviewUrl}',
@@ -156,7 +174,11 @@ const importCountry = async (config: CatalogueCountryConfig) => {
     const html = await fetchWikiPage(page.slug)
     const $ = cheerio.load(html)
     const signs =
-      page.parseMode === 'belgium' ? parseBelgiumTable($) : parseUniversalTable($, config.prefix)
+      page.parseMode === 'belgium'
+        ? parseBelgiumTable($)
+        : page.parseMode === 'italy'
+          ? parseItalyTable($)
+          : parseUniversalTable($, config.prefix)
     total += signs.length
     const content = `import type { SignType } from '../../TrafficSignDataTypes.js'\n\nexport const ${page.exportName}: SignType[] = [\n${signs.map((s) => emitSignObject(s, page.defaultCategory, config.overviewUrl)).join(',\n')}\n]\n`
     await Bun.write(path.join(outDir, page.fileName), content)

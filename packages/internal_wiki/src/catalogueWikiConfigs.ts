@@ -14,6 +14,7 @@ export type CatalogueCountryConfig = {
   defaultCommentLang: string
   hashPrefixMain: string
   hashPrefixModifier: string
+  iconicSignOsmValuePart?: string
   pages: CataloguePageConfig[]
 }
 
@@ -163,6 +164,23 @@ export const catalogueWikiConfigs: Record<string, CatalogueCountryConfig> = {
       withCataloguePage(countryWikiConfigs.CA!.pages[0]!, {
         exportName: '_ontario',
         fileName: 'ontario.ts',
+        defaultCategory: 'traffic_sign',
+      }),
+    ],
+  },
+  IT: {
+    prefix: countryWikiConfigs.IT!.prefix,
+    overviewUrl: countryWikiConfigs.IT!.overviewUrl,
+    catalogueName: 'Italian traffic signs',
+    catalogueLocale: 'it',
+    defaultCommentLang: 'it',
+    hashPrefixMain: '',
+    hashPrefixModifier: 'M',
+    iconicSignOsmValuePart: 'II.13',
+    pages: [
+      withCataloguePage(countryWikiConfigs.IT!.pages[0]!, {
+        exportName: '_all',
+        fileName: 'all.ts',
         defaultCategory: 'traffic_sign',
       }),
     ],
