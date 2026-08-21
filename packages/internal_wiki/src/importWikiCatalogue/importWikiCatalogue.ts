@@ -94,8 +94,7 @@ const escapeString = (value: string) => value.replace(/\\/g, '\\\\').replace(/'/
 const emitSignObject = (sign: ParsedWikiRow, defaultCategory: string, overviewUrl: string) => {
   const tags = parseWikiTags(sign.tagsText)
   const sectionCategory = sign.signCategory ?? inferCategory(sign.signId, tags, defaultCategory)
-  const category =
-    tags.some((tag) => tag.key === 'maxspeed') ? 'speed' : sectionCategory
+  const category = tags.some((tag) => tag.key === 'maxspeed') ? 'speed' : sectionCategory
   const kind = sign.kind ?? inferKind(sign.signId, category)
   const imageBlock = sign.imageUrl
     ? `image: {\n      kind: 'remote',\n      sourceUrl: '${escapeString(sign.imageUrl)}',\n      licence: 'Public Domain',\n    },`
