@@ -30,11 +30,11 @@
     "husky": "^9.1.7",
     "nano-staged": "^1.0.2",
     "oxc-plugin-react-compiler": "^0.2.0",
-    "oxfmt": "0.57.0",
-    "oxlint": "1.72.0",
-    "postcss": "^8.5.16",
-    "svgo": "^4.0.0",
-    "vitest": "^4.1.9"
+    "oxfmt": "0.64.0",
+    "oxlint": "1.79.0",
+    "postcss": "^8.5.26",
+    "svgo": "^4.0.2",
+    "vitest": "^4.1.11"
   },
   "nano-staged": {
     "*": "bun run format:files --"
