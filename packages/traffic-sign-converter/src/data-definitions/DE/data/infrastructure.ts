@@ -171,7 +171,7 @@ export const _infrastructure: SignType[] = [
       },
     ],
     questions: [
-      highwayClassQuestion(['path', 'cycleway'], undefined, {
+      highwayClassQuestion(['path', 'cycleway'], 'path', {
         cyclewayRemovesBicycleDesignated: true,
       }),
       ...pathInfrastructureQuestions(),
@@ -218,7 +218,7 @@ export const _infrastructure: SignType[] = [
       },
     ],
     questions: [
-      highwayClassQuestion(['path', 'cycleway'], undefined, {
+      highwayClassQuestion(['path', 'cycleway'], 'path', {
         cyclewayRemovesBicycleDesignated: true,
       }),
       ...pathInfrastructureQuestions(),
@@ -320,7 +320,7 @@ export const _infrastructure: SignType[] = [
         ],
       },
     ],
-    questions: [highwayClassQuestion(['cycleway', 'residential'])],
+    questions: [highwayClassQuestion(['cycleway', 'residential'], 'cycleway')],
     comments: [
       {
         tagReference: 'highway=*',
