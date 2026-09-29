@@ -20,15 +20,16 @@ type Props = {
 export const PackageSvgTrafficSign = ({ sign, className, showSignKey }: Props) => {
   const { countryPrefix } = useCountryPrefix()
 
-  if (isSignSvgMissing(sign) || !hasBundledSvg(countryPrefix, sign)) {
-    return <MissingSvgPlaceholder sign={sign} className={className} showSignKey={showSignKey} />
-  }
-
+  const svgMissing = isSignSvgMissing(sign) || !hasBundledSvg(countryPrefix, sign)
   const filename =
     'svgName' in sign && !!sign.svgName
       ? sign.svgName
       : createSvgImportname(countryPrefix, sign.osmValuePart)
   const { file, loadAttempted } = useLoadedSvg(countryPrefix, filename)
+
+  if (svgMissing) {
+    return <MissingSvgPlaceholder sign={sign} className={className} showSignKey={showSignKey} />
+  }
 
   if (!file && loadAttempted) {
     if (isDev) {

@@ -11,6 +11,7 @@
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "lib": ["es2022"],
+    "types": ["bun"],
 
     /* Strictness */
     "strict": true,

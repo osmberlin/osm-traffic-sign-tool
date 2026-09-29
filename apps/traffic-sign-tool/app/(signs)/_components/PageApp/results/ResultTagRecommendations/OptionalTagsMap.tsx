@@ -12,7 +12,7 @@ import {
   type OptionalTagGuidance,
   type OptionalTagsBySignEntry,
 } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { useCountryPrefix } from '../../../store/CountryPrefixContext'
 import { Tag } from '../../../wiki/Tag'
 import { WikiLinkify } from '../../../wiki/WikiLinkify'

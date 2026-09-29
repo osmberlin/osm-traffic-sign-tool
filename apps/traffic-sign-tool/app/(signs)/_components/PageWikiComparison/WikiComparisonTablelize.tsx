@@ -13,7 +13,7 @@ import { catalogueHtmlLang } from '@app/src/features/routing/lang'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import type { WikiSign } from '@internal/wiki'
 import { SignStateType } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 const isImageUrl = (value: string) => /^(https?:|data:image\/)/i.test(value)
 

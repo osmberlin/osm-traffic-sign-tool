@@ -2,7 +2,7 @@ import { PhotoOffIcon } from '@app/app/(signs)/_components/icons/PhotoOffIcon'
 import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import * as m from '@app/paraglide/messages'
 import type { SignStateType, SignType } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 type Props = {
   sign: Pick<SignType | SignStateType, 'osmValuePart'>

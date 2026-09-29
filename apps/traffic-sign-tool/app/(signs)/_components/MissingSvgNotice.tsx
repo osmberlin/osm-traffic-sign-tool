@@ -11,7 +11,7 @@ import {
   type SignType,
 } from '@osm-traffic-signs/converter'
 import { Link } from '@tanstack/react-router'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 type Props = {
   sign: SignType | SignStateType

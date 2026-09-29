@@ -2,7 +2,7 @@ import { useParamSigns } from '@app/app/(signs)/_components/store/useParamSigns.
 import { TrashIcon } from '@heroicons/react/16/solid'
 import { Bars4Icon } from '@heroicons/react/20/solid'
 import { SignStateType } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { Reorder, useDragControls, useMotionValue } from 'framer-motion'
 import { useState, type PointerEvent } from 'react'
 import { SelectedSignGraphic, SelectedSignLabels } from './SelectedSignImage'

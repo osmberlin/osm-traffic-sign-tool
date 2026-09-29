@@ -7,7 +7,7 @@ import {
   trafficSignTagToSigns,
   type CountryPrefixType,
 } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 type Props = {
   value: string

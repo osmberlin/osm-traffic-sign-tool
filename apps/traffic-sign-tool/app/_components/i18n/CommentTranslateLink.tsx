@@ -7,7 +7,7 @@ import {
   commentLangMatchesUiLocale,
 } from '@app/src/features/i18n/googleTranslateUrl'
 import { LanguageIcon } from '@heroicons/react/16/solid'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 type Props = {
   commentText: string

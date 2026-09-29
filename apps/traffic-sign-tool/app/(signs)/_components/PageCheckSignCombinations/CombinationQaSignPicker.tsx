@@ -5,7 +5,7 @@ import * as m from '@app/paraglide/messages'
 import type { CombinationQaFilter } from '@app/src/features/searchParams/deSearch'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import type { SignType } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 type Props = {
   filteredPrimarySigns: SignType[]

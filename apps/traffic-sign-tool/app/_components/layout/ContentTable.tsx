@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import type { ComponentPropsWithoutRef, ReactNode } from 'react'
 
 export const contentPreClass = 'whitespace-pre-wrap break-words text-xs leading-snug'

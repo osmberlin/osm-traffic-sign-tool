@@ -1,7 +1,7 @@
 import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import * as m from '@app/paraglide/messages'
 import { SignStateType } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { MissingSvgNotice } from '../../MissingSvgNotice'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
 

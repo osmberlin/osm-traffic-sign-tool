@@ -13,7 +13,7 @@ import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { BoltIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
 import { getWikiSnapshotMeta } from '@internal/wiki'
 import { getCountryCatalogueMeta } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 const formatParsedAt = (parsedAt: string, locale: string): string => {
   const date = new Date(parsedAt)

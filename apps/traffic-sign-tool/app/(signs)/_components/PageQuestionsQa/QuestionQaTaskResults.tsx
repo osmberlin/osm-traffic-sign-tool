@@ -10,8 +10,8 @@ import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
-import clsx from 'clsx'
-import { useEffect, useState } from 'react'
+import { clsx } from 'clsx'
+import { useState } from 'react'
 
 type Props = {
   entries: QuestionTaskEntry[]
@@ -20,13 +20,11 @@ type Props = {
 export const QuestionQaTaskResults = ({ entries }: Props) => {
   const countryPrefix = useCurrentLang()
   const generatedIssueBody = formatQuestionsQaTaskResults(entries, countryPrefix)
-  const [issueBody, setIssueBody] = useState(generatedIssueBody)
+  const [edit, setEdit] = useState({ source: generatedIssueBody, body: generatedIssueBody })
+  // Manual edits apply only to the text they were made on; new results reset them.
+  const issueBody = edit.source === generatedIssueBody ? edit.body : generatedIssueBody
   const hasResults = entries.length > 0
   const issueUrl = hasResults ? buildGithubIssueUrl(entries, countryPrefix, issueBody) : undefined
-
-  useEffect(() => {
-    setIssueBody(generatedIssueBody)
-  }, [generatedIssueBody])
 
   return (
     <section
@@ -67,7 +65,7 @@ export const QuestionQaTaskResults = ({ entries }: Props) => {
           </summary>
           <textarea
             value={issueBody}
-            onChange={(event) => setIssueBody(event.target.value)}
+            onChange={(event) => setEdit({ source: generatedIssueBody, body: event.target.value })}
             rows={16}
             spellCheck={false}
             aria-label={m.questions_qa_show_issue_description()}

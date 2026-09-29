@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import type { CSSProperties } from 'react'
 import { SignLoadingShape } from './SignLoadingShapes'
 import './sign-fall.css'

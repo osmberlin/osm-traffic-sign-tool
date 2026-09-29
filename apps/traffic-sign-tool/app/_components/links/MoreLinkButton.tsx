@@ -1,7 +1,7 @@
 import { stonePillButton } from '@app/app/_components/links/buttonStyles'
 import { ExternalLink } from '@app/app/_components/links/ExternalLink'
 import * as m from '@app/paraglide/messages'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 type Props = {
   href: string

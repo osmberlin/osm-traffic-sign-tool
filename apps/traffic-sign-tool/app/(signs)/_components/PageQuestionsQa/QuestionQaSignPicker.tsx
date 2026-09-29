@@ -4,7 +4,7 @@ import * as m from '@app/paraglide/messages'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import type { QuestionsQaCounts } from '@osm-traffic-signs/converter'
 import { signHasQuestions, type SignType } from '@osm-traffic-signs/converter'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 type Props = {
   filteredSigns: SignType[]

@@ -14,7 +14,7 @@ import { getCatalogueLabel } from '@app/src/features/i18n/catalogueLabels'
 import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { BoltIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
 import { getTaginfoSnapshotMeta, getTaginfoTrafficSignKeyUrl } from '@internal/taginfo'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 const formatParsedAt = (parsedAt: string, locale: string): string => {
   const date = new Date(parsedAt)

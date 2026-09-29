@@ -4,7 +4,7 @@ import { useCurrentLang } from '@app/src/features/routing/useCurrentLang'
 import { parseSignsParam } from '@app/src/features/searchParams/deSearch'
 import { BugAntIcon } from '@heroicons/react/16/solid'
 import { useRouterState } from '@tanstack/react-router'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 
 type Props = {
   linkClassName: string
