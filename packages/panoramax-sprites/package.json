@@ -1,0 +1,72 @@
+{
+  "name": "@osm-traffic-signs/panoramax-sprites",
+  "version": "0.0.0",
+  "description": "MapLibre sprite sheets (PNG + JSON) for Panoramax AI traffic-sign detections, generated from the OSM Traffic Sign catalogue.",
+  "keywords": [
+    "maplibre",
+    "openstreetmap",
+    "panoramax",
+    "sprite",
+    "traffic-sign"
+  ],
+  "homepage": "https://www.osm-verkehrswende.org/traffic-signs/",
+  "bugs": {
+    "url": "https://github.com/osmberlin/osm-traffic-sign-tool/issues"
+  },
+  "license": "AGPL-3.0-or-later",
+  "author": "Tobias Jordans <t@tobiasjordans.de> (https://www.osm-verkehrswende.org/traffic-signs/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git",
+    "directory": "packages/panoramax-sprites"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./registry": {
+      "import": "./dist/registry/index.js",
+      "default": "./dist/registry/index.js",
+      "types": "./dist/registry/index.d.ts"
+    },
+    "./data/*": "./dist/data/*",
+    "./sprites/*": "./dist/data/sprites/*"
+  },
+  "scripts": {
+    "bleach": "rm -rf node_modules && rm -rf dist",
+    "build": "bun run build:clean && bun run build:ts && bun run build:copy-data",
+    "build:clean": "rimraf dist",
+    "build:copy-data": "copyfiles -u 1 'src/data/**/*' 'src/registry/*.yaml' dist",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "check": "bun run lint && bun run type-check && bun run test",
+    "check-exports": "attw --pack . --ignore-rules cjs-resolves-to-esm internal-resolution-error no-resolution --profile node16",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "format": "bun run --cwd ../.. format",
+    "format:check": "bun run --cwd ../.. format:check",
+    "generate": "bun run registry:generate && bun run sprites:generate",
+    "lint": "oxlint -c ../../oxlint.config.mjs .",
+    "registry:generate": "bun run ./scripts/generateRegistry.ts && bun run --cwd ../.. format:files -- packages/panoramax-sprites/src/data",
+    "sprites:generate": "bun run ./scripts/generateSprites.ts && bun run --cwd ../.. format:files -- packages/panoramax-sprites/src/data/sprites",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.4",
+    "@internal/svgs": "workspace:*",
+    "@mapbox/shelf-pack": "^3.2.0",
+    "@osm-traffic-signs/converter": "workspace:*",
+    "@resvg/resvg-js": "^2.6.2",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3"
+  }
+}

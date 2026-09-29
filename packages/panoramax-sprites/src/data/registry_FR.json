@@ -1,0 +1,1335 @@
+{
+  "country": "FR",
+  "hasCatalogue": true,
+  "counts": {
+    "ok": 92,
+    "svg-missing": 23,
+    "signId-not-in-tool": 32,
+    "country-not-in-tool": 0
+  },
+  "entries": [
+    {
+      "yolo": "hazard:school",
+      "country": "FR",
+      "osmValue": "FR:A13a",
+      "spriteKey": "A13a",
+      "signId": "A13a",
+      "svgName": "FR_A13a",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:pedestrian_crossing",
+      "country": "FR",
+      "osmValue": "FR:A13b",
+      "spriteKey": "A13b",
+      "signId": "A13b",
+      "svgName": "FR_A13b",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard",
+      "country": "FR",
+      "osmValue": "FR:A14",
+      "spriteKey": "A14",
+      "signId": "A14",
+      "svgName": "FR_A14",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:animals",
+      "country": "FR",
+      "osmValue": "FR:A15a1",
+      "spriteKey": "A15a1",
+      "signId": "A15a1",
+      "svgName": "FR_A15a1",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:animals:sheep",
+      "country": "FR",
+      "osmValue": "FR:A15a2",
+      "spriteKey": null,
+      "signId": "A15a2",
+      "svgName": "FR_A15a2",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:wild_animals",
+      "country": "FR",
+      "osmValue": "FR:A15b",
+      "spriteKey": "A15b",
+      "signId": "A15b",
+      "svgName": "FR_A15b",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:horse",
+      "country": "FR",
+      "osmValue": "FR:A15c",
+      "spriteKey": "A15c",
+      "signId": "A15c",
+      "svgName": "FR_A15c",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:incline:down",
+      "country": "FR",
+      "osmValue": "FR:A16",
+      "spriteKey": "A16",
+      "signId": "A16",
+      "svgName": "FR_A16",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:traffic_signal",
+      "country": "FR",
+      "osmValue": "FR:A17",
+      "spriteKey": "A17",
+      "signId": "A17",
+      "svgName": "FR_A17",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:bothways",
+      "country": "FR",
+      "osmValue": "FR:A18",
+      "spriteKey": "A18",
+      "signId": "A18",
+      "svgName": "FR_A18",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:rocks",
+      "country": "FR",
+      "osmValue": "FR:A19",
+      "spriteKey": "A19",
+      "signId": "A19",
+      "svgName": "FR_A19",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:right_turn",
+      "country": "FR",
+      "osmValue": "FR:A1a",
+      "spriteKey": "A1a",
+      "signId": "A1a",
+      "svgName": "FR_A1a",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:left_turn",
+      "country": "FR",
+      "osmValue": "FR:A1b",
+      "spriteKey": null,
+      "signId": "A1b",
+      "svgName": "FR_A1b",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:zigzag",
+      "country": "FR",
+      "osmValue": "FR:A1c",
+      "spriteKey": "A1c",
+      "signId": "A1c",
+      "svgName": "FR_A1c",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:zigzag:left",
+      "country": "FR",
+      "osmValue": "FR:A1d",
+      "spriteKey": null,
+      "signId": "A1d",
+      "svgName": "FR_A1d",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:dock",
+      "country": "FR",
+      "osmValue": "FR:A20",
+      "spriteKey": "A20",
+      "signId": "A20",
+      "svgName": "FR_A20",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:bicycle",
+      "country": "FR",
+      "osmValue": "FR:A21",
+      "spriteKey": "A21",
+      "signId": "A21",
+      "svgName": "FR_A21",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:airport",
+      "country": "FR",
+      "osmValue": "FR:A23",
+      "spriteKey": "A23",
+      "signId": "A23",
+      "svgName": "FR_A23",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:wind",
+      "country": "FR",
+      "osmValue": "FR:A24",
+      "spriteKey": "A24",
+      "signId": "A24",
+      "svgName": "FR_A24",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:bumps",
+      "country": "FR",
+      "osmValue": "FR:A2a",
+      "spriteKey": "A2a",
+      "signId": "A2a",
+      "svgName": "FR_A2a",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:bump",
+      "country": "FR",
+      "osmValue": "FR:A2b",
+      "spriteKey": null,
+      "signId": "A2b",
+      "svgName": "FR_A2b",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:narrow_both",
+      "country": "FR",
+      "osmValue": "FR:A3",
+      "spriteKey": "A3",
+      "signId": "A3",
+      "svgName": "FR_A3",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:narrow_right",
+      "country": "FR",
+      "osmValue": "FR:A3a",
+      "spriteKey": "A3a",
+      "signId": "A3a",
+      "svgName": "FR_A3a",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:narrow_left",
+      "country": "FR",
+      "osmValue": "FR:A3b",
+      "spriteKey": null,
+      "signId": "A3b",
+      "svgName": "FR_A3b",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:slippery",
+      "country": "FR",
+      "osmValue": "FR:A4",
+      "spriteKey": null,
+      "signId": "A4",
+      "svgName": "FR_A4",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:moving_bridge",
+      "country": "FR",
+      "osmValue": "FR:A6",
+      "spriteKey": "A6",
+      "signId": "A6",
+      "svgName": "FR_A6",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:level_crossing",
+      "country": "FR",
+      "osmValue": "FR:A7",
+      "spriteKey": "A7",
+      "signId": "A7",
+      "svgName": "FR_A7",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:train",
+      "country": "FR",
+      "osmValue": "FR:A8",
+      "spriteKey": "A8",
+      "signId": "A8",
+      "svgName": "FR_A8",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:tram",
+      "country": "FR",
+      "osmValue": "FR:A9",
+      "spriteKey": null,
+      "signId": "A9",
+      "svgName": "FR_A9",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:bus",
+      "country": "FR",
+      "osmValue": "FR:A9a",
+      "spriteKey": null,
+      "signId": "A9a",
+      "svgName": "FR_A9a",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "hazard:crossing",
+      "country": "FR",
+      "osmValue": "FR:AB1",
+      "spriteKey": "AB1",
+      "signId": "AB1",
+      "svgName": "FR_AB1",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:intersection",
+      "country": "FR",
+      "osmValue": "FR:AB2",
+      "spriteKey": "AB2",
+      "signId": "AB2",
+      "svgName": "FR_AB2",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:roundabout",
+      "country": "FR",
+      "osmValue": "FR:AB25",
+      "spriteKey": "AB25",
+      "signId": "AB25",
+      "svgName": "FR_AB25",
+      "status": "ok"
+    },
+    {
+      "yolo": "give_way",
+      "country": "FR",
+      "osmValue": "FR:AB3",
+      "spriteKey": null,
+      "signId": "AB3",
+      "svgName": "FR_AB3",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "stop",
+      "country": "FR",
+      "osmValue": "FR:AB4",
+      "spriteKey": "AB4",
+      "signId": "AB4",
+      "svgName": "FR_AB4",
+      "status": "ok"
+    },
+    {
+      "yolo": "priority:start",
+      "country": "FR",
+      "osmValue": "FR:AB6",
+      "spriteKey": "AB6",
+      "signId": "AB6",
+      "svgName": "FR_AB6",
+      "status": "ok"
+    },
+    {
+      "yolo": "priority:end",
+      "country": "FR",
+      "osmValue": "FR:AB7",
+      "spriteKey": "AB7",
+      "signId": "AB7",
+      "svgName": "FR_AB7",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:gravel",
+      "country": "FR",
+      "osmValue": "FR:AK22",
+      "spriteKey": null,
+      "signId": "AK22",
+      "svgName": "FR_AK22",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:fog",
+      "country": "FR",
+      "osmValue": "FR:AK32",
+      "spriteKey": null,
+      "signId": "AK32",
+      "svgName": "FR_AK32",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "hazard:road_works",
+      "country": "FR",
+      "osmValue": "FR:AK5",
+      "spriteKey": null,
+      "signId": "AK5",
+      "svgName": "FR_AK5",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "no_way",
+      "country": "FR",
+      "osmValue": "FR:B0",
+      "spriteKey": "B0",
+      "signId": "B0",
+      "svgName": "FR_B0",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_entry",
+      "country": "FR",
+      "osmValue": "FR:B1",
+      "spriteKey": "B1",
+      "signId": "B1",
+      "svgName": "FR_B1",
+      "status": "ok"
+    },
+    {
+      "yolo": "maxlength",
+      "country": "FR",
+      "osmValue": "FR:B10a",
+      "spriteKey": "B10a",
+      "signId": "B10a",
+      "svgName": "FR_B10a",
+      "status": "ok"
+    },
+    {
+      "yolo": "maxwidth",
+      "country": "FR",
+      "osmValue": "FR:B11",
+      "spriteKey": "B11",
+      "signId": "B11",
+      "svgName": "FR_B11",
+      "status": "ok"
+    },
+    {
+      "yolo": "maxheight",
+      "country": "FR",
+      "osmValue": "FR:B12",
+      "spriteKey": "B12",
+      "signId": "B12",
+      "svgName": "FR_B12",
+      "status": "ok"
+    },
+    {
+      "yolo": "maxweight",
+      "country": "FR",
+      "osmValue": "FR:B13",
+      "spriteKey": "B13",
+      "signId": "B13",
+      "svgName": "FR_B13",
+      "status": "ok"
+    },
+    {
+      "yolo": "maxaxleweight",
+      "country": "FR",
+      "osmValue": "FR:B13a",
+      "spriteKey": "B13a",
+      "signId": "B13a",
+      "svgName": "FR_B13a",
+      "status": "ok"
+    },
+    {
+      "yolo": "maxspeed:10",
+      "country": "FR",
+      "osmValue": "FR:B14[10]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:100",
+      "country": "FR",
+      "osmValue": "FR:B14[100]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:110",
+      "country": "FR",
+      "osmValue": "FR:B14[110]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:120",
+      "country": "FR",
+      "osmValue": "FR:B14[120]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:130",
+      "country": "FR",
+      "osmValue": "FR:B14[130]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:15",
+      "country": "FR",
+      "osmValue": "FR:B14[15]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:20",
+      "country": "FR",
+      "osmValue": "FR:B14[20]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:25",
+      "country": "FR",
+      "osmValue": "FR:B14[25]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:30",
+      "country": "FR",
+      "osmValue": "FR:B14[30]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:40",
+      "country": "FR",
+      "osmValue": "FR:B14[40]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:5",
+      "country": "FR",
+      "osmValue": "FR:B14[5]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:50",
+      "country": "FR",
+      "osmValue": "FR:B14[50]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:60",
+      "country": "FR",
+      "osmValue": "FR:B14[60]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:70",
+      "country": "FR",
+      "osmValue": "FR:B14[70]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:80",
+      "country": "FR",
+      "osmValue": "FR:B14[80]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "maxspeed:90",
+      "country": "FR",
+      "osmValue": "FR:B14[90]",
+      "spriteKey": null,
+      "signId": "B14",
+      "svgName": "FR_B14",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "priority:backward",
+      "country": "FR",
+      "osmValue": "FR:B15",
+      "spriteKey": "B15",
+      "signId": "B15",
+      "svgName": "FR_B15",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_horn",
+      "country": "FR",
+      "osmValue": "FR:B16",
+      "spriteKey": "B16",
+      "signId": "B16",
+      "svgName": "FR_B16",
+      "status": "ok"
+    },
+    {
+      "yolo": "min_distance",
+      "country": "FR",
+      "osmValue": "FR:B17",
+      "spriteKey": null,
+      "signId": "B17",
+      "svgName": "FR_B17",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "no_dangerous_explosive",
+      "country": "FR",
+      "osmValue": "FR:B18a",
+      "spriteKey": "B18a",
+      "signId": "B18a",
+      "svgName": "FR_B18a",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_dangerous_liquid",
+      "country": "FR",
+      "osmValue": "FR:B18b",
+      "spriteKey": "B18b",
+      "signId": "B18b",
+      "svgName": "FR_B18b",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_dangerous",
+      "country": "FR",
+      "osmValue": "FR:B18c",
+      "spriteKey": "B18c",
+      "signId": "B18c",
+      "svgName": "FR_B18c",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_right",
+      "country": "FR",
+      "osmValue": "FR:B21-1",
+      "spriteKey": "B21-1",
+      "signId": "B21-1",
+      "svgName": "FR_B21_1",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_left",
+      "country": "FR",
+      "osmValue": "FR:B21-2",
+      "spriteKey": "B21-2",
+      "signId": "B21-2",
+      "svgName": "FR_B21_2",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_right_down",
+      "country": "FR",
+      "osmValue": "FR:B21a1",
+      "spriteKey": "B21a1",
+      "signId": "B21a1",
+      "svgName": "FR_B21a1",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_left_down",
+      "country": "FR",
+      "osmValue": "FR:B21a2",
+      "spriteKey": "B21a2",
+      "signId": "B21a2",
+      "svgName": "FR_B21a2",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_through",
+      "country": "FR",
+      "osmValue": "FR:B21b",
+      "spriteKey": "B21b",
+      "signId": "B21b",
+      "svgName": "FR_B21b",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_turn_right",
+      "country": "FR",
+      "osmValue": "FR:B21c1",
+      "spriteKey": "B21c1",
+      "signId": "B21c1",
+      "svgName": "FR_B21c1",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_turn_left",
+      "country": "FR",
+      "osmValue": "FR:B21c2",
+      "spriteKey": "B21c2",
+      "signId": "B21c2",
+      "svgName": "FR_B21c2",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_turn_left_through",
+      "country": "FR",
+      "osmValue": "FR:B21d1",
+      "spriteKey": "B21d1",
+      "signId": "B21d1",
+      "svgName": "FR_B21d1",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_turn_right_through",
+      "country": "FR",
+      "osmValue": "FR:B21d2",
+      "spriteKey": "B21d2",
+      "signId": "B21d2",
+      "svgName": "FR_B21d2",
+      "status": "ok"
+    },
+    {
+      "yolo": "arrow_turn_left_right",
+      "country": "FR",
+      "osmValue": "FR:B21e",
+      "spriteKey": "B21e",
+      "signId": "B21e",
+      "svgName": "FR_B21e",
+      "status": "ok"
+    },
+    {
+      "yolo": "bicycle:start",
+      "country": "FR",
+      "osmValue": "FR:B22a",
+      "spriteKey": "B22a",
+      "signId": "B22a",
+      "svgName": "FR_B22a",
+      "status": "ok"
+    },
+    {
+      "yolo": "pedestrian:start",
+      "country": "FR",
+      "osmValue": "FR:B22b",
+      "spriteKey": "B22b",
+      "signId": "B22b",
+      "svgName": "FR_B22b",
+      "status": "ok"
+    },
+    {
+      "yolo": "horse:start",
+      "country": "FR",
+      "osmValue": "FR:B22c",
+      "spriteKey": "B22c",
+      "signId": "B22c",
+      "svgName": "FR_B22c",
+      "status": "ok"
+    },
+    {
+      "yolo": "min_speed",
+      "country": "FR",
+      "osmValue": "FR:B25",
+      "spriteKey": "B25",
+      "signId": "B25",
+      "svgName": "FR_B25",
+      "status": "ok"
+    },
+    {
+      "yolo": "chains",
+      "country": "FR",
+      "osmValue": "FR:B26",
+      "spriteKey": "B26",
+      "signId": "B26",
+      "svgName": "FR_B26",
+      "status": "ok"
+    },
+    {
+      "yolo": "bus:start",
+      "country": "FR",
+      "osmValue": "FR:B27a",
+      "spriteKey": "B27a",
+      "signId": "B27a",
+      "svgName": "FR_B27a",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_turn:left",
+      "country": "FR",
+      "osmValue": "FR:B2a",
+      "spriteKey": "B2a",
+      "signId": "B2a",
+      "svgName": "FR_B2a",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_turn:right",
+      "country": "FR",
+      "osmValue": "FR:B2b",
+      "spriteKey": "B2b",
+      "signId": "B2b",
+      "svgName": "FR_B2b",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_u_turn",
+      "country": "FR",
+      "osmValue": "FR:B2c",
+      "spriteKey": "B2c",
+      "signId": "B2c",
+      "svgName": "FR_B2c",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_overtaking",
+      "country": "FR",
+      "osmValue": "FR:B3",
+      "spriteKey": "B3",
+      "signId": "B3",
+      "svgName": "FR_B3",
+      "status": "ok"
+    },
+    {
+      "yolo": "zone:30",
+      "country": "FR",
+      "osmValue": "FR:B30",
+      "spriteKey": null,
+      "signId": "B30",
+      "svgName": "FR_B30",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "no:end",
+      "country": "FR",
+      "osmValue": "FR:B31",
+      "spriteKey": "B31",
+      "signId": "B31",
+      "svgName": "FR_B31",
+      "status": "ok"
+    },
+    {
+      "yolo": "maxspeed:end",
+      "country": "FR",
+      "osmValue": "FR:B33",
+      "spriteKey": null,
+      "signId": "B33",
+      "svgName": "FR_B33",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "no_overtaking:hgv",
+      "country": "FR",
+      "osmValue": "FR:B3a",
+      "spriteKey": "B3a",
+      "signId": "B3a",
+      "svgName": "FR_B3a",
+      "status": "ok"
+    },
+    {
+      "yolo": "customs",
+      "country": "FR",
+      "osmValue": "FR:B4",
+      "spriteKey": "B4",
+      "signId": "B4",
+      "svgName": "FR_B4",
+      "status": "ok"
+    },
+    {
+      "yolo": "bicycle:end",
+      "country": "FR",
+      "osmValue": "FR:B40",
+      "spriteKey": null,
+      "signId": "B40",
+      "svgName": "FR_B40",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "pedestrian:end",
+      "country": "FR",
+      "osmValue": "FR:B41",
+      "spriteKey": null,
+      "signId": "B41",
+      "svgName": "FR_B41",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "horse:end",
+      "country": "FR",
+      "osmValue": "FR:B42",
+      "spriteKey": null,
+      "signId": "B42",
+      "svgName": "FR_B42",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "min_speed:end",
+      "country": "FR",
+      "osmValue": "FR:B43",
+      "spriteKey": null,
+      "signId": "B43",
+      "svgName": "FR_B43",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "chains:end",
+      "country": "FR",
+      "osmValue": "FR:B44",
+      "spriteKey": null,
+      "signId": "B44",
+      "svgName": "FR_B44",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "bus:stop",
+      "country": "FR",
+      "osmValue": "FR:B45a",
+      "spriteKey": null,
+      "signId": "B45a",
+      "svgName": "FR_B45a",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "halt",
+      "country": "FR",
+      "osmValue": "FR:B5",
+      "spriteKey": null,
+      "signId": "B5",
+      "svgName": "FR_B5",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "zone:no_parking:end",
+      "country": "FR",
+      "osmValue": "FR:B50a",
+      "spriteKey": null,
+      "signId": "B50a",
+      "svgName": "FR_B50a",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "zone:30:end",
+      "country": "FR",
+      "osmValue": "FR:B51",
+      "spriteKey": "B51",
+      "signId": "B51",
+      "svgName": "FR_B51",
+      "status": "ok"
+    },
+    {
+      "yolo": "zone:calm",
+      "country": "FR",
+      "osmValue": "FR:B52",
+      "spriteKey": "B52",
+      "signId": "B52",
+      "svgName": "FR_B52",
+      "status": "ok"
+    },
+    {
+      "yolo": "zone:calm:end",
+      "country": "FR",
+      "osmValue": "FR:B53",
+      "spriteKey": "B53",
+      "signId": "B53",
+      "svgName": "FR_B53",
+      "status": "ok"
+    },
+    {
+      "yolo": "zone:pedestrian",
+      "country": "FR",
+      "osmValue": "FR:B54",
+      "spriteKey": "B54",
+      "signId": "B54",
+      "svgName": "FR_B54",
+      "status": "ok"
+    },
+    {
+      "yolo": "zone:pedestrian:end",
+      "country": "FR",
+      "osmValue": "FR:B55",
+      "spriteKey": "B55",
+      "signId": "B55",
+      "svgName": "FR_B55",
+      "status": "ok"
+    },
+    {
+      "yolo": "zone:low_emission",
+      "country": "FR",
+      "osmValue": "FR:B56",
+      "spriteKey": null,
+      "signId": "B56",
+      "svgName": "FR_B56",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "zone:low_emission:end",
+      "country": "FR",
+      "osmValue": "FR:B57",
+      "spriteKey": null,
+      "signId": "B57",
+      "svgName": "FR_B57",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "no_parking",
+      "country": "FR",
+      "osmValue": "FR:B6a1",
+      "spriteKey": "B6a1",
+      "signId": "B6a1",
+      "svgName": "FR_B6a1",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_parking:1-15",
+      "country": "FR",
+      "osmValue": "FR:B6a2",
+      "spriteKey": "B6a2",
+      "signId": "B6a2",
+      "svgName": "FR_B6a2",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_parking:16-31",
+      "country": "FR",
+      "osmValue": "FR:B6a3",
+      "spriteKey": "B6a3",
+      "signId": "B6a3",
+      "svgName": "FR_B6a3",
+      "status": "ok"
+    },
+    {
+      "yolo": "zone:no_parking",
+      "country": "FR",
+      "osmValue": "FR:B6b1",
+      "spriteKey": null,
+      "signId": "B6b1",
+      "svgName": "FR_B6b1",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "zone:parking:alternate",
+      "country": "FR",
+      "osmValue": "FR:B6b2",
+      "spriteKey": null,
+      "signId": "B6b2",
+      "svgName": "FR_B6b2",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "zone:parking:disc",
+      "country": "FR",
+      "osmValue": "FR:B6b3",
+      "spriteKey": null,
+      "signId": "B6b3",
+      "svgName": "FR_B6b3",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "zone:parking:meter",
+      "country": "FR",
+      "osmValue": "FR:B6b4",
+      "spriteKey": null,
+      "signId": "B6b4",
+      "svgName": "FR_B6b4",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "no_stop",
+      "country": "FR",
+      "osmValue": "FR:B6d",
+      "spriteKey": "B6d",
+      "signId": "B6d",
+      "svgName": "FR_B6d",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_car_motorcycle",
+      "country": "FR",
+      "osmValue": "FR:B7a",
+      "spriteKey": "B7a",
+      "signId": "B7a",
+      "svgName": "FR_B7a",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_hgv",
+      "country": "FR",
+      "osmValue": "FR:B8",
+      "spriteKey": "B8",
+      "signId": "B8",
+      "svgName": "FR_B8",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_pedestrian",
+      "country": "FR",
+      "osmValue": "FR:B9a",
+      "spriteKey": "B9a",
+      "signId": "B9a",
+      "svgName": "FR_B9a",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_bicycle",
+      "country": "FR",
+      "osmValue": "FR:B9b",
+      "spriteKey": "B9b",
+      "signId": "B9b",
+      "svgName": "FR_B9b",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_agriculture",
+      "country": "FR",
+      "osmValue": "FR:B9d",
+      "spriteKey": "B9d",
+      "signId": "B9d",
+      "svgName": "FR_B9d",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_bus",
+      "country": "FR",
+      "osmValue": "FR:B9f",
+      "spriteKey": "B9f",
+      "signId": "B9f",
+      "svgName": "FR_B9f",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_car_trailer",
+      "country": "FR",
+      "osmValue": "FR:B9i",
+      "spriteKey": "B9i",
+      "signId": "B9i",
+      "svgName": "FR_B9i",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_trailer",
+      "country": "FR",
+      "osmValue": "FR:B9i",
+      "spriteKey": "B9i",
+      "signId": "B9i",
+      "svgName": "FR_B9i",
+      "status": "ok"
+    },
+    {
+      "yolo": "motorway:end",
+      "country": "FR",
+      "osmValue": "FR:C",
+      "spriteKey": null,
+      "signId": "C",
+      "svgName": "FR_C",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "tunnel:start",
+      "country": "FR",
+      "osmValue": "FR:C111",
+      "spriteKey": "C111",
+      "signId": "C111",
+      "svgName": "FR_C111",
+      "status": "ok"
+    },
+    {
+      "yolo": "tunnel:end",
+      "country": "FR",
+      "osmValue": "FR:C112",
+      "spriteKey": null,
+      "signId": "C112",
+      "svgName": "FR_C112",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "no_exit",
+      "country": "FR",
+      "osmValue": "FR:C13a",
+      "spriteKey": "C13a",
+      "signId": "C13a",
+      "svgName": "FR_C13a",
+      "status": "ok"
+    },
+    {
+      "yolo": "no_exit:car",
+      "country": "FR",
+      "osmValue": "FR:C13d",
+      "spriteKey": null,
+      "signId": "C13d",
+      "svgName": "FR_C13d",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "priority:forward",
+      "country": "FR",
+      "osmValue": "FR:C18",
+      "spriteKey": "C18",
+      "signId": "C18",
+      "svgName": "FR_C18",
+      "status": "ok"
+    },
+    {
+      "yolo": "parking",
+      "country": "FR",
+      "osmValue": "FR:C1a",
+      "spriteKey": null,
+      "signId": "C1a",
+      "svgName": "FR_C1a",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "parking:disc",
+      "country": "FR",
+      "osmValue": "FR:C1b",
+      "spriteKey": "C1b",
+      "signId": "C1b",
+      "svgName": "FR_C1b",
+      "status": "ok"
+    },
+    {
+      "yolo": "parking:meter",
+      "country": "FR",
+      "osmValue": "FR:C1c",
+      "spriteKey": "C1c",
+      "signId": "C1c",
+      "svgName": "FR_C1c",
+      "status": "ok"
+    },
+    {
+      "yolo": "pedestrian_crossing",
+      "country": "FR",
+      "osmValue": "FR:C20a",
+      "spriteKey": "C20a",
+      "signId": "C20a",
+      "svgName": "FR_C20a",
+      "status": "ok"
+    },
+    {
+      "yolo": "escape_lane",
+      "country": "FR",
+      "osmValue": "FR:C26",
+      "spriteKey": null,
+      "signId": "C26",
+      "svgName": "FR_C26",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "traffic_calming",
+      "country": "FR",
+      "osmValue": "FR:C27",
+      "spriteKey": "C27",
+      "signId": "C27",
+      "svgName": "FR_C27",
+      "status": "ok"
+    },
+    {
+      "yolo": "lanes",
+      "country": "FR",
+      "osmValue": "FR:C28",
+      "spriteKey": "C28",
+      "signId": "C28",
+      "svgName": "FR_C28",
+      "status": "ok"
+    },
+    {
+      "yolo": "hazard:fire",
+      "country": "FR",
+      "osmValue": "FR:C3",
+      "spriteKey": "C3",
+      "signId": "C3",
+      "svgName": "FR_C3",
+      "status": "ok"
+    },
+    {
+      "yolo": "speed",
+      "country": "FR",
+      "osmValue": "FR:C4a",
+      "spriteKey": null,
+      "signId": "C4a",
+      "svgName": "FR_C4a",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "speed:end",
+      "country": "FR",
+      "osmValue": "FR:C4b",
+      "spriteKey": null,
+      "signId": "C4b",
+      "svgName": "FR_C4b",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "parking:taxi",
+      "country": "FR",
+      "osmValue": "FR:C5",
+      "spriteKey": "C5",
+      "signId": "C5",
+      "svgName": "FR_C5",
+      "status": "ok"
+    },
+    {
+      "yolo": "rest",
+      "country": "FR",
+      "osmValue": "FR:C8",
+      "spriteKey": "C8",
+      "signId": "C8",
+      "svgName": "FR_C8",
+      "status": "ok"
+    },
+    {
+      "yolo": "info:radio",
+      "country": "FR",
+      "osmValue": "FR:CE22",
+      "spriteKey": null,
+      "signId": "CE22",
+      "svgName": "FR_CE22",
+      "status": "signId-not-in-tool"
+    },
+    {
+      "yolo": "information",
+      "country": "FR",
+      "osmValue": "FR:CE3a",
+      "spriteKey": "CE3a",
+      "signId": "CE3a",
+      "svgName": "FR_CE3a",
+      "status": "ok"
+    },
+    {
+      "yolo": "city:start",
+      "country": "FR",
+      "osmValue": "FR:EB10",
+      "spriteKey": null,
+      "signId": "EB10",
+      "svgName": "FR_EB10",
+      "status": "svg-missing"
+    },
+    {
+      "yolo": "city:end",
+      "country": "FR",
+      "osmValue": "FR:EB20",
+      "spriteKey": null,
+      "signId": "EB20",
+      "svgName": "FR_EB20",
+      "status": "svg-missing"
+    }
+  ]
+}

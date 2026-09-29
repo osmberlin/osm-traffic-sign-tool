@@ -1,0 +1,22 @@
+{
+  "sheets": [
+    {
+      "country": "BE",
+      "spriteBaseName": "trafficsigns_be",
+      "keyCount": 114,
+      "unsupportedKeys": ["F111", "F113", "F45b"]
+    },
+    {
+      "country": "DE",
+      "spriteBaseName": "trafficsigns_de",
+      "keyCount": 68,
+      "unsupportedKeys": []
+    },
+    {
+      "country": "FR",
+      "spriteBaseName": "trafficsigns_fr",
+      "keyCount": 93,
+      "unsupportedKeys": []
+    }
+  ]
+}
