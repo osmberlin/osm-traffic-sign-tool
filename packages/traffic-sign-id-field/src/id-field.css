@@ -1,0 +1,286 @@
+.form-field-input-traffic-sign {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 100%;
+}
+
+/* Like the raw tag editor: no outer box — every sign is its own row box,
+ * with the add-row as one more row-shaped box below. */
+.form-field-input-traffic-sign .traffic-sign-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex: 1 1 100%;
+  background: transparent;
+  border: 0;
+  display: block;
+}
+
+.form-field-input-traffic-sign .traffic-sign-list.full-line-chips .traffic-sign-row.chip {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.traffic-sign-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 2px 3px 0;
+  margin-top: 3px;
+  border: 1px solid var(--nested-border-color);
+  border-radius: 4px;
+  background: var(--nested-bg-color);
+}
+
+.traffic-sign-row.dragging {
+  opacity: 0.85;
+  z-index: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.traffic-sign-row__drag {
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  padding: 6px 1px;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--muted-text-color);
+  touch-action: none;
+}
+
+.traffic-sign-row__drag:active {
+  cursor: grabbing;
+}
+
+.traffic-sign-row__drag:focus-visible {
+  outline: 1px solid var(--link-color);
+  outline-offset: 1px;
+  border-radius: 2px;
+}
+
+.traffic-sign-empty {
+  padding: 6px 4px;
+  color: var(--muted-text-color);
+  font-size: 12px;
+}
+
+.traffic-sign-row__remove {
+  flex: 0 0 auto;
+  width: 26px;
+  height: auto;
+  align-self: stretch;
+  border: 0;
+  border-left: 1px solid var(--nested-border-color);
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.traffic-sign-row__remove:not(:hover):not(:active):not(:focus) {
+  background: none;
+}
+
+.traffic-sign-row__remove .icon {
+  opacity: 0.5;
+  fill: var(--text-color);
+}
+
+.traffic-sign-row__icon {
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.traffic-sign-row__img {
+  max-width: 36px;
+  max-height: 36px;
+  object-fit: contain;
+}
+
+/* Placeholder for unrecognized signs: same footprint as the sign images
+   (fills the 36px figure), styled as a muted dashed "empty sign" tile. */
+.traffic-sign-row__unknown {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px dashed var(--muted-text-color);
+  color: var(--muted-text-color);
+  background: transparent;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.traffic-sign-row__body {
+  min-width: 0;
+}
+
+.traffic-sign-row__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  color: var(--text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.traffic-sign-row__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1px;
+  min-width: 0;
+}
+
+/* iD styles `code` with a background box — render the ID as plain muted text. */
+.traffic-sign-row__code {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--muted-text-color);
+  white-space: nowrap;
+  background: none;
+  padding: 0;
+}
+
+.traffic-sign-row__value-prompt {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+}
+
+.traffic-sign-row__value-label {
+  font-size: 11px;
+  font-weight: normal;
+  color: var(--muted-text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.traffic-sign-row__value-input {
+  flex: 0 0 auto;
+  width: 60px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 1px 4px;
+  font-size: 11px;
+  height: auto;
+  min-height: 0;
+}
+
+.traffic-sign-row__value-input:focus {
+  border-color: var(--link-color);
+  outline: none;
+}
+
+.traffic-sign-add-row {
+  width: 100%;
+  flex: 1 1 100%;
+  margin-top: 3px;
+  border: 1px solid var(--nested-border-color);
+  border-radius: 4px;
+  background: var(--bg-color);
+  position: relative;
+}
+
+.traffic-sign-add-row input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-color);
+  padding: 5px 8px;
+}
+
+.traffic-sign-add-row input::placeholder {
+  color: var(--muted-text-color);
+}
+
+.field-label .traffic-sign-tool-link {
+  display: none;
+}
+
+.present:not(.locked) .field-label .traffic-sign-tool-link {
+  display: inline-block;
+}
+
+.field-label .traffic-sign-tool-link:not(:hover):not(:active):not(:focus) {
+  background: none;
+}
+
+.field-label .traffic-sign-tool-link .icon {
+  opacity: 0.5;
+  fill: var(--text-color);
+}
+
+.tag-reference-body .traffic-sign-order-hint {
+  margin-top: 0.5em;
+}
+
+/* Search dropdown: sign image + name + code per option */
+div[class*='combobox-traffic-sign'] .combobox-option {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+div[class*='combobox-traffic-sign'] .combobox-option-label {
+  display: block;
+}
+
+.traffic-sign-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.traffic-sign-option__img {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.traffic-sign-option__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.traffic-sign-option__title {
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.traffic-sign-option__code {
+  font-size: 11px;
+  color: var(--muted-text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: none;
+  padding: 0;
+}

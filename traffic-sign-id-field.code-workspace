@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "osm-traffic-sign-tools (id-field)",
+      "path": ".",
+    },
+    {
+      "name": "iD-traffic-sign-field",
+      "path": "../iD-traffic-sign-field",
+    },
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+    },
+  },
+}

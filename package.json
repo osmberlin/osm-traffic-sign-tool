@@ -8,10 +8,11 @@
   "scripts": {
     "bleach": "bun run --filter '*' bleach && rm -rf node_modules",
     "build": "bun run build:packages && bun run --cwd apps/traffic-sign-tool build",
-    "build:packages": "bun run --cwd packages/traffic-sign-converter build && bun run --cwd packages/internal_taginfo build && bun run --cwd packages/internal_svgs build && bun run --cwd packages/internal_wiki build",
+    "build:packages": "bun run --cwd packages/traffic-sign-converter build && bun run --cwd packages/internal_taginfo build && bun run --cwd packages/internal_svgs build && bun run --cwd packages/internal_wiki build && bun run --cwd packages/traffic-sign-id-field build",
     "check": "bun run format && bun run --filter '*' check",
     "check:clean-build": "bun run ./script-check-clean-build.ts",
     "dev": "bun run --parallel --filter '*' dev",
+    "dev:id-field": "bun run --cwd packages/traffic-sign-id-field dev",
     "format": "oxfmt --config ./oxfmt.config.mjs --write .",
     "format:check": "oxfmt --config ./oxfmt.config.mjs --check .",
     "format:files": "oxfmt --config ./oxfmt.config.mjs --write",
