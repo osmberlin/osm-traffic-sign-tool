@@ -284,3 +284,56 @@ div[class*='combobox-traffic-sign'] .combobox-option-label {
   background: none;
   padding: 0;
 }
+
+/* Tags the changed sign implies, below the field, with one apply button */
+.traffic-sign-suggestions {
+  flex-basis: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border: 1px solid var(--nested-border-color);
+  border-radius: 4px;
+  background: var(--nested-bg-color);
+  font-size: 12px;
+}
+
+.traffic-sign-suggestions__header {
+  font-weight: bold;
+}
+
+.traffic-sign-suggestions__list {
+  list-style: none;
+  margin: 6px 0;
+  padding: 0;
+}
+
+.traffic-sign-suggestions__item {
+  margin: 4px 0;
+}
+
+.traffic-sign-suggestions__item--add code::before {
+  content: '+ ';
+}
+
+.traffic-sign-suggestions__item--change code::before {
+  content: '~ ';
+}
+
+.traffic-sign-suggestions__item--remove code::before {
+  content: '− ';
+}
+
+.traffic-sign-suggestions__item--remove code {
+  text-decoration: line-through;
+}
+
+.traffic-sign-suggestions__reason {
+  display: block;
+  color: var(--muted-text-color);
+}
+
+.traffic-sign-suggestions button.traffic-sign-suggestions__apply {
+  height: auto;
+  padding: 4px 10px;
+}

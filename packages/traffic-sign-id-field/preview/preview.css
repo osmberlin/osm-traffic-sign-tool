@@ -141,6 +141,7 @@ header p {
 
 #tag-output {
   display: block;
+  white-space: pre-wrap;
   word-break: break-all;
 }
 
