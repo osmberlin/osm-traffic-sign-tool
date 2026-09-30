@@ -36,6 +36,20 @@ Override the iD worktree path:
 ID_WORKTREE=/path/to/iD-traffic-sign-field bun run sync:id-worktree
 ```
 
+## Tag suggestions
+
+When the mapper changes the sign, the field lists the tags the new sign implies below the sign list, with one button to apply them (`signTagPlan.ts`):
+
+- add or change the tags from the converter's `signsToTags` (`highway` only on separate paths; a road ignores signs meant for another kind of way),
+- normalize the sign value (`DE:241` → `DE:241-30`),
+- remove tags that only the previous sign implied, or restore their downloaded value.
+
+Road side keys (`cycleway:right:traffic_sign`) get side keys for `bicycle`, `foot` and `segregated`. Unchanged signs show nothing, so existing ways are left alone.
+
+The field compares with the sign before the change in this session, else with the downloaded version from `context.history().base()`. Pass `suggestTags: false` in the adapters when the host editor suggests tags itself. Strings use the `traffic_sign_field.suggestions.*` keys with English fallbacks.
+
+Try it in the standalone preview (`bun run preview`): pick "Cycleway, DE:237" and replace the sign with `240`.
+
 ## Build outputs
 
 - `dist/id-field.js` — IIFE bundle for lazy `<script>` load in iD (`globalThis.OsmTrafficSignIdField`)

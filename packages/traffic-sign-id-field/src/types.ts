@@ -17,6 +17,10 @@ export type TrafficSignFieldContext = {
   graph: () => { entity: (id: string) => { tags: Record<string, string> } }
   cleanTagValue: (value: string) => string
   asset: (path: string) => string
+  /** iD's history; its base graph holds the downloaded tags (for tag suggestions) */
+  history?: () => {
+    base: () => { hasEntity: (id: string) => { tags: Record<string, string> } | undefined }
+  }
 }
 
 export type ComboboxInstance = {
@@ -122,6 +126,11 @@ export type TrafficSignFieldAdapters = {
   loadConverter: () => Promise<ConverterModule>
   loadCountryCatalogue: (countryPrefix: CountryPrefixType) => Promise<CountryCatalogueModule>
   getSvgAssetUrl: (countryPrefix: CountryPrefixType, svgName: string) => string
+  /**
+   * Show the tags a changed sign implies below the field, with a button to apply them.
+   * Default `true`; turn off when the host editor suggests tags itself.
+   */
+  suggestTags?: boolean
 }
 
 export type SignRowData = {

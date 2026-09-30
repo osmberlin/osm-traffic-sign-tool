@@ -19,24 +19,61 @@ import {
   utilTotalExtent,
 } from './adapters.js'
 
-const EXAMPLES = [
-  'DE:274[30],1020-30',
-  'DE:240',
-  'DE:244.1,1022-10',
-  'DE:city_limit',
-  'DE:274[30];DE:everything-is-fine',
-  '',
+type Tags = Record<string, string | undefined>
+
+// Each example is the "downloaded" version of a way; change its sign in the field to see
+// the suggested tags (e.g. DE:237 → DE:240 on the cycleway).
+const EXAMPLES: { label: string; tags: Tags }[] = [
+  {
+    label: 'Cycleway, DE:237',
+    tags: { highway: 'cycleway', bicycle: 'designated', traffic_sign: 'DE:237' },
+  },
+  {
+    label: 'Path, DE:241 (not normalized)',
+    tags: {
+      highway: 'path',
+      bicycle: 'designated',
+      foot: 'designated',
+      segregated: 'yes',
+      traffic_sign: 'DE:241',
+    },
+  },
+  {
+    label: 'Road, DE:274[30],1020-30',
+    tags: { highway: 'residential', traffic_sign: 'DE:274[30],1020-30' },
+  },
+  {
+    label: 'Road, DE:244.1,1022-10',
+    tags: { highway: 'residential', traffic_sign: 'DE:244.1,1022-10' },
+  },
+  { label: 'Road, DE:city_limit', tags: { highway: 'residential', traffic_sign: 'DE:city_limit' } },
+  {
+    label: 'Road, unknown sign',
+    tags: { highway: 'residential', traffic_sign: 'DE:274[30];DE:everything-is-fine' },
+  },
+  { label: 'Road, no sign', tags: { highway: 'residential' } },
 ]
 
 const appNode = document.querySelector('#app')
 if (!appNode) throw new Error('missing #app')
 const app = d3_select(appNode)
 
+const withoutEmpty = (tags: Tags) =>
+  Object.fromEntries(Object.entries(tags).filter(([, value]) => value !== undefined)) as Record<
+    string,
+    string
+  >
+
+let baseTags: Tags = EXAMPLES[0]!.tags
+let tags: Tags = { ...baseTags }
+
 const context: TrafficSignFieldContext = {
   container: () => app as never,
-  graph: () => ({ entity: () => ({ tags: {} }) }),
+  graph: () => ({ entity: () => ({ tags: withoutEmpty(tags) }) }),
   cleanTagValue: (value: string) => value.trim(),
   asset: (path: string) => path,
+  // The "downloaded" version, which the tag suggestions compare with
+  history: () => ({ base: () => ({ hasEntity: () => ({ tags: withoutEmpty(baseTags) }) }) }),
 }
 
 const adapters: TrafficSignFieldAdapters = {
@@ -62,8 +99,6 @@ const adapters: TrafficSignFieldAdapters = {
   getSvgAssetUrl: (countryPrefix, svgName) => `/${countryPrefix}/svgs/${svgName}.svg`,
 }
 
-let tags: Record<string, string | undefined> = { traffic_sign: EXAMPLES[0] }
-
 const field = createTrafficSignField(
   { key: 'traffic_sign', type: 'trafficSign', safeid: 'traffic_sign' },
   context,
@@ -72,14 +107,14 @@ const field = createTrafficSignField(
 
 const formField = app.select('.form-field')
 
-field.on('change', (change: Record<string, string | undefined>) => {
-  tags = { ...tags, ...change }
-  for (const key of Object.keys(tags)) {
-    if (tags[key] === undefined) delete tags[key]
-  }
+// Like iD: apply the change, then hand the new tags back to the field
+field.on('change', (change: Tags) => {
+  tags = withoutEmpty({ ...tags, ...change })
+  field.tags(tags)
   renderTagOutput()
 })
 
+field.entityIDs(['w1'])
 formField.call(field as never)
 field.tags(tags)
 
@@ -88,8 +123,8 @@ field.tags(tags)
 const output = d3_select('#tag-output')
 
 function renderTagOutput() {
-  const value = tags.traffic_sign
-  output.text(value ? `traffic_sign = ${value}` : '(no traffic_sign tag)')
+  const lines = Object.entries(withoutEmpty(tags)).map(([key, value]) => `${key}=${value}`)
+  output.text(lines.length ? lines.join('\n') : '(no tags)')
 }
 
 const examples = d3_select('#examples')
@@ -98,9 +133,13 @@ for (const example of EXAMPLES) {
     .append('button')
     .attr('type', 'button')
     .attr('class', 'example')
-    .text(example === '' ? '(empty)' : example)
+    .text(example.label)
     .on('click', () => {
-      tags = example ? { traffic_sign: example } : {}
+      baseTags = example.tags
+      tags = { ...baseTags }
+      // A new feature: forget the sign history, like iD does when the selection changes
+      field.entityIDs([])
+      field.entityIDs(['w1'])
       field.tags(tags)
       renderTagOutput()
     })
