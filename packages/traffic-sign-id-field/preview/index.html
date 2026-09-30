@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>traffic-sign-id-field — standalone preview</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>traffic-sign-id-field</h1>
+        <p>Standalone preview of the iD inspector field (same code + CSS as in iD).</p>
+      </header>
+
+      <div class="inspector">
+        <div class="form-field present">
+          <div class="field-label">
+            <span class="label-text">Traffic Sign</span>
+          </div>
+          <!-- field renders .form-field-input-wrap here -->
+          <div class="tag-reference-body"></div>
+        </div>
+      </div>
+
+      <section class="panel">
+        <h2>Resulting tag</h2>
+        <code id="tag-output"></code>
+      </section>
+
+      <section class="panel">
+        <h2>Examples</h2>
+        <div id="examples"></div>
+      </section>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

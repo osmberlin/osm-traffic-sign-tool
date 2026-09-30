@@ -1,7 +1,5 @@
 {
-  /* Source https://www.totaltypescript.com/how-to-create-an-npm-package */
   "compilerOptions": {
-    /* Base Options: */
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "es2022",
@@ -10,28 +8,26 @@
     "moduleDetection": "force",
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-    "lib": ["es2022"],
-    "types": ["bun"],
-
-    /* Strictness */
+    "lib": ["es2022", "dom"],
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-
-    /* If transpiling with TypeScript: */
     "module": "NodeNext",
     "outDir": "dist",
     "rootDir": "src",
     "sourceMap": true,
-
-    /* AND if you're building for a library: */
     "declaration": true,
-    /* AND if you're building for a library in a monorepo: */
     "declarationMap": true,
-
-    // Usefull
-    "noErrorTruncation": true // https://stackoverflow.com/a/53131824
+    "noErrorTruncation": true
   },
   "include": ["src"],
-  "exclude": ["dist", "build", "node_modules", "vitest.config.ts", "vite.*.config.ts", "scripts"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "vitest.config.ts",
+    "**/*.test.ts",
+    "src/createTrafficSignField.impl.ts",
+    "src/fieldEntry.ts",
+    "src/browser.ts"
+  ]
 }
