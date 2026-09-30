@@ -1,0 +1,68 @@
+{
+  "name": "@osm-traffic-signs/id-field",
+  "version": "0.0.0",
+  "description": "D3-based iD inspector field for traffic_sign tags",
+  "keywords": [
+    "id-editor",
+    "openstreetmap",
+    "traffic-sign"
+  ],
+  "homepage": "https://www.osm-verkehrswende.org/traffic-signs/",
+  "bugs": {
+    "url": "https://github.com/osmberlin/osm-traffic-sign-tool/issues"
+  },
+  "license": "AGPL-3.0-or-later",
+  "author": "Tobias Jordans <t@tobiasjordans.de>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git",
+    "directory": "packages/traffic-sign-id-field"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "dist/id-field.esm.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/id-field.esm.js",
+      "default": "./dist/id-field.esm.js"
+    },
+    "./id-field.css": "./dist/id-field.css"
+  },
+  "scripts": {
+    "bleach": "rm -rf node_modules dist",
+    "build": "bun run build:js && bun run build:css && bun run build:types",
+    "build:css": "cp src/id-field.css dist/id-field.css",
+    "build:js": "vite build --config vite.esm.config.ts && vite build --config vite.iife.config.ts",
+    "build:types": "tsc -p tsconfig.build.json --emitDeclarationOnly && cp src/createTrafficSignField.d.ts dist/createTrafficSignField.d.ts",
+    "check": "bun run lint && bun run type-check && bun run test",
+    "dev": "bun run scripts/dev.ts",
+    "format": "bun run --cwd ../.. format",
+    "format:check": "bun run --cwd ../.. format:check",
+    "lint": "oxlint -c ../../oxlint.config.mjs .",
+    "preview": "vite --config vite.preview.config.ts",
+    "sync:id-worktree": "bun run scripts/sync-to-id-worktree.ts",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "d3-dispatch": "~3.0.1",
+    "d3-drag": "~3.0.0",
+    "d3-selection": "~3.0.0"
+  },
+  "devDependencies": {
+    "@osm-traffic-signs/converter": "workspace:*",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.0",
+    "vitest": "^4.1.9"
+  },
+  "peerDependencies": {
+    "@osm-traffic-signs/converter": "workspace:*"
+  }
+}

@@ -56,7 +56,8 @@
   },
   "scripts": {
     "bleach": "rm -rf node_modules && rm -rf dist",
-    "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:copy-types && bun run build:copy-svgs",
+    "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:browser && bun run build:copy-types && bun run build:copy-svgs",
+    "build:browser": "vite build --config vite.browser.config.ts",
     "build:clean": "rimraf dist",
     "build:clean-svgs": "rimraf ./src/data-svgs",
     "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
@@ -87,6 +88,7 @@
     "copyfiles": "^2.4.1",
     "rimraf": "^6.1.2",
     "typescript": "^6.0.3",
+    "vite": "^8.3.0",
     "vitest": "^4.1.9"
   }
 }
