@@ -3,6 +3,9 @@
 ## Unreleased
 
 - Add `DE:600` (Absperrschranke / Barke).
+- Add 289 missing `FR` traffic signs (from the PanierAvide CSV), including bracket speed variants like `B14[30]`, `B33[50]`, `B25[30]` with tagging for `maxspeed`, `minspeed` and `recommended_speed`.
+- `trafficSignTagToSigns()` now prefers an exact `osmValuePart` match before falling back to the `signId` lookup, so bracket variants like `FR:B14[30]` resolve to their own sign.
+- Fix `AT` tagging: remove stray `)` in values and wrong `DE:Tag:*` keys (`53.26a`, `WVO_F.1`, `3a`); move `bicycle=use_sidepath` (cycleway), `horse=no`/`ski=yes` (`FKV_1.9`) and `highway=path`/`tracktype=grade1` (`WVO_F.1`) to `optionalTags` with guidance.
 
 ## 0.6.0
 
