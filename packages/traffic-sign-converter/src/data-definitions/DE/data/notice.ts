@@ -26,4 +26,23 @@ export const _notice: SignType[] = [
       licence: 'Public Domain',
     },
   },
+  {
+    osmValuePart: '600',
+    signId: '600',
+    name: 'Zeichen 600',
+    descriptiveName: 'Absperrschranke (Barke)',
+    description: 'Absperrschranke, z. B. an Baustellen oder gesperrten Straßen',
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    comments: [],
+    catalogue: {
+      signCategory: 'traffic_sign',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Zeichen_600.svg',
+      licence: 'Public Domain',
+    },
+  },
 ]
