@@ -6,6 +6,12 @@ import { buildToolUrl } from './buildToolUrl.js'
 import { resolveCountryPrefix } from './resolveCountryPrefix.js'
 import { searchCatalogue } from './searchCatalogue.js'
 import { isSignExcludedByCompatibility } from './signCompatibility.js'
+import {
+  createSignRecommend,
+  signTagPlan,
+  signTagPlanChanges,
+  type SignPlanRow,
+} from './signTagPlan.js'
 import { parseTagToSigns, serializeSignsToTag } from './signValue.js'
 import type {
   ComboboxItem,
@@ -55,6 +61,10 @@ export const createTrafficSignField = (
   let _converter: ConverterModule | null = null
   let _readyPromise: Promise<void> | null = null
   const _signValueUpdateTimers = new Map<number, ReturnType<typeof setTimeout>>()
+  // Sign values seen while this feature is selected: the previous one tells which tags to remove
+  let _seenSign = false
+  let _lastSign: string | undefined
+  let _previousSign: string | undefined | null = null // null: not changed while selected
 
   const _combobox = uiCombobox(context, 'traffic-sign-' + (field.safeid || field.key))
 
@@ -84,7 +94,21 @@ export const createTrafficSignField = (
     return Array.isArray(value) ? undefined : value
   }
 
-  const translate = (key: string, fallback: string) => t(key, { default: fallback })
+  const translate = (key: string, fallback: string, replacements: Record<string, string> = {}) =>
+    t(key, { default: fallback, ...replacements }).replace(
+      /\{(\w+)\}/g,
+      (match, name: string) => replacements[name] ?? match,
+    )
+
+  const trackSign = (value: string | undefined) => {
+    if (!_seenSign) {
+      _seenSign = true
+      _lastSign = value
+    } else if (value !== _lastSign) {
+      _previousSign = _lastSign
+      _lastSign = value
+    }
+  }
 
   const dispatchTagChange = (signs: SignStateType[]) => {
     if (!_converter) return
@@ -116,6 +140,127 @@ export const createTrafficSignField = (
     renderSignRows()
     renderToolLink()
     renderOrderHint()
+    renderSuggestions()
+  }
+
+  const suggestionReason = (row: SignPlanRow, sign: string, previousSign: string) => {
+    switch (row.cause) {
+      case 'normalize':
+        return translate(
+          'traffic_sign_field.suggestions.cause.normalize',
+          'The usual way to write this sign',
+        )
+      case 'restore':
+        return translate(
+          'traffic_sign_field.suggestions.cause.restore',
+          'Was implied by the previous sign {sign}; back to the downloaded value',
+          { sign: previousSign },
+        )
+      case 'previous_sign':
+        return translate(
+          'traffic_sign_field.suggestions.cause.previous_sign',
+          'Was implied by the previous sign {sign}',
+          { sign: previousSign },
+        )
+      default:
+        return translate('traffic_sign_field.suggestions.cause.sign', '{sign} implies this', {
+          sign,
+        })
+    }
+  }
+
+  /** The tags of the one selected feature, `undefined` when several are selected */
+  const getSingleTags = () => {
+    if (_entityIDs.length !== 1) return undefined
+    const tags: Record<string, string> = {}
+    for (const [key, value] of Object.entries(_tags)) {
+      if (Array.isArray(value)) return undefined
+      if (value !== undefined) tags[key] = value
+    }
+    return tags
+  }
+
+  /**
+   * Below the field: the tags the changed sign implies, with a button to apply them.
+   * Compares with the sign before the change in this session, else with the downloaded version.
+   */
+  const computeSuggestions = () => {
+    if (adapters.suggestTags === false || !_converter || !_countryPrefix) return []
+    const tags = getSingleTags()
+    if (!tags) return []
+
+    const originalTags = context.history?.().base().hasEntity(_entityIDs[0]!)?.tags
+    const previousSign = _previousSign !== null ? _previousSign : originalTags?.[field.key]
+    const plan = signTagPlan({
+      key: field.key,
+      tags,
+      previousSign,
+      originalTags,
+      recommend: createSignRecommend(_converter, _countryPrefix),
+    })
+    return (plan ?? []).map((row) => ({
+      row,
+      reason: suggestionReason(row, tags[field.key] ?? '', previousSign ?? ''),
+    }))
+  }
+
+  const renderSuggestions = () => {
+    if (_formField.empty()) return
+    const suggestions = computeSuggestions()
+
+    const box = _formField
+      .selectAll('.traffic-sign-suggestions')
+      .data(suggestions.length ? [0] : []) as unknown as D3Selection
+    box.exit().remove()
+
+    const boxEnter = (box.enter() as D3Selection)
+      // Right below the sign list and input (appends when nothing follows them)
+      .insert('div', () => _container.node()?.nextSibling ?? null)
+      .attr('class', 'traffic-sign-suggestions')
+    boxEnter
+      .append('div')
+      .attr('class', 'traffic-sign-suggestions__header')
+      .text(
+        translate('traffic_sign_field.suggestions.header', 'The traffic sign suggests these tags:'),
+      )
+    boxEnter.append('ul').attr('class', 'traffic-sign-suggestions__list')
+    boxEnter
+      .append('button')
+      .attr('type', 'button')
+      .attr('class', 'button action traffic-sign-suggestions__apply')
+      .text(translate('traffic_sign_field.suggestions.apply', 'Apply these tags'))
+
+    const merged = boxEnter.merge(box)
+    if (!suggestions.length) return
+
+    const items = merged
+      .select('.traffic-sign-suggestions__list')
+      .selectAll('li')
+      .data(suggestions) as unknown as D3Selection
+    items.exit().remove()
+    ;(items.enter() as D3Selection)
+      .append('li')
+      .merge(items)
+      .attr('class', (d: unknown) => {
+        const { row } = d as { row: SignPlanRow }
+        return `traffic-sign-suggestions__item traffic-sign-suggestions__item--${row.kind}`
+      })
+      .each(function (d: unknown) {
+        const { row, reason } = d as { row: SignPlanRow; reason: string }
+        const item = d3_select(this).text('')
+        const tag =
+          row.kind === 'change'
+            ? `${row.key}: ${row.from} → ${row.value}`
+            : `${row.key}=${row.value}`
+        item.append('code').text(tag)
+        item.append('span').attr('class', 'traffic-sign-suggestions__reason').text(reason)
+      })
+
+    merged.select('.traffic-sign-suggestions__apply').on('click', (event: Event) => {
+      event.preventDefault()
+      const change = signTagPlanChanges(suggestions.map(({ row }) => row))
+      dispatch.call('change', trafficSign, change)
+    })
   }
 
   const getSignLabel = (sign: SignStateType) => {
@@ -643,11 +788,17 @@ export const createTrafficSignField = (
 
   trafficSign.tags = function (tags: Record<string, string | string[] | undefined>) {
     _tags = tags
+    const value = tags[field.key]
+    trackSign(typeof value === 'string' ? value : undefined)
     void syncFromTags()
     return trafficSign
   }
 
   trafficSign.entityIDs = function (entityIDs: string[]) {
+    if (entityIDs.join() !== _entityIDs.join()) {
+      _seenSign = false
+      _previousSign = null
+    }
     _entityIDs = entityIDs
     return trafficSign
   }
