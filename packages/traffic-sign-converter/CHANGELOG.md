@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add `DE:600` (Absperrschranke / Barke).
+
 ## 0.6.0
 
 _2026-06-15_

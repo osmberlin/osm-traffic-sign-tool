@@ -283,6 +283,7 @@ export const SvgLoadersDE: DESvgLoaderMap = {
   DE_460_30: () => import('./svgs/DE_460_30.svg'),
   DE_460_50: () => import('./svgs/DE_460_50.svg'),
   DE_525_31: () => import('./svgs/DE_525_31.svg'),
+  DE_600: () => import('./svgs/DE_600.svg'),
   DE_620_40: () => import('./svgs/DE_620_40.svg'),
   DE_620_41: () => import('./svgs/DE_620_41.svg'),
   DE_626_20: () => import('./svgs/DE_626_20.svg'),
