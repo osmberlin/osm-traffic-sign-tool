@@ -1,4 +1,9 @@
-import type { CountryPrefixType, SignStateType, SignType } from '@osm-traffic-signs/converter'
+import type {
+  CountryPrefixType,
+  GeometryType,
+  SignStateType,
+  SignType,
+} from '@osm-traffic-signs/converter'
 
 export type TrafficSignFieldDefinition = {
   key: string
@@ -70,6 +75,11 @@ export type ConverterModule = {
     signs: SignStateType[],
     countryPrefix: CountryPrefixType | undefined,
   ) => string
+  signsToTags: (
+    signs: SignStateType[],
+    countryPrefix: CountryPrefixType | undefined,
+    geometry: GeometryType,
+  ) => Map<string, string | string[]>
   createSvgImportname: (countryPrefix: CountryPrefixType, osmValuePart: string) => string
   combineSignIdSignValue: (signId: string, signValue: string | number | undefined) => string
   splitSignIdSignValue: (osmValuePart: string) => {
