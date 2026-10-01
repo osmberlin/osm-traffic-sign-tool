@@ -269,9 +269,14 @@ export const createTrafficSignField = (
     return sign.osmValuePart
   }
 
+  // `traffic_sign=none` states that there is explicitly no sign (TILDA: "Unbeschildert"),
+  // it is no unknown sign.
+  const isNoSign = (sign: SignStateType) => sign.osmValuePart === 'none'
+
   // Row title. Unrecognized signs would just repeat the raw code from the
   // code line below — show a translated "Unknown sign" instead.
   const getSignTitle = (sign: SignStateType) => {
+    if (isNoSign(sign)) return translate('traffic_sign_field.no_sign', 'No sign')
     if (!sign.recodgnizedSign) {
       return translate('traffic_sign_field.unknown_sign', 'Unknown sign')
     }
@@ -280,6 +285,12 @@ export const createTrafficSignField = (
 
   // Hover text: the long description when we have one, the official name otherwise.
   const getSignHoverText = (sign: SignStateType) => {
+    if (isNoSign(sign)) {
+      return translate(
+        'traffic_sign_field.no_sign_description',
+        'There is explicitly no traffic sign here (traffic_sign=none)',
+      )
+    }
     if (!sign.recodgnizedSign) {
       return translate('traffic_sign_field.unknown_sign', 'Unknown sign')
     }
@@ -535,6 +546,11 @@ export const createTrafficSignField = (
               .attr('src', getSvgAssetUrl(_countryPrefix, svgName))
               .attr('alt', getSignLabel(row.sign))
           }
+        } else if (isNoSign(row.sign)) {
+          figure
+            .append('span')
+            .attr('class', 'traffic-sign-row__unknown traffic-sign-row__none')
+            .text('–')
         } else {
           figure.append('span').attr('class', 'traffic-sign-row__unknown').text('?')
         }
