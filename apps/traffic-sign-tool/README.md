@@ -62,7 +62,7 @@ bun run release --app --patch --yes --push    # no prompts
 bun run release --package --minor --dry-run   # build, check and `npm publish --dry-run`, then undo
 ```
 
-The package release (`--package`) publishes to npm and needs `npm login` first; pass `--otp=<code>` with 2FA.
+The package releases (`--package` for the converter, `--id-field` for the iD field) publish to npm and need `npm login` first. With 2FA, npm asks for the one-time password, or pass `--otp=<code>`. Release the converter first when the iD field needs its changes.
 
 ## Licence & Thanks
 

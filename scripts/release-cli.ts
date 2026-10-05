@@ -1,16 +1,16 @@
 #!/usr/bin/env bun
 
-// Release the converter package (npm) and/or the app (tag; GitHub Actions deploys).
+// Release the npm packages (converter, iD field) and/or the app (tag; GitHub Actions deploys).
 //
 //   bun run release                          interactive
 //   bun run release --package --minor --yes  no prompts (for agent sessions and CI-like use)
 //
 // Flags:
-//   --package / --app        what to release (both when neither or both are given)
+//   --package / --id-field / --app   what to release, in this order (asked when none is given)
 //   --patch / --minor / --major
 //   --yes                    no prompts; stops on a dirty working tree instead of asking
 //   --push                   push main and the tag(s) at the end (asked when not --yes)
-//   --otp=123456             npm one-time password for `npm publish`
+//   --otp=123456             npm one-time password for `npm publish` (npm asks when it is missing)
 //   --dry-run                everything up to and including `npm publish --dry-run`, then undo
 
 import { join } from 'path'
@@ -20,19 +20,22 @@ import { releaseChangelog } from './release-changelog.ts'
 import { releaseTagName } from './release-tag.ts'
 
 type ReleaseType = 'patch' | 'minor' | 'major'
-type ReleaseTarget = 'package' | 'app' | 'both'
+type ReleaseTarget = 'package' | 'id-field' | 'app'
 
-const PACKAGE_DIR = 'packages/traffic-sign-converter'
+/** The npm packages: directory and the prefix of the release commit */
+const NPM_PACKAGES = {
+  package: { dir: 'packages/traffic-sign-converter', commitPrefix: 'Package' },
+  'id-field': { dir: 'packages/traffic-sign-id-field', commitPrefix: 'iD field' },
+} as const
 const APP_DIR = 'apps/traffic-sign-tool'
-const PACKAGE_CHANGELOG = join(PACKAGE_DIR, 'CHANGELOG.md')
 const APP_CHANGELOG = join(APP_DIR, 'CHANGELOG.md')
-const PACKAGE_PACKAGE_JSON = join(PACKAGE_DIR, 'package.json')
 const APP_PACKAGE_JSON = join(APP_DIR, 'package.json')
 
 // Parse CLI arguments
 const args = process.argv.slice(2)
 const flags = {
   package: args.includes('--package'),
+  idField: args.includes('--id-field'),
   app: args.includes('--app'),
   patch: args.includes('--patch'),
   minor: args.includes('--minor'),
@@ -163,31 +166,35 @@ async function pushRelease(tags: string[]) {
 }
 
 // Package release flow
-async function releasePackage(releaseType: ReleaseType) {
-  const { name: packageName } = await readPackageJson(PACKAGE_PACKAGE_JSON)
+async function releasePackage(target: keyof typeof NPM_PACKAGES, releaseType: ReleaseType) {
+  const { dir, commitPrefix } = NPM_PACKAGES[target]
+  const packageJson = join(dir, 'package.json')
+  const changelog = join(dir, 'CHANGELOG.md')
+  const { name: packageName } = await readPackageJson(packageJson)
   p.intro(`Releasing Package: ${packageName}`)
   await checkNpmLogin()
 
-  const files = [PACKAGE_PACKAGE_JSON, PACKAGE_CHANGELOG]
-  const newVersion = await bumpVersionAndChangelog(
-    PACKAGE_PACKAGE_JSON,
-    PACKAGE_CHANGELOG,
-    releaseType,
-  )
+  const files = [packageJson, changelog]
+  const newVersion = await bumpVersionAndChangelog(packageJson, changelog, releaseType)
 
   try {
     p.log.step('Building package...')
     await $`bun run --filter ${packageName} build`
 
     p.log.step('Running checks...')
-    await $`cd ${PACKAGE_DIR} && bun run check`
+    await $`cd ${dir} && bun run check`
 
     p.log.step(flags.dryRun ? 'Publishing to npm (dry run)...' : 'Publishing to npm...')
     const publishArgs = [
       ...(flags.dryRun ? ['--dry-run'] : []),
       ...(flags.otp ? [`--otp=${flags.otp}`] : []),
     ]
-    await $`cd ${PACKAGE_DIR} && npm publish ${publishArgs}`
+    // Not through the Bun shell: without `--otp`, npm asks for the one-time password
+    const publish = Bun.spawn(['npm', 'publish', ...publishArgs], {
+      cwd: dir,
+      stdio: ['inherit', 'inherit', 'inherit'],
+    })
+    if ((await publish.exited) !== 0) throw new Error('npm publish failed')
   } catch {
     // Nothing was released: leave no half-bumped version behind
     await restoreFiles(files)
@@ -203,7 +210,7 @@ async function releasePackage(releaseType: ReleaseType) {
   }
   p.log.info(`✓ Published ${packageName}@${newVersion}`)
 
-  return commitAndTag(packageName, 'Package: release v' + newVersion, files)
+  return commitAndTag(packageName, `${commitPrefix}: release v${newVersion}`, files)
 }
 
 // App release flow
@@ -230,23 +237,27 @@ async function main() {
   if (flags.minor) releaseType = 'minor'
   else if (flags.major) releaseType = 'major'
 
-  // Determine target
-  let target: ReleaseTarget = 'both'
-  if (flags.package && !flags.app) target = 'package'
-  else if (flags.app && !flags.package) target = 'app'
-  else if (!flags.package && !flags.app) {
-    if (flags.yes) fail('Pass --package and/or --app together with --yes.')
-    // Interactive selection
-    const selected = await p.select({
+  // Determine targets
+  let targets: ReleaseTarget[] = [
+    ...(flags.package ? (['package'] as const) : []),
+    ...(flags.idField ? (['id-field'] as const) : []),
+    ...(flags.app ? (['app'] as const) : []),
+  ]
+  if (!targets.length) {
+    if (flags.yes) fail('Pass --package, --id-field and/or --app together with --yes.')
+    const selected = await p.multiselect({
       message: 'What would you like to release?',
       options: [
-        { value: 'package', label: 'Package only' },
-        { value: 'app', label: 'App only' },
-        { value: 'both', label: 'Both package and app' },
+        { value: 'package', label: 'Package: converter' },
+        { value: 'id-field', label: 'Package: iD field' },
+        { value: 'app', label: 'App' },
       ],
+      required: true,
     })
     if (p.isCancel(selected)) fail('Release cancelled.')
-    target = selected as ReleaseTarget
+    targets = (['package', 'id-field', 'app'] as const).filter((target) =>
+      (selected as string[]).includes(target),
+    )
   }
 
   // Confirm release type if not set via flag
@@ -261,20 +272,16 @@ async function main() {
 
   const tags: string[] = []
 
-  if (target === 'package' || target === 'both') {
-    const tag = await releasePackage(releaseType)
-    if (tag) tags.push(tag)
-  }
-
-  if (target === 'app' || target === 'both') {
-    const tag = await releaseApp(releaseType)
+  for (const target of targets) {
+    const tag =
+      target === 'app' ? await releaseApp(releaseType) : await releasePackage(target, releaseType)
     if (tag) tags.push(tag)
   }
 
   if (!tags.length) return
 
   const pushed = await pushRelease(tags)
-  if (pushed && target !== 'package') {
+  if (pushed && targets.includes('app')) {
     p.log.info('GitHub Actions will deploy to trafficsigns.osm-verkehrswende.org')
   }
   p.outro(`✓ Released ${tags.join(', ')}`)
