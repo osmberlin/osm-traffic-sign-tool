@@ -54,8 +54,8 @@
     "name": "Strettoia simmetrica",
     "osmTags": [
       "narrow=yes",
-      "traffic_calming=chicane o",
-      "traffic_calming=chokerinsieme a",
+      "traffic_calming=chicane",
+      "traffic_calming=choker",
       "hazard=road_narrows"
     ],
     "comments": ""
@@ -67,8 +67,8 @@
     "name": "Strettoia asimmetrica a destra",
     "osmTags": [
       "narrow=yes",
-      "traffic_calming=chicane o",
-      "traffic_calming=chokerinsieme a",
+      "traffic_calming=chicane",
+      "traffic_calming=choker",
       "hazard=road_narrows"
     ],
     "comments": ""
@@ -80,8 +80,8 @@
     "name": "Strettoia asimmetrica a sinistra",
     "osmTags": [
       "narrow=yes",
-      "traffic_calming=chicane o",
-      "traffic_calming=chokerinsieme a",
+      "traffic_calming=chicane",
+      "traffic_calming=choker",
       "hazard=road_narrows"
     ],
     "comments": ""
@@ -129,7 +129,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/81/Italian_traffic_signs_-_doppio_senso_di_circolazione_%28figura_II_26%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_doppio_senso_di_circolazione_(figura_II_26).svg",
     "name": "Doppio senso di circolazione",
-    "osmTags": ["oneway=no e", "hazard=contraflow"],
+    "osmTags": ["oneway=no", "hazard=contraflow"],
     "comments": ""
   },
   {
@@ -137,7 +137,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/62/Italian_traffic_signs_-_semaforo_verticale.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_semaforo_verticale.svg",
     "name": "Semaforo",
-    "osmTags": ["highway=traffic_signals e", "hazard=traffic_signals"],
+    "osmTags": ["highway=traffic_signals", "hazard=traffic_signals"],
     "comments": ""
   },
   {
@@ -145,7 +145,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Italian_traffic_signs_-_semaforo_orizzontale.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_semaforo_orizzontale.svg",
     "name": "Semaforo",
-    "osmTags": ["highway=traffic_signals e", "hazard=traffic_signals"],
+    "osmTags": ["highway=traffic_signals", "hazard=traffic_signals"],
     "comments": ""
   },
   {
@@ -153,7 +153,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Italian_traffic_signs_-_attraversamento_pericoloso.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_attraversamento_pericoloso.svg",
     "name": "Attraversamento pedonale",
-    "osmTags": ["highway=crossing e", "crossing_ref=zebra e", "hazard=pedestrian_crossing"],
+    "osmTags": ["highway=crossing", "crossing_ref=zebra", "hazard=pedestrian_crossing"],
     "comments": ""
   },
   {
@@ -249,7 +249,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Italian_traffic_signs_-_circolazione_rotatoria.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_circolazione_rotatoria.svg",
     "name": "Circolazione Rotatoria",
-    "osmTags": ["junction=roundabout and", "hazard=roundabout"],
+    "osmTags": ["junction=roundabout", "hazard=roundabout"],
     "comments": ""
   },
   {
@@ -281,7 +281,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/da/Italian_traffic_signs_-_passaggio_a_livello_con_barriere.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_passaggio_a_livello_con_barriere.svg",
     "name": "Passaggio a livello con barriere",
-    "osmTags": ["railway=level_crossing e", "crossing:barrier=yes"],
+    "osmTags": ["railway=level_crossing", "crossing:barrier=yes"],
     "comments": ""
   },
   {
@@ -289,7 +289,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Italian_traffic_signs_-_passaggio_a_livello_senza_barriere.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_passaggio_a_livello_senza_barriere.svg",
     "name": "Passaggio a livello senza barriere",
-    "osmTags": ["railway=level_crossing e", "crossing:barrier=no"],
+    "osmTags": ["railway=level_crossing", "crossing:barrier=no"],
     "comments": ""
   },
   {
@@ -350,10 +350,10 @@
   },
   {
     "sign": "IT:II.37",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Italian_traffic_signs_-_fermarsi_e_dare_precedenza_-_stop.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/1/1c/Italian_traffic_signs_-_fermarsi_e_dare_precedenza_-_stop.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_fermarsi_e_dare_precedenza_-_stop.svg",
     "name": "Fermarsi e dare precedenza",
-    "osmTags": ["highway=stop sulla highway."],
+    "osmTags": ["highway=stop"],
     "comments": ""
   },
   {
@@ -561,7 +561,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Italian_traffic_signs_-_divieto_di_transito_agli_autobus.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_divieto_di_transito_agli_autobus.svg",
     "name": "Transito vietato agli autobus",
-    "osmTags": ["bus=no e", "tourist_bus=no"],
+    "osmTags": ["bus=no", "tourist_bus=no"],
     "comments": ""
   },
   {
@@ -577,9 +577,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/34/Italian_traffic_signs_-_transito_vietato_ai_veicoli_di_massa_a_pieno_carico_superiore_alle_..._tonnellate_%28figura_II_60-b%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_transito_vietato_ai_veicoli_di_massa_a_pieno_carico_superiore_alle_..._tonnellate_(figura_II_60-b).svg",
     "name": "Transito vietato ai veicoli di massa a pieno carico superiore a ... tonnellate",
-    "osmTags": [
-      "maxweightrating:hgv=* (il numero corrisponde al valore indicato sul segnale; usare il punto come separatore decimale)"
-    ],
+    "osmTags": [],
     "comments": "Per mappare questo segnale in realtà sono diffusi (e sono probabilmente predominanti numericamente) differenti schemi di tagging, spesso basati sull'utilizzo di maxweight=* combinato con una restrizione condizionale. Il problema a riguardo di questi schemi è il fatto che il peso indicato nel segnale è una massa a pieno carico (maxweightrating=*) e non una massa effettiva (maxweight=*) e per lungo tempo si è utilizzato quest'ultimo tag per entrambi i casi."
   },
   {
@@ -728,7 +726,7 @@
   },
   {
     "sign": "IT:II.78",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Italian_traffic_signs_-_passo_carrabile.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/e/ed/Italian_traffic_signs_-_passo_carrabile.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_passo_carrabile.svg",
     "name": "Passo carrabile",
     "osmTags": ["parking:side:restriction=no"],
@@ -736,7 +734,7 @@
   },
   {
     "sign": "IT:II.79",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Italian_traffic_signs_-_parcheggio_riservato_pronto_soccorso.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/c/c4/Italian_traffic_signs_-_parcheggio_riservato_pronto_soccorso.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_parcheggio_riservato_pronto_soccorso.svg",
     "name": "Sosta consentita a particolare categoria",
     "osmTags": [],
@@ -747,7 +745,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/45/Italian_traffic_signs_-_direzione_obbligatoria_dritto.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_direzione_obbligatoria_dritto.svg",
     "name": "Direzione obbligatoria diritto",
-    "osmTags": ["Relation:restrictionrestriction=only_straight_on"],
+    "osmTags": ["type=restriction", "restriction=only_straight_on"],
     "comments": ""
   },
   {
@@ -755,7 +753,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Italian_traffic_signs_-_direzione_obbligatoria_a_sinistra.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_direzione_obbligatoria_a_sinistra.svg",
     "name": "Direzione obbligatoria a sinistra",
-    "osmTags": ["Relation:restrictionrestriction=only_left_turn"],
+    "osmTags": ["type=restriction", "restriction=only_left_turn"],
     "comments": ""
   },
   {
@@ -763,7 +761,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Italian_traffic_signs_-_direzione_obbligatoria_a_destra.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_direzione_obbligatoria_a_destra.svg",
     "name": "Direzione obbligatoria a destra",
-    "osmTags": ["Relation:restrictionrestriction=only_right_turn"],
+    "osmTags": ["type=restriction", "restriction=only_right_turn"],
     "comments": ""
   },
   {
@@ -771,7 +769,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Italian_traffic_signs_-_preavviso_di_direzione_obbligatoria_a_destra.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_preavviso_di_direzione_obbligatoria_a_destra.svg",
     "name": "Preavviso di direzione obbligatoria a destra",
-    "osmTags": ["Relation:restrictionrestriction=only_right_turn"],
+    "osmTags": ["type=restriction", "restriction=only_right_turn"],
     "comments": ""
   },
   {
@@ -779,7 +777,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/92/Italian_traffic_signs_-_preavviso_di_direzione_obbligatoria_a_sinistra.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_preavviso_di_direzione_obbligatoria_a_sinistra.svg",
     "name": "Preavviso di direzione obbligatoria a sinistra",
-    "osmTags": ["Relation:restrictionrestriction=only_left_turn"],
+    "osmTags": ["type=restriction", "restriction=only_left_turn"],
     "comments": ""
   },
   {
@@ -787,7 +785,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/06/Italian_traffic_signs_-_direzioni_consentite_a_destra_ed_a_sinistra.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_direzioni_consentite_a_destra_ed_a_sinistra.svg",
     "name": "Direzioni consentite destra e sinistra",
-    "osmTags": ["Relation:restrictionrestriction=no_straight_on"],
+    "osmTags": ["type=restriction", "restriction=no_straight_on"],
     "comments": ""
   },
   {
@@ -795,7 +793,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Italian_traffic_signs_-_direzioni_consentite_a_dritto_ed_a_destra.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_direzioni_consentite_a_dritto_ed_a_destra.svg",
     "name": "Direzioni consentite diritto e destra",
-    "osmTags": ["Relation:restrictionrestriction=no_left_turn"],
+    "osmTags": ["type=restriction", "restriction=no_left_turn"],
     "comments": ""
   },
   {
@@ -803,7 +801,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Italian_traffic_signs_-_direzioni_consentite_a_dritto_ed_a_sinistra.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_direzioni_consentite_a_dritto_ed_a_sinistra.svg",
     "name": "Direzioni consentite diritto e sinistra",
-    "osmTags": ["Relation:restrictionrestriction=no_right_turn"],
+    "osmTags": ["type=restriction", "restriction=no_right_turn"],
     "comments": ""
   },
   {
@@ -899,12 +897,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Italian_traffic_signs_-_pista_ciclabile_contigua_al_marciapiede.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_pista_ciclabile_contigua_al_marciapiede.svg",
     "name": "Pista ciclabile contigua al marciapiede",
-    "osmTags": [
-      "highway=cycleway",
-      "foot=designated",
-      "bicycle=designated ed opzionale",
-      "segregated=yes"
-    ],
+    "osmTags": ["highway=cycleway", "foot=designated", "bicycle=designated", "segregated=yes"],
     "comments": ""
   },
   {
@@ -920,12 +913,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Italian_traffic_signs_-_percorso_pedonale_e_ciclabile_%28figura_II_92-b%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_percorso_pedonale_e_ciclabile_(figura_II_92-b).svg",
     "name": "Percorso pedonale e ciclabile",
-    "osmTags": [
-      "highway=cycleway",
-      "foot=designated",
-      "bicycle=designated ed opzionale",
-      "segregated=no"
-    ],
+    "osmTags": ["highway=cycleway", "foot=designated", "bicycle=designated", "segregated=no"],
     "comments": ""
   },
   {
@@ -954,10 +942,10 @@
   },
   {
     "sign": "IT:II.96",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Italian_traffic_signs_-_dogana.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/6/6f/Italian_traffic_signs_-_dogana.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_dogana.svg",
     "name": "Alt - Dogana",
-    "osmTags": ["amenity=customs ed ogni", "barrier=* necessaria."],
+    "osmTags": ["amenity=customs"],
     "comments": ""
   },
   {
@@ -986,7 +974,7 @@
   },
   {
     "sign": "IT:II.99",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/10/Italian_traffic_signs_-_stazione.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/1/10/Italian_traffic_signs_-_stazione.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_stazione.svg",
     "name": "Alt - Stazione",
     "osmTags": ["barrier=toll_booth"],
@@ -1018,7 +1006,7 @@
   },
   {
     "sign": "IT:II.236",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Italian_traffic_signs_-_segnale_di_preavviso_di_intersezioni_ravvicinate_urbane_%28figura_II_236%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/a/ac/Italian_traffic_signs_-_segnale_di_preavviso_di_intersezioni_ravvicinate_urbane_%28figura_II_236%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_preavviso_di_intersezioni_ravvicinate_urbane_(figura_II_236).svg",
     "name": "segnale di preavviso di intersezioni ravvicinate urbane",
     "osmTags": [],
@@ -1034,7 +1022,7 @@
   },
   {
     "sign": "IT:II.238",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Italian_traffic_signs_-_segnale_di_preavviso_di_intersezione_urbana_rotatoria_%28figura_II_238%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/d/d7/Italian_traffic_signs_-_segnale_di_preavviso_di_intersezione_urbana_rotatoria_%28figura_II_238%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_preavviso_di_intersezione_urbana_rotatoria_(figura_II_238).svg",
     "name": "segnale di preavviso di intersezione urbana rotatoria",
     "osmTags": [],
@@ -1050,7 +1038,7 @@
   },
   {
     "sign": "IT:II.240",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Italian_traffic_signs_-_segnale_di_preavviso_di_intersezione_extraurbana_con_passaggio_a_livello_su_un_ramo_dell%27intersezione_%28figura_II_240%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/a/ad/Italian_traffic_signs_-_segnale_di_preavviso_di_intersezione_extraurbana_con_passaggio_a_livello_su_un_ramo_dell%27intersezione_%28figura_II_240%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_preavviso_di_intersezione_extraurbana_con_passaggio_a_livello_su_un_ramo_dell%27intersezione_(figura_II_240).svg",
     "name": "segnale di preavviso di intersezione extraurbana con passaggio a livello su un ramo dell'intersezione",
     "osmTags": [],
@@ -1066,7 +1054,7 @@
   },
   {
     "sign": "IT:II.242",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Italian_traffic_signs_-_segnale_di_preselezione_urbano_posto_sopra_la_carreggiata_%28figura_II_242%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/2/2b/Italian_traffic_signs_-_segnale_di_preselezione_urbano_posto_sopra_la_carreggiata_%28figura_II_242%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_preselezione_urbano_posto_sopra_la_carreggiata_(figura_II_242).svg",
     "name": "segnale di preselezione urbano posto sopra la carreggiata",
     "osmTags": [],
@@ -1082,7 +1070,7 @@
   },
   {
     "sign": "IT:II.244",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Italian_traffic_signs_-_segnale_di_preselezione_urbano_%28figura_II_244%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/3/3a/Italian_traffic_signs_-_segnale_di_preselezione_urbano_%28figura_II_244%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_preselezione_urbano_(figura_II_244).svg",
     "name": "segnale di preselezione urbano",
     "osmTags": [],
@@ -1090,7 +1078,7 @@
   },
   {
     "sign": "IT:II.245",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/21/Italian_traffic_signs_-_segnale_di_preselezione_extraurbano.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/2/21/Italian_traffic_signs_-_segnale_di_preselezione_extraurbano.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_preselezione_extraurbano.svg",
     "name": "Segnale di preselezione extraurbano",
     "osmTags": [],
@@ -1106,7 +1094,7 @@
   },
   {
     "sign": "IT:II.247",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Italian_traffic_signs_-_segnali_di_corsia_con_funzioni_di_preselezione_e_di_direzione_%28figura_II_247%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/e/e8/Italian_traffic_signs_-_segnali_di_corsia_con_funzioni_di_preselezione_e_di_direzione_%28figura_II_247%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnali_di_corsia_con_funzioni_di_preselezione_e_di_direzione_(figura_II_247).svg",
     "name": "segnali di corsia con funzioni di preselezione e di direzione",
     "osmTags": [],
@@ -1138,7 +1126,7 @@
   },
   {
     "sign": "IT:II.250",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/44/Italian_traffic_signs_-_segnali_di_corsia_con_funzione_di_direzione_%28figura_II_250%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/4/44/Italian_traffic_signs_-_segnali_di_corsia_con_funzione_di_direzione_%28figura_II_250%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnali_di_corsia_con_funzione_di_direzione_(figura_II_250).svg",
     "name": "segnali di corsia con funzione di direzione",
     "osmTags": [],
@@ -1162,7 +1150,7 @@
   },
   {
     "sign": "IT:II.252",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Italian_traffic_signs_-_segnali_di_corsia_con_funzione_di_direzione_con_le_modalit%C3%A0_per_l%27utilizzo_delle_singole_corsie_%28figura_II_252%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/b/b1/Italian_traffic_signs_-_segnali_di_corsia_con_funzione_di_direzione_con_le_modalit%C3%A0_per_l%27utilizzo_delle_singole_corsie_%28figura_II_252%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnali_di_corsia_con_funzione_di_direzione_con_le_modalit%C3%A0_per_l%27utilizzo_delle_singole_corsie_(figura_II_252).svg",
     "name": "segnali di corsia con funzione di direzione con le modalità per l'utilizzo delle singole corsie",
     "osmTags": [],
@@ -1306,7 +1294,7 @@
   },
   {
     "sign": "IT:II.272",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/19/Italian_traffic_signs_-_segnale_di_itinerario_extraurbano_%28figura_II_272%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/1/19/Italian_traffic_signs_-_segnale_di_itinerario_extraurbano_%28figura_II_272%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_itinerario_extraurbano_(figura_II_272).svg",
     "name": "Segnale di itinerario",
     "osmTags": [],
@@ -1317,7 +1305,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/08/Italian_traffic_signs_-_inizio_centro_abitato_%28figura_II_273%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_inizio_centro_abitato_(figura_II_273).svg",
     "name": "Inizio centro abitato",
-    "osmTags": ["name=* (nome del centro abitato)"],
+    "osmTags": [],
     "comments": ""
   },
   {
@@ -1325,7 +1313,7 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Italian_traffic_signs_-_fine_centro_abitato_%28figura_II_274%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_fine_centro_abitato_(figura_II_274).svg",
     "name": "Fine centro abitato",
-    "osmTags": ["city_limit=end", "name=* (nome del centro abitato)"],
+    "osmTags": ["city_limit=end"],
     "comments": ""
   },
   {
@@ -1474,7 +1462,7 @@
   },
   {
     "sign": "IT:II.294",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Italian_traffic_signs_-_segnali_turistici_e_di_territorio_%28figura_II_294%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/a/ac/Italian_traffic_signs_-_segnali_turistici_e_di_territorio_%28figura_II_294%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnali_turistici_e_di_territorio_(figura_II_294).svg",
     "name": "segnali turistici e di territorio",
     "osmTags": [],
@@ -1514,7 +1502,7 @@
   },
   {
     "sign": "IT:II.299",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Italian_traffic_signs_-_informazioni_alberghere.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/0/0c/Italian_traffic_signs_-_informazioni_alberghere.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_informazioni_alberghere.svg",
     "name": "informazioni alberghiere",
     "osmTags": [],
@@ -1682,7 +1670,7 @@
   },
   {
     "sign": "IT:II.320",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Italian_traffic_signs_-_area_pedonale_%28figura_II_320%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/1/1a/Italian_traffic_signs_-_area_pedonale_%28figura_II_320%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_area_pedonale_(figura_II_320).svg",
     "name": "Area pedonale urbana",
     "osmTags": ["highway=pedestrian"],
@@ -1698,7 +1686,7 @@
   },
   {
     "sign": "IT:II.322a",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/09/Italian_traffic_signs_-_zona_traffico_limitato_%28figura_II_322-a%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/0/09/Italian_traffic_signs_-_zona_traffico_limitato_%28figura_II_322-a%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_zona_traffico_limitato_(figura_II_322-a).svg",
     "name": "Zona a traffico limitato",
     "osmTags": ["boundary=limited_traffic_zone"],
@@ -1866,7 +1854,7 @@
   },
   {
     "sign": "IT:II.347",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Italian_traffic_signs_-_preavviso_di_inizio_autostrada_%28figura_II_347%29.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/2/2a/Italian_traffic_signs_-_preavviso_di_inizio_autostrada_%28figura_II_347%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_preavviso_di_inizio_autostrada_(figura_II_347).svg",
     "name": "Preavviso di inizio autostrada (sfondo verde) / preavviso di inizio strada extraurbana principale (sfondo blu)",
     "osmTags": [],
@@ -1890,7 +1878,7 @@
   },
   {
     "sign": "IT:II.350",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/25/Italian_traffic_signs_-_preavviso_deviazione_consigliata_autocarri.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/2/25/Italian_traffic_signs_-_preavviso_deviazione_consigliata_autocarri.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_preavviso_deviazione_consigliata_autocarri.svg",
     "name": "Preavviso deviazione consigliata autocarri in transito",
     "osmTags": ["route=detour"],
@@ -1898,7 +1886,7 @@
   },
   {
     "sign": "IT:II.351",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Italian_traffic_signs_-_direzione_autocarri_consigliata.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/a/ae/Italian_traffic_signs_-_direzione_autocarri_consigliata.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_direzione_autocarri_consigliata.svg",
     "name": "Deviazione consigliata autocarri in transito",
     "osmTags": ["route=detour"],
@@ -1962,7 +1950,7 @@
   },
   {
     "sign": "IT:II.359",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/2/29/Italian_traffic_signs_-_fermata_tram.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/2/29/Italian_traffic_signs_-_fermata_tram.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_fermata_tram.svg",
     "name": "Fermata tram",
     "osmTags": ["railway=tram_stop"],
@@ -1978,7 +1966,7 @@
   },
   {
     "sign": "IT:II.361",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/72/Italian_traffic_signs_-_ostello_per_la_giovent%C3%B9.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/7/72/Italian_traffic_signs_-_ostello_per_la_giovent%C3%B9.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_ostello_per_la_giovent%C3%B9.svg",
     "name": "Ostello per la gioventù",
     "osmTags": ["tourism=hostel"],
@@ -2002,7 +1990,7 @@
   },
   {
     "sign": "IT:II.364",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/51/Italian_traffic_signs_-_radio_informazioni_stradali.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/5/51/Italian_traffic_signs_-_radio_informazioni_stradali.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_radio_informazioni_stradali.svg",
     "name": "Radio informazioni stradali",
     "osmTags": [],
@@ -2034,7 +2022,7 @@
   },
   {
     "sign": "IT:II.368",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Italian_traffic_signs_-_parcheggio_di_scambio_con_autobus.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/a/a6/Italian_traffic_signs_-_parcheggio_di_scambio_con_autobus.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_parcheggio_di_scambio_con_autobus.svg",
     "name": "Parcheggio di scambio (bus)",
     "osmTags": ["amenity=parking", "park_ride=bus"],
@@ -2042,7 +2030,7 @@
   },
   {
     "sign": "IT:II.369",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Italian_traffic_signs_-_parcheggio_di_scambio_con_tram.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/4/4d/Italian_traffic_signs_-_parcheggio_di_scambio_con_tram.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_parcheggio_di_scambio_con_tram.svg",
     "name": "Parcheggio di scambio (tram)",
     "osmTags": ["amenity=parking", "park_ride=tram"],
@@ -2050,7 +2038,7 @@
   },
   {
     "sign": "IT:II.370",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Italian_traffic_signs_-_parcheggio_di_scambio_con_metro.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/8/8c/Italian_traffic_signs_-_parcheggio_di_scambio_con_metro.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_parcheggio_di_scambio_con_metro.svg",
     "name": "Parcheggio di scambio (treno)",
     "osmTags": ["amenity=parking", "park_ride=train"],
@@ -2058,7 +2046,7 @@
   },
   {
     "sign": "IT:II.371",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/15/Italian_traffic_signs_-_parcheggio_%2B_escursionismo.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/1/15/Italian_traffic_signs_-_parcheggio_%2B_escursionismo.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_parcheggio_%2B_escursionismo.svg",
     "name": "Parcheggio di scambio (pedoni)",
     "osmTags": ["amenity=parking"],
@@ -2098,7 +2086,7 @@
   },
   {
     "sign": "IT:II.376",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/19/Italian_traffic_signs_-_area_di_servizio.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/1/19/Italian_traffic_signs_-_area_di_servizio.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_area_di_servizio.svg",
     "name": "Area di servizio",
     "osmTags": ["amenity=fuel", "craft=mechanic", "amenity=restaurant"],
@@ -2106,7 +2094,7 @@
   },
   {
     "sign": "IT:II.377",
-    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Italian_traffic_signs_-_area_con_scarico_liquami.svg",
+    "imageSvg": "https://thumb.wikimedia.org/wikipedia/commons/a/a5/Italian_traffic_signs_-_area_con_scarico_liquami.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_area_con_scarico_liquami.svg",
     "name": "Area attrezzata con impianti di scarico",
     "osmTags": ["amenity=sanitary_dump_station"],
@@ -2197,6 +2185,54 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/78/Italian_traffic_signs_-_eccezione_%28modello_II_4-b%29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_eccezione_(modello_II_4-b).svg",
     "name": "Eccezioni",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.5a1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/4/46/Italian_traffic_signs_-_inizio_verticale_%28modello_II_5-a1%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_inizio_verticale_(modello_II_5-a1).svg",
+    "name": "Inizio",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.5a2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Italian_traffic_signs_-_continua_verticale_%28modello_II_5-a2%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_continua_verticale_(modello_II_5-a2).svg",
+    "name": "Continuazione",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.5a3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/64/Italian_traffic_signs_-_fine_verticale_%28modello_II_5-a3%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_fine_verticale_(modello_II_5-a3).svg",
+    "name": "Fine",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.5b1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Italian_traffic_signs_-_inizio_orizzontale_%28modello_II_5-b1%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_inizio_orizzontale_(modello_II_5-b1).svg",
+    "name": "Inizio",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.5b2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Italian_traffic_signs_-_continua_orizzontale_%28modello_II_5-b2%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_continua_orizzontale_(modello_II_5-b2).svg",
+    "name": "Continuazione",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.5b3",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/60/Italian_traffic_signs_-_fine_orizzontale_%28modello_II_5-b3%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_fine_orizzontale_(modello_II_5-b3).svg",
+    "name": "Fine",
     "osmTags": [],
     "comments": ""
   },
@@ -2301,6 +2337,38 @@
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Italian_traffic_signs_-_segnale_di_corsia.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_corsia.svg",
     "name": "Segnale di corsia",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.6p1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Italian_traffic_signs_-_tornante_%28modello_II_6-p1%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_tornante_(modello_II_6-p1).svg",
+    "name": "Tornanti",
+    "osmTags": ["hazard=curve", "curve=hairpin"],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.6p2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Italian_traffic_signs_-_numero_del_tornante_%28modello_II_6-p2%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_numero_del_tornante_(modello_II_6-p2).svg",
+    "name": "Tornanti",
+    "osmTags": ["hazard=curve", "curve=hairpin"],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.6q1",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/1/15/Italian_traffic_signs_-_pulizia_meccanica_della_strada.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_pulizia_meccanica_della_strada.svg",
+    "name": "Pulizia stradale",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "IT:MII.6q2",
+    "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Italian_traffic_signs_-_pulizia_meccanica_della_strada_%28modello_II_6-q2%29.svg",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_pulizia_meccanica_della_strada_(modello_II_6-q2).svg",
+    "name": "Pulizia stradale",
     "osmTags": [],
     "comments": ""
   },

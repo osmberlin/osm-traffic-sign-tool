@@ -680,7 +680,7 @@ describe('parseItalyTable', () => {
     <td>A, 1a</td>
     <td>Curva a sinistra</td>
     <td>Dangerous bend (to the left)</td>
-    <td>hazard curve\`=\`</td>
+    <td><code><bdi><a href="/wiki/Key:hazard">hazard</a></bdi>=<a href="/wiki/Tag:hazard%3Dcurve"><bdi>curve</bdi></a></code></td>
   </tr></tbody></table>
 </div>`
 
@@ -695,7 +695,7 @@ describe('parseItalyTable', () => {
     <td>C, 2</td>
     <td>Divieto di transito</td>
     <td>Closed to all vehicles in both directions</td>
-    <td>vehicle no\`=\`</td>
+    <td><code><bdi><a href="/wiki/Key:vehicle">vehicle</a></bdi>=<bdi>no</bdi></code></td>
     <td>Il divieto di transito vieta il transito a tutti i veicoli.</td>
   </tr></tbody></table>
 </div>`
@@ -731,7 +731,7 @@ describe('parseItalyTable', () => {
     expect(row?.signId).toBe('II.46')
     expect(row?.name).toBe('Divieto di transito')
     expect(row?.commentsText).toContain('Il divieto di transito')
-    expect(row?.tagsText).toContain('vehicle no')
+    expect(row?.tagsText).toBe('vehicle=no')
     expect(row?.signCategory).toBe('traffic_sign')
   })
 
@@ -744,5 +744,71 @@ describe('parseItalyTable', () => {
     expect(row?.signCategory).toBe('exception_modifier')
     expect(row?.kind).toBe('exception_modifier')
     expect(toWikiSign('IT', row!)?.sign).toBe('IT:MII.1')
+  })
+
+  const itRow = (signId: string, tagsCellHtml: string) => `
+<div class="mw-parser-output">
+  <h4>Segnali di divieto (Prohibitory or restrictive signs)</h4>
+  <table class="wikitable"><tbody><tr>
+    <th>Sign</th><th>Figura</th><th>Vienna</th><th>Name</th><th>English</th><th>Related tags</th><th>Commenti</th>
+  </tr><tr>
+    <td></td><td>${signId}</td><td></td><td>Nome</td><td>Name</td>
+    <td>${tagsCellHtml}</td>
+    <td>Vedi <code>motor_vehicle=no</code></td>
+  </tr></tbody></table>
+</div>`
+
+  const itTags = (signId: string, tagsCellHtml: string) => {
+    const [row] = parseItalyTable(cheerio.load(itRow(signId, tagsCellHtml)))
+    return parseWikiTags(row?.tagsText ?? '')
+  }
+
+  test('keeps Italian prose between tag templates out of the tag values', () => {
+    expect(
+      itTags(
+        'II.17',
+        '<code>narrow=yes</code>, <code>traffic_calming=chicane</code> o <code>traffic_calming=choker</code>insieme a <p><code>hazard=road_narrows</code></p>',
+      ),
+    ).toEqual([
+      { key: 'narrow', value: 'yes' },
+      { key: 'traffic_calming', value: 'chicane' },
+      { key: 'traffic_calming', value: 'choker' },
+      { key: 'hazard', value: 'road_narrows' },
+    ])
+    expect(
+      itTags(
+        'II.37',
+        'Preferibile: <code>traffic_sign=stop</code>. Aggiungete <code>highway=stop</code> sulla highway.',
+      ),
+    ).toEqual([{ key: 'highway', value: 'stop' }])
+  })
+
+  test('drops placeholder values and ignores tags from the Commenti column', () => {
+    expect(
+      itTags('II.60b', '<code>maxweightrating:hgv=*</code> (il numero corrisponde al valore)'),
+    ).toEqual([])
+  })
+
+  test('rejoins a templated key prefix and marks turn restrictions as relation tags', () => {
+    expect(
+      itTags(
+        'II.74',
+        '<code>parking:<var>side</var>:</code><code><bdi>restriction</bdi>=<bdi>no</bdi></code>',
+      ),
+    ).toEqual([{ key: 'parking:side:restriction', value: 'no' }])
+    expect(
+      itTags(
+        'II.80a',
+        '<a href="/wiki/IT:Relation:restriction">Relation:restriction</a><br><code>restriction=only_straight_on</code>',
+      ),
+    ).toEqual([
+      { key: 'type', value: 'restriction' },
+      { key: 'restriction', value: 'only_straight_on' },
+    ])
+  })
+
+  test('accepts Modello ids with a numbered variant suffix', () => {
+    const [row] = parseItalyTable(cheerio.load(itRow('MII.5a1', '')))
+    expect(row?.signId).toBe('MII.5a1')
   })
 })

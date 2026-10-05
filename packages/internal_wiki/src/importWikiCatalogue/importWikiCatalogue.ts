@@ -55,6 +55,7 @@ const inferGeometries = (tags: { key: string; value: string }[]) => {
     return ['node']
   }
   if (tags.some((t) => t.key === 'railway' && t.value === 'level_crossing')) return ['node']
+  if (tags.some((t) => t.key === 'type' && t.value === 'restriction')) return ['relation']
   if (tags.length === 0) return ['node']
   return ['way']
 }
@@ -91,17 +92,33 @@ const buildRecommendations = (tags: { key: string; value: string }[], isNa: bool
 
 const escapeString = (value: string) => value.replace(/\\/g, '\\\\').replace(/'/g, "\\'")
 
-const emitSignObject = (sign: ParsedWikiRow, defaultCategory: string, overviewUrl: string) => {
+const emitSignObject = (
+  sign: ParsedWikiRow,
+  defaultCategory: string,
+  overviewUrl: string,
+  commentLang: string,
+) => {
   const tags = parseWikiTags(sign.tagsText)
-  const sectionCategory = sign.signCategory ?? inferCategory(sign.signId, tags, defaultCategory)
-  const category = tags.some((tag) => tag.key === 'maxspeed') ? 'speed' : sectionCategory
+  // Rows with a section category (IT) also carry their own local name, English name and comments.
+  const hasSectionCategory = sign.signCategory !== undefined
+  const category = hasSectionCategory
+    ? tags.some((tag) => tag.key === 'maxspeed')
+      ? 'speed'
+      : sign.signCategory!
+    : inferCategory(sign.signId, tags, defaultCategory)
   const kind = sign.kind ?? inferKind(sign.signId, category)
   const imageBlock = sign.imageUrl
     ? `image: {\n      kind: 'remote',\n      sourceUrl: '${escapeString(sign.imageUrl)}',\n      licence: 'Public Domain',\n    },`
     : `image: {\n      kind: 'remote',\n      sourceUrl: '${escapeString(overviewUrl)}',\n      licence: 'Public Domain',\n    },`
 
-  const descriptiveName =
-    sign.englishName && sign.englishName !== sign.name ? sign.englishName : undefined
+  const name = hasSectionCategory ? sign.name : sign.signId
+  const descriptiveName = hasSectionCategory
+    ? sign.englishName && sign.englishName !== sign.name
+      ? sign.englishName
+      : undefined
+    : sign.name !== sign.signId
+      ? sign.name
+      : undefined
   const descriptiveNameLine = descriptiveName
     ? `    descriptiveName: '${escapeString(descriptiveName)}',\n`
     : ''
@@ -112,13 +129,13 @@ const emitSignObject = (sign: ParsedWikiRow, defaultCategory: string, overviewUr
     descriptionParts.length > 0 ? `'${escapeString(descriptionParts.join(' — '))}'` : 'null'
 
   const commentsLine = sign.commentsText?.trim()
-    ? `comments: [{ comment: '${escapeString(sign.commentsText.trim())}', lang: 'it' }],\n    `
+    ? `comments: [{ comment: '${escapeString(sign.commentsText.trim())}', lang: '${escapeString(commentLang)}' }],\n    `
     : ''
 
   return `  {
     osmValuePart: '${escapeString(sign.signId)}',
     signId: '${escapeString(sign.signId)}',
-    name: '${escapeString(sign.name)}',
+    name: '${escapeString(name)}',
 ${descriptiveNameLine}    description: ${description},
     kind: '${kind}',
     ${commentsLine}${buildRecommendations(tags, sign.isNa)}
@@ -180,7 +197,7 @@ const importCountry = async (config: CatalogueCountryConfig) => {
           ? parseItalyTable($)
           : parseUniversalTable($, config.prefix)
     total += signs.length
-    const content = `import type { SignType } from '../../TrafficSignDataTypes.js'\n\nexport const ${page.exportName}: SignType[] = [\n${signs.map((s) => emitSignObject(s, page.defaultCategory, config.overviewUrl)).join(',\n')}\n]\n`
+    const content = `import type { SignType } from '../../TrafficSignDataTypes.js'\n\nexport const ${page.exportName}: SignType[] = [\n${signs.map((s) => emitSignObject(s, page.defaultCategory, config.overviewUrl, config.defaultCommentLang)).join(',\n')}\n]\n`
     await Bun.write(path.join(outDir, page.fileName), content)
     exports.push(
       `import { ${page.exportName} } from './data/${page.fileName.replace('.ts', '.js')}'`,
@@ -209,7 +226,7 @@ const emitSymbolCatalogueFile = async (
   const filtered = signs.filter((sign) => filter(sign.signId))
   const outDir = path.join(converterDataDefinitionsDir, config.prefix, 'data')
   const content = `import type { SignType } from '../../TrafficSignDataTypes.js'\n\nexport const ${exportName}: SignType[] = [\n${filtered
-    .map((sign) => emitSignObject(sign, 'signpost', config.overviewUrl))
+    .map((sign) => emitSignObject(sign, 'signpost', config.overviewUrl, config.defaultCommentLang))
     .join(',\n')}\n]\n`
   await Bun.write(path.join(outDir, fileName), content)
   console.log(`  ${filtered.length} signs -> ${fileName}`)

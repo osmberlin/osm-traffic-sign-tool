@@ -411,7 +411,8 @@ const pickWikiRowTagsText = (rowTexts: string[]): string => {
   return taggingCell ?? rowTexts[rowTexts.length - 1] ?? ''
 }
 
-const ITALY_SIGN_ID_PATTERN = /^(?:II|MII)\.\d+[a-z]?$/i
+/** Figura/Modello ids, e.g. `II.5`, `II.60a`, `MII.5a1`, `MII.6p2`. */
+const ITALY_SIGN_ID_PATTERN = /^(?:II|MII)\.\d+(?:[a-z]\d*)?$/i
 
 const ITALY_SKIP_HEADINGS = /^(contents|voci correlate|note|navigation menu|personal tools)$/i
 
@@ -485,6 +486,35 @@ export const inferItalySignKind = (
   return 'traffic_sign'
 }
 
+/**
+ * The Related tags cells mix `{{Tag}}` templates with Italian prose ("e", "o", "insieme a", …).
+ * Read the rendered `<code>` elements instead of the cell text so prose never leaks into values.
+ * `{{k|parking:{{tvar|side}}:}}{{Tag|restriction||no}}` renders as two elements and is rejoined.
+ */
+const italyTagsTextFromCell = (
+  $: cheerio.CheerioAPI,
+  cell: Parameters<cheerio.CheerioAPI>[0] | undefined,
+): string => {
+  if (!cell) return ''
+  const tags: string[] = []
+  let keyPrefix = ''
+  $(cell)
+    .find('code')
+    .each((_, code) => {
+      const text = $(code).text().replace(/\s+/g, '')
+      if (!text.includes('=')) {
+        keyPrefix = text.endsWith(':') ? text : ''
+        return
+      }
+      tags.push(`${keyPrefix}${text}`)
+      keyPrefix = ''
+    })
+  if (tags.length > 0 && $(cell).find('a[href*="Relation:restriction"]').length > 0) {
+    tags.unshift('type=restriction')
+  }
+  return tags.join(' + ')
+}
+
 const cellTextAt = (rowTexts: string[], index: number | undefined): string =>
   index === undefined ? '' : (rowTexts[index]?.trim() ?? '')
 
@@ -518,13 +548,14 @@ const parseItalyWikiTable = (
     const italianName = cellTextAt(rowTexts, columns.name)
     const englishName = cellTextAt(rowTexts, columns.english)
     const viennaCode = cellTextAt(rowTexts, columns.vienna)
-    const tagsText = cellTextAt(rowTexts, columns.tags)
+    const tagsCellText = cellTextAt(rowTexts, columns.tags)
+    const tagsText = italyTagsTextFromCell($, cells[columns.tags])
     const commentsText = cellTextAt(rowTexts, columns.commenti)
 
     const imgHref = $(cells[0]).find('a').attr('href') ?? $(cells[1]).find('a').attr('href')
     const imgSrc = $(cells[0]).find('img').attr('src') ?? $(cells[1]).find('img').attr('src')
     const imageUrl = wikiImageUrl(imgHref)
-    const isNa = /^(n\/a|na|n\/a\.?)$/i.test(tagsText) || /N\/A/i.test(tagsText)
+    const isNa = /^(n\/a|na|n\/a\.?)$/i.test(tagsCellText) || /N\/A/i.test(tagsCellText)
 
     const name =
       italianName && italianName !== signId

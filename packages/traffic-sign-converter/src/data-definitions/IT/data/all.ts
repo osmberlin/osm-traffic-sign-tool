@@ -119,8 +119,8 @@ export const _all: SignType[] = [
         geometries: ['way'],
         uniqueTags: [
           { key: 'narrow', value: 'yes' },
-          { key: 'traffic_calming', value: 'chicane o' },
-          { key: 'traffic_calming', value: 'chokerinsieme a' },
+          { key: 'traffic_calming', value: 'chicane' },
+          { key: 'traffic_calming', value: 'choker' },
           { key: 'hazard', value: 'road_narrows' },
         ],
       },
@@ -145,8 +145,8 @@ export const _all: SignType[] = [
         geometries: ['way'],
         uniqueTags: [
           { key: 'narrow', value: 'yes' },
-          { key: 'traffic_calming', value: 'chicane o' },
-          { key: 'traffic_calming', value: 'chokerinsieme a' },
+          { key: 'traffic_calming', value: 'chicane' },
+          { key: 'traffic_calming', value: 'choker' },
           { key: 'hazard', value: 'road_narrows' },
         ],
       },
@@ -171,8 +171,8 @@ export const _all: SignType[] = [
         geometries: ['way'],
         uniqueTags: [
           { key: 'narrow', value: 'yes' },
-          { key: 'traffic_calming', value: 'chicane o' },
-          { key: 'traffic_calming', value: 'chokerinsieme a' },
+          { key: 'traffic_calming', value: 'chicane' },
+          { key: 'traffic_calming', value: 'choker' },
           { key: 'hazard', value: 'road_narrows' },
         ],
       },
@@ -275,7 +275,7 @@ export const _all: SignType[] = [
       {
         geometries: ['way'],
         uniqueTags: [
-          { key: 'oneway', value: 'no e' },
+          { key: 'oneway', value: 'no' },
           { key: 'hazard', value: 'contraflow' },
         ],
       },
@@ -297,8 +297,8 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        highwayValues: ['traffic_signals e'],
+        geometries: ['node'],
+        highwayValues: ['traffic_signals'],
         uniqueTags: [{ key: 'hazard', value: 'traffic_signals' }],
       },
     ],
@@ -319,8 +319,8 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        highwayValues: ['traffic_signals e'],
+        geometries: ['node'],
+        highwayValues: ['traffic_signals'],
         uniqueTags: [{ key: 'hazard', value: 'traffic_signals' }],
       },
     ],
@@ -341,10 +341,10 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        highwayValues: ['crossing e'],
+        geometries: ['node'],
+        highwayValues: ['crossing'],
         uniqueTags: [
-          { key: 'crossing_ref', value: 'zebra e' },
+          { key: 'crossing_ref', value: 'zebra' },
           { key: 'hazard', value: 'pedestrian_crossing' },
         ],
       },
@@ -574,7 +574,7 @@ export const _all: SignType[] = [
       {
         geometries: ['way'],
         uniqueTags: [
-          { key: 'junction', value: 'roundabout and' },
+          { key: 'junction', value: 'roundabout' },
           { key: 'hazard', value: 'roundabout' },
         ],
       },
@@ -647,9 +647,9 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
+        geometries: ['node'],
         uniqueTags: [
-          { key: 'railway', value: 'level_crossing e' },
+          { key: 'railway', value: 'level_crossing' },
           { key: 'crossing:barrier', value: 'yes' },
         ],
       },
@@ -671,9 +671,9 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
+        geometries: ['node'],
         uniqueTags: [
-          { key: 'railway', value: 'level_crossing e' },
+          { key: 'railway', value: 'level_crossing' },
           { key: 'crossing:barrier', value: 'no' },
         ],
       },
@@ -812,7 +812,7 @@ export const _all: SignType[] = [
     descriptiveName: 'Stop',
     description: 'Vienna B, 2a',
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['stop sulla highway.'] }],
+    tagRecommendationsByGeometry: [{ geometries: ['node'], highwayValues: ['stop'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1302,7 +1302,7 @@ export const _all: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        accessTags: [{ key: 'bus', value: 'no e' }],
+        accessTags: [{ key: 'bus', value: 'no' }],
         uniqueTags: [{ key: 'tourist_bus', value: 'no' }],
       },
     ],
@@ -1353,18 +1353,8 @@ export const _all: SignType[] = [
         lang: 'it',
       },
     ],
-    tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [
-          {
-            key: 'maxweightrating:hgv',
-            value:
-              '* (il numero corrisponde al valore indicato sul segnale; usare il punto come separatore decimale)',
-          },
-        ],
-      },
-    ],
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'traffic_sign' },
     image: {
       kind: 'remote',
@@ -1756,8 +1746,11 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'Relation:restrictionrestriction', value: 'only_straight_on' }],
+        geometries: ['relation'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'only_straight_on' },
+        ],
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1777,8 +1770,11 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'Relation:restrictionrestriction', value: 'only_left_turn' }],
+        geometries: ['relation'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'only_left_turn' },
+        ],
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1798,8 +1794,11 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'Relation:restrictionrestriction', value: 'only_right_turn' }],
+        geometries: ['relation'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'only_right_turn' },
+        ],
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1819,8 +1818,11 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'Relation:restrictionrestriction', value: 'only_right_turn' }],
+        geometries: ['relation'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'only_right_turn' },
+        ],
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1840,8 +1842,11 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'Relation:restrictionrestriction', value: 'only_left_turn' }],
+        geometries: ['relation'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'only_left_turn' },
+        ],
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1861,8 +1866,11 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'Relation:restrictionrestriction', value: 'no_straight_on' }],
+        geometries: ['relation'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'no_straight_on' },
+        ],
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1882,8 +1890,11 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'Relation:restrictionrestriction', value: 'no_left_turn' }],
+        geometries: ['relation'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'no_left_turn' },
+        ],
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -1903,8 +1914,11 @@ export const _all: SignType[] = [
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'Relation:restrictionrestriction', value: 'no_right_turn' }],
+        geometries: ['relation'],
+        uniqueTags: [
+          { key: 'type', value: 'restriction' },
+          { key: 'restriction', value: 'no_right_turn' },
+        ],
       },
     ],
     catalogue: { signCategory: 'traffic_sign' },
@@ -2114,7 +2128,7 @@ export const _all: SignType[] = [
         highwayValues: ['cycleway'],
         accessTags: [
           { key: 'foot', value: 'designated' },
-          { key: 'bicycle', value: 'designated ed opzionale' },
+          { key: 'bicycle', value: 'designated' },
         ],
         uniqueTags: [{ key: 'segregated', value: 'yes' }],
       },
@@ -2157,7 +2171,7 @@ export const _all: SignType[] = [
         highwayValues: ['cycleway'],
         accessTags: [
           { key: 'foot', value: 'designated' },
-          { key: 'bicycle', value: 'designated ed opzionale' },
+          { key: 'bicycle', value: 'designated' },
         ],
         uniqueTags: [{ key: 'segregated', value: 'no' }],
       },
@@ -2228,13 +2242,7 @@ export const _all: SignType[] = [
     description: 'Vienna C, 16',
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [
-          { key: 'amenity', value: 'customs ed ogni' },
-          { key: 'barrier', value: '* necessaria.' },
-        ],
-      },
+      { geometries: ['way'], uniqueTags: [{ key: 'amenity', value: 'customs' }] },
     ],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -2951,9 +2959,8 @@ export const _all: SignType[] = [
     descriptiveName: 'Begin of city limits',
     description: null,
     kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'name', value: '* (nome del centro abitato)' }] },
-    ],
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'signpost' },
     image: {
       kind: 'remote',
@@ -2970,13 +2977,7 @@ export const _all: SignType[] = [
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [
-          { key: 'city_limit', value: 'end' },
-          { key: 'name', value: '* (nome del centro abitato)' },
-        ],
-      },
+      { geometries: ['way'], uniqueTags: [{ key: 'city_limit', value: 'end' }] },
     ],
     catalogue: { signCategory: 'signpost' },
     image: {
@@ -4904,6 +4905,108 @@ export const _all: SignType[] = [
     },
   },
   {
+    osmValuePart: 'MII.5a1',
+    signId: 'MII.5a1',
+    name: 'Inizio',
+    descriptiveName: 'Begin',
+    description: 'Vienna H, 4a',
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_inizio_verticale_(modello_II_5-a1).svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.5a2',
+    signId: 'MII.5a2',
+    name: 'Continuazione',
+    descriptiveName: 'Repeat',
+    description: 'Vienna H, 4b',
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_continua_verticale_(modello_II_5-a2).svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.5a3',
+    signId: 'MII.5a3',
+    name: 'Fine',
+    descriptiveName: 'End',
+    description: 'Vienna H, 4c',
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_fine_verticale_(modello_II_5-a3).svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.5b1',
+    signId: 'MII.5b1',
+    name: 'Inizio',
+    descriptiveName: 'Begin',
+    description: 'Vienna H, 3a',
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_inizio_orizzontale_(modello_II_5-b1).svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.5b2',
+    signId: 'MII.5b2',
+    name: 'Continuazione',
+    descriptiveName: 'Repeat',
+    description: 'Vienna H, 3b',
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_continua_orizzontale_(modello_II_5-b2).svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.5b3',
+    signId: 'MII.5b3',
+    name: 'Fine',
+    descriptiveName: 'End',
+    description: 'Vienna H, 3c',
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_fine_orizzontale_(modello_II_5-b3).svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: 'MII.6',
     signId: 'MII.6',
     name: 'Pannello integrativo a testo libero',
@@ -5124,6 +5227,88 @@ export const _all: SignType[] = [
       kind: 'remote',
       sourceUrl:
         'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_segnale_di_corsia.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.6p1',
+    signId: 'MII.6p1',
+    name: 'Tornanti',
+    descriptiveName: 'Hairpin turn',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'hazard', value: 'curve' },
+          { key: 'curve', value: 'hairpin' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_tornante_(modello_II_6-p1).svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.6p2',
+    signId: 'MII.6p2',
+    name: 'Tornanti',
+    descriptiveName: 'Hairpin turn',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: [
+      {
+        geometries: ['way'],
+        uniqueTags: [
+          { key: 'hazard', value: 'curve' },
+          { key: 'curve', value: 'hairpin' },
+        ],
+      },
+    ],
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_numero_del_tornante_(modello_II_6-p2).svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.6q1',
+    signId: 'MII.6q1',
+    name: 'Pulizia stradale',
+    descriptiveName: 'Road cleaning',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_pulizia_meccanica_della_strada.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: 'MII.6q2',
+    signId: 'MII.6q2',
+    name: 'Pulizia stradale',
+    descriptiveName: 'Road cleaning',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: 'none',
+    taggingSuggestionsQa: 'none',
+    catalogue: { signCategory: 'exception_modifier' },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Italian_traffic_signs_-_pulizia_meccanica_della_strada_(modello_II_6-q2).svg',
       licence: 'Public Domain',
     },
   },
