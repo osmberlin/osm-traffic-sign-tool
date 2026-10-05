@@ -156,5 +156,31 @@ export const cycleInfrastructureQuestions = (): SignQuestion[] => [
   surfaceColorQuestion(),
 ]
 
+/**
+ * Centerline oneway tagging for DE:1000-32 — adjacent bidirectional cycle track vs contraflow
+ * cycling on a one-way street (see DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-32).
+ */
+export const centerlineOnewayContextQuestion = (): SignQuestion => ({
+  questionId: 'centerlineOnewayContext',
+  questionI18nKey: 'centerlineOnewayContext.prompt',
+  geometries: ['way_centerline'],
+  defaultAnswerId: 'adjacentCycleTrack',
+  answers: [
+    nilAnswer('centerlineOnewayContext'),
+    {
+      answerId: 'adjacentCycleTrack',
+      answerI18nKey: 'centerlineOnewayContext.answer.adjacentCycleTrack',
+      geometries: ['way_centerline'],
+    },
+    {
+      answerId: 'contraflowOneWay',
+      answerI18nKey: 'centerlineOnewayContext.answer.contraflowOneWay',
+      geometries: ['way_centerline'],
+      tags: [{ key: 'oneway:bicycle', value: 'no' }],
+      removeTags: [{ key: 'cycleway', value: 'track' }],
+    },
+  ],
+})
+
 /** Node tagging for hazard signs mapped as `traffic_sign` on a way node (see DE:Key:traffic_sign). */
 export const hazardSignNodeQuestions = (): SignQuestion[] => [signDirectionQuestion()]
