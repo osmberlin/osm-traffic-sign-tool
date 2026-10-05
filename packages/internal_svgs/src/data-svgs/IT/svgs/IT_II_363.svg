@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 238.125" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.363 - Camping and caravan site</title>
+  <g transform="translate(165.422 -402.075)">
+    <path d="M-165.422 402.075h158.75V640.2h-158.75z" style="fill:#784421;fill-rule:evenodd;stroke-width:29.4791;paint-order:markers fill stroke"/>
+    <rect width="152.4" height="231.775" x="-162.247" y="405.25" rx="10.319" ry="10.319" style="fill:none;fill-rule:evenodd;stroke:#fff;stroke-width:3.175;paint-order:markers fill stroke"/>
+    <path d="M-145.578 421.919h119.063v119.063h-119.063z" style="fill:#fff;fill-rule:evenodd;stroke-width:4.84527;paint-order:markers fill stroke"/>
+    <path d="m255.191 427.436-9.498 10.973h4.673l4.825-5.574 4.825 5.574h4.673z" style="fill:#000;fill-rule:evenodd;stroke-width:3.175;paint-order:markers fill stroke" transform="translate(-887.465 -904.349)scale(3.15128)"/>
+    <path d="m253.169 424.354 2.022 2.336 2.022-2.336h-.895l-1.127 1.302-1.127-1.302z" style="fill:#000;fill-rule:evenodd;stroke-width:.67594;paint-order:markers fill stroke" transform="translate(-887.465 -904.349)scale(3.15128)"/>
+    <g transform="translate(-887.465 -904.349)scale(3.15128)">
+      <path d="m245.546 442.241-1.349 5.643h3.78v-4.821h3.803v4.82h13.923l-.46-5.642zM244.197 448.442l.621 4.184h-3.496v.859h13.771a2.58 2.58 0 0 1 2.569-2.412 2.58 2.58 0 0 1 2.574 2.412h5.007l.46-5.043H251.78v4.22h-3.803v-4.22z" style="fill:#000;fill-rule:evenodd;stroke-width:3.175;paint-order:markers fill stroke"/>
+      <path d="M257.453 443.06h7.045l.273 3.742h-7.318z" style="fill:#fff;fill-rule:evenodd;stroke-width:3.16203;paint-order:markers fill stroke"/>
+      <circle cx="257.663" cy="453.697" r="2.017" style="fill:#000;fill-rule:evenodd;stroke-width:7.47532;paint-order:markers fill stroke"/>
+      <circle cx="257.663" cy="453.697" r=".932" style="fill:#fff;fill-rule:evenodd;stroke-width:3.4564;paint-order:markers fill stroke"/>
+    </g>
+  </g>
+</svg>

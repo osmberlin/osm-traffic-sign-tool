@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Add beta country catalogue `IT` (303 signs from the OSM Wiki page `IT:Road_signs_in_Italy`, ids follow the Figura/Modello column, e.g. `IT:II.5`, `IT:MII.1`).
 - **BREAKING:** Opening-hours validation now uses the structured warnings of `opening_hours` 3.14. Removed the string-parsing exports `flattenOpeningHoursMessages`, `parseOpeningHoursFeedbackChunk`, `parseOpeningHoursFeedbackMessage`, `partitionOpeningHoursMessages`, `splitOpeningHoursFeedbackMessage`, `shouldSkipOpeningHoursMessage` and `SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES`; use `shouldSkipOpeningHoursWarningType` / `SKIPPABLE_OPENING_HOURS_WARNING_TYPES` instead.
 - Fix `validateConditionalOpeningHours()` showing the irrelevant "no PH rule" warning for non-German locales (it was only hidden for `de`).
 - Add `DE:600` (Absperrschranke / Barke).

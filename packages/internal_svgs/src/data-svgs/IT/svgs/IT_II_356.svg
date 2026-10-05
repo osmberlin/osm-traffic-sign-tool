@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.75 238.125" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.356 - Filling station</title>
+  <g transform="translate(912.085 -1062.692)">
+    <path d="M-912.085 1062.692h158.75v238.125h-158.75z" style="fill:#00408b;fill-rule:evenodd;stroke-width:29.4791;paint-order:markers fill stroke"/>
+    <rect width="152.4" height="231.775" x="-908.91" y="1065.867" rx="10.319" ry="10.319" style="fill:none;fill-rule:evenodd;stroke:#fff;stroke-width:3.175;paint-order:markers fill stroke"/>
+    <path d="M-892.242 1082.536h119.063v119.063h-119.063z" style="fill:#fff;fill-rule:evenodd;stroke-width:4.84527;paint-order:markers fill stroke"/>
+    <path d="M-867.15 1096.79v42.329h5.731v49.093h49.674v-41.068c2.15.028 3.295.403 3.708.746.429.356.928 1.082.928 3.724v26.546c0 2.763 1.108 5.253 2.807 6.924 1.7 1.67 3.862 2.577 6.043 2.918 4.364.682 9.359-.738 11.695-5.084 1.18-2.196 1.525-4.782 1.071-7.62v-.01l-9.3-57.554-.019-.091c.025.109-.054-.595-.14-1.428-.086-.834-.34-1.86-.64-3.06-.175-.7-.285-1.349-.573-2.096-.29-.753-.793-1.484-1.446-1.972-.578-.432-1.196-.702-2.018-.813-1.029-.138-2.302-.055-3.332-.055h-.86v6.346h.862c.81 0 .997.15 1.083.215.086.064.184.168.314.53.13.36.237.93.301 1.558.061.591.05 1.148.228 2.011l9.275 57.42c.22 1.388-.221 3.292-.393 3.612-.655 1.22-2.948 2.163-5.128 1.822-1.09-.17-2.01-.619-2.578-1.176-.567-.557-.905-1.173-.905-2.4v-26.546c0-3.605-.929-6.697-3.226-8.605-2.23-1.85-4.953-2.192-7.757-2.211v-1.679h6.062v-42.329z" style="fill:#000;fill-rule:evenodd;stroke-width:5.83985;stroke-opacity:.329231;paint-order:markers fill stroke"/>
+    <rect width="47.35" height="27.626" x="-860.091" y="1104.141" rx="2.871" ry="2.871" style="fill:#fff;fill-rule:evenodd;stroke-width:4.1409;stroke-opacity:.329231;paint-order:markers fill stroke"/>
+  </g>
+</svg>

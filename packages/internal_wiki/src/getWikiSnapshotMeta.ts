@@ -6,6 +6,7 @@ import brMeta from './data/wikiSnapshotMeta_BR.json' with { type: 'json' }
 import caMeta from './data/wikiSnapshotMeta_CA.json' with { type: 'json' }
 import deMeta from './data/wikiSnapshotMeta_DE.json' with { type: 'json' }
 import frMeta from './data/wikiSnapshotMeta_FR.json' with { type: 'json' }
+import itMeta from './data/wikiSnapshotMeta_IT.json' with { type: 'json' }
 import plMeta from './data/wikiSnapshotMeta_PL.json' with { type: 'json' }
 
 export type WikiSnapshotMeta = {
@@ -20,6 +21,7 @@ const metaByCountry: Partial<Record<CountryPrefixType, WikiSnapshotMeta>> = {
   CA: caMeta,
   DE: deMeta,
   FR: frMeta,
+  IT: itMeta,
   PL: plMeta,
 }
 

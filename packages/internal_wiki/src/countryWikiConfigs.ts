@@ -1,7 +1,7 @@
 export type WikiPageConfig = {
   slug: string
-  /** belgium = Sign|Image|Description|Tags columns; universal = auto-detect; de-row-id = German Zeichen_ rows */
-  parseMode?: 'belgium' | 'universal' | 'de-row-id'
+  /** belgium = Sign|Image|Description|Tags columns; universal = auto-detect; de-row-id = German Zeichen_ rows; italy = Figura/Modello column */
+  parseMode?: 'belgium' | 'universal' | 'de-row-id' | 'italy'
   defaultCategory?: string
 }
 
@@ -66,6 +66,11 @@ export const countryWikiConfigs: Record<string, CountryWikiConfig> = {
     prefix: 'CA',
     overviewUrl: 'https://wiki.openstreetmap.org/wiki/Canada/Road_signs',
     pages: [{ slug: 'Canada/Road_signs/Ontario', parseMode: 'universal' }],
+  },
+  IT: {
+    prefix: 'IT',
+    overviewUrl: 'https://wiki.openstreetmap.org/wiki/IT:Road_signs_in_Italy',
+    pages: [{ slug: 'IT:Road_signs_in_Italy', parseMode: 'italy' }],
   },
 }
 

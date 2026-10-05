@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 350" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen MII.5a3 - End</title>
+  <path d="M0 272.482h1200v779.88H0z" style="fill:none;stroke:none" transform="translate(0 -702.375)"/>
+  <g style="font-size:41.90995789px;font-style:normal;font-weight:400;line-height:125%;letter-spacing:0;word-spacing:0;fill:#000;fill-opacity:1;stroke:none;font-family:Sans" transform="translate(0 -702.375)">
+    <path d="M.5 702.875h149v349H.5z" style="fill:#fff;fill-opacity:1;stroke:#000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <rect width="138" height="338" x="6" y="708.375" rx="27" ry="27" style="fill:none;stroke:#000;stroke-width:6;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+    <path d="M75 902.375h-9.836v60.867L25 922.816v29.093l50 50.466 50-50.466v-29.093l-40.164 40.426v-60.867z" style="fill:#000;fill-opacity:1;fill-rule:evenodd"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 3000" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.346 - End motorway (green background) / end expressway (blue background)</title>
+  <g transform="translate(0 1947.638)">
+    <path d="M0-1947.638h1700v3000H0z" style="fill:#08842c;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+    <path d="M99.999-977.637v79.999h190v110h86.837l21.273-110h903.9l21.274 110H1410v-110h190v-80z" style="fill:#fff;fill-opacity:1;stroke:none"/>
+    <path d="M478.77-797.638h300.292l-66.396 1700H150zM523.25-1027.637h264.795l30.074-770H672.164zM881.904-1797.637h146.052l148.914 770H911.977zM920.96-797.638h300.39l330.435 1700H987.357z" style="fill:#fff;fill-opacity:1;stroke:none"/>
+    <path d="M1380.199-1902.638 33.294 741.893 55.716 907.28l94.385 91.222 157.996 8.861L1655-1637.168l-2.851-138.082-58.515-94.826-91.763-32.503z" style="fill:#d40000;fill-opacity:1;stroke:none"/>
+    <rect width="1610" height="2910" x="45" y="-1902.638" rx="157.5" ry="157.5" style="fill:none;stroke:#fff;stroke-width:45;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+  </g>
+</svg>

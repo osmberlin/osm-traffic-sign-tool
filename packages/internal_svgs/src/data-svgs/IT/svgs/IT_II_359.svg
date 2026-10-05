@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.624 596.046" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.359 - Tramway stop</title>
+  <g transform="translate(-.688 -453.943)">
+    <rect width="452.019" height="655.174" x="-23.014" y="426.981" rx="13.736" ry="20.148" style="fill:#fff;fill-opacity:1;stroke:#fff;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"/>
+    <path d="M0 0a.936.936 0 0 0-1.869 0l-3.653.454v1.243h29.436V.692c0-.292-.281-.692-.735-.692h-2.993a.936.936 0 0 0-.929-.929.936.936 0 0 0-.93.929h-2.399a.936.936 0 0 0-.929-.929.936.936 0 0 0-.929.929H4.279c-.021-.497-.432-.929-.951-.929A.936.936 0 0 0 2.399 0" style="fill:#1f1a17;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(9.38594 0 0 -9.38594 116.781 692.482)"/>
+    <path d="M0 0h3.112v-3.199h25.416v.67c-.194 1.005-.259 2.043-.583 2.994-.086.259-.368.54-.648.54H9.823l2.637 1.351h1.458v.616h-1.48L8.396.973H1.038C.713.973.151.832.108.583zm3.739-.065h4.225v-2.464H3.739zm4.852 0h4.225v-2.464H8.591zm4.831 0h4.203v-2.464h-4.203zm4.819 0h4.225v-2.464h-4.225zm4.852 0 4.344.043.454-2.507h-4.798" style="fill:#1f1a17;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(9.38594 0 0 -9.38594 73.268 638.316)"/>
+    <path d="M0 0h2.723l.022-2.648H-.8zm.346-.519h1.772V-2.14H-.194" style="fill:#1f1a17;fill-opacity:1;fill-rule:evenodd;stroke:none" transform="matrix(9.38594 0 0 -9.38594 72.255 643.694)"/>
+    <path d="M4.76 457.975h396.472v589.877H4.76zm33.32 12.276h329.832c11.403 0 20.724 9.95 20.724 22.114v521.097c0 12.164-9.32 22.113-20.724 22.113H38.08c-11.394 0-20.724-9.949-20.724-22.113V492.365c0-12.165 9.33-22.114 20.724-22.114m-.253-7.762h330.338c15.533 0 28.233 13.365 28.233 29.707v521.435c0 16.341-12.7 29.707-28.233 29.707H37.827c-15.525 0-28.233-13.366-28.233-29.707V492.196c0-16.342 12.708-29.707 28.233-29.707M57.95 510.76h290.1v290.1H57.95" style="fill:#00408b;fill-opacity:1;fill-rule:evenodd;stroke:none"/>
+  </g>
+</svg>

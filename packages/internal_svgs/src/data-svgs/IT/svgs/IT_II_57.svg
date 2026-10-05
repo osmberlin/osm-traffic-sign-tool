@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.279 159.279" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen II.57 - No entry for hand carts</title>
+  <g transform="translate(-923.942 -813.618)">
+    <circle cx="1003.582" cy="893.258" r="79.64" style="fill:#000;fill-rule:evenodd;stroke-width:8.23434"/>
+    <circle cx="1003.582" cy="893.258" r="79.375" style="fill:#fff;fill-rule:evenodd;stroke-width:7.2697"/>
+    <circle cx="1003.582" cy="893.258" r="76.729" style="fill:#d40000;fill-rule:evenodd;stroke-width:7.02738"/>
+    <circle cx="1003.582" cy="893.258" r="56.885" style="fill:#fff;fill-rule:evenodd;stroke-width:5.20995"/>
+    <g transform="translate(-775.029 -437.183)scale(2.60323)">
+      <path d="m663.01 512.818 26.21-3.739" style="color:#000;fill:#d30000;fill-rule:evenodd;stroke-width:1.74625;stroke-linejoin:bevel"/>
+      <path d="m689.096 508.215-26.21 3.738.249 1.729 18.219-2.599 3.35 2.545.394 2.784.969-.137-.813-5.748 4.09-.583zm-4.812 2.45.224 1.585-1.792-1.361z" style="color:#000;fill:#000;fill-rule:evenodd;stroke-linejoin:bevel"/>
+      <circle cx="673.774" cy="512.915" r="4.328" style="fill:none;fill-opacity:.686154;fill-rule:evenodd;stroke:#000;stroke-width:1.515;stroke-linejoin:bevel"/>
+      <circle cx="673.774" cy="512.915" r="1.349" style="fill:#000;fill-rule:evenodd;stroke-width:1.70188;stroke-linejoin:bevel;stroke-opacity:.686154"/>
+      <circle cx="694.216" cy="500.186" r="1.619" style="fill:#000;fill-rule:evenodd;stroke-width:1.2968;stroke-linejoin:bevel"/>
+      <path d="m689.966 507.579 3.546-4.562c.817-.817 2.659-.977 3.278.045.618 1.021.882 4.122 1.29 6.183l3.535 7.307s.402 1.09-.471 1.47-1.515-.629-1.515-.629l-2.94-6.15c-.075-.098-.195-.145-.292-.011l-1.813 1.784c-.08.093-.059.202.006.309l1.622 3.322s.316.905-.42 1.307c-.737.403-1.443-.381-1.443-.381l-2.06-3.973c-.283-.611-.271-1.158.225-1.639l2.536-2.514c.215-.193.13-.42 0-.606l-1.369-2.536-1.953 2.47s-.886.912-1.655.268c-.77-.643-.107-1.464-.107-1.464z" style="fill:#000;fill-rule:evenodd;stroke-width:.978958;stroke-linejoin:bevel"/>
+    </g>
+  </g>
+</svg>

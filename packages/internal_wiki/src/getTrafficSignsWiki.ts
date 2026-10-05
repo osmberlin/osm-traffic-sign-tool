@@ -6,6 +6,7 @@ import brWiki from './data/trafficSignsWiki_BR.json' with { type: 'json' }
 import caWiki from './data/trafficSignsWiki_CA.json' with { type: 'json' }
 import deWiki from './data/trafficSignsWiki_DE.json' with { type: 'json' }
 import frWiki from './data/trafficSignsWiki_FR.json' with { type: 'json' }
+import itWiki from './data/trafficSignsWiki_IT.json' with { type: 'json' }
 import plWiki from './data/trafficSignsWiki_PL.json' with { type: 'json' }
 import type { WikiSign } from './wikiSignTypes.js'
 
@@ -18,6 +19,7 @@ const wikiByCountry = {
   FR: frWiki,
   AU: auWiki,
   BR: brWiki,
+  IT: itWiki,
 } as const satisfies Record<CountryPrefixType, WikiSign[]>
 
 /** @deprecated Use getTrafficSignsWiki(countryPrefix) */

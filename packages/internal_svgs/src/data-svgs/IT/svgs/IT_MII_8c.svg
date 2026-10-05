@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238.125 357.188" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen MII.8c - Itinerario obbligatorio per merci</title>
+  <g transform="translate(11.504 96.017)">
+    <path d="M-11.504-96.017h238.125v357.188H-11.504z" style="fill:#fff;fill-rule:evenodd;stroke-width:.0405698;paint-order:markers fill stroke"/>
+    <rect width="229.658" height="348.721" x="-7.271" y="-91.783" rx="16.404" ry="16.404" style="fill:none;fill-opacity:.892308;fill-rule:evenodd;stroke:#000;stroke-width:4.23333;paint-order:markers fill stroke"/>
+    <path d="M4845.596 3265.087h115.962v53.537h-115.962z" style="fill:#000;fill-rule:evenodd;stroke-width:17.3802;paint-order:markers fill stroke" transform="translate(-4641.513 -3058.472)scale(.97286)"/>
+    <path d="M4841.942 3282.38v39.317h119.616v6.14l-23.148 8.784h-133.201v-31.878l9.4-22.363z" style="fill:#000;fill-rule:evenodd;stroke-width:17.313;paint-order:markers fill stroke" transform="translate(-4641.513 -3058.472)scale(.97286)"/>
+    <path d="M4837.85 3288.372v14.763h-26.748l5.481-14.763z" style="fill:#fff;fill-rule:evenodd;stroke-width:17.313;paint-order:markers fill stroke" transform="translate(-4641.513 -3058.472)scale(.97286)"/>
+    <g transform="translate(-4641.513 -3058.472)scale(.97286)">
+      <circle cx="4826.773" cy="3336.2" r="15.233" style="fill:#fff;fill-rule:evenodd;stroke-width:18.2258;paint-order:markers fill stroke"/>
+      <circle cx="4826.773" cy="3336.2" r="13.191" style="fill:#000;fill-rule:evenodd;stroke-width:15.7827;paint-order:markers fill stroke"/>
+      <circle cx="4826.773" cy="3336.2" r="6.212" style="fill:#fff;fill-rule:evenodd;stroke-width:7.43236;paint-order:markers fill stroke"/>
+    </g>
+    <g transform="translate(-4543.37 -3058.862)scale(.97286)">
+      <circle cx="4826.773" cy="3336.2" r="15.233" style="fill:#fff;fill-rule:evenodd;stroke-width:18.2258;paint-order:markers fill stroke"/>
+      <circle cx="4826.773" cy="3336.2" r="13.191" style="fill:#000;fill-rule:evenodd;stroke-width:15.7827;paint-order:markers fill stroke"/>
+      <circle cx="4826.773" cy="3336.2" r="6.212" style="fill:#fff;fill-rule:evenodd;stroke-width:7.43236;paint-order:markers fill stroke"/>
+    </g>
+    <circle cx="107.538" cy="-1.769" r="79.64" style="fill:#000;fill-rule:evenodd;stroke-width:1.24363"/>
+    <g transform="matrix(-1 0 0 1 -1038.855 -943.303)">
+      <circle cx="-1146.393" cy="941.534" r="79.375" style="fill:#fff;fill-rule:evenodd;stroke-width:1.861;paint-order:markers fill stroke"/>
+      <circle cx="-1146.393" cy="941.534" r="76.729" style="fill:#00408b;fill-rule:evenodd;stroke-width:1.79897;paint-order:markers fill stroke"/>
+      <path d="M-1140.37 899.428c1.704.405 1.783 2.374.848 4.104l-6.563 12.766c-1.566 2.897-1.85 3.978 1.431 4.743l2.844.677c12.06 2.871 21.24 10.643 25.458 17.016 4.217 6.373 5.625 14.299 5.625 21.1v42.557h-18.83v-40.694c0-3.137-.91-9.36-1.735-10.605-4.341-6.559-9.335-9.527-14.927-10.858l-2.843-.678c-3.271-.808-3.507.297-3.415 3.588l.107 14.356c.073 2.62-1.657 4.817-4.548 2.084l-51.692-43.001 65.967-16.957c.953-.286 1.703-.327 2.271-.194z" style="color:#000;fill:#fff;fill-rule:evenodd;stroke-width:2.95388;paint-order:markers fill stroke"/>
+    </g>
+  </g>
+</svg>
