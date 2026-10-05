@@ -150,14 +150,9 @@ export type {
 export { createSvgFilename } from './utils/createSvgFilename.js'
 export { createSvgImportname } from './utils/createSvgImportname.js'
 export {
-  flattenOpeningHoursMessages,
   normalizeOpeningHoursLocale,
-  parseOpeningHoursFeedbackChunk,
-  parseOpeningHoursFeedbackMessage,
-  partitionOpeningHoursMessages,
-  shouldSkipOpeningHoursMessage,
-  SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES,
-  splitOpeningHoursFeedbackMessage,
+  shouldSkipOpeningHoursWarningType,
+  SKIPPABLE_OPENING_HOURS_WARNING_TYPES,
   validateConditionalOpeningHours,
 } from './utils/validateConditionalOpeningHours.js'
 export type {
