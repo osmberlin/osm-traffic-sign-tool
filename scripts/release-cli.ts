@@ -98,15 +98,30 @@ async function checkNpmLogin() {
   }
 }
 
+// Helper: Write the next version to package.json.
+// Not `npm version`: npm stops at the `workspace:*` dependencies of this monorepo.
+async function bumpVersion(packageJsonPath: string, releaseType: ReleaseType) {
+  const content = await Bun.file(packageJsonPath).text()
+  const current = content.match(/^  "version": "(\d+)\.(\d+)\.(\d+)"/m)
+  if (!current) fail(`No "version" like 1.2.3 in ${packageJsonPath}.`)
+
+  const [major, minor, patch] = current.slice(1).map(Number) as [number, number, number]
+  const version = {
+    major: `${major + 1}.0.0`,
+    minor: `${major}.${minor + 1}.0`,
+    patch: `${major}.${minor}.${patch + 1}`,
+  }[releaseType]
+  await Bun.write(packageJsonPath, content.replace(current[0], `  "version": "${version}"`))
+  return version
+}
+
 // Helper: Bump the version and move the "## Unreleased" entries below it
 async function bumpVersionAndChangelog(
-  dir: string,
   packageJsonPath: string,
   changelogPath: string,
   releaseType: ReleaseType,
 ) {
-  await $`cd ${dir} && npm version ${releaseType} --no-git-tag-version`.quiet()
-  const { version } = await readPackageJson(packageJsonPath)
+  const version = await bumpVersion(packageJsonPath, releaseType)
 
   const changelog = await Bun.file(changelogPath).text()
   const released = releaseChangelog(changelog, version, new Date())
@@ -155,7 +170,6 @@ async function releasePackage(releaseType: ReleaseType) {
 
   const files = [PACKAGE_PACKAGE_JSON, PACKAGE_CHANGELOG]
   const newVersion = await bumpVersionAndChangelog(
-    PACKAGE_DIR,
     PACKAGE_PACKAGE_JSON,
     PACKAGE_CHANGELOG,
     releaseType,
@@ -198,12 +212,7 @@ async function releaseApp(releaseType: ReleaseType) {
   p.intro(`Releasing App: ${packageName}`)
 
   const files = [APP_PACKAGE_JSON, APP_CHANGELOG]
-  const newVersion = await bumpVersionAndChangelog(
-    APP_DIR,
-    APP_PACKAGE_JSON,
-    APP_CHANGELOG,
-    releaseType,
-  )
+  const newVersion = await bumpVersionAndChangelog(APP_PACKAGE_JSON, APP_CHANGELOG, releaseType)
 
   if (flags.dryRun) {
     await restoreFiles(files)
