@@ -1,11 +1,6 @@
 import type { SignType } from '@osm-traffic-signs/converter'
-import {
-  type QaDeployContext,
-  formatQaDeployContextLines,
-  getQaDeployContext,
-  githubBlobUrl,
-} from '../qaDeployContext'
-import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
+import { type QaDeployContext, getQaDeployContext } from '../qaDeployContext'
+import { buildQaIssueUrl, formatQaIssueHeader } from '../qaIssue'
 
 export type SignTaskType = 'explicit_none' | 'add_suggestions' | 'comment'
 
@@ -25,8 +20,6 @@ export type SignTaskEntry = {
   task: SignTaskType
   suggestionNotes?: string
 }
-
-export const TAGGING_QA_AGENT_SKILL_PATH = '.cursor/skills/add-traffic-sign/SKILL.md'
 
 export const collectSignTaskEntries = (
   signs: SignType[],
@@ -82,28 +75,6 @@ const formatTaskSection = (
   lines.push('')
 }
 
-const formatAgentBrief = (countryPrefix: string, deployContext: QaDeployContext): string[] => [
-  '# Tagging QA – catalogue config update',
-  '',
-  QA_ISSUE_ATTRIBUTION_BANNER,
-  '',
-  ...formatQaDeployContextLines(deployContext),
-  '',
-  `Created from the [Tagging QA page](${deployContext.pageOrigin}/${countryPrefix}/signs-qa).`,
-  '',
-  `Submitting this issue (label \`tagging-qa\`) starts a Cursor cloud agent. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** in \`@osm-traffic-signs/converter\`—not TypeScript schema unless a task requires it.`,
-  '',
-  '## Agent instructions',
-  '',
-  '1. Apply every task in the sections below.',
-  `2. Read [\`${TAGGING_QA_AGENT_SKILL_PATH}\`](${githubBlobUrl(TAGGING_QA_AGENT_SKILL_PATH, deployContext)}) for \`tagRecommendationsByGeometry\` shape, \`questions\` / \`optionalTags\`, and OSM wiki tagging research.`,
-  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Schema: \`packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts\` (\`tagRecommendationsByGeometry: "none" | [{ geometries, optionalTags?, ... }]\`, \`questions\` with \`questionId\` / \`answerId\` / i18n keys).`,
-  '4. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
-  '',
-  '## Tasks',
-  '',
-]
-
 export const formatTaggingQaTaskResults = (
   entries: SignTaskEntry[],
   countryPrefix = 'DE',
@@ -117,7 +88,7 @@ export const formatTaggingQaTaskResults = (
   const addSuggestions = entries.filter((entry) => entry.task === 'add_suggestions')
   const comments = entries.filter((entry) => entry.task === 'comment')
 
-  const lines = [...formatAgentBrief(countryPrefix, deployContext)]
+  const lines = [...formatQaIssueHeader('tagging-qa', countryPrefix, deployContext), '## Tasks', '']
 
   formatTaskSection(
     lines,
@@ -141,22 +112,16 @@ export const formatTaggingQaTaskResults = (
   return lines.join('\n').trimEnd()
 }
 
-const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
-export const TAGGING_QA_ISSUE_TEMPLATE = 'tagging-qa-catalogue-update.md'
-
 export const buildGithubIssueUrl = (
   entries: SignTaskEntry[],
   countryPrefix = 'DE',
   body = formatTaggingQaTaskResults(entries, countryPrefix),
-): string => {
-  const title = `Tagging QA (${countryPrefix}): ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`
-  const params = new URLSearchParams({
-    template: TAGGING_QA_ISSUE_TEMPLATE,
-    title,
+): string =>
+  buildQaIssueUrl(
+    'tagging-qa',
+    `${countryPrefix}: ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`,
     body,
-  })
-  return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`
-}
+  )
 
 export const taskNotesPlaceholder = (taskType: SignTaskType): string => {
   switch (taskType) {

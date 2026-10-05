@@ -1,11 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import type { QaDeployContext } from '../qaDeployContext'
-import {
-  buildWikiSignGithubIssueUrl,
-  formatWikiSignIssueBody,
-  WIKI_QA_AGENT_SKILL_PATH,
-  WIKI_QA_ISSUE_TEMPLATE,
-} from './wikiComparisonIssueFormat'
+import { buildWikiSignGithubIssueUrl, formatWikiSignIssueBody } from './wikiComparisonIssueFormat'
 
 const previewDeployContext: QaDeployContext = {
   branch: 'feat/qa-preview',
@@ -25,15 +20,15 @@ describe('wikiComparisonIssueFormat', () => {
   test('formatWikiSignIssueBody', () => {
     const body = formatWikiSignIssueBody(wikiSign)
 
-    expect(body).toContain('# Wiki comparison – catalogue update')
-    expect(body).toContain('> **You** — submitted feedback from the QA page')
-    expect(body).toContain('label `cursor-qa`')
-    expect(body).toContain(WIKI_QA_AGENT_SKILL_PATH)
-    expect(body).toContain('## Agent instructions')
+    expect(body).toContain('Wiki comparison page')
+    expect(body).toContain('**Kind:** `wiki-qa`')
+    expect(body).toContain('**Catalogue:** `BR`')
+    expect(body).toContain('.agents/skills/add-traffic-sign/SKILL.md')
+    expect(body).toContain('## For the agent')
     expect(body).toContain('/BR/wiki')
-    expect(body).toContain('## My feedback for Sign BR:R-1')
+    expect(body).toContain('## Feedback for sign BR:R-1')
     expect(body).toContain('WRITE HERE')
-    expect(body).toContain('## Current Config')
+    expect(body).toContain('## Current config')
     expect(body).toContain('"sign": "BR:R-1"')
     expect(body).toContain('---')
   })
@@ -42,7 +37,7 @@ describe('wikiComparisonIssueFormat', () => {
     const body = formatWikiSignIssueBody(wikiSign, undefined, previewDeployContext)
 
     expect(body).toContain('**Source branch:** `feat/qa-preview`')
-    expect(body).toContain('blob/feat/qa-preview/.cursor/skills/add-traffic-sign/SKILL.md')
+    expect(body).toContain('blob/feat/qa-preview/.agents/skills/add-traffic-sign/SKILL.md')
   })
 
   test('formatWikiSignIssueBody uses catalogue config when available', () => {
@@ -62,7 +57,7 @@ describe('wikiComparisonIssueFormat', () => {
     const url = buildWikiSignGithubIssueUrl(wikiSign)
 
     expect(url).toContain('github.com/osmberlin/osm-traffic-sign-tool/issues/new')
-    expect(url).toContain(`template=${WIKI_QA_ISSUE_TEMPLATE}`)
-    expect(url).toContain('title=Wiki+comparison+feedback%3A+BR%3AR-1')
+    expect(url).toContain('template=wiki-qa-catalogue-update.md')
+    expect(new URL(url).searchParams.get('title')).toBe('[wiki-qa] BR:R-1')
   })
 })

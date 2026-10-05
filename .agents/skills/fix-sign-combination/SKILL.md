@@ -1,10 +1,17 @@
+---
+name: fix-sign-combination
+description: >-
+  Resolve [combination-qa] issues from the Sign combinations QA page: record confirmed
+  primary + modifier combinations, fix their combined tag output, or block invalid ones.
+---
+
 # Fix Sign Combination QA Issues
 
 This skill teaches the agent how to resolve feedback from the Sign combinations QA page (`/DE/check-sign-combinations`).
 
 ## When to use this skill
 
-- GitHub issue labeled `combination-qa`.
+- GitHub issue with the title prefix `[combination-qa]`.
 - User reports wrong OSM tags for a primary + modifier combination.
 - User reports a combination that should be blocked but is currently allowed.
 - User confirms a combination is allowed and tagging is correct (OK task).
@@ -15,7 +22,7 @@ This skill teaches the agent how to resolve feedback from the Sign combinations 
 | Reviewer status         | Meaning                                        | Typical fix                                                                                                       |
 | ----------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | **OK**                  | Combination is allowed and tag output verified | Add or update `compatibility.confirmedModifiers[<modifierSignId>]` on the primary sign with the confirmation date |
-| **Not OK**              | Combination is allowed but tag output is wrong | Update `tagRecommendations` on primary/modifier and/or add `signsToTags` test                                     |
+| **Not OK**              | Combination is allowed but tag output is wrong | Update `tagRecommendationsByGeometry` on primary/modifier and/or add `signsToTags` test                           |
 | **Invalid combination** | Combination should not be allowed              | Update primary `compatibility` (`incompatibleModifiers` or `canReceiveModifiers: false`)                          |
 
 Each issue task includes:
@@ -33,7 +40,7 @@ Each issue task includes:
 2. Compare with reviewer notes and OSM wiki guidance for both signs.
 3. Optionally re-run the converter locally (see **CLI helpers** below) after you know what should change.
 
-Also read [`.cursor/skills/add-traffic-sign/SKILL.md`](../add-traffic-sign/SKILL.md) for general sign config conventions.
+Also read [add-traffic-sign](../add-traffic-sign/SKILL.md) for general sign config conventions.
 
 **Do not start the traffic-sign-tool dev server** for combination QA — the converter package and tests are enough.
 
@@ -41,7 +48,7 @@ Also read [`.cursor/skills/add-traffic-sign/SKILL.md`](../add-traffic-sign/SKILL
 
 1. Locate primary and modifier sign objects in `packages/traffic-sign-converter/src/data-definitions/DE/data/`.
 2. Schema reference: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` (`tagRecommendations`).
-3. Adjust `tagRecommendations` on the sign(s) that drive the wrong output. Common fields:
+3. Adjust `tagRecommendationsByGeometry` on the sign(s) that drive the wrong output. Common fields:
    - `uniqueTags`, `accessTags`, `highwayValues`, `conditionalTags`
 4. If wiki documents non-trivial interaction between the two signs, add a targeted test in `packages/traffic-sign-converter/src/signsToTags/signsToTags.test.ts`:
 
@@ -100,12 +107,7 @@ Optional: if you added a focused test in Step 2, that test is the long-term guar
 
 ### Step 6: Open PR
 
-- Start the PR description with `**[Cursor Agent]**`, include `Closes #<issue-number>` (auto-closes the source issue on merge), then `Automated catalogue update for #<issue-number>.`
-- Summarize which sign config files changed and why.
-- Mention any new `signsToTags` tests.
-- Prefix any issue comments with `**[Cursor Agent]**`; do not write as the submitter.
-
-See [`.cursor/rules/github-agent-attribution.mdc`](../rules/github-agent-attribution.mdc).
+Follow [work-qa-issues](../work-qa-issues/SKILL.md) for branch, checks and PR. In the PR description, summarize which sign config files changed and why, and mention any new `signsToTags` tests.
 
 ## CLI helpers
 

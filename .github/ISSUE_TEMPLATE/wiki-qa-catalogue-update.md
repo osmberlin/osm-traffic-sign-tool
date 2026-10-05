@@ -1,25 +1,28 @@
 ---
 name: Wiki QA catalogue update
-about: Apply wiki comparison feedback to the converter catalogue (triggers Cursor)
-title: '[Wiki QA] '
+about: Catalogue updates from the Wiki comparison page
+title: '[wiki-qa] '
 labels:
-  - cursor-qa
+  - qa-catalogue
+  - wiki-qa
 assignees: ''
 ---
 
 <!--
-  Opened from the Wiki comparison page or filled manually.
-
-  Issues with the `cursor-qa` label trigger `.github/workflows/cursor-qa-automation.yml`,
-  which starts a Cursor cloud agent via the Cloud Agents API (`CURSOR_API_KEY`).
+  Normally opened from the Wiki comparison page, which replaces this text with a pre-filled body.
+  Keep the `[wiki-qa]` title prefix: agent sessions find QA issues by it, see .github/QA_ISSUES.md.
 -->
 
-## Wiki comparison feedback
+> Filled in by hand. Open the issue from the [Wiki comparison page](https://trafficsigns.osm-verkehrswende.org/DE/wiki) to get a pre-filled body.
 
-> **You** — submitted feedback from the QA page (see below).
-> **Traffic Sign Tool** — generated this issue body from your selections.
-> **Cursor agent** — will implement catalogue changes in a separate PR.
+## For the agent
 
-_Submit to trigger a Cursor cloud agent (see issue body after opening from the tool). The agent opens a PR with `Closes #<issue-number>` in the description (auto-closes this issue on merge). Follow `.cursor/skills/add-traffic-sign/SKILL.md`._
+Worked on in a manually started agent session: `.agents/skills/work-qa-issues/SKILL.md`.
 
-_Open from the Wiki comparison page via **Create GitHub issue** on a sign, or paste feedback below._
+- **Kind:** `wiki-qa`
+- **Catalogue:** <!-- country prefix, e.g. DE -->
+- **How to apply:** `.agents/skills/add-traffic-sign/SKILL.md`
+
+## Tasks
+
+<!-- One heading per sign or combination, with what should change and why (wiki links help). -->

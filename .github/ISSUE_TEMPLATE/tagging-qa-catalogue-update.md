@@ -1,26 +1,28 @@
 ---
 name: Tagging QA catalogue update
-about: Apply tagging QA tasks from the signs-qa page to the converter catalogue (triggers Cursor)
-title: '[Tagging QA] '
+about: Catalogue updates from the Tagging QA page (signs-qa)
+title: '[tagging-qa] '
 labels:
-  - cursor-qa
+  - qa-catalogue
   - tagging-qa
 assignees: ''
 ---
 
 <!--
-  Opened from the Tagging QA page or filled manually.
-
-  Issues with the `tagging-qa` or `cursor-qa` label trigger `.github/workflows/cursor-qa-automation.yml`,
-  which starts a Cursor cloud agent via the Cloud Agents API (`CURSOR_API_KEY`).
+  Normally opened from the Tagging QA page, which replaces this text with a pre-filled body.
+  Keep the `[tagging-qa]` title prefix: agent sessions find QA issues by it, see .github/QA_ISSUES.md.
 -->
 
-## Tagging QA tasks
+> Filled in by hand. Open the issue from the [Tagging QA page](https://trafficsigns.osm-verkehrswende.org/DE/signs-qa) to get a pre-filled body.
 
-> **You** — submitted feedback from the QA page (see Tasks below).
-> **Traffic Sign Tool** — generated this issue body from your selections.
-> **Cursor agent** — will implement catalogue changes in a separate PR.
+## For the agent
 
-_Submit to trigger a Cursor cloud agent (see issue body after opening from the tool). The agent opens a PR with `Closes #<issue-number>` in the description (auto-closes this issue on merge). Follow `.cursor/skills/add-traffic-sign/SKILL.md`._
+Worked on in a manually started agent session: `.agents/skills/work-qa-issues/SKILL.md`.
 
-_Paste task results from [/DE/signs-qa](https://trafficsigns.osm-verkehrswende.org/DE/signs-qa) below, or use the pre-filled body when opening from the tool._
+- **Kind:** `tagging-qa`
+- **Catalogue:** <!-- country prefix, e.g. DE -->
+- **How to apply:** `.agents/skills/add-traffic-sign/SKILL.md`
+
+## Tasks
+
+<!-- One heading per sign or combination, with what should change and why (wiki links help). -->

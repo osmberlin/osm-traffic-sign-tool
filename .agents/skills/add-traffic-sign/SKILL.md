@@ -1,3 +1,11 @@
+---
+name: add-traffic-sign
+description: >-
+  Research and add or change a traffic sign in the converter catalogue (sign definition,
+  tagRecommendationsByGeometry, SVG). Use for missing signs and for [tagging-qa],
+  [taginfo-qa] and [wiki-qa] issues from the QA pages.
+---
+
 # Add German Traffic Sign
 
 This skill teaches the agent how to research and implement a new German traffic sign into the OSM Traffic Sign Tools project, ensuring data accuracy and SVG optimization.
@@ -231,17 +239,10 @@ Output ONLY this format:
 - **SVG Missing**: Verify `sourceUrl` points to a Wikimedia `File:` page.
 - **Sign Not in UI**: Ensure data file is exported in `packages/traffic-sign-converter/src/data-definitions/DE/trafficSignDataDE.ts`.
 
-## GitHub attribution
+## Working from a QA issue
 
-When working from a GitHub issue or opening a PR (including tagging QA issues):
-
-1. Start every **issue or PR comment** with `**[Cursor Agent]**` on its own line.
-2. Start the **PR description** with `**[Cursor Agent]**`, include `Closes #<issue-number>` (auto-closes the source issue on merge), then `Automated catalogue update for #<issue-number>.`, then your summary.
-3. Do not write as the human submitter; call them **the submitter**.
-4. Workflow comments prefixed with `> **GitHub Actions (automation)**` are not from you (they link to the cloud agent started for the issue).
-
-See [`.cursor/rules/github-agent-attribution.mdc`](../rules/github-agent-attribution.mdc).
+Issues from the QA pages (`[tagging-qa]`, `[taginfo-qa]`, `[wiki-qa]`) are found, branched and turned into a PR as described in [work-qa-issues](../work-qa-issues/SKILL.md). This skill covers the catalogue change itself.
 
 ## Related: sign combination QA
 
-For GitHub issues labeled `combination-qa` (primary + modifier pairs), use [`.cursor/skills/fix-sign-combination/SKILL.md`](fix-sign-combination/SKILL.md) instead. Those tasks focus on `compatibility` rules and combined tag output rather than adding a new sign.
+For `[combination-qa]` issues (primary + modifier pairs), use [fix-sign-combination](../fix-sign-combination/SKILL.md) instead. Those tasks focus on `compatibility` rules and combined tag output rather than adding a new sign.
