@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest'
 import { countryDefinitions } from '../data-definitions/countryDefinitions.js'
 import { QUESTION_NIL_ANSWER_ID } from '../data-definitions/TrafficSignDataTypes.js'
 import { signsStateByDescriptiveName } from '../utils/signsByDescriptiveName.js'
+import { transformToSignState } from '../utils/transformToSignState.js'
 import { signsToTags } from './signsToTags.js'
 
 describe('question answers in signsToTags()', () => {
@@ -52,6 +53,23 @@ describe('question answers in signsToTags()', () => {
     const signs = signsStateByDescriptiveName('DE', data, ['Getrennter Rad- und Gehweg'])
     const result = signsToTags(signs, 'DE', 'way')
     expect(result.get('highway')).toMatchObject(['path'])
+  })
+
+  test('highway class question is not overridden by modifier catalogue highwayValues', () => {
+    const mainSign = data.find((sign) => sign.osmValuePart === '241-30')!
+    const modifierSign = data.find((sign) => sign.osmValuePart === '1000-31')!
+    const signs = [mainSign, modifierSign].map((sign) => transformToSignState('DE', sign))
+    const signKey = '241-30'
+    const result = signsToTags(signs, 'DE', 'way', {
+      [signKey]: {
+        highwayClass: 'path',
+        sidepath: 'yes',
+      },
+    })
+    expect(result.get('highway')).toMatchObject(['path'])
+    expect(result.get('oneway')).toBe('no')
+    expect(result.get('is_sidepath')).toBe('yes')
+    expect(result.get('traffic_sign')).toBe('DE:241-30,1000-31')
   })
 
   test('highway class question respects explicit nil', () => {

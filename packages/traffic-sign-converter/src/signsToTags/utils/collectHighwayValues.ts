@@ -10,17 +10,17 @@ export const collectHighwayValues = (
 ) => {
   if (!Array.isArray(signs)) return []
 
+  // highwayClass question replaces catalogue highwayValues for the whole sign group
+  if (signs.some(signHasHighwayQuestion)) return []
+
   const all: string[] = []
   for (const sign of signs) {
     if (!sign.recodgnizedSign) continue
-    if (signHasHighwayQuestion(sign)) continue
     const recs = getRecommendations(sign, geometry)
     if (recs?.highwayValues) {
       all.push(...recs.highwayValues)
     }
   }
 
-  const deduplicated = uniqueArray(all)
-
-  return deduplicated
+  return uniqueArray(all)
 }
