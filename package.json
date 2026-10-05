@@ -30,8 +30,8 @@
     "husky": "^9.1.7",
     "nano-staged": "^1.0.2",
     "oxc-plugin-react-compiler": "^0.2.0",
-    "oxfmt": "0.70.0",
-    "oxlint": "1.85.0",
+    "oxfmt": "0.71.0",
+    "oxlint": "1.86.0",
     "postcss": "^8.5.28",
     "svgo": "^4.1.0",
     "vitest": "^4.1.9"
