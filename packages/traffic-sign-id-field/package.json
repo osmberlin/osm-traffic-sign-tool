@@ -18,6 +18,9 @@
     "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git",
     "directory": "packages/traffic-sign-id-field"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
