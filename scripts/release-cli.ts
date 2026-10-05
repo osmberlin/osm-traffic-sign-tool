@@ -1,8 +1,22 @@
 #!/usr/bin/env bun
 
+// Release the converter package (npm) and/or the app (tag; GitHub Actions deploys).
+//
+//   bun run release                          interactive
+//   bun run release --package --minor --yes  no prompts (for agent sessions and CI-like use)
+//
+// Flags:
+//   --package / --app        what to release (both when neither or both are given)
+//   --patch / --minor / --major
+//   --yes                    no prompts; stops on a dirty working tree instead of asking
+//   --push                   push main and the tag(s) at the end (asked when not --yes)
+//   --otp=123456             npm one-time password for `npm publish`
+//   --dry-run                everything up to and including `npm publish --dry-run`, then undo
+
 import { join } from 'path'
 import * as p from '@clack/prompts'
 import { $ } from 'bun'
+import { releaseChangelog } from './release-changelog.ts'
 import { releaseTagName } from './release-tag.ts'
 
 type ReleaseType = 'patch' | 'minor' | 'major'
@@ -23,108 +37,22 @@ const flags = {
   patch: args.includes('--patch'),
   minor: args.includes('--minor'),
   major: args.includes('--major'),
-  skipChangelog: args.includes('--skip-changelog'),
+  yes: args.includes('--yes'),
+  push: args.includes('--push'),
+  dryRun: args.includes('--dry-run'),
+  otp: args.find((arg) => arg.startsWith('--otp='))?.slice('--otp='.length),
 }
 
-// Helper: Get current date in format _YYYY-MM-DD_
-function getCurrentDate() {
-  const now = new Date()
-  const year = now.getFullYear()
-  const month = String(now.getMonth() + 1).padStart(2, '0')
-  const day = String(now.getDate()).padStart(2, '0')
-  return `_${year}-${month}-${day}_`
+function fail(message: string): never {
+  p.cancel(message)
+  process.exit(1)
 }
 
-// Helper: Read and parse changelog to extract "## Unreleased" and next ## section
-async function readChangelogSections(changelogPath: string) {
-  const file = Bun.file(changelogPath)
-  const content = await file.text()
-  const lines = content.split('\n')
-
-  let sections: string[] = []
-  let currentSection: string[] = []
-  let foundUnreleased = false
-  let h2Count = 0
-
-  for (const line of lines) {
-    if (line.startsWith('## ')) {
-      if (line.trim() === '## Unreleased') {
-        foundUnreleased = true
-        currentSection = [line]
-        h2Count = 1
-      } else if (foundUnreleased) {
-        // Found second section after Unreleased
-        if (h2Count === 1 && currentSection.length > 0) {
-          sections.push(currentSection.join('\n'))
-        }
-        if (h2Count >= 2) break
-        currentSection = [line]
-        h2Count++
-        if (h2Count === 2) {
-          // We have both sections, continue until next ## or end
-        }
-      }
-    } else if (foundUnreleased && h2Count > 0 && h2Count <= 2) {
-      currentSection.push(line)
-    }
-  }
-
-  if (currentSection.length > 0 && h2Count <= 2) {
-    sections.push(currentSection.join('\n'))
-  }
-
-  return sections.join('\n\n')
-}
-
-// Helper: Open file in Cursor, or show path if it fails
-async function openInCursor(filePath: string) {
-  try {
-    await $`cursor ${filePath}`.quiet()
-  } catch {
-    p.log.warn(`Could not open file automatically. Please open manually:`)
-    p.log.info(filePath)
-  }
-}
-
-// Helper: Prompt user to manually update changelog
-async function promptChangelogUpdate(changelogPath: string, newVersion: string) {
-  const date = getCurrentDate()
-
-  p.log.warn('⚠️  Manual changelog update required:')
-  p.log.info(`Please update the changelog with:`)
-  p.log.info(`  - New section: ## ${newVersion}`)
-  p.log.info(`  - Date: ${date}`)
-  p.log.info(`  - Move content from "## Unreleased" to the new version section`)
-  p.log.info(`  - Leave "## Unreleased" empty`)
-  p.log.info(`\nChangelog location: ${changelogPath}`)
-
-  await openInCursor(changelogPath)
-
-  const ready = await p.confirm({
-    message: 'I have updated the changelog',
-    initialValue: false,
-  })
-
-  if (!ready) {
-    p.cancel('Release cancelled. Please update the changelog and try again.')
-    process.exit(1)
-  }
-
-  // Show what they wrote and confirm
-  const changelogPreview = await readChangelogSections(changelogPath)
-  p.log.info('Changelog preview:')
-  console.log(changelogPath)
-  console.log(changelogPreview)
-
-  const looksGood = await p.confirm({
-    message: 'Does this look correct?',
-    initialValue: true,
-  })
-
-  if (!looksGood) {
-    p.cancel('Please update the changelog and run the release again.')
-    process.exit(1)
-  }
+// Helper: Ask, or take the default answer with `--yes`
+async function confirm(message: string, initialValue: boolean, valueWithYes: boolean) {
+  if (flags.yes) return valueWithYes
+  const answer = await p.confirm({ message, initialValue })
+  return answer === true
 }
 
 async function readPackageJson(packageJsonPath: string) {
@@ -133,218 +61,157 @@ async function readPackageJson(packageJsonPath: string) {
   return JSON.parse(content) as { name: string; version: string }
 }
 
-// Helper: Get version from package.json
-async function getPackageVersion(packageJsonPath: string) {
-  const json = await readPackageJson(packageJsonPath)
-  return json.version
+// Helper: Changed tracked files (untracked files never end up in a release)
+async function changedTrackedFiles() {
+  const result = await $`git status --porcelain --untracked-files=no`.quiet()
+  return result.stdout.toString().trim()
 }
 
-// Helper: Check for uncommitted changes
-async function hasUncommittedChanges() {
+// Helper: Undo the version bump and changelog update of a release that did not happen
+async function restoreFiles(files: string[]) {
+  await $`git checkout -- ${files}`.quiet()
+}
+
+async function checkWorkingTree() {
+  const branch = (await $`git branch --show-current`.quiet()).stdout.toString().trim()
+  if (branch !== 'main') fail(`Releases are made from main, but this is "${branch}".`)
+
+  await $`git fetch origin main`.quiet()
+  const behind = (await $`git rev-list --count HEAD..origin/main`.quiet()).stdout.toString().trim()
+  if (behind !== '0') {
+    fail(`main is ${behind} commit(s) behind origin/main. Run \`git pull --rebase origin main\`.`)
+  }
+
+  const changed = await changedTrackedFiles()
+  if (!changed) return
+  p.log.warn(`Uncommitted changes:\n${changed}`)
+  if (flags.yes) fail('Commit or stash these changes first.')
+  if (!(await confirm('Continue anyway?', false, false))) fail('Release cancelled.')
+}
+
+async function checkNpmLogin() {
   try {
-    const result = await $`git status --porcelain`.quiet()
-    return result.stdout.toString().trim().length > 0
+    const user = (await $`npm whoami`.quiet()).stdout.toString().trim()
+    p.log.info(`npm user: ${user}`)
   } catch {
-    return false
+    fail('Not logged in to npm. Run `npm login` and try again.')
   }
 }
 
-async function createReleaseTag(packageName: string, version: string) {
+// Helper: Bump the version and move the "## Unreleased" entries below it
+async function bumpVersionAndChangelog(
+  dir: string,
+  packageJsonPath: string,
+  changelogPath: string,
+  releaseType: ReleaseType,
+) {
+  await $`cd ${dir} && npm version ${releaseType} --no-git-tag-version`.quiet()
+  const { version } = await readPackageJson(packageJsonPath)
+
+  const changelog = await Bun.file(changelogPath).text()
+  const released = releaseChangelog(changelog, version, new Date())
+  if (!released) {
+    await restoreFiles([packageJsonPath])
+    fail(`"## Unreleased" in ${changelogPath} is empty. Add the changes and try again.`)
+  }
+  await Bun.write(changelogPath, released.changelog)
+
+  p.log.info(`${changelogPath} — ${version}:`)
+  console.log(released.entries)
+
+  if (!(await confirm('Is the changelog complete?', true, true))) {
+    await restoreFiles([packageJsonPath, changelogPath])
+    fail('Release cancelled. Update the changelog and try again.')
+  }
+  return version
+}
+
+async function commitAndTag(packageName: string, message: string, files: string[]) {
+  await $`git add ${files}`
+  await $`git commit -m ${message}`.quiet()
+  const { version } = await readPackageJson(files[0]!)
   const tag = releaseTagName(packageName, version)
   await $`git tag ${tag}`.quiet()
+  p.log.info(`Committed "${message}", tagged ${tag}`)
   return tag
 }
 
-async function pushRelease(tag: string, shouldPush: boolean) {
-  if (shouldPush) {
-    const spinner = p.spinner()
-    spinner.start('Pushing to main...')
-    await $`git push origin main`
-    spinner.stop('✓ Pushed to main')
-
-    spinner.start(`Pushing tag ${tag}...`)
-    await $`git push origin ${tag}`
-    spinner.stop('✓ Tag pushed')
-  } else {
-    p.log.info(`Run \`git push origin main && git push origin ${tag}\` manually when ready.`)
+async function pushRelease(tags: string[]) {
+  const pushCommand = `git push origin main ${tags.join(' ')}`
+  if (!(await confirm('Push to main now?', false, flags.push))) {
+    p.log.info(`Run \`${pushCommand}\` when ready.`)
+    return false
   }
+  await $`git push origin main ${tags}`
+  p.log.info('✓ Pushed main and tag(s)')
+  return true
 }
 
 // Package release flow
-async function releasePackage(releaseType: ReleaseType, skipChangelogCheck: boolean) {
+async function releasePackage(releaseType: ReleaseType) {
   const { name: packageName } = await readPackageJson(PACKAGE_PACKAGE_JSON)
   p.intro(`Releasing Package: ${packageName}`)
+  await checkNpmLogin()
 
-  // Check for uncommitted changes
-  if (await hasUncommittedChanges()) {
-    const shouldContinue = await p.confirm({
-      message: 'You have uncommitted changes. Continue anyway?',
-      initialValue: false,
-    })
-    if (!shouldContinue) {
-      p.cancel('Release cancelled.')
-      process.exit(1)
-    }
-  }
+  const files = [PACKAGE_PACKAGE_JSON, PACKAGE_CHANGELOG]
+  const newVersion = await bumpVersionAndChangelog(
+    PACKAGE_DIR,
+    PACKAGE_PACKAGE_JSON,
+    PACKAGE_CHANGELOG,
+    releaseType,
+  )
 
-  // Changelog validation
-  if (!skipChangelogCheck) {
-    const changelogPreview = await readChangelogSections(PACKAGE_CHANGELOG)
-    p.log.info('Changelog preview:')
-    console.log(changelogPreview)
-
-    const changelogComplete = await p.confirm({
-      message: 'Is the changelog complete?',
-      initialValue: true,
-    })
-
-    if (!changelogComplete) {
-      p.log.warn('Please update the changelog and run the release again.')
-      await openInCursor(PACKAGE_CHANGELOG)
-      p.cancel('Release cancelled.')
-      process.exit(1)
-    }
-  }
-
-  // Run npm version first (this updates package.json)
-  const spinner = p.spinner()
-  spinner.start('Bumping version...')
-  await $`cd ${PACKAGE_DIR} && npm version ${releaseType} --no-git-tag-version`.quiet()
-  spinner.stop('✓ Version bumped')
-
-  // Read the new version for changelog and commit messages
-  const newVersion = await getPackageVersion(PACKAGE_PACKAGE_JSON)
-
-  // Prompt user to update changelog
-  await promptChangelogUpdate(PACKAGE_CHANGELOG, newVersion)
-
-  // Build
-  spinner.start('Building package...')
-  await $`bun run --filter '${packageName}' build`
-  spinner.stop('✓ Build complete')
-
-  // Check
-  spinner.start('Running checks...')
-  await $`cd ${PACKAGE_DIR} && bun run check`
-  spinner.stop('✓ Checks passed')
-
-  // Publish
-  spinner.start('Publishing to npm...')
   try {
-    await $`cd ${PACKAGE_DIR} && npm publish`
-    spinner.stop('✓ Published to npm')
+    p.log.step('Building package...')
+    await $`bun run --filter ${packageName} build`
+
+    p.log.step('Running checks...')
+    await $`cd ${PACKAGE_DIR} && bun run check`
+
+    p.log.step(flags.dryRun ? 'Publishing to npm (dry run)...' : 'Publishing to npm...')
+    const publishArgs = [
+      ...(flags.dryRun ? ['--dry-run'] : []),
+      ...(flags.otp ? [`--otp=${flags.otp}`] : []),
+    ]
+    await $`cd ${PACKAGE_DIR} && npm publish ${publishArgs}`
   } catch {
-    spinner.stop('✗ Publish failed')
-    p.log.error('Failed to publish to npm')
-    p.log.info('Test…')
-    p.log.info('  - `npm woami`')
-    p.log.info('  - `npm login`')
-    p.log.info(`  - \`cd ${PACKAGE_DIR} && npm publish\` manually`)
-    p.log.info(`\nVersion ${newVersion} has already been bumped in package.json.`)
+    // Nothing was released: leave no half-bumped version behind
+    await restoreFiles(files)
+    p.log.error(`Release of ${newVersion} failed, version and changelog were reset.`)
+    p.log.info('For a failed publish: check `npm whoami`, and pass `--otp=<code>` with 2FA.')
+    process.exit(1)
   }
 
-  // Git commit
-  spinner.start('Committing changes...')
-  await $`git add ${PACKAGE_CHANGELOG} ${PACKAGE_PACKAGE_JSON}`
-  await $`git commit -m ${'Package: release v' + newVersion}`.quiet()
-  spinner.stop('✓ Changes committed')
+  if (flags.dryRun) {
+    await restoreFiles(files)
+    p.outro(`✓ Dry run of ${newVersion} passed. Nothing was published or committed.`)
+    return undefined
+  }
+  p.log.info(`✓ Published ${packageName}@${newVersion}`)
 
-  const tag = await createReleaseTag(packageName, newVersion)
-  p.log.info(`Tagged release as ${tag}`)
-
-  // Ask about push
-  const shouldPush = await p.confirm({
-    message: 'Push to main now?',
-    initialValue: false,
-  })
-
-  await pushRelease(tag, shouldPush)
-
-  p.outro(`✓ Package ${newVersion} released successfully!`)
+  return commitAndTag(packageName, 'Package: release v' + newVersion, files)
 }
 
 // App release flow
-async function releaseApp(
-  releaseType: ReleaseType,
-  skipChangelogCheck: boolean,
-  packageJustReleased: boolean,
-) {
+async function releaseApp(releaseType: ReleaseType) {
   const { name: packageName } = await readPackageJson(APP_PACKAGE_JSON)
   p.intro(`Releasing App: ${packageName}`)
 
-  // Check for uncommitted changes
-  if (await hasUncommittedChanges()) {
-    const shouldContinue = await p.confirm({
-      message: 'You have uncommitted changes. Continue anyway?',
-      initialValue: false,
-    })
-    if (!shouldContinue) {
-      p.cancel('Release cancelled.')
-      process.exit(1)
-    }
+  const files = [APP_PACKAGE_JSON, APP_CHANGELOG]
+  const newVersion = await bumpVersionAndChangelog(
+    APP_DIR,
+    APP_PACKAGE_JSON,
+    APP_CHANGELOG,
+    releaseType,
+  )
+
+  if (flags.dryRun) {
+    await restoreFiles(files)
+    p.outro(`✓ Dry run of ${newVersion} passed. Nothing was committed.`)
+    return undefined
   }
 
-  // Update lockfile if package was just released
-  if (packageJustReleased) {
-    const spinner = p.spinner()
-    spinner.start('Updating lockfile...')
-    await $`bun install`
-    spinner.stop('✓ Lockfile updated')
-  }
-
-  // Changelog validation
-  if (!skipChangelogCheck) {
-    const changelogPreview = await readChangelogSections(APP_CHANGELOG)
-    p.log.info('Changelog preview:')
-    console.log(changelogPreview)
-
-    const changelogComplete = await p.confirm({
-      message: 'Is the changelog complete?',
-      initialValue: true,
-    })
-
-    if (!changelogComplete) {
-      p.log.warn('Please update the changelog and run the release again.')
-      await openInCursor(APP_CHANGELOG)
-      p.cancel('Release cancelled.')
-      process.exit(1)
-    }
-  }
-
-  // Update version using npm version
-  const spinner = p.spinner()
-  spinner.start('Updating version...')
-  await $`cd ${APP_DIR} && npm version ${releaseType} --no-git-tag-version`.quiet()
-  spinner.stop('✓ Version updated')
-
-  // Read the new version for changelog and commit messages
-  const newVersion = await getPackageVersion(APP_PACKAGE_JSON)
-
-  // Prompt user to update changelog
-  await promptChangelogUpdate(APP_CHANGELOG, newVersion)
-
-  // Git commit
-  spinner.start('Committing changes...')
-  await $`git add ${APP_CHANGELOG} ${APP_PACKAGE_JSON}`
-  await $`git commit -m ${'App: release v' + newVersion}`.quiet()
-  spinner.stop('✓ Changes committed')
-
-  const tag = await createReleaseTag(packageName, newVersion)
-  p.log.info(`Tagged release as ${tag}`)
-
-  // Ask about push
-  const shouldPush = await p.confirm({
-    message: 'Push to main now?',
-    initialValue: false,
-  })
-
-  await pushRelease(tag, shouldPush)
-
-  if (shouldPush) {
-    p.log.info('GitHub Actions will deploy to trafficsigns.osm-verkehrswende.org')
-  }
-
-  p.outro(`✓ App ${newVersion} released successfully!`)
+  return commitAndTag(packageName, 'App: release v' + newVersion, files)
 }
 
 // Main function
@@ -353,13 +220,13 @@ async function main() {
   let releaseType: ReleaseType = 'patch'
   if (flags.minor) releaseType = 'minor'
   else if (flags.major) releaseType = 'major'
-  // minor is default, no need to check flags.minor
 
   // Determine target
   let target: ReleaseTarget = 'both'
   if (flags.package && !flags.app) target = 'package'
   else if (flags.app && !flags.package) target = 'app'
   else if (!flags.package && !flags.app) {
+    if (flags.yes) fail('Pass --package and/or --app together with --yes.')
     // Interactive selection
     const selected = await p.select({
       message: 'What would you like to release?',
@@ -369,44 +236,39 @@ async function main() {
         { value: 'both', label: 'Both package and app' },
       ],
     })
+    if (p.isCancel(selected)) fail('Release cancelled.')
     target = selected as ReleaseTarget
   }
 
   // Confirm release type if not set via flag
   if (!flags.patch && !flags.minor && !flags.major) {
-    const confirmType = await p.confirm({
-      message: `Release type: ${releaseType} (confirm?)`,
-      initialValue: true,
-    })
-    if (!confirmType) {
-      p.cancel('Release cancelled.')
-      process.exit(1)
+    if (flags.yes) fail('Pass --patch, --minor or --major together with --yes.')
+    if (!(await confirm(`Release type: ${releaseType} (confirm?)`, true, true))) {
+      fail('Release cancelled.')
     }
   }
 
-  let packageJustReleased = false
+  await checkWorkingTree()
 
-  // Release package
+  const tags: string[] = []
+
   if (target === 'package' || target === 'both') {
-    await releasePackage(releaseType, flags.skipChangelog)
-    packageJustReleased = true
+    const tag = await releasePackage(releaseType)
+    if (tag) tags.push(tag)
   }
 
-  // Release app
   if (target === 'app' || target === 'both') {
-    if (target === 'both') {
-      // Ask if user wants to continue with app release
-      const continueApp = await p.confirm({
-        message: 'Continue with app release?',
-        initialValue: true,
-      })
-      if (!continueApp) {
-        p.outro('Package released. App release skipped.')
-        process.exit(0)
-      }
-    }
-    await releaseApp(releaseType, flags.skipChangelog, packageJustReleased)
+    const tag = await releaseApp(releaseType)
+    if (tag) tags.push(tag)
   }
+
+  if (!tags.length) return
+
+  const pushed = await pushRelease(tags)
+  if (pushed && target !== 'package') {
+    p.log.info('GitHub Actions will deploy to trafficsigns.osm-verkehrswende.org')
+  }
+  p.outro(`✓ Released ${tags.join(', ')}`)
 }
 
 main().catch((error) => {

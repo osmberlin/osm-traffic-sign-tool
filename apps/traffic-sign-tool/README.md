@@ -54,13 +54,15 @@ bun run build # and bun run preview
 
 ## Deployment
 
-Our custom script will automatically increase the `prepatch` version.
-
-Remember to update the [CHANGELOG](./CHANGELOG.md).
+Collect changes below `## Unreleased` in the [CHANGELOG](./CHANGELOG.md). The release script bumps the version, moves these entries to the new version, commits and tags; pushing the tag deploys the app.
 
 ```bash
-bun run release
+bun run release                               # interactive
+bun run release --app --patch --yes --push    # no prompts
+bun run release --package --minor --dry-run   # build, check and `npm publish --dry-run`, then undo
 ```
+
+The package release (`--package`) publishes to npm and needs `npm login` first; pass `--otp=<code>` with 2FA.
 
 ## Licence & Thanks
 
