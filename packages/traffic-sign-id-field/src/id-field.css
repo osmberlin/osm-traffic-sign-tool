@@ -337,3 +337,62 @@ div[class*='combobox-traffic-sign'] .combobox-option-label {
   height: auto;
   padding: 4px 10px;
 }
+
+/* Inside iD's inspector: the sign list and "Add sign…" form one field box below the field
+ * label, like iD's other fields, and the rows look draggable. */
+.ideditor .form-field .form-field-input-traffic-sign {
+  border: 1px solid var(--border-color);
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+
+/* rows: no gaps and no own boxes, a separator line between them */
+.ideditor .form-field .form-field-input-traffic-sign .traffic-sign-row {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  background: var(--bg-color);
+  padding: 3px 0;
+  gap: 8px;
+}
+.ideditor .form-field .form-field-input-traffic-sign .traffic-sign-row:hover {
+  background: var(--active-bg-color, var(--bg-color-2));
+}
+.ideditor .form-field .form-field-input-traffic-sign .traffic-sign-row.dragging {
+  background: var(--bg-color-2);
+}
+
+/* drag handle: a visible grip column */
+.ideditor .form-field .form-field-input-traffic-sign .traffic-sign-row__drag {
+  align-self: stretch;
+  width: 18px;
+  padding: 0;
+  font-size: 12px;
+  letter-spacing: -2px;
+  color: var(--passive-text-color);
+  border-right: 1px solid var(--border-color);
+  cursor: grab;
+}
+.ideditor
+  .form-field
+  .form-field-input-traffic-sign
+  .traffic-sign-row:hover
+  .traffic-sign-row__drag {
+  color: var(--text-color);
+}
+.ideditor .form-field .form-field-input-traffic-sign .traffic-sign-row__remove {
+  border-left-color: var(--border-color);
+}
+
+/* "Add sign…": the last row of the same box */
+.ideditor .form-field .form-field-input-traffic-sign .traffic-sign-add-row {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--bg-color);
+}
+.ideditor .form-field .form-field-input-traffic-sign .traffic-sign-add-row input {
+  border-radius: 0;
+}
