@@ -2,6 +2,12 @@
 
 D3-based iD inspector field for `traffic_sign`, `traffic_sign:forward`, and `traffic_sign:backward` tags.
 
+## Try it
+
+The field is integrated into iD in [tordans/iD#10](https://github.com/tordans/iD/pull/10). Test it in the [deploy preview of that PR](https://deploy-preview-10--tordans-id-experiments.netlify.app/#disable_features=boundaries&map=19.78/52.47994/13.41803&background=Brandenburg-DOP20c&locale=en&id=w905940429&photo_overlay=mapillary&photo=mapillary/1145175383182727): select a way and open the traffic sign field.
+
+The package is not published on npm yet.
+
 ## Local development with iD
 
 This package is developed in the `osm-traffic-sign-tools` monorepo and consumed by an isolated iD git worktree.
