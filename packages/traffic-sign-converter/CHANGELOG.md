@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.7.0
+
+_2026-10-05_
+
 - **BREAKING:** `FR:M2` is now `FR:M2[50]` with an integer `valuePrompt` (extent in km) and `FR:M9z` is now `FR:M9z[Rappel]` with a free-text `valuePrompt`; the bare ids still resolve to these signs.
 - Add `valuePrompt.format: 'text'` (type `TextValuePromptFormat`) for free-text panels without opening-hours validation.
 - `hasBundledSvg()` and `loadTrafficSignSvg()` use the sign's `svgName` when set, so custom bracket values like `FR:M2[7]` keep their bundled SVG.
