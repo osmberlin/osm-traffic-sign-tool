@@ -123,19 +123,17 @@
     "packages/traffic-sign-id-field": {
       "name": "@osm-traffic-signs/id-field",
       "version": "0.0.0",
-      "dependencies": {
+      "devDependencies": {
+        "@osm-traffic-signs/converter": "workspace:*",
         "d3-dispatch": "~3.0.1",
         "d3-drag": "~3.0.0",
         "d3-selection": "~3.0.0",
-      },
-      "devDependencies": {
-        "@osm-traffic-signs/converter": "workspace:*",
         "typescript": "^6.0.3",
         "vite": "^8.3.1",
         "vitest": "^4.1.9",
       },
       "peerDependencies": {
-        "@osm-traffic-signs/converter": "workspace:*",
+        "@osm-traffic-signs/converter": ">=0.7.0",
       },
     },
   },

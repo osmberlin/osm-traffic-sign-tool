@@ -14,7 +14,7 @@
 
 ## Package: Traffic Sign iD Field
 
-> Inspector field for `traffic_sign` tags in the iD editor, built on the converter. Not published on npm yet.
+> Inspector field for `traffic_sign` tags in the iD editor, built on the converter.
 
 [README – Learn more…](./packages/traffic-sign-id-field/README.md)
 

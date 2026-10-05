@@ -1,7 +1,7 @@
 {
   "name": "@osm-traffic-signs/id-field",
   "version": "0.0.0",
-  "description": "D3-based iD inspector field for traffic_sign tags",
+  "description": "Inspector field for traffic_sign tags in the iD editor: pick signs from the catalogue, see their images, get the tags they imply.",
   "keywords": [
     "id-editor",
     "openstreetmap",
@@ -51,18 +51,16 @@
     "test:watch": "vitest --watch",
     "type-check": "tsc --noEmit"
   },
-  "dependencies": {
-    "d3-dispatch": "~3.0.1",
-    "d3-drag": "~3.0.0",
-    "d3-selection": "~3.0.0"
-  },
   "devDependencies": {
     "@osm-traffic-signs/converter": "workspace:*",
+    "d3-dispatch": "~3.0.1",
+    "d3-drag": "~3.0.0",
+    "d3-selection": "~3.0.0",
     "typescript": "^6.0.3",
     "vite": "^8.3.1",
     "vitest": "^4.1.9"
   },
   "peerDependencies": {
-    "@osm-traffic-signs/converter": "workspace:*"
+    "@osm-traffic-signs/converter": ">=0.7.0"
   }
 }
