@@ -136,7 +136,6 @@ export type {
 export {
   getValuePromptInputAttributes,
   isOpeningHoursValuePromptFormat,
-  isTextValuePromptFormat,
   valuePromptFormats,
   valuePromptInputFormats,
 } from './data-definitions/valuePromptFormats.js'

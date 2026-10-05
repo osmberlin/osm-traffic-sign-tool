@@ -1,6 +1,6 @@
 import { useCatalogueHtmlLang } from '@app/app/(signs)/_components/store/CountryPrefixContext'
 import * as m from '@app/paraglide/messages'
-import { isTextValuePromptFormat, SignStateType } from '@osm-traffic-signs/converter'
+import { SignStateType } from '@osm-traffic-signs/converter'
 import { clsx } from 'clsx'
 import { MissingSvgNotice } from '../../MissingSvgNotice'
 import { PackageSvgTrafficSign } from '../../PackageSvgTrafficSign'
@@ -18,10 +18,9 @@ const getBanderoleTextClass = (value: string) => {
 
 export const SelectedSignGraphic = ({ sign, compact = false }: Props) => {
   const showBanderole =
-    'valuePrompt' in sign && sign.valuePrompt
-      ? sign.valuePrompt.defaultValue === '47' ||
-        sign.signValue !== sign.valuePrompt.defaultValue ||
-        isTextValuePromptFormat(sign.valuePrompt.format)
+    'valuePrompt' in sign
+      ? sign.valuePrompt &&
+        (sign.valuePrompt.defaultValue === '47' || sign.signValue !== sign.valuePrompt.defaultValue)
       : false
 
   if (!sign.recodgnizedSign) {

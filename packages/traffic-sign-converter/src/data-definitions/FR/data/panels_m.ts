@@ -38,25 +38,19 @@ export const _panels_m: SignType[] = [
     },
   },
   {
-    osmValuePart: 'M9z[Accotements dangereux]',
+    osmValuePart: 'M9z[Rappel]',
     signId: 'M9z',
     name: 'M9z',
-    descriptiveName:
-      "Panonceau de danger : il précise la nature du danger annoncé par le panneau qu'il complète",
+    descriptiveName: 'Panonceau avec indications textuelles diverses',
     description: null,
     kind: 'exception_modifier',
-    signValue: 'Accotements dangereux',
+    signValue: 'Rappel',
     valuePrompt: {
       prompt: 'Texte du panonceau',
-      defaultValue: 'Accotements dangereux',
+      defaultValue: 'Rappel',
       format: 'text',
     },
-    tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        uniqueTags: [{ key: 'hazard', value: 'shoulder' }],
-      },
-    ],
+    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     taggingSuggestionsQa: 'none',
     catalogue: { signCategory: 'exception_modifier' },
     image: {
@@ -994,17 +988,6 @@ export const _panels_m: SignType[] = [
     signId: 'M9v4',
     name: 'M9v4',
     descriptiveName: 'Pannonceau sauf cyclomoteur',
-    description: null,
-    kind: 'exception_modifier',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-    catalogue: { signCategory: 'exception_modifier' },
-    image: 'missing',
-  },
-  {
-    osmValuePart: 'M9z',
-    signId: 'M9z',
-    name: 'M9z',
-    descriptiveName: 'Pannonceau avec indications textuelles diverses',
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],

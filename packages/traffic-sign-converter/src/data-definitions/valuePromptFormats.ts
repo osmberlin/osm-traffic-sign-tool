@@ -40,6 +40,3 @@ export const isOpeningHoursValuePromptFormat = (
   format: string,
 ): format is OpeningHoursValuePromptFormat =>
   format === 'opening_hours' || format === 'time_restriction'
-
-export const isTextValuePromptFormat = (format: string): format is TextValuePromptFormat =>
-  format === 'text'
