@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.1.0
+
+_2026-10-05_
+
 - First release on npm.
 - The field for one `traffic_sign` key in iD's inspector: a list of the signs with their images, drag to reorder, remove, and an "Add sign…" combobox that searches the country's catalogue by name and sign id. Signs with a value (e.g. `DE:274[30]`) ask for it. The country comes from the location of the selected feature.
 - `traffic_sign=none` shows as "No sign", not as an unknown sign.

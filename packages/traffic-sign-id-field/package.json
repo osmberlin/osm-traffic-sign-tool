@@ -1,6 +1,6 @@
 {
   "name": "@osm-traffic-signs/id-field",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Inspector field for traffic_sign tags in the iD editor: pick signs from the catalogue, see their images, get the tags they imply.",
   "keywords": [
     "id-editor",
