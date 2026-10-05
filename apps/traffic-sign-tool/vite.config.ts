@@ -1,10 +1,11 @@
+import os from 'node:os'
 import path from 'node:path'
 import { paraglideVitePlugin } from '@inlang/paraglide-js'
 import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig, searchForWorkspaceRoot } from 'vite'
 
 const defaultBase = '/'
 
@@ -35,6 +36,16 @@ export default defineConfig({
   resolve: {
     alias: {
       '@app': path.resolve(__dirname, '.'),
+    },
+  },
+  server: {
+    fs: {
+      // Bun global store: assets of dependencies (e.g. @fontsource fonts) realpath into
+      // ~/.bun/install/cache/links, outside the default allow list (workspace root).
+      allow: [
+        searchForWorkspaceRoot(process.cwd()),
+        path.join(os.homedir(), '.bun/install/cache/links'),
+      ],
     },
   },
 })

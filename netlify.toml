@@ -14,6 +14,11 @@ publish = "apps/traffic-sign-tool/dist"
 # Netlify: exit 0 cancels, exit 1 proceeds. BRANCH is the PR branch (dependabot/*).
 ignore = "bash -c '[[ \"$CONTEXT\" != deploy-preview ]] && exit 0; [[ \"$BRANCH\" == dependabot/* ]] && exit 0; exit 1'"
 
+[build.environment]
+# bunfig.toml enables Bun's global virtual store for local dev. Keep Netlify on a project-local
+# node_modules so its dependency cache does not hold symlinks into ~/.bun/install/cache/links.
+BUN_INSTALL_GLOBAL_STORE = "0"
+
 # TanStack Router SPA — serve index.html for client-side routes.
 [[redirects]]
 from = "/*"
