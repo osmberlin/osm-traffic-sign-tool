@@ -18,9 +18,6 @@
     "url": "git+https://github.com/osmberlin/osm-traffic-sign-tool.git",
     "directory": "packages/traffic-sign-id-field"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "dist"
   ],
@@ -36,6 +33,9 @@
       "default": "./dist/id-field.esm.js"
     },
     "./id-field.css": "./dist/id-field.css"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "bleach": "rm -rf node_modules dist",
