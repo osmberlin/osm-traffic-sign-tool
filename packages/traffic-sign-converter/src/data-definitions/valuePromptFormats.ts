@@ -1,9 +1,17 @@
 /** All `valuePrompt.format` values used in sign data definitions. */
-export const valuePromptFormats = ['integer', 'float', 'opening_hours', 'time_restriction'] as const
+export const valuePromptFormats = [
+  'integer',
+  'float',
+  'text',
+  'opening_hours',
+  'time_restriction',
+] as const
 
 export type ValuePromptFormat = (typeof valuePromptFormats)[number]
 
 export type NumericValuePromptFormat = Extract<ValuePromptFormat, 'integer' | 'float'>
+
+export type TextValuePromptFormat = Extract<ValuePromptFormat, 'text'>
 
 export type OpeningHoursValuePromptFormat = Extract<
   ValuePromptFormat,
@@ -19,6 +27,7 @@ export type ValuePromptInputAttributes = {
 export const valuePromptInputFormats = {
   integer: { type: 'number' },
   float: { type: 'number', step: '0.1' },
+  text: { type: 'text' },
   opening_hours: { type: 'text' },
   time_restriction: { type: 'text' },
 } as const satisfies Record<ValuePromptFormat, ValuePromptInputAttributes>

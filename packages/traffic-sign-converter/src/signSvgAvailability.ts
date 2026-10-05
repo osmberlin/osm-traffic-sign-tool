@@ -32,13 +32,26 @@ const svgLoaderMaps = {
 export const isSignSvgMissing = (sign: SignWithImage): boolean =>
   'image' in sign && isSignImageMissing(sign.image)
 
+const resolveSvgName = (
+  countryPrefix: CountryPrefixType,
+  signOrOsmValuePart: SignWithImage | string,
+) => {
+  if (typeof signOrOsmValuePart !== 'string') {
+    const sign = signOrOsmValuePart
+    if ('svgName' in sign && sign.svgName) {
+      return sign.svgName
+    }
+    return createSvgImportname(countryPrefix, sign.osmValuePart)
+  }
+
+  return createSvgImportname(countryPrefix, signOrOsmValuePart)
+}
+
 export const hasBundledSvg = (
   countryPrefix: CountryPrefixType,
   signOrOsmValuePart: SignWithImage | string,
 ): boolean => {
-  const osmValuePart =
-    typeof signOrOsmValuePart === 'string' ? signOrOsmValuePart : signOrOsmValuePart.osmValuePart
-  const svgName = createSvgImportname(countryPrefix, osmValuePart)
+  const svgName = resolveSvgName(countryPrefix, signOrOsmValuePart)
   return svgName in svgLoaderMaps[countryPrefix]
 }
 

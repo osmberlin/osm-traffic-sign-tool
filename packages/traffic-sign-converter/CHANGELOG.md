@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- **BREAKING:** `FR:M2` is now `FR:M2[50]` with an integer `valuePrompt` (extent in km) and `FR:M9z` is now `FR:M9z[Rappel]` with a free-text `valuePrompt`; the bare ids still resolve to these signs.
+- Add `valuePrompt.format: 'text'` (type `TextValuePromptFormat`) for free-text panels without opening-hours validation.
+- `hasBundledSvg()` and `loadTrafficSignSvg()` use the sign's `svgName` when set, so custom bracket values like `FR:M2[7]` keep their bundled SVG.
 - Add beta country catalogue `IT` (303 signs from the OSM Wiki page `IT:Road_signs_in_Italy`, ids follow the Figura/Modello column, e.g. `IT:II.5`, `IT:MII.1`).
 - **BREAKING:** Opening-hours validation now uses the structured warnings of `opening_hours` 3.14. Removed the string-parsing exports `flattenOpeningHoursMessages`, `parseOpeningHoursFeedbackChunk`, `parseOpeningHoursFeedbackMessage`, `partitionOpeningHoursMessages`, `splitOpeningHoursFeedbackMessage`, `shouldSkipOpeningHoursMessage` and `SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES`; use `shouldSkipOpeningHoursWarningType` / `SKIPPABLE_OPENING_HOURS_WARNING_TYPES` instead.
 - Fix `validateConditionalOpeningHours()` showing the irrelevant "no PH rule" warning for non-German locales (it was only hidden for `de`).

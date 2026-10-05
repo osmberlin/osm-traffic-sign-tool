@@ -26,6 +26,16 @@ describe('hasBundledSvg', () => {
   test('returns true when an SVG loader exists', () => {
     expect(hasBundledSvg('BR', 'A-48')).toBe(true)
   })
+
+  test('uses svgName for custom bracket values when catalogue svgName is set', () => {
+    expect(
+      hasBundledSvg('DE', {
+        osmValuePart: '1001-30[900]',
+        svgName: 'DE_1001_30__800__',
+      } as never),
+    ).toBe(true)
+    expect(hasBundledSvg('DE', '1001-30[900]')).toBe(false)
+  })
 })
 
 describe('isSignSvgUnavailable', () => {

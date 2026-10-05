@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
+import { signsToTags } from '../signsToTags/signsToTags.js'
 import { trafficSignTagToSigns } from './trafficSignTagToSigns.js'
 
 const joinOsmValueParts = (signs: ReturnType<typeof trafficSignTagToSigns>) => {
@@ -208,5 +209,34 @@ describe('trafficSignTagToSigns() FR bracket speed signs', () => {
     const result = trafficSignTagToSigns('B14', countryPrefix)
     expect(result[0]?.recodgnizedSign).toBe(true)
     expect(result[0]?.osmValuePart).toBe('B14')
+  })
+})
+
+describe('trafficSignTagToSigns() FR value prompt panels', () => {
+  const countryPrefix: CountryPrefixType = 'FR'
+
+  test('M2 keeps a custom distance and the default SVG', () => {
+    const result = trafficSignTagToSigns('M2[7]', countryPrefix)
+    expect(result[0]?.recodgnizedSign).toBe(true)
+    expect(result[0]?.osmValuePart).toBe('M2[7]')
+    expect(result[0]?.svgName).toBe('FR_M2__50__')
+  })
+
+  test('M9z keeps a custom free text and the default SVG', () => {
+    const result = trafficSignTagToSigns('A14,M9z[Accotements dangereux]', countryPrefix)
+    expect(result[1]?.recodgnizedSign).toBe(true)
+    expect(result[1]?.osmValuePart).toBe('M9z[Accotements dangereux]')
+    expect(result[1]?.svgName).toBe('FR_M9z__Rappel__')
+  })
+
+  test('bare ids resolve to the default value', () => {
+    const result = trafficSignTagToSigns('A14,M9z,M2', countryPrefix)
+    expect(result.map((s) => s.osmValuePart)).toEqual(['A14', 'M9z[Rappel]', 'M2[50]'])
+  })
+
+  test('M9z free text does not imply a hazard tag', () => {
+    const signs = trafficSignTagToSigns('M9z[Accotements dangereux]', countryPrefix)
+    const tags = signsToTags(signs, countryPrefix, 'way')
+    expect(tags.has('hazard')).toBe(false)
   })
 })

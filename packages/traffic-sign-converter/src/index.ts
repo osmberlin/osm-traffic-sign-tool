@@ -142,6 +142,7 @@ export {
 export type {
   NumericValuePromptFormat,
   OpeningHoursValuePromptFormat,
+  TextValuePromptFormat,
   ValuePromptFormat,
   ValuePromptInputAttributes,
 } from './data-definitions/valuePromptFormats.js'
