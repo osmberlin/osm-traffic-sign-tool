@@ -24,7 +24,7 @@
   "devDependencies": {
     "@osm-traffic-signs/converter": "workspace:*",
     "cheerio": "^1.1.2",
-    "zod": "^4.2.1"
+    "zod": "^4.6.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
