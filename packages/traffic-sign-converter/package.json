@@ -28,6 +28,16 @@
       "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
+    "./id-field-browser": {
+      "types": "./dist/idFieldBrowser.d.ts",
+      "import": "./dist/id-field-browser.js",
+      "default": "./dist/id-field-browser.js"
+    },
+    "./data/*": {
+      "types": "./dist/data/*.d.ts",
+      "import": "./dist/data/*.js",
+      "default": "./dist/data/*.js"
+    },
     "./data-svgs": {
       "import": "./dist/data-svgs/index.js",
       "default": "./dist/data-svgs/index.js",
@@ -72,7 +82,6 @@
     "format:check": "bun run --cwd ../.. format:check",
     "lint": "oxlint -c ../../oxlint.config.mjs .",
     "pretest": "bun run build:transfer-svgs",
-    "release:patch": "npm version patch && bun run build && bun run check && npm run login && npm publish",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest --watch --passWithNoTests",
     "type-check": "bun run build:transfer-svgs && tsc --noEmit",
