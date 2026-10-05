@@ -1,11 +1,7 @@
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import {
-  flattenOpeningHoursMessages,
   normalizeOpeningHoursLocale,
-  parseOpeningHoursFeedbackChunk,
-  partitionOpeningHoursMessages,
-  shouldSkipOpeningHoursMessage,
-  splitOpeningHoursFeedbackMessage,
+  shouldSkipOpeningHoursWarningType,
   validateConditionalOpeningHours,
 } from './validateConditionalOpeningHours.js'
 
@@ -30,72 +26,10 @@ describe('normalizeOpeningHoursLocale()', () => {
   })
 })
 
-describe('parseOpeningHoursFeedbackChunk()', () => {
-  test('splits reference and detail and removes wrapping parentheses', () => {
-    expect(
-      parseOpeningHoursFeedbackChunk(
-        'Su 6-22: <--- (Unerwartetes Zeichen: "timesep" Das bedeutet, dass die Syntax an dieser Stelle nicht erkannt werden konnte.)',
-      ),
-    ).toEqual({
-      reference: 'Su 6-22:',
-      detail:
-        'Unerwartetes Zeichen: "timesep" Das bedeutet, dass die Syntax an dieser Stelle nicht erkannt werden konnte.',
-    })
-  })
-
-  test('parses chunks without trailing colon on reference', () => {
-    expect(
-      parseOpeningHoursFeedbackChunk(
-        'Su 6-22 <--- (Zeitspanne ohne Minutenangabe angegeben. Bitte verwende stattdessen folgende Syntax "06:00-22:00".)',
-      ),
-    ).toEqual({
-      reference: 'Su 6-22',
-      detail:
-        'Zeitspanne ohne Minutenangabe angegeben. Bitte verwende stattdessen folgende Syntax "06:00-22:00".',
-    })
-  })
-})
-
-describe('splitOpeningHoursFeedbackMessage()', () => {
-  test('splits concatenated fatal error string into multiple items', () => {
-    const combined =
-      'Su 6-22: <--- (Unerwartetes Zeichen: "timesep" Das bedeutet, dass die Syntax an dieser Stelle nicht erkannt werden konnte.) Su 6-22 <--- (Zeitspanne ohne Minutenangabe angegeben. Das ist nicht sehr eindeutig! Bitte verwende stattdessen folgende Syntax "06:00-22:00".)'
-
-    const result = splitOpeningHoursFeedbackMessage(combined)
-
-    expect(result).toHaveLength(2)
-    expect(result[0]).toContain('timesep')
-    expect(result[1]).toContain('06:00-22:00')
-  })
-})
-
-describe('partitionOpeningHoursMessages()', () => {
-  test('separates skippable and displayed messages', () => {
-    const phDetail = 'Es wurde keine Regel für "PH" (feiertags) angegeben. Weitere Hinweise.'
-    const other = { reference: '16:00-18:00', detail: 'Some other warning.' }
-
-    const result = partitionOpeningHoursMessages([
-      { reference: 'Mo-Sa 18:00-19:00', detail: phDetail },
-      other,
-    ])
-
-    expect(result.skipped).toHaveLength(1)
-    expect(result.displayed).toEqual([other])
-  })
-})
-
-describe('flattenOpeningHoursMessages()', () => {
-  test('flattens and parses multiple strings', () => {
-    const result = flattenOpeningHoursMessages([
-      'A <--- (first.) B <--- (second.)',
-      'C <--- (third.)',
-    ])
-
-    expect(result).toEqual([
-      { reference: 'A', detail: 'first.' },
-      { reference: 'B', detail: 'second.' },
-      { reference: 'C', detail: 'third.' },
-    ])
+describe('shouldSkipOpeningHoursWarningType()', () => {
+  test('skips public_holiday warnings', () => {
+    expect(shouldSkipOpeningHoursWarningType('public_holiday')).toBe(true)
+    expect(shouldSkipOpeningHoursWarningType('without_minutes')).toBe(false)
   })
 })
 
@@ -153,9 +87,6 @@ describe('validateConditionalOpeningHours()', () => {
 
     expect(result.severity).toBe('none')
     expect(result.messages).toEqual([])
-    expect(
-      shouldSkipOpeningHoursMessage('Es wurde keine Regel für "PH" (feiertags) angegeben. …'),
-    ).toBe(true)
     expect(vi.mocked(console.info)).toHaveBeenCalledWith(
       '[opening_hours validation]',
       expect.objectContaining({
@@ -175,6 +106,12 @@ describe('validateConditionalOpeningHours()', () => {
         ]),
       }),
     )
+  })
+
+  test('hides skippable PH holiday warnings independent of the locale', () => {
+    const result = validateConditionalOpeningHours('Mo-Sa 18:00-19:00', { requestedLocale: 'en' })
+
+    expect(result).toEqual({ severity: 'none', messages: [] })
   })
 
   test('uses locale normalization from requestedLocale', () => {

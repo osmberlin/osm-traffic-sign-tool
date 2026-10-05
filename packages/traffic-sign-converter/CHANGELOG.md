@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **BREAKING:** Opening-hours validation now uses the structured warnings of `opening_hours` 3.14. Removed the string-parsing exports `flattenOpeningHoursMessages`, `parseOpeningHoursFeedbackChunk`, `parseOpeningHoursFeedbackMessage`, `partitionOpeningHoursMessages`, `splitOpeningHoursFeedbackMessage`, `shouldSkipOpeningHoursMessage` and `SKIPPABLE_OPENING_HOURS_MESSAGE_PREFIXES`; use `shouldSkipOpeningHoursWarningType` / `SKIPPABLE_OPENING_HOURS_WARNING_TYPES` instead.
+- Fix `validateConditionalOpeningHours()` showing the irrelevant "no PH rule" warning for non-German locales (it was only hidden for `de`).
 - Add `DE:600` (Absperrschranke / Barke).
 - Add 289 missing `FR` traffic signs (from the PanierAvide CSV), including bracket speed variants like `B14[30]`, `B33[50]`, `B25[30]` with tagging for `maxspeed`, `minspeed` and `recommended_speed`.
 - `trafficSignTagToSigns()` now prefers an exact `osmValuePart` match before falling back to the `signId` lookup, so bracket variants like `FR:B14[30]` resolve to their own sign.
