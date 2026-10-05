@@ -6,17 +6,8 @@ import {
   type CountryPrefixType,
   type SignComentType,
 } from '@osm-traffic-signs/converter'
-import {
-  type QaDeployContext,
-  formatQaDeployContextLines,
-  getQaDeployContext,
-  githubBlobUrl,
-} from '../qaDeployContext'
-import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
-
-const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
-export const TAGINFO_QA_AGENT_SKILL_PATH = '.cursor/skills/add-traffic-sign/SKILL.md'
-export const TAGINFO_QA_ISSUE_TEMPLATE = 'taginfo-qa-catalogue-update.md'
+import { type QaDeployContext, getQaDeployContext } from '../qaDeployContext'
+import { QA_FEEDBACK_PLACEHOLDER, buildQaIssueUrl, formatQaIssueHeader } from '../qaIssue'
 
 export const buildTaginfoToolRecommendations = (
   value: string,
@@ -47,29 +38,6 @@ export const buildTaginfoToolRecommendations = (
   return byGeometry
 }
 
-const formatAgentBrief = (
-  countryPrefix: CountryPrefixType,
-  deployContext: QaDeployContext,
-): string[] => [
-  '# Taginfo comparison – catalogue update',
-  '',
-  QA_ISSUE_ATTRIBUTION_BANNER,
-  '',
-  ...formatQaDeployContextLines(deployContext),
-  '',
-  `Created from the [Taginfo comparison page](${deployContext.pageOrigin}/${countryPrefix}/taginfo).`,
-  '',
-  'Submit with label `cursor-qa` to start a Cursor cloud agent. The agent should **open a PR** that updates sign config in `@osm-traffic-signs/converter`.',
-  '',
-  '## Agent instructions',
-  '',
-  '1. Apply the feedback in **My feedback** below using taginfo usage and tool recommendations as context.',
-  `2. Read [\`${TAGINFO_QA_AGENT_SKILL_PATH}\`](${githubBlobUrl(TAGINFO_QA_AGENT_SKILL_PATH, deployContext)}) for \`tagRecommendationsByGeometry\` shape and OSM wiki tagging research.`,
-  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`.`,
-  '4. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
-  '',
-]
-
 export const formatTaginfoSignIssueBody = (
   value: string,
   usageCount: number,
@@ -79,10 +47,10 @@ export const formatTaginfoSignIssueBody = (
   const recommendations = buildTaginfoToolRecommendations(value, countryPrefix)
 
   return [
-    ...formatAgentBrief(countryPrefix, deployContext),
-    `## My feedback for traffic_sign value ${value}`,
+    ...formatQaIssueHeader('taginfo-qa', countryPrefix, deployContext),
+    `## Feedback for traffic_sign value ${value}`,
     '',
-    'WRITE HERE',
+    QA_FEEDBACK_PLACEHOLDER,
     '',
     '## Taginfo usage',
     '',
@@ -103,14 +71,5 @@ export const buildTaginfoSignGithubIssueUrl = (
   value: string,
   usageCount: number,
   countryPrefix: CountryPrefixType,
-): string => {
-  const title = `Taginfo comparison feedback: ${value}`
-  const body = formatTaginfoSignIssueBody(value, usageCount, countryPrefix)
-  const params = new URLSearchParams({
-    template: TAGINFO_QA_ISSUE_TEMPLATE,
-    title,
-    body,
-  })
-
-  return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`
-}
+): string =>
+  buildQaIssueUrl('taginfo-qa', value, formatTaginfoSignIssueBody(value, usageCount, countryPrefix))

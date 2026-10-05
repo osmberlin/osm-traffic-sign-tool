@@ -1,26 +1,28 @@
 ---
 name: Sign combination QA update
-about: Apply sign combination QA tasks from the check-sign-combinations page to the converter catalogue (triggers Cursor)
-title: '[Combination QA] '
+about: Catalogue updates from the Sign combinations QA page (check-sign-combinations)
+title: '[combination-qa] '
 labels:
-  - cursor-qa
+  - qa-catalogue
   - combination-qa
 assignees: ''
 ---
 
 <!--
-  Opened from the Sign combinations QA page or filled manually.
-
-  Issues with the `combination-qa` or `cursor-qa` label trigger `.github/workflows/cursor-qa-automation.yml`,
-  which starts a Cursor cloud agent via the Cloud Agents API (`CURSOR_API_KEY`).
+  Normally opened from the Sign combinations QA page, which replaces this text with a pre-filled body.
+  Keep the `[combination-qa]` title prefix: agent sessions find QA issues by it, see .github/QA_ISSUES.md.
 -->
 
-## Sign combination QA tasks
+> Filled in by hand. Open the issue from the [Sign combinations QA page](https://trafficsigns.osm-verkehrswende.org/DE/check-sign-combinations) to get a pre-filled body.
 
-> **You** — submitted feedback from the QA page (see Tasks below).
-> **Traffic Sign Tool** — generated this issue body from your selections.
-> **Cursor agent** — will implement catalogue changes in a separate PR.
+## For the agent
 
-_Submit to trigger a Cursor cloud agent (see issue body after opening from the tool). The agent opens a PR with `Closes #<issue-number>` in the description (auto-closes this issue on merge). Follow `.cursor/skills/fix-sign-combination/SKILL.md`._
+Worked on in a manually started agent session: `.agents/skills/work-qa-issues/SKILL.md`.
 
-_Paste task results from [/DE/check-sign-combinations](https://trafficsigns.osm-verkehrswende.org/DE/check-sign-combinations) below, or use the pre-filled body when opening from the tool._
+- **Kind:** `combination-qa`
+- **Catalogue:** <!-- country prefix, e.g. DE -->
+- **How to apply:** `.agents/skills/fix-sign-combination/SKILL.md`
+
+## Tasks
+
+<!-- One heading per sign or combination, with what should change and why (wiki links help). -->

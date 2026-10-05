@@ -43,7 +43,7 @@ Run `bun script-new-data.ts` from the root folder to update the svgs, data and r
 
 Alternatively, the [script lists the separate commands](./script-new-sign.ts)
 
-## LLM Cloud Workflows
+## QA and agent workflows
 
 - Branch previews are generated with Netlify. [Admin UI](https://app.netlify.com/projects/osm-traffic-sign-preview/overview)
-- [QA pages → Cursor automation](./.github/CURSOR_QA_AUTOMATION.md) — GitHub issues from QA pages (`cursor-qa` and per-page labels) start a Cursor cloud agent via the Cloud Agents API in GitHub Actions
+- [QA pages → GitHub issues → agent session](./.github/QA_ISSUES.md) — the QA pages open pre-filled GitHub issues (title prefix like `[tagging-qa]`); a manually started agent session works on them and opens the PRs

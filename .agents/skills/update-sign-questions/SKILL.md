@@ -1,10 +1,17 @@
+---
+name: update-sign-questions
+description: >-
+  Apply [question-qa] issues from the Sign questions QA page: add, change or remove
+  `questions` on sign definitions, including their i18n keys.
+---
+
 # Update Sign Questions (Question QA)
 
 This skill teaches the agent how to apply feedback from the Sign questions QA page (`/DE/questions-qa`).
 
 ## When to use this skill
 
-- GitHub issue labeled `question-qa`.
+- GitHub issue with the title prefix `[question-qa]`.
 - User asks to add, change, or remove `questions` on a German sign definition.
 - Keywords: "Sign questions QA", `SignQuestion`, `questionId`, `answerId`, `questionCatalog`, `sidepathQuestion`, `highwayClassQuestion`.
 
@@ -14,8 +21,7 @@ Each task includes:
 
 - Sign `osmValuePart`, `signId`, descriptive name
 - **Current questions config** (JSON)
-- **Questions and answers (catalogue)** — human-readable summary with ids
-- **Suggestion** — reviewer notes (required intent; implement when concrete)
+- **Feedback** — reviewer notes (required intent; implement when concrete)
 
 ## Instructions
 
@@ -25,7 +31,7 @@ Each task includes:
 2. Schema: `packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts` — `SignQuestion`, `QuestionAnswer`, `QUESTION_NIL_ANSWER_ID` (`'nil'`).
 3. Reuse factories from `packages/traffic-sign-converter/src/data-definitions/questionCatalog.ts` when they match the desired behaviour:
    - `sidepathQuestion()`, `surfaceColorQuestion()`, `guidanceModeQuestion()`, `highwayClassQuestion()`, `pathInfrastructureQuestions()`, `cycleInfrastructureQuestions()`.
-4. Also read [`.cursor/skills/add-traffic-sign/SKILL.md`](../add-traffic-sign/SKILL.md) for DE `data/*.ts` file choice and OSM wiki research.
+4. Also read [add-traffic-sign](../add-traffic-sign/SKILL.md) for DE `data/*.ts` file choice and OSM wiki research.
 
 **Do not start the traffic-sign-tool dev server** unless you need to verify UI labels — converter tests are the main guard.
 
@@ -52,7 +58,7 @@ If you add new `questionI18nKey` / `answerI18nKey` values:
 
 1. `cd packages/traffic-sign-converter && bun test` — especially `signsToTags.questions.test.ts`.
 2. If behaviour is sign-specific, add or extend a test there with the sign’s `osmValuePart` and expected tags per answer.
-3. Open a PR whose description starts with `**[Cursor Agent]**` and includes `Closes #<issue-number>`.
+3. Follow [work-qa-issues](../work-qa-issues/SKILL.md) for branch, checks and PR.
 
 ## Common changes
 
@@ -63,7 +69,3 @@ If you add new `questionI18nKey` / `answerI18nKey` values:
 | Change default highway              | Update `defaultAnswerId` on `highwayClassQuestion`                    |
 | Remove a question                   | Delete from `questions` array or replace with narrower set            |
 | Tag mapping fix                     | Update `tags` / `removeTags` / `highwayValue` on the answer object    |
-
-## Attribution
-
-Follow [github-agent-attribution](../../rules/github-agent-attribution.mdc): prefix all GitHub comments and PR descriptions with `**[Cursor Agent]**`. Refer to the human as **the submitter**.

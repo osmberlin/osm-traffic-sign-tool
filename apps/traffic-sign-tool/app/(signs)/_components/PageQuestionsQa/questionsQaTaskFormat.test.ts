@@ -61,10 +61,9 @@ describe('questionsQaTaskFormat', () => {
     expect(entries[0]?.osmValuePart).toBe('237')
 
     const text = formatQuestionsQaTaskResults(entries)
-    expect(text).toContain('**You**')
-    expect(text).toContain('German traffic signs')
-    expect(text).toContain('Sign questions QA')
-    expect(text).toContain('.cursor/skills/update-sign-questions/SKILL.md')
+    expect(text).toContain('Sign questions QA page')
+    expect(text).toContain('**Kind:** `question-qa`')
+    expect(text).toContain('.agents/skills/update-sign-questions/SKILL.md')
     expect(text).toContain('"questionId": "sidepath"')
     expect(text).not.toContain('Questions & answers')
     expect(text).toContain('Add default for surface colour')
@@ -84,7 +83,7 @@ describe('questionsQaTaskFormat', () => {
     const text = formatQuestionsQaTaskResults(entries, 'DE', previewDeployContext)
 
     expect(text).toContain('**Source branch:** `feat/qa-preview`')
-    expect(text).toContain('blob/feat/qa-preview/.cursor/skills/update-sign-questions/SKILL.md')
+    expect(text).toContain('blob/feat/qa-preview/.agents/skills/update-sign-questions/SKILL.md')
   })
 
   test('buildGithubIssueUrl', () => {

@@ -4,13 +4,8 @@ import {
   type CountryPrefixType,
   type SignStateType,
 } from '@osm-traffic-signs/converter'
-import {
-  type QaDeployContext,
-  formatQaDeployContextLines,
-  getQaDeployContext,
-  githubBlobUrl,
-} from '../qaDeployContext'
-import { QA_ISSUE_ATTRIBUTION_BANNER } from '../qaIssueAttribution'
+import { type QaDeployContext, getQaDeployContext } from '../qaDeployContext'
+import { buildQaIssueUrl, formatQaIssueHeader } from '../qaIssue'
 
 export type CombinationFeedbackStatus = 'OK' | 'NOTOK' | 'INVALID'
 
@@ -33,11 +28,6 @@ export type CombinationTaskEntry = {
   comment?: string
   confirmedAt?: string
 }
-
-export const COMBINATION_QA_AGENT_SKILL_PATH = '.cursor/skills/fix-sign-combination/SKILL.md'
-export const COMBINATION_QA_ISSUE_TEMPLATE = 'sign-combination-qa-update.md'
-
-const GITHUB_REPO = 'osmberlin/osm-traffic-sign-tool'
 
 export const getCombinationQaConfirmationDate = (date = new Date()): string =>
   date.toISOString().slice(0, 10)
@@ -166,31 +156,6 @@ const formatOkTaskSection = (
   lines.push('')
 }
 
-const formatAgentBrief = (countryPrefix: string, deployContext: QaDeployContext): string[] => [
-  '# Sign combination QA – catalogue config update',
-  '',
-  QA_ISSUE_ATTRIBUTION_BANNER,
-  '',
-  ...formatQaDeployContextLines(deployContext),
-  '',
-  `Created from the [Sign combinations QA page](${deployContext.pageOrigin}/${countryPrefix}/check-sign-combinations).`,
-  '',
-  `Submitting this issue (label \`combination-qa\`) starts a Cursor cloud agent. The agent should **open a PR** that updates **${countryPrefix}** sign **config entries** and/or combination conversion behavior in \`@osm-traffic-signs/converter\`.`,
-  '',
-  '## Agent instructions',
-  '',
-  '1. Apply every task in the sections below.',
-  `2. Read [\`${COMBINATION_QA_AGENT_SKILL_PATH}\`](${githubBlobUrl(COMBINATION_QA_AGENT_SKILL_PATH, deployContext)}) for compatibility fields, tag output fixes, and test expectations.`,
-  `3. Edit signs under \`packages/traffic-sign-converter/src/data-definitions/${countryPrefix}/\`. Schema: \`packages/traffic-sign-converter/src/data-definitions/TrafficSignDataTypes.ts\` (\`compatibility.canReceiveModifiers\`, \`compatibility.incompatibleModifiers\`, \`compatibility.confirmedModifiers\`, \`tagRecommendationsByGeometry\`).`,
-  '4. For **Not OK** tasks: fix the combined tag output (usually `tagRecommendationsByGeometry` on primary/modifier and/or `signsToTags` interaction tests).',
-  '5. For **Invalid combination** tasks: update compatibility so the converter blocks the pair (add `incompatibleModifiers` on the primary sign or set `canReceiveModifiers: false` when the primary must never take modifiers).',
-  '6. For **OK** tasks: add or update `compatibility.confirmedModifiers[<modifierSignId>]` on the primary sign with the confirmation date from the task.',
-  '7. Run tests in `packages/traffic-sign-converter`. Open a PR whose description includes `Closes #<issue-number>` (auto-closes this issue on merge).',
-  '',
-  '## Tasks',
-  '',
-]
-
 export const formatCombinationQaTaskResults = (
   entries: CombinationTaskEntry[],
   countryPrefix = 'DE',
@@ -204,25 +169,29 @@ export const formatCombinationQaTaskResults = (
   const notOk = entries.filter((entry) => entry.status === 'NOTOK')
   const invalid = entries.filter((entry) => entry.status === 'INVALID')
 
-  const lines = [...formatAgentBrief(countryPrefix, deployContext)]
+  const lines = [
+    ...formatQaIssueHeader('combination-qa', countryPrefix, deployContext),
+    '## Tasks',
+    '',
+  ]
 
   formatOkTaskSection(
     lines,
     ok,
     '### OK – record combination QA confirmation',
-    'The combination is allowed and the produced OSM tags were verified. Add or update the primary sign `compatibility.confirmedModifiers` entry for this modifier using the confirmation date below.',
+    'The combination is allowed and the produced OSM tags were verified. Add or update `compatibility.confirmedModifiers[<modifierSignId>]` on the primary sign with the confirmation date below.',
   )
   formatTaskSection(
     lines,
     notOk,
     '### Not OK – fix combined tag output',
-    'The combination is allowed but the produced OSM tags are wrong or incomplete. Update sign config and/or add a targeted test in `packages/traffic-sign-converter/src/signsToTags/signsToTags.test.ts` when interaction logic is non-trivial.',
+    'The combination is allowed but the produced OSM tags are wrong or incomplete. Update `tagRecommendationsByGeometry` on the primary/modifier and/or add a targeted test in `packages/traffic-sign-converter/src/signsToTags/signsToTags.test.ts` when interaction logic is non-trivial.',
   )
   formatTaskSection(
     lines,
     invalid,
     '### Invalid combination – update compatibility rules',
-    'The combination should not be allowed. Update the primary sign compatibility so the tool rejects this pair.',
+    'The combination should not be allowed. Update the primary sign so the tool rejects this pair: add the modifier to `compatibility.incompatibleModifiers`, or set `compatibility.canReceiveModifiers: false` when the primary must never take modifiers.',
   )
 
   return lines.join('\n').trimEnd()
@@ -232,15 +201,12 @@ export const buildGithubIssueUrl = (
   entries: CombinationTaskEntry[],
   countryPrefix = 'DE',
   body = formatCombinationQaTaskResults(entries, countryPrefix),
-): string => {
-  const title = `Combination QA (${countryPrefix}): ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`
-  const params = new URLSearchParams({
-    template: COMBINATION_QA_ISSUE_TEMPLATE,
-    title,
+): string =>
+  buildQaIssueUrl(
+    'combination-qa',
+    `${countryPrefix}: ${entries.length} catalogue update${entries.length === 1 ? '' : 's'}`,
     body,
-  })
-  return `https://github.com/${GITHUB_REPO}/issues/new?${params.toString()}`
-}
+  )
 
 export const feedbackCommentPlaceholder = (
   status: Exclude<CombinationFeedbackStatus, 'OK'>,

@@ -48,13 +48,11 @@ describe('taggingQaTaskFormat', () => {
     expect(entries).toHaveLength(3)
 
     const text = formatTaggingQaTaskResults(entries)
-    expect(text).toContain('**You**')
-    expect(text).toContain('Traffic Sign Tool')
-    expect(text).toContain('Cursor agent')
-    expect(text).toContain('catalogue config update')
-    expect(text).toContain('open a PR')
-    expect(text).toContain('Closes #<issue-number>')
-    expect(text).toContain('.cursor/skills/add-traffic-sign/SKILL.md')
+    expect(text).toContain('Tagging QA page')
+    expect(text).toContain('**Kind:** `tagging-qa`')
+    expect(text).toContain('Closes #<this issue>')
+    expect(text).toContain('.agents/skills/work-qa-issues/SKILL.md')
+    expect(text).toContain('.agents/skills/add-traffic-sign/SKILL.md')
     expect(text).toContain('TrafficSignDataTypes.ts')
     expect(text).toContain('explicit no tagging suggestions')
     expect(text).toContain('signId `274`')
@@ -77,7 +75,7 @@ describe('taggingQaTaskFormat', () => {
     const text = formatTaggingQaTaskResults(entries, 'DE', previewDeployContext)
 
     expect(text).toContain('**Source branch:** `feat/qa-preview`')
-    expect(text).toContain('blob/feat/qa-preview/.cursor/skills/add-traffic-sign/SKILL.md')
+    expect(text).toContain('blob/feat/qa-preview/.agents/skills/add-traffic-sign/SKILL.md')
     expect(text).toContain('deploy-preview-42--site.netlify.app/DE/signs-qa')
   })
 
@@ -93,7 +91,7 @@ describe('taggingQaTaskFormat', () => {
     const url = buildGithubIssueUrl(entries)
     expect(url).toContain('github.com/osmberlin/osm-traffic-sign-tool/issues/new')
     expect(url).toContain('template=tagging-qa-catalogue-update.md')
-    expect(url).toContain('title=')
+    expect(new URL(url).searchParams.get('title')).toBe('[tagging-qa] DE: 1 catalogue update')
     expect(url).toContain('body=')
 
     const customBody = 'Custom issue body'

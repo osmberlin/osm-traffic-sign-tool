@@ -27,13 +27,10 @@ describe('combinationQaTaskFormat', () => {
     expect(entries).toHaveLength(3)
 
     const text = formatCombinationQaTaskResults(entries)
-    expect(text).toContain('**You**')
-    expect(text).toContain('Traffic Sign Tool')
-    expect(text).toContain('Cursor agent')
-    expect(text).toContain('Sign combination QA')
-    expect(text).toContain('open a PR')
-    expect(text).toContain('Closes #<issue-number>')
-    expect(text).toContain('.cursor/skills/fix-sign-combination/SKILL.md')
+    expect(text).toContain('Sign combinations QA page')
+    expect(text).toContain('**Kind:** `combination-qa`')
+    expect(text).toContain('Closes #<this issue>')
+    expect(text).toContain('.agents/skills/fix-sign-combination/SKILL.md')
     expect(text).toContain('TrafficSignDataTypes.ts')
     expect(text).toContain('confirmedModifiers')
     expect(text).toContain('OK – record combination QA confirmation')
@@ -61,7 +58,7 @@ describe('combinationQaTaskFormat', () => {
     )
 
     expect(text).toContain('**Source branch:** `feat/qa-preview`')
-    expect(text).toContain('blob/feat/qa-preview/.cursor/skills/fix-sign-combination/SKILL.md')
+    expect(text).toContain('blob/feat/qa-preview/.agents/skills/fix-sign-combination/SKILL.md')
   })
 
   test('getCombinationQaConfirmationDate returns ISO date', () => {
@@ -79,7 +76,7 @@ describe('combinationQaTaskFormat', () => {
     ])
     expect(url).toContain('github.com/osmberlin/osm-traffic-sign-tool/issues/new')
     expect(url).toContain('template=sign-combination-qa-update.md')
-    expect(url).toContain('title=')
+    expect(new URL(url).searchParams.get('title')).toBe('[combination-qa] DE: 1 catalogue update')
     expect(url).toContain('body=')
   })
 })

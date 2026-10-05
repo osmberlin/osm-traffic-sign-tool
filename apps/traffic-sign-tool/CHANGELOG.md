@@ -10,6 +10,8 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- QA pages: the pre-filled GitHub issues no longer start a Cursor cloud agent. They now have a title prefix per QA page (`[tagging-qa]`, `[combination-qa]`, `[question-qa]`, `[taginfo-qa]`, `[wiki-qa]`) and a short brief for an agent session that maintainers start by hand, see [QA_ISSUES.md](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/.github/QA_ISSUES.md).
+
 ## 3.0.0
 
 _2026-06-06_
