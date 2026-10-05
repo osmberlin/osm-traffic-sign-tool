@@ -3,3 +3,11 @@
 minimumReleaseAge = 432000
 # attw 0.18.3 fixes fflate 0.8.3 tarball unpack (https://github.com/arethetypeswrong/arethetypeswrong.github.io/issues/258)
 minimumReleaseAgeExcludes = ["@arethetypeswrong/cli", "@arethetypeswrong/core"]
+
+# Global virtual store — install once, link everywhere (requires isolated linker). Local/dev only;
+# Netlify opts out via BUN_INSTALL_GLOBAL_STORE=0 in netlify.toml.
+# Reinstall after changing linker/store: rm -rf node_modules && bun install
+# Phantom deps inside third-party packages: `trustedDependencies` in package.json.
+# @see https://bun.com/docs/pm/global-store
+linker = "isolated"
+globalStore = true
