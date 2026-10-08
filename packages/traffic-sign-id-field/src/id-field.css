@@ -137,17 +137,24 @@
   white-space: nowrap;
 }
 
+/* A long sign id (e.g. a time restriction) and its value input do not fit one line in a narrow
+   inspector: the input wraps below, and the id is cut with an ellipsis. */
 .traffic-sign-row__meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
+  gap: 2px 6px;
   margin-top: 1px;
   min-width: 0;
 }
 
 /* iD styles `code` with a background box — render the ID as plain muted text. */
 .traffic-sign-row__code {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 11px;
   color: var(--muted-text-color);
   white-space: nowrap;

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- A long sign id with a value (e.g. the time restriction `1040-31[Mo-Fr 07:00-18:00;Sa 09:00-16:00]`) no longer runs out of its row: the value input wraps below the id, and the id is cut with an ellipsis.
+
 ## 0.1.0
 
 _2026-10-05_
