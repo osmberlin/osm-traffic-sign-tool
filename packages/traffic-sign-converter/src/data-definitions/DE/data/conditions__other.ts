@@ -1,3 +1,4 @@
+import { centerlineOnewayContextQuestion } from '../../questionCatalog.js'
 import type { SignType } from '../../TrafficSignDataTypes.js'
 
 export const _conditions__other: SignType[] = [
@@ -118,9 +119,26 @@ export const _conditions__other: SignType[] = [
     description: 'zwei gegengerichtete waagerechte Pfeile',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'oneway', value: 'no' }] },
+      {
+        geometries: ['way'],
+        highwayValues: [],
+        uniqueTags: [{ key: 'oneway', value: 'no' }],
+      },
     ],
-    comments: [],
+    comments: [
+      {
+        tagReference: 'oneway=no',
+        lang: 'de',
+        comment:
+          'Zweirichtungsverkehr auf separat kartiertem Weg (`highway=path` oder `highway=cycleway`). Bei Mittellinien-Tagging auf der Fahrbahn gilt `oneway:bicycle=no` statt `oneway=no`.',
+      },
+      {
+        tagReference: 'oneway:bicycle=no',
+        lang: 'de',
+        comment:
+          'In Kombination mit Zeichen 240 oder 241 (gemeinsamer bzw. getrennter Geh-/Radweg) ist der Fußverkehr ohnehin bidirektional. Das Zusatzzeichen bezieht sich dann nur auf den Radverkehr; in der Praxis wird teils `oneway:bicycle=no` statt `oneway=no` getaggt. Beide Varianten sind gebräuchlich. Siehe [Wiki](https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-32).',
+      },
+    ],
     catalogue: {
       signCategory: 'exception_modifier',
     },
@@ -141,11 +159,24 @@ export const _conditions__other: SignType[] = [
     tagRecommendationsByGeometry: [
       {
         geometries: ['way'],
-        highwayValues: ['path', 'cycleway'],
+        highwayValues: [],
         uniqueTags: [{ key: 'oneway', value: 'no' }],
       },
     ],
-    comments: [],
+    comments: [
+      {
+        tagReference: 'oneway=no',
+        lang: 'de',
+        comment:
+          'Zweirichtungsverkehr auf separat kartiertem Weg (`highway=path` oder `highway=cycleway`). Bei Mittellinien-Tagging auf der Fahrbahn gilt `oneway:bicycle=no` statt `oneway=no`.',
+      },
+      {
+        tagReference: 'oneway:bicycle=no',
+        lang: 'de',
+        comment:
+          'In Kombination mit Zeichen 240 oder 241 (gemeinsamer bzw. getrennter Geh-/Radweg) ist der Fußverkehr ohnehin bidirektional. Das Zusatzzeichen bezieht sich dann nur auf den Radverkehr; in der Praxis wird teils `oneway:bicycle=no` statt `oneway=no` getaggt. Beide Varianten sind gebräuchlich. Siehe [Wiki](https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-32).',
+      },
+    ],
     catalogue: {
       signCategory: 'exception_modifier',
     },
@@ -164,14 +195,39 @@ export const _conditions__other: SignType[] = [
     description: null,
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'oneway:bicycle', value: 'no' }] },
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'oneway', value: 'no' }],
+        comments: [
+          {
+            lang: 'de',
+            comment:
+              'Separat kartierter Zweirichtungsradweg (`highway=cycleway` o. ä.). Auf dem Weg `oneway=no` verwenden, nicht `oneway:bicycle=no`.',
+          },
+        ],
+      },
+      {
+        geometries: ['way_centerline'],
+        uniqueTags: [
+          { key: 'cycleway', value: 'track' },
+          { key: 'oneway:bicycle', value: 'no' },
+        ],
+        comments: [
+          {
+            lang: 'de',
+            comment:
+              'Straßenbegleitender Radweg als Fahrbahnzusatztag (`cycleway=track` + `oneway:bicycle=no`).',
+          },
+        ],
+      },
     ],
+    questions: [centerlineOnewayContextQuestion()],
     comments: [
       {
         tagReference: null,
         lang: 'de',
         comment:
-          'Bitte [Wiki beachten](https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33), das Tool ist hier nicht vollständig.',
+          'Zunächst vorgesehen mit Zeichen 205 oder 206 vor Zweirichtungsradwegen. Seit 2013 auch unter Zeichen 220 für freigegebene Einbahnstraßen (statt vorher Zeichen 1000-33).',
       },
     ],
     catalogue: {
@@ -193,9 +249,26 @@ export const _conditions__other: SignType[] = [
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
       {
-        geometries: ['way'],
-        highwayValues: [],
+        geometries: ['way_centerline'],
         uniqueTags: [{ key: 'oneway:bicycle', value: 'no' }],
+        comments: [
+          {
+            lang: 'de',
+            comment:
+              'Radverkehr in Gegenrichtung auf der Fahrbahn (Einbahnstraße). Seit April 2017 bei freigegebenen Einbahnstraßen stattdessen DE:1000-32 verwenden.',
+          },
+        ],
+      },
+      {
+        geometries: ['way'],
+        uniqueTags: [{ key: 'oneway', value: 'no' }],
+        comments: [
+          {
+            lang: 'de',
+            comment:
+              'Separat kartierter Zweirichtungsradweg: `oneway=no` (nicht `oneway:bicycle=no`). Wird manchmal alternativ zu DE:1000-31 unter Zeichen 240, 237 oder 241 verwendet.',
+          },
+        ],
       },
     ],
     comments: [
@@ -203,7 +276,7 @@ export const _conditions__other: SignType[] = [
         tagReference: null,
         lang: 'de',
         comment:
-          'Bitte [Wiki beachten](https://wiki.openstreetmap.org/wiki/DE:Verkehrszeichen_in_Deutschland#Zusatzzeichen_1000-33), das Tool ist hier nicht vollständig.',
+          'Seit 1. April 2017 bei freigegebenen Einbahnstraßen ungültig; stattdessen DE:1000-32 verwenden.',
       },
     ],
     catalogue: {
