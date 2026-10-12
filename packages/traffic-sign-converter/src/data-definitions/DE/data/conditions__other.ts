@@ -139,11 +139,7 @@ export const _conditions__other: SignType[] = [
     description: 'zwei gegengerichtete senkrechte Pfeile',
     kind: 'exception_modifier',
     tagRecommendationsByGeometry: [
-      {
-        geometries: ['way'],
-        highwayValues: ['path', 'cycleway'],
-        uniqueTags: [{ key: 'oneway', value: 'no' }],
-      },
+      { geometries: ['way'], highwayValues: [], uniqueTags: [{ key: 'oneway', value: 'no' }] },
     ],
     comments: [],
     catalogue: {
