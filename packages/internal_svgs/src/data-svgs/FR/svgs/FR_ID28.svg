@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID28 - Village étape, utilisable pour les villages ayant reçu le label « village étape » décerné par le ministère chargé des routes</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="com.sun.star.drawing.PolyPolygonShape" transform="matrix(1.00528 0 0 1.00508 -54.08 -69.368)">
+          <rect width="14970" height="14971" x="2668" y="5785" fill="none" class="BoundingBox"/>
+          <path fill="#fefefe" d="M2668 5785v14969h14969V5785z"/>
+        </g>
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6274" fill="none" class="BoundingBox"/>
+            <path d="M3155 6274v13991h13996V6274Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="5003" x="4153" y="7272" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M16153 11773h-2001l-1594-1501H7951l-650-2833-850 3636H5450l-1297 1199V7272h12000z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="12001" height="8494" x="4153" y="10757" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M8154 16993c5688 253 4679-3535 2347-3294-1539 160-3277 1112-2347 3294m196-4733c746-429 1470-955 2004-1503 683 78 840 78 1508 119-774 846-3124 1666-3512 1384m-1797 5100c-788-130-1646-346-2400-573v-330c754 219 1501 351 2288 452-693-4362 7734-5451 7175-1770-368 2424-4357 2419-5218 2378 1354 2223 5340 917 7755-111v411c-3071 1892-8736 2075-9600-457"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

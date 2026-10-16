@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID24 - Déchèterie</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5746)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="matrix(1.25387 0 0 1.25433 -2578.087 -3376.777)">
+            <rect width="12002" height="11996" x="4152" y="7273" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7273v11995h12000V7273Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14001" height="13996" x="3153" y="6273" fill="none" class="BoundingBox"/>
+            <path d="M3155 6275v13991h13996V6275Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M3155 6275v13991h13996V6275Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7273" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7273v11995h12000V7273Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="7125" height="6086" x="8835" y="7471" fill="none" class="BoundingBox"/>
+            <path d="m15959 9166-1040 534c-24 774-602 1432-1221 1683l-1750 704-1039 1266c-396 485-992 8-644-492l1022-1467c-310-378-313-720-220-1134l-858 247-391 893 45 102-792 790-235-719 789-1930c101-283 339-420 613-530l4041-1642h1680z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="583" height="961" x="11753" y="12204" fill="none" class="BoundingBox"/>
+            <path d="m11753 12615 278-337 167-74 137 960z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="836" height="1550" x="12388" y="11902" fill="none" class="BoundingBox"/>
+            <path d="m12389 12137 626-235 200 1147c86 447-615 575-698 105z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="3731" height="4286" x="11173" y="12747" fill="none" class="BoundingBox"/>
+            <path d="m11634 12748 2652 2663 617-623v2244h-2217l576-578-2089-2101v-1031z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3149" height="5258" x="8713" y="13519" fill="none" class="BoundingBox"/>
+            <path d="m10986 13519 4 3674 871 2-1580 1580-1568-1567 816-3-2-2804 732-741c234 128 491 115 727-141"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="5146" height="5703" x="5657" y="11320" fill="none" class="BoundingBox"/>
+            <path d="m10117 13554-2834 2851 616 617H5657v-2216l577 575 4041-4061 527 524c-763 1033-998 1215-685 1710"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -81,18 +81,6 @@ export const _indication_c: SignType[] = [
     },
   },
   {
-    osmValuePart: 'Image',
-    signId: 'Image',
-    name: 'Image',
-    description: null,
-    kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [
-      { geometries: ['way'], uniqueTags: [{ key: 'recommended_speed', value: '70' }] },
-    ],
-    catalogue: { signCategory: 'signpost' },
-    image: 'missing',
-  },
-  {
     osmValuePart: 'C5',
     signId: 'C5',
     name: 'C5',

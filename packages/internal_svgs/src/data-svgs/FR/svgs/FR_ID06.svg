@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15002.001 15002" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID06 - Relais d&#x27;information service</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5768)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="translate(-2 -2)">
+            <rect width="15002" height="15002" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2654 5770v15001h15001V5770z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="Group">
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="5069" height="6596" x="7618" y="11565" fill="none" class="BoundingBox"/>
+              <path d="m7932 11566 3725 2-2 4651c0 1123 346 1895 1031 1892v49H7618v-49c1403 3 1515-680 1515-1886l5-3064c-5-1208-789-1555-1206-1555z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="2764" height="2764" x="8892" y="8381" fill="none" class="BoundingBox"/>
+              <path d="M10274 8381c-764 0-1382 618-1382 1382 0 762 618 1381 1382 1381 762 0 1381-619 1381-1381 0-764-619-1382-1381-1382"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

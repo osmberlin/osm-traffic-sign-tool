@@ -309,6 +309,28 @@ describe('trafficSignTagToSigns() FR value prompt panels', () => {
     ])
   })
 
+  test('A16 keeps a custom gradient and tags it as incline', () => {
+    const signs = trafficSignTagToSigns('A16[14%]', countryPrefix)
+    expect(signs[0]?.recodgnizedSign).toBe(true)
+    expect(signs[0]?.svgName).toBe('FR_A16__10___')
+    expect(signsToTags(signs, countryPrefix, 'way').get('incline')).toBe('-14%')
+  })
+
+  test('ID idiograms join their destination symbols', () => {
+    const signs = trafficSignTagToSigns('ID25,ID26a,ID25', countryPrefix)
+    expect(signs.every((sign) => sign.recodgnizedSign)).toBe(true)
+    // Hotel and restaurant on one destination, as in the wiki example
+    expect(signsToTags(signs, countryPrefix, 'way').get('destination:symbol')).toBe('lodging,food')
+  })
+
+  test('E location signs are recognized', () => {
+    const signs = trafficSignTagToSigns('E32,E44', countryPrefix)
+    expect(signs.map((sign) => [sign.recodgnizedSign, sign.descriptiveName])).toEqual([
+      [true, "Signalisation d'un cours d'eau"],
+      [true, 'Cartouche réseau communal (voie communale ou chemin rural)'],
+    ])
+  })
+
   test('M9z free text does not imply a hazard tag', () => {
     const signs = trafficSignTagToSigns('M9z[Accotements dangereux]', countryPrefix)
     const tags = signsToTags(signs, countryPrefix, 'way')

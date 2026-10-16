@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID21a - Point de départ d&#x27;un circuit de ski de fond</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="translate(-34.848 -44.237)scale(1.00333)">
+            <rect width="14999" height="14997" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M17651 20766V5771H2654v14995z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="Group">
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="9778" height="7893" x="5273" y="9916" fill="none" class="BoundingBox"/>
+              <path d="M5301 17804v-412h386l178-565 2827-3485 386-1077 943-1327-742 97-1035 884c-124 104-311 139-504 62l-2298 1415-169-277 2260-1400c-40-200 46-342 173-458l1308-1107 2420-238 506 111 486 408 622 527 1104-677c457-293 949 384 509 692l-164 127-2752 6288h2545l630-246 130 246-780 416zm1494-408 2580-3163h287l514 935-424 2224zm3676-4304 1582-1815 909 688 1064-661-2695 6092h-512l515-2446z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="1615" height="1682" x="11756" y="8397" fill="none" class="BoundingBox"/>
+              <path d="M12563 8397h-1c142 0 281 39 404 113 122 73 224 179 295 307s108 273 108 420c0 148-37 293-108 421s-173 234-295 307c-123 74-262 113-403 113-142 0-281-39-404-113-122-73-224-179-295-307s-108-273-108-421c0-147 37-292 108-420s173-234 295-307c123-74 262-113 403-113z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

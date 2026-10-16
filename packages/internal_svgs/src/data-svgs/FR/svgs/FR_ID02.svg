@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15266.001 15206" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID02 - Aéroport</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2544 -5658)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline">
+            <rect width="15266" height="15206" x="2544" y="5658" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M2545 5658v15205h15264V5658Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14001" height="13996" x="3153" y="6269" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="10989" height="10980" x="4658" y="7780" fill="none" class="BoundingBox"/>
+            <path d="m7337 18759 277-277-307-1452 3113-3106 1303 1303 1115 3064 852-847-1219-5572c1216-1198 2724-2981 3175-4092-1103 459-2880 1973-4078 3189L5969 9729l-853 847 3065 1108 1332 1333-3112 3113-1463-331-280 280z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

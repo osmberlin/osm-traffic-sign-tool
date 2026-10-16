@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 14971 14971.999" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID14a - Station-service</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2668 -5783)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14971" height="14972" x="2668" y="5783" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2668 5784v14970h14970V5784z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13985" height="13979" x="3148" y="6283" fill="none" class="BoundingBox"/>
+            <path d="M3148 6283v13978h13983V6283Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="11993" height="11988" x="4143" y="7278" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4145 7280v11983h11988V7280Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M4145 7280v11983h11988V7280Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="6996" height="10376" x="6642" y="8086" fill="none" class="BoundingBox"/>
+            <path d="M12794 17486h843v975H8126v-975h844l-152-3592h-246v1875c15 1673-1930 1595-1930-18v-4461l1484-2164V8086h5511v4278h-648zm-4743-1533c0 666-891 682-891-13v-4438l969-1420v2282h646v-4l18 1018-742-1zm1136-6868h3386v2276H9187Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

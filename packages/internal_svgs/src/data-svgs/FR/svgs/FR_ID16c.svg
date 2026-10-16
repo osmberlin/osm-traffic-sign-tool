@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15001 14995.999" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID16c - Site inscrit sur la liste du patrimoine mondial de l’Unesco</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5770)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="15001" height="14996" x="2652" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2653 5770v14995h14999V5770Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14003" height="14002" x="3146" y="6289" fill="none" class="BoundingBox"/>
+            <path fill="#826500" d="M3147 6289h14001v14001H3147Z"/>
+          </g>
+        </g>
+        <path d="M10157.919 8297.223c-2754.8 0-4989.884 2231.897-4993.073 4986.696 0 2474.217 1811.025 4575.389 4259.735 4938.869 44.638 9.565 92.464 15.942 137.102 15.942 197.682 3.188 357.104-156.233 360.292-353.915v-2464.652l-2123.49-2120.302 2384.941-2384.941 2384.941 2384.941-2117.114 2117.114 9.566-9.566v2442.333c0 267.828 159.421 427.249 385.799 376.234 2729.291-385.799 4629.592-2911.031 4243.793-5640.322-344.35-2458.275-2448.71-4285.242-4932.492-4288.43m1071.31 9051.937v-1571.893l-12.754-6.377 2445.521-2458.275-3497.701-3491.325-3497.701 3494.513 2502.913 2502.913v1524.067c-2257.404-573.917-3618.862-2869.582-3044.945-5126.986 573.916-2257.405 2869.581-3618.862 5126.986-3044.946s3618.861 2869.582 3044.945 5126.987c-382.611 1504.936-1562.328 2675.088-3067.264 3051.322" style="fill:#fff;stroke-width:31.8841"/>
+      </g>
+    </g>
+  </g>
+</svg>

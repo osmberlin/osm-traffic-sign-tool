@@ -19,6 +19,9 @@ import { sortTags } from './utils/sortTags.js'
 import { splitIntoSignGroups } from './utils/splitIntoSignGroups.js'
 import { uniqueArray } from './utils/uniqueArray.js'
 
+// Keys where each sign adds one value to a list instead of replacing it (FR idiograms: `lodging,food`)
+const listValueSeparators: Record<string, string> = { 'destination:symbol': ',' }
+
 export const signsToTags = (
   signs: SignStateType[],
   countryPrefix: CountryPrefixType | undefined,
@@ -35,6 +38,16 @@ export const signsToTags = (
     // Handle Unique Tags
     const uniqueTags = collectUniqueTags(signGroup, geometry)
     uniqueTags.forEach((tag) => {
+      const separator = listValueSeparators[tag.key]
+      const previous = tagMap.get(tag.key)
+      if (separator && typeof previous === 'string' && previous) {
+        const values = previous.split(separator)
+        tagMap.set(
+          tag.key,
+          values.includes(tag.value) ? previous : `${previous}${separator}${tag.value}`,
+        )
+        return
+      }
       tagMap.set(tag.key, tag.value)
     })
 

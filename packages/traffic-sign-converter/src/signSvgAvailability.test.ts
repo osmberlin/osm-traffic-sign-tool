@@ -56,6 +56,7 @@ describe('hasBundledSvg', () => {
     expect(hasBundledSvg('DE', unknownSign!)).toBe(false)
   })
 
+  // Parses every catalogue sign of every country, which takes a few seconds
   test('a parsed sign and its osmValuePart resolve alike for every catalogue sign', () => {
     for (const countryPrefix of countries) {
       for (const catalogueSign of countryDefinitions[countryPrefix]) {
@@ -73,7 +74,7 @@ describe('hasBundledSvg', () => {
         }
       }
     }
-  })
+  }, 20_000)
 })
 
 describe('isSignSvgUnavailable', () => {

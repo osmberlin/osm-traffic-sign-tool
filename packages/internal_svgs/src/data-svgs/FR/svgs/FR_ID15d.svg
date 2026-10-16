@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15001 14995.999" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID15d - Terrain du conservatoire du littoral et des rivages lacustres</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5770)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="15001" height="14996" x="2652" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2653 5770v14995h14999V5770Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path fill="#826500" d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="10650" height="10129" x="4829" y="8202" fill="none" class="BoundingBox"/>
+            <path fill="#826500" d="m8467 14347-2313-71c364-511 5-691-685-930 1028-127-130-963-640-1270 594 53 2019 61 1262-648 698 214 1092 280 1100-350l1934 1318-658-2254c599 188 660-208 673-940 439 940 876-419 1011-1000 132 581 569 1940 1008 1000 13 732 74 1128 673 940l-655 2254 1934-1321c8 628 401 564 1102 351-759 706 668 703 1265 650-513 307-1674 1143-642 1273-694 238-1052 416-689 929l-2315 69 1830 1425c-594 199-414 557 8 1154-911-501-463 856-231 1404-447-391-1604-1231-1406-213-442-584-721-869-1097-366l-783-2188-790 2186c-376-503-657-221-1099 366 198-1019-956-176-1406 215 234-548 679-1902-231-1402 421-599 604-955 10-1154z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="2018" height="2019" x="9142" y="12793" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M10151 12794h-1c178 0 351 47 505 135 153 89 280 216 369 369 88 154 135 327 135 504v1c0 177-47 350-135 504-89 153-216 280-369 369-154 88-327 135-504 135-178 0-351-47-505-135-153-89-280-216-369-369-88-154-135-327-135-504 0-178 47-351 135-505 89-153 216-280 369-369 154-88 327-135 504-135z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

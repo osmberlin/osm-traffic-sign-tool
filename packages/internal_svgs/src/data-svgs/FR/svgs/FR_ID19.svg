@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID19 - Point de vue</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="matrix(1.00313 0 0 1.003 -34.315 -42.307)">
+            <rect width="15002" height="15002" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2654 5770v15001h15001V5770z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="Group">
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="5443" height="4226" x="8951" y="7629" fill="none" class="BoundingBox"/>
+              <path d="m8951 11337 4426-3708c426 519 734 955 1016 1498l-5087 2727z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="5448" height="4248" x="8952" y="14698" fill="none" class="BoundingBox"/>
+              <path d="m9301 14698 5098 2778c-328 587-619 1008-1022 1469l-4425-3735Z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="5916" height="2438" x="9489" y="10528" fill="none" class="BoundingBox"/>
+              <path d="m9489 12360 5585-1832c202 641 272 1186 330 1795l-5786 641z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="5945" height="2380" x="9490" y="13578" fill="none" class="BoundingBox"/>
+              <path d="m9490 14217 5563 1740c145-437 358-1417 381-1856l-5804-523z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="3601" height="3601" x="4854" y="11476" fill="none" class="BoundingBox"/>
+              <path d="M6653 11476h1c316 0 626 83 900 241s501 385 659 659 241 584 241 900-83 626-241 900-385 501-659 659-584 241-900 241-626-83-900-241-501-385-659-659-241-584-241-900 83-626 241-900 385-501 659-659c273-158 583-241 899-241"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

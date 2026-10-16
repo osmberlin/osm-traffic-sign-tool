@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID26a - Restaurant</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="matrix(1.25387 0 0 1.25433 -2578.087 -3372.76)">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14001" height="13996" x="3153" y="6269" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="10801" height="10820" x="4785" y="7844" fill="none" class="BoundingBox"/>
+            <path d="m9968 14121-3360 3874c-1230 1549-2685 92-1185-1228l3904-3376-1194-1377c-652 430-1726 314-2509-571-799-902-1093-2124-486-2745 609-620 1822-402 2697 489 735 750 1000 1748 702 2411l1434 1239 1420-1235c-297-664-32-1662 703-2412 537-544 1075-927 1664-1301 236-147 395 99 133 341l-1749 1990c-149 169-3 304 162 152l1972-1951c191-155 378 59 233 221l-1907 2029c-162 181 3 320 162 158l2029-1903c159-138 373 63 224 241l-1919 1999c-156 165 10 330 168 178l1938-1784c269-261 457-89 350 159-337 703-725 1123-1275 1661-793 813-1846 1090-2480 628l-1194 1377 3900 3378c1502 1321 46 2777-1184 1229z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

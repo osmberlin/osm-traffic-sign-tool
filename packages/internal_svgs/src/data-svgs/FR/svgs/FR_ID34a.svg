@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID34a - Itinéraire piétonnier</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="translate(-34.848 -44.237)scale(1.00333)">
+            <rect width="14999" height="14997" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M17651 20766V5771H2654v14995z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="6636" height="10198" x="6734" y="8055" fill="none" class="BoundingBox"/>
+            <path d="m6734 17771 956 442c412 201 712-448 256-668l1666-3367c73-143 281-95 345 41l1864 3969 907-394c422-188 162-853-293-659l-1941-4099 211-1413c6-44 98-57 116 29l364 751c21 54 64 92 116 111l1543 764c486 245 736-408 297-637l-1415-709-615-1298c-155-355-277-393-507-495l52-467c773-274 813-1432-116-1604-549-94-971 328-992 802-13 277 143 585 424 776l-64 376c-257 35-446 105-715 366l-1171 1229c-61 73-119 165-143 254l-529 1772c-192 440 453 662 611 245l618-1867 633-611c58-89 155-96 140 6l-259 1575z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

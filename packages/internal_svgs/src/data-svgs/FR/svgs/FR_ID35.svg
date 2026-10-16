@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 14999.001 14997" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID35 - Zone industrielle ou parc d&#x27;activités</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2654 -5770)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14999" height="14997" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M17651 20766V5771H2654v14995z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="3766" height="2402" x="5525" y="11522" fill="none" class="BoundingBox"/>
+            <path d="M9288 13921H5530l3343-2396z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M9288 13921H5530l3343-2396z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="3766" height="2402" x="8081" y="11512" fill="none" class="BoundingBox"/>
+            <path d="M11844 13911H8086l3343-2396z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M11844 13911H8086l3343-2396z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="3766" height="2402" x="10696" y="11512" fill="none" class="BoundingBox"/>
+            <path d="M14459 13911h-3758l3343-2396z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M14459 13911h-3758l3343-2396z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="8937" height="3865" x="5537" y="13877" fill="none" class="BoundingBox"/>
+            <path d="M5539 13879v3860h8932v-3860z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M5539 13879v3860h8932v-3860z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="592" height="3857" x="5537" y="9148" fill="none" class="BoundingBox"/>
+            <path d="M5539 9150v3852h587V9150Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M5539 9150v3852h587V9150Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="597" height="468" x="5540" y="12993" fill="none" class="BoundingBox"/>
+            <path d="m5542 13456 589-461h-589zm0 0"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="m5542 13456 589-461h-589z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

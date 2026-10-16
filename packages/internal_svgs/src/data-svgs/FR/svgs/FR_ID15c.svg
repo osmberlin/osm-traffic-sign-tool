@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15001 14995.999" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID15c - Réserve naturelle</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5770)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="15001" height="14996" x="2652" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2653 5770v14995h14999V5770Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path fill="#826500" d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="Group">
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="4141" height="4135" x="5306" y="8425" fill="none" class="BoundingBox"/>
+              <path fill="#826500" d="M9446 8425c-1049 1430-2616 2087-4140 2039 662 1069 1470 1688 2453 2076 85 31 207 36 317-84l1042-1201c66-85 147-239 118-446-100-725-64-1512 210-2384"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="3128" height="4607" x="5307" y="11459" fill="none" class="BoundingBox"/>
+              <path fill="#826500" d="M5610 11459c714 1624 499 3308-303 4606 1256-39 2197-430 3024-1086 69-59 134-163 85-318l-519-1503c-41-99-133-247-328-325-676-277-1340-701-1959-1374"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="4470" height="3704" x="6316" y="15161" fill="none" class="BoundingBox"/>
+              <path fill="#826500" d="M6317 16297c1764 193 3115 1222 3838 2566 594-1108 725-2118 570-3163-15-89-72-197-231-232l-1562-302c-107-14-281-7-446 121-577 448-1277 810-2169 1010"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="4141" height="4136" x="10856" y="13968" fill="none" class="BoundingBox"/>
+              <path fill="#826500" d="M10856 18102c1048-1431 2615-2087 4140-2040-663-1069-1471-1688-2454-2076-85-30-207-35-316 85l-1043 1200c-66 85-147 239-117 447 99 724 63 1511-210 2384"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="4471" height="3703" x="9520" y="7668" fill="none" class="BoundingBox"/>
+              <path fill="#826500" d="M13989 10233c-1764-192-3115-1222-3838-2565-594 1107-725 2118-571 3162 16 89 73 197 232 232l1561 302c107 15 281 8 446-121 577-448 1278-810 2170-1010"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="3129" height="4607" x="11876" y="10471" fill="none" class="BoundingBox"/>
+              <path fill="#826500" d="M14700 15077c-716-1624-500-3309 303-4606-1257 39-2197 430-3025 1086-69 58-134 163-85 318l518 1502c41 100 134 248 329 326 677 277 1340 701 1960 1374"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="3909" height="3763" x="8205" y="11375" fill="none" class="BoundingBox"/>
+              <path fill="#826500" d="m8281 12739 1104-1269c68-71 151-105 266-93l1656 322c113 25 180 86 220 180l572 1614c27 96 14 191-57 279l-1127 1271c-79 72-166 108-274 87l-1652-321c-118-34-176-81-213-179l-557-1611c-32-120-4-204 62-280"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

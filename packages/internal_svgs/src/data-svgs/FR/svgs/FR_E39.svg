@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 -.031 600 600" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen E39 - Entrée du territoire national</title>
+  <path fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.005" d="M43.718 598.969h512.564a42.714 42.714 0 0 0 42.713-42.713V43.684A42.713 42.713 0 0 0 556.282.969H43.718A42.7 42.7 0 0 0 13.516 13.48 42.7 42.7 0 0 0 1.005 43.684v512.572a42.714 42.714 0 0 0 42.713 42.713"/>
+  <path fill="#00f" stroke="#00f" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" d="M37 563.539h523.95V36.079H37z" transform="matrix(1.00467 0 0 1.0001 0 -.031)"/>
+  <g id="c" fill="#fc0" transform="matrix(1.95781 0 0 1.94892 300 91.082)">
+    <g id="b">
+      <path id="a" d="M0-20V0h10" transform="rotate(18 0 -20)"/>
+      <use xlink:href="#a" transform="scale(-1 1)"/>
+    </g>
+    <use xlink:href="#b" transform="rotate(72)"/>
+    <use xlink:href="#b" transform="rotate(144)"/>
+    <use xlink:href="#b" transform="rotate(-144)"/>
+    <use xlink:href="#b" transform="rotate(-72)"/>
+  </g>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 76.79 19.748)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 154.965 97.569)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 183.58 203.873)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 154.965 310.178)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 76.79 387.998)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 -30 416.483)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 -136.79 387.998)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 -214.965 310.178)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 -243.58 203.873)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 -214.965 97.569)"/>
+  <use xlink:href="#c" transform="matrix(1.1 0 0 1.1 -136.79 19.748)"/>
+  <path d="M451.43 270.307v8.402h-20.66v16h13.761v8.913H430.77v16.658h21.724v9.278H422l.037-59.251zm-61.669-.037q9.761 1.717 13.981 13.772l.44 2.192-8.11 2.192q-2.348-6.612-5.907-8.731-3.523-2.155-7.413-.11-3.303 2.046-4.88 6.174-1.542 4.091-1.542 13.333-.367 5.845.807 11.69 1.175 5.845 4.147 8.256 3.01 2.374 7.89 1.351 4.44-1.717 6.862-8.877l8.147 2.375q-1.872 7.452-7.963 13.041-3.927 2.85-9.615 2.85-.697.073-1.358.073h-.697q-8.66-.402-13.394-9.535-3.413-5.808-3.67-20.64-.037-.986-.037-1.972.074-12.64 3.964-19.251 3.743-5.699 8.66-7.233 2.862-1.132 6.092-1.132.44 0 .917.036 1.284 0 2.679.146m-64.715 0 15.34 38.43v-38.43h8.366v59.288h-9.027l-16.037-39.817v39.854h-8.587V270.27zm-40.716.038-13.247.072-13.76 59.068h9.614l2.679-10.592h16.404l2.459 10.592h9.465zm-6.752 9.569 6.79 29.845H270.9zm-71.466-9.681-.038 59.362h8.624v-18.229h8.33l8.514 18.157h10.386l-10.276-21.116q6.24-3.031 8.661-10.009 1.285-5.333.954-10.08-.256-5.517-4.77-11.399-6.129-6.32-13.651-6.686zm8.55 9.025h7.487q3.632.145 7.706 3.834 2.678 3.214 2.75 7.854.038 4.456-2.42 7.306-3.414 4.092-8.882 4.75h-6.714zm-25.67-8.914v8.803h-20.66v16.33h13.761v8.438h-13.76v25.68h-8.771v-59.251z" style="font-size:102.614px;font-family:&quot;Caracteres L2&quot;;-inkscape-font-specification:&quot;Caracteres L2&quot;;letter-spacing:12.025px;fill:#fff;stroke-width:.58581"/>
+</svg>

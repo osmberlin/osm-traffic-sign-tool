@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 14966.001 14966" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID01a - Parc de stationnement</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21000" height="29700"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2669 -5784)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline">
+            <rect width="14966" height="14966" x="2669" y="5784" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2669 5784v14965h14965V5784z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13965" height="13960" x="3151" y="6273" fill="none" class="BoundingBox"/>
+            <path fill="#00f" d="M3153 6275v13955h13960V6275Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M3153 6275v13955h13960V6275Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="8491" height="11078" x="5889" y="7984" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M5889 19060V7984h4856c2469-10 3637 2181 3633 3818-3 1664-1192 3831-3629 3821H8043v3437z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="4202" height="3334" x="8042" y="10135" fill="none" class="BoundingBox"/>
+            <path fill="#00f" d="m8042 10138 2706-3c973 0 1511 765 1494 1668-18 902-521 1664-1494 1664H8042Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

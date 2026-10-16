@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15046.001" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID29 - Point d&#x27;eau potable</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21000" height="29700"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2629 -5744)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="matrix(1.00494 0 0 1.0048 -50.174 -64.798)">
+            <rect width="14975" height="14974" x="2666" y="5781" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2667 5781v14973h14973V5781z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13990" height="13985" x="3154" y="6281" fill="none" class="BoundingBox"/>
+            <path d="M3156 6283v13980h13985V6283Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M3156 6283v13980h13985V6283Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="11991" height="11986" x="4154" y="7281" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4154 7281v11985h11990V7281Z"/>
+          </g>
+          <g class="Group">
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="7540" height="5743" x="7192" y="8418" fill="none" class="BoundingBox"/>
+              <path d="m14731 10404-1065 885h-1950V9808h-748v-921h1345v-469H9061v469h1340v921h-726v1481H8411c-698 0-1200 308-1209 1011-9 704-17 1860 0 1860h1209c13-329 0-672 0-1001 0-283 97-444 337-444h4918l1065 850z"/>
+            </g>
+            <g class="com.sun.star.drawing.PolyPolygonShape">
+              <rect width="4554" height="4426" x="5567" y="13707" fill="none" class="BoundingBox"/>
+              <path d="m6193 13708 511 3811h2233l536-3811h647l-623 4424H6159l-592-4424z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="1500" height="1833" x="7072" y="14522" fill="none" class="BoundingBox"/>
+              <path d="M7822 16354c-414 0-750-336-750-750 0-412 583-742 728-1081 187 331 771 669 771 1081 0 414-337 750-749 750"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

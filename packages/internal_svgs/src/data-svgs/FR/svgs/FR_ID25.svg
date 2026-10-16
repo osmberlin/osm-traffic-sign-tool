@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID25 - Hôtel</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="matrix(1.25356 0 0 1.25392 -2575.532 -3367.213)">
+            <rect width="12005" height="12000" x="4151" y="7267" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14001" height="13996" x="3153" y="6269" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12005" height="12000" x="4151" y="7267" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="10908" height="7919" x="4698" y="9310" fill="none" class="BoundingBox"/>
+            <path d="M4698 15317v-4186l4001-1821v1586c471 176 592 384 443 887l5601 1562 862-398v2519l-211 142-197-63v-319l-3035 1490v353l-274 159-190-51v-444l-6523-1777v378l-107 76zm4378-3471-3703 1769 6463 1795v-721l2806-1299zm-3765 1717 3758-1804c132-440 69-617-412-808l-3762 1805c405 149 571 316 416 807m-80 14-440-124v-645c339 122 592 191 440 769"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

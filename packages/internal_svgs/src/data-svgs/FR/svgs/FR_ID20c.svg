@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID20c - Piscine ou centre aquatique</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="translate(-34.848 -44.237)scale(1.00333)">
+            <rect width="14999" height="14997" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M17651 20766V5771H2654v14995z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269h12000v11995H6629v-696c195 1 387 54 558 153 344 198 772 198 1119 0 351-205 779-205 1130-3 347 201 776 201 1123 3 170-101 365-153 563-153l-31 15c195 1 418 33 590 132 344 198 771 198 1119 0h3c348-201 775-201 1126 0 347 198 775 202 1122 0 174-97 369-149 563-153v-354c-194 0-389 52-563 149-347 202-775 202-1126 4-347-202-774-202-1122-4-348 202-775 205-1122 4-174-101-365-153-563-153v6c-197 0-387 52-559 149-347 202-779 202-1127 0-347-198-775-198-1122 0-348 202-775 202-1123 0-171-96-363-148-558-149v-458c195 1 387 53 558 153 344 198 772 198 1119 0 351-205 779-205 1130-4 347 202 776 202 1123 4 170-101 365-153 563-153l-31 15c195 1 418 33 590 132 344 198 771 198 1119 0h3c348-201 775-201 1126 0 347 198 775 202 1122 0 174-97 369-149 563-153v-354c-194 0-389 52-563 149-347 202-775 202-1126 4-347-202-774-202-1122-4-348 202-775 205-1122 4-174-101-365-153-563-153v6c-197 0-387 52-559 149-347 202-779 202-1127 0-347-198-775-198-1122 0-348 202-775 202-1123 0-171-96-363-148-558-149v-1119H4153Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="1354" height="1354" x="10701" y="10575" fill="none" class="BoundingBox"/>
+            <path d="M11378 10579c-372 0-673 301-673 673 0 370 301 672 673 672 370 0 672-302 672-672 0-372-302-673-672-673"/>
+            <path fill="none" stroke="#000" stroke-linejoin="miter" stroke-width="8" d="M11378 10579c-372 0-673 301-673 673 0 370 301 672 673 672 370 0 672-302 672-672 0-372-302-673-672-673z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="4703" height="8251" x="5798" y="7671" fill="none" class="BoundingBox"/>
+            <path d="M6031 10640c-367 424-271 863 135 1287l1639 1647-1581 1711c-136 147-112 399-8 503 103 105 390 213 573 29l1958-1969c134-234 124-424-72-620v-11c-424-433-836-867-1260-1301-364-435 1278-272 2649-190 286-25 417-263 432-420l-34-444c-8-208-235-464-420-600L7289 7788c-156-138-400-158-538-10-138 150-33 328 62 443 237 286 1227 1171 1945 1825H7160c-572 47-691 197-1129 594"/>
+            <path fill="none" stroke="#000" stroke-linejoin="miter" stroke-width="8" d="M6031 10640c-367 424-271 863 135 1287l1639 1647-1581 1711c-136 147-112 399-8 503 103 105 390 213 573 29l1958-1969c134-234 124-424-72-620v-11c-424-433-836-867-1260-1301-364-435 1278-272 2649-190 286-25 417-263 432-420l-34-444c-8-208-235-464-420-600L7289 7788c-156-138-400-158-538-10-138 150-33 328 62 443 237 286 1227 1171 1945 1825H7160c-572 47-691 197-1129 594z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

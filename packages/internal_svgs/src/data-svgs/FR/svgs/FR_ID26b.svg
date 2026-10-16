@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID26b - Débit de boissons ou établissement proposant des collations sommaires</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5746)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="matrix(1.00528 0 0 1.00508 -54.08 -68.368)">
+            <rect width="14970" height="14971" x="2668" y="5785" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2668 5785v14969h14969V5785z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13967" height="13961" x="3173" y="6288" fill="none" class="BoundingBox"/>
+            <path d="M3173 6288v13960h13965V6288Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="11974" height="11969" x="4169" y="7284" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4169 7284v11968h11973V7284Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="10046" height="6485" x="5133" y="10027" fill="none" class="BoundingBox"/>
+            <path d="M6220 16511c-489-164-924-526-1087-932 0-87 50-138 145-138h9755c94 0 145 51 145 138-163 406-598 768-1088 932zm7084-3276h1084c228 0 707-322 707-707v-1225c0-385-392-707-707-707h-1084c-106 0-138-47-142-142v-427H7159v4145c0 544 450 993 995 993h4014c541 0 994-453 994-993v-783c0-87 36-146 142-154m-4-2132h1062c120 0 222 102 222 222v1192c0 120-102 222-222 222h-1062c-112 0-138-29-138-145v-1353c0-116 29-138 138-138"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

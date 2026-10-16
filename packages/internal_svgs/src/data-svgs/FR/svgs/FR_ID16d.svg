@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 14998.999 14995.999" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID16d - Musée ayant reçu l&#x27;appellation « musée de France »</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21000" height="29700"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2968 -5490)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14999" height="14996" x="2968" y="5490" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M17965 20485V5490H2968v14995z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13997" height="13992" x="3468" y="5991" fill="none" class="BoundingBox"/>
+            <path fill="#826500" d="M3468 5991v13991h13996V5991Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3777" height="2886" x="8529" y="11523" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M11513 11523c-334 0-578 167-738 487-106-297-357-487-708-487-343 0-602 175-754 487l-30-427h-753c7 191 15 396 15 594v2231h829v-1767c0-213 91-487 335-487 259 0 304 228 304 441v1813h823v-1767c0-213 99-487 335-487 259 0 304 228 304 441v1813h830v-1881c0-556-221-1004-792-1004"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="3732" height="665" x="8582" y="8799" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M8583 8799v663h3730v-663z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="3732" height="656" x="8582" y="16492" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M8583 16492v655h3730v-655z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="1258" height="2779" x="14177" y="8799" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M15106 8799h-929v662h602v2116h655V8799Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="1258" height="2779" x="5464" y="14369" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M5464 14369v2778h1257v-654h-602v-2124z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="657" height="703" x="14778" y="12626" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M14778 12627v701h655v-701z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="656" height="703" x="5464" y="12626" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M5464 12627v701h655v-701z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="1258" height="2779" x="14177" y="14369" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M14779 14369v2124h-602v654h1257v-2778z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="1258" height="2779" x="5464" y="8799" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M5792 8799h-328v2778h655V9461h602v-662z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

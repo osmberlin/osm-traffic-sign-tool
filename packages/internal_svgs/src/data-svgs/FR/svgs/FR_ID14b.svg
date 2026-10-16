@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15002.001 15002" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID14b - Station-service assurant également le ravitaillement en gaz de pétrole liquéfié (GPL)</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="translate(-2654 -5770)">
+    <rect width="15002" height="15002" x="2654" y="5770" fill="none" class="BoundingBox"/>
+    <path fill="#fefefe" d="M2654 5770v15001h15001V5770z"/>
+  </g>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5769)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13975" height="13971" x="3158" y="6286" fill="none" class="BoundingBox"/>
+            <path d="M3158 6286v13969h13974V6286Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="11986" height="11981" x="4153" y="7280" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4155 7282v11976h11981V7282Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M4155 7282v11976h11981V7282Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="5835" height="10681" x="7229" y="8087" fill="none" class="BoundingBox"/>
+            <path d="M12278 15636h677v783H8529v-783h678l-122-2886h-198v1507c12 1344-1550 1281-1550-15v-3582l1192-1738v-835h4426v3435h-521zm-3809-1231c0 535-716 548-716-11v-3564l778-1140v1832h520v-3l13 817-595-1zm912-5516h2720v1828H9381Zm-18 8602 52-90 75-79 87-55 102-40 101-18 110 6 99 29 96 49 81 67 64 87 26 44-3-6 55 142-281 67-35-85v6l-38-55-55-40-67-21-66 3-64 26-52 44-29 43 3-6-47 122-23 128-3 69-3 119h3l12 134 34 122 27 66-3-6 40 53 55 40 64 21 70-3 61-26 55-44 26-41v6l38-98-224-6v-284h548v66h-3l-11 154-35 151-52 139 3-6-58 90-73 78-87 58-101 38-105 18-104-6-104-29-90-50-84-66-67-84-20-47 2 6-58-142-34-151-12-151-3-119h3l12-153 34-148 58-142zm2839 1272v-1522h290v1232h571v290zm-1457 0v-1522h504l111 12 101 34 99 53 82 75 67 87 46 101 26 105v113l-20 107-44 99-64 93-79 78-95 55-102 38-110 17h-229v455zm293-744h212l72-12 67-31 52-53 38-66 11-73-5-72-32-67-47-58-66-38-73-17h-229zm-3033-667h-290v496h-486v290h486v487h290v-487h490v-290h-490z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

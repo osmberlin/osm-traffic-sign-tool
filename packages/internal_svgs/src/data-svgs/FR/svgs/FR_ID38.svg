@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID38 - Point du réseau de distribution « écotaxe »</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="matrix(1.25387 0 0 1.25433 -2578.087 -3372.76)">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+        </g>
+        <g class="Group">
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="6651" height="5876" x="5148" y="10171" fill="none" class="BoundingBox"/>
+            <path d="M7107 14028c556 0 1009 453 1009 1008 0 556-453 1009-1009 1009-555 0-1009-453-1009-1009 0-555 454-1008 1009-1008m1173 967c3-628-537-1135-1178-1135-645 0-1176 496-1176 1140l-778-2 2-453h165l-3-1159c0-214 123-319 340-321l137-1327c35-252 93-282 356-282h1146v-1055c0-124 128-232 252-230l4255 1c-210 219-560 552-745 810-384 534-607 953-693 1593-110 820 76 1748 412 2416zm-987-3275H6271c-180-7-206 18-219 231l-107 1115h1346z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3501" height="9390" x="10578" y="9042" fill="none" class="BoundingBox"/>
+            <path fill="#35b135" d="m12391 15757-1811-2762c68-1550 1235-2868 3498-3953-217 196-424 407-584 630-222 309-423 644-563 1014-154 412-281 867-344 1371-94 753-98 1493-21 2247 22 224 43 442 95 673 136 614 240 1273 517 1900 122 275 235 590 408 867 134 216 266 473 461 687-759-622-1312-1513-1656-2674m0 0-1811-2762c-25 937 225 1681 753 2232 354 310 706 487 1058 530"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="2083" height="6092" x="13059" y="8988" fill="none" class="BoundingBox"/>
+            <path fill="#35b135" d="M14751 11420c249 599 411 912 387 1406 1 1170-576 1921-1732 2253-664-2903-368-4948 833-6091 70 1199 341 2028 512 2432"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="248" height="26" x="13282" y="9964" fill="none" class="BoundingBox"/>
+            <path fill="#35b135" d="M13282 9964v25h247v-25z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="312" height="56" x="13082" y="10287" fill="none" class="BoundingBox"/>
+            <path fill="#35b135" d="M13393 10288v54h-311v-54z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="376" height="101" x="12869" y="10758" fill="none" class="BoundingBox"/>
+            <path fill="#35b135" d="M13244 10758v100h-375v-100z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="457" height="150" x="12651" y="11507" fill="none" class="BoundingBox"/>
+            <path fill="#35b135" d="M13107 11507v149h-456v-149z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="567" height="194" x="12515" y="12783" fill="none" class="BoundingBox"/>
+            <path fill="#35b135" d="M12515 12976v-193h566v193z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

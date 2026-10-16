@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15002.001 15002" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID13a - Embarcadère pour bac ou car-ferry</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5768)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="translate(-2 -2)">
+            <rect width="15002" height="15002" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2654 5770v15001h15001V5770z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="12002" height="9438" x="4153" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M16153 16703c-193-175-698-399-1026-399-238 0-472 97-701 201l1250-3960-4273-1502-4271 1502 1266 3970c-241 89-478 191-724 191-267 0-560-148-827-214v-2080H4153V7269h12000z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="9307" height="878" x="6847" y="16708" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M16153 17109c-194-175-699-401-1027-401-490 0-929 401-1419 401-508 0-1047-401-1552-401-498 0-974 401-1470 401-502 0-1008-401-1508-401-511 0-993 401-1504 401-267 0-559-147-825-206v476c266 56 558 203 825 203 511 0 993-401 1504-401 500 0 1006 401 1508 401 496 0 972-401 1470-401 505 0 1044 401 1552 401 490 0 929-401 1419-401 328 0 833 226 1027 404z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="9306" height="851" x="6848" y="17583" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M6848 17784v443c266 59 558 206 825 206 511 0 993-401 1504-401 500 0 1006 401 1508 401 496 0 972-401 1470-401 505 0 1044 401 1552 401 490 0 929-401 1419-401 328 0 836 223 1027 396v-441c-194-177-699-403-1027-403-490 0-929 401-1419 401-508 0-1047-401-1552-401-498 0-974 401-1470 401-502 0-1008-401-1508-401-511 0-993 401-1504 401-267 0-559-147-825-201"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="11998" height="830" x="4153" y="18435" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M16150 18826c-191-173-696-391-1024-391-490 0-929 401-1420 401-508 0-1046-401-1551-401-498 0-973 401-1469 401-503 0-1009-401-1509-401-511 0-994 401-1504 401-267 0-559-147-826-206v283l-2692-5-2 356h11997z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="7172" height="3914" x="7826" y="7610" fill="none" class="BoundingBox"/>
+            <path d="m8011 11523 320-772h-505V9617h1353l661-2007h3143l660 2007h1354v1134h-521l358 772-3432-1228z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="4325" height="3810" x="9239" y="12530" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M10000 15426v678c0 314-511 311-511 1v-677c-126-3-247-227-250-352l1-926c1-123 64-269 191-271l198-898c48-221 119-450 392-451h2729c228 2 395 222 453 449l205 900c126 2 152 148 154 271l1 926c-4 125-127 349-254 352v677c0 302-497 306-497-1v-678z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3126" height="1036" x="9843" y="12982" fill="none" class="BoundingBox"/>
+            <path d="M10155 14016c-247 0-326-135-310-268l137-621c10-48 22-145 144-145h2534c126 0 148 73 167 143l137 628c28 127-112 261-314 261z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

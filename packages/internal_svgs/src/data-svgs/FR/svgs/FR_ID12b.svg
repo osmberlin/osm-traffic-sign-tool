@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15002.001 15002" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID12b - Gare de trains autos</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5768)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="translate(-2 -2)">
+            <rect width="15002" height="15002" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2654 5770v15001h15001V5770z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4876 10285h1321l474 544c89 101 70 281-189 282H4873Zm-723 825h477v-823h-477zm12000 4889v-1871h-678c287 116 485 406 485 736 0 440-360 800-795 800-434 0-792-360-792-800 0-330 208-615 498-736l-1181 2c264 135 457 422 457 734 0 440-358 800-793 800s-796-360-796-800c0-330 204-615 496-736h-1453l5-399-544-5v404h-256v-1273h249v394h551v-394h4547v-701l-2247-3c-51-309-348-566-707-566s-630 257-686 566h-399v-724c0-147 28-307 185-312l496-2 1088-1091h2270V7269H4153v2753h2176l790 900 2010 185c168 21 168 130 168 252v589c0 59-74 203-320 203h-378c-61-309-328-566-694-566s-648 259-698 566l-3054-2v709l5698-3v394h551v-394h249v1273h-257v-404l-543 5 5 399H8352c295 121 498 406 498 736 0 440-361 800-795 800s-793-360-793-800c0-312 204-602 470-736H6538c289 121 497 406 497 736 0 440-358 800-792 800s-795-360-795-800c0-330 198-620 488-736H4153v1871zm0 400H4153v2865h12000zm0-5289h-1254v-823h1254zm-2069-815h572l1 814-1033-1c-281 1-231-167-66-325zm-873 1450c-303 0-548 246-548 547 0 302 245 548 548 548 301 0 547-246 547-548 0-301-246-547-547-547m-5307-13c301 0 547 246 547 548 0 301-246 547-547 547-302 0-548-246-548-547 0-302 246-548 548-548m-2951 4919h800v548h-800zm2401 0h800v548h-800zm2400 0h800v548h-800zm2400 0h801v548h-801zm2402 0h800v548h-800z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

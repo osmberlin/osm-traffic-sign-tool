@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15002.001 15002" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID09 - Terrain de camping pour caravanes</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5768)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="translate(-2 -2)">
+            <rect width="15002" height="15002" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2654 5770v15001h15001V5770z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="10276" height="7407" x="5015" y="9904" fill="none" class="BoundingBox"/>
+            <path d="M5038 17309h-23zm-16-1015h878v-913h-878l3-3471c0-985 2085-2006 4360-2006 2177 0 4307 1035 4307 2020l4 3158h1083c388 7 460 17 343 329l-343 883 511 3v340H5025Zm4592 1 4794 3 371-913h-4332c-65-535-535-981-1084-981-548 0-1011 443-1073 978H6218v913h2867c-281-120-497-401-497-734 0-447 312-796 755-796 442 0 771 356 771 803 0 332-216 603-500 727m-3712-2016v-2027c0-445 364-810 809-810s810 365 810 810v2027c0 445-365 809-810 809s-809-364-809-809m4268-2865h1927c454 0 827 366 827 811s-373 809-827 809h-1927c-454 0-825-364-825-809s371-811 825-811m-3458 448c217 0 395 178 395 396s-178 395-395 395c-218 0-396-177-396-395s178-396 396-396"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

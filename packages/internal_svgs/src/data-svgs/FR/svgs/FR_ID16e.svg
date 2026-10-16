@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15001.999 15001.999" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID16e - Parc ou jardin ayant reçu le label « jardin remarquable »</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21000" height="29700"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5744.001)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="translate(-26 -25.999)">
+            <rect width="15002" height="15002" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2654 5770v15001h15001V5770z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14003" height="14003" x="3146" y="6287" fill="none" class="BoundingBox"/>
+            <path fill="#826500" d="M3147 6288h14001v14001H3147Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3766" height="12227" x="4963" y="7175" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="m5363 18165 22-13v1249h-422V7175c2272 1224 3765 3283 3765 5609 0 2187-1319 4138-3365 5381"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3766" height="12227" x="11567" y="7175" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="m14931 18165-21-13v1249h422V7175c-2272 1224-3765 3283-3765 5609 0 2187 1319 4138 3364 5381"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

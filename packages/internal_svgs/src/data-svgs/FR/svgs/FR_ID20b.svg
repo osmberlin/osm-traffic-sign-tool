@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID20b - Centre ou promenade équestre, ranch, poney-club</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="translate(-34.847 -44.237)scale(1.00333)">
+            <rect width="14999" height="14997" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M17651 20766V5771H2654v14995z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="Group">
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="10688" height="8718" x="4823" y="9292" fill="none" class="BoundingBox"/>
+              <path d="m14880 17262-3-2338-1657-1038c232-476 259-938 154-1426l589-1149 1189 619c108 69 141 46 196-39l125-184c55-121 49-124-26-226-367-494-384-671-348-959l-448-511v-619c0-143-164-124-226 13l-229 377c-845-190-1697 458-2270 1552l-864-531c206-311 196-681-49-838l-429-111c-180 0-338 6-427 131l-1032 1666c-52 109-62 230-39 334l85 374c-759-432-1703-383-2125 304-442-157-717-203-1179-180-887 0-1044 1252-1044 2303l884 4v-1055c-4-823 727-711 1129-603-163 265-183 633-81 970l-980 1637v2270h619v-2060c-3-131 177-210 305-259 714-262 1051-573 1457-1087l-442 1647 979 1759h760l-1055-1821c-62-118-32-183 79-301 301-374 629-832 851-1353 783 180 1577 180 2353 7 108-26 206 134 134 219-272 396-236 675-236 1123 0 148-19 220-72 357l-697 1769h661l1425-3396 1378 776v1552zm-4070-6017 845 547c-95 148-181 302-308 426l-842-531z"/>
+            </g>
+            <g class="com.sun.star.drawing.ClosedBezierShape">
+              <rect width="1688" height="1272" x="10369" y="8533" fill="none" class="BoundingBox"/>
+              <path d="M11038 8535c234 14 439 135 544 333l419 100c94 23 46 71 3 77l-351 44c3 26 5 53 5 81 0 349-279 634-620 634-309 0-566-234-612-537-3-24-55-7-55-30-30-364 281-723 667-702"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

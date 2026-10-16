@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID21b - Station de ski de descente</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="translate(-34.848 -44.237)scale(1.00333)">
+            <rect width="14999" height="14997" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M17651 20766V5771H2654v14995z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g fill="none" class="com.sun.star.drawing.OpenBezierShape">
+            <rect width="9722" height="10330" x="5309" y="8102" class="BoundingBox"/>
+            <path stroke="#000" stroke-linejoin="miter" stroke-width="8" d="m5349 12350 5579 5455c386 386 983 447 1447 157l205 234c-465 323-1388 329-1858-127l-5408-5248ZM5349 12350" style="fill:#000"/>
+            <path stroke="#000" stroke-linejoin="miter" stroke-width="8" d="M8565 9787c-399 460-294 938 147 1398l1778 1788-1715 1855c-148 160-121 433-9 547 112 113 424 230 622 31l2124-2136c145-254 135-460-78-673v-11l-1415-1413 622-74-1756-1700z" style="fill:#000"/>
+            <path stroke="#000" stroke-linejoin="miter" stroke-width="8" d="M8565 9787"/>
+            <path stroke="#000" stroke-linejoin="miter" stroke-width="8" d="m8048 8107 1110 1063c78-61 319-19 632-27h2370c599 0 1076 368 1094 814l67 2647c0 171 59 277 168 404 411 423 740 705 1118 1152 105 124 222 316 74 480s-416 149-583-4l-1352-1235c-122-192-182-273-182-700L7749 8132ZM8048 8107" style="fill:#000"/>
+            <path stroke="#000" stroke-linejoin="miter" stroke-width="8" d="M14297 9818c-402 0-730 328-730 730s328 730 730 730 729-328 729-730-327-730-729-730z" style="fill:#000"/>
+            <path stroke="#000" stroke-linejoin="miter" stroke-width="8" d="M14297 9818"/>
+            <path stroke="#000" stroke-linejoin="miter" stroke-width="8" d="m12507 12280-1351-1230 1207-43c95 0 132 97 134 169v45" style="fill:#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15038 7509" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID01b - Parc relais : parc de stationnement assurant la liaison vers différents réseaux de transport en commun</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21000" height="29700"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2653 -5769)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="15038" height="7509" x="2653" y="5769" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="m17690 13276-15037-1V5769l15037 1z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14547" height="7015" x="2899" y="6016" fill="none" class="BoundingBox"/>
+            <path fill="#00f" d="M2903 6020v7005h14538V6020Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="8" d="M2903 6020v7005h14538V6020Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="12230" height="5560" x="4165" y="6780" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4165 12337V6780h2431c1236-5 1821 1094 1819 1915-2 835-597 1922-1817 1917H5243v1725zm1034-4587 1355-2c487 0 757 384 748 837s-261 835-748 835H5199Zm4577 3122h793v-798h668v798h796v672h-796v793h-668v-793h-793zm4417-2104v1129h263c333 0 555-41 667-123 111-83 167-231 167-442s-56-358-167-440c-112-83-334-124-667-124zm-952-730h1081c384 0 670 14 855 41 186 29 342 75 466 141 195 103 344 248 445 435 103 187 154 404 154 653 0 289-68 534-203 734-134 200-328 344-583 432l938 1864h-1049l-834-1752h-318v1752h-952z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID27 - Maison de pays</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5746)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="matrix(1.25387 0 0 1.25433 -2578.087 -3376.777)">
+            <rect width="12002" height="11996" x="4152" y="7273" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7273v11995h12000V7273Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14001" height="13996" x="3153" y="6273" fill="none" class="BoundingBox"/>
+            <path d="M3155 6275v13991h13996V6275Z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M3155 6275v13991h13996V6275Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7273" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7273v11995h12000V7273Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="11005" height="7607" x="4653" y="11162" fill="none" class="BoundingBox"/>
+            <path d="M13757 14945c-20-72-290-41-422-125-518-340-561-833-960-1394-122-176-127 513-561 513-107 0-188-338-290-363-206-51-427 27-637 40l10-183c134-40 287-20 404-124 256-229 381-241 635-198-122-144-191-365-366-433-112-43-206 140-310 198-175 99-193 313-297 291-102-23-201-74-257-200l-1134 675-25-59c634-401 1017-1284 1904-1205 414 38 787 297 1127 460 513 242 760 1075 1164 1218 78 27 10-651 155-971-199-31-381 3-562-77-172-74-416-211-495-414-43-112-566-102-810-150-150-523 58-724 73-1031l99 18c282 988 417 597 1113 800 208 58 193 457 526 404 934-148 1323-1413 1691-1473-30 210 84 1211-96 1333-587 396-945 439-1131 616-86 81-83 749-10 736 379-63 282-708 546-864 173-102 526-270 816-379-59 575-71 1137-275 1632-881-31-596 188-789 203-92 8-125-109-244-160-28 325-49 975 0 975 177-2 310-350 581-599l348-25c-101 160-271 409-343 581-101 239-55 671-243 866-326 336-547 885-559 1292-18 556 137 881 343 1399h-3424v-1341c0-748-2000-748-2000 0v1341H4653v-2899l2694-1110 2703 1069c242-703 750-416 1096-477 10 302-150 620-412 754l2403 951c401-1344-142-2015-2746-1898-331 15-402-300-483-406-221-295-196-437-148-597 56-186 0-249 110-287 460 122 30 170 587 421 295 135 168 498 351 498 160 0 345 66 483 61 73-2-16-317-161-338-574-81-939-541-767-861 506 76 432 475 628 475 797 0 574-173 782 607 51 196 1075 107 1882 843 115 105 168-393 102-629"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="407" height="402" x="7349" y="17464" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M7351 17466h402v397h-402z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M7351 17466h402v397h-402z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="506" height="1205" x="5548" y="17464" fill="none" class="BoundingBox"/>
+            <path fill="#fff" d="M5550 17466h501v1200h-501z"/>
+            <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M5550 17466h501v1200h-501z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

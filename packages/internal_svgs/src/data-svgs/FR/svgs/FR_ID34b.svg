@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID34b - Itinéraire piétonnier difficilement accessible pour les personnes à mobilité réduite</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape" transform="translate(-34.848 -44.237)scale(1.00333)">
+            <rect width="14999" height="14997" x="2654" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M17651 20766V5771H2654v14995z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+            <path d="M3155 6271v13991h13996V6271Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3982" height="6277" x="8081" y="8627" fill="none" class="BoundingBox"/>
+            <path fill="#1b1918" d="M9111 14872c228 0 562 55 766 16 300-57 240-290-330-374l73-1830c49-94 185-92 227-2l400 720 90 912 693 54c278-123-42-404-326-358l-60-740-472-1367 139-930c4-29 64-38 76 19l239 494c14 35 42 60 77 73l1014 503c319 161 484-268 195-419l-930-467-404-854c-103-232-183-257-334-324l35-308c508-180 534-942-77-1055-362-61-640 216-654 528-8 182 95 385 280 510l-43 247c-168 23-293 69-470 241l-769 808c-40 48-79 109-95 167l-347 1167c-126 289 297 435 402 161l405-1229 416-402c39-59 103-63 93 4l-171 1037z"/>
+          </g>
+          <g class="Group">
+            <g fill="none" class="com.sun.star.drawing.PolyLineShape">
+              <rect width="1777" height="984" x="13777" y="12362" class="BoundingBox"/>
+              <path stroke="#1b1918" stroke-linejoin="miter" stroke-width="35" d="m13796 13344-1-964h1757"/>
+            </g>
+            <g fill="none" class="com.sun.star.drawing.PolyLineShape">
+              <rect width="1851" height="1004" x="11948" y="13325" class="BoundingBox"/>
+              <path stroke="#1b1918" stroke-linejoin="miter" stroke-width="35" d="m11967 14327-1-984h1832"/>
+            </g>
+            <g fill="none" class="com.sun.star.drawing.PolyLineShape">
+              <rect width="1759" height="737" x="10210" y="14308" class="BoundingBox"/>
+              <path stroke="#1b1918" stroke-linejoin="miter" stroke-width="35" d="M10228 15044v-718h1740"/>
+            </g>
+            <g fill="none" class="com.sun.star.drawing.PolyLineShape">
+              <rect width="1779" height="1066" x="8451" y="15025" class="BoundingBox"/>
+              <path stroke="#1b1918" stroke-linejoin="miter" stroke-width="35" d="m8469 16089 3-1046h1757"/>
+            </g>
+            <g fill="none" class="com.sun.star.drawing.PolyLineShape">
+              <rect width="1776" height="1010" x="6695" y="16070" class="BoundingBox"/>
+              <path stroke="#1b1918" stroke-linejoin="miter" stroke-width="35" d="m6714 17078-1-990h1757"/>
+            </g>
+            <g fill="none" class="com.sun.star.drawing.PolyLineShape">
+              <rect width="1802" height="884" x="4915" y="17058" class="BoundingBox"/>
+              <path stroke="#1b1918" stroke-linejoin="miter" stroke-width="35" d="M4933 17941v-865h1783"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

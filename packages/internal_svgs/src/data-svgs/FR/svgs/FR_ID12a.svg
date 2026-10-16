@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15002.001 15002" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID12a - Gare ferroviaire</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21000" height="29700"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-3119 -4764)">
+      <g class="Page">
+        <g class="Group">
+          <g class="Group">
+            <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline" transform="translate(465 -1006)">
+              <rect width="15002" height="15002" x="2654" y="5770" fill="none" class="BoundingBox"/>
+              <path fill="#fefefe" d="M2654 5770v15001h15001V5770z"/>
+            </g>
+            <g class="com.sun.star.drawing.PolyPolygonShape">
+              <rect width="14001" height="13996" x="3619" y="5265" fill="none" class="BoundingBox"/>
+              <path d="M3621 5267v13991h13996V5267Z"/>
+              <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M3621 5267v13991h13996V5267Z"/>
+            </g>
+            <g class="com.sun.star.drawing.PolyPolygonShape" style="display:inline">
+              <rect width="12005" height="12000" x="4617" y="6264" fill="none" class="BoundingBox"/>
+              <path fill="#fefefe" d="M4619 6266v11995h12000V6266Z"/>
+              <path fill="none" stroke="#1b1918" stroke-linejoin="miter" stroke-width="3" d="M4619 6266v11995h12000V6266Z"/>
+            </g>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="5908" height="3227" x="6770" y="15729" fill="none" class="BoundingBox"/>
+            <path d="M11321 18953c-10-7-21-15-31-22h1352l35 22c-454-1-900 3-1356 0m-1286-910c-1065-754-2131-1509-3197-2263l-68-51c976 362 976 362 1907 729l2543 1585z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3930" height="1679" x="13074" y="17279" fill="none" class="BoundingBox"/>
+            <path d="m16753 18954-57-24h307v27zm-2160-912c-1453-613-1474-623-1519-637 62-5 234-14 287-17 540-41 539-52 989-109 675 251 1346 508 2020 763z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="1464" height="827" x="10960" y="14426" fill="none" class="BoundingBox"/>
+            <path d="M11375 15249c-67-1-170 6-196-36-48-78-241-602-216-714 12-52 9-62 63-64 414-9 592-8 690-8 329 0 351 1 437 20 51 11 53 17 87 63 90 123 146 552 182 737-349-2-698 9-1047 2"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="1099" height="801" x="14517" y="14473" fill="none" class="BoundingBox"/>
+            <path d="M15609 15064c-3 19-38 38-143 64-240 59-478 110-722 145-89-236-158-481-226-724-7-29 38-61 64-63 278-18 575-16 853 0 79 5 118 60 133 132 28 141 60 306 41 446"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="323" height="771" x="4831" y="12755" fill="none" class="BoundingBox"/>
+            <path d="M4831 12836c103-27 207-54 311-81l11 741c-43 9-54 11-322 29z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="1002" height="1191" x="5358" y="12295" fill="none" class="BoundingBox"/>
+            <path d="M5392 13485c-12-269-23-540-34-810 264-87 265-85 505-179 82-33 355-153 437-201l58 1098c-321 31-644 61-966 92"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="8801" height="2925" x="6664" y="10418" fill="none" class="BoundingBox"/>
+            <path d="M6724 13342c-26-406-33-799-60-1205 333-178 316-185 611-375 229-148 457-297 678-459 488-359 473-380 827-644 140-104 147-95 252-138 44-18 90-34 138-45 79-19 160-36 241-46 80-9 161-14 241-11 510 22 1019 55 1528 91 2562 178 2562 171 3066 230 94 10 96 16 184 69 37 22 74 49 98 86 133 211 249 433 367 654 65 124 127 251 184 380 189 434 187 435 367 931 10 25 12 53 18 80-1569-66-3139-140-4710-201-160-6-321-8-482 0-142 7-284 21-425 46-633 113-1260 258-1894 367-1147 197-1149 184-1229 190"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="3414" height="1262" x="7756" y="7153" fill="none" class="BoundingBox"/>
+            <path d="M9590 8342c-80-192-160-385-240-577-982-117-985-116-1034-111-46 69-40 76-109 132-18 16-44 24-69 23-57-1-217-26-260-53-53-33-146-208-114-275 83-166 82-170 179-282 22-26 57-49 92-46 929 92 1854 214 2780 334 43 6 86 20 126 40 56 28 164 89 196 139 15 23 23 52 29 80 11 58-8 116-46 161-61 72-124 145-201 201-48 35-191 22-250 4-97-31-99-40-131-86-27-39-24-110-70-118-101-14-272-34-561-70 221 541 223 540 229 575-183-16-364-47-546-71"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="8788" height="4115" x="4831" y="8500" fill="none" class="BoundingBox"/>
+            <path d="M4831 12171c247-122 283-138 550-309 270-174 268-179 505-368 146-117 287-240 425-367 127-118 250-240 367-368 368-403 370-403 730-857 267-335 505-693 781-1022 84-100 91-96 224-177 167-102 170-98 299-138 82-25 166-47 252-58 83-8 169-7 253 0 2941 313 2941 317 3250 367 62 11 124 27 184 46 241 77 408 160 597 328 101 90 317 318 370 437-31-6-55-9-94-13-1346-141-2694-281-4042-402-149-14-152-12-322 23-91 18-178 54-264 92-56 24-109 57-161 92-40 27-80 56-115 92-337 351-660 716-999 1068-124 128-256 248-390 368-208 186-413 378-633 551-484 379-490 373-769 551-226 144-225 147-586 321-180 88-306 143-412 186z"/>
+          </g>
+          <g class="com.sun.star.drawing.ClosedBezierShape">
+            <rect width="11047" height="2867" x="4831" y="14308" fill="none" class="BoundingBox"/>
+            <path d="M11912 17131c-737-79-1484-252-2183-506-484-177-474-204-1848-735-1003-388-1006-383-1550-552-825-256-1265-386-1500-455v-575c290 41 581 83 871 129 360 57 720 117 1080 183 307 57 614 114 918 184 2356 543 2353 559 2792 643 594 114 1208 207 1814 218 712 14 1414 4 2124-46 401-28 945-47 1321-229 74-36 108-68 126-97-29 129-51 261-86 390-141 511-617 1141-1123 1264-872 212-1859 279-2756 184"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

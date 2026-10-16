@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15001 14995.999" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID16b - Site classé</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2652 -5770)">
+      <g class="Page">
+        <g class="Group">
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="15001" height="14996" x="2652" y="5770" fill="none" class="BoundingBox"/>
+            <path fill="#fefefe" d="M2653 5770v14995h14999V5770Z"/>
+          </g>
+          <g class="com.sun.star.drawing.PolyPolygonShape">
+            <rect width="14003" height="14002" x="3146" y="6289" fill="none" class="BoundingBox"/>
+            <path fill="#826500" d="M3147 6289h14001v14001H3147Z"/>
+          </g>
+          <g class="Group">
+            <g class="Group">
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="3968" height="4522" x="11578" y="12685" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m11578 12685 2605 4521 1361-782z"/>
+              </g>
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="1358" height="6043" x="11475" y="12727" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m11504 12727-29 6042 1356-781z"/>
+              </g>
+            </g>
+            <g class="Group">
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="2615" height="5305" x="8770" y="14233" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m11384 14233-2613 4517 1358 787z"/>
+              </g>
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="5248" height="3780" x="6062" y="14190" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m11309 14190-5247 2997 1354 782z"/>
+              </g>
+            </g>
+            <g class="Group">
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="5221" height="1571" x="10324" y="10175" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m10324 11741 5217 4 3-1570z"/>
+              </g>
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="5219" height="3047" x="10324" y="11825" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m10324 11825 5218 3046v-1565z"/>
+              </g>
+            </g>
+            <g class="Group">
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="2614" height="5305" x="8885" y="7048" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m8885 12352 2613-4517-1358-787Z"/>
+              </g>
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="5248" height="3780" x="8959" y="8616" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m8959 12395 5247-2997-1355-782Z"/>
+              </g>
+            </g>
+            <g class="Group">
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="5221" height="1571" x="4743" y="14842" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m9963 14846-5217-4-3 1570z"/>
+              </g>
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="5220" height="3049" x="4745" y="11715" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m9964 14762-5219-3047v1565z"/>
+              </g>
+            </g>
+            <g class="Group">
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="3967" height="4522" x="4743" y="9395" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="M8709 13916 6104 9395l-1361 781Z"/>
+              </g>
+              <g class="com.sun.star.drawing.PolyPolygonShape">
+                <rect width="1358" height="6044" x="7456" y="7830" fill="none" class="BoundingBox"/>
+                <path fill="#fefefe" d="m8783 13873 29-6042-1356 781z"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

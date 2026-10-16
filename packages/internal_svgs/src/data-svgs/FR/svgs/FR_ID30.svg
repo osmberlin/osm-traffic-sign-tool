@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-width="28.222" preserveAspectRatio="xMidYMid" viewBox="0 0 15049.001 15047" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen ID30 - Équipement concernant les autocaravanes</title>
+  <defs class="ClipPathGroup">
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <rect width="21001" height="29703"/>
+    </clipPath>
+  </defs>
+  <g class="SlideGroup">
+    <g class="Slide" clip-path="url(#a)" transform="translate(-2628 -5745)">
+      <g class="Page">
+        <g class="com.sun.star.drawing.PolyPolygonShape" transform="matrix(1.25387 0 0 1.25433 -2578.087 -3372.76)">
+          <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+          <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+        </g>
+        <g class="com.sun.star.drawing.PolyPolygonShape">
+          <rect width="13998" height="13992" x="3155" y="6271" fill="none" class="BoundingBox"/>
+          <path d="M3155 6271v13991h13996V6271Z"/>
+        </g>
+        <g class="com.sun.star.drawing.PolyPolygonShape">
+          <rect width="12002" height="11996" x="4152" y="7269" fill="none" class="BoundingBox"/>
+          <path fill="#fefefe" d="M4153 7269v11995h12000V7269Z"/>
+        </g>
+        <g class="com.sun.star.drawing.ClosedBezierShape">
+          <rect width="10228" height="6002" x="5039" y="10266" fill="none" class="BoundingBox"/>
+          <path d="M13697 15346c-99 529-556 921-1116 921-568 0-1038-416-1128-957l-2233-3v-3609H5874l-276-410 667-1022 8398 2c278 9 600 255 603 515l-3 2934-418 1629zm-2572-3870 3337-15v1615l-3337 12zm-966 2262c328 0 595 267 595 595 0 327-267 595-595 595s-595-268-595-595c0-328 267-595 595-595m-1758 1584h514l3-3322H6720l-1612 2360c-100 137-83 325 0 463l470 484 583 12c92 541 547 948 1115 948 563 0 1029-407 1125-945m-1122-873c-364 0-660 297-660 661 0 363 296 660 660 660 365 0 661-297 661-660 0-364-296-661-661-661m5939 511c12 51 21 105 21 162 0 368-293 658-658 658s-661-290-661-658c0-57 6-114 18-162zm-6337-2697h1714v1110l-2560 140z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
