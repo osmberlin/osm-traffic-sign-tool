@@ -10,7 +10,28 @@ export const optimizeSvg = ({ svgString, signId, signTitle }: Props) => {
     },
     // Taken from https://github.com/tailwindlabs/heroicons/blob/master/svgo.24.solid.mjs
     plugins: [
-      'preset-default',
+      {
+        // Inkscape writes <svg:svg>; svgo plugins match the root by name 'svg', so unprefix first
+        name: 'unprefixSvgElements',
+        fn: () => {
+          return {
+            element: {
+              enter: (node, parentNode) => {
+                if (!node.name.startsWith('svg:')) return
+                node.name = node.name.slice('svg:'.length)
+                if (node.name === 'svg' && parentNode.type === 'root') {
+                  node.attributes.xmlns = 'http://www.w3.org/2000/svg'
+                }
+              },
+            },
+          }
+        },
+      },
+      {
+        // svgo 4 convertShapeToPath moves shapes inside Inkscape clip-path groups (BE_F111, BE_F113)
+        name: 'preset-default',
+        params: { overrides: { convertShapeToPath: false } },
+      },
       'removeDimensions',
       'sortAttrs',
       'cleanupListOfValues',
@@ -44,6 +65,31 @@ export const optimizeSvg = ({ svgString, signId, signTitle }: Props) => {
                     ],
                   } satisfies XastElement
                   node.children.unshift(titleElement)
+                }
+              },
+            },
+          }
+        },
+      },
+      {
+        // Fail loudly instead of writing an SVG the converter cannot size
+        name: 'requireRootViewBox',
+        fn: () => {
+          return {
+            root: {
+              exit: (root) => {
+                const svg = root.children.find(
+                  (child): child is XastElement => child.type === 'element' && child.name === 'svg',
+                )
+                if (svg == null) throw new Error(`Optimized SVG ${signId} has no svg root`)
+                if (
+                  svg.attributes.viewBox == null ||
+                  svg.attributes.width != null ||
+                  svg.attributes.height != null
+                ) {
+                  throw new Error(
+                    `Optimized SVG ${signId} root needs a viewBox and no width or height`,
+                  )
                 }
               },
             },
