@@ -122,7 +122,7 @@
     },
     "packages/traffic-sign-id-field": {
       "name": "@osm-traffic-signs/id-field",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@osm-traffic-signs/converter": "workspace:*",
         "d3-dispatch": "~3.0.1",
