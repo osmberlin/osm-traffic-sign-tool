@@ -1,8 +1,6 @@
 import type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
-import type { SignStateType, SignType } from './data-definitions/TrafficSignDataTypes.js'
-import { createSvgImportname } from './utils/createSvgImportname.js'
+import { svgNameOfSignOrStringLazy, type SignWithImage } from './utils/svgNameOfSign.js'
 
-type SignWithImage = SignType | SignStateType
 type SvgModule = { default: string }
 type SvgLoader = () => Promise<SvgModule>
 type CountrySvgLoaderMap = Record<string, SvgLoader>
@@ -67,16 +65,16 @@ const loadCountrySvgLoaders = (
 const loadedSvgCache = new Map<string, string>()
 const loadingSvgCache = new Map<string, Promise<string | undefined>>()
 
+/**
+ * A string is resolved like the `svgName` of `trafficSignTagToSigns()`, so `'274.1[20]'` loads the
+ * same SVG as the parsed sign.
+ */
 export const loadTrafficSignSvg = async (
   countryPrefix: CountryPrefixType,
   signOrOsmValuePart: SignWithImage | string,
 ): Promise<string | undefined> => {
-  const svgName =
-    typeof signOrOsmValuePart === 'string'
-      ? createSvgImportname(countryPrefix, signOrOsmValuePart)
-      : 'svgName' in signOrOsmValuePart && signOrOsmValuePart.svgName
-        ? signOrOsmValuePart.svgName
-        : createSvgImportname(countryPrefix, signOrOsmValuePart.osmValuePart)
+  const svgName = await svgNameOfSignOrStringLazy(countryPrefix, signOrOsmValuePart)
+  if (!svgName) return undefined
   const cacheKey = `${countryPrefix}:${svgName}`
 
   const cachedSvg = loadedSvgCache.get(cacheKey)

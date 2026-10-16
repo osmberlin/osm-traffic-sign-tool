@@ -1,5 +1,4 @@
 import type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
-import type { SignStateType, SignType } from './data-definitions/TrafficSignDataTypes.js'
 import {
   SvgLoadersAT,
   SvgLoadersAU,
@@ -12,9 +11,8 @@ import {
   SvgLoadersPL,
 } from './data-svgs/index.js'
 import { isSignImageMissing } from './signImage.js'
-import { createSvgImportname } from './utils/createSvgImportname.js'
-
-type SignWithImage = SignType | SignStateType
+import { svgNameOfSign, type SignWithImage } from './utils/svgNameOfSign.js'
+import { svgNameOfString } from './utils/svgNameOfString.js'
 
 const svgLoaderMaps = {
   AT: SvgLoadersAT,
@@ -32,27 +30,20 @@ const svgLoaderMaps = {
 export const isSignSvgMissing = (sign: SignWithImage): boolean =>
   'image' in sign && isSignImageMissing(sign.image)
 
-const resolveSvgName = (
-  countryPrefix: CountryPrefixType,
-  signOrOsmValuePart: SignWithImage | string,
-) => {
-  if (typeof signOrOsmValuePart !== 'string') {
-    const sign = signOrOsmValuePart
-    if ('svgName' in sign && sign.svgName) {
-      return sign.svgName
-    }
-    return createSvgImportname(countryPrefix, sign.osmValuePart)
-  }
-
-  return createSvgImportname(countryPrefix, signOrOsmValuePart)
-}
-
+/**
+ * A string is resolved like the `svgName` of `trafficSignTagToSigns()`, so `hasBundledSvg('DE',
+ * '274.1[20]')` matches `hasBundledSvg('DE', sign)` for the parsed sign. Unrecognized values have
+ * no SVG.
+ */
 export const hasBundledSvg = (
   countryPrefix: CountryPrefixType,
   signOrOsmValuePart: SignWithImage | string,
 ): boolean => {
-  const svgName = resolveSvgName(countryPrefix, signOrOsmValuePart)
-  return svgName in svgLoaderMaps[countryPrefix]
+  const svgName =
+    typeof signOrOsmValuePart === 'string'
+      ? svgNameOfString(countryPrefix, signOrOsmValuePart)
+      : svgNameOfSign(countryPrefix, signOrOsmValuePart)
+  return svgName !== undefined && Object.hasOwn(svgLoaderMaps[countryPrefix], svgName)
 }
 
 /** No bundled SVG in the tool (missing loader), regardless of wiki flag. */

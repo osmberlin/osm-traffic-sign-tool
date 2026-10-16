@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { loadTrafficSignSvg } from './loadTrafficSignSvg.js'
+import { trafficSignTagToSigns } from './trafficSignTagToSigns/trafficSignTagToSigns.js'
 
 describe('loadTrafficSignSvg', () => {
   test('loads a bundled DE sign SVG', async () => {
@@ -13,4 +14,14 @@ describe('loadTrafficSignSvg', () => {
     const svg = await loadTrafficSignSvg('BR', 'A-49a')
     expect(svg).toBeUndefined()
   })
+
+  test.each(['274.1[20]', '274.1[40]', '325.1[30]', 'DE:274.1[20]', '1020-30[Anlieger]'])(
+    'loads the SVG of the parsed sign for the string %s',
+    async (value) => {
+      const [sign] = trafficSignTagToSigns(value, 'DE')
+      const svgFromString = await loadTrafficSignSvg('DE', value)
+      expect(svgFromString).toBeDefined()
+      expect(svgFromString).toBe(await loadTrafficSignSvg('DE', sign!))
+    },
+  )
 })

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- `loadTrafficSignSvg()` and `hasBundledSvg()` now resolve a string like the `svgName` of `trafficSignTagToSigns()`, so `'274.1[20]'`, `'325.1[30]'` or `'1020-30[Anlieger]'` find the same SVG as the parsed sign. Unrecognized values (strings or parsed signs) no longer get an SVG; before, `'274-1'` loaded the `274.1` SVG because both have the import name `DE_274_1`. `loadTrafficSignSvg()` only loads the sign catalogues when it gets a string.
+
 ## 0.7.0
 
 _2026-10-05_
