@@ -593,6 +593,73 @@ describe('parseUniversalTable', () => {
     expect(toWikiSign('FR', row!)?.osmTags).toEqual(['hazard=turn'])
   })
 
+  test('takes FR panel names from the Dénomination column, not the comments', () => {
+    const $ = cheerio.load(`
+<table class="wikitable"><tbody>
+  <tr><th>Image</th><th>Identifiant</th><th>Attribut</th><th>Dénomination</th><th>Description</th></tr>
+  <tr>
+    <td></td>
+    <td>M4a</td>
+    <td>*:motor_vehicle=*</td>
+    <td>Tous véhicules à moteur</td>
+    <td>Pour les restrictions on utilise maxspeed:bus=*, voir la page Restrictions.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>M4x</td>
+    <td>*:trailer=* ou*:caravan=*</td>
+    <td>Caravanes et remorques</td>
+    <td>Même remarque que M4a</td>
+  </tr>
+</tbody></table>`)
+    const signs = parseUniversalTable($, 'FR').map((row) => toWikiSign('FR', row))
+    expect(signs.map((sign) => [sign?.sign, sign?.name, sign?.osmTags])).toEqual([
+      ['FR:M4a', 'Tous véhicules à moteur', []],
+      ['FR:M4x', 'Caravanes et remorques', []],
+    ])
+  })
+
+  test('reads FR idiogram ids like ID15a1 and their Description column', () => {
+    const $ = cheerio.load(`
+<table class="wikitable"><tbody>
+  <tr><th>Image</th><th>ID</th><th>Description</th><th>Valeur destination:symbol</th></tr>
+  <tr>
+    <td></td>
+    <td>ID15a1</td>
+    <td>Parc naturel régional d'Armorique</td>
+    <td>FR:armorica_regional_park</td>
+  </tr>
+</tbody></table>`)
+    const [row] = parseUniversalTable($, 'FR')
+    expect([row?.signId, row?.name]).toEqual(['ID15a1', "Parc naturel régional d'Armorique"])
+  })
+
+  test('reads FR tags from "Sur un chemin avec" cells', () => {
+    const $ = cheerio.load(`
+<table class="wikitable"><tbody>
+  <tr>
+    <td>CE6b</td>
+    <td>Sur un <i>chemin</i> avec : <ul><li>piste:type=nordic</li></ul></td>
+    <td><b>Circuit de ski de fond</b></td>
+  </tr>
+</tbody></table>`)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(toWikiSign('FR', row!)?.osmTags).toEqual(['piste:type=nordic'])
+  })
+
+  test('uses the bold FR name when the cell also links a traffic_sign tag', () => {
+    const $ = cheerio.load(`
+<table class="wikitable"><tbody>
+  <tr>
+    <td>AB5</td>
+    <td>Sur un node avec : traffic_sign=stop_ahead</td>
+    <td><b>Stop à XXX m</b> Voir la page fr:Tag:traffic_sign=stop_ahead.</td>
+  </tr>
+</tbody></table>`)
+    const [row] = parseUniversalTable($, 'FR')
+    expect(row?.name).toBe('Stop à XXX m')
+  })
+
   test('keeps long FR bracket values with spaces', () => {
     const $ = cheerio.load(`
 <table class="wikitable"><tbody>

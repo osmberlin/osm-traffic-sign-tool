@@ -265,7 +265,7 @@ export const extractTrafficSignId = (rowText: string, prefix: string): string | 
   if (leadingCode) return leadingCode[1]!
 
   const codeMatch = rowText.match(
-    /\b([A-Z]-\d+[a-z]?|[A-Z]{1,2}\d+(?:-[A-Za-z0-9]+)+|[A-Z]{1,2}\d+[a-z.-]*|[A-Z]\d+[a-z]?|\d+[a-z](?:\.\d+)?(?:-\d+[a-z]?)?)\b/,
+    /\b([A-Z]-\d+[a-z]?|[A-Z]{1,2}\d+(?:-[A-Za-z0-9]+)+|[A-Z]{1,2}\d+(?:[a-z]\d+)?[a-z.-]*|[A-Z]\d+[a-z]?|\d+[a-z](?:\.\d+)?(?:-\d+[a-z]?)?)\b/,
   )
   if (codeMatch) return codeMatch[1]!
 
@@ -320,6 +320,8 @@ const looksLikeWikiInstructionName = (name: string): boolean => {
 const looksLikeWikiTagOnlyCell = (text: string): boolean => {
   const trimmed = text.trim()
   if (/^destination:/i.test(trimmed) && /=/.test(trimmed)) return true
+  // `*:motor_vehicle=*` (FR M4 panels) or `*:trailer=* ou*:caravan=*`
+  if (/^\*:[a-z0-9:_-]+=/i.test(trimmed)) return true
   return /^[a-z][a-z0-9:_-]*=[^=]+$/i.test(trimmed) && !trimmed.includes(' ')
 }
 
@@ -327,7 +329,7 @@ export const isWikiTaggingCell = (text: string): boolean => {
   const trimmed = text.trim()
   return (
     /^Als\s/i.test(trimmed) ||
-    /^Sur un (node|way|le)\b/i.test(trimmed) ||
+    /^Sur un (node|way|le|chemin)\b/i.test(trimmed) ||
     /^Sur une\b/i.test(trimmed) ||
     /^Ajouter un\b/i.test(trimmed) ||
     /^Na (linii|węźle|obszarze)\b/i.test(trimmed) ||
@@ -384,7 +386,16 @@ const pickWikiRowName = (
   cells: ReturnType<cheerio.CheerioAPI>,
   rowTexts: string[],
   signId: string,
+  headerNameIndex?: number,
 ): string => {
+  // Tables with a name header (FR panels: Image | Identifiant | Attribut | Dénomination | Description)
+  const headerNameCell = headerNameIndex === undefined ? undefined : cells.get(headerNameIndex)
+  if (headerNameCell) {
+    const text = $(headerNameCell).text().replace(/\s+/g, ' ').trim()
+    const name = finalizeWikiSignName(text, signId)
+    if (name !== signId) return name
+  }
+
   const nameCellIndex = [...rowTexts]
     .map((text, index) => ({ text, index }))
     .reverse()
@@ -395,13 +406,16 @@ const pickWikiRowName = (
     if (cell) return finalizeWikiSignName(extractNameFromCell($, cell), signId)
   }
 
-  const fallbackCandidates = rowTexts.filter(
-    (text) =>
-      text.length > 3 &&
-      text !== signId &&
-      !isWikiTaggingCell(text) &&
-      !text.includes('traffic_sign'),
-  )
+  const fallbackCandidates = [...rowTexts.entries()].flatMap(([index, text]) => {
+    if (text.length <= 3 || text === signId) return []
+    if (!text.includes('traffic_sign')) return isWikiTaggingCell(text) ? [] : [text]
+    // A bold name may sit next to a link like `Voir la page fr:Tag:traffic_sign=stop_ahead`
+    const cell = cells.get(index)
+    const bold = cell ? $(cell).find('b').first().text().replace(/\s+/g, ' ').trim() : ''
+    return bold.length > 3 && !isWikiTaggingCell(bold) && !bold.includes('traffic_sign')
+      ? [bold]
+      : []
+  })
   const fallback = fallbackCandidates[fallbackCandidates.length - 1] ?? signId
 
   return finalizeWikiSignName(fallback, signId)
@@ -667,7 +681,23 @@ export const parseUniversalTable = ($: cheerio.CheerioAPI, prefix: string): Pars
     const imgSrc = $(cells[0]).find('img').attr('src') ?? $(cells[1]).find('img').attr('src')
     const imageUrl = wikiImageUrl(imgHref)
     const tagsText = pickWikiRowTagsText(rowTexts)
-    const name = pickWikiRowName($, cells, rowTexts, signId)
+    const headerTexts = $(row)
+      .closest('table')
+      .find('tr')
+      .first()
+      .find('th')
+      .map((_, cell) => $(cell).text().trim())
+      .get()
+    const headerNameIndex = headerTexts.findIndex((text) =>
+      /^(dénomination|description|nom|name)$/i.test(text),
+    )
+    const name = pickWikiRowName(
+      $,
+      cells,
+      rowTexts,
+      signId,
+      headerNameIndex === -1 ? undefined : headerNameIndex,
+    )
     const isNa = /^(n\/a|na|n\/a\.?)$/i.test(tagsText) || /N\/A/i.test(tagsText)
 
     const entry: ParsedWikiRow = {
