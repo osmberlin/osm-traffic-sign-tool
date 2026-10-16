@@ -30,6 +30,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-10',
     signId: '278-10',
+    redirects: [{ from: '278[10]', to: '278-10' }],
     name: 'Zeichen 278-10',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -51,6 +52,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-5',
     signId: '278-5',
+    redirects: [{ from: '278[5]', to: '278-5' }],
     name: 'Zeichen 278-5',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -71,6 +73,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-20',
     signId: '278-20',
+    redirects: [{ from: '278[20]', to: '278-20' }],
     name: 'Zeichen 278-20',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -92,6 +95,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-30',
     signId: '278-30',
+    redirects: [{ from: '278[30]', to: '278-30' }],
     name: 'Zeichen 278-30',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -113,6 +117,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-40',
     signId: '278-40',
+    redirects: [{ from: '278[40]', to: '278-40' }],
     name: 'Zeichen 278-40',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -134,6 +139,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-50',
     signId: '278-50',
+    redirects: [{ from: '278[50]', to: '278-50' }],
     name: 'Zeichen 278-50',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -155,6 +161,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-60',
     signId: '278-60',
+    redirects: [{ from: '278[60]', to: '278-60' }],
     name: 'Zeichen 278-60',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -176,6 +183,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-70',
     signId: '278-70',
+    redirects: [{ from: '278[70]', to: '278-70' }],
     name: 'Zeichen 278-70',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -197,6 +205,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-80',
     signId: '278-80',
+    redirects: [{ from: '278[80]', to: '278-80' }],
     name: 'Zeichen 278-80',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -218,6 +227,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-90',
     signId: '278-90',
+    redirects: [{ from: '278[90]', to: '278-90' }],
     name: 'Zeichen 278-90',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -239,6 +249,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-100',
     signId: '278-100',
+    redirects: [{ from: '278[100]', to: '278-100' }],
     name: 'Zeichen 278-100',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -260,6 +271,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-110',
     signId: '278-110',
+    redirects: [{ from: '278[110]', to: '278-110' }],
     name: 'Zeichen 278-110',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -281,6 +293,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-120',
     signId: '278-120',
+    redirects: [{ from: '278[120]', to: '278-120' }],
     name: 'Zeichen 278-120',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,
@@ -302,6 +315,7 @@ export const _speed_maxspeed_end: SignType[] = [
   {
     osmValuePart: '278-130',
     signId: '278-130',
+    redirects: [{ from: '278[130]', to: '278-130' }],
     name: 'Zeichen 278-130',
     descriptiveName: 'Ende der zulässigen Höchstgeschwindigkeit',
     description: null,

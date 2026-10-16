@@ -76,6 +76,12 @@ type SharedId = {
   osmValuePart: string
   signId: string
   redirects?: RedirectMapping[]
+  /**
+   * Also redirect any `<signId>-<number>` to `<signId>[<number>]`, e.g. `262-7.5` → `262[7.5]`.
+   * For generic signs with a `valuePrompt` that use the bracket notation, see
+   * https://github.com/osmberlin/osm-traffic-sign-tool/issues/60#issuecomment-2563086843
+   */
+  redirectDashValues?: true
 }
 type SharedContent = {
   name: string

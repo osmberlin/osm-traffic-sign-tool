@@ -12,17 +12,37 @@ import { removeKeys } from './utils/removeKeys.js'
 import { splitIntoSignValueParts } from './utils/splitIntoSignValueParts.js'
 import { splitSignIdSignValue } from './utils/splitSignIdSignValue.js'
 
-// Cache redirect maps per country to avoid rebuilding on every call
-const redirectMapCache = new Map<CountryPrefixType, Map<string, string>>()
+type RedirectLookup = {
+  /** Lowercase `from` → `to`, sign-specific and general redirects */
+  redirects: Map<string, string>
+  dashValueSignIds: Set<string>
+}
 
-const getRedirectMap = (countryPrefix: CountryPrefixType) => {
-  let redirectMap = redirectMapCache.get(countryPrefix)
-  if (!redirectMap) {
+// Cache per country to avoid rebuilding on every call
+const redirectLookupCache = new Map<CountryPrefixType, RedirectLookup>()
+
+const getRedirectLookup = (countryPrefix: CountryPrefixType) => {
+  let lookup = redirectLookupCache.get(countryPrefix)
+  if (!lookup) {
     const signs = countryDefinitions[countryPrefix]
-    redirectMap = buildRedirectMap(signs) // include general redirects
-    redirectMapCache.set(countryPrefix, redirectMap)
+    const redirects = new Map<string, string>()
+    for (const [from, to] of buildRedirectMap(signs)) {
+      redirects.set(from.toLowerCase(), to)
+    }
+    const dashValueSignIds = new Set(
+      signs.filter((sign) => sign.redirectDashValues).map((sign) => sign.signId),
+    )
+    lookup = { redirects, dashValueSignIds }
+    redirectLookupCache.set(countryPrefix, lookup)
   }
-  return redirectMap
+  return lookup
+}
+
+/** `262-7.5` → `262[7.5]` for signs with `redirectDashValues` */
+const dashValueRedirect = (dashValueSignIds: Set<string>, osmValuePart: string) => {
+  const match = /^(.+)-(\d+(?:\.\d+)?)$/.exec(osmValuePart)
+  if (!match?.[1] || !dashValueSignIds.has(match[1])) return undefined
+  return `${match[1]}[${match[2]}]`
 }
 
 export const trafficSignTagToSigns = (
@@ -44,15 +64,13 @@ export const trafficSignTagToSigns = (
   // We rename our osmValueParts based on redirects (sign-specific + general)
   // We also store the fact that we renamed something in our data, so we can show it in the UI
 
-  // Get cached redirect map and create lowercase version for case-insensitive lookup
-  const lowerCaseRedirectMap = new Map<string, string>()
-  for (const [key, value] of getRedirectMap(countryPrefix).entries()) {
-    lowerCaseRedirectMap.set(key.toLowerCase(), value)
-  }
+  const { redirects, dashValueSignIds } = getRedirectLookup(countryPrefix)
 
   workingValueParts = workingValueParts
     .map((osmValuePart) => {
-      const alternativeValuePart = lowerCaseRedirectMap.get(osmValuePart.toLowerCase())
+      const alternativeValuePart =
+        redirects.get(osmValuePart.toLowerCase()) ??
+        (signsMap.has(osmValuePart) ? undefined : dashValueRedirect(dashValueSignIds, osmValuePart))
       if (alternativeValuePart) {
         // Lookup the sign (two ways)
         // Plan A: Direct lookup (most precise)

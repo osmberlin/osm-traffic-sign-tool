@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'vitest'
-import type { CountryPrefixType } from '../data-definitions/countryDefinitions.js'
+import {
+  countryDefinitions,
+  type CountryPrefixType,
+} from '../data-definitions/countryDefinitions.js'
 import { signsToTags } from '../signsToTags/signsToTags.js'
 import { trafficSignTagToSigns } from './trafficSignTagToSigns.js'
 
@@ -75,6 +78,57 @@ describe('trafficSignTagToSigns()', () => {
       const result = trafficSignTagToSigns(input, countryPrefix)
       expect(joinOsmValueParts(result)).toMatch('325.1')
       expect(result.map((s) => s.matchdByAlternativeKey).join('|')).toMatch('325')
+    })
+
+    // Bracket or dash notation per https://github.com/osmberlin/osm-traffic-sign-tool/issues/60#issuecomment-2563086843
+    test.each([
+      ['274.1[20]', '274.1-20'],
+      ['274.2[20]', '274.2-20'],
+      ['278[50]', '278-50'],
+      ['275[30]', '275-30'],
+      ['279[80]', '279-80'],
+      ['394', '394-50'],
+      ['262-7.5', '262[7.5]'],
+      ['263-11.5', '263[11.5]'],
+      ['264-2.2', '264[2.2]'],
+      ['265-1.4', '265[1.4]'],
+      ['265-5.5', '265[5.5]'],
+      ['265-3.15', '265[3.15]'],
+      ['266-12', '266[12]'],
+      ['262-11', '262[11]'],
+    ])('redirect %s to %s with the same tags', (alternativeKey, osmValuePart) => {
+      const result = trafficSignTagToSigns(`DE:${alternativeKey}`, countryPrefix)
+      expect(joinOsmValueParts(result)).toBe(osmValuePart)
+      expect(result[0]?.matchdByAlternativeKey).toBe(alternativeKey)
+
+      const canonical = trafficSignTagToSigns(`DE:${osmValuePart}`, countryPrefix)
+      expect(signsToTags(result, countryPrefix, 'way')).toEqual(
+        signsToTags(canonical, countryPrefix, 'way'),
+      )
+    })
+
+    test('274.1[40] stays a Tempo 40 zone (274.1-40 is the double-sided Tempo 30 sign)', () => {
+      const result = trafficSignTagToSigns('DE:274.1[40]', countryPrefix)
+      expect(joinOsmValueParts(result)).toBe('274.1[40]')
+      expect(signsToTags(result, countryPrefix, 'way').get('maxspeed')).toBe('40')
+    })
+
+    test('dash values of other signs are not redirected to brackets', () => {
+      // 274 has a generic `274[47]` but uses the dash notation, and no `redirectDashValues`
+      expect(joinOsmValueParts(trafficSignTagToSigns('DE:274-65', countryPrefix))).toBe('274-65')
+      expect(joinOsmValueParts(trafficSignTagToSigns('DE:263-8', countryPrefix))).toBe('263[8]')
+    })
+
+    test('every DE redirect is unique and leads to a recognized sign', () => {
+      const froms = countryDefinitions.DE.flatMap((sign) => sign.redirects ?? []).map(
+        ({ from }) => from,
+      )
+      expect(froms.length).toBe(new Set(froms).size)
+      for (const from of froms) {
+        const [sign] = trafficSignTagToSigns(from, countryPrefix)
+        expect(sign?.recodgnizedSign, from).toBe(true)
+        expect(sign?.matchdByAlternativeKey, from).toBe(from)
+      }
     })
   })
 

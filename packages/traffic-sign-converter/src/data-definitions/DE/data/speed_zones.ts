@@ -71,6 +71,7 @@ export const _speed_zones: SignType[] = [
   {
     osmValuePart: '274.1-20',
     signId: '274.1-20',
+    redirects: [{ from: '274.1[20]', to: '274.1-20' }],
     name: 'Zeichen 274.1-20',
     descriptiveName: 'Tempo 20-Zone',
     description: 'Beginn einer Tempo 20-Zone',
@@ -190,6 +191,7 @@ export const _speed_zones: SignType[] = [
   {
     osmValuePart: '274.2-20',
     signId: '274.2-20',
+    redirects: [{ from: '274.2[20]', to: '274.2-20' }],
     name: 'Zeichen 274.2-20',
     descriptiveName: 'Tempo 20-Zone (Ende)',
     description: 'Ende einer Tempo 20-Zone',

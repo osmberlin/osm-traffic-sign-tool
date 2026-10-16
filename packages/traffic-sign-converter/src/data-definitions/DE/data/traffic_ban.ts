@@ -280,6 +280,7 @@ export const _traffic_ban: SignType[] = [
   {
     osmValuePart: '262[5.5]',
     signId: '262',
+    redirectDashValues: true,
     signValue: 5.5,
     name: 'Zeichen 262',
     descriptiveName: 'Verbot für Fahrzeuge über angegebenem tatsächlichen Gewicht',
@@ -314,6 +315,7 @@ export const _traffic_ban: SignType[] = [
     // NOTE: Formal gesehen wäre das 263-8, aber in https://github.com/osmberlin/osm-traffic-sign-tool/issues/60#issuecomment-2563086843 haben wir uns geeinigt, dass wir für dieses Zeichen die Klammer-Schreibweise verwenden.
     osmValuePart: '263[8]',
     signId: '263',
+    redirectDashValues: true,
     signValue: 8,
     name: 'Zeichen 263',
     descriptiveName: 'Verbot für Fahrzeuge über angegebene tatsächliche Achslast',
@@ -347,6 +349,7 @@ export const _traffic_ban: SignType[] = [
   {
     osmValuePart: '264[2]',
     signId: '264',
+    redirectDashValues: true,
     signValue: 2,
     name: 'Zeichen 264',
     descriptiveName: 'Verbot für Fahrzeuge über die angegebene Breite einschließlich Ladung',
@@ -379,6 +382,7 @@ export const _traffic_ban: SignType[] = [
   {
     osmValuePart: '265[3.8]',
     signId: '265',
+    redirectDashValues: true,
     signValue: 3.8,
     name: 'Zeichen 265',
     descriptiveName: 'Verbot für Fahrzeuge über die angegebene Höhe einschließlich Ladung',
@@ -411,6 +415,7 @@ export const _traffic_ban: SignType[] = [
   {
     osmValuePart: '266[10]',
     signId: '266',
+    redirectDashValues: true,
     name: 'Zeichen 266',
     descriptiveName: 'Verbot für Fahrzeuge und Züge über angegebene Läge einschließlich Ladung',
     description: null,

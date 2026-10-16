@@ -4,6 +4,9 @@
 
 - `loadTrafficSignSvg()` and `hasBundledSvg()` now resolve a string like the `svgName` of `trafficSignTagToSigns()`, so `'274.1[20]'`, `'325.1[30]'` or `'1020-30[Anlieger]'` find the same SVG as the parsed sign. Unrecognized values (strings or parsed signs) no longer get an SVG; before, `'274-1'` loaded the `274.1` SVG because both have the import name `DE_274_1`. `loadTrafficSignSvg()` only loads the sign catalogues when it gets a string.
 - Add `loadTrafficSignSvgDimensions(countryPrefix, signOrOsmValuePart)`: the `{ width, height }` of a bundled SVG (from its `viewBox`) without loading the SVG, e.g. to lay out signs before they are drawn. It loads one small table per country. For synchronous use, import the map directly: `SvgDimensionsDE` from `@osm-traffic-signs/converter/data-svgs/DE/dimensions` (all countries: `@osm-traffic-signs/converter/data-svgs`). The SVG pipeline writes these tables next to `loaders.ts` (`bun run updateSvgs:dimensions` in `internal_svgs` regenerates them without downloading). It resolves strings the same way as `loadTrafficSignSvg()`.
+- Add `redirectDashValues` on sign configs: `<signId>-<number>` is redirected to `<signId>[<number>]`. Set on `DE:262`–`266`, so `262-7.5` and any other dash value resolve to the bracket sign (these were unrecognized).
+- Restore DE redirects that were lost when redirects moved into the sign configs (0.4.0), following the bracket/dash decision in [#60](https://github.com/osmberlin/osm-traffic-sign-tool/issues/60#issuecomment-2563086843): `274.1[20]` → `274.1-20`, `274.2[20]` → `274.2-20`, `278[N]` → `278-N`, `275[N]` → `275-N`, `279[N]` → `279-N`, `394` → `394-50`. `274.1[40]` stays as is, because `274.1-40` is the double-sided Tempo 30 sign.
+- `trafficSignTagToSigns()` caches its lowercased redirect lookup per country instead of rebuilding it on every call.
 
 ## 0.7.0
 

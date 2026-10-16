@@ -6,6 +6,7 @@ const minspeedLaneComment =
 const createMinspeedEndSign = (speed: number, options?: { thematicOnly?: true }): SignType => ({
   osmValuePart: `279-${speed}`,
   signId: `279-${speed}`,
+  redirects: [{ from: `279[${speed}]`, to: `279-${speed}` }],
   name: `Zeichen 279-${speed}`,
   descriptiveName: 'Ende der vorgeschriebenen Mindestgeschwindigkeit',
   description: null,

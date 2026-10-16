@@ -105,6 +105,7 @@ export const trafficSignDataDE: SignType[] = [
   {
     osmValuePart: '394-50',
     signId: '394-50',
+    redirects: [{ from: '394', to: '394-50' }],
     name: 'Zeichen 394-50',
     descriptiveName: 'Laternenring – Schild',
     description: null,
