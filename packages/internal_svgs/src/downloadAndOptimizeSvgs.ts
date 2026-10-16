@@ -8,6 +8,7 @@ import {
 } from '@osm-traffic-signs/converter'
 import { downloadAndOptimizeSvg } from './utils/downloadAndOptimizeSvg.js'
 import { prepareDirectoryCountry } from './utils/prepareDirectoryCountry.js'
+import { writeSvgDimensionsFile } from './utils/svgDimensions.js'
 
 type ExportItem = {
   importName: string
@@ -145,6 +146,9 @@ async function downloadAllSvgs(
   const loaderContent = createLoaderExportsContent(countryPrefix, exportItems)
   await Bun.write(loaderFile, loaderContent)
 
+  console.log('-- WRITE DIMENSIONS', signs.length, path.join(countryDirectory, 'dimensions.ts'))
+  await writeSvgDimensionsFile(countryPrefix, countryDirectory, exportItems)
+
   console.log('DONE', countryPrefix)
 }
 
@@ -165,7 +169,10 @@ const eagerBarrelFile = path.join(__dirname, 'data-svgs', 'eager.ts')
 console.log('WRITE LOADERS BARREL FILE', loadersBarrelFile)
 console.log('WRITE EAGER BARREL FILE', eagerBarrelFile)
 const loadersBarrelContent = Array.from(countryDefinitionMap.entries())
-  .map(([country]) => `export { SvgLoaders${country} } from './${country}/loaders.js'`)
+  .flatMap(([country]) => [
+    `export { SvgLoaders${country} } from './${country}/loaders.js'`,
+    `export { SvgDimensions${country} } from './${country}/dimensions.js'`,
+  ])
   .join('\n')
 const eagerBarrelContent = Array.from(countryDefinitionMap.entries())
   .map(([country]) => `export * as Svgs${country} from './${country}/index.js'`)

@@ -63,6 +63,8 @@ export {
 } from './data-definitions/TrafficSignDataTypes.js'
 export { hasBundledSvg, isSignSvgMissing, isSignSvgUnavailable } from './signSvgAvailability.js'
 export { loadTrafficSignSvg } from './loadTrafficSignSvg.js'
+export { loadTrafficSignSvgDimensions } from './signSvgDimensions.js'
+export type { TrafficSignSvgDimensions } from './signSvgDimensions.js'
 export { isSignImageMissing, isSignImageSource, normalizeSignImage } from './signImage.js'
 export {
   classifyTaggingSuggestionsQa,

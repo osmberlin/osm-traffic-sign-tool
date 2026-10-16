@@ -3,6 +3,7 @@
 ## Unreleased
 
 - `loadTrafficSignSvg()` and `hasBundledSvg()` now resolve a string like the `svgName` of `trafficSignTagToSigns()`, so `'274.1[20]'`, `'325.1[30]'` or `'1020-30[Anlieger]'` find the same SVG as the parsed sign. Unrecognized values (strings or parsed signs) no longer get an SVG; before, `'274-1'` loaded the `274.1` SVG because both have the import name `DE_274_1`. `loadTrafficSignSvg()` only loads the sign catalogues when it gets a string.
+- Add `loadTrafficSignSvgDimensions(countryPrefix, signOrOsmValuePart)`: the `{ width, height }` of a bundled SVG (from its `viewBox`) without loading the SVG, e.g. to lay out signs before they are drawn. It loads one small table per country. For synchronous use, import the map directly: `SvgDimensionsDE` from `@osm-traffic-signs/converter/data-svgs/DE/dimensions` (all countries: `@osm-traffic-signs/converter/data-svgs`). The SVG pipeline writes these tables next to `loaders.ts` (`bun run updateSvgs:dimensions` in `internal_svgs` regenerates them without downloading). It resolves strings the same way as `loadTrafficSignSvg()`.
 
 ## 0.7.0
 

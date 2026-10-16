@@ -58,6 +58,11 @@
       "default": "./dist/data-svgs/*/loaders.js",
       "types": "./dist/data-svgs/*/loaders.d.ts"
     },
+    "./data-svgs/*/dimensions": {
+      "import": "./dist/data-svgs/*/dimensions.js",
+      "default": "./dist/data-svgs/*/dimensions.js",
+      "types": "./dist/data-svgs/*/dimensions.d.ts"
+    },
     "./data-svgs/*/svgs/*": {
       "import": "./dist/data-svgs/*/svgs/*.svg",
       "default": "./dist/data-svgs/*/svgs/*.svg",
