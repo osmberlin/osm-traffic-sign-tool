@@ -666,13 +666,15 @@ export const _prescription_b: SignType[] = [
     },
   },
   {
-    osmValuePart: 'B17[70',
+    osmValuePart: 'B17[70 m]',
     signId: 'B17',
     name: 'B17',
     descriptiveName:
       'Interdiction aux véhicules de circuler sans maintenir entre eux un intervalle au moins égal au nombre indiqué',
     description: null,
     kind: 'traffic_sign',
+    signValue: '70 m',
+    valuePrompt: { prompt: 'Intervalle', defaultValue: '70 m', format: 'text' },
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -736,13 +738,19 @@ export const _prescription_b: SignType[] = [
     },
   },
   {
-    osmValuePart: 'B19[Interdit',
+    osmValuePart: 'B19[Interdit aux motocyclistes]',
     signId: 'B19',
     name: 'B19',
     descriptiveName:
       'Autres interdictions dont la nature est indiquée par une inscription sur le panneau',
     description: null,
     kind: 'traffic_sign',
+    signValue: 'Interdit aux motocyclistes',
+    valuePrompt: {
+      prompt: 'Texte du panneau',
+      defaultValue: 'Interdit aux motocyclistes',
+      format: 'text',
+    },
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -1062,13 +1070,15 @@ export const _prescription_b: SignType[] = [
     },
   },
   {
-    osmValuePart: 'B29[Allumez',
+    osmValuePart: 'B29[Allumez vos feux]',
     signId: 'B29',
     name: 'B29',
     descriptiveName:
       'Autres obligations dont la nature est mentionnée par une inscription sur le panneau',
     description: null,
     kind: 'traffic_sign',
+    signValue: 'Allumez vos feux',
+    valuePrompt: { prompt: 'Texte du panneau', defaultValue: 'Allumez vos feux', format: 'text' },
     tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: {
@@ -1417,30 +1427,6 @@ export const _prescription_b: SignType[] = [
     image: 'missing',
   },
   {
-    osmValuePart: 'B17',
-    signId: 'B17',
-    name: 'B17',
-    descriptiveName:
-      'Interdiction aux véhicules de circuler sans maintenir entre eux un intervalle au moins égal au nombre indiqué',
-    description: null,
-    kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-    catalogue: { signCategory: 'traffic_sign' },
-    image: 'missing',
-  },
-  {
-    osmValuePart: 'B19',
-    signId: 'B19',
-    name: 'B19',
-    descriptiveName:
-      'Autres interdictions dont la nature est indiquée par une inscription sur le panneau',
-    description: null,
-    kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
-    catalogue: { signCategory: 'traffic_sign' },
-    image: 'missing',
-  },
-  {
     osmValuePart: 'B25[30]',
     signId: 'B25',
     name: 'B25[30]',
@@ -1451,18 +1437,6 @@ export const _prescription_b: SignType[] = [
       { geometries: ['way'], uniqueTags: [{ key: 'minspeed', value: '30' }] },
     ],
     valuePrompt: { prompt: 'Valeur', defaultValue: '30', format: 'integer' },
-    catalogue: { signCategory: 'traffic_sign' },
-    image: 'missing',
-  },
-  {
-    osmValuePart: 'B29',
-    signId: 'B29',
-    name: 'B29',
-    descriptiveName:
-      'Autres obligations dont la nature est mentionnée par une inscription sur le panneau',
-    description: null,
-    kind: 'traffic_sign',
-    tagRecommendationsByGeometry: [{ geometries: ['way'] }],
     catalogue: { signCategory: 'traffic_sign' },
     image: 'missing',
   },

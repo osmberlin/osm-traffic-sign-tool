@@ -41,9 +41,9 @@ export type UnkownSignType = {
 export type TrafficSignType = SharedId &
   SharedContent & {
     kind: 'traffic_sign'
-    // maxspeed, maxweight
-    signValue?: number
-    valuePrompt?: ValuePrompt<NumericValuePromptFormat>
+    // maxspeed, maxweight; text for inscriptions like `FR:B19[Interdit aux motocyclistes]`
+    signValue?: number | string
+    valuePrompt?: ValuePrompt<NumericValuePromptFormat> | ValuePrompt<TextValuePromptFormat>
     tagRecommendationsByGeometry: TagRecommendationsTrafficSign
   } & SharedComments &
   SharedQuestions &

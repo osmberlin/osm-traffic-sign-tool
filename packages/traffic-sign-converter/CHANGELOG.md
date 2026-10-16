@@ -7,6 +7,9 @@
 - Add `redirectDashValues` on sign configs: `<signId>-<number>` is redirected to `<signId>[<number>]`. Set on `DE:262`–`266`, so `262-7.5` and any other dash value resolve to the bracket sign (these were unrecognized).
 - Restore DE redirects that were lost when redirects moved into the sign configs (0.4.0), following the bracket/dash decision in [#60](https://github.com/osmberlin/osm-traffic-sign-tool/issues/60#issuecomment-2563086843): `274.1[20]` → `274.1-20`, `274.2[20]` → `274.2-20`, `278[N]` → `278-N`, `275[N]` → `275-N`, `279[N]` → `279-N`, `394` → `394-50`. `274.1[40]` stays as is, because `274.1-40` is the double-sided Tempo 30 sign.
 - `trafficSignTagToSigns()` caches its lowercased redirect lookup per country instead of rebuilding it on every call.
+- **BREAKING:** Fix three `FR` signs whose values were cut off by the CSV import: `FR:B17[70` is now `FR:B17[70 m]`, `FR:B19[Interdit` is now `FR:B19[Interdit aux motocyclistes]` and `FR:B29[Allumez` is now `FR:B29[Allumez vos feux]`, as on the OSM Wiki. Their SVG exports are renamed to `FR_B17__70_m__`, `FR_B19__Interdit_aux_motocyclistes__` and `FR_B29__Allumez_vos_feux__`.
+- **BREAKING:** `FR:B17`, `FR:B19` and `FR:B29` get a free-text `valuePrompt` (like `FR:M9z`), so any distance or inscription such as `FR:B19[Baignade interdite]` is recognized and keeps the bundled SVG. The separate bare `B17`, `B19` and `B29` entries (without image) are removed; the bare ids now resolve to the signs with their default value, e.g. `FR:B19` to `FR:B19[Interdit aux motocyclistes]`. Traffic signs (`kind: 'traffic_sign'`) may now have a text `valuePrompt` and a string `signValue`.
+- Fix `FR_B55.svg`, which was not valid XML (an HTML comment had leaked into its `<title>`), so browsers did not render it. Remove the unused `FR_M2.svg` (`FR:M2[50]` uses `FR_M2__50__.svg`).
 
 ## 0.7.0
 

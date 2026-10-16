@@ -37,9 +37,13 @@ for (const sign of signs) {
   }
 
   const content = await Bun.file(filePath).text()
-  const titleText = `Verkehrszeichen ${sign.osmValuePart} - ${sign.descriptiveName ?? sign.name}`
+  // Catalogue names are plain text; escape them so the SVG stays well-formed XML
+  const titleText = Bun.escapeHTML(
+    `Verkehrszeichen ${sign.osmValuePart} - ${sign.descriptiveName ?? sign.name}`,
+  )
+  // Lazy match up to the closing tag, so titles with a stray `<` get replaced too
   const updated = content.replace(
-    /<title id="title">[^<]*<\/title>/,
+    /<title id="title">[\s\S]*?<\/title>/,
     `<title id="title">${titleText}</title>`,
   )
 

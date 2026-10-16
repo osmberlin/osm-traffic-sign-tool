@@ -288,6 +288,27 @@ describe('trafficSignTagToSigns() FR value prompt panels', () => {
     expect(result.map((s) => s.osmValuePart)).toEqual(['A14', 'M9z[Rappel]', 'M2[50]'])
   })
 
+  test('B17, B19 and B29 keep a custom inscription and the default SVG', () => {
+    const result = trafficSignTagToSigns(
+      'B17[50 m],B19[Baignade interdite],B29[Allumez vos feux]',
+      countryPrefix,
+    )
+    expect(result.map((s) => [s.recodgnizedSign, s.osmValuePart, s.svgName])).toEqual([
+      [true, 'B17[50 m]', 'FR_B17__70_m__'],
+      [true, 'B19[Baignade interdite]', 'FR_B19__Interdit_aux_motocyclistes__'],
+      [true, 'B29[Allumez vos feux]', 'FR_B29__Allumez_vos_feux__'],
+    ])
+  })
+
+  test('bare B17, B19 and B29 resolve to the default inscription', () => {
+    const result = trafficSignTagToSigns('B17,B19,B29', countryPrefix)
+    expect(result.map((s) => s.osmValuePart)).toEqual([
+      'B17[70 m]',
+      'B19[Interdit aux motocyclistes]',
+      'B29[Allumez vos feux]',
+    ])
+  })
+
   test('M9z free text does not imply a hazard tag', () => {
     const signs = trafficSignTagToSigns('M9z[Accotements dangereux]', countryPrefix)
     const tags = signsToTags(signs, countryPrefix, 'way')

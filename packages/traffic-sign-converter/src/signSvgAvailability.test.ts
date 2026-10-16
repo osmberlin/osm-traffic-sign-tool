@@ -57,12 +57,8 @@ describe('hasBundledSvg', () => {
   })
 
   test('a parsed sign and its osmValuePart resolve alike for every catalogue sign', () => {
-    // Truncated values from the FR CSV import; parsing closes the bracket, so they cannot round-trip
-    const brokenOsmValueParts = new Set(['B17[70', 'B19[Interdit', 'B29[Allumez'])
-
     for (const countryPrefix of countries) {
       for (const catalogueSign of countryDefinitions[countryPrefix]) {
-        if (brokenOsmValueParts.has(catalogueSign.osmValuePart)) continue
         const values = [
           catalogueSign.osmValuePart,
           ...(catalogueSign.redirects?.map(({ from }) => from) ?? []),
