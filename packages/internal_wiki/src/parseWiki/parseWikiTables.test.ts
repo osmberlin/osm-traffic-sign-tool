@@ -593,6 +593,18 @@ describe('parseUniversalTable', () => {
     expect(toWikiSign('FR', row!)?.osmTags).toEqual(['hazard=turn'])
   })
 
+  test('keeps long FR bracket values with spaces', () => {
+    const $ = cheerio.load(`
+<table class="wikitable"><tbody>
+  <tr>
+    <td>B19</td>
+    <td>traffic_sign=FR:B19[Pelouses et jeux de ballons interdits]</td>
+  </tr>
+</tbody></table>`)
+    const rows = parseUniversalTable($, 'FR')
+    expect(rows.map((row) => row.signId)).toEqual(['B19[Pelouses et jeux de ballons interdits]'])
+  })
+
   test('parses AU regulatory rows with full sign variant ids', () => {
     const $ = cheerio.load(auR1RowHtml)
     const rows = parseUniversalTable($, 'AU')
@@ -619,6 +631,22 @@ describe('extractTrafficSignId', () => {
       '53.26',
     )
   })
+
+  test('keeps bracket values with spaces whole', () => {
+    expect(extractTrafficSignId('B17 traffic_sign=FR:B17[70 m] maxspeed=*', 'FR')).toBe('B17[70 m]')
+    expect(
+      extractTrafficSignId('traffic_sign=FR:B19[Interdit aux motocyclistes];FR:M9z', 'FR'),
+    ).toBe('B19[Interdit aux motocyclistes]')
+    expect(extractTrafficSignId('traffic_sign=FR:B14[50], maxspeed=50', 'FR')).toBe('B14[50]')
+    // An unclosed bracket still ends at whitespace
+    expect(extractTrafficSignId('traffic_sign=FR:B19[Interdit aux', 'FR')).toBe('B19[Interdit') // A stray bracket does not run on to a `]` far later in the row
+    expect(
+      extractTrafficSignId(
+        `traffic_sign=FR:B19[Interdit ${'voir aussi le panneau B8 et les autres panneaux '.repeat(2)}[B8]`,
+        'FR',
+      ),
+    ).toBe('B19[Interdit')
+  })
 })
 
 describe('parseDeRowIdTable', () => {
@@ -626,6 +654,13 @@ describe('parseDeRowIdTable', () => {
     const $ = cheerio.load(liveStyleRowHtml)
     const row = $('tr').first()
     expect(extractDeTrafficSignValue(row)).toBe('DE:103-10')
+  })
+
+  test('keeps bracket values with spaces in prose sign cells', () => {
+    const $ = cheerio.load(
+      '<table><tr id="Zusatzzeichen_1020-30"><td>Als traffic_sign=DE:1020-30[Anlieger frei] taggen</td></tr></table>',
+    )
+    expect(extractDeTrafficSignValue($('tr').first())).toBe('DE:1020-30[Anlieger frei]')
   })
 
   test('extracts sign value from legacy <tt> markup', () => {

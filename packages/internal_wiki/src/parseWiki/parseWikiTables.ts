@@ -246,10 +246,16 @@ export const parseWikiTags = (tagsText: string): { key: string; value: string }[
   return tags
 }
 
+// A sign value ends at whitespace, `,` or `;`, except inside a short closed `[...]` like
+// `FR:B17[70 m]`; the length cap keeps a stray `[` from swallowing text up to a later `]`
+const signValuePattern = String.raw`((?:[^\s,;[]|\[[^[\]]{0,60}\]|\[)+)`
+
 export const extractTrafficSignId = (rowText: string, prefix: string): string | null => {
   const explicit =
-    rowText.match(new RegExp(`traffic_sign\\s*=\\s*${prefix}:([^\\s,;]+)`, 'i')) ??
-    rowText.match(new RegExp(`traffic_sign\\s*=\\s*([A-Z]{2}(?:-[A-Z]{2})?):([^\\s,;]+)`, 'i'))
+    rowText.match(new RegExp(`traffic_sign\\s*=\\s*${prefix}:${signValuePattern}`, 'i')) ??
+    rowText.match(
+      new RegExp(`traffic_sign\\s*=\\s*([A-Z]{2}(?:-[A-Z]{2})?):${signValuePattern}`, 'i'),
+    )
   if (explicit) {
     const id = explicit[2] ?? explicit[1]
     return id!.replace(/`/g, '').trim()
@@ -652,7 +658,10 @@ export const parseUniversalTable = ($: cheerio.CheerioAPI, prefix: string): Pars
     if (!rowText || /^(sign|znak|placa|image|bild)/i.test(rowTexts[0] ?? '')) return
 
     const signId = extractTrafficSignId(rowText, prefix)
-    if (!signId || signId.length > 40 || /^(image|sign|panneau)$/i.test(signId)) return
+    if (!signId) return
+    // Bracket text like `[Pelouses et jeux de ballons interdits]` may be long
+    const signIdWithoutValue = signId.replace(/\[[^\]]*\]$/, '')
+    if (signIdWithoutValue.length > 40 || /^(image|sign|panneau)$/i.test(signId)) return
 
     const imgHref = $(cells[0]).find('a').attr('href') ?? $(cells[1]).find('a').attr('href')
     const imgSrc = $(cells[0]).find('img').attr('src') ?? $(cells[1]).find('img').attr('src')
@@ -702,7 +711,7 @@ export const extractDeTrafficSignValue = ($row: DeWikiTableRow): string | undefi
   }
 
   const cellText = $row.find('td:nth-child(1)').text().replace(/\s+/g, ' ').trim()
-  const match = cellText.match(/traffic_sign\s*=\s*(\S+)/i)
+  const match = cellText.match(new RegExp(String.raw`traffic_sign\s*=\s*${signValuePattern}`, 'i'))
   return match?.[1]
 }
 

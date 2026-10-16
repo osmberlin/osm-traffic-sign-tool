@@ -741,7 +741,7 @@
     "comments": ""
   },
   {
-    "sign": "FR:B17[70",
+    "sign": "FR:B17[70 m]",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/7/7f/France_road_sign_B17.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B17.svg",
     "name": "Interdiction aux véhicules de circuler sans maintenir entre eux un intervalle au moins égal au nombre indiqué",
@@ -773,7 +773,7 @@
     "comments": ""
   },
   {
-    "sign": "FR:B19[Interdit",
+    "sign": "FR:B19[Interdit aux motocyclistes]",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/3/33/France_road_sign_B19.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B19.svg",
     "name": "Autres interdictions dont la nature est indiquée par une inscription sur le panneau",
@@ -881,7 +881,7 @@
     "comments": ""
   },
   {
-    "sign": "FR:B29[Allumez",
+    "sign": "FR:B29[Allumez vos feux]",
     "imageSvg": "https://upload.wikimedia.org/wikipedia/commons/6/6a/France_road_sign_B29.svg",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/File:France_road_sign_B29.svg",
     "name": "Autres obligations dont la nature est mentionnée par une inscription sur le panneau",
@@ -2294,23 +2294,30 @@
     "comments": ""
   },
   {
-    "sign": "FR:B19[Accès",
+    "sign": "FR:B19[Accès pompiers]",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/FR:Key:traffic_sign",
-    "name": "B19[Accès",
+    "name": "B19[Accès pompiers]",
     "osmTags": ["direction=* Sur un way avec :", "access=no ou", "access=private", "emergency=yes"],
     "comments": ""
   },
   {
-    "sign": "FR:B19[Dépôts",
+    "sign": "FR:B19[Dépôts déchets verts interdits]",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/FR:Key:traffic_sign",
-    "name": "B19[Dépôts",
+    "name": "B19[Dépôts déchets verts interdits]",
     "osmTags": [],
     "comments": ""
   },
   {
-    "sign": "FR:B19[Pelouses",
+    "sign": "FR:B19[Interdit aux troupeaux]",
     "imageUrl": "https://wiki.openstreetmap.org/wiki/FR:Key:traffic_sign",
-    "name": "B19[Pelouses",
+    "name": "B19[Interdit aux troupeaux]",
+    "osmTags": [],
+    "comments": ""
+  },
+  {
+    "sign": "FR:B19[Pelouses et jeux de ballons interdits]",
+    "imageUrl": "https://wiki.openstreetmap.org/wiki/FR:Key:traffic_sign",
+    "name": "B19[Pelouses et jeux de ballons interdits]",
     "osmTags": [],
     "comments": ""
   }
