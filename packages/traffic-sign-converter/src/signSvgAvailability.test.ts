@@ -52,7 +52,7 @@ describe('hasBundledSvg', () => {
     // `274-1` and `274.1` share the import name DE_274_1 (Tempo 30-Zone)
     expect(hasBundledSvg('DE', '274-1')).toBe(false)
     const [unknownSign] = trafficSignTagToSigns('274-1', 'DE')
-    expect(unknownSign?.recodgnizedSign).toBe(false)
+    expect(unknownSign?.recognized).toBe(false)
     expect(hasBundledSvg('DE', unknownSign!)).toBe(false)
   })
 

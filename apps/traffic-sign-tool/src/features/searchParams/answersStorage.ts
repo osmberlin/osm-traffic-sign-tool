@@ -63,7 +63,7 @@ export const writeAnswersCache = (
 }
 
 const signHasQuestion = (sign: SignStateType, questionId: string): boolean =>
-  sign.recodgnizedSign &&
+  sign.recognized &&
   'questions' in sign &&
   Boolean(sign.questions?.some((question: SignQuestion) => question.questionId === questionId))
 
@@ -102,7 +102,7 @@ export const mergeAnswersFromCache = (
   const merged = pruneAnswersForSigns({ ...cache, ...urlAnswers }, signs)
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign || !sign.questions?.length) {
+    if (!sign.recognized || !sign.questions?.length) {
       continue
     }
 

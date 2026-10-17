@@ -87,14 +87,14 @@ describe('signsToTags()', () => {
     test('Tag 2 overwrites Tag 1', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], uniqueTags: [{ key: 'foo', value: 'bar' }] },
           ],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], uniqueTags: [{ key: 'foo', value: 'bar2' }] },
@@ -108,7 +108,7 @@ describe('signsToTags()', () => {
     test('highway tags on unique tags get ignored', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             {
@@ -119,7 +119,7 @@ describe('signsToTags()', () => {
           ],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [{ geometries: ['way'], highwayValues: ['winner2'] }],
         },
@@ -131,7 +131,7 @@ describe('signsToTags()', () => {
     test('acces tag overwrite unique tags', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             {
@@ -142,7 +142,7 @@ describe('signsToTags()', () => {
           ],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             {
@@ -183,10 +183,10 @@ describe('signsToTags()', () => {
         'Zulässige Höchstgeschwindigkeit',
         'Zeitliche Beschräkung',
       ])
-      const speedSign = signs.find((sign) => sign.recodgnizedSign && sign.kind === 'traffic_sign')!
+      const speedSign = signs.find((sign) => sign.recognized && sign.kind === 'traffic_sign')!
       speedSign.signValue = 80
       speedSign.osmValuePart = combineSignIdSignValue(speedSign.signId, 80)
-      const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1040-30')!
+      const timeSign = signs.find((sign) => sign.recognized && sign.signId === '1040-30')!
       timeSign.signValue = '06:00-18:00'
       timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, '06:00-18:00')
 
@@ -200,10 +200,10 @@ describe('signsToTags()', () => {
         'Zulässige Höchstgeschwindigkeit',
         'Zeitliche Beschräkung',
       ])
-      const speedSign = signs.find((sign) => sign.recodgnizedSign && sign.kind === 'traffic_sign')!
+      const speedSign = signs.find((sign) => sign.recognized && sign.kind === 'traffic_sign')!
       speedSign.signValue = 80
       speedSign.osmValuePart = combineSignIdSignValue(speedSign.signId, 80)
-      const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1040-30')!
+      const timeSign = signs.find((sign) => sign.recognized && sign.signId === '1040-30')!
       timeSign.signValue = '22-6'
       timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, '22-6')
 
@@ -217,7 +217,7 @@ describe('signsToTags()', () => {
         'Überholverbot für Kraftfahrzeuge aller Art',
         'Zeitliche Beschräkung: werktags, von-bis',
       ])
-      const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1042-31')!
+      const timeSign = signs.find((sign) => sign.recognized && sign.signId === '1042-31')!
       timeSign.signValue = 'Mo-Sa 1:00-12:30'
       timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, 'Mo-Sa 1:00-12:30')
 

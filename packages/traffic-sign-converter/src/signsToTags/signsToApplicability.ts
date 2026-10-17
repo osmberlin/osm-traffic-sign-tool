@@ -6,7 +6,7 @@ export const signsToApplicability = (signs: SignStateType[], geometry: GeometryT
   const notApplicable: SignStateType[] = []
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) {
+    if (!sign.recognized) {
       notApplicable.push(sign)
       continue
     }

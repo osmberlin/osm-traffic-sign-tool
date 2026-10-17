@@ -57,11 +57,11 @@ export const ResultTagRecommendations = () => {
     getGeometryLabel(geometry, { wayAsSeparate: showDetailedWayLabels })
 
   const hasQuestions = paramSigns.some(
-    (sign) => sign.recodgnizedSign && (sign.questions?.length ?? 0) > 0,
+    (sign) => sign.recognized && (sign.questions?.length ?? 0) > 0,
   )
 
   const signsWithoutSvgPreview = paramSigns.filter(
-    (sign) => sign.recodgnizedSign && isSignSvgUnavailable(countryPrefix, sign),
+    (sign) => sign.recognized && isSignSvgUnavailable(countryPrefix, sign),
   )
 
   if (relevantSections.length === 0 && !hasQuestions && signsWithoutSvgPreview.length === 0) {

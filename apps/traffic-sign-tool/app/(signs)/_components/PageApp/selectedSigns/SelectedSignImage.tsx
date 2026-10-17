@@ -23,7 +23,7 @@ export const SelectedSignGraphic = ({ sign, compact = false }: Props) => {
         (sign.valuePrompt.defaultValue === '47' || sign.signValue !== sign.valuePrompt.defaultValue)
       : false
 
-  if (!sign.recodgnizedSign) {
+  if (!sign.recognized) {
     return (
       <div
         className={clsx(
@@ -74,7 +74,7 @@ export const SelectedSignLabels = ({ sign }: Pick<Props, 'sign'>) => {
   return (
     <>
       <h3 className="w-full font-light">
-        {sign.recodgnizedSign ? <span lang={catalogueLang}>{sign.name}</span> : m.unknown_sign()}
+        {sign.recognized ? <span lang={catalogueLang}>{sign.name}</span> : m.unknown_sign()}
       </h3>
 
       {'descriptiveName' in sign && sign.descriptiveName && (

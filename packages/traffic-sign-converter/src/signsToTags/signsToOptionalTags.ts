@@ -36,7 +36,7 @@ export const signsToOptionalTagsBySign = (signs: SignStateType[], geometry: Geom
   const signOptionalTagsMap = new Map<string, OptionalTagsBySignEntry>()
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) continue
+    if (!sign.recognized) continue
 
     const recs = getRecommendations(sign, geometry)
     const { tags, guidance } = normalizeOptionalTags(recs?.optionalTags)

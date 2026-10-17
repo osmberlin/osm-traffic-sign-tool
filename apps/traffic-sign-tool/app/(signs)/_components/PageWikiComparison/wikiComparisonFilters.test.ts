@@ -20,7 +20,7 @@ const sampleRows: WikiComparisonRow[] = [
     comments: '',
     toolSign: {
       osmValuePart: '239',
-      recodgnizedSign: true,
+      recognized: true,
       image: { kind: 'remote', sourceUrl: 'https://example.com', licence: 'Public Domain' },
     } as never,
   },
@@ -62,7 +62,7 @@ describe('wikiComparisonFilters', () => {
         'https://wiki.openstreetmap.org/w/index.php?title=Special:Upload&wpDestFile=Brasil_A-49a.svg',
       toolSign: {
         osmValuePart: 'A-49a',
-        recodgnizedSign: true,
+        recognized: true,
         image: 'missing',
       } as never,
     }
@@ -81,7 +81,7 @@ describe('wikiComparisonFilters', () => {
         comments: '',
         toolSign: {
           osmValuePart: 'A-49a',
-          recodgnizedSign: true,
+          recognized: true,
           image: 'missing',
         } as never,
       },
@@ -93,7 +93,7 @@ describe('wikiComparisonFilters', () => {
         comments: '',
         toolSign: {
           osmValuePart: 'A-48',
-          recodgnizedSign: true,
+          recognized: true,
           image: { kind: 'remote', sourceUrl: 'https://example.com', licence: 'Public Domain' },
         } as never,
       },
@@ -154,7 +154,7 @@ describe('wikiComparisonFilters', () => {
       'AU',
     )
 
-    expect(row?.toolSign?.recodgnizedSign).toBe(true)
+    expect(row?.toolSign?.recognized).toBe(true)
     expect(row?.toolSign?.osmValuePart).toBe('R1-1')
     expect(isWikiRowMissingInCatalogue(row!)).toBe(false)
   })

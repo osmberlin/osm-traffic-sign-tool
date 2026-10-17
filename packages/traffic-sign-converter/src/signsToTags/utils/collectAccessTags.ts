@@ -7,7 +7,7 @@ export const collectAccessTags = (signs: SignStateType[], geometry: GeometryType
 
   // Handle `traffic_sign`
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) continue
+    if (!sign.recognized) continue
     if (sign.kind !== 'traffic_sign') continue
 
     const recs = getRecommendations(sign, geometry)
@@ -21,7 +21,7 @@ export const collectAccessTags = (signs: SignStateType[], geometry: GeometryType
   // Handle modifier signs `exception_modifier`
   // Ignore `condition_modifier`, they are handled by `collectConditionalTags.ts`
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) continue
+    if (!sign.recognized) continue
     if (sign.kind === 'traffic_sign') continue
     if (sign.kind === 'condition_modifier') continue
 
@@ -29,7 +29,7 @@ export const collectAccessTags = (signs: SignStateType[], geometry: GeometryType
     if (!tags) continue
 
     const groupHasSignWithAccessTagProp = signs.some((otherSign) => {
-      if (!otherSign.recodgnizedSign) return false
+      if (!otherSign.recognized) return false
       if (otherSign.kind !== 'traffic_sign') return false
       const recs = getRecommendations(otherSign, geometry)
       return recs?.accessTags !== undefined
@@ -55,7 +55,7 @@ export const collectAccessTags = (signs: SignStateType[], geometry: GeometryType
     }
 
     const hasConditionalTagProp = signs.some((otherSign) => {
-      if (!otherSign.recodgnizedSign) return false
+      if (!otherSign.recognized) return false
       if (otherSign.kind !== 'traffic_sign') return false
       const recs = getRecommendations(otherSign, geometry)
       return recs?.conditionalTags !== undefined

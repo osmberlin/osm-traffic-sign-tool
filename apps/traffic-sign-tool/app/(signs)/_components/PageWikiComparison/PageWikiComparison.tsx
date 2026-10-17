@@ -147,7 +147,7 @@ export const PageWikiComparison = ({ trafficSignData }: CataloguePageProps) => {
                 </ContentTableRow>
                 <ContentTableRow className={rowClassName}>
                   <ContentTableCell className={rowCellClassName}>
-                    {toolSign?.recodgnizedSign ? (
+                    {toolSign?.recognized ? (
                       <>
                         <PackageSvgTrafficSign
                           sign={toolSign}

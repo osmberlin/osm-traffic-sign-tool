@@ -13,8 +13,8 @@ export type CombinationBlockReason = 'no_modifiers' | 'incompatible_modifier'
 export type CombinationRow = {
   signs: SignStateType[]
   tagValue: string
-  primarySign?: SignStateType & { recodgnizedSign: true }
-  modifierSign?: SignStateType & { recodgnizedSign: true }
+  primarySign?: SignStateType & { recognized: true }
+  modifierSign?: SignStateType & { recognized: true }
   allowFeedback: boolean
   blockReason?: CombinationBlockReason
   lastConfirmedAt?: string
@@ -111,7 +111,7 @@ export const filterPrimarySigns = (
 }
 
 const getRecognizedSigns = (signs: SignStateType[]) =>
-  signs.filter((sign): sign is SignStateType & { recodgnizedSign: true } => sign.recodgnizedSign)
+  signs.filter((sign): sign is SignStateType & { recognized: true } => sign.recognized)
 
 const classifyCombinationRow = (
   signs: SignStateType[],

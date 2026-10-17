@@ -35,6 +35,12 @@ describe('trafficSignTagToSigns()', () => {
     })
   })
 
+  test('sets `recognized` and the deprecated `recodgnizedSign`', () => {
+    const [known, unknown] = trafficSignTagToSigns('DE:205;foo', countryPrefix)
+    expect(known).toMatchObject({ recognized: true, recodgnizedSign: true })
+    expect(unknown).toMatchObject({ recognized: false, recodgnizedSign: false })
+  })
+
   describe('handle alternative keys`', () => {
     test('start sign 244', () => {
       const input = 'traffic_sign=DE:244'
@@ -126,7 +132,7 @@ describe('trafficSignTagToSigns()', () => {
       expect(froms.length).toBe(new Set(froms).size)
       for (const from of froms) {
         const [sign] = trafficSignTagToSigns(from, countryPrefix)
-        expect(sign?.recodgnizedSign, from).toBe(true)
+        expect(sign?.recognized, from).toBe(true)
         expect(sign?.matchdByAlternativeKey, from).toBe(from)
       }
     })
@@ -183,25 +189,25 @@ describe('trafficSignTagToSigns()', () => {
   describe('newly supported DE signs', () => {
     test('recognizes DE:350.1', () => {
       const result = trafficSignTagToSigns('traffic_sign=DE:350.1', countryPrefix)
-      expect(result[0]?.recodgnizedSign).toBe(true)
+      expect(result[0]?.recognized).toBe(true)
       expect(result[0]?.osmValuePart).toBe('350.1')
     })
 
     test('recognizes DE:350.2', () => {
       const result = trafficSignTagToSigns('traffic_sign=DE:350.2', countryPrefix)
-      expect(result[0]?.recodgnizedSign).toBe(true)
+      expect(result[0]?.recognized).toBe(true)
       expect(result[0]?.osmValuePart).toBe('350.2')
     })
 
     test('recognizes DE:274.1-20', () => {
       const result = trafficSignTagToSigns('traffic_sign=DE:274.1-20', countryPrefix)
-      expect(result[0]?.recodgnizedSign).toBe(true)
+      expect(result[0]?.recognized).toBe(true)
       expect(result[0]?.osmValuePart).toBe('274.1-20')
     })
 
     test('keeps DE:1020-10 unrecognized', () => {
       const result = trafficSignTagToSigns('traffic_sign=DE:1020-10', countryPrefix)
-      expect(result[0]?.recodgnizedSign).toBe(false)
+      expect(result[0]?.recognized).toBe(false)
       expect(result[0]?.svgName).toBe(null)
     })
   })
@@ -249,19 +255,19 @@ describe('trafficSignTagToSigns() FR bracket speed signs', () => {
 
   test('recognizes exact B14[50] variant', () => {
     const result = trafficSignTagToSigns('B14[50]', countryPrefix)
-    expect(result[0]?.recodgnizedSign).toBe(true)
+    expect(result[0]?.recognized).toBe(true)
     expect(result[0]?.osmValuePart).toBe('B14[50]')
   })
 
   test('recognizes imported B14[30] variant', () => {
     const result = trafficSignTagToSigns('B14[30]', countryPrefix)
-    expect(result[0]?.recodgnizedSign).toBe(true)
+    expect(result[0]?.recognized).toBe(true)
     expect(result[0]?.osmValuePart).toBe('B14[30]')
   })
 
   test('recognizes generic B14 placeholder', () => {
     const result = trafficSignTagToSigns('B14', countryPrefix)
-    expect(result[0]?.recodgnizedSign).toBe(true)
+    expect(result[0]?.recognized).toBe(true)
     expect(result[0]?.osmValuePart).toBe('B14')
   })
 })
@@ -271,14 +277,14 @@ describe('trafficSignTagToSigns() FR value prompt panels', () => {
 
   test('M2 keeps a custom distance and the default SVG', () => {
     const result = trafficSignTagToSigns('M2[7]', countryPrefix)
-    expect(result[0]?.recodgnizedSign).toBe(true)
+    expect(result[0]?.recognized).toBe(true)
     expect(result[0]?.osmValuePart).toBe('M2[7]')
     expect(result[0]?.svgName).toBe('FR_M2__50__')
   })
 
   test('M9z keeps a custom free text and the default SVG', () => {
     const result = trafficSignTagToSigns('A14,M9z[Accotements dangereux]', countryPrefix)
-    expect(result[1]?.recodgnizedSign).toBe(true)
+    expect(result[1]?.recognized).toBe(true)
     expect(result[1]?.osmValuePart).toBe('M9z[Accotements dangereux]')
     expect(result[1]?.svgName).toBe('FR_M9z__Rappel__')
   })
@@ -293,7 +299,7 @@ describe('trafficSignTagToSigns() FR value prompt panels', () => {
       'B17[50 m],B19[Baignade interdite],B29[Allumez vos feux]',
       countryPrefix,
     )
-    expect(result.map((s) => [s.recodgnizedSign, s.osmValuePart, s.svgName])).toEqual([
+    expect(result.map((s) => [s.recognized, s.osmValuePart, s.svgName])).toEqual([
       [true, 'B17[50 m]', 'FR_B17__70_m__'],
       [true, 'B19[Baignade interdite]', 'FR_B19__Interdit_aux_motocyclistes__'],
       [true, 'B29[Allumez vos feux]', 'FR_B29__Allumez_vos_feux__'],
@@ -311,21 +317,21 @@ describe('trafficSignTagToSigns() FR value prompt panels', () => {
 
   test('A16 keeps a custom gradient and tags it as incline', () => {
     const signs = trafficSignTagToSigns('A16[14%]', countryPrefix)
-    expect(signs[0]?.recodgnizedSign).toBe(true)
+    expect(signs[0]?.recognized).toBe(true)
     expect(signs[0]?.svgName).toBe('FR_A16__10___')
     expect(signsToTags(signs, countryPrefix, 'way').get('incline')).toBe('-14%')
   })
 
   test('ID idiograms join their destination symbols', () => {
     const signs = trafficSignTagToSigns('ID25,ID26a,ID25', countryPrefix)
-    expect(signs.every((sign) => sign.recodgnizedSign)).toBe(true)
+    expect(signs.every((sign) => sign.recognized)).toBe(true)
     // Hotel and restaurant on one destination, as in the wiki example
     expect(signsToTags(signs, countryPrefix, 'way').get('destination:symbol')).toBe('lodging,food')
   })
 
   test('E location signs are recognized', () => {
     const signs = trafficSignTagToSigns('E32,E44', countryPrefix)
-    expect(signs.map((sign) => [sign.recodgnizedSign, sign.descriptiveName])).toEqual([
+    expect(signs.map((sign) => [sign.recognized, sign.descriptiveName])).toEqual([
       [true, "Signalisation d'un cours d'eau"],
       [true, 'Cartouche réseau communal (voie communale ou chemin rural)'],
     ])

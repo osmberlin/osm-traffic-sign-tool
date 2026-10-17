@@ -177,7 +177,7 @@ export const CheckCombinationTable = ({ rows, feedback, onFeedbackChange }: Prop
         {rows.map((row) => {
           const { signs, tagValue, allowFeedback, blockReason, lastConfirmedAt } = row
           const recognizedSigns = signs.filter(
-            (sign): sign is SignStateType & { recodgnizedSign: true } => sign.recodgnizedSign,
+            (sign): sign is SignStateType & { recognized: true } => sign.recognized,
           )
           const currentData = feedback.get(tagValue)
           const okConfirmationDateIso = getOkConfirmationDateIso(currentData, lastConfirmedAt)

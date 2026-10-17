@@ -38,7 +38,7 @@ const tagValueToSignPart = (tagValue: string, countryPrefix: CountryPrefixType) 
 }
 
 const getRecognizedSigns = (signs: SignStateType[]) =>
-  signs.filter((sign): sign is SignStateType & { recodgnizedSign: true } => sign.recodgnizedSign)
+  signs.filter((sign): sign is SignStateType & { recognized: true } => sign.recognized)
 
 const buildTaskEntry = (
   tagValue: string,

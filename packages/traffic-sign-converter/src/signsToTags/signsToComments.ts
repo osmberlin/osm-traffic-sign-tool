@@ -6,7 +6,7 @@ export const signsToComments = (signs: SignStateType[], geometry: GeometryType) 
   const signCommentsMap: Map<string, SignComentType[]> = new Map()
 
   for (const sign of signs) {
-    if (sign.recodgnizedSign === false) continue
+    if (sign.recognized === false) continue
 
     const recommendations = getRecommendations(sign, geometry)
     if (recommendations?.comments?.length) {

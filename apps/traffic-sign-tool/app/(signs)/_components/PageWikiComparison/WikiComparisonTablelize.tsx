@@ -17,7 +17,7 @@ import { clsx } from 'clsx'
 
 const isImageUrl = (value: string) => /^(https?:|data:image\/)/i.test(value)
 
-const hiddenComparisonKeys = new Set(['recodgnizedSign'])
+const hiddenComparisonKeys = new Set(['recognized'])
 
 type Props = {
   data: Partial<SignStateType> | Partial<WikiSign>

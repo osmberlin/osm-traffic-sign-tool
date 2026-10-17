@@ -11,17 +11,23 @@ export type RedirectMapping = { from: string; to: string }
 
 export type SignStateType = Prettify<
   | (TrafficSignType & {
-      recodgnizedSign: true
+      recognized: true
+      /** @deprecated Misspelled, use `recognized` */
+      recodgnizedSign?: true
       matchdByAlternativeKey?: string
       svgName: string
     })
   | (ModifierSignType & {
-      recodgnizedSign: true
+      recognized: true
+      /** @deprecated Misspelled, use `recognized` */
+      recodgnizedSign?: true
       matchdByAlternativeKey?: string
       svgName: string
     })
   | (UnkownSignType & {
-      recodgnizedSign: false
+      recognized: false
+      /** @deprecated Misspelled, use `recognized` */
+      recodgnizedSign?: false
       matchdByAlternativeKey?: string
       svgName: null
     })

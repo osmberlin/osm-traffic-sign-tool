@@ -118,14 +118,14 @@ describe('signsToTrafficSignTag()', () => {
   describe('time restriction plate format normalization', () => {
     test('normalizes 1040-30 hours to H-H in traffic_sign output', () => {
       const input = [
-        { osmValuePart: '274-80', signId: '274-80', kind: 'traffic_sign', recodgnizedSign: true },
+        { osmValuePart: '274-80', signId: '274-80', kind: 'traffic_sign', recognized: true },
         {
           osmValuePart: '1040-30[06:00-18:00]',
           signId: '1040-30',
           signValue: '06:00-18:00',
           valuePrompt: { format: 'time_restriction' },
           kind: 'condition_modifier',
-          recodgnizedSign: true,
+          recognized: true,
         },
       ] as SignStateType[]
       const result = signsToTrafficSignTagValue(input, countryPrefixes)
@@ -141,7 +141,7 @@ describe('signsToTrafficSignTag()', () => {
           signValue: '06:30-18:15',
           valuePrompt: { format: 'time_restriction' },
           kind: 'condition_modifier',
-          recodgnizedSign: true,
+          recognized: true,
         },
       ] as SignStateType[]
       const result = signsToTrafficSignTagValue(input, countryPrefixes)
@@ -157,7 +157,7 @@ describe('signsToTrafficSignTag()', () => {
           signValue: 'Mo-Sa 08:00-11:00,16:00-18:00',
           valuePrompt: { format: 'opening_hours' },
           kind: 'condition_modifier',
-          recodgnizedSign: true,
+          recognized: true,
         },
       ] as SignStateType[]
       const result = signsToTrafficSignTagValue(input, countryPrefixes)
@@ -172,7 +172,7 @@ describe('signsToTrafficSignTag()', () => {
           signId: '1040-30',
           valuePrompt: { format: 'time_restriction' },
           kind: 'condition_modifier',
-          recodgnizedSign: true,
+          recognized: true,
         },
       ] as SignStateType[]
       const result = signsToTrafficSignTagValue(input, countryPrefixes)

@@ -30,7 +30,7 @@ export const TaginfoRowDebug = ({ value, countryPrefix }: Props) => {
   return (
     <div className="space-y-2" lang={catalogueLang}>
       {signs.map((sign) => {
-        const config = sign.recodgnizedSign
+        const config = sign.recognized
           ? getSignWithRedirects(sign.osmValuePart, countryPrefix)
           : sign
         const label = sign.signId ?? sign.osmValuePart
@@ -41,7 +41,7 @@ export const TaginfoRowDebug = ({ value, countryPrefix }: Props) => {
             className="rounded-sm outline -outline-offset-1 outline-stone-400/50"
           >
             <summary className={summaryClassName}>
-              {sign.recodgnizedSign ? (
+              {sign.recognized ? (
                 <>
                   {m.debug_raw_for()} <code className={summaryCodeClassName}>{label}</code>
                 </>

@@ -17,7 +17,7 @@ import { normalizePlateTimeRestriction } from '../utils/normalizeTimeRestriction
 
 const normalizeTimeRestrictionOsmValuePart = (sign: SignStateType): string => {
   if (
-    !sign.recodgnizedSign ||
+    !sign.recognized ||
     !sign.valuePrompt?.format ||
     !isOpeningHoursValuePromptFormat(sign.valuePrompt.format)
   ) {

@@ -51,7 +51,7 @@ export const questionAnswerAppliesToGeometry = (
   answer: QuestionAnswer,
   geometry: GeometryType,
 ): boolean => {
-  if (!sign.recodgnizedSign) {
+  if (!sign.recognized) {
     return false
   }
 
@@ -66,7 +66,7 @@ export const collectQuestionTags = (
   const merged: Map<string, { key: string; value: string }> = new Map()
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign || !('questions' in sign) || !sign.questions?.length) {
+    if (!sign.recognized || !('questions' in sign) || !sign.questions?.length) {
       continue
     }
 
@@ -117,7 +117,7 @@ export const collectQuestionTagRemovals = (
   const merged: Map<string, { key: string; value: string }> = new Map()
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign || !('questions' in sign) || !sign.questions?.length) {
+    if (!sign.recognized || !('questions' in sign) || !sign.questions?.length) {
       continue
     }
 
@@ -164,7 +164,7 @@ export const collectQuestionHighwayValues = (
   const values: string[] = []
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign || !('questions' in sign) || !sign.questions?.length) {
+    if (!sign.recognized || !('questions' in sign) || !sign.questions?.length) {
       continue
     }
 
@@ -195,6 +195,6 @@ export const collectQuestionHighwayValues = (
 }
 
 export const signHasHighwayQuestion = (sign: SignStateType): boolean =>
-  sign.recodgnizedSign &&
+  sign.recognized &&
   'questions' in sign &&
   Boolean(sign.questions?.some((question) => question.affectsHighway))

@@ -16,7 +16,7 @@ export const isSignExcludedByCompatibility = (
   const disallowedIds = new Set<string>()
 
   for (const sign of existingSigns) {
-    if (!sign.recodgnizedSign || !sign.signId) continue
+    if (!sign.recognized || !sign.signId) continue
     existingIds.add(sign.signId)
     const incompatible =
       'compatibility' in sign ? sign.compatibility?.incompatibleModifiers : undefined

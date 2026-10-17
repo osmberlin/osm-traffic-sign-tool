@@ -27,7 +27,7 @@ export const ExplicitNoneTaggingNote = ({ paramSigns }: Props) => {
   const trafficSignKey = 'traffic_sign'
 
   const explicitNoneSignKeys = paramSigns
-    .filter((sign) => sign.recodgnizedSign)
+    .filter((sign) => sign.recognized)
     .filter((sign) => classifyTaggingSuggestionsQa(sign) === 'explicitNoSuggestions')
     .map((sign) => sign.osmValuePart)
 

@@ -186,7 +186,7 @@ describe('collectAccessTags()', () => {
     test('One Sign, full Tag', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar' }] },
@@ -199,7 +199,7 @@ describe('collectAccessTags()', () => {
     test('One Sign, two Tags', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             {
@@ -221,14 +221,14 @@ describe('collectAccessTags()', () => {
     test('Two Signs, same key, second wins', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar' }] },
           ],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar2' }] },
@@ -241,14 +241,14 @@ describe('collectAccessTags()', () => {
     test('Two Signs, different keys', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar' }] },
           ],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], accessTags: [{ key: 'foo2', value: 'bar2' }] },
@@ -264,14 +264,14 @@ describe('collectAccessTags()', () => {
     test('One sign (non "no"), one modifer', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], accessTags: [{ key: 'foo', value: 'non-no' }] },
           ],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'exception_modifier',
           tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'added' }],
         },
@@ -282,14 +282,14 @@ describe('collectAccessTags()', () => {
     test('One sign ("no"), one modifer', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], accessTags: [{ key: 'foo', value: 'no' }] },
           ],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'exception_modifier',
           tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'replaced' }],
         },
@@ -300,19 +300,19 @@ describe('collectAccessTags()', () => {
     test('One sign, two modifer', () => {
       const signs = [
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'traffic_sign',
           tagRecommendationsByGeometry: [
             { geometries: ['way'], accessTags: [{ key: 'foo', value: 'bar' }] },
           ],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'exception_modifier',
           tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'aaa' }],
         },
         {
-          recodgnizedSign: true,
+          recognized: true,
           kind: 'exception_modifier',
           tagRecommendationsByGeometry: [{ geometries: ['way'], modifierValue: 'bbb' }],
         },

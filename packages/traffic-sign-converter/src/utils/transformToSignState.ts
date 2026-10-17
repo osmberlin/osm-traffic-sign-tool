@@ -9,6 +9,7 @@ export const transformToSignState = (countryPrefix: CountryPrefixType, sign: Sig
   return {
     ...rest,
     image: normalizeSignImage(image),
+    recognized: true,
     recodgnizedSign: true,
     svgName: createSvgImportname(countryPrefix, sign.osmValuePart),
   } satisfies SignStateType

@@ -45,7 +45,7 @@ describe('wikiComparisonIssueFormat', () => {
       osmValuePart: 'R-1',
       signId: 'br-r-1',
       descriptiveName: 'Stop',
-      recodgnizedSign: true,
+      recognized: true,
       svgName: 'br_r_1',
     } as never)
 

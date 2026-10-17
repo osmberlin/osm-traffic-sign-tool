@@ -82,7 +82,7 @@ export default function WikiPage() {
                   )}
                 </ContentTableCell>
                 <ContentTableCell className="relative">
-                  {toolSign?.recodgnizedSign ? (
+                  {toolSign?.recognized ? (
                     <>
                       <PackageSvgTrafficSign
                         sign={toolSign}

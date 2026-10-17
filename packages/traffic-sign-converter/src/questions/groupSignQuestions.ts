@@ -36,7 +36,7 @@ export const collectSignQuestionGroups = (signs: SignStateType[]): SignQuestionG
   const indexByKey = new Map<string, number>()
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign || !sign.questions?.length) {
+    if (!sign.recognized || !sign.questions?.length) {
       continue
     }
 

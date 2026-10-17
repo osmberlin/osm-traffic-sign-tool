@@ -7,7 +7,7 @@ export const collectOptionalTags = (signs: SignStateType[], geometry: GeometryTy
   const merged: Map<string, { key: string; value: string }> = new Map()
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) {
+    if (!sign.recognized) {
       continue
     }
 

@@ -23,7 +23,7 @@ export const Sign = ({ sign }: Props) => {
   const active = paramSigns.map((s) => s.signId).includes(sign.signId)
   const isSecondarySign = sign.kind !== 'traffic_sign'
 
-  if ('recodgnizedSign' in sign && sign.recodgnizedSign === false) return null
+  if ('recognized' in sign && sign.recognized === false) return null
 
   const toggleSignPart = (osmValuePart: string) => {
     toggleOsmValuePart(osmValuePart)

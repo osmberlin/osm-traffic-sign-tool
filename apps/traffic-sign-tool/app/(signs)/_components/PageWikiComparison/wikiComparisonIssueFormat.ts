@@ -7,7 +7,7 @@ const countryPrefixFromSign = (sign: WikiSign): string =>
   sign.sign.includes(':') ? sign.sign.split(':')[0]! : sign.sign
 
 const formatCurrentConfig = (sign: WikiSign, toolSign?: SignStateType): string => {
-  if (toolSign?.recodgnizedSign) {
+  if (toolSign?.recognized) {
     return JSON.stringify(toolSign, null, 2)
   }
 

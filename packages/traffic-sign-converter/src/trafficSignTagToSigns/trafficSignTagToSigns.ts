@@ -132,11 +132,13 @@ export const trafficSignTagToSigns = (
         // @ts-expect-error we use the re-assign to either add missing `svgName`s or they get overwritten by more precise once from above
         svgName: createSvgImportname(countryPrefix, osmValuePart),
         ...sign,
+        recognized: true,
         recodgnizedSign: true,
       }
     }
 
     const unkownSign: SignStateType = {
+      recognized: false,
       recodgnizedSign: false,
       osmValuePart: osmValuePart,
       signValue: osmValuePart,

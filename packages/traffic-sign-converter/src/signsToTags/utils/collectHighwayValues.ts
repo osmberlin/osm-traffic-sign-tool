@@ -12,7 +12,7 @@ export const collectHighwayValues = (
 
   const all: string[] = []
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) continue
+    if (!sign.recognized) continue
     if (signHasHighwayQuestion(sign)) continue
     const recs = getRecommendations(sign, geometry)
     if (recs?.highwayValues) {

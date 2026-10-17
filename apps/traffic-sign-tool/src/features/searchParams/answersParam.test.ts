@@ -47,7 +47,7 @@ describe('answersStorage', () => {
   test('merges cache entries for active sign questions', () => {
     const signs = [
       {
-        recodgnizedSign: true,
+        recognized: true,
         osmValuePart: '237',
         questions: [{ questionId: 'sidepath', questionI18nKey: 'sidepath.prompt', answers: [] }],
       },
@@ -64,7 +64,7 @@ describe('answersStorage', () => {
   test('prunes stale sign keys', () => {
     const signs = [
       {
-        recodgnizedSign: true,
+        recognized: true,
         osmValuePart: '237',
         questions: [{ questionId: 'sidepath', questionI18nKey: 'sidepath.prompt', answers: [] }],
       },

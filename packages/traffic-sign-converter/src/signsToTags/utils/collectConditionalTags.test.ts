@@ -37,7 +37,7 @@ describe('collectConditionalTags()', () => {
       'Überholverbot für Kraftfahrzeuge aller Art',
       'Zeitliche Beschräkung',
     ])
-    const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1040-30')!
+    const timeSign = signs.find((sign) => sign.recognized && sign.signId === '1040-30')!
     timeSign.signValue = '16-18'
     timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, '16-18')
 
@@ -54,7 +54,7 @@ describe('collectConditionalTags()', () => {
       'Tempo 30-Zone',
       'Zeitliche Beschräkung',
     ])
-    const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1040-30')!
+    const timeSign = signs.find((sign) => sign.recognized && sign.signId === '1040-30')!
     timeSign.signValue = '6:30-18:15'
     timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, '6:30-18:15')
 
@@ -71,7 +71,7 @@ describe('collectConditionalTags()', () => {
       'Überholverbot für Kraftfahrzeuge aller Art',
       'Zeitliche Beschräkung: werktags, von-bis',
     ])
-    const timeSign = signs.find((sign) => sign.recodgnizedSign && sign.signId === '1042-31')!
+    const timeSign = signs.find((sign) => sign.recognized && sign.signId === '1042-31')!
     timeSign.signValue = 'Mo-Sa 1:00-12:30'
     timeSign.osmValuePart = combineSignIdSignValue(timeSign.signId, 'Mo-Sa 1:00-12:30')
 

@@ -11,7 +11,7 @@ export const collectConditionalTags = (signs: SignStateType[], geometry: Geometr
   // A conditional tag on a stand alone `traffic_sign` is treated like a regular tag.
   // Only once there is a modifier sign (`exception_modifier` or `condition_modifier`), the conditional syntax is applied.
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) continue
+    if (!sign.recognized) continue
     if (sign.kind !== 'traffic_sign') continue
 
     const recs = getRecommendations(sign, geometry)
@@ -25,7 +25,7 @@ export const collectConditionalTags = (signs: SignStateType[], geometry: Geometr
       }
     } else {
       const groupHasConditionModifierSign = signs.some((otherSign) => {
-        if (!otherSign.recodgnizedSign) return false
+        if (!otherSign.recognized) return false
         return otherSign.kind === 'condition_modifier'
       })
 
@@ -42,7 +42,7 @@ export const collectConditionalTags = (signs: SignStateType[], geometry: Geometr
 
   // Handle modifier signs (`exception_modifier` and `condition_modifier`)
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) continue
+    if (!sign.recognized) continue
     if (sign.kind === 'traffic_sign') continue
 
     const recs = getRecommendations(sign, geometry)

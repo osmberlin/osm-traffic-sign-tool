@@ -94,7 +94,7 @@ describe('ResultTagRecommendations', () => {
   test('shows explicit-none note for a single sign', () => {
     mockParamSigns = [
       {
-        recodgnizedSign: true,
+        recognized: true,
         osmValuePart: '279-30',
         tagRecommendationsByGeometry: 'none',
         taggingSuggestionsQa: 'none',
@@ -111,7 +111,7 @@ describe('ResultTagRecommendations', () => {
   test('shows no explicit-none note when marker is missing', () => {
     mockParamSigns = [
       {
-        recodgnizedSign: true,
+        recognized: true,
         osmValuePart: '279-30',
       },
     ]
@@ -124,13 +124,13 @@ describe('ResultTagRecommendations', () => {
   test('uses "Sign X" wording when multiple signs are selected but only one is explicit-none', () => {
     mockParamSigns = [
       {
-        recodgnizedSign: true,
+        recognized: true,
         osmValuePart: '279-30',
         tagRecommendationsByGeometry: 'none',
         taggingSuggestionsQa: 'none',
       },
       {
-        recodgnizedSign: true,
+        recognized: true,
         osmValuePart: '250',
       },
     ]
@@ -145,13 +145,13 @@ describe('ResultTagRecommendations', () => {
   test('lists all explicit-none sign keys when multiple are selected', () => {
     mockParamSigns = [
       {
-        recodgnizedSign: true,
+        recognized: true,
         osmValuePart: '279-30',
         tagRecommendationsByGeometry: 'none',
         taggingSuggestionsQa: 'none',
       },
       {
-        recodgnizedSign: true,
+        recognized: true,
         osmValuePart: '279-50',
         tagRecommendationsByGeometry: 'none',
         taggingSuggestionsQa: 'none',

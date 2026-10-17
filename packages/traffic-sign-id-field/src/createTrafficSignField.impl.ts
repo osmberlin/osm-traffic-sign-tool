@@ -28,7 +28,7 @@ const SIGN_VALUE_DEBOUNCE_MS = 300
 const hasValuePrompt = (
   sign: SignStateType,
 ): sign is SignStateType & { valuePrompt: NonNullable<SignStateType['valuePrompt']> } =>
-  sign.recodgnizedSign && 'valuePrompt' in sign && !!sign.valuePrompt
+  sign.recognized && 'valuePrompt' in sign && !!sign.valuePrompt
 
 export const createTrafficSignField = (
   field: TrafficSignFieldDefinition,
@@ -277,7 +277,7 @@ export const createTrafficSignField = (
   // code line below — show a translated "Unknown sign" instead.
   const getSignTitle = (sign: SignStateType) => {
     if (isNoSign(sign)) return translate('traffic_sign_field.no_sign', 'No sign')
-    if (!sign.recodgnizedSign) {
+    if (!sign.recognized) {
       return translate('traffic_sign_field.unknown_sign', 'Unknown sign')
     }
     return getSignLabel(sign)
@@ -291,7 +291,7 @@ export const createTrafficSignField = (
         'There is explicitly no traffic sign here (traffic_sign=none)',
       )
     }
-    if (!sign.recodgnizedSign) {
+    if (!sign.recognized) {
       return translate('traffic_sign_field.unknown_sign', 'Unknown sign')
     }
     if ('description' in sign && sign.description) return sign.description
@@ -537,7 +537,7 @@ export const createTrafficSignField = (
 
         const figure = rowSelection.append('figure').attr('class', 'traffic-sign-row__icon')
 
-        if (row.sign.recodgnizedSign && _countryPrefix) {
+        if (row.sign.recognized && _countryPrefix) {
           const svgName = getSignSvgName(row.sign)
           if (svgName) {
             figure
@@ -587,7 +587,7 @@ export const createTrafficSignField = (
     merged.select('.traffic-sign-row__code').text((row: SignRowData) => row.sign.osmValuePart)
 
     merged.select('.traffic-sign-row__img').attr('src', (row: SignRowData) => {
-      if (!row.sign.recodgnizedSign || !_countryPrefix) return null
+      if (!row.sign.recognized || !_countryPrefix) return null
       const svgName = getSignSvgName(row.sign)
       return svgName ? getSvgAssetUrl(_countryPrefix, svgName) : null
     })
@@ -674,7 +674,7 @@ export const createTrafficSignField = (
     // The user typed a search term (e.g. a sign name) and pressed Enter
     // without picking a suggestion: add the best catalogue match instead of
     // an unrecognized raw value. Unknown codes still fall through unchanged.
-    if (parsed.length > 0 && parsed.every((sign) => !sign.recodgnizedSign) && _catalogue) {
+    if (parsed.length > 0 && parsed.every((sign) => !sign.recognized) && _catalogue) {
       const [bestMatch] = searchCatalogue(_catalogue, value, {
         exclude: (sign) => isSignExcludedByCompatibility(sign, _signs),
       })

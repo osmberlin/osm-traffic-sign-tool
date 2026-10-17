@@ -53,7 +53,7 @@ vi.mock('@app/app/_components/i18n/useUiLocale', () => ({
 }))
 
 const openingHoursSign = {
-  recodgnizedSign: true,
+  recognized: true,
   osmValuePart: '1042-31[Mo-Sa 18:00-19:00]',
   signId: '1042-31',
   signValue: 'Mo-Sa 18:00-19:00',
@@ -84,7 +84,7 @@ const openingHoursSign = {
 } satisfies SignStateType
 
 const integerValueSign = {
-  recodgnizedSign: true,
+  recognized: true,
   osmValuePart: '274.1[47]',
   signId: '274.1',
   signValue: 47,

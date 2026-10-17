@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Parsed signs have `recognized: true | false`. The misspelled `recodgnizedSign` is still set but deprecated and will be removed in a later release.
+
 ## 0.7.1
 
 _2026-10-17_

@@ -31,7 +31,7 @@ export const isWikiSignImageMissing = (row: WikiComparisonRow): boolean =>
 export const getWikiRowPlaceholderSign = (
   row: WikiComparisonRow,
 ): Pick<SignType, 'osmValuePart' | 'name'> => {
-  if (row.toolSign?.recodgnizedSign) {
+  if (row.toolSign?.recognized) {
     return row.toolSign
   }
 
@@ -45,12 +45,12 @@ export const isWikiRowMissingSvg = (
   row: WikiComparisonRow,
   countryPrefix: CountryPrefixType,
 ): boolean => {
-  if (!row.toolSign?.recodgnizedSign) return false
+  if (!row.toolSign?.recognized) return false
   return isSignSvgUnavailable(countryPrefix, row.toolSign) || isWikiSignImageMissing(row)
 }
 
 export const isWikiRowWikiSvgMissing = (row: WikiComparisonRow): boolean => {
-  if (!row.toolSign?.recodgnizedSign) return false
+  if (!row.toolSign?.recognized) return false
   return isSignSvgMissing(row.toolSign) || isWikiSignImageMissing(row)
 }
 
@@ -70,7 +70,7 @@ export const enrichWikiSigns = (
     let toolSign = matchWikiSignToCatalogue(cleanSign, countryPrefix)
 
     const fallbackName = sign.name.trim()
-    if (!toolSign?.recodgnizedSign && wikiSignCodePattern.test(fallbackName)) {
+    if (!toolSign?.recognized && wikiSignCodePattern.test(fallbackName)) {
       toolSign =
         matchWikiSignToCatalogue(`${countryPrefix}:${fallbackName}`, countryPrefix) ?? toolSign
     }
@@ -82,7 +82,7 @@ export const enrichWikiSigns = (
 }
 
 export const isWikiRowMissingInCatalogue = (row: WikiComparisonRow): boolean =>
-  !row.toolSign?.recodgnizedSign
+  !row.toolSign?.recognized
 
 export const countWikiRowsByStatus = (
   rows: WikiComparisonRow[],
@@ -108,7 +108,7 @@ export const filterWikiRowsByStatus = (
 }
 
 const getRowOsmValuePart = (row: WikiComparisonRow): string | undefined =>
-  row.toolSign?.recodgnizedSign ? row.toolSign.osmValuePart : undefined
+  row.toolSign?.recognized ? row.toolSign.osmValuePart : undefined
 
 export const filterWikiRowsByFocus = (
   rows: WikiComparisonRow[],

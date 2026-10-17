@@ -83,7 +83,7 @@ describe('searchCatalogue', () => {
 describe('isSignExcludedByCompatibility', () => {
   const existing = [
     {
-      recodgnizedSign: true,
+      recognized: true,
       signId: '240',
       osmValuePart: '240',
       compatibility: { incompatibleModifiers: ['1022-10'] },

@@ -6,7 +6,7 @@ export const collectUniqueTags = (signs: SignStateType[], geometry: GeometryType
   const mergedUniqueTags: Map<string, { key: string; value: string }> = new Map()
 
   for (const sign of signs) {
-    if (!sign.recodgnizedSign) continue
+    if (!sign.recognized) continue
 
     const recs = getRecommendations(sign, geometry)
     if (recs?.uniqueTags) {
