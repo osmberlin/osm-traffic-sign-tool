@@ -10,6 +10,10 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+## 3.1.0
+
+_2026-10-17_
+
 - Add a **beta catalogue for Italy** (`IT`, 303 signs from the OSM Wiki page `IT:Road_signs_in_Italy`), with sign graphics, wiki and taginfo comparison ([#173](https://github.com/osmberlin/osm-traffic-sign-tool/pull/173)).
 - France: many more signs, among them 289 signs from the PanierAvide list (with speed variants like `B14[30]`), the location signs `E32` to `E60` and the direction sign idiograms `ID01a` to `ID39`, which suggest `destination:symbol=*`. Signs with a free text or value such as `B19[…]`, `B29[…]`, `A16[…]`, `M2[…]` and `M9z[…]` now ask for it.
 - Germany: add `DE:600` (Absperrschranke). Old notations are recognized again and shown with the agreed one, e.g. `274.1[20]` as `274.1-20`, `278[50]` as `278-50`, `394` as `394-50`, and any `262-7.5` as `262[7.5]` (see [#60](https://github.com/osmberlin/osm-traffic-sign-tool/issues/60#issuecomment-2563086843)).
