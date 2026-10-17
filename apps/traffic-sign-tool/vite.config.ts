@@ -35,7 +35,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@app': path.resolve(__dirname, '.'),
+      '@app': path.resolve(import.meta.dirname, '.'),
     },
   },
   server: {

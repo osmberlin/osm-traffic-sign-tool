@@ -20,14 +20,14 @@ import { Route as LangWikiRouteImport } from './routes/$lang.wiki'
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 
-const LangRoute = LangRouteImport.update({
-  id: '/$lang',
-  path: '/$lang',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangRoute = LangRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LangIndexRoute = LangIndexRouteImport.update({
@@ -35,29 +35,9 @@ const LangIndexRoute = LangIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LangRoute,
 } as any)
-const LangWikiRoute = LangWikiRouteImport.update({
-  id: '/wiki',
-  path: '/wiki',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangTaginfoRoute = LangTaginfoRouteImport.update({
-  id: '/taginfo',
-  path: '/taginfo',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangSignsQaRoute = LangSignsQaRouteImport.update({
-  id: '/signs-qa',
-  path: '/signs-qa',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangSignsRoute = LangSignsRouteImport.update({
-  id: '/signs',
-  path: '/signs',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangQuestionsQaRoute = LangQuestionsQaRouteImport.update({
-  id: '/questions-qa',
-  path: '/questions-qa',
+const LangCheckSignCombinationsRoute = LangCheckSignCombinationsRouteImport.update({
+  id: '/check-sign-combinations',
+  path: '/check-sign-combinations',
   getParentRoute: () => LangRoute,
 } as any)
 const LangPendingRoute = LangPendingRouteImport.update({
@@ -65,9 +45,29 @@ const LangPendingRoute = LangPendingRouteImport.update({
   path: '/pending',
   getParentRoute: () => LangRoute,
 } as any)
-const LangCheckSignCombinationsRoute = LangCheckSignCombinationsRouteImport.update({
-  id: '/check-sign-combinations',
-  path: '/check-sign-combinations',
+const LangQuestionsQaRoute = LangQuestionsQaRouteImport.update({
+  id: '/questions-qa',
+  path: '/questions-qa',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangSignsRoute = LangSignsRouteImport.update({
+  id: '/signs',
+  path: '/signs',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangSignsQaRoute = LangSignsQaRouteImport.update({
+  id: '/signs-qa',
+  path: '/signs-qa',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangTaginfoRoute = LangTaginfoRouteImport.update({
+  id: '/taginfo',
+  path: '/taginfo',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangWikiRoute = LangWikiRouteImport.update({
+  id: '/wiki',
+  path: '/wiki',
   getParentRoute: () => LangRoute,
 } as any)
 
@@ -152,18 +152,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/$lang': {
-      id: '/$lang'
-      path: '/$lang'
-      fullPath: '/$lang'
-      preLoaderRoute: typeof LangRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$lang/': {
@@ -173,39 +173,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangIndexRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/wiki': {
-      id: '/$lang/wiki'
-      path: '/wiki'
-      fullPath: '/$lang/wiki'
-      preLoaderRoute: typeof LangWikiRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/taginfo': {
-      id: '/$lang/taginfo'
-      path: '/taginfo'
-      fullPath: '/$lang/taginfo'
-      preLoaderRoute: typeof LangTaginfoRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/signs-qa': {
-      id: '/$lang/signs-qa'
-      path: '/signs-qa'
-      fullPath: '/$lang/signs-qa'
-      preLoaderRoute: typeof LangSignsQaRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/signs': {
-      id: '/$lang/signs'
-      path: '/signs'
-      fullPath: '/$lang/signs'
-      preLoaderRoute: typeof LangSignsRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/questions-qa': {
-      id: '/$lang/questions-qa'
-      path: '/questions-qa'
-      fullPath: '/$lang/questions-qa'
-      preLoaderRoute: typeof LangQuestionsQaRouteImport
+    '/$lang/check-sign-combinations': {
+      id: '/$lang/check-sign-combinations'
+      path: '/check-sign-combinations'
+      fullPath: '/$lang/check-sign-combinations'
+      preLoaderRoute: typeof LangCheckSignCombinationsRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/pending': {
@@ -215,11 +187,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LangPendingRouteImport
       parentRoute: typeof LangRoute
     }
-    '/$lang/check-sign-combinations': {
-      id: '/$lang/check-sign-combinations'
-      path: '/check-sign-combinations'
-      fullPath: '/$lang/check-sign-combinations'
-      preLoaderRoute: typeof LangCheckSignCombinationsRouteImport
+    '/$lang/questions-qa': {
+      id: '/$lang/questions-qa'
+      path: '/questions-qa'
+      fullPath: '/$lang/questions-qa'
+      preLoaderRoute: typeof LangQuestionsQaRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/signs': {
+      id: '/$lang/signs'
+      path: '/signs'
+      fullPath: '/$lang/signs'
+      preLoaderRoute: typeof LangSignsRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/signs-qa': {
+      id: '/$lang/signs-qa'
+      path: '/signs-qa'
+      fullPath: '/$lang/signs-qa'
+      preLoaderRoute: typeof LangSignsQaRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/taginfo': {
+      id: '/$lang/taginfo'
+      path: '/taginfo'
+      fullPath: '/$lang/taginfo'
+      preLoaderRoute: typeof LangTaginfoRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/wiki': {
+      id: '/$lang/wiki'
+      path: '/wiki'
+      fullPath: '/$lang/wiki'
+      preLoaderRoute: typeof LangWikiRouteImport
       parentRoute: typeof LangRoute
     }
   }
