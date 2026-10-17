@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Parsed signs have `recognized: true | false`. The misspelled `recodgnizedSign` is still set but deprecated and will be removed in a later release.
+- `DE:314-1` / `DE:314-2` (Parkraumbewirtschaftungszone) are now `DE:314.1` / `DE:314.2` as in the StVO; the dash ids still resolve. Add `DE:290.1` / `DE:290.2` (Beginn / Ende eines eingeschränkten Haltverbots für eine Zone) and `DE:310` / `DE:311` (Ortstafel, `city_limit=begin` / `end` on nodes).
 
 ## 0.7.1
 

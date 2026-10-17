@@ -10,6 +10,8 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Germany: add `DE:290.1` / `DE:290.2` (eingeschränktes Haltverbot für eine Zone) and the Ortstafel `DE:310` / `DE:311`. The parking zone signs are now `DE:314.1` / `DE:314.2` as in the StVO; `DE:314-1` / `DE:314-2` are shown with the new id.
+
 ## 3.1.0
 
 _2026-10-17_
