@@ -41,7 +41,7 @@
     "*": "bun run format:files --"
   },
   "engines": {
-    "node": ">=22.21.1"
+    "node": ">=26.10.0"
   },
   "packageManager": "bun@1.4.3",
   "trustedDependencies": [
