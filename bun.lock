@@ -20,7 +20,7 @@
     },
     "apps/traffic-sign-tool": {
       "name": "osm-traffic-sign-tool",
-      "version": "3.0.0",
+      "version": "3.1.0",
       "dependencies": {
         "@fontsource-variable/fira-code": "^5.3.0",
         "@fontsource/fira-sans": "^5.3.0",
