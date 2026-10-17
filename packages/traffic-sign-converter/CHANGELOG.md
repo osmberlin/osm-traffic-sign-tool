@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 0.7.1
+
+_2026-10-17_
+
 - **BREAKING:** Fix three `FR` signs whose values were cut off by the CSV import: `FR:B17[70` is now `FR:B17[70 m]`, `FR:B19[Interdit` is now `FR:B19[Interdit aux motocyclistes]` and `FR:B29[Allumez` is now `FR:B29[Allumez vos feux]`, as on the OSM Wiki. Their SVG exports are renamed to `FR_B17__70_m__`, `FR_B19__Interdit_aux_motocyclistes__` and `FR_B29__Allumez_vos_feux__`.
 - **BREAKING:** `FR:B17`, `FR:B19` and `FR:B29` get a free-text `valuePrompt` (like `FR:M9z`), so any distance or inscription such as `FR:B19[Baignade interdite]` is recognized and keeps the bundled SVG. The separate bare `B17`, `B19` and `B29` entries (without image) are removed; the bare ids now resolve to the signs with their default value, e.g. `FR:B19` to `FR:B19[Interdit aux motocyclistes]`. Traffic signs (`kind: 'traffic_sign'`) may now have a text `valuePrompt` and a string `signValue`.
 - **BREAKING:** `FR:A16` is now `FR:A16[10%]` with a free-text gradient, so `FR:A16[14%]` is recognized and suggests `incline=-14%`; the bare id still resolves to this sign. Its SVG export is renamed to `FR_A16__10___`. Remove two `FR` entries that were table headers, not signs (`Panneau`, `Image`).

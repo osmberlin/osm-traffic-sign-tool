@@ -106,7 +106,7 @@
     },
     "packages/traffic-sign-converter": {
       "name": "@osm-traffic-signs/converter",
-      "version": "0.7.0",
+      "version": "0.7.1",
       "dependencies": {
         "opening_hours": "^3.15.0",
       },
