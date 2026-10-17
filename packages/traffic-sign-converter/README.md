@@ -15,19 +15,24 @@ npm install @osm-traffic-signs/converter
 
 ## Main methods
 
-| Function                     | Input                                        | Output                        |
-| ---------------------------- | -------------------------------------------- | ----------------------------- |
-| `trafficSignTagToSigns`      | `'DE:250,1022-10'`, country                  | `[{ /* Sign Object */ }]`     |
-| `tagsToSigns`                | country, `['vehicle=no', 'bicycle=yes']`     | `[{ /* Sign Object */ }]`     |
-| `signsToTrafficSignTagValue` | `[{ /* Sign Object */ }]`, country           | `'DE:250,1022-10'`            |
-| `signsToTags`                | `[{ /* Sign Object */ }]`, country, geometry | `Map` of recommended OSM tags |
-| `signsToComments`            | `[{ /* Sign Object */ }]`, geometry          | `Map` of comments per tag     |
+| Function                     | Input                                        | Output                               |
+| ---------------------------- | -------------------------------------------- | ------------------------------------ |
+| `trafficSignTagToSigns`      | `'DE:250,1022-10'`, country                  | `[{ /* Sign Object */ }]`            |
+| `tagsToSigns`                | country, `['vehicle=no', 'bicycle=yes']`     | `[{ /* Sign Object */ }]`            |
+| `signsToTrafficSignTagValue` | `[{ /* Sign Object */ }]`, country           | `'DE:250,1022-10'`                   |
+| `signsToTags`                | `[{ /* Sign Object */ }]`, country, geometry | `Map` of recommended OSM tags        |
+| `signsToComments`            | `[{ /* Sign Object */ }]`, geometry          | `Map` of comments per tag            |
+| `getSignRelation`            | country, `'274.1'` or a sign object          | `{ kind, topic, role, counterpart }` |
 
 Geometry is one of `GEOMETRY_TYPES` (`'node'`, `'way'`, `'way_centerline'`, `'area'`, `'relation'`): a sign can recommend different tags depending on the object it is mapped on.
 
 ## Main data
 
 Use `countryDefinitions` to access the traffic sign objects per country and `countries` for the list of country prefixes. `DE` is the main catalogue; `AT`, `AU`, `BE`, `BR`, `CA`, `FR`, `IT` and `PL` are beta catalogues imported from the OSM Wiki (see `getCountryCatalogueMeta()`).
+
+### Related signs
+
+`getSignRelation()` returns the sign that belongs to another one: the end of a zone (`274.1` → `274.2`) or of a rule along the road (`274-50` → `278-50`), the other side of a place sign (`310` → `311`), or the opposite direction of a slope (`108[12]` → `110[12]`). `kind` is `zone`, `section`, `place` or `incline`, `role` is `start`, `end`, `downhill` or `uphill`. The pairs per country are in `signRelations`.
 
 ## Example usage
 

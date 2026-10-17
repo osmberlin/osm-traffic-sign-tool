@@ -19,6 +19,8 @@ export {
 export { signsToTopLevelComments } from './signsToTags/signsToTopLevelComments.js'
 
 // Data Definitions
+export { signRelations } from './data-definitions/signRelations.js'
+export type * from './data-definitions/signRelationTypes.js'
 export * from './data-definitions/countryDefinitions.js'
 export type { CountryPrefixType } from './data-definitions/countryDefinitions.js'
 export {
@@ -200,4 +202,5 @@ export { buildRedirectMap } from './utils/buildRedirectMap.js'
 export { combineSignIdSignValue } from './utils/combineSignIdSignValue.js'
 export { getRedirectsForSign } from './utils/getRedirectsForSign.js'
 export { getSignWithRedirects } from './utils/getSignWithRedirects.js'
+export { getSignRelation } from './utils/getSignRelation.js'
 export { toTag } from './utils/toTag.js'

@@ -4,6 +4,7 @@
 
 - Parsed signs have `recognized: true | false`. The misspelled `recodgnizedSign` is still set but deprecated and will be removed in a later release.
 - `DE:314-1` / `DE:314-2` (Parkraumbewirtschaftungszone) are now `DE:314.1` / `DE:314.2` as in the StVO; the dash ids still resolve. Add `DE:290.1` / `DE:290.2` (Beginn / Ende eines eingeschränkten Haltverbots für eine Zone) and `DE:310` / `DE:311` (Ortstafel, `city_limit=begin` / `end` on nodes).
+- Add `getSignRelation(countryPrefix, signOrOsmValuePart)` and the per-country pair lists `signRelations`: the sign that belongs to another one, with `kind` (`zone`, `section`, `place`, `incline`), `topic` (e.g. `maxspeed`, `parking_fee`, `city_limit`), `role` (`start`, `end`, `downhill`, `uphill`) and `counterpart`. DE covers the zones (274.1/274.2, 290.x, 314.x, 325.x, 242.x, 244.x), maxspeed and minspeed sections (274-N/278-N, 275-N/279-N), 330.x, 331.x, 350.x, the Ortstafel 310/311 and the inclines 108/110. Values carry over: `274[65]` → `278[65]`, `108[12]` → `110[12]`.
 
 ## 0.7.1
 
