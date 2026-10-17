@@ -10,6 +10,13 @@ All notable changes to this project will be manually documented in this file.
 
 ## Unreleased
 
+- Add a **beta catalogue for Italy** (`IT`, 303 signs from the OSM Wiki page `IT:Road_signs_in_Italy`), with sign graphics, wiki and taginfo comparison ([#173](https://github.com/osmberlin/osm-traffic-sign-tool/pull/173)).
+- France: many more signs, among them 289 signs from the PanierAvide list (with speed variants like `B14[30]`), the location signs `E32` to `E60` and the direction sign idiograms `ID01a` to `ID39`, which suggest `destination:symbol=*`. Signs with a free text or value such as `B19[…]`, `B29[…]`, `A16[…]`, `M2[…]` and `M9z[…]` now ask for it.
+- Germany: add `DE:600` (Absperrschranke). Old notations are recognized again and shown with the agreed one, e.g. `274.1[20]` as `274.1-20`, `278[50]` as `278-50`, `394` as `394-50`, and any `262-7.5` as `262[7.5]` (see [#60](https://github.com/osmberlin/osm-traffic-sign-tool/issues/60#issuecomment-2563086843)).
+- Germany: Sperrflächen `DE:298` and the Grenzmarkierung `DE:299` ask for the road marking colour instead of only mentioning `colour=white` ([#117](https://github.com/osmberlin/osm-traffic-sign-tool/issues/117), [#118](https://github.com/osmberlin/osm-traffic-sign-tool/issues/118)).
+- Fix pressing Enter in a custom value field, which broke the selected signs ([#116](https://github.com/osmberlin/osm-traffic-sign-tool/issues/116)).
+- Fix the sign graphic of `FR:B55`, which did not show.
+- Fix Australian signs on the wiki comparison page that did not match their wiki entry because of their variant ids.
 - Time and opening-hours inputs: the validation hints no longer show the irrelevant "no public holiday rule" warning in non-German UI languages (it was only hidden in German).
 - QA pages: the pre-filled GitHub issues no longer start a Cursor cloud agent. They now have a title prefix per QA page (`[tagging-qa]`, `[combination-qa]`, `[question-qa]`, `[taginfo-qa]`, `[wiki-qa]`) and a short brief for an agent session that maintainers start by hand, see [QA_ISSUES.md](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/.github/QA_ISSUES.md).
 
