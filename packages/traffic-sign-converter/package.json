@@ -33,6 +33,7 @@
       "import": "./dist/id-field-browser.js",
       "default": "./dist/id-field-browser.js"
     },
+    "./data/*.json": "./dist/data/*.json",
     "./data/*": {
       "types": "./dist/data/*.d.ts",
       "import": "./dist/data/*.js",
@@ -71,12 +72,13 @@
   },
   "scripts": {
     "bleach": "rm -rf node_modules && rm -rf dist",
-    "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:browser && bun run build:copy-types && bun run build:copy-svgs",
+    "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:browser && bun run build:json && bun run build:copy-types && bun run build:copy-svgs",
     "build:browser": "vite build --config vite.browser.config.ts",
     "build:clean": "rimraf dist",
     "build:clean-svgs": "rimraf ./src/data-svgs",
     "build:copy-svgs": "copyfiles -u 1 'src/data-svgs/**' 'dist'",
     "build:copy-types": "copyfiles --flat './src/types/svg.d.ts' './dist/types'",
+    "build:json": "bun ./scripts/export-catalogue-json.ts",
     "build:transfer-svgs": "bun ./scripts/transfer-svgs.ts",
     "build:ts": "tsc -p tsconfig.build.json",
     "build:watch": "tsc -p tsconfig.build.json --watch",

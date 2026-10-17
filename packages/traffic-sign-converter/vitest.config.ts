@@ -7,7 +7,7 @@ const packageRoot = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   test: {
-    include: ['src/**/*.test.ts'],
+    include: ['src/**/*.test.ts', 'scripts/**/*.test.ts'],
     exclude: ['dist/**', 'node_modules/**'],
   },
   resolve: {

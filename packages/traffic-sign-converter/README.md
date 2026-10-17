@@ -69,6 +69,10 @@ For editors that load the converter at runtime without a bundler, the package sh
 
 The files share chunks in `dist/`, so copy or serve the whole set (`id-field-browser.js`, `data/` and the chunk files next to them) rather than single files. They are used by [`@osm-traffic-signs/id-field`](https://github.com/osmberlin/osm-traffic-sign-tool/tree/main/packages/traffic-sign-id-field).
 
+## JSON catalogues
+
+For tools without JavaScript (Python, QGIS, wiki scripts) each country's catalogue is also available as JSON: `dist/data/<COUNTRY>.json`, importable as `@osm-traffic-signs/converter/data/DE.json`. It holds `country`, the package `version`, the sign configs in `signs` (the same objects as `countryDefinitions`) and the sign pairs in `relations` (see `getSignRelation()`).
+
 ## SVG assets / Vite lazy loading
 
 Bundled traffic-sign SVGs ship as separate subpath exports. For runtime loading in Vite (or similar bundlers), prefer lazy APIs so only the SVGs you actually render are fetched.
