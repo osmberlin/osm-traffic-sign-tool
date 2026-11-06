@@ -31,7 +31,7 @@
     "@fontsource/noto-serif": "^5.3.0",
     "@headlessui/react": "^2.2.10",
     "@heroicons/react": "^2.2.0",
-    "@inlang/paraglide-js": "^2.27.0",
+    "@inlang/paraglide-js": "^2.29.3",
     "@inlang/paraglide-js-react": "^1.0.3",
     "@internal/taginfo": "workspace:*",
     "@internal/wiki": "workspace:*",
@@ -50,17 +50,17 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
-    "@inlang/plugin-m-function-matcher": "^2.3.2",
-    "@inlang/plugin-message-format": "^4.5.2",
-    "@rolldown/plugin-babel": "^0.2.4",
+    "@inlang/plugin-m-function-matcher": "^2.4.0",
+    "@inlang/plugin-message-format": "^4.5.6",
+    "@rolldown/plugin-babel": "^0.3.0",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/router-plugin": "^1.168.43",
     "@testing-library/react": "^16.3.3",
-    "@testing-library/user-event": "^14.6.7",
+    "@testing-library/user-event": "^14.6.8",
     "@total-typescript/ts-reset": "^0.6.1",
-    "@types/node": "^26.6.5",
+    "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
@@ -69,7 +69,7 @@
     "jsdom": "^27.4.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
-    "vite": "^8.3.4",
-    "vitest": "^5.0.3"
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
   }
 }
