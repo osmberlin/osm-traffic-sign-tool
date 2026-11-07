@@ -10,7 +10,7 @@ updates:
       - /packages/internal_wiki
     schedule:
       interval: cron
-      cronjob: '0 7 * * FRI#1'
+      cronjob: '0 7 * * THU#1'
       timezone: Europe/Berlin
     cooldown:
       default-days: 5
@@ -118,7 +118,7 @@ updates:
       - /packages/traffic-sign-converter
     schedule:
       interval: cron
-      cronjob: '0 7 * * FRI#1'
+      cronjob: '0 7 * * THU#1'
       timezone: Europe/Berlin
     cooldown:
       default-days: 5
@@ -160,7 +160,7 @@ updates:
     directory: /
     schedule:
       interval: cron
-      cronjob: '0 7 * * FRI#1'
+      cronjob: '0 7 * * THU#1'
       timezone: Europe/Berlin
     cooldown:
       default-days: 5
