@@ -3,7 +3,7 @@
 **Node version is specified in…**
 
 - `./.nvmrc` — used by GitHub Actions (`setup-node`) and local `nvm use`
-- `./package.json` `engines.node` — documents the minimum Node version (>=26.10.0)
+- `./package.json` `engines.node` — documents the minimum Node version (>=26.12.1)
 
 **Bun version is specified in…**
 
@@ -11,7 +11,7 @@
 
 **Which value to use**
 
-Use an explicit semver (e.g. `26.10.0`), not `lts/*` ([Node version names](https://nodejs.org/en/about/previous-releases)).
+Use an explicit semver (e.g. `26.12.1`), not `lts/*` ([Node version names](https://nodejs.org/en/about/previous-releases)).
 
 The best way to get the Node version string is `node -v` and remove the leading `v`.
 
