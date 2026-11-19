@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 877.466 1316.141" role="img" aria-labelledby="title">
+  <title id="title">Verkehrszeichen 626-30 - Leitplatte, Vorbeifahrt beidseitig</title>
+  <defs>
+    <clipPath id="a" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0h702v1053H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)" transform="matrix(1.25 0 0 -1.25 0 1316.25)">
+    <path d="M56.184 1052.488c-30.692 0-55.625-24.933-55.625-55.625V56.227C.559 25.531 25.492.598 56.184.598h589.652c30.644 0 55.625 24.933 55.625 55.629v940.636c0 30.692-24.981 55.625-55.625 55.625" style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <path d="M56.184 1.109c-30.414 0-55.118 24.75-55.118 55.118v940.636c0 30.414 24.704 55.114 55.118 55.114h589.652c30.367 0 55.07-24.7 55.07-55.114V56.227c0-30.368-24.703-55.118-55.07-55.118zm589.652 1051.938H56.184C25.168 1053.047 0 1027.879 0 996.863V56.227C0 25.207 25.168.086 56.184.086h589.652c31.016 0 56.137 25.121 56.137 56.141v940.636c0 31.016-25.121 56.184-56.137 56.184" style="fill:#000;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <path d="m0 351.074 350.984 350.985 350.989-350.985V56.227a56.1 56.1 0 0 0-16.438-39.704L350.984 351.074 16.438 16.523C5.941 27.066 0 41.32 0 56.227M0 702.059v294.804c0 31.016 25.168 56.184 56.184 56.184h294.8" style="fill:#c1121c;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+    <path d="m701.973 702.059-350.989 350.988h294.852c31.016 0 56.137-25.168 56.137-56.184" style="fill:#c1121c;fill-opacity:1;fill-rule:nonzero;stroke:none"/>
+  </g>
+</svg>
