@@ -501,6 +501,48 @@ export const trafficSignDataDE: SignType[] = [
     },
   },
   {
+    osmValuePart: '626-10',
+    signId: '626-10',
+    name: 'Zeichen 626-10',
+    descriptiveName: 'Leitplatte, Aufstellung rechts',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      focus: { all: true },
+      signCategory: 'object_sign',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_626-10_-_Leitplatte,_Aufstellung_rechts,_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
+    osmValuePart: '626-30',
+    signId: '626-30',
+    name: 'Zeichen 626-30',
+    descriptiveName: 'Leitplatte, Vorbeifahrt beidseitig',
+    description: null,
+    kind: 'traffic_sign',
+    tagRecommendationsByGeometry: [{ geometries: ['node'] }],
+    comments: [],
+    compatibility: { canReceiveModifiers: false },
+    catalogue: {
+      focus: { all: true },
+      signCategory: 'object_sign',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://commons.wikimedia.org/wiki/File:Zeichen_626-30_-_Leitplatte_(750x500);_StVO_2013.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '222',
     signId: '222',
     name: 'Zeichen 222',
