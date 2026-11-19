@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add `DE:626-10` (Leitplatte, Aufstellung rechts) and `DE:626-30` (Leitplatte, Vorbeifahrt beidseitig) next to `DE:626-20` ([#193](https://github.com/osmberlin/osm-traffic-sign-tool/issues/193)).
+
 ## 0.8.0
 
 _2026-10-17_
