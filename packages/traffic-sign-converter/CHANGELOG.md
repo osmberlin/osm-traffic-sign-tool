@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add `DE:1026-34` (Zusatzzeichen „Krankenfahrzeuge frei“), tagged like `DE:1026-33` with `emergency=yes` as on the OSM Wiki.
+
 ## 0.8.0
 
 _2026-10-17_
