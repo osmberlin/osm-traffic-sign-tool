@@ -545,6 +545,27 @@ export const _exceptions__thing_allowed: SignType[] = [
     },
   },
   {
+    osmValuePart: '1026-34',
+    signId: '1026-34',
+    name: 'Zusatzzeichen 1026-34',
+    descriptiveName: 'Krankenfahrzeuge frei',
+    description: null,
+    kind: 'exception_modifier',
+    tagRecommendationsByGeometry: [
+      { geometries: ['way'], highwayValues: [], accessTags: [{ key: 'emergency', value: 'yes' }] },
+    ],
+    comments: [],
+    catalogue: {
+      signCategory: 'exception_modifier',
+    },
+    image: {
+      kind: 'remote',
+      sourceUrl:
+        'https://wiki.openstreetmap.org/wiki/File:Zusatzzeichen_1026-34_-_Krankenfahrzeuge_frei,_StVO_1992.svg',
+      licence: 'Public Domain',
+    },
+  },
+  {
     osmValuePart: '1026-37',
     signId: '1026-37',
     name: 'Zusatzzeichen 1026-37',

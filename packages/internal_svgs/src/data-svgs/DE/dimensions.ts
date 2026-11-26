@@ -64,6 +64,7 @@ export const SvgDimensionsDE: Record<string, { width: number; height: number }> 
   DE_1026_30: { width: 600, height: 450.003 },
   DE_1026_32: { width: 601, height: 451 },
   DE_1026_33: { width: 601, height: 451 },
+  DE_1026_34: { width: 601, height: 451 },
   DE_1026_35: { width: 601, height: 451 },
   DE_1026_36: { width: 601, height: 451 },
   DE_1026_37: { width: 600, height: 450.003 },
