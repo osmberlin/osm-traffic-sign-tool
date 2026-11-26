@@ -33,7 +33,7 @@
     "@osm-traffic-signs/converter": "workspace:*",
     "cheerio": "^1.2.0",
     "copyfiles": "^2.4.1",
-    "rimraf": "^6.1.3",
+    "rimraf": "^6.1.4",
     "svgo": "^4.1.0",
     "typescript": "^5.9.3",
     "zod": "^4.6.6"
