@@ -525,7 +525,7 @@ export const trafficSignDataDE: SignType[] = [
     osmValuePart: '626-30',
     signId: '626-30',
     name: 'Zeichen 626-30',
-    descriptiveName: 'Leitplatte, Vorbeifahrt beidseitig',
+    descriptiveName: 'Leitplatte, Aufstellung Mitte, beidseitige Vorbeifahrt',
     description: null,
     kind: 'traffic_sign',
     tagRecommendationsByGeometry: [{ geometries: ['node'] }],
