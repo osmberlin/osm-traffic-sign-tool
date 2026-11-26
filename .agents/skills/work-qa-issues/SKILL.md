@@ -69,8 +69,8 @@ Skill per kind:
 3. A task that is unclear, contradicts the OSM wiki, or needs a decision: do not guess. Leave it
    out and ask in the PR description (or, when no task of the issue can be applied, in a comment
    on the issue, without opening a PR).
-4. Add a line to the `Unreleased` section of `packages/traffic-sign-converter/CHANGELOG.md` when
-   the tags the converter returns change.
+4. Add a changeset (`.changeset/<name>.md`, see `.changeset/README.md`) for
+   `@osm-traffic-signs/converter` when the tags the converter returns change.
 5. Run `bun run check` in the repo root and fix what it reports.
 6. Commit, push, and open the PR against `main`:
    - Title: what changed for the mapper, e.g. `DE: confirm 3 sign combinations, block 237 + 1020-12`.

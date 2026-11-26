@@ -49,6 +49,20 @@ Run `bun script-new-data.ts` from the root folder to update the svgs, data and r
 
 Alternatively, the [script lists the separate commands](./script-new-sign.ts)
 
+## Release
+
+Versions and changelogs use [changesets](https://github.com/changesets/changesets), see [`.changeset/README.md`](.changeset/README.md). Releases run from a terminal with npm 2FA:
+
+```bash
+bun run release
+```
+
+- Every commit that changes a package or the app adds a changeset. The pre-push hook stops a push without one.
+- `bun run release` (on a clean `main`) applies the changesets, runs `check`, commits, publishes the npm packages that are not on npm yet (converter, iD field), tags them (`@osm-traffic-signs/converter@<version>`) and pushes. npm's browser approval opens by itself; one approval covers the run.
+- `bun run release --dry-run` shows what would be released and changes nothing.
+- The app deploys on every push to `main`; its version and changelog are kept by the same changesets.
+- [`scripts/release.ts`](scripts/release.ts) is a copy of [osm-editor-kit/.github](https://github.com/osm-editor-kit/.github/tree/main/release). Change it there and copy it here.
+
 ## QA and agent workflows
 
 - Branch previews are generated with Netlify. [Admin UI](https://app.netlify.com/projects/osm-traffic-sign-preview/overview)

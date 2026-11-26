@@ -1,14 +1,4 @@
-# Changelog
-
-## About
-
-All notable changes to this project will be manually documented in this file.
-
-> [INFO]
-> The logic behind this page is part of the `@osm-traffic-signs/converter` package
-> [which has it's own changelog](https://github.com/osmberlin/osm-traffic-sign-tool/blob/main/packages/traffic-sign-converter/CHANGELOG.md).
-
-## Unreleased
+# osm-traffic-sign-tool
 
 ## 3.1.1
 

@@ -18,14 +18,14 @@
     "format:files": "oxfmt --config ./oxfmt.config.mjs --write",
     "lint": "bun run --filter '*' lint",
     "prepare": "husky",
-    "release": "bun run scripts/release-cli.ts",
+    "release": "bun run scripts/release.ts",
     "test": "bun run --filter '*' test",
     "test:watch": "bun run --parallel --filter '*' test:watch",
     "updatePackages:major": "bunx taze -r major --includeLocked --write --maturity-period 5 && bun install",
     "updatePackages:minor": "bunx taze -r minor --includeLocked --write --maturity-period 5 && bun install"
   },
   "devDependencies": {
-    "@clack/prompts": "^0.8.2",
+    "@changesets/cli": "^3.0.3",
     "@colors/colors": "^1.6.1",
     "@types/bun": "latest",
     "husky": "^9.1.7",

@@ -1,2 +1,4 @@
+bun run format
 bun run check
 bun run check:clean-build
+bunx changeset status --since=origin/main

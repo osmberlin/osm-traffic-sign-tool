@@ -1,10 +1,5 @@
 # @osm-traffic-signs/converter
 
-## Unreleased
-
-- Add `DE:1026-34` (Zusatzzeichen „Krankenfahrzeuge frei“), tagged like `DE:1026-33` with `emergency=yes` as on the OSM Wiki.
-- Add `DE:626-10` (Leitplatte, Aufstellung rechts) and `DE:626-30` (Leitplatte, Aufstellung Mitte, beidseitige Vorbeifahrt) next to `DE:626-20` ([#193](https://github.com/osmberlin/osm-traffic-sign-tool/issues/193)).
-
 ## 0.8.0
 
 _2026-10-17_

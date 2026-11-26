@@ -1,7 +1,5 @@
 # @osm-traffic-signs/id-field
 
-## Unreleased
-
 ## 0.1.1
 
 _2026-10-08_

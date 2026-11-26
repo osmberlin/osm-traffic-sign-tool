@@ -209,6 +209,10 @@ Do not use `visibility` on new signs.
 - `bun run --filter '@internal/svgs' updateSvgs:full` re-downloads all signs in place without wiping existing files first.
 - Use `bun script-refresh-all-svg.ts` (or `updateSvgs:force-refresh`) only when you explicitly want a clean wipe + full rebuild.
 
+### Step 6b: Changeset
+
+Add `.changeset/<name>.md` for `@osm-traffic-signs/converter` (and `osm-traffic-sign-tool` when the app shows the change), see `.changeset/README.md`. New signs are a `patch`.
+
 ### Step 7: Testing
 
 1. **Start dev server separately**: Run `cd apps/traffic-sign-tool && bun run dev` (Vite default port **5173**, or check terminal output).

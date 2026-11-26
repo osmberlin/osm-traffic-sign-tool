@@ -54,15 +54,7 @@ bun run build # and bun run preview
 
 ## Deployment
 
-Collect changes below `## Unreleased` in the [CHANGELOG](./CHANGELOG.md). The release script bumps the version, moves these entries to the new version, commits and tags; pushing the tag deploys the app.
-
-```bash
-bun run release                               # interactive
-bun run release --app --patch --yes --push    # no prompts
-bun run release --package --minor --dry-run   # build, check and `npm publish --dry-run`, then undo
-```
-
-The package releases (`--package` for the converter, `--id-field` for the iD field) publish to npm and need `npm login` first. With 2FA, npm asks for the one-time password, or pass `--otp=<code>`. Release the converter first when the iD field needs its changes.
+Every push to `main` deploys the app with GitHub Actions. Versions and the [CHANGELOG](./CHANGELOG.md) come from changesets, see [Release](../../README.md#release).
 
 ## Licence & Thanks
 

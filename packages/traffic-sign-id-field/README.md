@@ -133,4 +133,4 @@ To test a build in a local iD checkout before a release, `bun run dev:id-field` 
 ID_WORKTREE=/path/to/iD bun run dev:id-field
 ```
 
-Releases: `bun run release --id-field --minor` (monorepo root), see [`scripts/release-cli.ts`](../../scripts/release-cli.ts).
+Releases: add a changeset with each change and run `bun run release` in the monorepo root, see [Release](../../README.md#release).
