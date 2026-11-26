@@ -64,6 +64,6 @@
     "vitest": "^5.1.0"
   },
   "peerDependencies": {
-    "@osm-traffic-signs/converter": ">=0.7.0"
+    "@osm-traffic-signs/converter": ">=0.8.1"
   }
 }
