@@ -70,6 +70,9 @@
       "types": "./dist/types/svg.d.ts"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "bleach": "rm -rf node_modules && rm -rf dist",
     "build": "bun run build:clean && bun run build:clean-svgs && bun run build:transfer-svgs && bun run build:ts && bun run build:browser && bun run build:json && bun run build:copy-types && bun run build:copy-svgs",

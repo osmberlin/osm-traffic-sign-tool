@@ -48,7 +48,6 @@ updates:
         patterns:
           - '@arethetypeswrong/*'
           - '@babel/*'
-          - '@clack/*'
           - '@colors/*'
           - '@heroicons/*'
           - '@inlang/*'

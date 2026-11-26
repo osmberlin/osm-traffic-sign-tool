@@ -211,7 +211,7 @@ Do not use `visibility` on new signs.
 
 ### Step 6b: Changeset
 
-Add `.changeset/<name>.md` for `@osm-traffic-signs/converter` (and `osm-traffic-sign-tool` when the app shows the change), see `.changeset/README.md`. New signs are a `patch`.
+A new or changed SVG in `packages/internal_svgs/src/data-svgs` counts as a converter change. Add `.changeset/<name>.md` for `@osm-traffic-signs/converter` (and `osm-traffic-sign-tool` when the app shows the change), see `.changeset/README.md`. New signs are a `patch`.
 
 ### Step 7: Testing
 
