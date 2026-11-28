@@ -6,7 +6,7 @@ Add `.changeset/<descriptive-name>.md` in the same commit as the code:
 
 ```md
 ---
-"@osm-traffic-signs/<package>": patch
+'@osm-traffic-signs/<package>': patch
 ---
 
 What people who use the package get, not which files changed.
