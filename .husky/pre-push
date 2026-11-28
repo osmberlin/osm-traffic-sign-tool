@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-bun run check
+# The clean build comes first, so `check` (attw, type-check) runs against a fresh dist/.
 bun run check:clean-build
+bun run check
 bunx changeset status --since=origin/main
